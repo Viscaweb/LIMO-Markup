@@ -1,0 +1,78 @@
+@import "../_ls-variables";
+
+.ls-data-table {
+
+	th {
+		background-color: #cecece;
+	}
+}
+
+.cell {
+
+	&--rank {
+		font-weight: 700;
+
+		&--standing-green {
+			background-color: unquote("rgb(#{$color-primary})");
+			color: unquote("rgb(#{$color-primary-contrast})");
+		}
+
+		&--standing-red {
+			background-color: unquote("rgb(#{$color-primary})");
+			color: unquote("rgb(#{$color-primary-contrast})");
+		}
+	}
+
+	&--score {
+		font-weight: 700;
+
+		&__home {
+
+		}
+
+		&__versus {
+			opacity: 0.5;
+		}
+
+		&__away {
+
+		}
+	}
+
+	&--time {
+
+	}
+
+	&--number {
+
+	}
+
+	&__point-details {
+		position: absolute;
+		bottom: 4px;
+		right: 4px;
+		color: unquote("rgb(#{$color-accent})");
+	}
+}
+
+.row {
+	&--selected {
+		background-color: $ls-divider-background-color;
+	}
+
+}
+
+.live {
+
+	.cell {
+		&--score {
+			color: red;
+		}
+		
+	}
+}
+
+.paused {
+
+}
+
