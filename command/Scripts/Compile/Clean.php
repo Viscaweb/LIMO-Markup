@@ -40,7 +40,7 @@ class Clean implements ScriptInterface
         $folders = [
             $basePath.'/dist/css/*',
             $basePath.'/dist/fonts/*',
-//            $basePath.'/dist/html/*',
+            $basePath.'/dist/html/*',
             $basePath.'/dist/images/*',
         ];
         foreach($folders as $folder){

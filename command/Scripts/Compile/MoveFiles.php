@@ -11,7 +11,8 @@ use Symfony\Component\Console\Output\OutputInterface;
 class MoveFiles implements ScriptInterface
 {
     protected $foldersToMove = [
-        '/dist/material.min.css' => '/css/material.min.css'
+        '/dist/material.min.css' => '/css/material.min.css',
+        '/dist/assets/' => '/css/assets/'
     ];
 
     /**
@@ -51,18 +52,35 @@ class MoveFiles implements ScriptInterface
 
     private function prepareCommands($basePath)
     {
-        $commandTemplate = 'cp -R %s %s && true';
+        $commandTemplate = 'cp -R %s %s';
         $commands = [];
         foreach ($this->foldersToMove as $from => $to) {
+
+            $locationFrom = $basePath.'/external/material-design-lite'.$from;
+            $locationTo = $basePath.'/dist'.$to;
+
+            $this->attemptCreateFolder($locationTo);
+
             $command = sprintf(
                 $commandTemplate,
-                $basePath.'/external/material-design-lite'.$from,
-                $basePath.'/dist'.$to
+                escapeshellarg($locationFrom),
+                escapeshellarg($locationTo)
             );
             $commands[] = $command;
         }
 
         return $commands;
+    }
+
+    private function attemptCreateFolder($location)
+    {
+        if (substr($location, -1) != '/'){
+            $location = dirname($location);
+        }
+
+        if (!is_dir($location)){
+            mkdir($location, 0777, true);
+        }
     }
 
 }

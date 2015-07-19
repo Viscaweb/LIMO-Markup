@@ -26,6 +26,7 @@ class Compile extends Command
             new Scripts\Components\Livescore(),
             new Scripts\Components\Mdl(),
             new Scripts\Mdl\Compile(),
+            new Scripts\Compile\Templates(),
             new Scripts\Compile\MoveFiles()
         ];
 
