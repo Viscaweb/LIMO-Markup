@@ -1,14 +1,14 @@
 <?php
-namespace Scripts;
+namespace Scripts\Mdl;
 
 use Scripts\Interfaces\ScriptInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Class InstallMdl
+ * Class Install
  */
-class InstallMdl implements ScriptInterface
+class Install implements ScriptInterface
 {
     const GIT_PROJECT_URL = 'https://github.com/google/material-design-lite.git';
 

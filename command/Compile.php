@@ -3,6 +3,9 @@ use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
+/**
+ * Class Compile
+ */
 class Compile extends Command
 {
 
@@ -17,8 +20,13 @@ class Compile extends Command
     {
         $basePath = realpath(__DIR__.'/../');
         $scripts = [
-            new Scripts\InstallMdl(),
-            new \Scripts\Components\Livescore()
+            new Scripts\Compile\Clean(),
+            new Scripts\Mdl\Install(),
+            new Scripts\Mdl\Reset(),
+            new Scripts\Components\Livescore(),
+            new Scripts\Components\Mdl(),
+            new Scripts\Mdl\Compile(),
+            new Scripts\Compile\MoveFiles()
         ];
 
         /** @var \Scripts\Interfaces\ScriptInterface $script */
@@ -34,7 +42,10 @@ class Compile extends Command
                     $scriptTextResult = '<error>ERROR (no details)!</error>';
                 }
             } catch (\Exception $ex) {
-                $scriptTextResult = $ex->getMessage();
+                $scriptTextResult = sprintf(
+                    '<error>%s</error>',
+                    $ex->getMessage()
+                );
             }
             $output->writeln($scriptTextResult);
         }

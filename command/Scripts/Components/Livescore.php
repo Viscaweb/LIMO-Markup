@@ -23,9 +23,9 @@ class Livescore implements ScriptInterface
     /**
      * Execute the script
      *
-     * @param InputInterface  $input
+     * @param InputInterface $input
      * @param OutputInterface $output
-     * @param string          $basePath
+     * @param string $basePath
      *
      * @throws \Exception
      *
@@ -36,8 +36,47 @@ class Livescore implements ScriptInterface
         OutputInterface $output,
         $basePath
     ) {
-        $folderLivescoreComponents = $basePath.'/src/components/livescore/';
-        $folderMdlComponents = $basePath.'/external/material-design-lite/src/';
+        $copyComponents = $this->copyComponents($basePath);
+        if (!$copyComponents) {
+            throw new \Exception('Unable to copy the Livescore components.');
+        }
+
+        $addComponentsInCss = $this->addComponentsInMainCss($basePath);
+        if (!$addComponentsInCss) {
+            throw new \Exception(
+                'Unable to add Livescore components in the main MDL\'s CSS.'
+            );
+        }
+
+        return true;
+    }
+
+    private function addComponentsInMainCss($basePath)
+    {
+        $folders = glob($this->getLivescoreComponentsFolder($basePath).'*');
+        $cssToAdd = "\n// Livescore Components";
+        foreach ($folders as $folder) {
+            if (!is_dir($folder)) {
+                continue;
+            }
+
+            $folderName = preg_replace('#^.+\/([^\/]+)\/?$#', '$1', $folder);
+
+            $cssToAdd .= "\n";
+            $cssToAdd .= sprintf('@import "%s/%s";', $folderName, $folderName);
+        }
+
+        $cssFile = $this->getMdlMainCss($basePath);
+
+        return file_put_contents($cssFile, $cssToAdd, FILE_APPEND);
+    }
+
+    private function copyComponents($basePath)
+    {
+        $folderLivescoreComponents = $this->getLivescoreComponentsFolder(
+            $basePath
+        );
+        $folderMdlComponents = $this->getMdlFolder($basePath);
 
         $queryTemplate = 'cp -R %s %s';
         $query = sprintf(
@@ -46,6 +85,25 @@ class Livescore implements ScriptInterface
             escapeshellarg($folderMdlComponents)
         );
 
-        return shell_exec($query);
+        shell_exec($query);
+
+        return true;
+    }
+
+    private function getMdlFolder($basePath)
+    {
+        return $basePath.'/external/material-design-lite/src/';
+    }
+
+    private function getLivescoreComponentsFolder($basePath)
+    {
+        return $basePath.'/src/components/livescore/';
+    }
+
+    private function getMdlMainCss($basePath)
+    {
+        return $this->getMdlFolder(
+            $basePath
+        ).'material-design-lite.scss';
     }
 }
