@@ -27,7 +27,8 @@ class Compile extends Command
             new Scripts\Components\Mdl(),
             new Scripts\Mdl\Compile(),
             new Scripts\Compile\Templates(),
-            new Scripts\Compile\MoveFiles()
+            new Scripts\Compile\MoveFiles(),
+            new Scripts\Compile\OpenCompiled(),
         ];
 
         /** @var \Scripts\Interfaces\ScriptInterface $script */
@@ -35,6 +36,7 @@ class Compile extends Command
             $scriptMessage = str_pad($script->getDescription(), 80, ' ');
             $output->write($scriptMessage);
 
+            $timeBegin = microtime(true);
             try {
                 $scriptResult = $script->execute($input, $output, $basePath);
                 if ($scriptResult) {
@@ -48,6 +50,11 @@ class Compile extends Command
                     $ex->getMessage()
                 );
             }
+            $timeEnd = microtime(true);
+
+            $time = round($timeEnd - $timeBegin, 2);
+            $output->write(str_pad(sprintf('Time: %ss', $time), 20, ' '));
+
             $output->writeln($scriptTextResult);
         }
 
