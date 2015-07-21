@@ -12,7 +12,8 @@ class MoveFiles implements ScriptInterface
 {
     protected $foldersToMove = [
         '/dist/material.min.css' => '/css/material.min.css',
-        '/dist/assets/' => '/css/assets/'
+        '/dist/material.min.js' => '/js/material.min.js',
+        '/dist/assets/' => '/assets/'
     ];
 
     /**
