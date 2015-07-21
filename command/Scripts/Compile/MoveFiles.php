@@ -52,7 +52,7 @@ class MoveFiles implements ScriptInterface
 
     private function prepareCommands($basePath)
     {
-        $commandTemplate = '[ -d "%s" ] && cp -R %s %s';
+        $commandTemplate = '([ -d %s ] || [ -f %s ]) && cp -R %s %s';
         $commands = [];
         foreach ($this->foldersToMove as $from => $to) {
 
@@ -63,6 +63,7 @@ class MoveFiles implements ScriptInterface
 
             $command = sprintf(
                 $commandTemplate,
+                escapeshellarg($locationFrom),
                 escapeshellarg($locationFrom),
                 escapeshellarg($locationFrom),
                 escapeshellarg($locationTo)
