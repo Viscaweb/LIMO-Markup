@@ -22,17 +22,15 @@ class Watch extends Command
     {
         $basePath = realpath(__DIR__.'/../');
         $scripts = [
-            # Run default Compile
-
             # SCRIPT TO WATCH FOR THE TWIG TEMPLATES
             # => Watch the Twig files to compile them
-//            new \Scripts\Watch\LivescoreTemplates(),
+            new \Scripts\Watch\LivescoreTemplates(),
 
             # SCRIPT TO WATCH THE MDL COMPONENTS
             # => Watch the Livescore components and move them in the MDL's folder
-//            new \Scripts\Watch\LivescoreComponents(),
+            new \Scripts\Watch\LivescoreComponents(),
             # => FSWatch on external/mdl/dist/ to move the files
-//            new \Scripts\Watch\MdlMoveFiles(),
+            new \Scripts\Watch\MdlMoveFiles(),
             # => Create and run MDL's Gulp watch all
             # WARNING: This task is not detached, it must be launched at the end
             new \Scripts\Watch\MdlGulpWatchAll(),
