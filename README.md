@@ -10,3 +10,8 @@
 ### How to compile the files?
 First, install the dependencies: `composer install`
 Then, compile the whole project: `php application.php compile`
+
+### Real time compilation
+You can compile in real time by doing: `php application.php compile`
+** NOTE: Make sure `fswatch` is installed on your system.
+To install it, you can perform: `brew install fswatch` 
