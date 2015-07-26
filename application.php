@@ -8,4 +8,5 @@ require __DIR__.'/vendor/autoload.php';
 
 $application = new Application();
 $application->add(new Compile());
+$application->add(new RunAny());
 $application->run();
