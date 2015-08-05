@@ -1,4 +1,5 @@
 <?php
+use Scripts\Exceptions\CommandNotAvailableException;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -44,6 +45,11 @@ class Compile extends Command
                 } else {
                     $scriptTextResult = '<error>ERROR (no details)!</error>';
                 }
+            } catch (CommandNotAvailableException $ex){
+                $scriptTextResult = sprintf(
+                    '<info>%s</info>',
+                    $ex->getMessage()
+                );
             } catch (\Exception $ex) {
                 $scriptTextResult = sprintf(
                     '<error>%s</error>',

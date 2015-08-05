@@ -1,6 +1,9 @@
 <?php
 namespace Scripts\Compile;
 
+use Scripts\Exceptions\CommandNotAvailableException;
+use Scripts\Helper\CliCommands;
+use Scripts\Helper\System;
 use Scripts\Interfaces\ScriptInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -23,9 +26,9 @@ class OpenCompiled implements ScriptInterface
     /**
      * Execute the script
      *
-     * @param InputInterface  $input
+     * @param InputInterface $input
      * @param OutputInterface $output
-     * @param string          $basePath
+     * @param string $basePath
      *
      * @throws \Exception
      *
@@ -37,11 +40,18 @@ class OpenCompiled implements ScriptInterface
         $basePath
     ) {
         $distFolder = $basePath.'/dist';
+        if (!(System::isMac())) {
+            throw new CommandNotAvailableException(
+                'open',
+                sprintf('You can manually open this folder: %s', $distFolder)
+            );
+        }
+
 
         $commandTemplate = 'open %s';
-        $command = sprintf($commandTemplate, $distFolder);
+        $command = sprintf($commandTemplate, escapeshellarg($distFolder));
 
-        shell_exec($command);
+        CliCommands::run($command);
 
         return true;
     }

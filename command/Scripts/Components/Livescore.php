@@ -1,6 +1,7 @@
 <?php
 namespace Scripts\Components;
 
+use Scripts\Helper\CliCommands;
 use Scripts\Interfaces\ScriptInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -85,7 +86,7 @@ class Livescore implements ScriptInterface
             escapeshellarg($folderMdlComponents)
         );
 
-        shell_exec($query);
+        CliCommands::run($query);
 
         return true;
     }
