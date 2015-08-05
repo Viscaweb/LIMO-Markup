@@ -1,6 +1,7 @@
 <?php
 namespace Scripts\Mdl;
 
+use Scripts\Helper\CliCommands;
 use Scripts\Interfaces\ScriptInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -55,7 +56,7 @@ class Install implements ScriptInterface
 
     private function initializeGulp($folder)
     {
-        shell_exec(
+        CliCommands::run(
             sprintf(
                 'cd %s && npm --silent install && npm --silent install -g gulp  > /dev/null 2>&1',
                 escapeshellarg($folder)
@@ -73,7 +74,7 @@ class Install implements ScriptInterface
             }
         }
 
-        shell_exec(
+        CliCommands::run(
             sprintf(
                 'cd %s && git clone %s . > /dev/null 2>&1',
                 escapeshellarg($folder),

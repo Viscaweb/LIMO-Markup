@@ -1,6 +1,7 @@
 <?php
 namespace Scripts\Compile;
 
+use Scripts\Helper\CliCommands;
 use Scripts\Interfaces\ScriptInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -45,7 +46,7 @@ class MoveFiles implements ScriptInterface
         $commands = $this->prepareCommands($basePath);
 
         foreach ($commands as $command) {
-            shell_exec($command);
+            CliCommands::run($command);
         }
 
         return true;

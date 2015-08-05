@@ -1,6 +1,7 @@
 <?php
 namespace Scripts\Mdl;
 
+use Scripts\Helper\CliCommands;
 use Scripts\Interfaces\ScriptInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -44,7 +45,7 @@ class Reset implements ScriptInterface
 
     private function resetGitRepository($folder)
     {
-        shell_exec(
+        CliCommands::run(
             sprintf(
                 'cd %s && git reset --hard > /dev/null 2>&1',
                 escapeshellarg($folder)

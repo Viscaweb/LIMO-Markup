@@ -1,6 +1,7 @@
 <?php
 namespace Scripts\Compile;
 
+use Scripts\Helper\CliCommands;
 use Scripts\Interfaces\ScriptInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -36,16 +37,16 @@ class Clean implements ScriptInterface
         OutputInterface $output,
         $basePath
     ) {
-        $commandTemplate = 'rm -rf %s';
+        $commandTemplate = 'rm -rf %s*';
         $folders = [
-            $basePath.'/dist/css/*',
-            $basePath.'/dist/fonts/*',
-            $basePath.'/dist/html/*',
-            $basePath.'/dist/images/*',
+            $basePath.'/dist/css/',
+            $basePath.'/dist/fonts/',
+            $basePath.'/dist/html/',
+            $basePath.'/dist/images/',
         ];
         foreach($folders as $folder){
-            $command = sprintf($commandTemplate, $folder);
-            shell_exec($command);
+            $command = sprintf($commandTemplate, escapeshellarg($folder));
+            CliCommands::run($command);
         }
 
         return true;

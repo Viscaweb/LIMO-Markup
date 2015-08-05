@@ -1,6 +1,7 @@
 <?php
 namespace Scripts\Compile;
 
+use Scripts\Helper\CliCommands;
 use Scripts\Interfaces\ScriptInterface;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -82,7 +83,7 @@ class Templates implements ScriptInterface
 
     private function getAllFiles($basePath)
     {
-        $filesRaw = shell_exec(
+        $filesRaw = CliCommands::run(
             sprintf(
                 'find %s -maxdepth 1 -type f -name "*.twig"',
                 $this->getTemplateFolder($basePath)

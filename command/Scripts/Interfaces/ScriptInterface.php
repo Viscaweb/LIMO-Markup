@@ -1,6 +1,7 @@
 <?php
 namespace Scripts\Interfaces;
 
+use Scripts\Exceptions\CommandNotAvailableException;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
@@ -22,6 +23,7 @@ interface ScriptInterface
      * @param string          $basePath
      *
      * @throws \Exception
+     * @throws CommandNotAvailableException
      *
      * @return bool
      */
