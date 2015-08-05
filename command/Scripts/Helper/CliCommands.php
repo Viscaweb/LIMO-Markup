@@ -13,6 +13,15 @@ class CliCommands
     const ARG_AS_BG = '> /dev/null 2>&1 &';
 
     /**
+     * @param $command
+     *
+     * @return string
+     */
+    static public function run($command){
+        return shell_exec($command);
+    }
+
+    /**
      * @param string $path          Folder to watch
      * @param string $script        Script to run
      * @param bool   $asBackground  Run as background
@@ -36,7 +45,7 @@ class CliCommands
             return $command;
         }
 
-        return shell_exec($command);
+        return self::run($command);
     }
 
     /**
@@ -62,7 +71,7 @@ class CliCommands
             return $command;
         }
 
-        return shell_exec($command);
+        return self::run($command);
     }
 
     /**
@@ -82,7 +91,7 @@ class CliCommands
                 $bashScript
             ).'.sh';
         file_put_contents($bashTmpFile, $bashScript);
-        shell_exec(sprintf('chmod +x %s', escapeshellarg($bashTmpFile)));
+        self::run(sprintf('chmod +x %s', escapeshellarg($bashTmpFile)));
 
         return self::runFsWatch($path, $bashTmpFile, $asBackground);
     }
@@ -103,7 +112,7 @@ class CliCommands
             $taskName
         );
 
-        return shell_exec($command);
+        return self::run($command);
     }
 
 }
