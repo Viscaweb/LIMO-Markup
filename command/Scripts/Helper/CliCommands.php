@@ -18,7 +18,6 @@ class CliCommands
      * @return string
      */
     static public function run($command){
-    		file_put_contents('/tmp/commands.txt', $command."\n", FILE_APPEND);
         return shell_exec($command);
     }
 
