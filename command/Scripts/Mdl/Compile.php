@@ -37,7 +37,7 @@ class Compile implements ScriptInterface
         OutputInterface $output,
         $basePath
     ) {
-        $queryTemplate = 'cd %s && gulp > /dev/null 2>&1';
+        $queryTemplate = 'cd %s && gulp all > /dev/null 2>&1';
         $query = sprintf(
             $queryTemplate,
             escapeshellarg($this->getMdlFolder($basePath))

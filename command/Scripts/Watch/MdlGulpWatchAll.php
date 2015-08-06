@@ -57,7 +57,7 @@ class MdlGulpWatchAll implements ScriptInterface
     private function createWatchAllTask($basePath)
     {
         $gulpFile = $basePath.'/external/material-design-lite/gulpfile.js';
-        $gulpContent = file_Get_contents($gulpFile);
+        $gulpContent = file_get_contents($gulpFile);
 
         if (strstr($gulpContent, 'watchall')){
             return true;
@@ -84,12 +84,18 @@ class MdlGulpWatchAll implements ScriptInterface
 
         $watchAllTask = str_replace("'serve'", "'watchall'", $watchAllTask);
         $watchAllTask = str_replace(", ['default']", '', $watchAllTask);
+        $watchAllTask = preg_replace("#\n{2,}#", "\n", $watchAllTask);
 
         $newFileContent = str_replace(
             $defaultTaskContent,
             $defaultTaskContent.$watchAllTask,
             $gulpContent
         );
+
+        $newFileContent = str_replace(
+                "gulp.task('serve'",
+            "gulp.task('watchall', function() {\n  watch();\n});\n"."gulp.task('serve'",
+                $gulpContent);
 
         return file_put_contents($gulpFile, $newFileContent);
     }

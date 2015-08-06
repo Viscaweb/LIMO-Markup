@@ -82,7 +82,7 @@ class Livescore implements ScriptInterface
         $queryTemplate = 'cp -R %s %s';
         $query = sprintf(
             $queryTemplate,
-            escapeshellarg($folderLivescoreComponents),
+            escapeshellarg($folderLivescoreComponents).'*',
             escapeshellarg($folderMdlComponents)
         );
 
