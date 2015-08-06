@@ -29,6 +29,7 @@ class Watch extends Command
             # SCRIPT TO WATCH THE MDL COMPONENTS
             # => Watch the Livescore components and move them in the MDL's folder
             new \Scripts\Watch\LivescoreComponents(),
+            new \Scripts\Watch\MdlComponents(),
             # => FSWatch on external/mdl/dist/ to move the files
             new \Scripts\Watch\MdlMoveFiles(),
             # => Create and run MDL's Gulp watch all

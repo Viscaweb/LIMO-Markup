@@ -49,18 +49,42 @@ class Livescore implements ScriptInterface
             );
         }
 
+        $addSinglesFilesInCss = $this->addSingleFilesInMainCss($basePath);
+        if (!$addSinglesFilesInCss) {
+            throw new \Exception(
+                'Unable to add Livescore single files in the main MDL\'s CSS.'
+            );
+        }
+
         return true;
+    }
+
+    private function addSingleFilesInMainCss($basePath)
+    {
+        $files = glob(
+            $this->getLivescoreComponentsFolder($basePath).'*.scss'
+        );
+        $cssToAdd = "\n// Livescore Components";
+        foreach ($files as $file) {
+            $fileName = preg_replace('#^.+\/\_(.+)\.scss$#', '$1', $file);
+
+            $cssToAdd .= "\n";
+            $cssToAdd .= sprintf('@import "%s";', $fileName);
+        }
+
+        $cssFile = $this->getMdlMainCss($basePath);
+
+        return file_put_contents($cssFile, $cssToAdd, FILE_APPEND);
     }
 
     private function addComponentsInMainCss($basePath)
     {
-        $folders = glob($this->getLivescoreComponentsFolder($basePath).'*');
+        $folders = glob(
+            $this->getLivescoreComponentsFolder($basePath).'*',
+            GLOB_ONLYDIR
+        );
         $cssToAdd = "\n// Livescore Components";
         foreach ($folders as $folder) {
-            if (!is_dir($folder)) {
-                continue;
-            }
-
             $folderName = preg_replace('#^.+\/([^\/]+)\/?$#', '$1', $folder);
 
             $cssToAdd .= "\n";

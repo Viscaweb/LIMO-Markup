@@ -47,7 +47,7 @@ class Reset implements ScriptInterface
     {
         CliCommands::run(
             sprintf(
-                'cd %s && git reset --hard > /dev/null 2>&1',
+                'cd %s && git reset --hard && git clean -d && git reset clean -f',
                 escapeshellarg($folder)
             )
         );

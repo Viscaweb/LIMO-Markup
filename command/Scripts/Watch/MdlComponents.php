@@ -7,9 +7,9 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Class LivescoreComponents
+ * Class MdlComponents
  */
-class LivescoreComponents implements ScriptInterface
+class MdlComponents implements ScriptInterface
 {
     /**
      * Return the description of the task.
@@ -18,7 +18,7 @@ class LivescoreComponents implements ScriptInterface
      */
     public function getDescription()
     {
-        return 'Watch the livescore components';
+        return 'Watch the custom MDL components';
     }
 
     /**
@@ -37,11 +37,11 @@ class LivescoreComponents implements ScriptInterface
         OutputInterface $output,
         $basePath
     ) {
-        $folderToWatch = $basePath.'/src/components/livescore';
+        $folderToWatch = $basePath.'/src/components/mdl';
 
         CliCommands::runTaskUsingFsWatch(
             $folderToWatch,
-            'Components\Livescore',
+            'Components\Mdl',
             true
         );
 

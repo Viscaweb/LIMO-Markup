@@ -23,9 +23,9 @@ class Mdl implements ScriptInterface
     /**
      * Execute the script
      *
-     * @param InputInterface $input
+     * @param InputInterface  $input
      * @param OutputInterface $output
-     * @param string $basePath
+     * @param string          $basePath
      *
      * @throws \Exception
      *
@@ -41,18 +41,58 @@ class Mdl implements ScriptInterface
             throw new \Exception('Unable to concat the MDL components.');
         }
 
+        $concatSingleFiles = $this->concatSingleFiles($basePath);
+        if (!$concatSingleFiles) {
+            throw new \Exception('Unable to concat the MDL single files.');
+        }
+
+        return true;
+    }
+
+    private function concatSingleFiles($basePath)
+    {
+        $mdlOfficialDir = $this->getOfficialMdlFolder($basePath);
+        $singleFiles = glob($this->getOurMdlFolder($basePath).'*.scss');
+        foreach ($singleFiles as $file) {
+            $mdlOfficialFile = $mdlOfficialDir.$this->getFileName($file);
+            if (!file_exists($mdlOfficialFile)) {
+                throw new \Exception(
+                    sprintf(
+                        'You are trying to overwrite a file (%s) that does not exists in the MDL components',
+                        $file
+                    )
+                );
+            }
+
+            $mdlOfficialFileBak = $mdlOfficialFile.'.bak';
+            if (file_exists($mdlOfficialFileBak)) {
+                if (!copy($mdlOfficialFileBak, $mdlOfficialFile)){
+                    return false;
+                }
+            } else {
+                if (!copy($mdlOfficialFile, $mdlOfficialFileBak)){
+                    return false;
+                }
+            }
+
+            if (!file_put_contents(
+                $mdlOfficialFile,
+                file_get_contents($file),
+                FILE_APPEND
+            )
+            ) {
+                return false;
+            }
+        }
+
         return true;
     }
 
     private function concatComponents($basePath)
     {
         $mdlOfficialDir = $this->getOfficialMdlFolder($basePath);
-        $components = glob($this->getOurMdlFolder($basePath).'*');
+        $components = glob($this->getOurMdlFolder($basePath).'*', GLOB_ONLYDIR);
         foreach ($components as $componentFolder) {
-            if (!is_dir($componentFolder)) {
-                continue;
-            }
-
             $componentName = $this->getComponentName($componentFolder);
             $componentOfficialDir = $mdlOfficialDir.$componentName;
             if (!is_dir($componentOfficialDir)) {
@@ -120,6 +160,15 @@ class Mdl implements ScriptInterface
     {
         return preg_replace(
             '#^.+\/([^\/]+)\/?$#',
+            '$1',
+            $path
+        );
+    }
+
+    private function getFileName($path)
+    {
+        return preg_replace(
+            '#^.+\/([^\/]+)$#',
             '$1',
             $path
         );
