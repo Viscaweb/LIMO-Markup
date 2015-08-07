@@ -42,17 +42,17 @@ class Livescore implements ScriptInterface
             throw new \Exception('Unable to copy the Livescore components.');
         }
 
-        $addComponentsInCss = $this->addComponentsInMainCss($basePath);
-        if (!$addComponentsInCss) {
-            throw new \Exception(
-                'Unable to add Livescore components in the main MDL\'s CSS.'
-            );
-        }
-
         $addSinglesFilesInCss = $this->addSingleFilesInMainCss($basePath);
         if (!$addSinglesFilesInCss) {
             throw new \Exception(
                 'Unable to add Livescore single files in the main MDL\'s CSS.'
+            );
+        }
+
+        $addComponentsInCss = $this->addComponentsInMainCss($basePath);
+        if (!$addComponentsInCss) {
+            throw new \Exception(
+                'Unable to add Livescore components in the main MDL\'s CSS.'
             );
         }
 
@@ -64,7 +64,7 @@ class Livescore implements ScriptInterface
         $files = glob(
             $this->getLivescoreComponentsFolder($basePath).'*.scss'
         );
-        $cssToAdd = "\n// Livescore Components";
+        $cssToAdd = "\n// Livescore Single Files";
         foreach ($files as $file) {
             $fileName = preg_replace('#^.+\/\_(.+)\.scss$#', '$1', $file);
 
