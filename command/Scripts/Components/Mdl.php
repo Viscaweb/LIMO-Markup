@@ -23,9 +23,9 @@ class Mdl implements ScriptInterface
     /**
      * Execute the script
      *
-     * @param InputInterface  $input
+     * @param InputInterface $input
      * @param OutputInterface $output
-     * @param string          $basePath
+     * @param string $basePath
      *
      * @throws \Exception
      *
@@ -35,7 +35,8 @@ class Mdl implements ScriptInterface
         InputInterface $input,
         OutputInterface $output,
         $basePath
-    ) {
+    )
+    {
         $concatComponents = $this->concatComponents($basePath);
         if (!$concatComponents) {
             throw new \Exception('Unable to concat the MDL components.');
@@ -52,9 +53,9 @@ class Mdl implements ScriptInterface
     private function concatSingleFiles($basePath)
     {
         $mdlOfficialDir = $this->getOfficialMdlFolder($basePath);
-        $singleFiles = glob($this->getOurMdlFolder($basePath).'*.scss');
+        $singleFiles = glob($this->getOurMdlFolder($basePath) . '*.scss');
         foreach ($singleFiles as $file) {
-            $mdlOfficialFile = $mdlOfficialDir.$this->getFileName($file);
+            $mdlOfficialFile = $mdlOfficialDir . $this->getFileName($file);
             if (!file_exists($mdlOfficialFile)) {
                 throw new \Exception(
                     sprintf(
@@ -64,23 +65,7 @@ class Mdl implements ScriptInterface
                 );
             }
 
-            $mdlOfficialFileBak = $mdlOfficialFile.'.bak';
-            if (file_exists($mdlOfficialFileBak)) {
-                if (!copy($mdlOfficialFileBak, $mdlOfficialFile)){
-                    return false;
-                }
-            } else {
-                if (!copy($mdlOfficialFile, $mdlOfficialFileBak)){
-                    return false;
-                }
-            }
-
-            if (!file_put_contents(
-                $mdlOfficialFile,
-                file_get_contents($file),
-                FILE_APPEND
-            )
-            ) {
+            if (!$this->concatFromBak($file, $mdlOfficialFile)) {
                 return false;
             }
         }
@@ -91,10 +76,10 @@ class Mdl implements ScriptInterface
     private function concatComponents($basePath)
     {
         $mdlOfficialDir = $this->getOfficialMdlFolder($basePath);
-        $components = glob($this->getOurMdlFolder($basePath).'*', GLOB_ONLYDIR);
+        $components = glob($this->getOurMdlFolder($basePath) . '*', GLOB_ONLYDIR);
         foreach ($components as $componentFolder) {
             $componentName = $this->getComponentName($componentFolder);
-            $componentOfficialDir = $mdlOfficialDir.$componentName;
+            $componentOfficialDir = $mdlOfficialDir . $componentName;
             if (!is_dir($componentOfficialDir)) {
                 throw new \Exception(
                     sprintf(
@@ -124,8 +109,8 @@ class Mdl implements ScriptInterface
     private function concatComponent($officialFolder, $customFolder)
     {
         $componentName = $this->getComponentName($officialFolder);
-        $officialSassFile = $officialFolder.'/_'.$componentName.'.scss';
-        $customSassFile = $customFolder.'/_'.$componentName.'.scss';
+        $officialSassFile = $officialFolder . '/_' . $componentName . '.scss';
+        $customSassFile = $customFolder . '/_' . $componentName . '.scss';
 
         if (!file_exists($officialSassFile)) {
             throw new \Exception(
@@ -139,21 +124,17 @@ class Mdl implements ScriptInterface
             );
         }
 
-        return file_put_contents(
-            $officialSassFile,
-            file_get_contents($customSassFile),
-            FILE_APPEND
-        );
+        return $this->concatFromBak($customSassFile, $officialSassFile);
     }
 
     private function getOfficialMdlFolder($basePath)
     {
-        return $basePath.'/external/material-design-lite/src/';
+        return $basePath . '/external/material-design-lite/src/';
     }
 
     private function getOurMdlFolder($basePath)
     {
-        return $basePath.'/src/components/mdl/';
+        return $basePath . '/src/components/mdl/';
     }
 
     private function getComponentName($path)
@@ -171,6 +152,31 @@ class Mdl implements ScriptInterface
             '#^.+\/([^\/]+)$#',
             '$1',
             $path
+        );
+    }
+
+    /**
+     * @param $customFile
+     * @param $mdlOfficialFile
+     * @return bool|int
+     */
+    private function concatFromBak($customFile, $mdlOfficialFile)
+    {
+        $mdlOfficialFileBak = $mdlOfficialFile . '.bak';
+        if (file_exists($mdlOfficialFileBak)) {
+            if (!copy($mdlOfficialFileBak, $mdlOfficialFile)) {
+                return false;
+            }
+        } else {
+            if (!copy($mdlOfficialFile, $mdlOfficialFileBak)) {
+                return false;
+            }
+        }
+
+        return file_put_contents(
+            $mdlOfficialFile,
+            file_get_contents($customFile),
+            FILE_APPEND
         );
     }
 

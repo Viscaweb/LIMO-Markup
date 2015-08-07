@@ -20,8 +20,17 @@ class Watch extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $basePath = realpath(__DIR__.'/../');
+        $basePath = realpath(__DIR__ . '/../');
         $scripts = [
+            # BEFORE LAUNCHING WATCH, RESET THE PROJECT
+            new Scripts\Compile\Clean(),
+            new Scripts\Mdl\Reset(),
+            new Scripts\Components\Livescore(),
+            new Scripts\Components\Mdl(),
+            new Scripts\Mdl\Compile(),
+            new Scripts\Compile\Templates(),
+            new Scripts\Compile\MoveFiles(),
+
             # SCRIPT TO WATCH FOR THE TWIG TEMPLATES
             # => Watch the Twig files to compile them
             new \Scripts\Watch\LivescoreTemplates(),
