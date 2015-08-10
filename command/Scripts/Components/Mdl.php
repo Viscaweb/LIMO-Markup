@@ -179,11 +179,21 @@ class Mdl implements ScriptInterface
             }
         }
 
-        return file_put_contents(
-            $mdlOfficialFile,
-            file_get_contents($customFile),
-            $append ? FILE_APPEND : 0
-        );
+        if ($append) {
+            $status = file_put_contents(
+                $mdlOfficialFile,
+                file_get_contents($customFile),
+                FILE_APPEND
+            );
+        } else {
+            $status = file_put_contents(
+                $mdlOfficialFile,
+                file_get_contents($customFile).
+                file_get_contents($mdlOfficialFileBak)
+            );
+        }
+
+        return $status;
     }
 
 }
