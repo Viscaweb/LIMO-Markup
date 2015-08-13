@@ -1,0 +1,35 @@
+.mdl-layout__drawer-button {
+  color: unquote("rgb(#{$color-primary})");
+}
+
+.mdl-layout__header {
+	box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.12);
+}
+
+.mdl-layout-brand-logo{
+
+	img{
+		width: 25px;	
+		height: $ls-brand-logo-size;
+	}
+}
+
+.mdl-layout__drawer-button{
+	height: $layout-header-mobile-row-height;
+	line-height: $layout-header-mobile-row-height + 6;
+	
+	.mdl-layout__header & {
+
+	  @media screen and (max-width: $layout-screen-size-threshold) {
+	    margin: 0;
+	  }
+	}
+
+	.mdl-layout__brand-logo{
+		
+	}
+}
+
+.mdl-layout-title{
+	font-size: 16px;
+}
