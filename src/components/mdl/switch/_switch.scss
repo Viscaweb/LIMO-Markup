@@ -1,0 +1,31 @@
+
+.mdl-switch{
+
+  &.mdl-switch-live{
+    
+    .mdl-switch__label{
+      color: $ls-color-live;
+    }
+
+    .mdl-switch__ripple-container{
+
+      & .mdl-ripple {
+        background: $ls-color-live;
+      }
+    }
+  }
+}
+
+.mdl-switch__track {
+
+  .mdl-switch.mdl-switch-live.is-checked & {
+    background: unquote("rgba(#{$ls-color-live-rgb}, 0.3)");
+  }
+}
+
+.mdl-switch__thumb {
+
+  .mdl-switch.mdl-switch-live.is-checked & {
+    background: $ls-color-live;
+  }
+}

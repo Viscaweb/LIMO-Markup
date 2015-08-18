@@ -5,10 +5,17 @@
       <span class="mdl-layout-title">{{ page_title }}</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
-      <!-- Navigation. We hide it in small screens. -->
-      <nav class="mdl-navigation mdl-layout--large-screen-only">
-        <a class="mdl-navigation__link" href="">Link</a>
-        <a class="mdl-navigation__link" href="">Link</a>
+
+      <nav class="mdl-navigation">
+        <a class="mdl-navigation__link ls-season-button" href="#">14/15</a>
+        <a class="mdl-navigation__link ls-icon ls-active" href="#"><span class="icon-star"></span></a>
+        <label for="switch-1" class="mdl-switch-label-left">
+          <span class="mdl-switch__label">All</span>
+        </label>
+        <label class="mdl-switch mdl-switch-live mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+          <input type="checkbox" id="switch-1" class="mdl-switch__input" checked />
+          <span class="mdl-switch__label">Live</span>
+        </label>
       </nav>
     </div>
   </header>

@@ -1,3 +1,4 @@
+
 /* TEXTFIELD */
 
 $input-text-font-size: 16px;
@@ -31,8 +32,7 @@ $spinner-arc-time: 1333ms;
 // How much the start location of the arc should rotate each time.
 $spinner-arc-start-rot: 216deg;
 
-$spinner-duration: 360 * $spinner-arc-time / (
-    strip-units($spinner-arc-start-rot + (360deg - $spinner-arc-size)));
+$spinner-duration: 360 * $spinner-arc-time / (strip-units($spinner-arc-start-rot + (360deg - $spinner-arc-size)));
 
 
 /* RADIO */
@@ -100,8 +100,7 @@ $columns-web-size: 360px;
 $columns-web-gutter: 40px;
 
 $columns-web-block-size: $columns-web-size + $columns-web-gutter;
-$columns-web-padding-size: $columns-web-count *
-    ($columns-web-size + $columns-web-gutter) / 2;
+$columns-web-padding-size: $columns-web-count * ($columns-web-size + $columns-web-gutter) / 2;
 
 // Tablet layout. There's a fixed number of columns, which grow to fill the
 // entire container.
@@ -121,13 +120,9 @@ $checkbox-label-height: 24px;
 $checkbox-button-size: 16px;
 $checkbox-inner-margin: 2px;
 $checkbox-padding: 8px;
-$checkbox-top-offset:
-($checkbox-label-height - $checkbox-button-size - $checkbox-inner-margin) / 2;
+$checkbox-top-offset: ($checkbox-label-height - $checkbox-button-size - $checkbox-inner-margin) / 2;
 $checkbox-ripple-size: $checkbox-label-height * 1.5;
 
-/* BADGE */
-$badge-size : 22px;
-$badge-padding: 2px;
 
 /* SHADOWS */
 

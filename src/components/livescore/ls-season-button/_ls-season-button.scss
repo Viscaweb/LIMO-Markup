@@ -1,0 +1,17 @@
+.ls-season-button{
+	font-size: 10px;
+	outline: none;
+	background: url("../assets/img/calendar-container.png") no-repeat;
+	background-position: center 11px;
+	background-size: 25px 24px;
+
+	&:active{
+		background-color: darken($ls-color-white, 10%);
+	}
+
+	.mdl-layout__header & {
+		padding-left: 7px;
+		padding-right: 7px;
+		color: $ls-primary-color;
+	}
+}
