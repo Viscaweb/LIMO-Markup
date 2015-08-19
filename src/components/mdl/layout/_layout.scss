@@ -156,6 +156,22 @@
 			padding: 20px;
 		}
 
+		//Social links
+		& .mdl-navigation__social{
+			display: flex;
+
+			.mdl-navigation__link{
+				flex-grow: 1;
+				text-align: center;
+				padding-top: 14px;
+				padding-bottom: 14px;
+
+				.icon-facebook{ color: $ls-color-facebook; }
+				.icon-twitter{ color: $ls-color-twitter; }
+				.icon-googleplus{ color: $ls-color-googleplus; }
+			}
+		}
+
 		//Active navigation list
 		& .mdl-navigation__active{
 			
