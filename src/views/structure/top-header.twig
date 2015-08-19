@@ -32,6 +32,15 @@
         {% endif %}
       </nav>
     </div>
+
+    {% if ls_header_scrollable_tabs %}
+      {% include 'structure/scrollable-tabs.twig' %}
+    {% endif %}
+
+    {% if ls_header_fixed_tabs %}
+      {% include 'structure/fixed-tabs.twig' %}
+    {% endif %}
+
   </header>
 	{% block top_header_drawer %}
     {% include 'structure/top-header/drawer.twig' %}

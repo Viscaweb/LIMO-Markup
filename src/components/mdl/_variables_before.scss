@@ -20,6 +20,14 @@ $ls-color-facebook: 		#395fa9;
 $ls-color-twitter: 			#27c4eb;
 $ls-color-googleplus: 	#b73d3d;
 
+//Top Header
+$ls-top-header-border-bottom: 	1px solid #e2e2e2;
+
+//Tabs
+$ls-tab-text-color: 					lighten($ls-text-color, 31.8%);
+$ls-tab-text-color-active: 		lighten($ls-color-black, 5%);
+$ls-tab-font-weight: 					300;
+
 //Drawer
 $ls-drawer-link-color:								darken($ls-text-color, 7%);
 $ls-drawer-link-font-size:						17px;
@@ -140,10 +148,10 @@ $layout-drawer-navigation-link-active-color: unquote("rgb(#{$color-primary})") !
 $layout-header-bg-color: unquote("rgb(#{$color-primary-contrast})");
 $layout-header-text-color: unquote("rgb(#{$text-color-primary})");
 $layout-header-nav-hover-color: unquote("rgba(#{$palette-grey-700}, 0.6)") !default;
-$layout-header-tab-text-color: unquote("rgba(#{$color-primary-contrast}, 0.6)") !default;
+$layout-header-tab-text-color: $ls-tab-text-color;
 
 // Tabs
-$layout-header-tab-highlight: unquote("rgb(#{$color-accent})") !default;
+$layout-header-tab-highlight: unquote("rgb(#{$color-primary})");
 
 /* ==========  Content Tabs  ========== */
 
