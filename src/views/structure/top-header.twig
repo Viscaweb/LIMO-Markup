@@ -1,21 +1,35 @@
 {% block top_header %}
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-      <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="{{ project }}"></div>
+      {% if ls_header_brand_logo %}
+       <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="{{ project }}"></div>
+      {% endif %}
       <span class="mdl-layout-title">{{ page_title }}</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
-
       <nav class="mdl-navigation">
-        <a class="mdl-navigation__link ls-season-button" href="#">14/15</a>
-        <a class="mdl-navigation__link ls-icon ls-active" href="#"><span class="icon-star"></span></a>
-        <label for="switch-1" class="mdl-switch-label-left">
-          <span class="mdl-switch__label">All</span>
-        </label>
-        <label class="mdl-switch mdl-switch-live mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-          <input type="checkbox" id="switch-1" class="mdl-switch__input" checked />
-          <span class="mdl-switch__label">Live</span>
-        </label>
+
+        {% if ls_header_season_button %}
+          <a class="mdl-navigation__link ls-season-button" href="#">14/15</a>
+        {% endif %}
+
+        {% if ls_header_star_icon %}
+          <a class="mdl-navigation__link ls-icon" href="#"><span class="icon-star"></span></a>
+        {% endif %}
+
+        {% if ls_header_star_icon_active %}
+          <a class="mdl-navigation__link ls-icon ls-active" href="#"><span class="icon-star"></span></a>
+        {% endif %}
+
+        {% if ls_header_switch %}
+          <label for="switch-1" class="mdl-switch-label-left">
+            <span class="mdl-switch__label">All</span>
+          </label>
+          <label class="mdl-switch mdl-switch-live mdl-js-switch mdl-js-ripple-effect" for="switch-1">
+            <input type="checkbox" id="switch-1" class="mdl-switch__input" checked />
+            <span class="mdl-switch__label">Live</span>
+          </label>
+        {% endif %}
       </nav>
     </div>
   </header>

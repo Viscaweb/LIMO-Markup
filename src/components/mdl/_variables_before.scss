@@ -6,17 +6,28 @@ $ls-brand-logo-size: 25px;
 
 //	Rewrite white & black color because mdl team don't want to support sass color functions :(
 //	More information at: https://github.com/google/material-design-lite/issues/146
-$ls-color-black: 			#000000;
-$ls-color-white: 			#FFFFFF;
-$ls-color-live: 			#e33000;
-$ls-color-live-rgb: 	"277, 48, 0";
-$ls-text-color: 			#484848;
-$ls-primary-color:		#5da400;
-$ls-star-active:			#ffc600;
+$ls-color-black: 				#000000;
+$ls-color-white: 				#FFFFFF;
+$ls-color-live: 				#e33000;
+$ls-color-live-rgb: 		"277, 48, 0";
+$ls-text-color: 				#484848;
+$ls-primary-color:			#5da400;
+$ls-green-active-color:	#5da400;
+$ls-star-active:				#ffc600;
+
+//Drawer
+$ls-drawer-link-color:								darken($ls-text-color, 7%);
+$ls-drawer-link-font-size:						17px;
+$ls-drawer-sub-navigation-font-size:	15px;
+$ls-drawer-link-active-padding:				11px 16px;
+$ls-drawer-link-padding:							10px 16px;
+$ls-drawer-sub-nav-link-padding:			8px 16px;
+$ls-drawer-link-icon-size:						20px;
+
 /* ==========  TYPOGRAPHY  ========== */
 
-$preferred_font: “SF UI Display“, “Helvetica Neue”, Roboto, “Segoe UI“, Arial, sans-serif !default;
-$performance_font: “SF UI Display“, “Helvetica Neue”, Roboto, “Segoe UI“, Arial, sans-serif !default;
+$preferred_font: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif !default;
+$performance_font: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif !default;
 
 
 /* ==========  Color & Themes  ========== */
