@@ -25,6 +25,7 @@ class Watch extends Command
             # BEFORE LAUNCHING WATCH, RESET THE PROJECT
             new Scripts\Compile\Clean(),
             new Scripts\Mdl\Reset(),
+            new Scripts\Components\Assets(),
             new Scripts\Components\Livescore(),
             new Scripts\Components\Mdl(),
             new Scripts\Mdl\Compile(),

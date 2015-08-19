@@ -24,6 +24,7 @@ class Compile extends Command
             new Scripts\Compile\Clean(),
             new Scripts\Mdl\Install(),
             new Scripts\Mdl\Reset(),
+            new Scripts\Components\Assets(),
             new Scripts\Components\Livescore(),
             new Scripts\Components\Mdl(),
             new Scripts\Mdl\Compile(),
