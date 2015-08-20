@@ -1,8 +1,9 @@
 {
-  "name": "viscaweb/limo",
-  "license": "MIT",
-  "type": "proprietary",
-  "description": "Livescore frontend website (mobile) application",
+  "name": "viscaweb/limo-markup",
+  "description": "LIMO Markup",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [],
   "autoload": {
     "psr-0": {
       "": "command/"
@@ -12,6 +13,5 @@
     "symfony/console": "^2.7",
     "twig/twig": "~1.0",
     "symfony/yaml": "^2.7"
-  },
-  "minimum-stability": "stable"
+  }
 }
