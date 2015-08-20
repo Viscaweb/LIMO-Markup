@@ -1,3 +1,84 @@
 .ls-divider {
-	background-color: red;
+	background-color: $ls-divider-bg;
+	font-size: $ls-divider-font-size;
+	height: $ls-divider-height;
+	line-height: $ls-divider-height;
+	padding: $ls-divider-padding;
+	display: flex;
+}
+
+//Title
+.ls-divider__title{
+  flex-shrink: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.ls-divider__description{
+	padding-left: 5px;
+	flex-shrink: 50;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+	font-weight: 300;
+	color: darken($ls-color-white, 30%);
+}
+
+//Middle spacer
+.ls-divider__spacer{
+	flex-grow: 1;
+}
+
+//Right navigation
+.ls-divider__right-nav{
+	display: flex;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: nowrap;
+
+	> a{
+		text-decoration: none;
+		outline: none;
+		padding: 0 12px;
+		color: darken($ls-color-white, 43%);
+
+		&:hover{
+			background-color: darken($ls-divider-bg, 5.2%);
+		}
+	}
+}
+
+//Right navigation text link
+.ls-divider__right-nav-link{
+	min-width: 50px;
+	font-weight: 300;
+	text-align: center;
+}
+
+//Divider icon styles
+.ls-divider__icon{
+	color: $ls-divider-icon-color;
+	font-size: $ls-divider-icon-size;
+	vertical-align: middle;
+
+	.ls-divider__title & {
+		margin-right: 9px;
+		line-height: $ls-divider-height - 1px;
+	}
+
+	.ls-divider__right-nav & {
+		color: darken($ls-color-white, 48.8%);
+		font-size: $ls-divider-right-nav-icon-size;
+	}
+}
+
+//Flags images
+.ls-divider__flag{
+	vertical-align: middle;
+	max-height: 14px;
+
+	.ls-divider__title & {
+		margin-right: 9px;
+	}
 }

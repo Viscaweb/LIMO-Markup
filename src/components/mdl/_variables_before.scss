@@ -37,6 +37,15 @@ $ls-drawer-link-padding:							10px 16px;
 $ls-drawer-sub-nav-link-padding:			8px 16px;
 $ls-drawer-link-icon-size:						20px;
 
+//Dividers
+$ls-divider-bg:										darken($ls-color-white, 10%);
+$ls-divider-font-size:						13px;
+$ls-divider-height:								32px;
+$ls-divider-padding: 							0 0 0 13px;
+$ls-divider-icon-size:						18px;
+$ls-divider-right-nav-icon-size:	20px;
+$ls-divider-icon-color:						darken($ls-color-white, 32.5%);
+
 /* ==========  TYPOGRAPHY  ========== */
 
 $preferred_font: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif !default;

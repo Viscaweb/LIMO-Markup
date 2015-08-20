@@ -9,7 +9,11 @@
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
 			{% include 'structure/top-header.twig' %}
-    	{% include 'structure/main-content.twig' %}
+    	{% embed 'structure/main-content.twig' %}
+				{% block main_content %}
+					{{main_content}}
+				{% endblock %}
+    	{% endembed %}
 
 		</div>
 </body>
