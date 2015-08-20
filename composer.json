@@ -1,4 +1,8 @@
 {
+  "name": "viscaweb/limo",
+  "license": "MIT",
+  "type": "proprietary",
+  "description": "Livescore frontend website (mobile) application",
   "autoload": {
     "psr-0": {
       "": "command/"
