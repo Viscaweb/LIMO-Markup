@@ -54,6 +54,16 @@ $ls-button-font-size:						14px;
 $ls-button-large-size:					46px; 
 $ls-button-large-icon-size:			20px; 
 
+//Dialog
+$ls-dialog-shadow: 							0 0 10px rgba(0, 0, 0, 0.17);
+$ls-dialog-border: 							1px solid #e7e7e7;
+$ls-dialog-padding: 						25px 25px 15px;
+$ls-dialog-title-font-size: 		17px;
+$ls-dialog-title-font-weight: 	600;
+$ls-dialog-title-line-height: 	21px;
+$ls-dialog-body-font-size: 			15px;
+$ls-dialog-body-font-weight: 		300;
+
 /* ==========  TYPOGRAPHY  ========== */
 
 $preferred_font: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif !default;

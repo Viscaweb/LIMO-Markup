@@ -1,0 +1,25 @@
+.mdl-dialog{
+	padding: $ls-dialog-padding;
+	box-shadow: $ls-dialog-shadow;
+	border: $ls-dialog-border;
+}
+
+.mdl-dialog__header-title{
+	display: block;
+	font-size: $ls-dialog-title-font-size;
+	font-weight: $ls-dialog-title-font-weight;
+	line-height: $ls-dialog-title-line-height;
+	padding-bottom: 19px;
+}
+
+.mdl-dialog__body{
+	
+	p{
+		font-size: $ls-dialog-body-font-size;
+		font-weight: $ls-dialog-body-font-weight;
+	}
+}
+
+.mdl-dialog__footer{
+	text-align: right;
+}
