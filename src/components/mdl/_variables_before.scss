@@ -52,6 +52,7 @@ $ls-button-default-bg:					0 14px;
 $ls-button-font-weight:					300; 
 $ls-button-font-size:						14px; 
 $ls-button-large-size:					46px; 
+$ls-button-large-icon-size:			20px; 
 
 /* ==========  TYPOGRAPHY  ========== */
 
@@ -100,7 +101,7 @@ $target-elements-directly: true !default;
 
 // Default button colors.
 $button-primary-color: darken($ls-color-white, 3.2%);
-$button-secondary-color: unquote("rgb(#{$color-black})") !default;
+$button-secondary-color: $ls-text-color;
 $button-hover-color: $button-primary-color !default;
 $button-active-color: darken($ls-color-white, 10.5%);
 $button-focus-color: darken($ls-color-white, 10.5%);
