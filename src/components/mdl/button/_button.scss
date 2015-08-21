@@ -4,6 +4,7 @@
 	font-size: $ls-button-font-size;
 	padding: $ls-button-padding;
 	min-width: 46px;
+	box-sizing: border-box;
 }
 
 // Raised buttons
@@ -43,9 +44,24 @@
 //Icon buttons
 .mdl-button__icon{
 	vertical-align: middle;
+	color: lighten($button-secondary-color, 25%);
 
 	.mdl-button--large & {
-		font-size: 12px;
+		font-size: $ls-button-large-icon-size;
+
+		&.icon-caret-down,
+		&.icon-caret-up,
+		&.icon-caret-left,
+		&.icon-caret-right
+		{
+			font-size: 12px;
+		}
+	}
+
+	.mdl-button--colored &,
+	.mdl-button--accent &
+	{
+		color: $ls-color-white;
 	}
 }
 
@@ -88,6 +104,7 @@
 		z-index: 1;
 		right: 20px;
 		top: 0;
+		color: lighten($button-secondary-color, 25%);
 	}
 
 	select{
@@ -101,6 +118,7 @@
 		height: $button-height;
 		min-width: $button-min-width;
 		padding: 0 $button-padding;
+		color: $button-secondary-color;
 	}
 
 	&.mdl-button--large{
