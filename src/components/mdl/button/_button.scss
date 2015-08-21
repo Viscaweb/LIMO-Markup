@@ -1,3 +1,113 @@
 .mdl-button {
-	border: 1px solid $button-secondary-color !important;
+	text-transform: none;
+	font-weight: $ls-button-font-weight;
+	font-size: $ls-button-font-size;
+	padding: $ls-button-padding;
+	min-width: 46px;
+}
+
+// Raised buttons
+.mdl-button--raised {
+	box-shadow: none;
+
+	&:active, &:focus:not(:active) {
+		box-shadow: none;
+	}
+}
+
+//Ripple
+.mdl-ripple {
+
+	.mdl-button & {
+		background: darken($button-active-color, 30%);
+	}
+}
+
+//Large buttons
+.mdl-button--large{
+	line-height: $ls-button-large-size;
+	height: $ls-button-large-size;
+
+	.mdl-button__icon-right{
+		float: right;
+		line-height: $ls-button-large-size;
+	}
+}
+
+//Block buttons
+.mdl-button--block{
+	display: block;
+	width: 100%;
+}
+
+//Icon buttons
+.mdl-button__icon{
+	vertical-align: middle;
+
+	.mdl-button--large & {
+		font-size: 12px;
+	}
+}
+
+.mdl-button__icon-left{
+	margin-right: 25px;
+}
+
+
+//Button group
+.mdl-button-group{
+	display: inline-flex;
+	
+	& .mdl-button{
+		border-right: 1px solid darken($button-primary-color, 10%);
+		border-radius: 0;
+
+		&:last-child{
+			border-right-width: 0;
+		}
+	}
+
+	&.mdl-button-group--block{
+		display: flex;
+		align-items: center;
+
+		.mdl-button--wide{
+			flex-grow: 1;
+		}
+	}
+}
+
+.mdl-button__select{
+	padding: 0;
+	
+	&:after{
+		content: '\e60b';
+		font-family: "LSicons";
+		font-size: 12px;
+		position: absolute;
+		z-index: 1;
+		right: 20px;
+		top: 0;
+	}
+
+	select{
+		position: relative;
+		z-index: 2;
+		appearance:none;
+		outline: none;
+		width: 100%;
+		border: 0;
+		background: transparent;
+		height: $button-height;
+		min-width: $button-min-width;
+		padding: 0 $button-padding;
+	}
+
+	&.mdl-button--large{
+
+		select{
+			line-height: $ls-button-large-size;
+			height: $ls-button-large-size;
+		}
+	}
 }

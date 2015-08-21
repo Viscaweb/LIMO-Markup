@@ -46,6 +46,13 @@ $ls-divider-icon-size:						18px;
 $ls-divider-right-nav-icon-size:	20px;
 $ls-divider-icon-color:						darken($ls-color-white, 32.5%);
 
+//Buttons
+$ls-button-padding:							0 14px; 
+$ls-button-default-bg:					0 14px; 
+$ls-button-font-weight:					300; 
+$ls-button-font-size:						14px; 
+$ls-button-large-size:					46px; 
+
 /* ==========  TYPOGRAPHY  ========== */
 
 $preferred_font: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif !default;
@@ -92,11 +99,11 @@ $target-elements-directly: true !default;
 /* ==========  Standard Buttons  ========== */
 
 // Default button colors.
-$button-primary-color: unquote("rgba(#{$palette-grey-500}, 0.20)") !default;
+$button-primary-color: darken($ls-color-white, 3.2%);
 $button-secondary-color: unquote("rgb(#{$color-black})") !default;
 $button-hover-color: $button-primary-color !default;
-$button-active-color: unquote("rgba(#{$palette-grey-500}, 0.40)") !default;
-$button-focus-color: unquote("rgba(#{$color-black}, 0.12)") !default;
+$button-active-color: darken($ls-color-white, 10.5%);
+$button-focus-color: darken($ls-color-white, 10.5%);
 
 // Colored button colors.
 $button-primary-color-alt: unquote("rgb(#{$color-primary})") !default;
