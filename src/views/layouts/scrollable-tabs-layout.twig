@@ -30,7 +30,13 @@
 		    <section class="mdl-layout__tab-panel" id="scroll-tab-6">
 		      <div class="page-content"><!-- Your content goes here --></div>
 		    </section>
-    	</main>
+
+			{% block main_content %}
+				{{main_content}}
+			{% endblock %}
+			
+		</main>
+
 		</div>
 </body>
 </html>
