@@ -73,6 +73,7 @@
 //Button group
 .mdl-button-group{
 	display: inline-flex;
+	position: relative;
 	
 	& .mdl-button{
 		border-right: 1px solid darken($button-primary-color, 10%);
