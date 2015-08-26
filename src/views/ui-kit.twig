@@ -4,10 +4,24 @@
 {% set page_title = 'UI Kit' %}
 {% set ls_header_brand_logo = true %}
 
+{# Main content #}
 {% set main_content %}
 
 	{% include 'blocks/buttons.twig' %}
 
-	{% include 'blocks/modal.twig' %}	 
+	{% include 'blocks/modal.twig' %}
+
+	{% include 'blocks/form-elements.twig' %}	 
 
 {% endset %}
+
+{# Scripts init #}
+{% block footer_scripts %}
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var dp = $('.mdl-calendar > input[type="text"]');
+			dp.datepicker();
+			
+		});
+	</script>
+{% endblock %}
