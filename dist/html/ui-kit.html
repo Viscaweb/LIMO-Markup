@@ -6,7 +6,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 
 		<title>The project: LIMO</title>
 
@@ -52,6 +52,14 @@
 		<script src="../assets/prism-bash.min.js"></script>
 		<script src="../assets/main.js"></script>
 
+		<!-- Material Calendar -->
+		<script src="../assets/js/material-datepicker/libs/moment.min.js"></script>
+		<script src="../assets/js/material-datepicker/libs/jquery-2.1.3.min.js"></script>
+		<script src="../assets/js/material-datepicker/libs/knockout-3.2.0.js"></script>
+
+		<script src="../assets/js/material-datepicker/material-datepicker/js/material.datepicker.js"></script>
+		<link rel="stylesheet" href="../assets/js/material-datepicker/material-datepicker/css/material.datepicker.css">
+		
 								
 		
 		
@@ -180,9 +188,9 @@
 
   <div class="mdl-cell mdl-cell--6-col">
   	<div class="mdl-button-group mdl-button-group--block">
-	  	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+	  	<a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
 				<span class="mdl-button__icon icon-caret-left"></span>
-			</button>
+			</a>
 			<div class="mdl-button mdl-button--raised mdl-button--large mdl-button__select mdl-button--wide">
 		  	<select>
 		  		<option value="0">Option 1</option>
@@ -191,23 +199,23 @@
 		  		<option value="3">Option 4</option>
 		  	</select>
 	  	</div>
-	  	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+	  	<a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
 				<span class="mdl-button__icon icon-caret-right"></span>
-			</button>
+			</a>
 		</div>
   </div>
 
   <div class="mdl-cell mdl-cell--6-col">
   	<div class="mdl-button-group mdl-button-group--block">
-	  	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+	  	<a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
 				<span class="mdl-button__icon icon-caret-left"></span>
-			</button>
-	  	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--wide">
+			</a>
+	  	<a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--wide">
 				<span class="mdl-button__value">Matchday 37</span><span class="mdl-button__icon mdl-button__icon-right icon-caret-down"></span>
-			</button>
-	  	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+			</a>
+	  	<a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
 				<span class="mdl-button__icon icon-caret-right"></span>
-			</button>
+			</a>
 		</div>
   </div>
 
@@ -224,13 +232,13 @@
 
   <div class="mdl-cell mdl-cell--6-col">
   	<div class="mdl-button-group mdl-button-group--block">
-	  	<a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+	  	<a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
 				<span class="mdl-button__icon icon-caret-left"></span>
 			</a>
-	  	<a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--wide">
-				<span class="mdl-button__value">Fri. June 26th</span><span class="mdl-button__icon mdl-button__icon-right icon-calendar"></span>
+	  	<a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--wide">
+				June 2015
 			</a>
-	  	<a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+	  	<a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
 				<span class="mdl-button__icon icon-caret-right"></span>
 			</a>
 		</div>
@@ -238,37 +246,53 @@
 
   <div class="mdl-cell mdl-cell--6-col">
   	<div class="mdl-button-group mdl-button-group--block">
-	  	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+	  	<a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
 				<span class="mdl-button__icon icon-caret-left"></span>
-			</button>
-	  	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--wide">
-				June 2015
-			</button>
-	  	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+			</a>
+			<div class="mdl-button mdl-calendar mdl-button--raised mdl-button--large mdl-button--wide">
+				<input type="text" name="mdl-calendar1" value="01/08/2015" readonly="true">
+			</div>
+	  	<a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
 				<span class="mdl-button__icon icon-caret-right"></span>
-			</button>
+			</a>
 		</div>
   </div>
 
 </div>
 	<div class="mdl-grid">
 	<div class="mdl-cell mdl-cell--6-col">
-		<div class="mdl-dialog">
-			<div class="mdl-dialog__header">
-				<span class="mdl-dialog__header-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-			</div>
-			<div class="mdl-dialog__body">
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-			</div>
-			<div class="mdl-dialog__footer">
-				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect">
-				 	CANCEL
-				</button>
-				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect">
-				  AGREED
-				</button>
+		<button data-toggle="mdl-dialog" data-target="#dialog1" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+		  Show Dialog
+		</button>
+		<div class="mdl-dialog" id="dialog1">
+			<div class="mdl-dialog__content">
+				<div class="mdl-dialog__header">
+					<span class="mdl-dialog__header-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+				</div>
+				<div class="mdl-dialog__body">
+					<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+				</div>
+				<div class="mdl-dialog__footer">
+					<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+					 	CANCEL
+					</button>
+					<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+					  AGREED
+					</button>
+				</div>
 			</div>
 		</div>
+	</div>
+</div>
+	<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--6-col">
+		<!-- Simple Textfield -->
+		<form action="#">
+		  <div class="mdl-textfield mdl-js-textfield">
+		    <input class="mdl-textfield__input" type="text" id="sample1" />
+		    <label class="mdl-textfield__label" for="sample1">Text...</label>
+		  </div>
+		</form>
 	</div>
 </div>	 
 
@@ -277,5 +301,35 @@
   </div>
 </main>
 		</div>
+
+		<script type="text/javascript">
+		$(document).ready(function(){
+			var dp = $('.mdl-calendar > input[type="text"]');
+			dp.datepicker();
+			
+
+			//This code should be on a js component
+			$('[data-toggle="mdl-dialog"]').click(function( e ){
+				var target = $(this).data("target");
+				$(target).addClass("mdl-dialog--show");
+
+				e.stopPropagation();
+			});
+
+			//Dialog close button
+			$(".mdl-dialog-close").click(function( e ){
+				var dialog = $(this).parents(".mdl-dialog");
+				dialog.removeClass("mdl-dialog--show");
+			});
+
+			//Hide dialog when click outside
+		  $(document).on("click",function( e ){
+		    if ( !$(e.target).closest(".mdl-dialog__content").length ) {
+		      $(".mdl-dialog").removeClass('mdl-dialog--show');
+		    }
+		  });
+
+		});
+	</script>
 </body>
 </html>

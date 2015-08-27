@@ -9,7 +9,7 @@
 
 	{% include 'blocks/buttons.twig' %}
 
-	{% include 'blocks/modal.twig' %}
+	{% include 'blocks/dialog.twig' %}
 
 	{% include 'blocks/form-elements.twig' %}	 
 
@@ -22,6 +22,28 @@
 			var dp = $('.mdl-calendar > input[type="text"]');
 			dp.datepicker();
 			
+
+			//This code should be on a js component
+			$('[data-toggle="mdl-dialog"]').click(function( e ){
+				var target = $(this).data("target");
+				$(target).addClass("mdl-dialog--show");
+
+				e.stopPropagation();
+			});
+
+			//Dialog close button
+			$(".mdl-dialog-close").click(function( e ){
+				var dialog = $(this).parents(".mdl-dialog");
+				dialog.removeClass("mdl-dialog--show");
+			});
+
+			//Hide dialog when click outside
+		  $(document).on("click",function( e ){
+		    if ( !$(e.target).closest(".mdl-dialog__content").length ) {
+		      $(".mdl-dialog").removeClass('mdl-dialog--show');
+		    }
+		  });
+
 		});
 	</script>
 {% endblock %}

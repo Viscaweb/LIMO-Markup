@@ -1,7 +1,7 @@
 .mdl-calendar{
 	overflow: visible;
 	padding: 0;
-	position: static;
+	will-change: inherit;
 
 	input[type="text"]{
 		height: $button-height;
@@ -17,6 +17,7 @@
 		color: $button-secondary-color;
 		position: relative;
 		z-index: 2;
+		font-size: 14px;
 	}
 
 	//Calendar icon inside button
@@ -41,17 +42,42 @@
 }
 
 //Js plugin: https://github.com/ch00kz/material-datepicker
+.material-datepicker-container{
+	width: 100%;
+	height: 100%;
+	top: 0 !important;
+	left: 0 !important;
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2000;
+	padding: 0 20px;
+	box-sizing: border-box;
+
+	&.hide{
+		visibility: hidden;
+	}
+}
+
 .material-datepicker{
 	background-color: $ls-color-white;
+	box-shadow: $ls-calendar-shadow;
+	transform: scale(1);
+	opacity: 1;
+	transition: all 0.3s;
 
-	.mdl-calendar & {
-		top: $button-height !important;
-		left: 0 !important;
-		border-width: 0;
+	.material-datepicker-container.hide & {
+		transform: scale(0.7);
+		opacity: 0;
 	}
 
-	.mdl-calendar.mdl-button--large & {
-		top: $ls-button-large-size !important;
+	.mdl-calendar & {
+		border-width: 0;
+		position: relative;
+		width: 100%;
+		max-width: 280px;
+		height: auto;
 	}
 
 	section.top-date{
@@ -93,6 +119,14 @@
 
 		.mdl-button-group{
 			border-bottom: 1px solid darken($button-primary-color, 10%);
+
+			.mdl-button{
+				background-color: $ls-color-white;
+
+				&:hover{
+					background-color: $button-primary-color;
+				}
+			}
 		}
 
 		.days{
