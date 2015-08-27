@@ -39,7 +39,7 @@ $.fn.datepicker = function (options) {
 	var picker_el = $(".material-datepicker", picker);
 
 	// insert picker after the field in the DOM
-	$(field).after(picker);
+	$("body").append(picker);
 
 	// show picker when field is in focus
 	$(field).focus(function( e ){
