@@ -1,0 +1,189 @@
+
+.content-header{
+  position: relative;
+  width: 100%;
+  border: 0;
+  background: $layout-header-bg-color;
+
+  .avatar{
+	vertical-align: top;
+	position: relative;
+	text-align: center;
+
+	img{
+	  width: 80px;
+	  max-width: 80px;
+	}
+  }
+
+  .info{
+	padding: 10px 0;
+	vertical-align: top;
+
+	.title-container {
+	  max-width: 100%;
+	  float: left;
+	}
+	.title{
+	  line-height: 21px;
+	  display: table;
+	  max-width: 100%;
+
+
+	  > .title-value{
+		font-size: 24px;
+		line-height: 28px;
+		color: $ls-text-color;
+		display: table-cell;
+		vertical-align: middle;
+	  }
+
+	  > .favorite-star {
+		display: table-cell;
+		padding: 0 6px;
+	  }
+
+
+	  &.uppercase{
+		text-transform: uppercase;
+	  }
+
+	}
+
+	.btn-link{
+	  font-weight: 400;
+	  margin-top: 5px;
+	}
+
+	.additionnal-info{
+	  color: lighten($ls-text-color,35%);
+	  display: block;
+	  font-size:  $card-font-size - 2 ;
+	  clear: both;
+	  text-transform: uppercase;
+	  text-decoration: none;
+
+	  .country-flag {
+		width: 26px;
+		margin-right: 5px;
+	  }
+
+	  span{
+		margin-right: 5px;
+	  }
+	}
+  }
+
+  &.teams{
+
+	.shirts{
+	  text-align: right;
+
+	  a{
+		text-align: center;
+		display: inline-block;
+		font-size: $card-font-size - 2;
+		color: lighten($ls-text-color,32%);
+
+		img{
+		  display: block;
+		  margin: 0 auto;
+		}
+	  }
+	}
+
+  }
+
+  &.player{
+
+	.info{
+
+	  .title{
+
+		.first-name {
+		  margin: 0;
+		  font-size: $card-font-size;
+		  line-height: 18px;
+		  font-weight: 600;
+		  padding-left: 2px;
+		  display: block;
+		  white-space: nowrap;
+		  text-overflow: ellipsis;
+		  overflow: hidden;
+		}
+
+		.last-name{
+		  margin: 0;
+		  display: block;
+		  font-size: $card-font-size;
+		  line-height: 32px;
+		  color: $ls-text-color;
+		}
+	  }
+	}
+
+	.description{
+	  vertical-align: top;
+	  padding: 10px 10px 10px 0;
+
+	  &:last-child {
+		padding-right: 0;
+	  }
+
+	  ul{
+		padding: 0;
+		list-style: none;
+
+		li{
+		  padding: 1px 0;
+		  font-size: $card-font-size - 2;
+		  border-bottom: 1px solid lighten($ls-text-color,7%);
+
+		  .icon{
+			margin-right: 5px;
+			font-size: $card-font-size;
+			color: lighten($ls-text-color, 35.3%);
+		  }
+
+		  span.info{
+			float: right;
+			margin: 0;
+			padding: 0;
+			width: auto;
+			font-size: $card-font-size;
+			color: lighten($ls-text-color, 23%);
+			cursor: pointer;
+			position: relative;
+			top: 3px;
+		  }
+
+		  span{
+			font-weight: 400;
+		  }
+		}
+	  }
+	}
+
+	.teams{
+	  vertical-align: top;
+	  text-align: right;
+	  display: table-cell;
+	  padding: 10px 0;
+	  width: 25%;
+
+	  a{
+		text-align: center;
+		display: inline-block;
+		font-size: $card-font-size - 1;
+		color: lighten($ls-text-color,32%);
+		padding: 2px;
+
+		img{
+		  max-width: 52px;
+		  display: block;
+		}
+	  }
+	}
+  }
+
+}
