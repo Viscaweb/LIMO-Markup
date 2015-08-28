@@ -13,6 +13,8 @@
 
 	{% include 'blocks/form-elements.twig' %}	 
 
+	{% include 'blocks/collapsible.twig' %}	 
+
 {% endset %}
 
 {# Scripts init #}
@@ -23,24 +25,6 @@
 				<span class="mdl-dialog__header-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
 			</div>
 			<div class="mdl-dialog__body">
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 			</div>
 			<div class="mdl-dialog__footer">
@@ -59,27 +43,39 @@
 			dp.datepicker();
 			
 
-			//This code should be on a js component
-			$('[data-toggle="mdl-dialog"]').click(function( e ){
-				var target = $(this).data("target");
-				$(target).addClass("mdl-dialog--show");
+			/*mdl-dialog*/
+				//This code should be on a js component
+				$('[data-toggle="mdl-dialog"]').click(function( e ){
+					var target = $(this).data("target");
+					$(target).addClass("mdl-dialog--show");
 
-				e.stopPropagation();
-			});
+					e.stopPropagation();
+				});
 
-			//Dialog close button
-			$(".mdl-dialog-close").click(function( e ){
-				var dialog = $(this).parents(".mdl-dialog");
-				dialog.removeClass("mdl-dialog--show");
-			});
+				//Dialog close button
+				$(".mdl-dialog-close").click(function( e ){
+					var dialog = $(this).parents(".mdl-dialog");
+					dialog.removeClass("mdl-dialog--show");
+				});
 
-			//Hide dialog when click outside
-		  $(document).on("click",function( e ){
-		    if ( !$(e.target).closest(".mdl-dialog__content").length ) {
-		      $(".mdl-dialog").removeClass('mdl-dialog--show');
-		    }
-		  });
+				//Hide dialog when click outside
+			  $(document).on("click",function( e ){
+			    if ( !$(e.target).closest(".mdl-dialog__content").length ) {
+			      $(".mdl-dialog").removeClass('mdl-dialog--show');
+			    }
+			  });
 
+			/*mdl-collapsible*/
+				$(".mdl-collapsible__heading").click(function( e ){
+					var collapsible = $(this).parent();
+					var body = $(".mdl-collapsible__body", collapsible);
+
+					body.slideToggle({
+						complete: function(){
+							collapsible.toggleClass("mdl-collapsible-collapsed");
+						}
+					});
+				});
 		});
 	</script>
 {% endblock %}

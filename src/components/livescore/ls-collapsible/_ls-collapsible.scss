@@ -1,0 +1,64 @@
+.mdl-collapsible{
+	
+	&.mdl-collapsible-collapsed + .mdl-collapsible{
+
+		.mdl-collapsible__heading{
+			border-top-width: 0;
+		}
+	}
+}
+
+.mdl-collapsible__heading{
+	background-color: $button-primary-color;
+	padding: $ls-collapsible-heading-padding;
+	padding-right: 40px;
+	border-width: 1px 0;
+	border-color: darken($button-primary-color, 11.2%);
+	border-style: solid;
+	position: relative;
+	cursor: pointer;
+
+	&:after{
+		content: '\e60e';
+		font-family: "LSicons";
+		font-size: 12px;
+		position: absolute;
+		z-index: 1;
+		right: 20px;
+		top: 0;
+		color: lighten($button-secondary-color, 25%);
+		line-height: 42px;
+	}
+
+	.mdl-collapsible-collapsed &{
+
+		&:after{
+			content: '\e60b';
+		}
+	}
+
+	&:hover{
+		background-color: darken($button-primary-color, 3%);
+	}
+}
+
+.mdl-collapsible__heading-title{
+	display: block;
+	font-weight: 400;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+}
+
+.mdl-collapsible__body{
+	background-color: $ls-color-white;
+	position: relative;
+
+	.mdl-collapsible-collapsed & {
+		display: none;
+	}
+}
+
+.mdl-collapsible__body-content{
+	padding: $ls-collapsible-content-padding;
+}
