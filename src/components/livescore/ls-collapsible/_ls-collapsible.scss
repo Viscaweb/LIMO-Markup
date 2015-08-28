@@ -9,11 +9,11 @@
 }
 
 .mdl-collapsible__heading{
-	background-color: $button-primary-color;
+	background-color: $ls-collapsible-border-color;
 	padding: $ls-collapsible-heading-padding;
 	padding-right: 40px;
 	border-width: 1px 0;
-	border-color: darken($button-primary-color, 11.2%);
+	border-color: darken($ls-collapsible-border-color, 11.2%);
 	border-style: solid;
 	position: relative;
 	cursor: pointer;
@@ -38,7 +38,7 @@
 	}
 
 	&:hover{
-		background-color: darken($button-primary-color, 3%);
+		background-color: darken($ls-collapsible-border-color, 3%);
 	}
 }
 

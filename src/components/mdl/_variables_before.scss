@@ -54,9 +54,16 @@ $ls-button-font-size:						14px;
 $ls-button-large-size:					46px; 
 $ls-button-large-icon-size:			20px;
 
+//Lists
+$ls-list-padding:				13px 15px;
+$ls-list-text-color:		$ls-color-black;
+$ls-list-border-color:	darken($ls-color-white, 3.2%);
+$ls-list-pressed-color:	darken($ls-color-white, 5.5%);
+
 //Collapsible
 $ls-collapsible-heading-padding:			12px 14px;
 $ls-collapsible-content-padding:			12px 14px;
+$ls-collapsible-border-color:					darken($ls-color-white, 3.2%);
 
 //Dialog
 $ls-dialog-shadow: 							0 0 10px rgba(0, 0, 0, 0.17);

@@ -11,10 +11,14 @@
 
 	{% include 'blocks/dialog.twig' %}
 
-	{% include 'blocks/form-elements.twig' %}	 
+	{% include 'blocks/form-elements.twig' %}
 
-	{% include 'blocks/collapsible.twig' %}	 
+	<div class="mdl-grid">
+		{% include 'blocks/collapsible.twig' %}
 
+		{% include 'blocks/lists.twig' %}
+	</div>
+	
 {% endset %}
 
 {# Scripts init #}

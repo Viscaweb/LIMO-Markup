@@ -1,0 +1,21 @@
+.mdl-list{
+	padding: 0;
+	margin: 0;
+
+	> li{
+		list-style: none;
+		display: block;
+		padding: $ls-list-padding;
+		color: $ls-list-text-color;
+		border-top: 1px solid darken($ls-list-border-color, 11.2%);
+		line-height: 17px;
+
+		&:last-child{
+			border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+		}
+
+		&:active{
+			background-color: $ls-list-pressed-color;
+		}
+	}
+}
