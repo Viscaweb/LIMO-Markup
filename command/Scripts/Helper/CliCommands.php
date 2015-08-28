@@ -7,7 +7,7 @@ namespace Scripts\Helper;
 class CliCommands
 {
     const COMMAND_INFINITE_LOOP = "while true\ndo\n%s\ndone";
-    const COMMAND_FSWATCH = 'fswatch-run %s %s %s -i=%s';
+    const COMMAND_FSWATCH = 'fswatch-run %s %s %s';
     const COMMAND_INOTIFY = 'inotifywait -qq -r -e modify -e move -e create -e delete %s && %s';
     const COMMAND_RUN_TASK = 'cd %s && php application.php %s %s %s';
     const COMMAND_MDL_GULP_TASK = 'cd %s && gulp %s';
