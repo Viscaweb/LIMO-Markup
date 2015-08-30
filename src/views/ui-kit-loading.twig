@@ -1,0 +1,11 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set page_title = 'UI Loading' %}
+{% set ls_header_brand_logo = true %}
+
+{% block footer_scripts %}
+
+	{% include 'blocks/loading.twig' %}
+
+{% endblock %}
