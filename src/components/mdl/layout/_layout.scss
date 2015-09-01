@@ -70,6 +70,7 @@
 	position: relative;
 	padding-right: 15px;
 	margin-right: 15px;
+	cursor: pointer;
 
 	img{
 		width: $ls-brand-logo-size;	
@@ -97,7 +98,7 @@
 }
 
 .mdl-layout__drawer-button{
-
+	padding-right: 6px;
 	
 	.mdl-layout__header & {
 		margin-right: 0;
@@ -106,6 +107,7 @@
 	  	margin: 0;
 	  	height: $layout-header-mobile-row-height - 1px;
 			line-height: $layout-header-mobile-row-height + 6;
+			padding-right: 0;
 	  }
 	}
 }

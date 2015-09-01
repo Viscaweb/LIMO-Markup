@@ -23,5 +23,16 @@
 		    </section>
     	</main>
 		</div>
+		
+	{% block footer_scripts %}
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				//Init core JS
+				App.init();
+
+			});
+		</script>
+	{% endblock %}
 </body>
 </html>

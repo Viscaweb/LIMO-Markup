@@ -59,15 +59,18 @@
 
 		<script src="../assets/js/material-datepicker/material-datepicker/js/material.datepicker.js"></script>
 		<link rel="stylesheet" href="../assets/js/material-datepicker/material-datepicker/css/material.datepicker.css">
+
+		<!-- LS Scripts -->
+		<script src="../assets/js/app.js"></script>
 		
 								
 		
 	
 </head>
 <body>
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-			  <header class="mdl-layout__header">
+		  <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
              <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="LIMO"></div>
             <span class="mdl-layout-title">Scrollable tabs layout</span>
@@ -128,31 +131,38 @@
     	<a class="mdl-navigation__link" href="#"><span class="icon icon-googleplus"></span></a>
     </li>
   </ul>
-</div>	    	
-    	<main class="mdl-layout__content">
-		    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-		      <div class="page-content"><!-- Your content goes here --></div>
-		    </section>
-		    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-		      <div class="page-content"><!-- Your content goes here --></div>
-		    </section>
-		    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-		      <div class="page-content"><!-- Your content goes here --></div>
-		    </section>
-		    <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-		      <div class="page-content"><!-- Your content goes here --></div>
-		    </section>
-		    <section class="mdl-layout__tab-panel" id="scroll-tab-5">
-		      <div class="page-content"><!-- Your content goes here --></div>
-		    </section>
-		    <section class="mdl-layout__tab-panel" id="scroll-tab-6">
-		      <div class="page-content"><!-- Your content goes here --></div>
-		    </section>
+</div>	  	
+  	<main class="mdl-layout__content">
+	    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-5">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-6">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
 
-							
-						
-		</main>
+					
+			
+	</main>
+	</div>
+			<script type="text/javascript">
+			$(document).ready(function(){
 
-		</div>
-</body>
+				//Init core JS
+				App.init();
+
+			});
+		</script>
+	</body>
 </html>
