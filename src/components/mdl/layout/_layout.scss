@@ -253,6 +253,16 @@
 	border-bottom: $ls-top-header-border-bottom;
 }
 
+.mdl-layout__tab-bar{
+	padding-left: 0;
+	width: 100%;
+}
+
+//Directional buttons are not working
+.mdl-layout__tab-bar-button{
+	display: none;
+}
+
 .mdl-layout__tab {
 	text-transform: none;
 	font-weight: $ls-tab-font-weight;
