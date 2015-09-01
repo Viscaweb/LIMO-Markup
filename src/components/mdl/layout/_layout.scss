@@ -40,6 +40,8 @@
 	//General link elements
 	.mdl-navigation__link{
 		color: lighten($ls-text-color, 30%);
+		text-align: center;
+		min-width: 30px;
 
 		&.ls-icon{
 			padding-left: 5px;
@@ -56,6 +58,10 @@
 					}
 				}
 			}
+		}
+
+		&:active{
+			background-color: darken($ls-color-white, 10%);
 		}
 	}
 }
