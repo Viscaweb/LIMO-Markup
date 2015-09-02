@@ -110,6 +110,9 @@
 	}
 
 	select{
+		@include typo-preferred-font(true);
+		font-size: 14px;
+		font-weight: 300;
 		position: relative;
 		z-index: 2;
 		appearance:none;

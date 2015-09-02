@@ -4,6 +4,9 @@
 	will-change: inherit;
 
 	input[type="text"]{
+		@include typo-preferred-font(true);
+		font-size: 14px;
+		font-weight: 300;
 		height: $button-height;
 		padding: 0;
 		margin: 0;
