@@ -10,9 +10,12 @@
 
 			{% include 'structure/top-header.twig' %}
 
-			{% block main_content %}
-				{{main_content}}
-			{% endblock %}
+			{% embed 'structure/main-content.twig' %}
+				{% block main_content %}
+					{{main_content}}
+				{% endblock %}
+			{% endembed %}
+
 
 		</div>
 	{% block footer_scripts %}
