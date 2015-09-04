@@ -13,7 +13,7 @@
 
 	{% include 'blocks/form-elements.twig' %}
 
-	<div class="mdl-grid mdl-grid--no-spacing">
+	<div class="mdl-grid">
 		{% include 'blocks/collapsible.twig' %}
 
 		{% include 'blocks/lists.twig' %}
@@ -23,67 +23,5 @@
 
 {# Scripts init #}
 {% block footer_scripts %}
-	<div class="mdl-dialog" id="dialog1">
-		<div class="mdl-dialog__content">
-			<div class="mdl-dialog__header">
-				<span class="mdl-dialog__header-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-			</div>
-			<div class="mdl-dialog__body">
-				<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-			</div>
-			<div class="mdl-dialog__footer">
-				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
-				 	CANCEL
-				</button>
-				<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
-				  AGREED
-				</button>
-			</div>
-		</div>
-	</div>
-	<script type="text/javascript">
-		$(document).ready(function(){
-
-			//Init core JS
-			App.init();
-
-			var dp = $('.mdl-calendar > input[type="text"]');
-			dp.datepicker();
-			
-
-			/*mdl-dialog*/
-				//This code should be on a js component
-				$('[data-toggle="mdl-dialog"]').click(function( e ){
-					var target = $(this).data("target");
-					$(target).addClass("mdl-dialog--show");
-
-					e.stopPropagation();
-				});
-
-				//Dialog close button
-				$(".mdl-dialog-close").click(function( e ){
-					var dialog = $(this).parents(".mdl-dialog");
-					dialog.removeClass("mdl-dialog--show");
-				});
-
-				//Hide dialog when click outside
-			  $(document).on("click",function( e ){
-			    if ( !$(e.target).closest(".mdl-dialog__content").length ) {
-			      $(".mdl-dialog").removeClass('mdl-dialog--show');
-			    }
-			  });
-
-			/*mdl-collapsible*/
-				$(".mdl-collapsible__heading").click(function( e ){
-					var collapsible = $(this).parent();
-					var body = $(".mdl-collapsible__body", collapsible);
-
-					body.slideToggle({
-						complete: function(){
-							collapsible.toggleClass("mdl-collapsible-collapsed");
-						}
-					});
-				});
-		});
-	</script>
+	{% include 'blocks/footer-scripts.twig' %}
 {% endblock %}
