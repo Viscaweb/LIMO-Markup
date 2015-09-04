@@ -7,7 +7,7 @@
 		display: block;
 		padding: $ls-list-padding;
 		color: $ls-list-text-color;
-		border-top: 1px solid darken($ls-list-border-color, 11.2%);
+		border-top: 1px solid $ls-list-border-color;
 		line-height: 17px;
 		text-overflow: ellipsis;
 		overflow: hidden;

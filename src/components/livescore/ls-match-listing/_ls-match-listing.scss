@@ -1,5 +1,7 @@
 .match-list {
 
+  background: $ls-color-white;
+
   &__match {
     width: 100%;
     display: flex;
@@ -7,15 +9,14 @@
     align-content: stretch;
     align-items: stretch;
     color: $ls-text-color;
-    padding-left: 0;
-    padding-right: 0;
+    padding:0;
 
     span {
       flex: 1 100%;
+      padding-top: 13px;
+      padding-bottom: 13px;
     }
   }
-
-
 
   .match-list {
 
@@ -33,6 +34,14 @@
       color : lighten($ls-text-color, 30%);
       font-weight: 300;
       flex: 0 0 46px
+    }
+
+    &__team {
+
+      &.win {
+        font-weight: 600;
+      }
+
     }
 
     &__team1 {
@@ -59,7 +68,37 @@
       font-weight: 600;
       text-align: center;
       flex : 0 0 54px;
+      background-color: darken($ls-color-white, 1%);
     }
 
   }
+
+
+  &__match.live {
+    
+    .match-list {
+      
+      &__score {
+        color: $ls-color-live;
+      }
+
+      &__time {
+        color: $ls-color-live;
+      }
+    }
+    
+  }
+
+  > li:active {
+
+    .match-list {
+
+      &__score {
+        background-color: darken($ls-color-white, 4%);
+      }
+
+    }
+
+  }
+
 }
