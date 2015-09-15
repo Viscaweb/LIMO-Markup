@@ -68,7 +68,7 @@
       font-weight: 600;
       text-align: center;
       flex : 0 0 54px;
-      background-color: darken($ls-color-white, 1%);
+      background-color: rgba(0,0,0,0.02);
     }
 
   }
@@ -87,12 +87,14 @@
 
         &:before {
           content: '';
-          display: inline-block;
+          display: block;
+          float: left;
           width: 6px;
           height: 6px;
           border-radius: 50%;
           background: $ls-color-live;
           margin-right: 4px;
+          margin-top: 5px;
           @extend .blinking;
         }
       }
@@ -115,33 +117,41 @@
   &__match.highlight {
     background: $ls-color-highlight;
 
-    .match-list {
-
-      &__score {
-        background: darken($ls-color-highlight, 4%);
-      }
-    }
   }
 
+  &__match.event-won {
+    background: $ls-color-event-won-bg;
 
+  }
+
+  &__match.event-lost {
+    background: $ls-color-event-lost-bg;
+
+  }
+
+  &__match.event-draw {
+    background: $ls-color-event-draw-bg;
+  }
 
   > li:active {
 
     .match-list {
 
-      &__score {
-        background-color: darken($ls-color-white, 4%);
-      }
 
       &__match.highlight {
         background: darken($ls-color-highlight, 5%);
+      }
 
-        .match-list {
+      &__match.event-won {
+        background: darken($ls-color-event-won-bg, 5%);
+      }
 
-          &__score {
-            background: darken($ls-color-highlight, 8%);
-          }
-        }
+      &__match.event-lost {
+        background: darken($ls-color-event-lost-bg, 5%);
+      }
+
+      &__match.event-draw {
+        background: darken($ls-color-event-draw-bg, 5%);
       }
 
     }
