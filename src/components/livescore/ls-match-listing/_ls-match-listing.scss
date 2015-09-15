@@ -112,6 +112,19 @@
     }
   }
 
+  &__match.highlight {
+    background: $ls-color-highlight;
+
+    .match-list {
+
+      &__score {
+        background: darken($ls-color-highlight, 4%);
+      }
+    }
+  }
+
+
+
   > li:active {
 
     .match-list {
@@ -120,8 +133,26 @@
         background-color: darken($ls-color-white, 4%);
       }
 
+      &__match.highlight {
+        background: darken($ls-color-highlight, 5%);
+
+        .match-list {
+
+          &__score {
+            background: darken($ls-color-highlight, 8%);
+          }
+        }
+      }
+
     }
+
+
 
   }
 
+}
+
+.updated {
+  background: $ls-color-updated!important;
+  color: #fff!important;
 }
