@@ -91,9 +91,22 @@
           width: 6px;
           height: 6px;
           border-radius: 50%;
-          background: rgb(227, 48, 0);
+          background: $ls-color-live;
           margin-right: 4px;
           @extend .blinking;
+        }
+      }
+    }
+
+    &.paused {
+      .match-list {
+
+        &__time {
+
+          &:before {
+            background: darken($ls-color-white, 30%);
+            @extend .animation-reset;
+          }
         }
       }
     }
