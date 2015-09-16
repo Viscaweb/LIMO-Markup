@@ -1,3 +1,4 @@
 vendor/
 external/
 .idea/
+node_modules/
