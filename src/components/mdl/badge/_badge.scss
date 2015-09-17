@@ -1,0 +1,29 @@
+.mld-badge {
+
+  &.mld-badge--large {
+    &:after{
+      font-size: 13px;
+      font-weight: 300 ;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &.mld-badge--normal {
+
+    &:after{
+      color: $ls-color-black;
+      background: #ededed;
+    }
+  }
+
+  &.mld-badge--live {
+
+    &:after{
+      color: $ls-color-white;
+      background: $ls-color-live;
+    }
+  }
+
+
+}
