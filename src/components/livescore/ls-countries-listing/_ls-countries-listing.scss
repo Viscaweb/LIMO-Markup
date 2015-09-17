@@ -2,6 +2,8 @@
 
   background: $ls-color-white;
 
+
+
   &__row {
     display: flex;
     flex-flow: row nowrap;
@@ -9,7 +11,7 @@
     color: $ls-color-black;
     align-items: center;
     padding: 0 0 0 18px;
-    width: 95%;
+    width: 100%;
   }
 
   &__flag {
@@ -28,8 +30,8 @@
     text-overflow: ellipsis;
 
     span {
-      padding-top:11px;
-      padding-bottom:12px;
+     /* padding-top:11px;
+      padding-bottom:12px;*/
       font-size: 14px;
       font-weight: 300;
 

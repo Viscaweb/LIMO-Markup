@@ -51,6 +51,15 @@
 			}
 		}
 	}
+
+    &.mdl-list-countries{
+
+      > li{
+          line-height: 15px;
+      }
+    }
+
+
 }
 
 .mdl-list__info{
