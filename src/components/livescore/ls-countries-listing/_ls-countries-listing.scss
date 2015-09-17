@@ -10,8 +10,10 @@
     justify-content: flex-start;
     color: $ls-color-black;
     align-items: center;
+    box-sizing: border-box;
     padding: 0 0 0 18px;
-    width: 100%;
+    flex: 1;
+
   }
 
   &__flag {
@@ -38,25 +40,19 @@
     }
   }
 
-  &__right-badge {
+  &__badge-game {
+    flex: 0 0 100px;
     display: flex;
-    flex: 0 0 118px;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    padding: 0 0 0 30px;
+  }
 
-    > span {
-      padding: 0 30px 0 0;
-    }
+  &__badge-live {
+    flex: 0 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 }
 
-.mdl-badge-match {
-
-  &:after {
-
-  }
-}

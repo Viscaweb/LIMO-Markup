@@ -1,6 +1,14 @@
-.mld-badge {
+.mdl-badge {
 
-  &.mld-badge--large {
+  &.mdl-badge-countries {
+    margin-right: 0;
+
+    &:after{
+      right: 0;
+    }
+  }
+
+  &.mdl-badge--large {
     &:after{
       font-size: 13px;
       font-weight: 300 ;
@@ -9,7 +17,7 @@
     }
   }
 
-  &.mld-badge--normal {
+  &.normal {
 
     &:after{
       color: $ls-color-black;
@@ -17,13 +25,15 @@
     }
   }
 
-  &.mld-badge--live {
+  &.live {
 
     &:after{
       color: $ls-color-white;
       background: $ls-color-live;
     }
   }
+
+
 
 
 }
