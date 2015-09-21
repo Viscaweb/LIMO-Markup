@@ -1,0 +1,13 @@
+{% extends "layouts/default-layout.twig" %}
+
+
+{# Page variables #}
+{% set page_title = 'Standing Table' %}
+{% set ls_header_switch = true %}
+{% set ls_header_brand_logo = true %}
+
+{% set main_content %}
+    {% include 'blocks/dividers/divider-title-icon.twig' %}
+	{% include 'blocks/sports/table/standing-table.html.twig' %}
+{% endset %}
+
