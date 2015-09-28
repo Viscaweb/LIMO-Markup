@@ -1,178 +1,191 @@
-.match-list {
+.ls-list {
 
-  background: $ls-color-white;
-
-  &__match {
+  .row {
     width: 100%;
     display: flex;
     font-weight: 300;
     align-content: stretch;
     align-items: stretch;
-    color: $ls-text-color;
-    padding:0;
 
-    span {
+    > a {
+      width: 100%;
+      display: flex;
+      align-content: stretch;
+      align-items: stretch;
+    }
+
+    .cell {
       flex: 1 100%;
       padding-top: 13px;
       padding-bottom: 13px;
     }
+
+    &.row--highlight {
+      background: $ls-color-highlight;
+
+    }
   }
 
-  .match-list {
-
-    &__time,
-    &__team {
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
+}
 
 
-    &__time {
-      color : lighten($ls-text-color, 30%);
-      font-weight: 300;
-      flex: 0 0 46px
-    }
+.ls-list-matches {
 
-    &__team {
-      position: relative;
+  background: $ls-color-white;
 
-      &.win {
-        font-weight: 600;
-      }
+  .row {
 
-      .red-card {
-        background: rgb(255, 0, 0);
-        width: 8px;
-        height: 11px;
-        display: block;
-        position: absolute;
-        padding: 0;
-        color: $ls-color-white;
-        font-size: 10px;
-        line-height: 12px;
-        text-align: center;
-      }
+    .cell {
 
-    }
-
-    &__team1 {
-      text-align: right;
-      
-      .red-card {
-        right: 5px;
-      }
-    }
-
-    &__team2 {
-      text-align: left;
-    }
-
-    &__favorite {
-      flex : 0 0 35px;
-    }
-
-    &__caret {
-      flex : 0 0 20px;
-
-      .mdl-button__icon {
-        color: lighten($ls-text-color, 50%);
-      }
-    }
-
-    &__score {
-      font-weight: 600;
-      text-align: center;
-      flex : 0 0 54px;
-      background-color: rgba(0,0,0,0.02);
-    }
-
-  }
-
-
-  &__match.live {
-    
-    .match-list {
-      
-      &__score {
-        color: $ls-color-live;
+      &__time,
+      &__team {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        padding-left: 5px;
+        padding-right: 5px;
       }
 
       &__time {
-        color: $ls-color-live;
+        color : lighten($ls-text-color, 30%);
+        font-weight: 300;
+        flex: 0 0 46px
+      }
 
-        &:before {
-          content: '';
+      &__team {
+        position: relative;
+
+        &.win {
+          font-weight: 600;
+        }
+
+        .red-card {
+          background: rgb(255, 0, 0);
+          width: 8px;
+          height: 11px;
           display: block;
-          float: left;
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: $ls-color-live;
-          margin-right: 4px;
-          margin-top: 5px;
-          @extend .blinking;
+          position: absolute;
+          padding: 0;
+          color: $ls-color-white;
+          font-size: 10px;
+          line-height: 12px;
+          text-align: center;
+        }
+
+      }
+
+      &__team--team1 {
+        text-align: right;
+
+        .red-card {
+          right: 5px;
         }
       }
-    }
 
-    &.paused {
-      .match-list {
+      &__team--team2 {
+        text-align: left;
+      }
+
+      &__favorite {
+        flex : 0 0 35px;
+      }
+
+      &__caret {
+        flex : 0 0 20px;
+
+        .mdl-button__icon {
+          color: lighten($ls-text-color, 50%);
+        }
+      }
+
+      &__score {
+        font-weight: 600;
+        text-align: center;
+        flex : 0 0 54px;
+        background-color: rgba(0,0,0,0.02);
+      }
+
+    }
+  }
+
+  .row--match {
+    color: $ls-text-color;
+    padding:0;
+
+    &.event-live {
+
+      .cell {
+
+        &__score {
+          color: $ls-color-live;
+        }
 
         &__time {
+          color: $ls-color-live;
 
           &:before {
-            background: darken($ls-color-white, 30%);
-            @extend .animation-reset;
+            content: '';
+            display: block;
+            float: left;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $ls-color-live;
+            margin-right: 4px;
+            margin-top: 5px;
+            @extend .blinking;
+          }
+        }
+      }
+
+      &.paused {
+        .match-list {
+
+          &__time {
+
+            &:before {
+              background: darken($ls-color-white, 30%);
+              @extend .animation-reset;
+            }
           }
         }
       }
     }
+
+    &.event-won {
+      background: $ls-color-event-won-bg;
+
+    }
+
+    &.event-lost {
+      background: $ls-color-event-lost-bg;
+
+    }
+
+    &.event-draw {
+      background: $ls-color-event-draw-bg;
+    }
   }
 
-  &__match.highlight {
-    background: $ls-color-highlight;
-
-  }
-
-  &__match.event-won {
-    background: $ls-color-event-won-bg;
-
-  }
-
-  &__match.event-lost {
-    background: $ls-color-event-lost-bg;
-
-  }
-
-  &__match.event-draw {
-    background: $ls-color-event-draw-bg;
-  }
-
-  > li:active {
-
-    .match-list {
 
 
-      &__match.highlight {
+  > .row:active {
+
+      &.row--highlight {
         background: darken($ls-color-highlight, 5%);
       }
 
-      &__match.event-won {
+      &.event-won {
         background: darken($ls-color-event-won-bg, 5%);
       }
 
-      &__match.event-lost {
+      &.event-lost {
         background: darken($ls-color-event-lost-bg, 5%);
       }
 
-      &__match.event-draw {
+      &.event-draw {
         background: darken($ls-color-event-draw-bg, 5%);
       }
-
-    }
 
 
 

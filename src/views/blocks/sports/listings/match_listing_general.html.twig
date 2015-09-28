@@ -12,44 +12,37 @@
 
 {% include 'blocks/dividers/divider-event.twig' %}
 
-<ul class="mdl-list mdl-list-media match-list ">
-    <li>
+<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
+    <li class="row row--match">
         <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="hour">18:00</span></span>
-                <span class="match-list__team match-list__team1 win"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-
+            <div class="cell cell__time"><span class="hour">18:00</span></div>
+            <div class="cell cell__team cell__team--team1 win"><span>MO Béjaia</span></div>
+            <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
+            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
             </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match event-live event-paused">
         <a href="#">
-            <div class="mdl-list__info match-list__match live paused">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>PSG</span></span>
-                <span class="match-list__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></span>
-                <span class="match-list__team match-list__team2"><span>Bordeaux</span></span>
-                <span class="match-list__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
+            <div class="cell cell__time"><span class="status">HT</span></div>
+            <div class="cell cell__team cell__team--team1"><span>PSG</span></div>
+            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
+            <div class="cell cell__team cell__team--team2"><span>Bordeaux</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
             </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match event-live">
         <a href="#">
-            <div class="mdl-list__info match-list__match live">
-                <span class="match-list__time"><span class="status">24'</span></span>
-                <span class="match-list__team match-list__team1"><span>Perpignan long name</span></span>
-                <span class="match-list__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">0</span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
+            <div class="cell cell__time"><span class="status">24'</span></div>
+            <div class="cell cell__team cell__team--team1"><span>Perpignan long name</span></div>
+            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">0</span></div>
+            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
             </div>
         </a>
     </li>
@@ -57,237 +50,202 @@
 
 {% include 'blocks/dividers/divider-event-right-nav.twig' %}
 
-<ul class="mdl-list mdl-list-media match-list ">
-    <li>
+<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
+    <li class="row row--match">
         <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="hour">18:00</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span><span class="red-card">1</span></span>
-                <span class="match-list__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="hour">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span><span class="red-card">1</span></div>
+                <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie long name</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
+                </div>
 
-            </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match event-live row--highlight">
         <a href="#">
-            <div class="mdl-list__info match-list__match live paused highlight">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score updated"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span><span class="red-card">2</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="status">20'</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score updated"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span><span class="red-card">2</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-            </div>
+                </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match event-live event-paused">
         <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="status">HT</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-            </div>
+                </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match">
         <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="hour">18:00</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="hour">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match">
+        <a href="#">
+                <div class="cell cell__time"><span class="hour">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
 
-            </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match event-live event-paused">
         <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="status">HT</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-            </div>
+                </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match event-live event-paused">
         <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="status">HT</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="hour">18:00</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-            </div>
-        </a>
-    </li>
-    <li>
-        <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-            </div>
+                </div>
         </a>
     </li>
 </ul>
 
 {% include 'blocks/dividers/divider-event-right-nav.twig' %}
 
-<ul class="mdl-list mdl-list-media match-list ">
-    <li>
+<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
+    <li class="row row--match">
         <a href="#">
-            <div class="mdl-list__info match-list__match event-won">
-                <span class="match-list__time"><span class="hour">18:00</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="hour">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
+                </div>
 
-            </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match event-live event-paused">
         <a href="#">
-            <div class="mdl-list__info match-list__match event-lost">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="status">HT</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-            </div>
+                </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match event-won">
         <a href="#">
-            <div class="mdl-list__info match-list__match event-draw">
-                <span class="match-list__time"><span class="hour">18:00</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="hour">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
+                </div>
 
-            </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match event-draw">
         <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="status">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-            </div>
+                </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match event-lost">
         <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="status">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-            </div>
+                </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match">
         <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="hour">18:00</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="hour">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
+                </div>
 
-            </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match">
         <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="status">19:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-            </div>
+                </div>
         </a>
     </li>
-    <li>
+    <li class="row row--match event-live">
         <a href="#">
-            <div class="mdl-list__info match-list__match">
-                <span class="match-list__time"><span class="status">HT</span></span>
-                <span class="match-list__team match-list__team1"><span>MO Béjaia</span></span>
-                <span class="match-list__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></span>
-                <span class="match-list__team match-list__team2"><span>JS Kabylie</span></span>
-                <span class="match-list__caret">
+                <div class="cell cell__time"><span class="status">19:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
-                </span>
-            </div>
+                </div>
         </a>
     </li>
 </ul>
