@@ -23,6 +23,14 @@
 		}
 	}
 
+    &.mdl-list—condensed{
+      padding: 0;
+
+      li {
+        line-height: 26px;
+      }
+    }
+
 	&.mdl-list-linked{
 		padding: 0;
 
@@ -37,7 +45,7 @@
 				font-weight: 300;
 			}
 		}
-	}
+
 
 	&.mdl-list-media{
 		
