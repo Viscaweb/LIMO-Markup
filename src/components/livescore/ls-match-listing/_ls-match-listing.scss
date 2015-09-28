@@ -1,34 +1,3 @@
-.ls-list {
-
-  .row {
-    width: 100%;
-    display: flex;
-    font-weight: 300;
-    align-content: stretch;
-    align-items: stretch;
-
-    > a {
-      width: 100%;
-      display: flex;
-      align-content: stretch;
-      align-items: stretch;
-    }
-
-    .cell {
-      flex: 1 100%;
-      padding-top: 13px;
-      padding-bottom: 13px;
-    }
-
-    &.row--highlight {
-      background: $ls-color-highlight;
-
-    }
-  }
-
-}
-
-
 .ls-list-matches {
 
   background: $ls-color-white;
@@ -37,73 +6,6 @@
 
     .cell {
 
-      &__time,
-      &__team {
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        padding-left: 5px;
-        padding-right: 5px;
-      }
-
-      &__time {
-        color : lighten($ls-text-color, 30%);
-        font-weight: 300;
-        flex: 0 0 46px
-      }
-
-      &__team {
-        position: relative;
-
-        &.win {
-          font-weight: 600;
-        }
-
-        .red-card {
-          background: rgb(255, 0, 0);
-          width: 8px;
-          height: 11px;
-          display: block;
-          position: absolute;
-          padding: 0;
-          color: $ls-color-white;
-          font-size: 10px;
-          line-height: 12px;
-          text-align: center;
-        }
-
-      }
-
-      &__team--team1 {
-        text-align: right;
-
-        .red-card {
-          right: 5px;
-        }
-      }
-
-      &__team--team2 {
-        text-align: left;
-      }
-
-      &__favorite {
-        flex : 0 0 35px;
-      }
-
-      &__caret {
-        flex : 0 0 20px;
-
-        .mdl-button__icon {
-          color: lighten($ls-text-color, 50%);
-        }
-      }
-
-      &__score {
-        font-weight: 600;
-        text-align: center;
-        flex : 0 0 54px;
-        background-color: rgba(0,0,0,0.02);
-      }
 
     }
   }

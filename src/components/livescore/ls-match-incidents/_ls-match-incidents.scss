@@ -4,12 +4,12 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: stretch;
-    padding: 0 14px;
   }
 
   .row{
     background: $ls-color-white;
     border-bottom: #E8E8E8;
+    padding: 0 14px;
   }
 
   .row--head{
