@@ -1,0 +1,102 @@
+.ls-list-details {
+
+  li {
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 0 14px;
+    border-top: none;
+
+    &:first-child {
+      border-top: none;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &.row {
+      background: $ls-color-white;
+    }
+
+    &.row-head {
+      border-bottom:1px solid $ls-list-border-color;
+    }
+
+    &.row-score {
+      padding: 5px 0 0 0;
+      border-bottom: none;
+    }
+  }
+
+  &--infos {
+    width: 50%;
+    display: flex;
+
+    &__day {
+      width: 50%;
+      display: flex;
+      padding-right: 5px;
+    }
+
+    &__place {
+      width: 50%;
+      display: flex;
+      padding-right: 5px;
+    }
+
+  }
+
+  .details-icon {
+    flex: 0 0 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    > span {
+      font-size: 14px;
+      color:$ls-primary-color;
+    }
+
+  }
+
+  .title{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &--score-infos {
+    flex: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding:0 6px;
+    font-size: 14px;
+    font-weight: normal;
+    text-transform: uppercase;
+    color:$ls-text-color ;
+  }
+
+  &--score-box {
+    flex: 1;
+    background:#494949;
+    display: flex;
+    justify-content: center;
+    color: $ls-color-white;
+    font-size: 17px;
+    font-weight: normal;
+    padding:1px 10px ;
+
+    .score-separator{
+      padding: 0 5px;
+    }
+
+  }
+
+  &--spacer {
+    flex: 2;
+    padding:0 6px;
+  }
+
+}
+

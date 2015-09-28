@@ -24,28 +24,29 @@
 	}
 
     &.mdl-list—condensed{
+
       padding: 0;
 
-      li {
-        line-height: 26px;
-      }
+        li {
+          line-height: 26px;
+        }
     }
 
-	&.mdl-list-linked{
-		padding: 0;
+	&.mdl-list-linked {
+      padding: 0;
 
-		> li{
-			padding: 0;
+        > li {
+          padding: 0;
 
-			> a{
-				display: block;
-				padding: $ls-list-padding;
-				color: $ls-list-text-color;
-				text-decoration: none;
-				font-weight: 300;
-			}
-		}
-
+            > a {
+              display: block;
+              padding: $ls-list-padding;
+              color: $ls-list-text-color;
+              text-decoration: none;
+              font-weight: 300;
+            }
+        }
+    }
 
 	&.mdl-list-media{
 		
@@ -66,8 +67,6 @@
           line-height: 15px;
       }
     }
-
-
 }
 
 .mdl-list__info{
