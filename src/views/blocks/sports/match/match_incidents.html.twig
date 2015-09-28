@@ -1,32 +1,32 @@
 <ul class="mdl-list mdl-list—condensed ls-list ls-list-incidents">
 
     {#row - head#}
-    <li class="row row-head ls-list-incidents--head">
-        <div class="team team-home">
+    <li class="row row--head">
+        <div class="cell__team cell__team--home">
              <span>PSG</span>
         </div>
-        <div class="match-details">
+        <div class="cell__period">
             1st Half
         </div>
-        <div class="team team-away">
+        <div class="cell__team cell__team--away">
             <span>ASSE</span>
         </div>
     </li>
 
     {#row - red card#}
-    <li class="row ls-list-incidents--details ">
-        <div class="team team-home">
-            <div class="team-home--player">
+    <li class="row">
+        <div class="cell__team cell__team--home">
+            <div class="cell__player">
                 <span>M. Badelji</span>
             </div>
-            <div class="action-icon">
+            <div class="cell__incident-icon">
                 <img src="../assets/img/red-card.png" alt="red-card-icon">
             </div>
         </div>
-        <div class="match-details">
+        <div class="cell__incident-minute">
             16'
         </div>
-        <div class="team team-away">
+        <div class="cell__team cell__team--away">
 
         </div>
     </li>
@@ -192,7 +192,7 @@
     </li>
 
     {#Separator#}
-    <li class="row row-separator">
+    <li class="row row--separator">
             PENS
     </li>
 

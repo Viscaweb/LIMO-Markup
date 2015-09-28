@@ -2,7 +2,14 @@
 
   background: $ls-color-white;
 
+  >li {
+    line-height: 15px !important;
+    padding: 0 !important;
 
+    >a {
+      text-decoration: none;
+    }
+  }
 
   &__row {
     display: flex;
@@ -32,8 +39,6 @@
     text-overflow: ellipsis;
 
     span {
-     /* padding-top:11px;
-      padding-bottom:12px;*/
       font-size: 14px;
       font-weight: 300;
 
@@ -41,14 +46,14 @@
   }
 
   &__badge-game {
-    flex: 0 0 100px;
+    flex: 0 0 77px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   &__badge-live {
-    flex: 0 0 50px;
+    flex: 0 0 28px;
     display: flex;
     justify-content: center;
     align-items: center;

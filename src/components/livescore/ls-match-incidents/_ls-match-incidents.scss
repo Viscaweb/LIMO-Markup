@@ -12,12 +12,12 @@
     border-bottom: #E8E8E8;
   }
 
-  .row-head{
+  .row--head{
     background: #f7f7f7;
     border-bottom: lighten($ls-list-border-color, 5%);
   }
 
-  .row-separator{
+  .row--separator{
     display: flex;
     justify-content: center;
     background: #f7f7f7;
