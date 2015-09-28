@@ -1,91 +1,97 @@
-.mdl-list {
-  padding: 0;
-  margin: 0;
+.ls-list {
 
-  > li {
-	list-style: none;
-	display: block;
-	padding: $ls-list-padding;
-	color: $ls-list-text-color;
-	border-top: 1px solid $ls-list-border-color;
-	line-height: 17px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
+  .row {
+	width: 100%;
+	display: flex;
 	font-weight: 300;
+	align-content: stretch;
+	align-items: stretch;
 
-	&:last-child {
-	  border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+	> a {
+	  width: 100%;
+	  display: flex;
+	  align-content: stretch;
+	  align-items: stretch;
 	}
 
-	&:active {
-	  background-color: $ls-list-pressed-color;
+	&.row--highlight {
+	  background: $ls-color-highlight;
+
 	}
-  }
 
-  &.mdl-list—condensed {
-	padding: 0;
+	.cell {
+	  flex: 1 100%;
+	  padding-top: 13px;
+	  padding-bottom: 13px;
 
-	li {
-	  line-height: 26px;
-	}
-  }
-
-  &.mdl-list-linked {
-	padding: 0;
-
-	> li {
-	  padding: 0;
-
-	  > a {
-		display: block;
-		padding: $ls-list-padding;
-		color: $ls-list-text-color;
-		text-decoration: none;
-		font-weight: 300;
+	  &__time,
+	  &__team {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		padding-left: 5px;
+		padding-right: 5px;
 	  }
-	}
 
-	&.mdl-list-media {
+	  &__time {
+		color : lighten($ls-text-color, 30%);
+		font-weight: 300;
+		flex: 0 0 46px
+	  }
 
-	  > li {
-		padding: 0;
+	  &__team {
+		position: relative;
 
-		> a {
+		&.win {
+		  font-weight: 600;
+		}
+
+		.red-card {
+		  background: rgb(255, 0, 0);
+		  width: 8px;
+		  height: 11px;
+		  display: block;
+		  position: absolute;
 		  padding: 0;
-		  display: flex;
-		  text-decoration: none;
+		  color: $ls-color-white;
+		  font-size: 10px;
+		  line-height: 12px;
+		  text-align: center;
+		}
+
+	  }
+
+	  &__team--team1 {
+		text-align: right;
+
+		.red-card {
+		  right: 5px;
 		}
 	  }
+
+	  &__team--team2 {
+		text-align: left;
+	  }
+
+	  &__favorite {
+		flex : 0 0 35px;
+	  }
+
+	  &__caret {
+		flex : 0 0 20px;
+
+		.mdl-button__icon {
+		  color: lighten($ls-text-color, 50%);
+		}
+	  }
+
+	  &__score {
+		font-weight: 600;
+		text-align: center;
+		flex : 0 0 54px;
+		background-color: rgba(0,0,0,0.02);
+	  }
 	}
-
-    &.mdl-list-countries{
-
-      > li{
-          line-height: 15px;
-      }
-    }
-}
-
-
-  .mdl-list__info {
-	padding: 13px 21px;
-	flex-grow: 1;
-  }
-
-  .mdl-list__info-title {
-	display: block;
-	color: $ls-list-text-color;
-	line-height: 27px;
-	font-weight: 300;
-  }
-
-  .mdl-list__info-desc {
-	display: block;
-	font-size: 12px;
-	color: lighten($ls-text-color, 10%);
-	font-weight: 300;
-	line-height: 24px;
   }
 
 }
