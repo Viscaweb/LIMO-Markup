@@ -1,230 +1,178 @@
 <ul class="mdl-list mdl-list—condensed ls-list ls-list-incidents">
 
     <li class="row row--head">
-        <div class="cell cell__team cell__team--home"><span>PSG</span></div>
+        <div class="cell cell__team cell__team--team1"><span>PSG</span></div>
         <div class="cell cell__period"><span> 1st Half</span></div>
-        <div class="cell cell__team cell__team--away"><span>ASSE</span></div>
+        <div class="cell cell__team cell__team--team2"><span>ASSE</span></div>
     </li>
 
     <li class="row row--details">
         <div class="cell cell__team cell__team--team1">
             <div class="cell cell__player"><span>M. Badelji</span></div>
-            <div class="cell cell__incident-icon"><i class=""></i></div>
+            <div class="cell cell__incidents-icon">
+                <span class=" sprite-icons red-card"></span>
+            </div>
         </div>
-        <div class="cell__incidents-minute">
+        <div class="cell cell__incidents-minute">
             16'
         </div>
-        <div class="cell__team cell__team--team2">
+        <div class="cell cell__team cell__team--team2">
         </div>
     </li>
 
 
-    {#row - goal#}
-    <li class="row ls-list-incidents--details">
-        <div class="team team-home">
+    <li class="row row--details">
+        <div class="cell cell__team cell__team--team1">
+
         </div>
-        <div class="match-details">
-            23'
+        <div class="cell cell__incidents-minute">
+            53'
         </div>
-        <div class="team team-away">
-            <div class="action-icon">
-                <img src="../assets/img/goal.png" alt="goal-icon">
+        <div class="cell cell__team cell__team--team2">
+            <div class="cell cell__incidents-icon">
+                <span class=" sprite-icons player-change"></span>
             </div>
-            <div class="team-home--player">
-                <span>G. Gale</span>
+            <div class=" cell cell__team cell__team--substitution">
+                <div class="cell cell__player"><span>M. Badelji</span></div>
+                <div class="cell cell__player"><span>M. Badelji</span></div>
             </div>
         </div>
     </li>
 
-    {#row - goal#}
-    <li class="row ls-list-incidents--details">
-        <div class="team team-home">
-            <div class="team-home--player">
-                <span>E. Eduardo</span>
-            </div>
-            <div class="action-icon">
-                <img src="../assets/img/goal.png" alt="goal-icon">
+
+    <li class="row row--details">
+        <div class="cell cell__team cell__team--team1">
+            <div class="cell cell__player"><span>M. Badelji</span></div>
+            <div class="cell cell__incidents-icon">
+                <span class=" sprite-icons yellow-card"></span>
             </div>
         </div>
-        <div class="match-details">
-            34'
+        <div class="cell cell__incidents-minute">
+            16'
         </div>
-        <div class="team team-away">
+        <div class="cell cell__team cell__team--team2">
         </div>
     </li>
 
-    {#row - red card#}
-    <li class="row ls-list-incidents--details">
-        <div class="team team-home">
-            <div class="team-home--player">
-                <span>A. Halilovic</span>
-            </div>
-            <div class="action-icon">
-                <img src="../assets/img/red-card.png" alt="red-card-icon">
-            </div>
+
+    <li class="row row--details">
+        <div class="cell cell__team cell__team--team1">
         </div>
-        <div class="match-details">
-            42'
+        <div class="cell cell__incidents-minute">
+            16'
         </div>
-        <div class="team team-away">
+        <div class="cell cell__team cell__team--team2">
+            <div class="cell cell__incidents-icon">
+                <span class=" sprite-icons goal"></span>
+            </div>
+            <div class="cell cell__player"><span>M. Badelji</span></div>
         </div>
     </li>
 
-    {#row - Yellow-card#}
-    <li class="row ls-list-incidents--details">
-        <div class="team team-home">
+    <li class="row row--details">
+        <div class="cell cell__team cell__team--team1">
         </div>
-        <div class="match-details">
-            43'
+        <div class="cell cell__incidents-minute">
+            16'
         </div>
-        <div class="team team-away">
-            <div class="action-icon">
-                <img src="../assets/img/yellow-card.png" alt="yellow-card-icon">
+        <div class="cell cell__team cell__team--team2">
+            <div class="cell cell__incidents-icon">
+                <span class=" sprite-icons injury-back"></span>
             </div>
-            <div class="team-home--player">
-                <span>S. Amstrong</span>
-            </div>
+            <div class="cell cell__player"><span>M. Badelji</span></div>
         </div>
     </li>
 
-    {#row - Yellow-card#}
-    <li class="row ls-list-incidents--details">
-        <div class="team team-home">
-            <div class="team-home--player">
-                <span>R. Roniho</span>
-            </div>
-            <div class="action-icon">
-                <img src="../assets/img/yellow-card.png" alt="yellow-card-icon">
-            </div>
-        </div>
-        <div class="match-details">
-            45'+
-        </div>
-        <div class="team team-away">
-        </div>
-    </li>
-
-    {#Separator#}
-    <li class="row row-separator">
-            2nd Half
-    </li>
-
-    {#row - Substitution#}
-    <li class="row ls-list-incidents--details substitution">
-        <div class="team team-home">
-        </div>
-        <div class="match-details">
-           53'
-        </div>
-        <div class="team team-away">
-            <div class="action-icon">
-                <img src="../assets/img/substitution.png" alt="substitution">
-            </div>
-            <div class="team-away--player">
-                <span>M. Badelji</span>
-                <span>F. Mourijero</span>
-            </div>
-        </div>
-    </li>
-
-    {#row - Injury#}
-    <li class="row ls-list-incidents--details">
-        <div class="team team-home">
-        </div>
-        <div class="match-details">
-            55'
-        </div>
-        <div class="team team-away">
-            <div class="action-icon">
-                <img src="../assets/img/injury-back.png" alt="injury-back-icon">
-            </div>
-            <div class="team-home--player">
-                <span>K.Uihoi</span>
-            </div>
-        </div>
-    </li>
-
-    {#row - goal#}
-    <li class="row ls-list-incidents--details">
-        <div class="team team-home">
-        </div>
-        <div class="match-details">
-            72'
-        </div>
-        <div class="team team-away">
-            <div class="action-icon">
-                <img src="../assets/img/goal.png" alt="goal-icon">
-            </div>
-            <div class="team-home--player">
-                <span>F. Frandao</span>
-            </div>
-        </div>
-    </li>
-
-    {#row - Yellow-card#}
-    <li class="row ls-list-incidents--details">
-        <div class="team team-home">
-            <div class="team-home--player">
-                <span>L. Laiako</span>
-            </div>
-            <div class="action-icon">
-                <img src="../assets/img/yellow-card.png" alt="yellow-card-icon">
-            </div>
-        </div>
-        <div class="match-details">
-            90' +4
-        </div>
-        <div class="team team-away">
-        </div>
-    </li>
-
-    {#Separator#}
     <li class="row row--separator">
-            PENS
+        2nd Half
     </li>
 
-    {#row - PENS#}
-    <li class="row ls-list-incidents--details">
-        <div class="team team-home">
-            <div class="team-home--player">
-                <span>L. Laiako</span>
-            </div>
-            <div class="action-icon">
-                <img src="../assets/img/goal-green.png" alt="goal-green-icon">
-            </div>
+
+    <li class="row row--details">
+        <div class="cell cell__team cell__team--team1">
+
         </div>
-        <div class="match-details">
+        <div class="cell cell__incidents-minute">
+            53'
         </div>
-        <div class="team team-away">
-            <div class="action-icon">
-                <img src="../assets/img/goal-green.png" alt="goal-green-icon">
+        <div class="cell cell__team cell__team--team2">
+            <div class="cell cell__incidents-icon">
+                <span class=" sprite-icons player-change"></span>
             </div>
-            <div class="team-away--player">
-                <span>M. Badelji</span>
+            <div class=" cell cell__team cell__team--substitution">
+                <div class="cell cell__player"><span>M. Badelji</span></div>
+                <div class="cell cell__player"><span>M. Badelji</span></div>
             </div>
         </div>
     </li>
 
-    {#row - PENS#}
-    <li class="row ls-list-incidents--details">
-        <div class="team team-home">
-            <div class="team-home--player">
-                <span>L. Laiako</span>
-            </div>
-            <div class="action-icon">
-                <img src="../assets/img/goal-green.png" alt="goal-green-icon">
+
+    <li class="row row--details">
+        <div class="cell cell__team cell__team--team1">
+            <div class="cell cell__player"><span>M. Badelji</span></div>
+            <div class="cell cell__incidents-icon">
+                <span class=" sprite-icons yellow-card"></span>
             </div>
         </div>
-        <div class="match-details">
+        <div class="cell cell__incidents-minute">
+            16'
         </div>
-        <div class="team team-away">
-            <div class="action-icon">
-                <img src="../assets/img/no-goal-red.png" alt="no-goal-red-icon">
-            </div>
-            <div class="team-away--player">
-                <span>M. Badelji</span>
-            </div>
+        <div class="cell cell__team cell__team--team2">
         </div>
     </li>
+
+
+    <li class="row row--details">
+        <div class="cell cell__team cell__team--team1">
+        </div>
+        <div class="cell cell__incidents-minute">
+            16'
+        </div>
+        <div class="cell cell__team cell__team--team2">
+            <div class="cell cell__incidents-icon">
+                <span class=" sprite-icons goal"></span>
+            </div>
+            <div class="cell cell__player"><span>M. Badelji</span></div>
+        </div>
+    </li>
+
+    <li class="row row--details">
+        <div class="cell cell__team cell__team--team1">
+        </div>
+        <div class="cell cell__incidents-minute">
+            16'
+        </div>
+        <div class="cell cell__team cell__team--team2">
+            <div class="cell cell__incidents-icon">
+                <span class=" sprite-icons injury-back"></span>
+            </div>
+            <div class="cell cell__player"><span>M. Badelji</span></div>
+        </div>
+    </li>
+
+
+    <li class="row row--separator">
+        PENS
+    </li>
+
+
+    <li class="row row--details">
+        <div class="cell cell__team cell__team--team1">
+            <div class="cell cell__player"><span>M. Badelji</span></div>
+            <div class="cell cell__incidents-icon">
+                <span class=" sprite-icons penalty-goal"></span>
+            </div>
+        </div>
+        <div class="cell cell__incidents-minute">
+            16'
+        </div>
+        <div class="cell cell__team cell__team--team2">
+            <div class="cell cell__incidents-icon">
+                <span class=" sprite-icons penalty-missed"></span>
+            </div>
+            <div class="cell cell__player"><span>M. Badelji</span></div>
+        </div>
+    </li>
+
 
 </ul>

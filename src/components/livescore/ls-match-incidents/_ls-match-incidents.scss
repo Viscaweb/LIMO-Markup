@@ -1,30 +1,17 @@
 .ls-list-incidents {
 
-  /*
-    li {
-      display: flex;
-      flex-flow: row nowrap;
-      align-items: stretch;
-    }
-  */
-
   background: $ls-color-white;
 
   .row {
+    display: flex;
+    width: auto;
     background: $ls-color-white;
     border-bottom: #E8E8E8;
-    padding: 0 14px;
+    padding:0 14px;
 
     .cell {
-
+      padding: 8px 0 6px 0;
     }
-  }
-
-  .row--separator{
-    display: flex;
-    justify-content: center;
-    background: #f7f7f7;
-    border-bottom: lighten($ls-list-border-color, 5%);
   }
 
   .row--head{
@@ -36,10 +23,11 @@
       &__team {
 
           &--team1{
-            justify-content: flex-start;
+            text-align: left;
           }
+
           &--team2{
-            justify-content: flex-end;
+            text-align: right;
           }
       }
 
@@ -50,9 +38,17 @@
         align-items: center;
         background-color:#FAFAFA;
       }
-
     }
   }
+
+  .row--separator{
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    background: #f7f7f7;
+    border-bottom: lighten($ls-list-border-color, 5%);
+  }
+
 
   .row--details {
 
@@ -60,83 +56,60 @@
 
       &__team {
 
-        &--team1{
-          justify-content: flex-start;
+        &--team1 {
+
+          display: flex;
+
+          .cell__player {
+           padding: 0;
+           text-overflow: ellipsis;
+           overflow: hidden;
+           white-space: nowrap;
+          }
         }
-        &--team2{
-          justify-content: flex-end;
+
+        &--team2 {
+
+          display: flex;
+
+          .cell__player {
+            padding: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+           }
         }
+
+        &--substitution {
+          padding: 0;
+          display: flex;
+          flex-flow: column;
+
+          /*span {
+            line-height: 16px;
+          }*/
+        }
+
       }
 
-      &__period {
+      &__incidents-minute {
+        padding: 0;
         flex: 0 0 48px;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color:#FAFAFA;
+        background-color: #FAFAFA;
+        font-size: 12px;
       }
 
-    }
-
-    .team-home {
-      flex: 1;
-      display: flex;
-
-      .team-home--player {
-        flex: 1;
+      &__incidents-icon {
+        padding: 0;
+        flex: 0 0 30px;
         display: flex;
-        flex-flow: column;
-        align-items: flex-end;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
+        justify-content: center;
+        align-items: center;
       }
     }
-
-    .action-icon {
-      flex: 0 0 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      > img {
-        max-height: 14px;
-        max-width: 14px;
-      }
-
-    }
-
-    .team-away {
-      flex: 1;
-      display: flex;
-
-      .team-away--player {
-        flex: 1;
-        display: flex;
-        flex-flow: column;
-        align-items: flex-start;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-      }
-    }
-
-    &.substitution {
-
-      .team-home--player {
-        padding: 10px 0;
-      }
-
-      .team-away--player {
-        padding: 8px 0;
-      }
-
-      span {
-        line-height: 15px;
-      }
-
-    }
-
   }
 }
 

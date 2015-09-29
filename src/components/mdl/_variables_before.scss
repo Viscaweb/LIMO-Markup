@@ -90,6 +90,12 @@ $ls-standing-red-color:             rgba(222, 200, 200, 1);
 $ls-cell-stat-up:                   rgba(93, 164, 0, 1);
 $ls-cell-stat-down:                 rgba(229, 104, 13, 1);
 
+
+//Sprite
+$ls-image-sprite-icons : "../assets/img/sprite/sprite-icons.png";
+$ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
+
+
 /* ==========  TYPOGRAPHY  ========== */
 
 $preferred_font: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif !default;
