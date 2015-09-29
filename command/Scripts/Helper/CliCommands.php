@@ -14,6 +14,7 @@ class CliCommands
     const COMMAND_COMMON = '%s %s';
 
     const ARG_AS_BG = '> /dev/null 2>&1 &';
+    const ARG_ONLY_ERRORS = '2>&1 >/dev/null';
 
     /**
      * @param $command
@@ -117,17 +118,26 @@ class CliCommands
     }
 
     /**
-     * @param string $taskName Task name
+     * @param string    $taskName Task name
+     * @param bool|true $throwErrors
      *
      * @return string
      */
-    static public function runTaskMdlGulp($taskName)
-    {
+    static public function runTaskMdlGulp(
+        $taskName,
+        $throwErrors = false
+    ) {
         $mdlFolder = realpath(
             __DIR__.'/../../../external/material-design-lite'
         );
+
+        $commandTemplate = self::COMMAND_MDL_GULP_TASK;
+        if ($throwErrors) {
+            $commandTemplate .= ' '.self::ARG_ONLY_ERRORS;
+        }
+
         $command = sprintf(
-            self::COMMAND_MDL_GULP_TASK,
+            $commandTemplate,
             escapeshellarg($mdlFolder),
             $taskName
         );
