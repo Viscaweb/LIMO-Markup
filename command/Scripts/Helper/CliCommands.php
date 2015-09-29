@@ -118,17 +118,26 @@ class CliCommands
     }
 
     /**
-     * @param string $taskName Task name
+     * @param string    $taskName Task name
+     * @param bool|true $throwErrors
      *
      * @return string
      */
-    static public function runTaskMdlGulp($taskName)
-    {
+    static public function runTaskMdlGulp(
+        $taskName,
+        $throwErrors = false
+    ) {
         $mdlFolder = realpath(
             __DIR__.'/../../../external/material-design-lite'
         );
+
+        $commandTemplate = self::COMMAND_MDL_GULP_TASK;
+        if ($throwErrors) {
+            $commandTemplate .= ' '.self::ARG_ONLY_ERRORS;
+        }
+
         $command = sprintf(
-            self::COMMAND_MDL_GULP_TASK,
+            $commandTemplate,
             escapeshellarg($mdlFolder),
             $taskName
         );
