@@ -1,20 +1,23 @@
 .ls-list-incidents {
 
-  li {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: stretch;
-  }
+  /*
+    li {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: stretch;
+    }
+  */
 
-  .row{
+  background: $ls-color-white;
+
+  .row {
     background: $ls-color-white;
     border-bottom: #E8E8E8;
     padding: 0 14px;
-  }
 
-  .row--head{
-    background: #f7f7f7;
-    border-bottom: lighten($ls-list-border-color, 5%);
+    .cell {
+
+    }
   }
 
   .row--separator{
@@ -24,30 +27,56 @@
     border-bottom: lighten($ls-list-border-color, 5%);
   }
 
-  .match-details {
-    flex: 0 0 48px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:#FAFAFA;
+  .row--head{
+    background: #f7f7f7;
+    border-bottom: lighten($ls-list-border-color, 5%);
+
+    .cell {
+
+      &__team {
+
+          &--team1{
+            justify-content: flex-start;
+          }
+          &--team2{
+            justify-content: flex-end;
+          }
+      }
+
+      &__period {
+        flex: 0 0 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#FAFAFA;
+      }
+
+    }
   }
 
-  &--head {
+  .row--details {
 
-    .team-home {
-      flex: 1;
-      display: flex;
-      justify-content: flex-start;
+    .cell {
+
+      &__team {
+
+        &--team1{
+          justify-content: flex-start;
+        }
+        &--team2{
+          justify-content: flex-end;
+        }
+      }
+
+      &__period {
+        flex: 0 0 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#FAFAFA;
+      }
+
     }
-
-    .team-away {
-      flex: 1;
-      display: flex;
-      justify-content: flex-end;
-    }
-  }
-
-  &--details {
 
     .team-home {
       flex: 1;
