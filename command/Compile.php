@@ -38,6 +38,7 @@ class Compile extends Command
             $scriptMessage = str_pad($script->getDescription(), 80, ' ');
             $output->write($scriptMessage);
 
+            $breakScript = false;
             $timeBegin = microtime(true);
             try {
                 $scriptResult = $script->execute($input, $output, $basePath);
@@ -56,6 +57,7 @@ class Compile extends Command
                     '<error>%s</error>',
                     $ex->getMessage()
                 );
+                $breakScript = true;
             }
             $timeEnd = microtime(true);
 
@@ -63,6 +65,9 @@ class Compile extends Command
             $output->write(str_pad(sprintf('Time: %ss', $time), 20, ' '));
 
             $output->writeln($scriptTextResult);
+            if ($breakScript){
+                break;
+            }
         }
 
     }

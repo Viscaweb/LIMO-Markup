@@ -14,6 +14,7 @@ class CliCommands
     const COMMAND_COMMON = '%s %s';
 
     const ARG_AS_BG = '> /dev/null 2>&1 &';
+    const ARG_ONLY_ERRORS = '2>&1 >/dev/null';
 
     /**
      * @param $command
