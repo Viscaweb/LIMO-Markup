@@ -1,0 +1,62 @@
+.ls-list-countries {
+
+  background: $ls-color-white;
+
+  .row {
+    background: red;
+    display: flex;
+    width: auto;
+    background: $ls-color-white;
+    border-bottom: #E8E8E8;
+    padding: 0 14px;
+
+    > a {
+      color: $ls-text-color;
+    }
+
+    .cell {
+      padding: 12px 0 10px 0;
+    }
+  }
+
+  .row--countries{
+    border-bottom: lighten($ls-list-border-color, 5%);
+
+    .cell {
+
+      &__flag {
+        flex: 0 0 34px;
+
+        > img {
+          max-width: 21px;
+        }
+      }
+
+      &__countries {
+        font-weight: 300;
+        justify-content: start;
+        align-items: center;
+        white-space: nowrap;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &__badge {
+        padding: 0;
+        flex: 0 0 107px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--live {
+          flex: 0 0 1px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
