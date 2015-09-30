@@ -23,10 +23,12 @@
       &__team {
 
           &--team1{
+            padding: 0;
             text-align: left;
           }
 
           &--team2{
+            padding: 0;
             text-align: right;
           }
       }
@@ -65,6 +67,12 @@
            text-overflow: ellipsis;
            overflow: hidden;
            white-space: nowrap;
+            line-height: 14px;
+
+
+            span{
+              line-height: 14px;
+            }
           }
         }
 
@@ -77,18 +85,20 @@
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
-           }
+
+            &--substitution {
+              padding: 0;
+              display: flex;
+              flex-flow: column;
+
+              span {
+                line-height: 15px;
+              }
+            }
+          }
         }
 
-        &--substitution {
-          padding: 0;
-          display: flex;
-          flex-flow: column;
 
-          /*span {
-            line-height: 16px;
-          }*/
-        }
 
       }
 
