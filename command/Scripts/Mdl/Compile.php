@@ -1,6 +1,7 @@
 <?php
 namespace Scripts\Mdl;
 
+use Scripts\Exceptions\GulpCouldNotCompileException;
 use Scripts\Helper\CliCommands;
 use Scripts\Interfaces\ScriptInterface;
 use Symfony\Component\Console\Input\InputInterface;
@@ -37,13 +38,20 @@ class Compile implements ScriptInterface
         OutputInterface $output,
         $basePath
     ) {
-        $queryTemplate = 'cd %s && gulp all > /dev/null 2>&1';
+        /*
+         * Run gulp and redirect the output to null, and the errors as output
+         */
+        $queryTemplate = 'cd %s && gulp ' . CliCommands::ARG_ONLY_ERRORS;
+
         $query = sprintf(
             $queryTemplate,
             escapeshellarg($this->getMdlFolder($basePath))
         );
 
-        CliCommands::run($query);
+        $outputErrors = CliCommands::run($query);
+        if (!empty($outputErrors)){
+            throw new GulpCouldNotCompileException($outputErrors);
+        }
 
         return true;
     }
