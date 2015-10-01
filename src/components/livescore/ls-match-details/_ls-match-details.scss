@@ -21,11 +21,12 @@
   .row--head {
     border-bottom: $ls-list-border;
 
-    &:first-child {
+    &:first-of-type {
       border-top: none;
+      border-bottom: none;
     }
 
-    &:last-child {
+    &:last-of-type {
       border-bottom: none;
     }
 
@@ -42,6 +43,8 @@
           text-overflow: ellipsis;
           overflow: hidden;
           white-space: nowrap;
+          font-weight: normal;
+          font-size: 12px;
         }
 
         &-icon {
@@ -63,11 +66,11 @@
   .row--score {
     padding: 3px 0;
 
-    &:first-child {
+    &:first-of-type {
       padding-top: 6px;
     }
 
-    &:last-child {
+    &:last-of-type {
       padding-bottom: 6px;
     }
 
@@ -80,7 +83,7 @@
         justify-content: flex-end;
         align-items: center;
         padding: 0 6px;
-        font-size: 14px;
+        font-size: 15px;
         font-weight: normal;
         text-transform: uppercase;
         color: $ls-text-color;
@@ -97,12 +100,12 @@
         display: flex;
         justify-content: center;
         color: $ls-color-white;
-        font-size: 17px;
-        font-weight: normal;
-        padding: 4px 10px;
+        font-size: 18px;
+        font-weight: 500;
+        padding: 4px 8px;
 
         .versus {
-          padding: 0 4px;
+          padding: 0 6px;
         }
       }
     }
