@@ -1,10 +1,25 @@
 .ls-list-details {
 
-  li {
+  background: $ls-color-white;
+
+  .row {
     display: flex;
-    flex-flow: row nowrap;
+    width: auto;
+    background: $ls-color-white;
+    border: none;
     padding: 0 14px;
-    border-top: none;
+
+    > a {
+      color: $ls-text-color;
+    }
+
+    .cell {
+      padding: 8px 0 6px 0;
+    }
+  }
+
+  .row--head {
+    border-bottom: $ls-list-border;
 
     &:first-child {
       border-top: none;
@@ -14,89 +29,83 @@
       border-bottom: none;
     }
 
-    &.row {
-      background: $ls-color-white;
-    }
+    .cell {
 
-    &.row-head {
-      border-bottom:1px solid $ls-list-border-color;
-    }
+      &__details {
+        width: 50%;
+        display: flex;
+        padding-right: 5px;
+        box-sizing: border-box;
 
-    &.row-score {
-      padding: 5px 0 0 0;
-      border-bottom: none;
+        &-infos {
+          padding: 0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+
+        &-icon {
+          padding: 0;
+          flex: 0 0 20px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          > span {
+            font-size: 14px;
+            color: $ls-primary-color;
+          }
+        }
+      }
     }
   }
 
-  &--infos {
-    width: 50%;
-    display: flex;
+  .row--score {
+    padding: 3px 0;
 
-    &__day {
-      width: 50%;
-      display: flex;
-      padding-right: 5px;
+    &:first-child {
+      padding-top: 6px;
     }
 
-    &__place {
-      width: 50%;
-      display: flex;
-      padding-right: 5px;
+    &:last-child {
+      padding-bottom: 6px;
     }
 
-  }
 
-  .details-icon {
-    flex: 0 0 25px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    .cell {
 
-    > span {
-      font-size: 14px;
-      color:$ls-primary-color;
+      &__score-infos {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 6px;
+        font-size: 14px;
+        font-weight: normal;
+        text-transform: uppercase;
+        color: $ls-text-color;
+
+        &--spacer {
+          flex: 1;
+          padding: 0 6px;
+        }
+      }
+
+      &__score-box {
+        flex: 0 0 69px;
+        background: #494949;
+        display: flex;
+        justify-content: center;
+        color: $ls-color-white;
+        font-size: 17px;
+        font-weight: normal;
+        padding: 4px 10px;
+
+        .versus {
+          padding: 0 4px;
+        }
+      }
     }
-
   }
-
-  .title{
-    text-overflow: ellipsis;
-    overflow: hidden;
-    white-space: nowrap;
-  }
-
-  &--score-infos {
-    flex: 2;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding:0 6px;
-    font-size: 14px;
-    font-weight: normal;
-    text-transform: uppercase;
-    color:$ls-text-color ;
-  }
-
-  &--score-box {
-    flex: 1;
-    background:#494949;
-    display: flex;
-    justify-content: center;
-    color: $ls-color-white;
-    font-size: 17px;
-    font-weight: normal;
-    padding:1px 10px ;
-
-    .score-separator{
-      padding: 0 5px;
-    }
-
-  }
-
-  &--spacer {
-    flex: 2;
-    padding:0 6px;
-  }
-
 }
 
