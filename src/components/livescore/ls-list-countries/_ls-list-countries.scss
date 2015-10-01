@@ -18,7 +18,7 @@
     }
   }
 
-  .row--countries{
+  .row--country{
     border-bottom: lighten($ls-list-border-color, 5%);
 
     .cell {
@@ -31,9 +31,9 @@
         }
       }
 
-      &__countries {
+      &__country {
         font-weight: 300;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
         white-space: nowrap;
         overflow-x: hidden;
