@@ -1,0 +1,53 @@
+.ls-list-comments {
+
+  background: $ls-color-white;
+
+  .row {
+    display: flex;
+    width: auto;
+    background: $ls-color-white;
+    padding:0;
+
+    .cell {
+      padding: 10px 0 8px 0;
+    }
+  }
+
+
+  .row--comment {
+
+
+
+    .cell {
+
+      &__comment-minute {
+        flex: 0 0 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        color : lighten($ls-text-color, 30%);
+      }
+
+      &__comment-icon {
+        flex: 0 0 40px;
+        background-color: rgba(0, 0, 0, 0.02);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__comment-comment {
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        white-space: normal;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
