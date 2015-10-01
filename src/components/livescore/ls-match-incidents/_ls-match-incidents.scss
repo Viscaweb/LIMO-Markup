@@ -6,7 +6,6 @@
     display: flex;
     width: auto;
     background: $ls-color-white;
-    border-bottom: $ls-list-border;
     padding:0 14px;
 
     .cell {
@@ -20,16 +19,19 @@
 
     .cell {
 
+      display: flex;
+      align-items: center;
+
       &__team {
 
           &--team1{
             padding: 0;
-            text-align: left;
+            justify-content: flex-start;
           }
 
           &--team2{
             padding: 0;
-            text-align: right;
+            justify-content: flex-end;
           }
       }
 
@@ -52,7 +54,7 @@
   }
 
 
-  .row--details {
+  .row--incident {
 
     .cell {
 
@@ -102,7 +104,7 @@
 
       }
 
-      &__incidents-minute {
+      &__incident-minute {
         padding: 0;
         flex: 0 0 48px;
         display: flex;
@@ -112,7 +114,7 @@
         font-size: 12px;
       }
 
-      &__incidents-icon {
+      &__incident-icon {
         padding: 0;
         flex: 0 0 30px;
         display: flex;
