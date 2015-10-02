@@ -1,8 +1,164 @@
-.ls-match-score-header {
+.ls-list-match-score-header {
 
-  padding: 0 10px;
+  background: $ls-color-white;
 
-  .flag--team-home{
+  .row {
+    display: flex;
+    width: auto;
+    background: $ls-color-white;
+    padding: 0 14px;
+
+    a {
+      text-decoration: none;
+    }
+
+    .cell {
+    }
+  }
+
+  .row--match-score-header {
+
+    .cell {
+        padding: 12px 0 9px 0;
+
+      &__flag {
+        flex: 0 0 42px;
+
+        > img {
+          max-height: 32px;
+        }
+      }
+
+      &__team {
+
+        position: relative;
+        font-size: 13px;
+        font-weight: normal;
+        padding-top:18px;
+
+
+        &--team1 {
+          padding-right:15px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+
+          .qualified {
+            position: absolute;
+            bottom:1px;
+            right: 15px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content:flex-end;
+            text-transform: uppercase;
+            font-size: 10px;
+            color: $ls-primary-color;
+
+            .icon-tick {
+              margin: 3px 3px;
+            }
+          }
+        }
+
+        &--team2 {
+          padding-left:15px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+
+          .qualified {
+            position: absolute;
+            bottom:1px;
+            left: 15px;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content:flex-end;
+            text-transform: uppercase;
+            font-size: 8px;
+            color: $ls-primary-color;
+
+            .icon-tick {
+              margin: 3px 3px;
+            }
+          }
+        }
+      }
+
+      &__score-box {
+        position: relative;
+        padding-bottom: 0;
+        flex: 0 0 74px;
+        display: flex;
+        flex-flow: column nowrap;
+        align-self: stretch;
+        justify-content: center;
+        background-color: darken($ls-color-white, 3%);
+
+        .versus{
+          padding: 0 4px;
+        }
+
+      }
+
+      &__score--number {
+        margin-bottom: 5px;
+        display: flex;
+        font-weight: bold;
+        justify-content: center;
+        flex-flow: row nowrap;
+        font-size: 29px;
+        color:lighten($ls-color-black , 15%);
+      }
+
+      &__score--add {
+        display: flex;
+        justify-content: center;
+        color : lighten($ls-text-color, 30%);
+        font-weight: 300;
+        font-size: 13px;
+
+        .live,
+        .paused{
+          position: relative;
+          color : $ls-color-live;
+
+          &.live:before{
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #e33000;
+            margin-right: 4px;
+            @extend .blinking;
+          }
+
+          &.paused:before{
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 5px;
+            display: block;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #C8C8C8;
+            margin-right: 4px;
+          }
+        }
+
+      }
+    }
+
+  }
+}
+
+
+
+/*  .flag--team-home{
     flex: 0 0 40px;
     display: flex;
     justify-content: flex-start;
@@ -48,12 +204,12 @@
         justify-content: flex-end;
 
       &__content {
-        /*display: flex;*/
         flex: 0 0 55px;
         justify-content: flex-end;
       }
     }
   }
+
 
   .team-away {
     flex-grow: 1;
@@ -81,7 +237,9 @@
         justify-content: flex-start;
 
       &__content {
-        /*display: flex;*/
+
+        display: flex;*//*
+
         flex: 0 0 55px;
         justify-content: flex-start;
       }
@@ -90,7 +248,9 @@
 
   .score-box {
     position: relative;
-    flex: 0 0 56px; /* Attention pour les score > à 9 */
+    flex: 0 0 56px; */
+  /*Attention pour les score > à 9 *//*
+
     display: flex;
     flex-flow: column nowrap;
     align-self: stretch;
@@ -186,3 +346,4 @@
     margin:5px 3px;
   }
 }
+*/
