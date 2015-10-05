@@ -20,10 +20,51 @@
 
 	}
 
+	&.row--head{
+	  background: #f7f7f7;
+	  border-bottom: lighten($ls-list-border-color, 5%);
+
+	  .cell {
+
+		display: flex;
+		align-items: center;
+		padding: 0;
+	  }
+	}
+
+	&.row--divider{
+
+	  justify-content: flex-start;
+	  align-content: flex-start;
+	  line-height: 32px;
+	  border: none;
+
+	  .cell {
+		display: flex;
+		flex: none;
+		align-items: center;
+		flex-grow : 0;
+		padding: 0;
+		
+		&__flag {
+		  margin-left: 13px;
+		}
+		
+		&__league-name {
+		  font-weight: 400;
+		  padding-right: 4px;
+		}
+	  }
+	}
+
 	.cell {
 	  flex: 1 100%;
 	  padding-top: 13px;
 	  padding-bottom: 13px;
+
+	  &__spacer {
+		flex-grow: 1 !important;
+	  }
 
 	  &__time,
 	  &__team {
