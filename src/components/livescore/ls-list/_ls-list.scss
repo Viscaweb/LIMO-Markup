@@ -29,6 +29,27 @@
 	  }
 	}
 
+    &.row--advertisement{
+      background: $ls-advertisement-bg-color;
+      border-bottom: lighten($ls-list-border-color, 5%);
+      font-size:$ls-advertisement-font-size;
+      color:$ls-advertisement-font-color;
+
+      .cell {
+        align-items: center;
+        display:flex;
+        flex-flow: column;
+        justify-content: center;
+        text-transform: uppercase;
+        padding: 5px 10px 10px 10px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
 	&.row--divider{
 
 	  justify-content: flex-start;

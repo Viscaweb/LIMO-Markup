@@ -16,7 +16,9 @@
 
   .row--comment {
 
-
+    &--goal {
+      background: $ls-color-comment-goal;
+    }
 
     .cell {
 
@@ -41,7 +43,7 @@
         padding-left: 10px;
         padding-right: 10px;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         overflow: hidden;
         white-space: normal;

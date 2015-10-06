@@ -23,6 +23,7 @@ class CliCommands
      */
     static public function run($command)
     {
+	echo "$command\n"; flush();
         return shell_exec($command);
     }
 
