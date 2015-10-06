@@ -40,6 +40,7 @@
       }
 
       &__comment-comment {
+        font-size: 13px;
         padding-left: 10px;
         padding-right: 10px;
         display: flex;
@@ -47,7 +48,6 @@
         align-items: center;
         overflow: hidden;
         white-space: normal;
-        font-weight: normal;
       }
     }
   }

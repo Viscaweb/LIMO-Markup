@@ -2,11 +2,24 @@
 
   background: $ls-color-white;
 
+  .row--head {
+
+    .cell {
+      &.versus {
+        padding: 0 5px;
+        flex: 0 0 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+
   .row {
     display: flex;
     width: auto;
     background: $ls-color-white;
-    border: none;
     padding: 0 14px;
 
     > a {
@@ -15,22 +28,6 @@
 
     .cell {
       padding: 8px 0 6px 0;
-    }
-  }
-
-  .row--head {
-    border-bottom: $ls-list-border;
-
-    &:first-of-type {
-      border-top: none;
-      border-bottom: none;
-    }
-
-    &:last-of-type {
-      border-bottom: none;
-    }
-
-    .cell {
 
       &__details {
         width: 50%;
@@ -65,8 +62,10 @@
 
   .row--score {
     padding: 3px 0;
+    border: none;
 
     &:first-of-type {
+      border-top: $ls-list-border;
       padding-top: 6px;
     }
 
