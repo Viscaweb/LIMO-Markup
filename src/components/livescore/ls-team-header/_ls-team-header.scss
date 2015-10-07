@@ -1,0 +1,68 @@
+.ls-team-header {
+
+  background: $ls-color-white;
+
+  .row {
+    border: none;
+    color: $ls-text-color;
+
+    a {
+      text-decoration: none;
+      color: $ls-text-color;
+    }
+
+    .cell {
+     padding:0px 16px ;
+
+      &__team--flag {
+        padding: 0;
+        flex: 0 0 86px;
+        display: flex;
+        justify-content: flex-start;
+
+        > img {
+            max-width: 70px;
+            max-height: 70px;
+         }
+      }
+
+      &__team--infos {
+        padding-left: 0;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .team-title {
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 3px;
+          white-space: normal;
+          display: flex;
+          align-items: baseline;
+
+          > .favorite-star {
+            padding: 0 6px;
+            font-size: 12px;
+          }
+        }
+
+        .team-country {
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          color: lighten($ls-text-color,35%);
+          font-size:  $card-font-size - 4 ;
+          clear: both;
+          text-transform: uppercase;
+          text-decoration: none;
+
+          > .country-flag {
+              width: 26px;
+              margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}
