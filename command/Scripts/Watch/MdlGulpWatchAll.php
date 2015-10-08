@@ -82,7 +82,7 @@ class MdlGulpWatchAll implements ScriptInterface
      */
     private function createWatchAllTask($basePath)
     {
-        $gulpFile = $basePath.'/external/material-design-lite/gulpfile.babel.js';
+        $gulpFile = $basePath.'/external/material-design-lite/gulpfile.js';
         $gulpContent = file_get_contents($gulpFile);
 
         if (strstr($gulpContent, 'watchall')) {
