@@ -23,6 +23,8 @@
 
       &__flag {
         flex: 0 0 42px;
+        display: flex;
+        justify-content: center;
 
         > img {
           max-height: 32px;
