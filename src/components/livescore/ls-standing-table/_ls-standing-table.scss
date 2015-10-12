@@ -1,278 +1,269 @@
 
 .ls-standing-table {
 
-  display: flex;
-  flex-flow: row nowrap;
+  font-size: 12px;
+  overflow: hidden;
 
-  /* ---- Header ----- */
-
-  .row-head {
-    color : lighten($ls-text-color, 30%);
-    font-weight: 300;
-    font-size: 12px;
-
-    .cell-head-rank{
-      display: flex;
-      justify-content: center;
-      flex: 0 0 24px;
-      padding: 5px 0;
-    }
-
-    .cell-head-stat{
-      display: flex;
-      justify-content: center;
-      flex: 0 0 20px;
-      padding: 5px 0px;
-    }
-
-    .cell-head-team{
-      flex-grow: 1;
-      display: flex;
-      justify-content: flex-start;
-      box-sizing: border-box;
-      padding: 5px 0 4px 14px;
-      overflow-x: hidden;
-      text-overflow: ellipsis;
-    }
-
-    .cell-head-points{
-      display: flex;
-      padding: 4px 0;
-      justify-content: center;
-      flex: 0 0 32px;
-      border: none;
-    }
-
-    .cell-head-point{
-      display: flex;
-      padding: 5px 0;
-      justify-content: center;
-      flex: 0 0 32px;
-    }
-  }
 
   /* ---- Left Side ----- */
 
   &--left {
-    width: 50%;/* Variable*/
-    -webkit-box-shadow: 5px 0px 5px -4px rgba(0,0,0,0.16);
-    -moz-box-shadow: 5px 0px 5px -4px rgba(0,0,0,0.16);
-    box-shadow: 5px 0px 5px -4px rgba(0,0,0,0.16);/* Variable*/
+    width: 50%;
+    float: left;
+    -webkit-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+    box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+
 
     .row {
-      position: relative;
-      display: flex;
-      flex-flow: row nowrap;
-      justify-content: flex-start;
-      align-items: center;
+      padding: 0;
       box-sizing: border-box;
       border: $ls-dialog-border;
       border-bottom: 0;
 
+      &--selected {
+        background: $ls-row-selected-color;
+      }
+
+      a {
+        color: #0053A8;
+        text-decoration: none;
+      }
+
       &:last-child {
-        border-bottom:$ls-dialog-border;
+        border-bottom: $ls-dialog-border;
       }
 
-      &--selected{
-        background:$ls-row-selected-color;
-      }
-    }
+      .cell {
+        padding: 5px 0;
+        border-right: $ls-dialog-border;
+        align-items: center;
 
-    .cell {
-      border-right: $ls-dialog-border; /* Variable*/
+        &__rank {
+          flex: 0 0 25px;
+          display: flex;
+          justify-content: center;
 
-      &--rank{
-      display: flex;
-      justify-content: center;
-      flex: 0 0 24px;
-      padding: 5px 0;
-      font-size: 13px;
-      color : darken($ls-text-color, 10%);
-      background-color:$ls-standing-grey-color;
+          &--standing-green {
+            background-color: $ls-standing-green-color;
+          }
 
-        &--standing-green {
-          background-color:$ls-standing-green-color;
-        }
+          &--standing-clear-green {
+            background-color: $ls-standing-clear-green-color;
+          }
 
-        &--standing-clear-green {
-          background-color:lighten($ls-standing-green-color, 10%);
-        }
+          &--standing-blue {
+            background-color: $ls-standing-blue-color;
+          }
 
-        &--standing-blue {
-          background-color:$ls-standing-blue-color;
-        }
+          &--standing-clear-blue {
+            background-color: $ls-standing-clear-blue-color;
+          }
 
-        &--standing-clear-blue {
-          background-color:lighten($ls-standing-blue-color, 5%);
-        }
+          &--standing-grey {
+            background-color: $ls-standing-grey-color;
+          }
 
-        &--standing-orange {
-          background-color:$ls-standing-orange-color;
-        }
+          &--standing-orange {
+            background-color: $ls-standing-orange-color;
+          }
 
-        &--standing-clear-orange {
-          background-color:lighten($ls-standing-orange-color, 5%);
-        }
-        &--standing-red {
-          background-color:$ls-standing-red-color;
-        }
+          &--standing-clear-orange {
+            background-color: $ls-standing-clear-orange-color;
+          }
 
-        &--standing-clear-red {
-          background-color:lighten($ls-standing-red-color, 5%);
-        }
-      }
+          &--standing-red {
+            background-color: $ls-standing-red-color;
+          }
 
-      &--stat{
-      display: flex;
-      justify-content: center;
-      flex: 0 0 20px;
-      padding: 5px 0;
-      min-height: 20px;
-      font-size: 12px;
-      font-weight: 300;
-      font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", sans-serif;
-
-        &--down {
-          color:$ls-cell-stat-down;
-        }
-
-        &--up {
-          color:$ls-cell-stat-up;
-        }
-      }
-
-
-      &--team {
-        position: relative;
-        flex-grow: 1;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        box-sizing: border-box;
-        padding: 4px 5px;
-
-        &.live:before{
-          content: '';
-          position: absolute;
-          right:0;
-          display: block;
-          float: right;
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: $ls-color-live;
-          margin-right: 4px;
-          margin-top: 9px;
-          @extend .blinking;
-        }
-
-        &__flag {
-          padding: 0 5px 0 0;
-          flex: 0 0 30px;
-
-          > img {
-            max-width: 19px;
-            max-height: 22px;
+          &--standing-clear-red {
+            background-color: $ls-standing-clear-red-color;
           }
         }
 
-        &__title {
-          padding: 0 5px 0 0;
-          color:#0053A8;  /* Variable*/
-          white-space: nowrap;
-          overflow-x: hidden;
-          text-overflow: ellipsis;
+        &__stat {
+          display: flex;
+          justify-content: center;
+          flex: 0 0 20px;
           font-size: 12px;
-          font-weight: 300;
+          font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", sans-serif;
+
+          &--down {
+            color: $ls-cell-stat-down;
+          }
+
+          &--up {
+            color: $ls-cell-stat-up;
+          }
         }
 
+        &__team {
+          display: flex;
+          justify-content: flex-start;
+          padding-right: 10px;
+
+          &--flag {
+            padding: 0 5px;
+            flex: 0 0 22px;
+            display: flex;
+            justify-content: center;
+
+            > img {
+              max-height: 22px;
+              max-width: 22px;
+            }
+          }
+
+          &--title {
+            position: relative;
+            padding: 0 5px 0 0;
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            font-weight: 300;
+            line-height: 22px;
+          }
+
+          &.live:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            display: block;
+            float: right;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $ls-color-live;
+            margin-right: 4px;
+            margin-top: 9px;
+            @extend .blinking;
+          }
+        }
+
+        &__total-points {
+          position: relative;
+          flex: 0 0 32px;
+          display: flex;
+          justify-content: center;
+          font-weight: 400;
+        }
+
+        &__point-detail {
+          position: absolute;
+          right: 0;
+          bottom: -5px;
+          font-size: 9px;
+          color: rgb(255, 0, 0);
+          margin: 3px;
+        }
       }
-
-      &--points{
-        display: flex;
-        justify-content: center;
-        flex: 0 0 32px;
-        font-size: 13px;
-        font-weight: bold;
-        color: $ls-color-black;
-        border: none;
-
-      }
-
-      &__point-detail{
-        position: absolute;
-        right: 0;
-        bottom: -5px;
-        font-size: 9px;
-        color: rgb(255, 0, 0);
-        margin:3px;
-      }
-
-      &--point{
-        display: flex;
-        justify-content: center;
-        flex: 0 0 32px;
-        font-size: 13px;
-        padding: 5px 0;
-        color: $ls-color-black;
-
-      }
-
-
     }
 
+    .row--head {
+      padding: 0;
+
+      .cell {
+        color: lighten($ls-text-color, 20%);
+
+        &__team {
+          padding-left: 5px;
+        }
+      }
+    }
   }
 
   /* ---- Right Side ----- */
 
   &--right {
-    overflow-x: scroll;
-    flex-grow: 1;
-    background: lightcyan;
 
-    &::-webkit-scrollbar{
+    padding: 0;
+    margin: 0;
+    width: 50%;
+    float: left;
+    white-space: nowrap;
+    overflow-x: auto;
+
+    &::-webkit-scrollbar {
       display: none;
     }
 
-    /*&__content {
+    .row {
+      padding: 0;
+      margin: 0;
       display: flex;
-      flex-flow: row nowrap;
-      justify-content: flex-start;
-      width: auto;*/
 
-      .row {
-        /*display: block;*/
-        display: flex;
-        border: $ls-dialog-border;
-        border-bottom: 0;
+      &--selected {
 
-        &:last-child {
-          border-bottom:$ls-dialog-border;
-        }
-
-        &--selected{
-          background:$ls-row-selected-color;
+        .cell {
+          background: $ls-row-selected-color;
         }
       }
 
       .cell {
+        padding: 2px 0;
         border-right: $ls-dialog-border;
-        /*display: inline-block;*/
+        border-bottom: $ls-dialog-border;
+        min-width: 32px;
+        text-align: center;
 
-        &--point{
-          /*display: inline-block;*/
-          /* max-width: 32px;*/
-          /*padding: 5px 5px;*/
-          display: flex;
-          justify-content: center;
-          flex: 0 0 32px;
-          padding: 5px 0;
-          font-size: 13px;
-          color: $ls-color-black;
-
+        &__point {
+          padding: 4px 0;
         }
       }
-    /*}*/
+    }
+
+    .row--head {
+
+      .cell {
+        color: lighten($ls-text-color, 20%);
+      }
+    }
+  }
+
+
+}
+
+.ls-legend {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  background: darken($ls-color-white, 5%);
+  padding: 15px;
+
+  &__title {
+    color: lighten($ls-text-color, 20%);
+    margin-bottom: 12px;
+  }
+
+  &__content {
+
+    .row {
+      display: flex;
+      margin-bottom: 4px;
+    }
+
+    .cell {
+
+      &__color {
+        border: $ls-dialog-border;
+        width: 24px;
+        height: 17px;
+        margin-right: 12px;
+
+        &--green {
+          background-color: $ls-standing-green-color;
+        }
+        &--clear-green {
+          background-color: $ls-standing-clear-green-color;
+        }
+        &--blue {
+          background-color: $ls-standing-blue-color;
+        }
+        &--red {
+          background-color: $ls-standing-red-color;
+        }
+      }
+    }
   }
 }
 

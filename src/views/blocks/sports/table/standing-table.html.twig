@@ -1,466 +1,1081 @@
-<div class="mdl-data-table ls-data-table ls-standing-table">
-        <div class="ls-standing-table--left">
-            {#Header#}
-            <div class="row row-head">
-                <div class="cell cell-head-rank">
-                    #
-                </div>
-                <div class="cell cell-head-stat ">
-                    <span class="icon-arrow-up-down"></span>
-                </div>
-                <div class="cell cell-head-team">
-                   Team
-                </div>
-                <div class="cell cell-head-points">
-                    Pts
-                </div>
-            </div>
+<div class="container">
 
-            {#Team#}
-            <div class="row row--selected">
-                <div class="cell cell--rank cell--rank--standing-green">
-                    1
-                </div>
-                <div class="cell cell--stat ">
-                    <span class="cell--stat--up">+1</span>
-                </div>
-                <div class="cell cell--team">
-                    <div class="cell--team__flag"> 
-                        <img src="../assets/img/psg.png" alt="PSG">
-                    </div> 
-                    <div class="cell--team__title"> 
-                        <span>PSG</span> 
-                    </div> 
-                </div>
-                <div class="cell cell--points">
-                    38
-                </div>
+{#####   LEFT PART   #####}
+    <ul class="mdl-list ls-list ls-standing-table ls-standing-table--left">
+        {#Header#}
+        <li class="row row--head">
+            <div class="cell cell__rank">
+                #
             </div>
-            <div class="row">
-                <div class="cell cell--rank cell--rank--standing-clear-green">
-                    2
-                </div>
-                <div class="cell cell--stat ">
-                    <span class="cell--stat--up"></span>
-                </div>
-                <div class="cell cell--team">
-                    <div class="cell--team__flag"> 
-                        <img src="../assets/img/monaco.png" alt="Monaco">
-                    </div> 
-                    <div class="cell--team__title"> 
-                        <span>Monaco</span> 
-                    </div> 
-                </div>
-                <div class="cell cell--points">
-                    32
-                </div>
+            <div class="cell cell__stat">
+                <span class="icon-arrow-up-down"></span>
             </div>
-            <div class="row">
-                <div class="cell cell--rank cell--rank--standing-blue">
-                    2
-                </div>
-                <div class="cell cell--stat ">
-                    <span class="cell--stat--down"></span>
-                </div>
-                <div class="cell cell--team">
-                    <div class="cell--team__flag"> 
-                        <img src="../assets/img/marseille.png" alt="Marseille">
-                    </div> 
-                    <div class="cell--team__title"> 
-                        <span>Marseille</span> 
-                    </div> 
-                </div>
-                <div class="cell cell--points">
-                    32
-                </div>
+            <div class="cell cell__team">
+                Team
             </div>
-            <div class="row">
-                <div class="cell cell--rank cell--rank--standing-clear-blue">
-                    2
-                </div>
-                <div class="cell cell--stat ">
-                    <span class="cell--stat--down">-2</span>
-                </div>
-                <div class="cell cell--team live">
-                    <div class="cell--team__flag"> 
-                        <img src="../assets/img/saint-etienne.png" alt="Saint Etienne">
-                    </div> 
-                    <div class="cell--team__title "> 
-                        <span>Saint Etienne text </span> 
-                    </div> 
-                </div>
-                <div class="cell cell--points">
-                    32
-                </div>
+            <div class="cell cell__total-points">
+                Pts
             </div>
-            <div class="row">
-                <div class="cell cell--rank cell--rank--standing-grey">
-                    2
-                </div>
-                <div class="cell cell--stat ">
-                    <span class=""></span>
-                </div>
-                <div class="cell cell--team live">
-                    <div class="cell--team__flag"> 
-                        <img src="../assets/img/bordeaux.png" alt="Bordeaux">
-                    </div> 
-                    <div class="cell--team__title "> 
-                        <span>Bordeaux</span> 
-                    </div> 
-                </div>
-                <div class="cell cell--points">
-                    32
+        </li>
 
+        {#PSG#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-green">
+                1
+            </div>
+            <div class="cell cell__stat">
+                <span class="cell__stat--up">+1</span>
+            </div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/psg.png" alt="PSG">
                 </div>
-                <div class="cell__point-detail">
-                    P
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>PSG</span>
+                    </a>
                 </div>
             </div>
-            <div class="row">
-                <div class="cell cell--rank cell--rank--standing-orange">
-                    2
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#LYON#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-green">
+                2
+            </div>
+            <div class="cell cell__stat">
+            </div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/lyon.png" alt="Lyon">
                 </div>
-                <div class="cell cell--stat ">
-                    <span class="cell--stat--down">-2</span>
-                </div>
-                <div class="cell cell--team ">
-                    <div class="cell--team__flag"> 
-                        <img src="../assets/img/montpellier.png" alt="Montpellier">
-                    </div> 
-                    <div class="cell--team__title "> 
-                        <span>Montpellier</span> 
-                    </div> 
-                </div>
-                <div class="cell cell--points">
-                    32
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Lyon</span>
+                    </a>
                 </div>
             </div>
-            <div class="row">
-                <div class="cell cell--rank cell--rank--standing-clear-orange">
-                    2
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#MONCAO#}
+        <li class="row row--selected">
+            <div class="cell cell__rank cell__rank--standing-clear-green">
+                3
+            </div>
+            <div class="cell cell__stat">
+            </div>
+            <div class="cell cell__team live">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/monaco.png" alt="Moncao">
                 </div>
-                <div class="cell cell--stat ">
-                    <span class="cell--stat--down">-2</span>
-                </div>
-                <div class="cell cell--team ">
-                    <div class="cell--team__flag"> 
-                        <img src="../assets/img/reims.png" alt="Reims">
-                    </div> 
-                    <div class="cell--team__title "> 
-                        <span>Reims</span> 
-                    </div> 
-                </div>
-                <div class="cell cell--points">
-                    32
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Monaco</span>
+                    </a>
                 </div>
             </div>
-            <div class="row">
-                <div class="cell cell--rank cell--rank--standing-red">
-                    2
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#MARSEILLE#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-blue">
+                4
+            </div>
+            <div class="cell cell__stat">
+                <span class="cell__stat--down">-2</span>
+            </div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/marseille.png" alt="Marseille">
                 </div>
-                <div class="cell cell--stat ">
-                    <span class="cell--stat--down">-2</span>
-                </div>
-                <div class="cell cell--team live">
-                    <div class="cell--team__flag"> 
-                        <img src="../assets/img/evian.png" alt="Evian">
-                    </div> 
-                    <div class="cell--team__title "> 
-                        <span>Evian</span> 
-                    </div> 
-                </div>
-                <div class="cell cell--points">
-                    32
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Marseille</span>
+                    </a>
                 </div>
             </div>
-            <div class="row">
-                <div class="cell cell--rank cell--rank--standing-clear-red">
-                    2
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#SAINT ETIENNE#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-clear-blue">
+                5
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/saint-etienne.png" alt="Saint Etienne">
                 </div>
-                <div class="cell cell--stat ">
-                    <span class="cell--stat--down"></span>
-                </div>
-                <div class="cell cell--team ">
-                    <div class="cell--team__flag"> 
-                        <img src="../assets/img/toulouse.png" alt="Toulouse">
-                    </div> 
-                    <div class="cell--team__title "> 
-                        <span>Toulouse</span> 
-                    </div> 
-                </div>
-                <div class="cell cell--points">
-                    32
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Saint Etienne</span>
+                    </a>
                 </div>
             </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#BORDEAUX#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-grey">
+                6
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team live">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/bordeaux.png" alt="Bordeaux">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Bordeaux</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#MONTPELLIER#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-grey">
+                7
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team live">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/montpellier.png" alt="Montpellier">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Montpellier</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#LILLE#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-grey">
+                8
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/lille.png" alt="Lille">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Lille</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#RENNES SPORT#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-grey">
+                9
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team live">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/rennes.png" alt="Rennes">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Rennes</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#GUINGAMP#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-grey">
+                10
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/guingamp.png" alt="Guingamp">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Guingamp</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#NICE#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-grey">
+                11
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/nice.png" alt="Nice">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Nice</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#Bastia#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-grey">
+                12
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/bastia.png" alt="Bastia">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Bastia</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#CAEN#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-grey">
+                13
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/caen.png" alt="Caen">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Caen</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#NANTES#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-grey">
+                14
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/nantes.png" alt="Nantes">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Nantes</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#REIMS#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-grey">
+                15
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/reims.png" alt="Reims">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Reims</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+
+        {#LORIENT#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-grey">
+                16
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/lorient.png" alt="Lorient">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Lorient</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+                <div id="tt1" class="cell__point-detail"> P
+                    <div class="mdl-tooltip" for="tt1">
+                        -6 point - Federation décision
+                    </div>
+                </div>
+            </div>
+        </li>
+
+        {#TOULOUSE#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-orange">
+                17
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/toulouse.png" alt="Toulouse">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Toulouse</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#EVIAN#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-clear-orange">
+                18
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/evian.png" alt="Evian">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Evian</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#METZ#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-red">
+                19
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/metz.png" alt="Metz">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Metz</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+        {#LENS#}
+        <li class="row">
+            <div class="cell cell__rank cell__rank--standing-clear-red">
+                20
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../assets/img/lens.png" alt="Lens">
+                </div>
+                <div class="cell__team--title live">
+                    <a href="">
+                        <span>Lens</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+
+    </ul>
+
+{#####   RIGHT PART   #####}
+    <ul class="ls-standing-table ls-standing-table--right">
+
+        {#Header#}
+        <li class="row row--head">
+            <div class="cell">
+                P
+            </div>
+            <div class="cell">
+                W
+            </div>
+            <div class="cell">
+                D
+            </div>
+            <div class="cell">
+                L
+            </div>
+            <div class="cell">
+                GF
+            </div>
+            <div class="cell">
+                GA
+            </div>
+            <div class="cell">
+                +/-
+            </div>
+            <div class="cell">
+                M
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row row--selected">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row ">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+        {#Point#}
+        <li class="row ">
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+    </ul>
+
+{#####   LEGEND   #####}
+    <div class="ls-legend">
+        <div class="ls-legend__title">
+            <span>LEGEND</span>
         </div>
-
-        <div class="ls-standing-table--right">
-
-           {# <div class="ls-standing-table--right__content">#}
-                {#Header#}
-                <div class="row row-head">
-                    <div class="cell cell-head-point">
-                        P
-                    </div>
-                    <div class="cell cell-head-point">
-                        W
-                    </div>
-                    <div class="cell cell-head-point">
-                        D
-                    </div>
-                    <div class="cell cell-head-point">
-                        L
-                    </div>
-                    <div class="cell cell-head-point">
-                        GF
-                    </div>
-                    <div class="cell cell-head-point">
-                        GA
-                    </div>
-                    <div class="cell cell-head-point">
-                        +/-
-                    </div>
-                    <div class="cell cell-head-point">
-                        M
-                    </div>
-                </div>
-
-                {#Point#}
-                <div class="row row--selected">
-                    <div class="cell cell--point">
-                        38
-                    </div>
-                    <div class="cell cell--point">
-                        38
-                    </div>
-                    <div class="cell cell--point">
-                        38
-                    </div>
-                    <div class="cell cell--point">
-                        38
-                    </div>
-                    <div class="cell cell--point">
-                        38
-                    </div>
-                    <div class="cell cell--point">
-                        38
-                    </div>
-                    <div class="cell cell--point">
-                        38
-                    </div>
-                    <div class="cell cell--point">
-                        38
-                    </div>
-                </div>
+        <div class="ls-legend__content">
             <div class="row">
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
+                <div class="cell cell__color cell__color--green"></div>
+                <div class="cell cell__explanation">
+                    <span>Qualified for Champions League</span>
                 </div>
             </div>
             <div class="row">
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
+                <div class="cell cell__color cell__color--blue"></div>
+                <div class="cell cell__explanation">
+                    <span>Qualified for French Cup</span>
                 </div>
             </div>
             <div class="row">
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
+                <div class="cell cell__color cell__color--clear-green"></div>
+                <div class="cell cell__explanation">
+                    <span>Qualified for Europa League</span>
                 </div>
             </div>
             <div class="row">
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
+                <div class="cell cell__color cell__color--red"></div>
+                <div class="cell cell__explanation">
+                    <span>Downgraded to League 2</span>
                 </div>
             </div>
-            <div class="row">
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-            </div>
-            <div class="row">
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-            </div>
-            <div class="row">
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-            </div>
-            <div class="row">
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-                <div class="cell cell--point">
-                    38
-                </div>
-            </div>
-        {#</div>#}
         </div>
     </div>
 </div>
