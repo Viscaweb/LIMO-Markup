@@ -16,6 +16,8 @@ class CliCommands
     const ARG_AS_BG = '> /dev/null 2>&1 &';
     const ARG_ONLY_ERRORS = '2>&1 >/dev/null';
 
+    const DISPLAY_COMMANDS = false;
+
     /**
      * @param $command
      *
@@ -23,7 +25,11 @@ class CliCommands
      */
     static public function run($command)
     {
-	echo "$command\n"; flush();
+        if (self::DISPLAY_COMMANDS) {
+            echo "$command\n";
+            flush();
+        }
+
         return shell_exec($command);
     }
 
