@@ -1,0 +1,20 @@
+.ls-grid {
+  width: 100%;
+  padding: 0 10px;
+  display: flex;
+  flex-flow: column;
+
+  .row {
+    display: flex;
+    flex-flow: row;
+    flex:1;
+    justify-content: space-between;
+    align-items: center;
+
+    .cell {
+      display: flex;
+      flex:1;
+      justify-content: center;
+    }
+  }
+}
