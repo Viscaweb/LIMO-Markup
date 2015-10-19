@@ -4,30 +4,33 @@
 
   .row--head {
 
+    font-weight: 400;
+    justify-content: center;
+
     .cell {
+      &__team {
+        padding: 10px 0;
+      }
       &.versus {
         padding: 0 5px;
-        flex: 0 0 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
       }
     }
   }
-
 
   .row {
     display: flex;
     width: auto;
     background: $ls-color-white;
     padding: 0 14px;
+    border-top:none;
+    border-bottom: $ls-list-border;
 
     > a {
       color: $ls-text-color;
     }
 
     .cell {
-      padding: 8px 0 6px 0;
+      padding: 7px 0 5px 0;
 
       &__details {
         width: 50%;
@@ -41,18 +44,18 @@
           overflow: hidden;
           white-space: nowrap;
           font-weight: normal;
-          font-size: 12px;
+          font-size: 13px;
         }
 
         &-icon {
           padding: 0;
-          flex: 0 0 20px;
+          flex: 0 0 25px;
           display: flex;
           justify-content: flex-start;
           align-items: center;
 
           > span {
-            font-size: 14px;
+            font-size: 18px;
             color: $ls-primary-color;
           }
         }
@@ -61,18 +64,16 @@
   }
 
   .row--score {
-    padding: 3px 0;
+    padding: 2px 0;
     border: none;
 
-    &:first-of-type {
-      border-top: $ls-list-border;
+    &:first-child {
       padding-top: 6px;
     }
 
     &:last-of-type {
       padding-bottom: 6px;
     }
-
 
     .cell {
 
@@ -82,8 +83,7 @@
         justify-content: flex-end;
         align-items: center;
         padding: 0 6px;
-        font-size: 15px;
-        font-weight: normal;
+        font-size: 14px;
         text-transform: uppercase;
         color: $ls-text-color;
 
@@ -99,8 +99,8 @@
         display: flex;
         justify-content: center;
         color: $ls-color-white;
-        font-size: 18px;
-        font-weight: 500;
+        font-size: 19px;
+        font-weight: 400;
         padding: 4px 8px;
 
         .versus {

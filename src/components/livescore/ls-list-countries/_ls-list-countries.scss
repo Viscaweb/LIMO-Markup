@@ -7,7 +7,7 @@
     width: auto;
     background: $ls-color-white;
     border-bottom: $ls-list-border;
-    padding: 0 14px;
+    padding: 0 10px 0 14px;
 
     > a {
       color: $ls-text-color;
@@ -33,6 +33,7 @@
 
       &__country {
         font-weight: 300;
+        flex:2;
         justify-content: flex-start;
         align-items: center;
         white-space: nowrap;
@@ -41,19 +42,36 @@
       }
 
       &__badge {
-        padding: 0;
-        flex: 0 0 107px;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        flex:1;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        min-width: 135px;
 
-        &--live {
-          flex: 0 0 1px;
+        > span{
+          position: relative;
+          height: 0;
+          padding-top: 7px;
+          min-width: 85px;
+          font-weight: 300;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+
+          & + span {
+            min-width: 50px;
+          }
+
+          &:after {
+            position: relative;
+          }
         }
       }
     }
   }
 }
+
+
 
 
 

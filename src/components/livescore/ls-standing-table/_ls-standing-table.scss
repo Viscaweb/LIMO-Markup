@@ -28,6 +28,7 @@
       a {
         color: #0053A8;
         text-decoration: none;
+        font-weight: 300;
       }
 
       &:last-child {
@@ -44,40 +45,40 @@
           display: flex;
           justify-content: center;
 
-          &--standing-green {
-            background-color: $ls-standing-green-color;
+          &--green {
+            background-color: $ls-rank-green-color;
           }
 
-          &--standing-clear-green {
-            background-color: $ls-standing-clear-green-color;
+          &--clear-green {
+            background-color: $ls-rank-clear-green-color;
           }
 
-          &--standing-blue {
-            background-color: $ls-standing-blue-color;
+          &--blue {
+            background-color: $ls-rank-blue-color;
           }
 
-          &--standing-clear-blue {
-            background-color: $ls-standing-clear-blue-color;
+          &--clear-blue {
+            background-color: $ls-rank-clear-blue-color;
           }
 
-          &--standing-grey {
-            background-color: $ls-standing-grey-color;
+          &--grey {
+            background-color: $ls-rank-grey-color;
           }
 
-          &--standing-orange {
-            background-color: $ls-standing-orange-color;
+          &--orange {
+            background-color: $ls-rank-orange-color;
           }
 
-          &--standing-clear-orange {
-            background-color: $ls-standing-clear-orange-color;
+          &--clear-orange {
+            background-color: $ls-rank-clear-orange-color;
           }
 
-          &--standing-red {
-            background-color: $ls-standing-red-color;
+          &--red {
+            background-color: $ls-rank-red-color;
           }
 
-          &--standing-clear-red {
-            background-color: $ls-standing-clear-red-color;
+          &--clear-red {
+            background-color: $ls-rank-clear-red-color;
           }
         }
 
@@ -145,7 +146,7 @@
           flex: 0 0 32px;
           display: flex;
           justify-content: center;
-          font-weight: 400;
+          font-weight: 600;
         }
 
         &__point-detail {
@@ -219,8 +220,6 @@
       }
     }
   }
-
-
 }
 
 .ls-legend {
@@ -251,19 +250,38 @@
         margin-right: 12px;
 
         &--green {
-          background-color: $ls-standing-green-color;
+          background-color: $ls-rank-green-color;
         }
         &--clear-green {
-          background-color: $ls-standing-clear-green-color;
+          background-color: $ls-rank-clear-green-color;
         }
         &--blue {
-          background-color: $ls-standing-blue-color;
+          background-color: $ls-rank-blue-color;
         }
         &--red {
-          background-color: $ls-standing-red-color;
+          background-color: $ls-rank-red-color;
         }
       }
     }
   }
 }
 
+
+/* ---- @ media ----- */
+
+@media (max-width: 319px) {
+
+  .ls-standing-table--left {
+    width: 80%;
+  }
+  .ls-standing-table--right {
+    width: 20%;
+  }
+}
+
+@media (min-width: 600px) {
+
+  .ls-standing-table--right .row .cell {
+    flex: 1;
+  }
+}
