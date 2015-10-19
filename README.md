@@ -17,6 +17,6 @@ You can compile in real time by doing: `php application.php watch`
 To install it, you can perform: `brew install fswatch` 
 
 ### Others
-
+ 
 *If you have this error message: Error: Cannot find module 'npmlog'*
 Please look at: [GitHub: Cannot find module npmlog](https://github.com/tj/n/issues/101)
