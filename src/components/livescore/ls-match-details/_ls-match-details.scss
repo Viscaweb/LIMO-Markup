@@ -64,11 +64,12 @@
   }
 
   .row--score {
-    padding: 2px 0;
+    padding-top: 6px;
     border: none;
 
-    &:first-child {
-      padding-top: 6px;
+    ~ .row--score {
+      padding: 2px 0;
+      border: none;
     }
 
     &:last-of-type {
