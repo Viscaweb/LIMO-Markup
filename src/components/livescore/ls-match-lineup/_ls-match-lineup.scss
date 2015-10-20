@@ -1,5 +1,6 @@
 .ls-match-lineup {
   position: relative;
+  max-width: 600px;
 
   .field {
     width: 100%;
@@ -216,6 +217,76 @@
             flex-flow: row;
             justify-content: center;
           }
+        }
+      }
+    }
+  }
+}
+
+.ls-substitute {
+
+  .row {
+    border-bottom: 1px solid darken($ls-list-border-color, 5%);
+    border-top: 0;
+    padding: 0;
+
+    &--head {
+      color: lighten($ls-text-color, 10%);
+      background: $ls-color-white;
+    }
+
+    .cell {
+      border-right: 1px solid darken($ls-list-border-color, 5%);
+      padding: 5px 0;
+
+      &__team {
+        padding: 5px 10px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+
+      &.team1 {
+        text-align: left;
+      }
+      &.team2 {
+        text-align: right;
+      }
+
+      &__player-number {
+        flex: 0 0 33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__player-name {
+        flex:1;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        span {
+          white-space: nowrap;
+          overflow-x: hidden;
+          text-overflow: ellipsis;
+          padding: 0 10px;
+        }
+
+        &.team1 {
+          justify-content: flex-start;
+          border-right: none;
+        }
+      }
+
+      &__icon {
+        flex:0 0 33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ~ .cell__icon {
+          border-right: none;
         }
       }
     }
