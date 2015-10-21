@@ -30,6 +30,7 @@
     height: 240px;
     background: url('/assets/img/featured-article.jpg') center / cover;
     text-decoration: none;
+    position: relative;
 
 
     .mdl-card__title-text {
@@ -43,7 +44,7 @@
       font-weight: 400;
     }
 
-    &:before {
+    &.mdl-card__title--gradient:before {
       content: "";
       width: 100%;
       height: 100px;
@@ -65,13 +66,10 @@
 }
 
 
-.ls-news-card {
+.ls-article {
 
-
-
-}
-
-.ls-news-list{
-
+  h1 {
+    margin-top: 15px;
+  }
 
 }
