@@ -8,6 +8,12 @@
     height: auto;
   }
 
+  a {
+    width:100%;
+    text-decoration: none;
+    color: inherit ;
+  }
+
   .team1 {
     position: absolute;
     top: 0;
@@ -267,7 +273,10 @@
         align-items: center;
         justify-content: flex-end;
 
-        span {
+        a {
+          text-decoration: none;
+          color: inherit ;
+          font-weight: inherit;
           white-space: nowrap;
           overflow-x: hidden;
           text-overflow: ellipsis;
