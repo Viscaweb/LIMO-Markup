@@ -64,11 +64,17 @@
 		flex-grow : 0;
 		padding: 0;
 		
-		&__flag {
-		  margin-left: 13px;
+		&:first-child {
+		  padding-left: 13px;
 		}
+
 		
 		&__league-name {
+		  font-weight: 400;
+		  padding-right: 4px;
+		}
+
+		&__divider-title {
 		  font-weight: 400;
 		  padding-right: 4px;
 		}
