@@ -17,7 +17,9 @@ only screen and (        min-device-pixel-ratio: 2),
 only screen and (                min-resolution: 192dpi),
 only screen and (                min-resolution: 2dppx) {
 
+  span.sprite-icons {
   background-image: url($ls-image-sprite-icons-retina);
+  }
 }
 
 
