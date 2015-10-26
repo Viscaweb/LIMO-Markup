@@ -3,162 +3,164 @@
 
   font-size: 12px;
   overflow: hidden;
+  //background: $ls-color-white;
 
 
   /* ---- Left Side ----- */
 
   &--left {
-    width: 50%;
+    width: calc(100% - 115px);
     float: left;
-    -webkit-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
-    -moz-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
-    box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
-
 
     .row {
       padding: 0;
       box-sizing: border-box;
-      border: $ls-dialog-border;
-      border-bottom: 0;
+      border: 0;
+
+
+      &:last-child {
+        border-bottom: $ls-list-border;
+      }
+    }
+
+    .row--match {
+        border-bottom: $ls-list-border;
+
+      &.event-live {
+
+        .cell {
+
+          &__score {
+            color: $ls-color-live;
+          }
+
+          &__time {
+            color: $ls-color-live;
+
+            &:before {
+              content: '';
+              display: block;
+              float: left;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background: $ls-color-live;
+              margin-right: 4px;
+              margin-top: 5px;
+              @extend .blinking;
+            }
+          }
+        }
+
+        &.paused {
+          .match-list {
+
+            &__time {
+
+              &:before {
+                background: darken($ls-color-white, 30%);
+                @extend .animation-reset;
+              }
+            }
+          }
+        }
+      }
+
+      &.event-won {
+        background: $ls-color-event-won-bg;
+      }
+
+      &.tennis-double {
+
+        .cell__opposition {
+
+          &__title {
+            position: relative;
+            display: block;
+            padding: 5px;
+
+            span {
+            display: block;
+            line-height: 14px;
+            }
+          }
+        }
+
+        .icon-tennis {
+          color:#FFC000;
+          position: absolute;
+          right: 5px;
+          top:35%;
+        }
+      }
+
+      &.event-lost {
+        background: $ls-color-event-lost-bg;
+      }
+
+      &.event-draw {
+        background: $ls-color-event-draw-bg;
+      }
 
       &--selected {
         background: $ls-row-selected-color;
       }
 
-      a {
-        color: #0053A8;
-        text-decoration: none;
-        font-weight: 300;
-      }
 
-      &:last-child {
-        border-bottom: $ls-dialog-border;
-      }
+
 
       .cell {
+        box-sizing: border-box;
         padding: 5px 0;
-        border-right: $ls-dialog-border;
+        border-right: $ls-list-border;
         align-items: center;
 
-        &__rank {
-          flex: 0 0 25px;
+        &__time {
           display: flex;
           justify-content: center;
-
-          &--green {
-            background-color: $ls-rank-green-color;
-          }
-
-          &--clear-green {
-            background-color: $ls-rank-clear-green-color;
-          }
-
-          &--blue {
-            background-color: $ls-rank-blue-color;
-          }
-
-          &--clear-blue {
-            background-color: $ls-rank-clear-blue-color;
-          }
-
-          &--grey {
-            background-color: $ls-rank-grey-color;
-          }
-
-          &--orange {
-            background-color: $ls-rank-orange-color;
-          }
-
-          &--clear-orange {
-            background-color: $ls-rank-clear-orange-color;
-          }
-
-          &--red {
-            background-color: $ls-rank-red-color;
-          }
-
-          &--clear-red {
-            background-color: $ls-rank-clear-red-color;
-          }
+          align-items: center;
+          border-bottom: $ls-list-border;
         }
 
-        &__stat {
-          display: flex;
-          justify-content: center;
-          flex: 0 0 20px;
-          font-size: 12px;
-          font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", sans-serif;
+        &__opposition {
+          padding: 0;
 
-          &--down {
-            color: $ls-cell-stat-down;
+          .row {
+            border-bottom: $ls-list-border;
           }
 
-          &--up {
-            color: $ls-cell-stat-up;
-          }
-        }
-
-        &__team {
-          display: flex;
-          justify-content: flex-start;
-          padding-right: 10px;
-
-          &--flag {
-            padding: 0 5px;
-            flex: 0 0 22px;
+          &__title {
+            padding:0 5px;
             display: flex;
-            justify-content: center;
-
-            > img {
-              max-height: 22px;
-              max-width: 22px;
-            }
-          }
-
-          &--title {
-            position: relative;
-            padding: 0 5px 0 0;
             white-space: nowrap;
             overflow-x: hidden;
             text-overflow: ellipsis;
-            font-weight: 300;
-            line-height: 22px;
-          }
 
-          &.live:before {
-            content: '';
-            position: absolute;
-            right: 0;
-            display: block;
-            float: right;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: $ls-color-live;
-            margin-right: 4px;
-            margin-top: 9px;
-            @extend .blinking;
+            span {
+              display: flex;
+              flex: 1;
+            }
+
+
+            .icon-tennis {
+              color:#FFC000 ;
+              display: flex;
+              flex: 0 0 10px;
+            }
           }
         }
 
-        &__total-points {
-          position: relative;
+        &__score {
           flex: 0 0 32px;
           display: flex;
           justify-content: center;
           font-weight: 600;
         }
-
-        &__point-detail {
-          position: absolute;
-          right: 0;
-          bottom: -5px;
-          font-size: 9px;
-          color: rgb(255, 0, 0);
-          margin: 3px;
-        }
       }
     }
+
+
+
 
     .row--head {
       padding: 0;
@@ -179,7 +181,7 @@
 
     padding: 0;
     margin: 0;
-    width: 50%;
+    width: 115px;
     float: left;
     white-space: nowrap;
     overflow-x: auto;
@@ -200,17 +202,80 @@
         }
       }
 
+      &:last-child {
+        border-bottom: $ls-list-border;
+      }
+
       .cell {
-        padding: 2px 0;
-        border-right: $ls-dialog-border;
-        border-bottom: $ls-dialog-border;
-        min-width: 32px;
+        box-sizing: border-box;
+        padding: 0;
+        border-right: $ls-list-border;
+        width: 23px;
         text-align: center;
 
-        &__point {
-          padding: 4px 0;
+        &__points {
+
+          .row {
+            border-top: $ls-list-border;
+
+            &:first-child{
+              border-top: none;
+              background: #ffff00;
+            }
+
+
+            .cell__point {
+              border-top: $ls-list-border;
+              background: #07b0ff;
+              height: 27px;
+              position: relative;
+            }
+          }
+
+          .row ~ .row {
+            border-bottom: $ls-list-border;
+
+            .cell__point {
+              border-top: none;
+              background: greenyellow;
+              height: 27px;
+              position: relative;
+            }
+          }
+        }
+
+        &__point-detail {
+          position: absolute;
+          right: 0px;
+          bottom: -10px;
+          font-size: 6px;
+          margin: 3px;
         }
       }
+
+      &.tennis-double {
+
+        .cell__points {
+
+          .row {
+
+            .cell__point {
+              background: lightgrey;
+              height: 39px;
+            }
+          }
+
+          .row ~ .row {
+
+            .cell__point {
+              background: orange;
+              height: 40px;
+            }
+          }
+        }
+      }
+
+
     }
 
     .row--head {
@@ -222,52 +287,9 @@
   }
 }
 
-.ls-legend {
-  display: flex;
-  flex-flow: column;
-  align-items: flex-start;
-  background: darken($ls-color-white, 5%);
-  padding: 15px;
 
-  &__title {
-    color: lighten($ls-text-color, 20%);
-    margin-bottom: 12px;
-  }
+/* ---- @ media ----- *//*
 
-  &__content {
-
-    .row {
-      display: flex;
-      margin-bottom: 4px;
-    }
-
-    .cell {
-
-      &__color {
-        border: $ls-dialog-border;
-        width: 24px;
-        height: 17px;
-        margin-right: 12px;
-
-        &--green {
-          background-color: $ls-rank-green-color;
-        }
-        &--clear-green {
-          background-color: $ls-rank-clear-green-color;
-        }
-        &--blue {
-          background-color: $ls-rank-blue-color;
-        }
-        &--red {
-          background-color: $ls-rank-red-color;
-        }
-      }
-    }
-  }
-}
-
-
-/* ---- @ media ----- */
 
 @media (max-width: 319px) {
 
@@ -284,4 +306,4 @@
   .ls-standing-table--right .row .cell {
     flex: 1;
   }
-}
+}*/
