@@ -57,7 +57,7 @@ $ls-button-large-icon-size:			20px;
 //Lists
 $ls-list-padding:				13px 15px;
 $ls-list-text-color:		$ls-color-black;
-$ls-list-border-color:	    /*darken($ls-color-white, 3.2%);*/red;
+$ls-list-border-color:	    darken($ls-color-white, 3.2%);
 $ls-list-pressed-color:	    darken($ls-color-white, 5.5%);
 $ls-list-border:            1px solid $ls-list-border-color;
 
