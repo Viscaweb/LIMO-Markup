@@ -1,26 +1,11 @@
 .ls-match-listing-tennis {
-
   font-size: 12px;
   overflow: hidden;
   background: $ls-color-white;
 
-  .row {
-    padding: 0;
-    box-sizing: border-box;
-    border: 0;
-
-    .cell {
-      box-sizing: border-box;
-      padding: 0;
-      border-right: $ls-list-border;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
-
   .row--match {
-    border-bottom: $ls-list-border;
+    box-sizing: border-box;
+    padding: 0;
 
     &.event-live {
 
@@ -42,7 +27,6 @@
             border-radius: 50%;
             background: $ls-color-live;
             margin-right: 4px;
-            margin-top: 5px;
             @extend .blinking;
           }
         }
@@ -74,51 +58,88 @@
       background: $ls-color-event-draw-bg;
     }
 
-    &--selected {
-      background: $ls-row-selected-color;
+    &.tennis-double {
+
+      .cell {
+
+        &__point {
+          height:44px;
+        }
+
+        .icon-tennis {
+          height: 44px;
+        }
+      }
     }
 
     .cell {
+      border-right: $ls-list-border;
+      padding: 0;
 
       &__time {
-      }
-
-      &__opposition {
-        flex-flow: column;
-        justify-content: flex-start;
-
-        &__title {
-          padding: 5px;
-          position: relative;
-          display: flex;
-
-          span {
-            display: flex;
-            white-space: nowrap;
-            overflow-x: hidden;
-            text-overflow: ellipsis;
-            flex: 1;
-          }
-
-          .icon-tennis {
-            color: #FFC000;
-            display: flex;
-            flex: 0 0 12px;
-          }
-        }
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
       &__score {
-        flex: 0 0 32px;
+        flex: 0 0 23px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__opposition {
+        display: flex;
+        flex-flow: column;
+
+        > .row {
+          display: flex;
+        }
+
+        &__title {
+          flex:1;
+          position: relative;
+          padding: 5px 15px 5px 5px;
+        }
+
+        span {
+          display: block;
+          overflow-x: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        .icon-tennis {
+          color: #FFC000;
+          width: 15px;
+          height: 27px;
+          position: absolute;
+          right: 5px;
+          top: 0;
+          background: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+        }
+
       }
 
       &__points {
+        flex:0 0 115px;
+        display: flex;
         flex-flow: column;
-        justify-content: flex-start;
+
+        > .row {
+          display: flex;
+        }
       }
 
       &__point {
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height:27px;
       }
 
@@ -134,37 +155,9 @@
         font-weight: 500;
       }
     }
-
-    &.tennis-double {
-
-      .cell {
-
-        &__opposition {
-
-          &__title {
-            display: block;
-
-            span {
-              display: block;
-              line-height: 14px;
-            }
-          }
-        }
-
-        .icon-tennis {
-          position: absolute;
-          right: 5px;
-          top: 35%;
-        }
-
-        &__point {
-          height: 38px
-        }
-      }
-    }
   }
 
-  /* Border */
+  /*Border */
   .row--match {
 
     .cell__time,
