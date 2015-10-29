@@ -1,198 +1,112 @@
 <div class="container">
 
     {#####   LEFT PART   #####}
-    <ul class="mdl-list ls-list ls-match-listing-other-sports ls-match-listing-other-sports--left">
+    <ul class="mdl-list ls-list ls-match-listing-baseball ls-match-listing-baseball--left">
         {#Header#}
 
-        {#Simple#}
-        <li class="row row--match">
+        <li class="row row--empty">
+            <div class="cell"></div>
+        </li>
+
+        <li class="row row--match ">
             <div class="cell cell__time">
                 <span>Term</span>
             </div>
             <div class="cell cell__opposition">
                 <div class="row">
-                    <div class="cell cell__opposition__title win">
-                        <span>Wawrinka</span>
-                        <span class="icon-tennis"></span>
+                    <div class="cell cell__opposition__title">
+                        <span>Baltimore Ravens</span>
                     </div>
-                    <div class="cell cell__score">
-                        <span>3</span>
-                    </div>
+                    <div class="cell cell__score"><span>22</span></div>
                 </div>
                 <div class="row">
                     <div class="cell cell__opposition__title ">
-                        <span>Janowics</span>
+                        <span>Buffalo Bills</span>
                     </div>
-                    <div class="cell cell__score">
-                        <span>2</span>
-                    </div>
+                    <div class="cell cell__score"><span>24</span></div>
                 </div>
             </div>
         </li>
-        {#Double#}
-        <li class="row row--match event-live tennis-double">
-            <div class="cell cell__time">
-                <span>30'</span>
-            </div>
-            <div class="cell cell__opposition">
-                <div class="row">
-                    <div class="cell cell__opposition__title">
-                        <span>I. Kremer</span>
-                        <span>A. Vrljic</span>
-                        <span class="icon-tennis"></span>
-                    </div>
-                    <div class="cell cell__score">
-                        <span>40</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="cell cell__opposition__title">
-                        <span>P. Olaru</span>
-                        <span>S. Peer</span>
-                    </div>
-                    <div class="cell cell__score updated">
-                        <span>30</span>
-                    </div>
-                </div>
-            </div>
-        </li>
-        {#Simple#}
-        <li class="row row--match event-live event-pause">
+        <li class="row row--match event-live">
             <div class="cell cell__time">
                 <span>140'</span>
             </div>
             <div class="cell cell__opposition">
                 <div class="row">
-                    <div class="cell cell__opposition__title ">
-                        <span>Bautista</span>
-                        <span class="icon-tennis"></span>
-                    </div>
-                    <div class="cell cell__score">
-                        <span>40</span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="cell cell__opposition__title ">
-                        <span>Klizan</span>
-                    </div>
-                    <div class="cell cell__score">
-                        <span>30</span>
-                    </div>
-                </div>
-            </div>
-        </li>
-        {#Simple#}
-        <li class="row row--match">
-            <div class="cell cell__time">
-                <span>20h45</span>
-            </div>
-            <div class="cell cell__opposition">
-                <div class="row">
                     <div class="cell cell__opposition__title">
-                        <span>R. Ferderer</span>
-                        <span class="icon-tennis"></span>
+                        <span>Baltimore Ravens</span>
                     </div>
-                    <div class="cell cell__score">
-                        <span>-</span>
-                    </div>
+                    <div class="cell cell__score"><span>22</span></div>
                 </div>
                 <div class="row">
                     <div class="cell cell__opposition__title ">
-                        <span>A. Clément</span>
+                        <span>Buffalo Bills</span>
                     </div>
-                    <div class="cell cell__score">
-                        <span>-</span>
-                    </div>
+                    <div class="cell cell__score"><span>24</span></div>
                 </div>
             </div>
         </li>
     </ul>
 
     {#####   RIGHT PART   #####}
-    <ul class="ls-list ls-match-listing-other-sports ls-match-listing-other-sports--right">
-        {#Point#}
-        <li class="row row-match tennis">
-            <div class="cell cell__points">
-                <div class="row">
-                    <div class="cell cell__point">6</div>
-                    <div class="cell cell__point">6
-                        <div id="tt1" class="cell__point-detail"> 6  </div>
-                    </div>
-                    <div class="cell cell__point">6</div>
-                    <div class="cell cell__point">6</div>
-                    <div class="cell cell__point">6</div>
+    <ul class="ls-match-listing-baseball ls-match-listing-baseball--right">
 
-                </div>
-                <div class="row">
-                    <div class="cell cell__point">6</div>
-                    <div class="cell cell__point">7</div>
-                    <div class="cell cell__point">4</div>
-                    <div class="cell cell__point">3</div>
-                    <div class="cell cell__point">1</div>
-                </div>
-            </div>
-        </li>
-        <li class="row row-match tennis-double">
-            <div class="cell cell__points">
-                <div class="row">
-                    <div class="cell cell__point">99
-                        <div id="tt1" class="cell__point-detail">12</div>
-                    </div>
-                    <div class="cell cell__point">6
-                        <div id="tt1" class="cell__point-detail">10</div>
-                    </div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-
-                </div>
-                <div class="row">
-                    <div class="cell cell__point">6</div>
-                    <div class="cell cell__point">7</div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-                </div>
-            </div>
+        {#Header#}
+        <li class="row row--head">
+            <div class="cell">1</div>
+            <div class="cell">2</div>
+            <div class="cell">3</div>
+            <div class="cell">4</div>
+            <div class="cell">5</div>
+            <div class="cell">6</div>
+            <div class="cell">7</div>
+            <div class="cell">8</div>
         </li>
         <li class="row row-match">
             <div class="cell cell__points">
                 <div class="row">
-                    <div class="cell cell__point">3
-                        <div id="tt1" class="cell__point-detail">12</div>
-                    </div>
-                    <div class="cell cell__point">6
-                    </div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
                 </div>
                 <div class="row">
-                    <div class="cell cell__point">6
-                        <div id="tt1" class="cell__point-detail">10</div>
-                    </div>
-                    <div class="cell cell__point">7</div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
                 </div>
             </div>
         </li>
-        <li class="row row-match">
+        <li class="row row--match">
             <div class="cell cell__points">
                 <div class="row">
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
                 </div>
                 <div class="row">
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
-                    <div class="cell cell__point"></div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
                 </div>
             </div>
         </li>

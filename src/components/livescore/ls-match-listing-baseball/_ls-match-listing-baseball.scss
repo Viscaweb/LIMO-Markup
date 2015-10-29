@@ -1,30 +1,23 @@
 
-.ls-match-listing-other-sports {
+.ls-match-listing-baseball {
 
   font-size: 12px;
   overflow: hidden;
-  background: $ls-color-white;
 
 
   /* ---- Left Side ----- */
 
   &--left {
-    width: calc(100% - 115px);
+    width: 55%;
     float: left;
-
-    .row {
-      padding: 0;
-      box-sizing: border-box;
-      border: 0;
-
-
-      &:last-child {
-        border-bottom: $ls-list-border;
-      }
-    }
+    background: $ls-color-white;
+    -webkit-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+    box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
 
     .row--match {
-        border-bottom: $ls-list-border;
+      box-sizing: border-box;
+      padding: 0;
 
       &.event-live {
 
@@ -46,7 +39,6 @@
               border-radius: 50%;
               background: $ls-color-live;
               margin-right: 4px;
-              margin-top: 5px;
               @extend .blinking;
             }
           }
@@ -70,30 +62,6 @@
         background: $ls-color-event-won-bg;
       }
 
-      &.tennis-double {
-
-        .cell__opposition {
-
-          &__title {
-            position: relative;
-            display: block;
-            padding: 5px;
-
-            span {
-            display: block;
-            line-height: 14px;
-            }
-          }
-        }
-
-        .icon-tennis {
-          color:#FFC000;
-          position: absolute;
-          right: 5px;
-          top:35%;
-        }
-      }
-
       &.event-lost {
         background: $ls-color-event-lost-bg;
       }
@@ -102,75 +70,69 @@
         background: $ls-color-event-draw-bg;
       }
 
-      &--selected {
-        background: $ls-row-selected-color;
-      }
-
-
-
-
       .cell {
-        box-sizing: border-box;
-        padding: 5px 0;
         border-right: $ls-list-border;
-        align-items: center;
+        padding: 0;
 
         &__time {
           display: flex;
           justify-content: center;
           align-items: center;
-          border-bottom: $ls-list-border;
-        }
-
-        &__opposition {
-          padding: 0;
-
-          .row {
-            border-bottom: $ls-list-border;
-          }
-
-          &__title {
-            padding:0 5px;
-            display: flex;
-            white-space: nowrap;
-            overflow-x: hidden;
-            text-overflow: ellipsis;
-
-            span {
-              display: flex;
-              flex: 1;
-            }
-
-
-            .icon-tennis {
-              color:#FFC000 ;
-              display: flex;
-              flex: 0 0 10px;
-            }
-          }
         }
 
         &__score {
-          flex: 0 0 32px;
+          flex: 0 0 30px;
           display: flex;
           justify-content: center;
-          font-weight: 600;
+          align-items: center;
+        }
+
+        &__opposition {
+          display: flex;
+          flex-flow: column;
+
+          > .row {
+            display: flex;
+          }
+
+          &__title {
+            flex:1;
+            position: relative;
+            padding: 5px 5px 5px 5px;
+          }
+
+          span {
+            display: block;
+            overflow-x: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+
+        }
+
+        .win {
+          font-weight: 500;
         }
       }
     }
 
-
-
-
-    .row--head {
+    .row--empty {
+      width: auto;
+      background: $ls-color-white;
+      border-right: 2px solid $ls-list-border-color;
+      height: 16px;
       padding: 0;
+      justify-content: flex-end;
+      -webkit-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+      -moz-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+      box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
 
       .cell {
-        color: lighten($ls-text-color, 20%);
-
-        &__team {
-          padding-left: 5px;
-        }
+        padding: 0;
+        background: #FAFAFA;
+        height: 16px;
+        flex:0 0 30px;
+        border-left:$ls-list-border ;
       }
     }
   }
@@ -181,10 +143,13 @@
 
     padding: 0;
     margin: 0;
-    width: 115px;
+    width: 45%;
     float: left;
     white-space: nowrap;
     overflow-x: auto;
+    background: #FCFCFC;
+    border-bottom: 1px solid #dadada;
+
 
     &::-webkit-scrollbar {
       display: none;
@@ -195,94 +160,45 @@
       margin: 0;
       display: flex;
 
-      &--selected {
-
-        .cell {
-          background: $ls-row-selected-color;
-        }
-      }
-
-      &:last-child {
-        border-bottom: $ls-list-border;
-      }
-
       .cell {
-        box-sizing: border-box;
-        padding: 0;
-        border-right: $ls-list-border;
-        width: 23px;
-        text-align: center;
 
-        &__points {
-
-          .row {
-            border-top: $ls-list-border;
-
-            &:first-child{
-              border-top: none;
-              background: #ffff00;
-            }
-
-
-            .cell__point {
-              border-top: $ls-list-border;
-              background: #07b0ff;
-              height: 27px;
-              position: relative;
-            }
-          }
-
-          .row ~ .row {
-            border-bottom: $ls-list-border;
-
-            .cell__point {
-              border-top: none;
-              background: greenyellow;
-              height: 27px;
-              position: relative;
-            }
-          }
-        }
-
-        &__point-detail {
-          position: absolute;
-          right: 0px;
-          bottom: -10px;
-          font-size: 6px;
-          margin: 3px;
+        &__point {
+          border-right: $ls-list-border;
+          border-bottom: $ls-list-border;
+          height: 27px;
+          min-width: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
       }
-
-      &.tennis-double {
-
-        .cell__points {
-
-          .row {
-
-            .cell__point {
-              background: lightgrey;
-              height: 39px;
-            }
-          }
-
-          .row ~ .row {
-
-            .cell__point {
-              background: orange;
-              height: 40px;
-            }
-          }
-        }
-      }
-
-
     }
 
     .row--head {
+      border: $ls-list-border;
+      border-bottom:none ;
+      border-left: none;
 
       .cell {
+        background: #FAFAFA;
+        border-right: $ls-list-border;
+        border-bottom: $ls-list-border;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 16px;
+        min-width: 24px;
         color: lighten($ls-text-color, 20%);
       }
+    }
+  }
+
+  .row--match {
+
+    .cell__time,
+    .cell__opposition > .row,
+    .cell__points {
+      border-bottom: $ls-list-border;
     }
   }
 }
