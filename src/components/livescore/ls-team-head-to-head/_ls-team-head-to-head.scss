@@ -1,169 +1,78 @@
-.head-to-head, &.team-form{
+.ls-head-to-head {
 
-  .teams{
-	margin-bottom:8px;
+  .row {
 
-	table.circles{
-	  width: 100%;
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-	  tr{
-		td{
-		  width: 33.3%;
-		  text-align: center;
+      .circle {
+        border-radius: 50%;
+        background-color: lighten($ls-text-color, 13.1%);
+        color:$ls-color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size:22px;
 
-		  &.circle-info{
-			height: 60px;
-		  }
+        &--first {
+          width:60px;
+          height:60px;
+        }
+        &--second {
+          width:40px;
+          height:40px;
+        }
+        &--third {
+          width:32px;
+          height:32px;
+        }
+        &--fourth {
+          width:20px;
+          height:20px;
+          font-size:12px;
+        }
+        &--five {
+          width:20px;
+          height:20px;
+          font-size:12px;
+        }
+        &--gray1 {
+          background-color: darken($ls-color-white, 13.1%);
+        }
+        &--gray2 {
+          background-color: darken($ls-color-white, 30.5%);
+        }
+        &--gray3 {
+          background-color: darken($ls-color-white, 32.4%);
+        }
+        &--success {
+          background-color:$ls-primary-color;
+        }
+        &--danger {
+          background-color:$ls-color-live;
+        }
+      }
+    }
+    &--infos {
 
-		  &.title{
-			padding-top: 5px;
+      .cell {
+        padding-top:0;
 
-			span{
-			  display:block;
+        &.win{
+          color:$ls-primary-color;
+        }
 
-			  &.win{
-				color:$ls-primary-color;
-			  }
+        &.draw{
+          color:lighten($ls-text-color, 32.4%);
+        }
 
-			  &.draw{
-				color:lighten($ls-text-color, 32.4%);
-			  }
-
-			  &.lost{
-				color:$ls-color-live;
-			  }
-			}
-		  }
-		}
-	  }
-	}
-
-	.team{
-
-	  .circle{
-		border-radius: 50%;
-		display:inline-table;
-		width:60px;
-		height:60px;
-		background-color: lighten($ls-text-color, 13.1%);
-		color:$ls-color-white;
-
-		span{
-		  display: table-cell;
-		  vertical-align: middle;
-		  font-size: 22px;
-		  text-align: center;
-		}
-
-		&.gray1{ background-color: darken($ls-color-white, 13.1%); }
-		&.gray2{ background-color: darken($ls-color-white, 30.5%); }
-		&.gray3{ background-color: darken($ls-color-white, 32.4%); }
-		&.success{ background-color:$ls-primary-color; }
-		&.danger{ background-color:$ls-color-live; }
-
-	  }
-
-
-	  &.second{
-
-		.circle{
-		  width:40px;
-		  height:40px;
-		  font-size:22px;
-
-		  span{
-			font-size:22px;
-		  }
-		}
-	  }
-
-	  &.third{
-
-		.circle{
-		  width:32px;
-		  height:32px;
-
-		  span{
-			font-size:22px;
-		  }
-		}
-	  }
-
-	  &.fourth{
-
-		.circle{
-		  width:24px;
-		  height:24px;
-
-		  span{
-			font-size:12px;
-		  }
-		}
-	  }
-
-	  &.fifth{
-
-		.circle{
-		  width:20px;
-		  height:20px;
-
-		  span{
-			font-size:12px;
-		  }
-		}
-	  }
-
-	}
-  }
-
-  .table{
-	border-top:1px solid darken($ls-color-white, 6%);
-	margin-bottom: 0;
-
-	tbody{
-
-	  tr{
-
-		.logo{
-		  padding-right: 0;
-		  padding-left: 0;
-
-		  img{
-			width:18px;
-			height:18px;
-		  }
-		}
-	  }
-	}
-
-  }
-}
-
-.head-to-head{
-  > .teams{
-	margin: 0;
-	padding: 15px 0;
-  }
-}
-
-
-.team-form{
-
-  > .row{
-	margin: 0;
-  }
-
-  .nav-pills{
-
-	li{
-	  margin-right:0;
-	}
-  }
-
-  .navigation{
-	text-align:center;
-	margin-top:15px;
-	margin-bottom:15px;
+        &.lost{
+          color:$ls-color-live;
+        }
+      }
+    }
   }
 }
 

@@ -1,5 +1,4 @@
 <div class="team-form">
-
     <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
         <div class="mdl-tabs__tab-bar">
             <a href="#all-panel" class="mdl-tabs__tab is-active">All</a>
@@ -10,76 +9,37 @@
     </div>
 
 
-    <div class="mdl-tab__panel is-active" id="all-panel">
-        <div class="teams">
-            <table class="circles">
-                <tr>
-                    <td class="circle-info"><div class="team first"><div class="circle success"><span>4</span></div></div></td>
-                    <td class="circle-info"><div class="team third"><div class="circle gray3"><span>1</span></div></div></td>
-                    <td class="circle-info"><div class="team fourth"><div class="circle danger"><span>0</span></div></div></td>
-                </tr>
-                <tr>
-                    <td class="title"><span class="win">WIN</span></td>
-                    <td class="title"><span class="draw">DRAW</span></td>
-                    <td class="title"><span class="lost">LOST</span></td>
-                </tr>
-            </table>
+    <div class="mdl-list ls-list ls-head-to-head">
+        <div class="row">
+            <div class="cell">
+                <div class="circle circle--first circle--success">
+                    <span>4</span>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="circle circle--third circle--gray3">
+                    <span>1</span>
+                </div>
+            </div>
+            <div class="cell">
+                <div class="circle circle--fourth circle--danger">
+                    <span>0</span>
+                </div>
+            </div>
         </div>
-        <table class="table matches table-condensed layout-fixed" style="display: none;">
-            <colgroup>
-                <col class="event-outcome">
-                <col class="date">
-                <col class="league-logo">
-                <col class="team">
-                <col class="score">
-                <col class="team">
-            </colgroup>
-            <tbody>
-
-            <tr class="event-draw">
-                <td class="event-outcome event-outcome-draw"><a href="#">D</a></td>
-                <td class="date">21h00</td>
-                <td class="league"><img src="{{ basePath }}img/sprites/cup2.png" alt="Cup"></td>
-                <td class="team team1"><a href="#">Sevilla</a></td>
-                <td class="score"><a href="#">0 - 0</a></td>
-                <td class="team team2"><a href="#">Villa</a></td>
-            </tr>
-            <tr class="event-won">
-                <td class="event-outcome event-outcome-won"><a href="#">W</a></td>
-                <td class="date">21h00</td>
-                <td class="league"><img src="{{ basePath }}img/sprites/eurocoup.png" alt="Europa League"></td>
-                <td class="team team1 win"><a href="#">Sevilla</a></td>
-                <td class="score"><a href="#">2 - 0</a></td>
-                <td class="team team2"><a href="#">Valencienne</a></td>
-            </tr>
-            <tr class="event-won">
-                <td class="event-outcome event-outcome-won"><a href="#">W</a></td>
-                <td class="date">21h00</td>
-                <td class="league"><img src="{{ basePath }}img/sprites/cup2.png" alt="Cup"></td>
-                <td class="team team1 win"><a href="#">Sevilla</a></td>
-                <td class="score"><a href="#">4 - 0</a></td>
-                <td class="team team2"><a href="#">Granada</a></td>
-            </tr>
-            <tr class="event-won">
-                <td class="event-outcome event-outcome-won"><a href="#">W</a></td>
-                <td class="date">21h00</td>
-                <td class="league"><img src="{{ basePath }}img/sprites/eurocoup.png" alt="Europa League"></td>
-                <td class="team team1 win"><a href="#">Sevilla</a></td>
-                <td class="score"><a href="#">4 - 1</a></td>
-                <td class="team team2"><a href="#">Porto</a></td>
-            </tr>
-            <tr class="event-won">
-                <td class="event-outcome event-outcome-won"><a href="#">W</a></td>
-                <td class="date">21h00</td>
-                <td class="league"><img src="{{ basePath }}img/sprites/cup2.png" alt="Cup"></td>
-                <td class="team team1 win"><a href="#">Sevilla</a></td>
-                <td class="score"><a href="#">4 - 1</a></td>
-                <td class="team team2"><a href="#">Espanya</a></td>
-            </tr>
-            </tbody>
-        </table>
+        <div class="row row--infos">
+            <div class="cell win">
+                <span>WIN</span>
+            </div>
+            <div class="cell draw">
+                <span>DRAW</span>
+            </div>
+            <div class="cell lost">
+                <span>BAYERN</span>
+            </div>
+        </div>
     </div>
-
+    </div>
         <div class="mdl-cell mdl-cell--12-col">
             <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--block mdl-js-ripple-effect">
                 + Show Game details
