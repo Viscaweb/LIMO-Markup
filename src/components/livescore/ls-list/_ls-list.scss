@@ -29,7 +29,7 @@
 	  }
 	}
 
-    &.row--advertisement{
+    &.row--visual-block {
       background: $ls-advertisement-bg-color;
       border-bottom: lighten($ls-list-border-color, 5%);
       font-size:$ls-advertisement-font-size;
