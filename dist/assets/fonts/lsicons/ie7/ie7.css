@@ -190,3 +190,6 @@
 .icon-info {
 	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe63f;');
 }
+.icon-news {
+	*zoom: expression(this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#xe900;');
+}
