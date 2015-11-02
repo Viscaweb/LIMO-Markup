@@ -1,9 +1,12 @@
-
 .ls-match-listing-baseball {
 
   font-size: 12px;
   overflow: hidden;
+  border-bottom:none ;
 
+  >li:last-child{
+    border-bottom: none !important;
+  }
 
   /* ---- Left Side ----- */
 
@@ -148,8 +151,6 @@
     white-space: nowrap;
     overflow-x: auto;
     background: #FCFCFC;
-    border-bottom: 1px solid #dadada;
-
 
     &::-webkit-scrollbar {
       display: none;
@@ -162,9 +163,12 @@
 
       .cell {
 
+        &__points {
+
+        }
+
         &__point {
           border-right: $ls-list-border;
-          border-bottom: $ls-list-border;
           height: 27px;
           min-width: 24px;
           display: flex;
@@ -193,33 +197,35 @@
     }
   }
 
+/* ---- Border ----- */
+
   .row--match {
 
     .cell__time,
     .cell__opposition > .row,
-    .cell__points {
+    .cell__points,
+    .cell__points > .row {
       border-bottom: $ls-list-border;
     }
   }
 }
 
 
-/* ---- @ media ----- *//*
+/* ---- @ media ----- */
 
+@media (max-width: 320px) {
 
-@media (max-width: 319px) {
-
-  .ls-standing-table--left {
-    width: 80%;
+  .ls-match-listing-baseball--left {
+    width: 70%;
   }
-  .ls-standing-table--right {
-    width: 20%;
+  .ls-match-listing-baseball--right {
+    width: 30%;
   }
 }
 
 @media (min-width: 600px) {
 
-  .ls-standing-table--right .row .cell {
+  .ls-match-listing-baseball .row .cell {
     flex: 1;
   }
-}*/
+}
