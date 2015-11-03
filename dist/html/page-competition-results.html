@@ -66,35 +66,32 @@
 								
 		
 		
-
 </head>
 <body>
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
 
 			  <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
              <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="LIMO"></div>
-            <span class="mdl-layout-title">Football</span>
+            <span class="mdl-layout-title">Champions League</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
 
+                  <a class="mdl-navigation__link ls-season-button" href="#">14/15</a>
         
         
         
-                  <label for="switch-1" class="mdl-switch-label-left">
-            <span class="mdl-switch__label">All</span>
-          </label>
-          <label class="mdl-switch mdl-switch-live mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-            <input type="checkbox" id="switch-1" class="mdl-switch__input" checked />
-            <span class="mdl-switch__label">Live</span>
-          </label>
               </nav>
     </div>
 
     
     
-    
+          <!-- Tabs -->
+<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+  <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Results</a>
+  <a href="#scroll-tab-2" class="mdl-layout__tab">Standings</a>
+</div>    
   </header>
 	    <div class="mdl-layout__drawer">
   <span class="mdl-layout-title">
@@ -143,28 +140,38 @@
     <li><a class="mdl-navigation__link" href=""><i class="icon material-icons">verified_user</i>Conditions and Privacy</a></li>
     <li><a class="mdl-navigation__link" href=""><i class="icon material-icons">email</i>Contact us</a></li>
   </ul>
-</div>	
-			<main class="mdl-layout__content">
-  <div class="page-content">
+</div>	    	
+    	<main class="mdl-layout__content">
+		    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+		      <div class="page-content"><!-- Your content goes here --></div>
+		    </section>
+		    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+		      <div class="page-content"><!-- Your content goes here --></div>
+		    </section>
+		    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+		      <div class="page-content"><!-- Your content goes here --></div>
+		    </section>
 
-								<div class="mdl-button-group mdl-button-group--block">
-    <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+							    <div class="mdl-button-group mdl-button-group--block">
+    <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
         <span class="mdl-button__icon icon-caret-left"></span>
     </a>
-    <div class="mdl-button mdl-calendar mdl-button--raised mdl-button--large mdl-button--wide">
-        <input type="text" name="mdl-calendar1" value="01/08/2015" readonly="true">
-    </div>
-    <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+    <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--wide">
+        <span class="mdl-button__value">Matchday 37</span><span class="mdl-button__icon mdl-button__icon-right icon-caret-down"></span>
+    </a>
+    <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
         <span class="mdl-button__icon icon-caret-right"></span>
     </a>
 </div>
 
 <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
     <li class="row row--divider ls-divider">
-	<div class="cell cell__divider-title cell__flag ls-divider__title"><img class="ls-divider__flag" src="../assets/img/flag-fr.png" alt="France"></div>
-	<div class="cell cell__league-name">Ligue 1</div>
-	<div class="cell cell__league-stage ls-divider__description">- Matchday 26</div>
-</li>    <li class="row row--match">
+	<div class="cell cell__divider-title cell__icon ls-divider__title">
+		<span class="ls-divider__icon icon-calendar"></span>Saturday May 23rd
+	</div>
+</li>
+
+    <li class="row row--match">
         <a href="#">
             <div class="cell cell__time"><span class="hour">18:00</span></div>
             <div class="cell cell__team cell__team--team1 win"><span>MO Béjaia</span></div>
@@ -201,14 +208,12 @@
 
 <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
     <li class="row row--divider ls-divider">
-	<div class="cell cell__flag ls-divider__title"><img class="ls-divider__flag" src="../assets/img/flag-dk.png" alt="Denmark"></div>
-	<div class="cell cell__league-name">Denmark Danmarksserien</div>
-	<div class="cell cell__league-stage ls-divider__description">- Groupe 2 phase 1</div>
-	<div class="cell cell__spacer ls-divider__spacer"></div>
-	<div class="cell cell__standing-icon ls-divider__right-nav">
-		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
+	<div class="cell cell__divider-title cell__icon ls-divider__title">
+		<span class="ls-divider__icon icon-calendar"></span>Saturday May 23rd
 	</div>
-</li>    <li class="row row--match">
+</li>
+
+    <li class="row row--match">
         <a href="#">
                 <div class="cell cell__time"><span class="hour">18:00</span></div>
                 <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span><span class="red-card">1</span></div>
@@ -311,169 +316,17 @@
     </li>
 </ul>
 
-<div class="ls-divider">
-	<div class="ls-divider__title"><img class="ls-divider__flag" src="../assets/img/flag-dk.png" alt="Denmark">Denmark Danmarksserien</div>
-	<div class="ls-divider__description">- Groupe 2 phase 1</div>
-	<div class="ls-divider__spacer"></div>
-	<nav class="ls-divider__right-nav">
-		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
-	</nav>
-</div>
-<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
-    <li class="row row--match">
-        <a href="#">
-                <div class="cell cell__time"><span class="hour">18:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
 
-        </a>
-    </li>
-    <li class="row row--match event-live event-paused">
-        <a href="#">
-                <div class="cell cell__time"><span class="status">HT</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-        </a>
-    </li>
-    <li class="row row--match event-won">
-        <a href="#">
-                <div class="cell cell__time"><span class="hour">18:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-
-        </a>
-    </li>
-    <li class="row row--match event-draw">
-        <a href="#">
-                <div class="cell cell__time"><span class="status">18:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-        </a>
-    </li>
-    <li class="row row--match event-lost">
-        <a href="#">
-                <div class="cell cell__time"><span class="status">18:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-        </a>
-    </li>
-    <li class="row row--match">
-        <a href="#">
-                <div class="cell cell__time"><span class="hour">18:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-
-        </a>
-    </li>
-    <li class="row row--match">
-        <a href="#">
-                <div class="cell cell__time"><span class="status">19:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-        </a>
-    </li>
-    <li class="row row--match event-live">
-        <a href="#">
-                <div class="cell cell__time"><span class="status">19:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-        </a>
-    </li>
-</ul>
-				
-  </div>
-</main>
-
+			    	</main>
 		</div>
-		<div class="mdl-dialog" id="dialog1">
-	<div class="mdl-dialog__content">
-		<div class="mdl-dialog__header">
-			<span class="mdl-dialog__header-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
-		</div>
-		<div class="mdl-dialog__body">
-			<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-		</div>
-		<div class="mdl-dialog__footer">
-			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
-				CANCEL
-			</button>
-			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
-				AGREED
-			</button>
-		</div>
-	</div>
-</div>
-<script type="text/javascript">
-	$(document).ready(function(){
-		var dp = $('.mdl-calendar > input[type="text"]');
-		dp.datepicker();
+		
+			<script type="text/javascript">
+			$(document).ready(function(){
 
+				//Init core JS
+				App.init();
 
-		/*mdl-dialog*/
-		//This code should be on a js component
-		$('[data-toggle="mdl-dialog"]').click(function( e ){
-			var target = $(this).data("target");
-			$(target).addClass("mdl-dialog--show");
-
-			e.stopPropagation();
-		});
-
-		//Dialog close button
-		$(".mdl-dialog-close").click(function( e ){
-			var dialog = $(this).parents(".mdl-dialog");
-			dialog.removeClass("mdl-dialog--show");
-		});
-
-		//Hide dialog when click outside
-		$(document).on("click",function( e ){
-			if ( !$(e.target).closest(".mdl-dialog__content").length ) {
-				$(".mdl-dialog").removeClass('mdl-dialog--show');
-			}
-		});
-
-		/*mdl-collapsible*/
-		$(".mdl-collapsible__heading").click(function( e ){
-			var collapsible = $(this).parent();
-			var body = $(".mdl-collapsible__body", collapsible);
-
-			body.slideToggle({
-				complete: function(){
-					collapsible.toggleClass("mdl-collapsible-collapsed");
-				}
 			});
-		});
-	});
-</script></body>
+		</script>
+	</body>
 </html>
