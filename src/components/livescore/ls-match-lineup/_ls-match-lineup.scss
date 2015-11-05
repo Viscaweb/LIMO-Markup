@@ -2,10 +2,18 @@
   position: relative;
   max-width: 600px;
   min-width: 300px;
+  margin: auto;
+  overflow: hidden;
 
   .field {
     width: 100%;
     height: auto;
+  }
+
+  a {
+    width:100%;
+    text-decoration: none;
+    color: inherit ;
   }
 
   .team1 {
@@ -19,7 +27,7 @@
     .legend {
       position: absolute;
       left: 0;
-      top:10px;
+      top:0px;
 
       .composition {
         position: relative;
@@ -91,7 +99,7 @@
     .legend {
       position: absolute;
       right: 0;
-      bottom:10px;
+      bottom:0px;
 
       .composition {
         position: relative;
@@ -203,9 +211,9 @@
           border-radius: 40px 40px 40px 40px;
           -moz-border-radius: 40px 40px 40px 40px;
           -webkit-border-radius: 40px 40px 40px 40px;
-          -webkit-box-shadow: 2px 4px 0px 0px rgba(36,74,0,0.61);
-          -moz-box-shadow: 2px 4px 0px 0px rgba(36,74,0,0.61);
-          box-shadow: 2px 4px 0px 0px rgba(36,74,0,0.61);
+          -webkit-box-shadow: 1px 2px 0px 0px rgba(36,74,0,0.61);
+          -moz-box-shadow: 1px 2px 0px 0px rgba(36,74,0,0.61);
+          box-shadow: 1px 2px 0px 0px rgba(36,74,0,0.61);
         }
 
         .match-incidents {
@@ -267,7 +275,10 @@
         align-items: center;
         justify-content: flex-end;
 
-        span {
+        a {
+          text-decoration: none;
+          color: inherit ;
+          font-weight: inherit;
           white-space: nowrap;
           overflow-x: hidden;
           text-overflow: ellipsis;
