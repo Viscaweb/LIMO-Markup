@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	{% include 'structure/head.twig' %}
+	{% set ls_header_fixed_tabs = 'competition' %}
+	{% set ls_header_season_button = true %}
+
+</head>
+<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+
+			{% include 'structure/top-header.twig' %}
+    	
+    	<main class="mdl-layout__content">
+		    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+		      <div class="page-content"><!-- Your content goes here --></div>
+		    </section>
+		    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+		      <div class="page-content"><!-- Your content goes here --></div>
+		    </section>
+		    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+		      <div class="page-content"><!-- Your content goes here --></div>
+		    </section>
+
+			{% block main_content %}
+				{{main_content}}
+			{% endblock %}
+    	</main>
+		</div>
+		
+	{% block footer_scripts %}
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				//Init core JS
+				App.init();
+
+			});
+		</script>
+	{% endblock %}
+</body>
+</html>

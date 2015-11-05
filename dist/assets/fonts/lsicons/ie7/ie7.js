@@ -77,6 +77,7 @@
 		'icon-location-pin': '&#xe63d;',
 		'icon-help': '&#xe63e;',
 		'icon-info': '&#xe63f;',
+		'icon-news': '&#xe900;',
 		'0': 0
 		},
 		els = document.getElementsByTagName('*'),

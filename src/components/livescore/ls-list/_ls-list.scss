@@ -29,7 +29,7 @@
 	  }
 	}
 
-    &.row--advertisement{
+    &.row--visual-block {
       background: $ls-advertisement-bg-color;
       border-bottom: lighten($ls-list-border-color, 5%);
       font-size:$ls-advertisement-font-size;
@@ -111,20 +111,6 @@
 		&.win {
 		  font-weight: 600;
 		}
-
-		.red-card {
-		  background: rgb(255, 0, 0);
-		  width: 8px;
-		  height: 11px;
-		  display: block;
-		  position: absolute;
-		  padding: 0;
-		  color: $ls-color-white;
-		  font-size: 10px;
-		  line-height: 12px;
-		  text-align: center;
-		}
-
 	  }
 
 	  &__team--team1 {
