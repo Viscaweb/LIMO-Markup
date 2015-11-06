@@ -2,6 +2,7 @@
   font-size: 12px;
   overflow: hidden;
   background: $ls-color-white;
+  border-top: 1px solid darken($ls-list-border-color, 11.2%);
 
   .row--match {
     box-sizing: border-box;
@@ -73,7 +74,6 @@
     }
 
     .cell {
-      border-right: $ls-list-border;
       padding: 0;
 
       &__time {
@@ -91,6 +91,7 @@
 
       &__opposition {
         display: flex;
+        flex: 1;
         flex-flow: column;
 
         > .row {
@@ -100,7 +101,7 @@
         &__title {
           flex:1;
           position: relative;
-          padding: 5px 15px 5px 5px;
+          padding: 5px 20px 5px 5px;
         }
 
         span {
@@ -112,15 +113,14 @@
 
         .icon-tennis {
           color: #FFC000;
-          width: 15px;
+          width: 25px;
           height: 27px;
           position: absolute;
-          right: 5px;
+          right: 0;
           top: 0;
-          background: #fff;
           display: flex;
           align-items: center;
-          justify-content: flex-start;
+          justify-content: center;
         }
 
       }
@@ -158,12 +158,53 @@
   }
 
   /*Border */
-  .row--match {
 
-    .cell__time,
-    .cell__opposition > .row,
+
+  .row--match {
+    border-top: none;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .cell {
+      border-right: $ls-list-border;
+    }
+
+    .cell__time {
+       border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+
+     }
+
+    .cell__score {
+      border-right: 1px solid darken($ls-list-border-color, 11.2%);
+    }
+
+    .cell__opposition > .row{
+      border-bottom: $ls-list-border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    .cell__opposition {
+      border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+      border-right: none;
+    }
+    .cell__opposition__title {
+      border-right: 1px solid darken($ls-list-border-color, 11.2%);
+    }
+
     .cell__points > .row {
       border-bottom: $ls-list-border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    .cell__points {
+      border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+      border-right: none;
     }
   }
 }
