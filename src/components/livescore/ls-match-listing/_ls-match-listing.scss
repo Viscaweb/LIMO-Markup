@@ -8,17 +8,36 @@
 
       &__team {
 
-        .red-card {
-          background: rgb(255, 0, 0);
-          width: 8px;
-          height: 11px;
+        &__cards {
           display: block;
           position: absolute;
           padding: 0;
-          color: $ls-color-white;
-          font-size: 10px;
-          line-height: 12px;
-          text-align: center;
+          text-align: right;
+          right: 5px;
+
+            .red-card {
+              background: rgb(255, 0, 0);
+              width: 8px;
+              height: 11px;
+              display: block;
+              float: left;
+              margin-left: 4px;
+              color: $ls-color-white;
+            }
+          }
+
+        &--team2 {
+
+          .cell__team__cards {
+            text-align: left;
+            left: 5px;
+            right: auto;
+
+            .red-card {
+              margin-left: 0;
+              margin-right: 4px;
+            }
+          }
         }
       }
     }
