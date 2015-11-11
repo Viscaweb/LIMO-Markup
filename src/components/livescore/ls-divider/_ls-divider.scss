@@ -71,6 +71,11 @@
 		color: darken($ls-color-white, 48.8%);
 		font-size: $ls-divider-right-nav-icon-size;
 	}
+  
+  &.ls-divider__icon--live {
+	color: $ls-color-live;
+  }
+  
 }
 
 //Flags images
