@@ -43,7 +43,11 @@
 
           > .favorite-star {
             padding: 0 6px;
-            font-size: 12px;
+            font-size: 16px;
+
+            a {
+              color: #E2E2E2;
+            }
           }
         }
 

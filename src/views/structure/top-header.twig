@@ -37,8 +37,12 @@
       {% include 'structure/scrollable-tabs.twig' %}
     {% endif %}
 
-    {% if ls_header_fixed_tabs %}
+    {% if ls_header_fixed_tabs == 'true' %}
       {% include 'structure/fixed-tabs.twig' %}
+    {% endif %}
+
+    {% if ls_header_fixed_tabs == 'competition' %}
+      {% include 'structure/fixed-tabs-competition.twig' %}
     {% endif %}
 
   </header>

@@ -92,6 +92,35 @@
 			flex-grow: 1;
 		}
 	}
+
+    &.mdl-button-group--pagination {
+	  	justify-content: center;
+	}
+}
+
+//Button group as ul
+ul.mdl-button-group {
+
+  list-style-type: none;
+  padding: 0;
+
+  li {
+
+	.mdl-button {
+
+	  &:last-child {
+		border-right-width:1px;
+	  }
+	}
+
+	&:last-child {
+
+	  .mdl-button {
+		border-right-width: 0;
+	  }
+	}
+  }
+
 }
 
 //Button select
