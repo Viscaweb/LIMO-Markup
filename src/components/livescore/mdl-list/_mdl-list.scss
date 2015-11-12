@@ -21,6 +21,13 @@
 	&:active {
 	  background-color: $ls-list-pressed-color;
 	}
+
+    h1, h2, h3, h4 {
+      font-size: inherit;
+      padding: 0;
+      margin: 0;
+      line-height: inherit;
+    }
   }
 
   &.mdl-list—condensed {
