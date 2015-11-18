@@ -170,6 +170,13 @@
 		background-color: rgba(0,0,0,0.02);
 	  }
 	}
+
+	.icon-star {
+	  
+	  &.active {
+		color : $ls-star-active;
+	  }
+	}
   }
 
 }
