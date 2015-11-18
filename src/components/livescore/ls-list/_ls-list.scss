@@ -82,10 +82,22 @@
 		  padding-left: 13px;
 		}
 
+		&__league-name,
+		&__league-stage {
+		  display: block;
+		  overflow: hidden;
+		  text-overflow: ellipsis;
+		}
+
 		
 		&__league-name {
 		  font-weight: 400;
 		  padding-right: 4px;
+		  flex-shrink: 50;
+		}
+
+		&__league-stage {
+		  flex-shrink: 50;
 		}
 
 		&__divider-title {
