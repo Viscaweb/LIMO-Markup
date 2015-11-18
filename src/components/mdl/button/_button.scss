@@ -140,7 +140,7 @@ ul.mdl-button-group {
 
 	select{
 		@include typo-preferred-font(true);
-		font-size: 14px;
+		font-size: $ls-button-font-size;
 		font-weight: 300;
 		position: relative;
 		z-index: 2;

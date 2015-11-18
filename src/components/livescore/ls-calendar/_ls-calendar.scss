@@ -5,7 +5,7 @@
 
 	input[type="text"]{
 		@include typo-preferred-font(true);
-		font-size: 14px;
+		font-size: $ls-button-font-size;
 		font-weight: 300;
 		height: $button-height;
 		padding: 0;
@@ -20,7 +20,6 @@
 		color: $button-secondary-color;
 		position: relative;
 		z-index: 2;
-		font-size: 14px;
 	}
 
 	//Calendar icon inside button
