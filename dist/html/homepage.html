@@ -164,6 +164,7 @@
 	<div class="cell cell__divider-title cell__flag ls-divider__title"><img class="ls-divider__flag" src="../assets/img/flag-fr.png" alt="France"></div>
 	<div class="cell cell__league-name">Ligue 1</div>
 	<div class="cell cell__league-stage ls-divider__description">- Matchday 26</div>
+	<div class="cell cell__spacer ls-divider__spacer"></div>
 </li>    <li class="row row--match">
         <a href="#">
             <div class="cell cell__time"><span class="hour">18:00</span></div>
@@ -207,11 +208,17 @@
 	<div class="cell cell__spacer ls-divider__spacer"></div>
 	<div class="cell cell__standing-icon ls-divider__right-nav">
 		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
+		<a href="#"><span class="ls-divider__icon icon-star active"></span></a>
 	</div>
 </li>    <li class="row row--match">
         <a href="#">
                 <div class="cell cell__time"><span class="hour">18:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span><span class="red-card">1</span></div>
+                <div class="cell cell__team cell__team--team1">
+                    <span>MO Béjaia</span>
+                    <div class="cell__team__cards">
+                        <span class="red-card"></span>
+                    </div>
+                </div>
                 <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
                 <div class="cell cell__team cell__team--team2"><span>JS Kabylie long name</span></div>
                 <div class="cell cell__caret">
@@ -225,7 +232,10 @@
                 <div class="cell cell__time"><span class="status">20'</span></div>
                 <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
                 <div class="cell cell__score updated"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span><span class="red-card">2</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span><div class="cell__team__cards">
+                        <span class="red-card"></span>
+                        <span class="red-card"></span>
+                    </div></div>
                 <div class="cell cell__caret">
                     <span class="mdl-button__icon icon-caret-right"></span>
                 </div>
@@ -317,6 +327,7 @@
 	<div class="ls-divider__spacer"></div>
 	<nav class="ls-divider__right-nav">
 		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
+		<a href="#"><span class="ls-divider__icon icon-star active"></span></a>
 	</nav>
 </div>
 <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
