@@ -18,9 +18,6 @@
 	  border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
 	}
 
-	&:active {
-	  background-color: $ls-list-pressed-color;
-	}
 
     h1, h2, h3, h4 {
       font-size: inherit;
@@ -43,6 +40,10 @@
 
     > li {
       padding: 0;
+
+      &:active {
+        background-color: $ls-list-pressed-color;
+      }
 
       > a {
         display: block;

@@ -1,11 +1,5 @@
 .ls-list {
 
-
-  li:active{
-    background: transparent !important;
-  }
-
-
   .row {
 	width: 100%;
 	display: flex;
@@ -23,9 +17,8 @@
     }
 
     a{
-      
       &:active {
-        background: #f7f7f7;
+        background-color: $ls-list-pressed-color;
       }
     }
 

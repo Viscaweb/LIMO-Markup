@@ -275,6 +275,10 @@
         align-items: center;
         justify-content: flex-end;
 
+        &:active {
+          background-color: $ls-list-pressed-color;
+        }
+
         a {
           text-decoration: none;
           color: inherit ;

@@ -7,7 +7,7 @@
     width: auto;
     background: $ls-color-white;
     border-bottom: $ls-list-border;
-    padding: 0 10px 0 14px;
+    padding: 0 10px 0 14px !important;
 
     > a {
       color: $ls-text-color;
