@@ -56,6 +56,11 @@
   overflow: auto;
   -webkit-overflow-scrolling: touch;
 
+  &.mdl-dialog__body--full {
+	margin-left : -(nth($ls-dialog-padding, 1));
+	margin-right : -(nth($ls-dialog-padding, 1));
+  }
+
 	p{
 		font-size: $ls-dialog-body-font-size;
 		font-weight: $ls-dialog-body-font-weight;
