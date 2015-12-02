@@ -1,0 +1,67 @@
+//General
+
+.mdl-layout__content {
+  width: 100%;
+}
+
+/*
+.ls-list {
+  width: 100%;
+  display: table;
+}
+
+*/
+/*.row {
+  display: block;
+  width:100%;
+
+  .cell {
+    display: table-cell !important;
+  }
+}*//*
+
+
+.ls-list-incidents {
+
+  .row {
+    display: table-row;
+
+    &--separator {
+      width: 100%;
+    }
+  }
+  .cell {
+    text-align:center;
+
+    &__team {}
+
+    &__team--team1 {
+    float: right;
+    }
+    &__team--team2 {
+      float: left;
+    }
+    &__player {
+      display: inline-block !important;
+      padding: 0 15px;
+      background: lightblue;
+
+
+      &--substitution {
+        display: block !important;
+      }
+    }
+
+    &__incident-icon {
+      display: inline-block !important;
+      padding: 0 15px;
+      background: lightpink;
+    }
+
+    &__period,
+    &__incident-minute{
+      width: 48px;
+      padding-bottom: 15px;
+    }
+  }
+}*/
