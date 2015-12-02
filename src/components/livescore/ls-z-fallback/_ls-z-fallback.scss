@@ -1,67 +1,76 @@
-//General
+// GENERAL ///////////////////////////
 
 .mdl-layout__content {
   width: 100%;
 }
 
-/*
+
 .ls-list {
   width: 100%;
-  display: table;
-}
 
-*/
-/*.row {
-  display: block;
-  width:100%;
+  .row {
+    display: block !important;
+    box-sizing: border-box;
+    width: 100%;
+
+  }
 
   .cell {
-    display: table-cell !important;
+    display: inline-block !important;
+    box-sizing: border-box;
+    vertical-align: middle !important;
+    height: 100%;
   }
-}*//*
+}
 
+// MATCH INCIDENTS ///////////////////////////
 
 .ls-list-incidents {
 
   .row {
-    display: table-row;
+    height: 35px;
+  }
 
-    &--separator {
-      width: 100%;
+  .row--head {
+    .cell__team--team1 span{
+     float: left;
+      padding-top: 8px;
+    }
+    .cell__team--team2 span{
+      float: right;
+      padding-top: 8px;
     }
   }
-  .cell {
-    text-align:center;
 
-    &__team {}
+  .row--separator {
+    text-align: center;
+  }
+
+  .cell {
 
     &__team--team1 {
-    float: right;
+      width: 42%;
+
+    }
+    &__incident-icon {
+      text-align: center;
+      width: 20px;
+    }
+    &__incident-minute,
+    &__period{
+      text-align: center;
+      width: 16%;
+      padding: 12px 0 !important;
     }
     &__team--team2 {
-      float: left;
+      width: 42%;
     }
-    &__player {
-      display: inline-block !important;
-      padding: 0 15px;
-      background: lightblue;
+    &__player--substitution {
+      margin-top: -15px ;
 
-
-      &--substitution {
-        display: block !important;
+      span {
+        display: block;
       }
     }
-
-    &__incident-icon {
-      display: inline-block !important;
-      padding: 0 15px;
-      background: lightpink;
-    }
-
-    &__period,
-    &__incident-minute{
-      width: 48px;
-      padding-bottom: 15px;
-    }
   }
-}*/
+}
