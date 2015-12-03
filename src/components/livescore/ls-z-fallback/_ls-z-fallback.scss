@@ -40,6 +40,9 @@
       float: right;
       padding-top: 8px;
     }
+    .cell__period{
+     background: none;
+    }
   }
 
   .row--separator {
@@ -71,6 +74,38 @@
       span {
         display: block;
       }
+    }
+  }
+}
+
+// MATCH COMMENT ///////////////////////////
+
+.ls-list-comments {
+
+  .row {
+    min-height: 40px;
+  }
+  .row--visual-block .cell {
+    width: 100%;
+  }
+  .row--visual-block span,
+  .row--visual-block img{
+    display: block;
+  }
+  .cell {
+    text-align: center;
+
+    &__comment-minute {
+      width: 10%;
+    }
+    &__comment-icon {
+      width: 10%;
+      padding: 10px 0 !important;
+    }
+    &__comment-comment {
+      width: 80%;
+      text-align: left;
+      padding-right: 20px;
     }
   }
 }
