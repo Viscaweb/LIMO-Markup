@@ -1,27 +1,28 @@
 .ls-redirect {
   width: 100%;
-  padding: 70px;
+  padding: 30px;
+  padding-top:45px;
   box-sizing: border-box;
   text-align: center;
 
   .redirect-icon {
 
     .material-icons {
-      font-size: 84px;
+      font-size: 50px;
     }
 
     .material-icons.arrow {
       font-size: 37px;
       color: lighten($ls-text-color , 50%);
       vertical-align: top;
-      padding: 26px 15px 0 15px;
+      padding: 7px 8px 0 8px;
     }
   }
 
   p {
     font-weight: 300;
     font-size: 18px;
-    padding: 30px 0 35px 0;
+    padding: 20px 0 25px 0;
     color: lighten($ls-text-color , 30%);
   }
 }
