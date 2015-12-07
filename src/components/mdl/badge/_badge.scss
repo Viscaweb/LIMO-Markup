@@ -18,10 +18,10 @@
     }
   }
 
-  &.normal {
+  &.mdl-badge--normal {
 
     &:after{
-     /* color: $ls-color-black;*/
+     color: lighten($ls-color-black, 10%);
       background: #ededed;
     }
   }
