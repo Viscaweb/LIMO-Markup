@@ -1,6 +1,6 @@
 // GENERAL ///////////////////////////
 
-.mdl-layout__content {
+/*.mdl-layout__content {
   width: 100%;
 }
 
@@ -23,22 +23,40 @@
   }
 }
 
+.mdl-layout__content {
+  width: 100%;
+}
+
+.ls-list {
+  width: 100%;
+
+  .row {
+   display: table-row !important;
+   width: 100%;
+
+  }
+
+  .cell {
+    display: table-cell !important;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+  }
+}
+
+
+
 // MATCH INCIDENTS ///////////////////////////
 
 .ls-list-incidents {
 
-  .row {
-    height: 35px;
-  }
 
   .row--head {
     .cell__team--team1 span{
      float: left;
-      padding-top: 8px;
     }
     .cell__team--team2 span{
       float: right;
-      padding-top: 8px;
     }
     .cell__period{
      background: none;
@@ -51,26 +69,50 @@
 
   .cell {
 
+
     &__team--team1 {
       width: 42%;
+      float: right;
 
-    }
-    &__incident-icon {
-      text-align: center;
-      width: 20px;
-    }
-    &__incident-minute,
-    &__period{
-      text-align: center;
-      width: 16%;
-      padding: 12px 0 !important;
+      .cell {
+        &__incident-icon {
+          width: 20%;
+        }
+        &__player {
+          width: 80%;
+          text-align: right;
+        }
+      }
     }
     &__team--team2 {
       width: 42%;
+
+      .cell {
+        &__incident-icon {
+          width: 20%;
+        }
+        &__player {
+          max-width: 80%;
+          text-align: left;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+
+          span {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+      }
+    }
+    &__incident-minute
+    &__period{
+      text-align: center;
+      width: 16%;
     }
     &__player--substitution {
       margin-top: -15px ;
-
       span {
         display: block;
       }
@@ -108,4 +150,81 @@
       padding-right: 20px;
     }
   }
+}*/
+
+ul		{
+  display: table !important;
+  margin:0 !important;
+  padding:0 !important;
+  width: 100% !important;
+}
+
+li		{
+  display: table-row !important;
+  width: 100% !important;
+  margin:0 !important;
+  padding:0 !important;
+}
+
+.cell 	{
+  display: table-cell !important;
+  padding: 0 !important;
+  margin:0 !important;
+  text-align: center !important;
+  vertical-align: center !important;
+}
+
+.cell__team 	{
+  display: table-cell;
+  background-color: violet;
+  width: 42% !important;
+}
+.cell__team--team1 .cell__player {
+  float:left;
+}
+.cell__team--team1 .cell__player--substitution {
+  float:left;
+  span {
+    display: block;
+  }
+}
+.cell__team--team1 .cell__incident-icon {
+  float:right;
+}
+.cell__team--team2 .cell__player {
+  float:left;
+}
+.cell__team--team2 .cell__incident-icon {
+  float:left;
+}
+.cell__team--team2 .cell__player--substitution {
+  float:left;
+  span {
+    display: block;
+  }
+}
+
+.cell__incident-minute 	{
+  display: table-cell;
+  background-color: yellow;
+  width: 16% !important;
+}
+
+.cell__player{
+  display: table-cell;
+  background-color: green;
+  width: 80% !important;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.cell__player span{
+  width:100%;
+}
+
+.cell__incident-icon {
+  display: table-cell;
+  background-color: blue;
+  width: 20% !important;
 }
