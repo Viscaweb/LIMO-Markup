@@ -1,27 +1,9 @@
 // GENERAL ///////////////////////////
 
-/*.mdl-layout__content {
+.mdl-layout__content {
   width: 100%;
 }
 
-
-.ls-list {
-  width: 100%;
-
-  .row {
-    display: block !important;
-    box-sizing: border-box;
-    width: 100%;
-
-  }
-
-  .cell {
-    display: inline-block !important;
-    box-sizing: border-box;
-    vertical-align: middle !important;
-    height: 100%;
-  }
-}
 
 .mdl-layout__content {
   width: 100%;
@@ -31,9 +13,8 @@
   width: 100%;
 
   .row {
-   display: table-row !important;
-   width: 100%;
-
+    width: 100%;
+    padding: 0 !important;
   }
 
   .cell {
@@ -41,190 +22,45 @@
     vertical-align: middle;
     text-align: center;
     height: 100%;
+    border: 1px solid red;
   }
 }
 
+// CONUTRIES LIST ///////////////////////////
 
-
-// MATCH INCIDENTS ///////////////////////////
-
-.ls-list-incidents {
-
-
-  .row--head {
-    .cell__team--team1 span{
-     float: left;
-    }
-    .cell__team--team2 span{
-      float: right;
-    }
-    .cell__period{
-     background: none;
-    }
-  }
-
-  .row--separator {
-    text-align: center;
-  }
+.ls-list-countries {
 
   .cell {
 
+    border: 1px solid blue !important;
 
-    &__team--team1 {
-      width: 42%;
-      float: right;
+    &__flag {
+      width: 34px !important;
+      padding: 10px !important;
 
-      .cell {
-        &__incident-icon {
-          width: 20%;
-        }
-        &__player {
-          width: 80%;
-          text-align: right;
-        }
-      }
     }
-    &__team--team2 {
-      width: 42%;
-
-      .cell {
-        &__incident-icon {
-          width: 20%;
-        }
-        &__player {
-          max-width: 80%;
-          text-align: left;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          white-space: nowrap;
-
-          span {
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
-          }
-        }
-      }
-    }
-    &__incident-minute
-    &__period{
-      text-align: center;
-      width: 16%;
-    }
-    &__player--substitution {
-      margin-top: -15px ;
-      span {
-        display: block;
-      }
-    }
-  }
-}
-
-// MATCH COMMENT ///////////////////////////
-
-.ls-list-comments {
-
-  .row {
-    min-height: 40px;
-  }
-  .row--visual-block .cell {
-    width: 100%;
-  }
-  .row--visual-block span,
-  .row--visual-block img{
-    display: block;
-  }
-  .cell {
-    text-align: center;
-
-    &__comment-minute {
-      width: 10%;
-    }
-    &__comment-icon {
-      width: 10%;
-      padding: 10px 0 !important;
-    }
-    &__comment-comment {
-      width: 80%;
+    &__country {
+      width: 100% !important;
       text-align: left;
-      padding-right: 20px;
+      padding-left: 10px !important;
+
+    }
+    &__badge {
+      min-width: 70px !important;
+      background: lightyellow;
+      padding-bottom: 15px !important;
+
+      span {
+        display: block !important;
+        float: right;
+        min-width: 0 !important;
+        width: 35px !important;
+      }
+
+      .live {
+        width: 50px !important;
+      }
     }
   }
-}*/
-
-ul		{
-  display: table !important;
-  margin:0 !important;
-  padding:0 !important;
-  width: 100% !important;
 }
 
-li		{
-  display: table-row !important;
-  width: 100% !important;
-  margin:0 !important;
-  padding:0 !important;
-}
-
-.cell 	{
-  display: table-cell !important;
-  padding: 0 !important;
-  margin:0 !important;
-  text-align: center !important;
-  vertical-align: center !important;
-}
-
-.cell__team 	{
-  display: table-cell;
-  background-color: violet;
-  width: 42% !important;
-}
-.cell__team--team1 .cell__player {
-  float:left;
-}
-.cell__team--team1 .cell__player--substitution {
-  float:left;
-  span {
-    display: block;
-  }
-}
-.cell__team--team1 .cell__incident-icon {
-  float:right;
-}
-.cell__team--team2 .cell__player {
-  float:left;
-}
-.cell__team--team2 .cell__incident-icon {
-  float:left;
-}
-.cell__team--team2 .cell__player--substitution {
-  float:left;
-  span {
-    display: block;
-  }
-}
-
-.cell__incident-minute 	{
-  display: table-cell;
-  background-color: yellow;
-  width: 16% !important;
-}
-
-.cell__player{
-  display: table-cell;
-  background-color: green;
-  width: 80% !important;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.cell__player span{
-  width:100%;
-}
-
-.cell__incident-icon {
-  display: table-cell;
-  background-color: blue;
-  width: 20% !important;
-}
