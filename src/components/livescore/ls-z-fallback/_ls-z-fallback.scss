@@ -11,9 +11,12 @@
 
 .ls-list {
   width: 100%;
+  display: table;
+  table-layout: fixed;
 
   .row {
     width: 100%;
+    display: table-row;
     padding: 0 !important;
   }
 
@@ -22,7 +25,6 @@
     vertical-align: middle;
     text-align: center;
     height: 100%;
-    border: 1px solid red;
   }
 }
 
@@ -32,8 +34,6 @@
 
   .cell {
 
-    border: 1px solid blue !important;
-
     &__flag {
       width: 34px !important;
       padding: 10px !important;
@@ -42,23 +42,28 @@
     &__country {
       width: 100% !important;
       text-align: left;
-      padding-left: 10px !important;
+      padding-left: 5px !important;
 
     }
     &__badge {
-      min-width: 70px !important;
-      background: lightyellow;
+      width: 50%;
       padding-bottom: 15px !important;
 
-      span {
+      > span {
         display: block !important;
-        float: right;
         min-width: 0 !important;
-        width: 35px !important;
+        width: 45px;
+        float: left;
+
+        &:after {
+         left:15px;
+        }
       }
 
-      .live {
-        width: 50px !important;
+      > span + span{
+        &:after {
+          left:25px;
+        }
       }
     }
   }
