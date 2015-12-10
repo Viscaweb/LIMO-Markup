@@ -4,7 +4,6 @@
   width: 100%;
 }
 
-
 .mdl-layout__content {
   width: 100%;
 }
@@ -28,7 +27,16 @@
   }
 }
 
-// CONUTRIES LIST ///////////////////////////
+.ls-divider {
+  .row {
+    display: flex;
+  }
+  .cell {
+    display: flex;
+  }
+}
+
+// COUNTRIES LIST ///////////////////////////
 
 .ls-list-countries {
 
@@ -69,3 +77,26 @@
   }
 }
 
+// MATCH LISTING ///////////////////////////
+
+.ls-list-matches {
+
+  .cell {
+    border: 1px solid blue ;
+
+    &__time {
+      min-width: 46px !important;
+    }
+    &__team {
+      min-width: 100% !important;
+      width: 100% !important;
+
+    }
+    &__score {
+      min-width: 54px !important;
+    }
+    &__caret {
+      min-width: 20px !important;
+    }
+  }
+}
