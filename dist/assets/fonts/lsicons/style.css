@@ -1,16 +1,17 @@
 @font-face {
 	font-family: 'LSicons';
-	src:url('fonts/LSicons.eot?2detzj');
-	src:url('fonts/LSicons.eot?2detzj#iefix') format('embedded-opentype'),
-		url('fonts/LSicons.ttf?2detzj') format('truetype'),
-		url('fonts/LSicons.woff?2detzj') format('woff'),
-		url('fonts/LSicons.svg?2detzj#LSicons') format('svg');
+	src:url('fonts/LSicons.eot?r4xrzc');
+	src:url('fonts/LSicons.eot?r4xrzc#iefix') format('embedded-opentype'),
+		url('fonts/LSicons.ttf?r4xrzc') format('truetype'),
+		url('fonts/LSicons.woff?r4xrzc') format('woff'),
+		url('fonts/LSicons.svg?r4xrzc#LSicons') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'LSicons';
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'LSicons' !important;
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -216,6 +217,15 @@
 	content: "\e63f";
 }
 .icon-news:before {
+	content: "\e903";
+}
+.icon-view_list:before {
 	content: "\e900";
+}
+.icon-verified_user:before {
+	content: "\e901";
+}
+.icon-email:before {
+	content: "\e902";
 }
 
