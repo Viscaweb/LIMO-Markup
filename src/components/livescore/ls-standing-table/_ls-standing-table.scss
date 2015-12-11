@@ -125,20 +125,7 @@
             line-height: 22px;
           }
 
-          &.live:before {
-            content: '';
-            position: absolute;
-            right: 0;
-            display: block;
-            float: right;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: $ls-color-live;
-            margin-right: 4px;
-            margin-top: 9px;
-            @extend .blinking;
-          }
+
         }
 
         &__total-points {
@@ -157,6 +144,29 @@
           color: rgb(255, 0, 0);
           margin: 3px;
         }
+      }
+
+
+      &.live {
+
+        .cell {
+
+          &__team:before {
+              content: '';
+              position: absolute;
+              right: 0;
+              display: block;
+              float: right;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background: $ls-color-live;
+              margin-right: 4px;
+              margin-top: 9px;
+              @extend .blinking;
+          }
+        }
+
       }
     }
 
