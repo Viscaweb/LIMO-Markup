@@ -205,3 +205,56 @@
     width: 20% !important;
   }
 }
+
+// STANDING TABLE ///////////////////////////
+
+.ls-standing-table {
+
+
+
+  &--left {
+    width: 50% !important;
+
+    .row--head .cell__team {
+      padding-bottom: 6px;
+    }
+  }
+
+  .cell {
+
+    &__rank {
+      width: 25px !important;
+    }
+    &__stat {
+      width: 20px !important;
+    }
+    &__team {
+     width:100%;
+
+      &--flag {
+        float: left;
+        padding: 0 !important;
+        width: 34%;
+      }
+      &--title {
+        padding-bottom: 1px !important;
+        a {
+          width: 100%;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          float: left;
+
+          span {
+            width: 100%;
+            text-align: left;
+            float: left;
+          }
+        }
+      }
+    }
+    &__total-points {
+      width: 32px !important;
+    }
+  }
+}
