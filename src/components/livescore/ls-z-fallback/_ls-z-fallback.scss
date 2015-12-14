@@ -258,3 +258,26 @@
     }
   }
 }
+
+// ODDS ///////////////////////////
+
+.ls-odds {
+
+  .cell {
+
+    &__odds {
+      width: 50px !important;
+      min-width: 50px;
+    }
+    &__bookmaker img{
+      float:left
+    }
+  }
+}
+
+.ls-odds-tabs {
+  .cell__bookmaker {
+    width: 71px !important;
+    min-width: 71px;
+  }
+}
