@@ -101,6 +101,27 @@
   }
 }
 
+// MATCH DETAILS ///////////////////////////
+
+.ls-list-details {
+  table-layout: auto;
+
+  .cell {
+
+    &__details {
+      width: 100% !important;
+    }
+    &__score-box {
+      .score-home,
+      .versus,
+      .score-away {
+        display: inline-block !important;
+      }
+    }
+  }
+
+}
+
 // MATCH INCIDENT ///////////////////////////
 
 .ls-list-incidents {
@@ -113,6 +134,8 @@
       min-width: 48px !important;
     }
   }*/
+
+  .row {}
 
   .row--head {
     .cell__team {
@@ -280,4 +303,22 @@
     width: 71px !important;
     min-width: 71px;
   }
+}
+
+// TEAM HEADER ///////////////////////////
+
+.ls-team-header {
+
+  .row {
+    display: table !important;
+    padding: 5px 0 !important;
+  }
+
+  .cell {
+
+    &__team--flag {
+      width: 86px !important;
+    }
+  }
+
 }
