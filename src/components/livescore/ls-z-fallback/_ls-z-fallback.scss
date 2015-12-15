@@ -122,6 +122,36 @@
 
 }
 
+// MATCH COMMENT ///////////////////////////
+
+.ls-list-comments {
+
+  .row {
+    display: table !important;
+  }
+
+  .row {
+    &--visual-block span,
+    &--visual-block img{
+      display: block;
+    }
+  }
+
+  .cell {
+
+    &__comment-minute {
+      width: 40px !important;
+    }
+    &__comment-icon {
+      width: 40px !important;
+    }
+    &__comment-comment {
+      text-align: left;
+    }
+  }
+
+}
+
 // MATCH INCIDENT ///////////////////////////
 
 .ls-list-incidents {
@@ -311,7 +341,7 @@
 
   .row {
     display: table !important;
-    padding: 5px 0 !important;
+    padding: 5px !important;
   }
 
   .cell {
