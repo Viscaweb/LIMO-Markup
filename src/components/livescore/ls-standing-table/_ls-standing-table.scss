@@ -80,6 +80,10 @@
           &--clear-red {
             background-color: $ls-rank-clear-red-color;
           }
+
+          &--large {
+            flex: 0 0 50px;
+          }
         }
 
         &__stat {
