@@ -45,23 +45,30 @@
     &__flag {
       width: 34px !important;
       padding: 10px !important;
+      border-top: 1px solid $ls-list-border-color;
+
 
     }
     &__country {
       width: 100% !important;
       text-align: left;
       padding-left: 5px !important;
+      border-top: 1px solid $ls-list-border-color;
+
 
     }
     &__badge {
-      width: 50%;
+      width: 120px;
       padding-bottom: 15px !important;
+      border-top: 1px solid $ls-list-border-color;
+
 
       > span {
         display: block !important;
         min-width: 0 !important;
         width: 45px;
         float: left;
+        padding-top: 3 !important;
 
         &:after {
          left:15px;
@@ -156,19 +163,10 @@
 
 .ls-list-incidents {
 
-/*  .cell {
-    border: 1px solid blue;
-
-    &__incident-minute {
-      background: red  !important;
-      min-width: 48px !important;
-    }
-  }*/
-
-  .row {}
-
   .row--head {
+
     .cell__team {
+      border-top: 1px solid $ls-list-border-color;
 
       &--team1 {
         padding-left: 10px;
@@ -186,19 +184,21 @@
   }
 
   .row--separator {
+    display: block;
+    width: 240%;
     height: 30px;
-    width: 100%;
 
     span {
-     display: table-cell !important;
-     vertical-align: middle;
-     text-align: center;
-     width: 100% !important;
+      display: block;
+      text-align: center;
+      width: 100% !important;
+      line-height: 30px;
     }
   }
 
   .cell__team 	{
     width: 42% !important;
+    border-top: 1px solid $ls-list-border-color;
 
     // Team 1
     &--team1 .cell__player {
@@ -245,6 +245,7 @@
 
   .cell__incident-minute 	{
     width: 16% !important;
+    border-top: 1px solid $ls-list-border-color;
   }
 
   .cell__player{
@@ -263,26 +264,32 @@
 
 .ls-standing-table {
 
-
-
   &--left {
     width: 50% !important;
+    border-bottom: 1px solid $ls-dialog-border-color;
 
-    .row--head .cell__team {
-      padding-bottom: 6px;
+
+    .row {
+      border: none;
     }
-  }
 
-  .cell {
+    .cell {
+    border: none;
 
     &__rank {
       width: 25px !important;
+      border-top: 1px solid $ls-dialog-border-color;
+
     }
     &__stat {
       width: 20px !important;
+      border-top: 1px solid $ls-dialog-border-color;
     }
     &__team {
-     width:100%;
+      padding: 4px 0 5px 0 !important;
+      width: 100%;
+      border-top: 1px solid $ls-dialog-border-color;
+
 
       &--flag {
         float: left;
@@ -306,8 +313,20 @@
         }
       }
     }
-    &__total-points {
-      width: 32px !important;
+      &__total-points {
+        width: 32px !important;
+        border-top: 1px solid $ls-dialog-border-color;
+      }
+    }
+
+    .row--head {
+
+      .cell {
+        border-top: none;
+      }
+      .cell__team {
+        padding-bottom: 6px !important;
+      }
     }
   }
 }
@@ -315,8 +334,10 @@
 // ODDS ///////////////////////////
 
 .ls-odds {
+  border-bottom: 1px solid $ls-list-border-color;
 
   .cell {
+    border-top: 1px solid $ls-list-border-color;
 
     &__odds {
       width: 50px !important;
@@ -329,6 +350,8 @@
 }
 
 .ls-odds-tabs {
+  border-bottom: 1px solid $ls-list-border-color;
+
   .cell__bookmaker {
     width: 71px !important;
     min-width: 71px;
@@ -350,5 +373,78 @@
       width: 86px !important;
     }
   }
+}
 
+// EMPTY ///////////////////////////
+
+.ls-empty {
+  text-align: center;
+  display: block;
+  width: 100%;
+
+  span {
+    display: block;
+    text-align: center;
+  }
+}
+
+// MATCH LINEUP ///////////////////////////
+
+.ls-grid {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  height: 100%;
+
+  .row {
+    width: 100%;
+    padding: 0 !important;
+    text-align: center;
+    height: 50px;
+  }
+
+  .cell {
+    display: table-cell !important;
+    vertical-align: middle;
+    text-align: center;
+    height: 100%;
+
+    .player__number {
+      text-align: center;
+      margin: auto;
+    }
+
+    .player__name {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.ls-substitute {
+
+  .row {
+    height: 32px;
+    display: table !important;
+
+    .cell {
+      padding: 0 !important;
+
+      &__player-number {
+        width: 10% !important;
+      }
+      &__player-name {
+        width: 30% !important;
+
+        span {
+          display: inline-block;
+          max-width: 87px;
+          overflow: hidden;
+          text-overflow: ellipsis
+        }
+      }
+      &__icon {
+        width: 10% !important;
+      }
+    }
+  }
 }
