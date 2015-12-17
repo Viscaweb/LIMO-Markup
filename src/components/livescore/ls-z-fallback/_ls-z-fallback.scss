@@ -420,31 +420,40 @@
   }
 }
 
-.ls-substitute {
+.ls-substitute {}
+
+// TEAM SCORE ///////////////////////////
+
+.ls-list-match-score-header {
+  border-bottom: 1px solid $ls-dialog-border-color;
 
   .row {
-    height: 32px;
-    display: table !important;
+    padding: 0 10px !important;
+    box-sizing: border-box;
 
     .cell {
-      padding: 0 !important;
 
-      &__player-number {
-        width: 10% !important;
+      &__flag {
+        width: 43px !important;
       }
-      &__player-name {
-        width: 30% !important;
+      &__team {
+        width: 100% !important;
 
         span {
-          display: inline-block;
-          max-width: 87px;
+          text-overflow: ellipsis;
           overflow: hidden;
-          text-overflow: ellipsis
+          white-space: nowrap;
         }
       }
-      &__icon {
-        width: 10% !important;
+      &__score-box {
+        width: 72px !important;
+        padding: 0 10px;
+
       }
+      .versus {
+        padding: 0;
+      }
+
     }
   }
 }
