@@ -125,22 +125,61 @@
 // MATCH DETAILS ///////////////////////////
 
 .ls-list-details {
-  table-layout: auto;
 
-  .cell {
 
-    &__details {
-      width: 100% !important;
+  .row--head {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+    .cell__team {
+      width: 100%;
+      display: table-row;
+      padding: 0 !important;
+      text-align: center;
+      line-height: 34px;
+      vertical-align: middle;
     }
-    &__score-box {
-      .score-home,
-      .versus,
-      .score-away {
-        display: inline-block !important;
-      }
+
+    .versus {
+      padding: 0 4px;
     }
   }
 
+  .row {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+    .cell {
+
+      &__details {
+        width: 50% !important;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        padding-right: 5px;
+        box-sizing: border-box;
+        text-align: left;
+        border-right:5px solid #fff;
+
+        &-icon {
+          width: 30px;
+        }
+        &-infos {
+          text-align: left;
+          padding-left: 10px;
+        }
+      }
+      &__score-box {
+        .score-home,
+        .versus,
+        .score-away {
+          display: inline-block !important;
+        }
+      }
+    }
+  }
 }
 
 // MATCH COMMENT ///////////////////////////
@@ -471,3 +510,5 @@
     }
   }
 }
+
+
