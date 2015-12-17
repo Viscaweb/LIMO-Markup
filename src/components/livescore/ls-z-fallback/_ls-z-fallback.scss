@@ -511,4 +511,69 @@
   }
 }
 
+// OTHER SPORT ///////////////////////////
 
+//FOOT US
+.ls-match-listing-footus,
+.ls-match-listing-rugby,
+.ls-match-listing-tennis {
+
+  .row {
+
+    .cell {
+
+      &__time {
+        width: 46px;
+        box-sizing: border-box;
+        padding-left: 5px;
+
+        &:before {
+          margin-top: 5px !important;
+        }
+      }
+
+      &__opposition__title {
+        width: 100%;
+        max-width: 100%;
+        text-align: left;
+        box-sizing: border-box;
+        padding-right: 5px;
+
+        span {
+          display: block;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+
+      &__score {
+        width: 30px;
+        min-width: 30px;
+      }
+    }
+
+    .cell__points {
+      display: table !important;
+      table-layout: fixed;
+      width: 100%;
+
+      > .row {
+        display: table-row !important
+
+      }
+      .cell__point {
+        width: 100%;
+        min-width: 100%;
+        border-bottom: 1px solid $ls-list-border-color;
+      }
+
+      > .row:last-child {
+
+        .cell__point {
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
