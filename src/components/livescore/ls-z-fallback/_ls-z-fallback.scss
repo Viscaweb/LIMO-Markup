@@ -88,22 +88,36 @@
 
 .ls-list-matches {
 
+  .row  {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+  }
+  .row > a {
+    width: 100%;
+    display: table-row !important;
+    padding: 0 !important;
+  }
+
   .cell {
-    border: 1px solid blue ;
 
     &__time {
-      min-width: 46px !important;
+      width: 46px !important;
     }
     &__team {
-      min-width: 100% !important;
       width: 100% !important;
 
+      span {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
     }
     &__score {
-      min-width: 54px !important;
+      width: 54px !important;
     }
     &__caret {
-      min-width: 20px !important;
+      width: 20px !important;
     }
   }
 }
