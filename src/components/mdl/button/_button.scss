@@ -66,9 +66,12 @@
 }
 
 .mdl-button__icon-left{
-	margin-right: 25px;
+	margin-right: $ls-button-arrow-margin;
 }
 
+.mdl-button__icon-right{
+	margin-left: $ls-button-arrow-margin;
+}
 
 //Button group
 .mdl-button-group{

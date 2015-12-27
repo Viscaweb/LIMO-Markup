@@ -91,7 +91,7 @@ class Install implements ScriptInterface
      */
     private function gitCloneVersionId()
     {
-        return 'mdl-1.0';
+    return 'v1.0.1';    return 'mdl-1.0';
     }
 
     /**
