@@ -21,7 +21,7 @@
           <a class="mdl-navigation__link ls-icon ls-active" href="#"><span class="icon-star"></span></a>
         {% endif %}
 
-        {% if ls_header_switch %}
+        {% if ls_header_two_labels_switch %}
           <label for="switch-1" class="mdl-switch-label-left">
             <span class="mdl-switch__label">All</span>
           </label>
@@ -30,6 +30,14 @@
             <span class="mdl-switch__label">Live</span>
           </label>
         {% endif %}
+
+        {% if ls_header_live_switch %}
+          <label class="mdl-switch mdl-switch-live mdl-js-switch mdl-js-ripple-effect mdl-switch--compact" for="live-switch">
+            <input type="checkbox" id="live-switch" class="mdl-switch__input" checked />
+            <span class="mdl-switch__label">En Directo</span>
+          </label>
+        {% endif %}
+
       </nav>
     </div>
 

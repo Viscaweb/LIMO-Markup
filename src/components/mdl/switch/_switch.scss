@@ -14,6 +14,52 @@
       }
     }
   }
+
+  &.mdl-switch--compact{
+    padding-left: 0;
+    padding-top: ($ls-switch-compact-label-height / 2);
+    height: $ls-switch-compact-label-height;
+
+    .mdl-layout__header & {
+      padding-left: 0;
+      padding-top: ($ls-switch-compact-label-height / 2);
+      height: $ls-switch-compact-label-height;
+    }
+
+    .mdl-switch__label{
+      font-size: $ls-switch-compact-label-font-size;
+      text-transform: uppercase;
+    }
+
+    .mdl-switch__track{
+      left: 50%;
+      margin-left: -($switch-track-length / 2);
+    }
+
+    .mdl-switch__thumb{
+      left: 50%;
+      margin-left: -$switch-thumb-size;
+      transition-property: margin;
+    }
+
+    .mdl-switch__ripple-container{
+      left: 50%;
+      margin-left: -( ($switch-thumb-size / 2 - $switch-ripple-size / 2) + $switch-ripple-size );
+      transition-property: margin;
+    }
+
+    //When is checked
+    &.is-checked{
+
+      .mdl-switch__thumb{
+        margin-left: 0;
+      }
+
+      .mdl-switch__ripple-container{
+        margin-left: $switch-thumb-size / 2 - $switch-ripple-size / 2;
+      }
+    }
+  }
 }
 
 .mdl-switch__track {

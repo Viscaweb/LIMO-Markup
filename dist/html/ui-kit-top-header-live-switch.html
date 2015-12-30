@@ -65,15 +65,16 @@
 		
 								
 		
-	
+		
+
 </head>
 <body>
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
 
-		  <header class="mdl-layout__header">
+			  <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
              <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="LIMO"></div>
-            <span class="mdl-layout-title">Team Information</span>
+            <span class="mdl-layout-title">Football</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
@@ -82,19 +83,15 @@
         
         
         
+                  <label class="mdl-switch mdl-switch-live mdl-js-switch mdl-js-ripple-effect mdl-switch--compact" for="live-switch">
+            <input type="checkbox" id="live-switch" class="mdl-switch__input" checked />
+            <span class="mdl-switch__label">En Directo</span>
+          </label>
         
       </nav>
     </div>
 
-          <!-- Tabs -->
-<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-  <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Match Details</a>
-  <a href="#scroll-tab-2" class="mdl-layout__tab">Live Comments</a>
-  <a href="#scroll-tab-3" class="mdl-layout__tab">Lineups</a>
-  <a href="#scroll-tab-4" class="mdl-layout__tab">Head to Head</a>
-  <a href="#scroll-tab-5" class="mdl-layout__tab">Odds</a>
-  <a href="#scroll-tab-6" class="mdl-layout__tab">Standings</a>
-</div>    
+    
     
     
   </header>
@@ -145,55 +142,16 @@
     <li><a class="mdl-navigation__link" href=""><span class="icon icon-verified_user"></span>Conditions and Privacy</a></li>
     <li><a class="mdl-navigation__link" href=""><span class="icon icon-email"></span>Contact us</a></li>
   </ul>
-</div>	  	
-  	<main class="mdl-layout__content">
-	    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
-	    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
-	    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
-	    <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
-	    <section class="mdl-layout__tab-panel" id="scroll-tab-5">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
-	    <section class="mdl-layout__tab-panel" id="scroll-tab-6">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
+</div>	
+			<main class="mdl-layout__content">
+  <div class="page-content">
 
-					
-    <div class="ls-divider">
-	<span class="ls-divider__title">Divider Simple</span>
-</div>    <ul class="mdl-list ls-list ls-team-header">
-    <li class="row">
-        <div class="cell cell__team--flag">
-            <img src="../assets/img/psg.png" alt="PSG">
-        </div>
-        <div class="cell cell__team--infos">
-            <div class="team-title">
-                <span>Paris Saint germain</span>
-                <div class="favorite-star">
-                    <a href="#" class="fav active">
-                        <span class="icon-star"></span>
-                    </a>
-                </div>
-            </div>
-            <a href="" class="team-country">
-                <img class="country-flag" src="../assets/img/flag-fr.png">France
-            </a>
-            </div>
-        </div>
-    </li>
-</ul>
+							
+				
+  </div>
+</main>
 
-			
-	</main>
-	</div>
+		</div>
 			<script type="text/javascript">
 			$(document).ready(function(){
 
