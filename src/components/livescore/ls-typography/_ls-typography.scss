@@ -1,0 +1,25 @@
+//Typography Mixins
+@function strip-units($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@function ls-font-size($value, $size: base) {
+	$unit: unit($value);
+	$value: strip-units($value);
+	$font-size: 0;
+
+	@if $unit == "%" {
+		$value: $value / 100;
+	}
+
+  @if $size == large {
+    $font-size: ceil(strip-units($ls-font-size-large) + $value);
+  } @else if $size == small {
+    $font-size: ceil(strip-units($ls-font-size-small) + $value);
+  } @else {
+    $font-size: ceil(strip-units($ls-font-size-base) + $value);
+  }	
+
+
+  @return $font-size + px;
+}
