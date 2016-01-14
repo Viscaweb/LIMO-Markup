@@ -151,6 +151,10 @@
     display: table;
     table-layout: fixed;
 
+    &--score {
+      border-top: 1px solid #fff !important;
+    }
+
     .cell {
 
       &__details {
