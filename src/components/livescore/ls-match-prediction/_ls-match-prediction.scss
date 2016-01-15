@@ -1,0 +1,96 @@
+.ls-match-prediction {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+
+  /*Make prediction*/
+  .make-prediction{
+    background-color: $ls-color-white;
+    padding: 16px;
+
+    .title{
+      font-size: ls-font-size(1px,'large');
+      display: block;
+      text-align: center;
+      margin-bottom: 8px;
+      margin-top: 20px;
+    }
+
+    .description{ 
+      display: block;
+      font-size: ls-font-size(1px,'small');
+      color: darken($ls-color-white, 20%);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .row{
+
+      .cell{
+        text-align: center;
+
+        &__option{
+
+          .option{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 9px;
+            border-radius: 4px;
+            background-color: darken($ls-color-white, 8%);
+            max-width: 100px;
+            width: 100%;
+            height: 36px;
+            margin-bottom: 9px;
+            box-sizing: border-box;
+          }
+
+          .name{
+            text-align: center;
+            display: block;
+            color: lighten($ls-text-color, 10%);
+          }
+
+          &--selected{
+
+            .option{
+              border:3px solid $ls-green-active-color;
+            }
+          }
+        }
+      }
+
+      &__team-forms{
+
+        .cell{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .mdl-button{
+            padding: 0 4px;
+            min-width: 24px;
+            height: 24px;
+            line-height: 24px;
+            font-size: $ls-font-size-base;
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+  }
+
+  /*Prediction chart*/
+  .prediction-chart{
+    background: url("#{$ls-img-path}/green-field-horizontal.png");
+    padding: 20px;
+
+    .title{
+      display: block;
+      color: rgba($ls-color-white, 0.57);
+      font-size: $ls-font-size-large;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
