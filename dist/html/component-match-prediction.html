@@ -144,38 +144,135 @@
   <div class="page-content">
 
 							  	<script type="text/javascript">
-    google.charts.load("current", {packages:['corechart']});
+    google.charts.load("current", {packages:['corechart','bar']});
     google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
+    /*function drawChart() {
       var data = google.visualization.arrayToDataTable([
-        ["Team", "Prediction" ],
+        ["Team", "Prediction"],
         ["Paris", 20],
         ["Draw", 6],
         ["Saint Étienne", 74]
       ]);
 
+      var formatter = new google.visualization.NumberFormat({
+        fractionDigits: 0,
+        suffix: '%'
+        });
+        
+        formatter.format(data, 1);
+
       var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
+
+       view.setColumns([0,{ calc: "stringify",
+                             sourceColumn: 1,
+                             type: "string",
+                             role: "annotation" },
+                           1]);
 
       var options = {
         colors: ['#FFFFFF'],
         height: 250,
-        chartArea: {'width': '90%', 'height': '80%'},
+        chartArea: {'width': '85%', 'height': '80%'},
         bar: {groupWidth: "95%"},
         backgroundColor: { fill:'transparent' },
         legend: { position: "none" },
+        annotations: {
+            stemColor : 'none',
+          alwaysOutside: false,
+          textStyle: {
+            fontSize: 26,
+            color: '#000',
+            auraColor: 'none'
+          }
+        },
         hAxis:{
-            format: 'percent'
+            textStyle:{
+                color: '#FFF',
+                fontSize: 14
+            },
+            gridlines: {
+                color: "#FFFFFF",
+            },
+            baselineColor: '#FFFFFF'
+        },
+        vAxis:{
+            viewWindow: {
+                min: 0,
+                max: 100
+            },
+            ticks: [0, 20, 40, 60, 80, 100],
+            textStyle:{color: '#FFF'},
+            format: '#\'%\'',
+            gridlineColor: '#FFF',
+            baselineColor: '#FFFFFF'
         }
+      };*/
+
+      function drawChart() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('string', 'Team');
+      data.addColumn('number', 'Prediction');
+      data.addColumn({type: 'string', role: 'annotation'});
+
+      data.addRows([
+        ['Paris',   20, '20%'],
+        ['Draw',   6, '6%'],
+        ['Saint Étienne', 74, '74%']
+      ]);
+
+        var formatter = new google.visualization.NumberFormat({
+            fractionDigits: 0,
+            suffix: '%'
+        });
+        
+        formatter.format(data, 1);
+
+      var options = {
+        height: 200,
+        colors: ['#FFFFFF'],
+        backgroundColor: { fill:'transparent' },
+        chartArea: {'width': '95%', 'height': '80%', 'left': 25 },
+        annotations: {
+            stemColor : 'none',
+            alwaysOutside: true,
+            textStyle: {
+            fontSize: 26,
+            color: '#FFF',
+            auraColor: 'none'
+          }
+        },
+        hAxis: {
+            textStyle:{
+                color: '#FFF',
+                fontSize: 14
+            },
+            gridlines: {
+                color: "#FFFFFF",
+            },
+            baselineColor: '#FFFFFF'
+        },
+        vAxis: {
+            viewWindow: {
+                min: 0,
+                max: 100
+            },
+            ticks: [0, 20, 40, 60, 80, 100],
+            textStyle:{color: '#FFF'},
+            //format: '#\'%\'',
+            gridlineColor: '#FFF',
+            baselineColor: '#FFFFFF'
+        },
+        legend: { position: "none" }
       };
+
       var chart = new google.visualization.ColumnChart(document.getElementById("chart1"));
-      chart.draw(view, options);
+      chart.draw(data, options);
   }
+
+    //Make google charts responsive
+    $(window).resize(function(){
+        drawChart();
+    });
 </script>
 <div class="ls-match-prediction">
     <div class="make-prediction">
@@ -200,21 +297,21 @@
         <div class="ls-list">
             <div class="row row__team-forms">
                 <div class="cell">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">V</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">V</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">V</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">N</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">V</button>
+                    <a href="#" class="team-form team-form--colored">V</a>
+                    <a href="#" class="team-form team-form--colored">V</a>
+                    <a href="#" class="team-form team-form--colored">V</a>
+                    <a href="#" class="team-form">N</a>
+                    <a href="#" class="team-form team-form--colored">V</a>
                 </div>
                 <div class="cell cell__title">
                     <span>Team Forms</span>
                 </div>
                 <div class="cell">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">V</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">V</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">D</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">V</button>
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">D</button>
+                    <a href="#" class="team-form team-form--colored">V</a>
+                    <a href="#" class="team-form team-form--colored">V</a>
+                    <a href="#" class="team-form team-form--draw">D</a>
+                    <a href="#" class="team-form team-form--colored">V</a>
+                    <a href="#" class="team-form team-form--draw">D</a>
                 </div>
             </div>
         </div>
