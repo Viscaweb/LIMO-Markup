@@ -146,69 +146,8 @@
 							  	<script type="text/javascript">
     google.charts.load("current", {packages:['corechart','bar']});
     google.charts.setOnLoadCallback(drawChart);
-    /*function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ["Team", "Prediction"],
-        ["Paris", 20],
-        ["Draw", 6],
-        ["Saint Étienne", 74]
-      ]);
 
-      var formatter = new google.visualization.NumberFormat({
-        fractionDigits: 0,
-        suffix: '%'
-        });
-        
-        formatter.format(data, 1);
-
-      var view = new google.visualization.DataView(data);
-
-       view.setColumns([0,{ calc: "stringify",
-                             sourceColumn: 1,
-                             type: "string",
-                             role: "annotation" },
-                           1]);
-
-      var options = {
-        colors: ['#FFFFFF'],
-        height: 250,
-        chartArea: {'width': '85%', 'height': '80%'},
-        bar: {groupWidth: "95%"},
-        backgroundColor: { fill:'transparent' },
-        legend: { position: "none" },
-        annotations: {
-            stemColor : 'none',
-          alwaysOutside: false,
-          textStyle: {
-            fontSize: 26,
-            color: '#000',
-            auraColor: 'none'
-          }
-        },
-        hAxis:{
-            textStyle:{
-                color: '#FFF',
-                fontSize: 14
-            },
-            gridlines: {
-                color: "#FFFFFF",
-            },
-            baselineColor: '#FFFFFF'
-        },
-        vAxis:{
-            viewWindow: {
-                min: 0,
-                max: 100
-            },
-            ticks: [0, 20, 40, 60, 80, 100],
-            textStyle:{color: '#FFF'},
-            format: '#\'%\'',
-            gridlineColor: '#FFF',
-            baselineColor: '#FFFFFF'
-        }
-      };*/
-
-      function drawChart() {
+    function drawChart() {
       var data = new google.visualization.DataTable();
       data.addColumn('string', 'Team');
       data.addColumn('number', 'Prediction');
@@ -247,9 +186,9 @@
                 fontSize: 14
             },
             gridlines: {
-                color: "#FFFFFF",
+                color: "#7cb62e",
             },
-            baselineColor: '#FFFFFF'
+            baselineColor: '#7cb62e'
         },
         vAxis: {
             viewWindow: {
@@ -259,8 +198,8 @@
             ticks: [0, 20, 40, 60, 80, 100],
             textStyle:{color: '#FFF'},
             //format: '#\'%\'',
-            gridlineColor: '#FFF',
-            baselineColor: '#FFFFFF'
+            gridlineColor: '#7cb62e',
+            baselineColor: '#7cb62e'
         },
         legend: { position: "none" }
       };
