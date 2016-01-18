@@ -1,0 +1,81 @@
+.ls-list-favorite-sortable {
+  background: $ls-color-white;
+
+  .row {
+    display: flex;
+    width: auto;
+    background: $ls-color-white;
+    border-bottom: $ls-list-border;
+    padding: 0 10px 0 14px !important;
+
+    > a {
+      color: $ls-text-color;
+    }
+
+    &__team{
+      border-bottom: lighten($ls-list-border-color, 5%);
+      align-items: center;
+
+      .cell {
+        padding: 15px 0;
+
+        &__flag {
+          flex: 0 0 34px;
+
+          > img {
+            max-width: 24px;
+          }
+        }
+
+        &__team {
+          font-size: ls-font-size(1px);
+          font-weight: 300;
+          flex: 2;
+          justify-content: flex-start;
+          align-items: center;
+          white-space: nowrap;
+          overflow-x: hidden;
+          text-overflow: ellipsis;
+        }
+
+        &__drag {
+          display: flex;
+          flex: 0 0 40px;
+          flex-wrap: nowrap;
+          justify-content: center;
+          padding: 0;
+
+          > i{
+            color: $ls-grey-contrast;
+          }
+        }
+
+        &__favorite {
+          display: flex;
+          flex: 0 0 40px;
+          flex-wrap: nowrap;
+          justify-content: center;
+          padding: 0;
+
+          > span{
+            line-height: 20px;
+            font-size: ls-font-size(4px, 'large');
+          }
+        }
+      }
+
+      &--placeholder{
+        height: 50px;
+        border: 2px dashed $ls-grey-contrast;
+        background-color: lighten($ls-grey-contrast, 12%);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
