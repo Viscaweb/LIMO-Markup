@@ -68,6 +68,14 @@
 
 .mdl-layout__header-row{
 	border-bottom: $ls-top-header-border-bottom;
+
+	.mdl-layout--no-drawer-button &{
+	  padding: 0 $layout-header-desktop-indent;
+
+    @media screen and (max-width: $layout-screen-size-threshold) {
+      padding: 0 $layout-header-mobile-indent;
+    }
+	}
 }
 
 .mdl-layout-brand-logo{
@@ -100,6 +108,14 @@
 		line-height: $layout-header-mobile-row-height - 2px;
 		padding-right: 10px;
 		margin-right: 10px;
+  }
+
+  &--no-drawer{
+		padding-right: 0;
+
+  	&:after{
+  		display: none;
+  	}
   }
 }
 
