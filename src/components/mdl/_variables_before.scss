@@ -27,6 +27,11 @@ $ls-color-googleplus: 	#b73d3d;
 $ls-font-size-base:          	14px;
 $ls-font-size-small:          $ls-font-size-base - 3px;
 $ls-font-size-large:          $ls-font-size-base + 3px; 
+$ls-font-weight-thin:		 			100;
+$ls-font-weight-light:	 			300;
+$ls-font-weight-normal: 			400;
+$ls-font-weight-medium: 			500;
+$ls-font-weight-bold: 				700;
 
 //Image paths
 $ls-img-path: "../assets/img";
@@ -129,6 +134,11 @@ $ls-match-statistics-list-bg: 									$ls-color-white;
 $ls-match-statistics-bar-height: 								9px;
 $ls-match-statistics-bar-bg: 										$ls-grey-contrast;
 $ls-match-statistics-bar-high-bg: 							$ls-green-active-color;
+
+//Comment thread widget
+$ls-comment-thread-avatar-size: 				64px;
+$ls-comment-thread-own-color: 					#e0e8d5;
+$ls-comment-thread-compose-height: 			66px;
 
 //Sprite
 $ls-image-sprite-icons : "../assets/img/sprite/sprite-icons.png";

@@ -5,6 +5,16 @@
 	padding: $ls-button-padding;
 	min-width: 46px;
 	box-sizing: border-box;
+
+	&--delete-icon{
+	  float: left;
+	  padding: 0 8px;
+	  min-width: 40px;
+
+	  .icon{
+	  	vertical-align: middle;
+	  }
+	}
 }
 
 // Raised buttons

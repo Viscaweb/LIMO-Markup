@@ -3,6 +3,10 @@
   border-radius: 0;
 }
 
+textarea.mdl-textfield__input{
+	display: block;
+}
+
 .mdl-textfield--100 {
   width:100%;
 }
