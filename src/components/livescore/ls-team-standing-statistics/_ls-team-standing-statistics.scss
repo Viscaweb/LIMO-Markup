@@ -1,0 +1,20 @@
+.ls-match-prediction{
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+
+  /*Prediction chart*/
+  .prediction-chart{
+    background: url("#{$ls-img-path}/green-field-horizontal.png");
+    padding: 20px;
+
+    .title{
+      display: block;
+      color: rgba($ls-color-white, 0.57);
+      font-size: ls-font-size(2px,'large');
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 5px;
+    }
+  }
+}
