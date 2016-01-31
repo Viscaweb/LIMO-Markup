@@ -250,6 +250,9 @@
 
   &__content {
 
+    margin: 0;
+    padding: 0;
+
     .row {
       display: flex;
       margin-bottom: 4px;
@@ -257,7 +260,7 @@
 
     .cell {
 
-      &__color {
+      &__rank {
         border: $ls-dialog-border;
         width: 24px;
         height: 17px;

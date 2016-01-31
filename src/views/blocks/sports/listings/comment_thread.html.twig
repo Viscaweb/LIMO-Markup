@@ -1,0 +1,164 @@
+<div class="comments-widget">
+	<div class="show-old-messages">
+		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--block mdl-js-ripple-effect">
+				+ Show older messages
+		</button>
+	</div>
+	<ul class="comments ls-list">
+		<li class="comment">
+			<div class="row row__comment-body">
+				<div class="cell cell__avatar">
+					<div class="comment__avatar">
+						<img src="../assets/img/avatar1.png" alt="Avatar 1">
+					</div>
+				</div>
+				<div class="cell cell__content">
+					<div class="comment__header">
+						<span class="comment__date">10 min. ago</span>
+						<span class="comment__author">Debra Crawford</span>
+					</div>
+					<div class="comment__text">
+						<span class="mention">@Pedro Rodriguez</span> Paris Yeah !!<br>We will win that game for sure !<br>Best Team EVER !
+					</div>
+				</div>
+			</div>
+			<div class="row row__comment-actions">
+				<div class="cell cell__left-actions cell__report">
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+						<span class="material-icons icon">warning</span>
+						<span class="text">Report</span>
+					</button>
+				</div>
+				<div class="cell cell__right-actions">
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+						<span class="material-icons icon">reply</span>
+						<span class="text">Reply</span>
+					</button>
+				</div>
+			</div>
+		</li>
+		<li class="comment">
+			<div class="row row__comment-body">
+				<div class="cell cell__avatar">
+					<div class="comment__avatar">
+						<img src="../assets/img/avatar2.png" alt="Avatar">
+					</div>
+				</div>
+				<div class="cell cell__content">
+					<div class="comment__header">
+						<span class="comment__date">10 min. ago</span>
+						<span class="comment__author">Jeremy Carroll</span>
+					</div>
+					<div class="comment__text">
+						<span class="mention">@Pedro Rodriguez</span> Paris Yeah !!<br>We will win that game for sure !<br>Best Team EVER !
+					</div>
+				</div>
+			</div>
+			<div class="row row__comment-actions">
+				<div class="cell cell__left-actions cell__report">
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+						<span class="material-icons icon">warning</span>
+						<span class="text">Report</span>
+					</button>
+				</div>
+				<div class="cell cell__right-actions">
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect">
+						<span class="material-icons icon">reply</span>
+						<span class="text">Reply</span>
+					</button>
+				</div>
+			</div>
+		</li>
+		<li class="comment comment--own-comment">
+			<div class="row row__comment-body">
+				<div class="cell cell__avatar">
+					<div class="comment__avatar">
+						<img src="../assets/img/avatar3.png" alt="Avatar">
+					</div>
+				</div>
+				<div class="cell cell__content">
+					<div class="comment__header">
+						<span class="comment__date">October 15th 2015</span>
+						<span class="comment__author">Daniel Rogers the great player</span>
+					</div>
+					<div class="comment__text">
+						<span class="mention">@Pedro Rodriguez</span> Paris Yeah !!<br>We will win that game for sure !<br>Best Team EVER !
+					</div>
+				</div>
+			</div>
+			<div class="row row__comment-actions">
+				<div class="cell cell__right-actions">
+					<button class="mdl-button mdl-js-button mdl-js-ripple-effect" data-toggle="mdl-dialog" data-target="#edit-comment">
+						<span class="material-icons icon">edit</span>
+						<span class="text">Edit my comment</span>
+					</button>
+				</div>
+			</div>
+		</li>
+	</ul>
+	<div class="comment-compose">
+		<div class="comment-input">
+		  <div class="mdl-textfield mdl-js-textfield">
+		    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+		    <label class="mdl-textfield__label" for="sample5">Write your comment here...</label>
+		  </div>
+		</div>
+		<div class="comment-submit">
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+			  Send
+			</button>
+		</div>
+	</div>
+</div>
+
+{# MD Dialog #}
+<div class="mdl-dialog mdl-dialog--edit-comment" id="edit-comment">
+	<div class="mdl-dialog__content">
+		<div class="mdl-dialog__header">
+			<span class="mdl-dialog__header-title">Edit comment</span>
+		</div>
+		<div class="mdl-dialog__body">
+			<form action="#">
+			  <div class="mdl-textfield mdl-js-textfield">
+			    <textarea class="mdl-textfield__input" type="text" rows= "3" id="sample5" ></textarea>
+			    <label class="mdl-textfield__label" for="sample5">Text lines...</label>
+			  </div>
+			</form>
+		</div>
+		<div class="mdl-dialog__footer">
+			<button class="mdl-button mdl-js-button mdl-button--delete-icon mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				<span class="material-icons icon">delete</span>
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				CANCEL
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				SEND
+			</button>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	/*mdl-dialog*/
+	//This code should be on a js component
+	$('[data-toggle="mdl-dialog"]').click(function( e ){
+		var target = $(this).data("target");
+		$(target).addClass("mdl-dialog--show");
+
+		e.stopPropagation();
+	});
+
+	//Dialog close button
+	$(".mdl-dialog-close").click(function( e ){
+		var dialog = $(this).parents(".mdl-dialog");
+		dialog.removeClass("mdl-dialog--show");
+	});
+
+	//Hide dialog when click outside
+	$(document).on("click",function( e ){
+		if ( !$(e.target).closest(".mdl-dialog__content").length ) {
+			$(".mdl-dialog").removeClass('mdl-dialog--show');
+		}
+	});
+</script>

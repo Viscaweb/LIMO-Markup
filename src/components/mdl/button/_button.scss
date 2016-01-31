@@ -5,6 +5,16 @@
 	padding: $ls-button-padding;
 	min-width: 46px;
 	box-sizing: border-box;
+
+	&--delete-icon{
+	  float: left;
+	  padding: 0 8px;
+	  min-width: 40px;
+
+	  .icon{
+	  	vertical-align: middle;
+	  }
+	}
 }
 
 // Raised buttons
@@ -31,6 +41,11 @@
 
 	.mdl-button__icon-right{
 		float: right;
+		line-height: $ls-button-large-size;
+	}	
+
+	.mdl-button__icon-left{
+		float: left;
 		line-height: $ls-button-large-size;
 	}
 }

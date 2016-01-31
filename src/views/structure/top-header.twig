@@ -1,18 +1,23 @@
 {% block top_header %}
   <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
+
+      {# Brand logo #}
       {% if ls_header_brand_logo %}
-       <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="{{ project }}"></div>
+       <div class="mdl-layout-brand-logo{{ ls_header_no_drawer ? ' mdl-layout-brand-logo--no-drawer' : '' }}"><img src="../assets/img/ls-app-logo.png" alt="{{ project }}"></div>
       {% endif %}
+
       <span class="mdl-layout-title">{{ page_title }}</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
 
+        {# Season button #}
         {% if ls_header_season_button %}
           <a class="mdl-navigation__link ls-season-button" href="#"><span id="headerNavSeasonLabel">14/15</span></a>
         {% endif %}
 
+        {# Two labels switch #}
         {% if ls_header_two_labels_switch %}
           <label for="switch-1" class="mdl-switch-label-left">
             <span class="mdl-switch__label">All</span>
@@ -23,11 +28,35 @@
           </label>
         {% endif %}
 
+        {# One label switch button #}
         {% if ls_header_live_switch %}
           <label class="mdl-switch mdl-switch-live mdl-js-switch mdl-js-ripple-effect mdl-switch--compact" for="live-switch">
             <input type="checkbox" id="live-switch" class="mdl-switch__input" checked />
             <span class="mdl-switch__label">En Directo</span>
           </label>
+        {% endif %}
+  
+        {# Cancel button #}
+        {% if ls_header_cancel_button %}
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Cancel
+          </button>
+        {% endif %}
+  
+        {# Close button #}
+        {% if ls_header_close_button %}
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Close
+          </button>
+        {% endif %}
+  
+        {# Icons #}
+        {% if ls_header_icons %}
+          <a class="mdl-navigation__link ls-toolbar-icon" href="#"><span class="icon icon-gift"></span></a>
+          <a class="mdl-navigation__link ls-toolbar-icon" href="#">
+            <span class="icon icon-standings"></span>
+            <span class="text">245<small>th</small></span>
+          </a>
         {% endif %}
 
       </nav>
@@ -46,7 +75,10 @@
     {% endif %}
 
   </header>
+
 	{% block top_header_drawer %}
-    {% include 'structure/top-header/drawer.twig' %}
+    {% if ls_header_no_drawer != 'true' %}
+      {% include 'structure/top-header/drawer.twig' %}
+    {% endif %}
 	{% endblock %}
 {% endblock %}
