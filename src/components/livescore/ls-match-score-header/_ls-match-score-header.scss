@@ -6,7 +6,7 @@
     display: flex;
     width: auto;
     background: $ls-color-white;
-    padding: 0 14px;
+    padding: 0 10px;
 
     a {
       text-decoration: none;
@@ -40,7 +40,7 @@
 
 
         &--team1 {
-          padding-right:15px;
+          padding-right: 10px;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
@@ -48,22 +48,22 @@
           .qualified {
             position: absolute;
             bottom:1px;
-            right: 15px;
+            right: 10px;
             display: flex;
             flex-flow: row nowrap;
             justify-content:flex-end;
             text-transform: uppercase;
-            font-size: 10px;
+            font-size: 9px;
             color: $ls-primary-color;
 
             .icon-tick {
-              margin: 3px 3px;
+              margin: 3px 2px;
             }
           }
         }
 
         &--team2 {
-          padding-left:15px;
+          padding-left: 10px;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
@@ -71,16 +71,16 @@
           .qualified {
             position: absolute;
             bottom:1px;
-            left: 15px;
+            left: 10px;
             display: flex;
             flex-flow: row nowrap;
             justify-content:flex-end;
             text-transform: uppercase;
-            font-size: 8px;
+            font-size: 9px;
             color: $ls-primary-color;
 
             .icon-tick {
-              margin: 3px 3px;
+              margin: 3px 2px;
             }
           }
         }
