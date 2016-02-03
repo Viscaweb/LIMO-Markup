@@ -1,4 +1,4 @@
-.ls-team-standing-statistics{
+.ls-player-goals-chart{
   position: relative;
   margin: auto;
 
@@ -29,6 +29,17 @@
       text-align: center;
       margin-bottom: 30px;
       margin-top: 5px;
+    }
+
+    .description{
+      margin-top: 20px; 
+      background: rgba(0,0,0, 0.13);
+      padding: 17px;
+      color: $ls-color-white;
+      font-weight: $ls-font-weight-light;
+      font-size: ls-font-size(1px,'large');
+      line-height: ls-font-size(5px,'large');
+      text-align: center;
     }
   }
 }
