@@ -171,6 +171,10 @@ ul.mdl-button-group {
 		min-width: $button-min-width;
 		padding: 0 $button-padding;
 		color: $button-secondary-color;
+		
+		&:focus {
+			font-size: $ls-button-font-size;
+		}
 	}
 
 	&.mdl-button--large{
