@@ -18,7 +18,7 @@
     .icon{
       flex-grow: 0;
       flex-shrink: 0;
-      flex-basis: 46px;
+      flex-basis: auto;
       color: #abd07b;
       font-size: ls-font-size(21px, 'large');
     }
@@ -27,7 +27,7 @@
       padding-left: 5px;
       flex-grow: 0;
       flex-shrink: 0;
-      flex-basis: 46px;
+      flex-basis: auto;
       font-size: ls-font-size(46px, 'large');
       font-weight: $ls-font-weight-thin;
       color: $ls-color-white;
@@ -51,12 +51,12 @@
 
         &__team{
           display: flex;
-          align-items: center;
-          justify-content: flex-start;
-          flex-wrap: wrap-reverse;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
 
           &--team1{
-            justify-content: flex-end;
+            align-items: flex-end;
           }
         }
 
