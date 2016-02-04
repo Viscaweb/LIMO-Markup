@@ -1,0 +1,271 @@
+.ls-player-matches-listing{
+
+  .total-goals{
+    background: url("#{$ls-img-path}/green-field-horizontal.png");
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+
+    .title{
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 100%;
+      color: rgba(255, 255, 255, 0.57);
+      font-size: ls-font-size(8px, 'large');
+      font-weight: $ls-font-weight-light;
+    }
+
+    .icon{
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 46px;
+      color: #abd07b;
+      font-size: ls-font-size(21px, 'large');
+    }
+
+    .counter{
+      padding-left: 5px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: 46px;
+      font-size: ls-font-size(46px, 'large');
+      font-weight: $ls-font-weight-thin;
+      color: $ls-color-white;
+    }
+  }
+
+  .ls-list-matches{
+
+    .row{
+
+      .cell{
+
+        &__date{
+          display: flex;
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 45px;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &__team{
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-wrap: wrap-reverse;
+
+          &--team1{
+            justify-content: flex-end;
+          }
+        }
+
+        &__score{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &__minute{
+          padding: 0;
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 45px;
+          text-align: center;
+          font-weight: $ls-font-weight-medium;
+
+          > span{
+            display: block;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            background-color: $ls-player-matches-listing-minute-bg;
+          }
+
+          > span + span{
+            border-top: 1px solid #f7f7f7;
+          }
+        }
+      }
+
+      &--head{
+
+        .cell{
+          padding-top: 7px;
+          padding-bottom: 7px;
+          background-color: $ls-color-white;
+          font-weight: $ls-font-weight-light;
+        }
+      }
+    }
+  }
+}
+
+.ls-list-matches {
+
+  background: $ls-color-white;
+
+  .row {
+
+    .cell {
+
+      &__team {
+
+        &__cards {
+          display: block;
+          position: absolute;
+          padding: 0;
+          text-align: right;
+          right: 5px;
+
+            .red-card {
+              background: rgb(255, 0, 0);
+              width: 8px;
+              height: 11px;
+              display: block;
+              float: left;
+              margin-left: 4px;
+              color: $ls-color-white;
+            }
+          }
+
+        &--team2 {
+
+          .cell__team__cards {
+            text-align: left;
+            left: 5px;
+            right: auto;
+
+            .red-card {
+              margin-left: 0;
+              margin-right: 4px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .row--match {
+    color: $ls-text-color;
+    padding:0;
+
+    &.event-live {
+
+      .cell {
+
+        &__score {
+          color: $ls-color-live;
+        }
+
+        &__time {
+          color: $ls-color-live;
+
+          &:before {
+            content: '';
+            display: block;
+            float: left;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $ls-color-live;
+            margin-right: 4px;
+            margin-top: 5px;
+            @extend .blinking;
+          }
+        }
+      }
+
+      &.paused {
+        .match-list {
+
+          &__time {
+
+            &:before {
+              background: darken($ls-color-white, 30%);
+              @extend .animation-reset;
+            }
+          }
+        }
+      }
+    }
+
+    &.event-won {
+      background: $ls-color-event-won-bg;
+
+    }
+
+    &.event-lost {
+      background: $ls-color-event-lost-bg;
+
+    }
+
+    &.event-draw {
+      background: $ls-color-event-draw-bg;
+    }
+
+    .league-badge {
+      position: absolute;
+      color:#8f8f8f;
+      background: #f5f5f5;
+      padding: 0px 4px;
+      font-size: 10px;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: -1px;
+        right: -8px;
+        width: 0;
+        height: 0;
+        border-right: 8px solid transparent;
+        border-top: 18px solid #f5f5f5;
+      }
+    }
+  }
+
+
+
+  > .row:active {
+
+      &.row--highlight {
+        background: darken($ls-color-highlight, 5%);
+      }
+
+      &.event-won {
+        background: darken($ls-color-event-won-bg, 5%);
+      }
+
+      &.event-lost {
+        background: darken($ls-color-event-lost-bg, 5%);
+      }
+
+      &.event-draw {
+        background: darken($ls-color-event-draw-bg, 5%);
+      }
+
+
+
+  }
+
+  &.ls-list-matches--mygames {
+
+    .row--match {
+
+      position: relative;
+
+      .cell {
+
+        &__time {
+          padding-top: 24px;
+          padding-bottom: 2px;
+
+        }
+      }
+    }
+  }
+}
+
+.updated {
+  background: $ls-color-updated!important;
+  color: #fff!important;
+}
