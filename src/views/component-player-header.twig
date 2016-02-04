@@ -1,0 +1,11 @@
+{% extends "layouts/default-layout.twig" %}
+
+
+{# Page variables #}
+{% set page_title = 'Player header' %}
+{% set ls_header_switch = true %}
+{% set ls_header_brand_logo = true %}
+
+{% set main_content %}
+    {% include 'blocks/sports/player/player_header.html.twig' %}
+{% endset %}
