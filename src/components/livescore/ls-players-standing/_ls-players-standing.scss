@@ -40,33 +40,6 @@
         line-height: ls-font-size(41px,'large');
       }
     }
-
-    .title{
-      flex-grow: 1;
-      flex-shrink: 1;
-      flex-basis: 100%;
-      color: rgba(255, 255, 255, 0.57);
-      font-size: ls-font-size(8px, 'large');
-      font-weight: $ls-font-weight-light;
-    }
-
-    .icon{
-      flex-grow: 0;
-      flex-shrink: 0;
-      flex-basis: auto;
-      color: #abd07b;
-      font-size: ls-font-size(21px, 'large');
-    }
-
-    .counter{
-      padding-left: 5px;
-      flex-grow: 0;
-      flex-shrink: 0;
-      flex-basis: auto;
-      font-size: ls-font-size(46px, 'large');
-      font-weight: $ls-font-weight-thin;
-      color: $ls-color-white;
-    }
   }
 
   .ls-list{
