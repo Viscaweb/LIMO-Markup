@@ -144,6 +144,12 @@ $ls-comment-thread-compose-height: 			66px;
 //Player matches listing widget
 $ls-player-matches-listing-minute-bg: 	#f4f9ed;
 
+//Team goals statistics
+$ls-team-goals-stats-scored-color: 			#87b762;
+$ls-team-goals-stats-conceded-color: 		#dd4f3b;
+$ls-team-goals-stats-nodata-color: 			#d9d9d9;
+$ls-team-goals-stats-bar-height: 				9px;
+
 //Sprite
 $ls-image-sprite-icons : "../assets/img/sprite/sprite-icons.png";
 $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
