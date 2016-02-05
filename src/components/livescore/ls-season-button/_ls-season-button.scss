@@ -19,3 +19,13 @@
 		background-position: center 11px;
 	}
 }
+
+.ls-hidden-select {
+
+	font-size: $ls-button-font-size;
+
+	&:focus,
+	&:active{
+		font-size: $ls-button-font-size;
+	}
+}
