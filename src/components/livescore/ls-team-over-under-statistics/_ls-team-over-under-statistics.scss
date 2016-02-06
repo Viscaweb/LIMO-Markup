@@ -1,0 +1,90 @@
+.ls-team-over-under-statistics{
+  background-color: $ls-color-white;
+
+  .row{
+    padding: 0;
+
+    .cell{
+      border-right: $ls-list-border;
+      padding: 0;
+
+      &__name{
+        display: flex;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        align-items: center;
+        justify-content: center;
+        background-color: #fafafa;
+        white-space: normal;
+        padding: 0 10px;
+        box-sizing: border-box;
+
+        span{
+          text-align: center;
+        }
+      }
+
+      &__stat{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: flex-start;
+        font-weight: $ls-font-weight-normal;
+        padding: 0;
+
+        .date{
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: auto;
+          text-align: center;
+          font-weight: $ls-font-weight-medium;
+          padding: 15px 0;
+        }
+
+        .graph{
+          flex-grow: 1;
+          flex-shrink: 1;
+          flex-basis: auto;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding-bottom: 15px;
+
+          .circle{
+            display: flex;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: 5px solid #b3b3b3;
+            min-width: $ls-team-over-under-stats-second-size;
+            min-height: $ls-team-over-under-stats-second-size;
+            align-items: center;
+            justify-content: center;
+            font-size: ls-font-size(8px,'large');
+            font-weight: $ls-font-weight-light;
+            margin-bottom: 8px;
+
+            &--first{
+              min-height: $ls-team-over-under-stats-first-size;
+              min-width: $ls-team-over-under-stats-first-size;
+            }
+
+            &--success{
+              border-color: #5da400;
+            }
+          }
+        }
+
+        .percent{
+          text-align: center;
+          font-weight: $ls-font-weight-thin;
+          font-size: ls-font-size(2px);
+          font-size: ls-font-size(6px);
+        }
+      }
+    }
+  }
+}
