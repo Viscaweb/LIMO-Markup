@@ -3,11 +3,18 @@
   .top-players{
     background: url("#{$ls-img-path}/green-field-horizontal.png");
     padding: 30px 10px 20px;
-    display: flex;
-    align-items: flex-start;
 
     @media #{$ls-retina} {
       background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+    }
+
+    .player-info, .player-scores{
+      display: flex;
+      align-items: center;
+    }
+
+    .player-info{
+      align-items: flex-start;
     }
 
     .player{
@@ -15,6 +22,11 @@
       flex-shrink: 1;
       flex-basis: 100%;
       text-align: center;
+      
+      a{
+        text-decoration: none;
+        display: block;
+      }
 
       .image{
         width: 76px;
@@ -33,9 +45,16 @@
       }
 
       .name{
-        color: $ls-color-white;
+        color: rgba(255, 255, 255, 0.57);
         font-weight: $ls-font-weight-light;
       }
+    }
+
+    .player-score{
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 100%;
+      text-align: center;
 
       .score{
         color: $ls-color-white;
