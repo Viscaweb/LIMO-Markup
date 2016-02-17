@@ -1,0 +1,95 @@
+{# Simple Divider #}
+{% include 'blocks/dividers/divider-simple.twig' with {
+    'divider_title': 'Goals Statistics'
+} %}
+
+<div class="ls-team-goals-statistics">
+  <div class="goals-general">
+    <div class="goals goals--conceded">
+      <div class="icon"><span class="icon-football"></span></div>
+      <div class="value">69</div>
+      <div class="name">Scored</div>
+    </div>
+    <div class="goals goals--scored">
+      <div class="icon"><span class="icon-football"></span></div>
+      <div class="value">69</div>
+      <div class="name">Scored</div>
+    </div>
+  </div>
+  <ul class="mdl-list ls-list ls-list--goals-statistics">
+    <li class="row row--head">
+      <div class="cell cell__goals cell__goals--conceded">Conceded</div>
+      <div class="cell cell__minute">Min</div>
+      <div class="cell cell__goals cell__goals--scored">Scored</div>
+    </li>
+    <li class="row">
+      <div class="cell cell__goals cell__goals--conceded">
+        <div class="bar" style="width: 0%;"></div>
+        <span class="value">0</span>
+      </div>
+      <div class="cell cell__minute"><span>1’ 15’</span></div>
+      <div class="cell cell__goals cell__goals--scored">
+        <span class="value">1</span>
+        <div class="bar" style="width: 5%;"></div>
+      </div>
+    </li>
+    <li class="row">
+      <div class="cell cell__goals cell__goals--conceded">
+        <div class="bar" style="width: 0%;"></div>
+        <span class="value">0</span>
+      </div>
+      <div class="cell cell__minute"><span>16’ - 30'</span></div>
+      <div class="cell cell__goals cell__goals--scored">
+        <span class="value">0</span>
+        <div class="bar" style="width: 0%;"></div>
+      </div>
+    </li>
+    <li class="row">
+      <div class="cell cell__goals cell__goals--conceded">
+        <div class="bar" style="width: 20%;"></div>
+        <span class="value">4</span>
+      </div>
+      <div class="cell cell__minute"><span>31’ - 45'</span></div>
+      <div class="cell cell__goals cell__goals--scored">
+        <span class="value">5</span>
+        <div class="bar" style="width: 20%;"></div>
+      </div>
+    </li>
+    <li class="row">
+      <div class="cell cell__half-time"><span>Half Time</span></div>
+    </li>
+    <li class="row">
+      <div class="cell cell__goals cell__goals--conceded">
+        <div class="bar" style="width: 0%;"></div>
+        <span class="value">0</span>
+      </div>
+      <div class="cell cell__minute"><span>46’ - 60’</span></div>
+      <div class="cell cell__goals cell__goals--scored">
+        <span class="value">9</span>
+        <div class="bar" style="width: 65%;"></div>
+      </div>
+    </li>
+    <li class="row">
+      <div class="cell cell__goals cell__goals--conceded">
+        <div class="bar" style="width: 50%;"></div>
+        <span class="value">7</span>
+      </div>
+      <div class="cell cell__minute"><span>61’ - 75’</span></div>
+      <div class="cell cell__goals cell__goals--scored">
+        <span class="value">2</span>
+        <div class="bar" style="width: 13%;"></div>
+      </div>
+    </li>
+    <li class="row">
+      <div class="cell cell__goals cell__goals--conceded">
+        <div class="bar" style="width: 60%;"></div>
+        <span class="value">8</span>
+      </div>
+      <div class="cell cell__minute"><span>76’ - 90’</span></div>
+      <div class="cell cell__goals cell__goals--scored">
+        <span class="value">12</span>
+        <div class="bar" style="width: 100%;"></div>
+      </div>
+    </li>
+  </ul>
+</div>

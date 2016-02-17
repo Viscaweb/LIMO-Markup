@@ -1,0 +1,133 @@
+.ls-players-standing{
+
+  .top-players{
+    background: url("#{$ls-img-path}/green-field-horizontal.png");
+    padding: 30px 10px 20px;
+
+    @media #{$ls-retina} {
+      background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+    }
+
+    .player-info, .player-scores{
+      display: flex;
+      align-items: center;
+    }
+
+    .player-info{
+      align-items: flex-start;
+    }
+
+    .player{
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 100%;
+      text-align: center;
+      
+      a{
+        text-decoration: none;
+        display: block;
+      }
+
+      .image{
+        width: 76px;
+        height: 76px;
+        border-radius: 50%;
+        overflow: hidden;
+        background-color: rgba(0, 0, 0, 0.27);
+        display: inline-flex;
+        align-items: flex-end;
+        justify-content: center;
+
+        > img{
+          max-width: 100%;
+          max-height: 95%;
+        }
+      }
+
+      .name{
+        color: rgba(255, 255, 255, 0.57);
+        font-weight: $ls-font-weight-light;
+      }
+    }
+
+    .player-score{
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 100%;
+      text-align: center;
+
+      .score{
+        color: $ls-color-white;
+        font-weight: $ls-font-weight-thin;
+        font-size: ls-font-size(41px,'large');
+        line-height: ls-font-size(41px,'large');
+      }
+    }
+  }
+
+  .ls-list{
+    background-color: $ls-color-white;
+
+    .row{
+      padding: 0;
+
+      .cell{
+        border-right: $ls-list-border;
+        padding: 9px 0;
+
+        &__num{
+          display: flex;
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 38px;
+          justify-content: center;
+          align-items: center;
+          background-color: #FAFAFA;
+        }
+
+        &__player{
+          position: relative;
+          display: flex;
+          align-items: center;
+          padding-left: 7px;
+          padding-right: 7px;
+          overflow: hidden;
+
+          > img{
+            max-height: 26px;
+            max-width: 26px;
+            position: absolute;
+            left: 8px;
+            bottom: 0;
+          }
+
+          > a{
+            text-decoration: none;
+            color: $ls-link-color;
+            font-weight: $ls-font-weight-light;
+            margin-left: 32px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        &__goals, &__first, &__pen{          
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 46px;
+          text-align: center;
+        }
+      }
+
+      &--head{
+
+        .cell{
+          padding-top: 7px;
+          padding-bottom: 7px;
+          background-color: $ls-color-white;
+          font-weight: $ls-font-weight-light;
+        }
+      }
+    }
+  }
+}

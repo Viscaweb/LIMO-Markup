@@ -1,0 +1,42 @@
+
+.mdl-snackbar {
+
+  &__icon{
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span{
+      max-width: 24px;
+    }
+  }
+
+  &--success{
+
+    .mdl-snackbar__icon, .mdl-snackbar__action{
+      color: $ls-success-color;
+    }
+  }
+
+  &--error{
+
+    .mdl-snackbar__icon, .mdl-snackbar__action{
+      color: $ls-error-color;
+    }
+  }
+
+  &--warning{
+
+    .mdl-snackbar__icon, .mdl-snackbar__action{
+      color: $ls-warning-color;
+    }
+  }
+
+  &--info{
+
+    .mdl-snackbar__icon, .mdl-snackbar__action{
+      color: $ls-info-color;
+    }
+  }
+}

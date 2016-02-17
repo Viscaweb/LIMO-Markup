@@ -1,5 +1,6 @@
 @import "_color-definitions";
 @import "functions";
+@import "ls-typography/ls-typography";
 
 /* Livescore custom styles */
 $ls-brand-logo-size: 25px;
@@ -13,12 +14,32 @@ $ls-color-live-rgb: 		"277, 48, 0";
 $ls-text-color: 				#484848;
 $ls-primary-color:			#5da400;
 $ls-green-active-color:	#5da400;
+$ls-grey-contrast: 			#d8d8d8;
 $ls-star-active:				#ffc600;
+$ls-red-draw:						#cc0000;
+$ls-link-color: 				#0053a8;
+$ls-success-color: 			#5da400;
+$ls-error-color: 				#ea0000;
+$ls-warning-color: 			#f6b514;
+$ls-info-color: 				#a4cfe9;
 
 //Social colors
 $ls-color-facebook: 		#395fa9;
 $ls-color-twitter: 			#27c4eb;
 $ls-color-googleplus: 	#b73d3d;
+
+//Typography
+$ls-font-size-base:          	14px;
+$ls-font-size-small:          $ls-font-size-base - 3px;
+$ls-font-size-large:          $ls-font-size-base + 3px; 
+$ls-font-weight-thin:		 			100;
+$ls-font-weight-light:	 			300;
+$ls-font-weight-normal: 			400;
+$ls-font-weight-medium: 			500;
+$ls-font-weight-bold: 				700;
+
+//Image paths
+$ls-img-path: "../assets/img";
 
 //Top Header
 $ls-top-header-border-bottom: 	1px solid #e2e2e2;
@@ -53,6 +74,11 @@ $ls-button-font-weight:					300;
 $ls-button-font-size:						16px;
 $ls-button-large-size:					46px; 
 $ls-button-large-icon-size:			20px;
+$ls-button-arrow-margin:				15px;
+
+//Switch Button
+$ls-switch-compact-label-height: 				40px;
+$ls-switch-compact-label-font-size: 		12px;
 
 //Lists
 $ls-list-padding:				13px 15px;
@@ -108,11 +134,38 @@ $ls-rank-clear-red-color:         rgba(239, 216, 216, 1);
 $ls-cell-stat-up:                 rgba(93, 164, 0, 1);
 $ls-cell-stat-down:               rgba(229, 104, 13, 1);
 
+//Match Statistics Widget
+$ls-match-statistics-possesion-bar-height: 			26px;
+$ls-match-statistics-list-bg: 									$ls-color-white;
+$ls-match-statistics-bar-height: 								9px;
+$ls-match-statistics-bar-bg: 										$ls-grey-contrast;
+$ls-match-statistics-bar-high-bg: 							$ls-green-active-color;
+
+//Comment thread widget
+$ls-comment-thread-avatar-size: 				64px;
+$ls-comment-thread-own-color: 					#e0e8d5;
+$ls-comment-thread-compose-height: 			66px;
+
+//Player matches listing widget
+$ls-player-matches-listing-minute-bg: 	#f4f9ed;
+
+//Team goals statistics
+$ls-team-goals-stats-scored-color: 			#87b762;
+$ls-team-goals-stats-conceded-color: 		#dd4f3b;
+$ls-team-goals-stats-nodata-color: 			#d9d9d9;
+$ls-team-goals-stats-bar-height: 				9px;
+
+//Team over/under statistics
+$ls-team-over-under-stats-first-size: 		96px;
+$ls-team-over-under-stats-second-size: 		69px;
 
 //Sprite
 $ls-image-sprite-icons : "../assets/img/sprite/sprite-icons.png";
 $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
 
+
+//Media Querys
+$ls-retina: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx)";
 
 /* ==========  TYPOGRAPHY  ========== */
 

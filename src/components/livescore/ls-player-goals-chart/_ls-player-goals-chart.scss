@@ -1,0 +1,49 @@
+.ls-player-goals-chart{
+  position: relative;
+  margin: auto;
+
+  /*Prediction chart*/
+  .chart{
+    background: url("#{$ls-img-path}/green-field-horizontal.png");
+    padding: 20px;
+
+    @media #{$ls-retina} {
+      background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+    }
+
+    .chart-container{
+      position: relative;
+    }
+
+    .chart-marker{
+      position: absolute;
+      height: 38px;
+      width: 38px;
+
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+
+    .title{
+      display: block;
+      color: rgba($ls-color-white, 0.57);
+      font-size: ls-font-size(2px,'large');
+      text-align: center;
+      margin-bottom: 30px;
+      margin-top: 5px;
+    }
+
+    .description{
+      margin-top: 20px; 
+      background: rgba(0,0,0, 0.13);
+      padding: 17px;
+      color: $ls-color-white;
+      font-weight: $ls-font-weight-light;
+      font-size: ls-font-size(1px,'large');
+      line-height: ls-font-size(5px,'large');
+      text-align: center;
+    }
+  }
+}

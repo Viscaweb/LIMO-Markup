@@ -42,6 +42,7 @@
 		outline: none;
 		padding: 0 10px;
 		color: darken($ls-color-white, 43%);
+		white-space: nowrap;
 
 		&:hover{
 			background-color: darken($ls-divider-bg, 5.2%);
@@ -88,5 +89,26 @@
 	}
 }
 
+//Counter
+.ls-divider__counter{
+	font-size: ls-font-size(4px,'large');
+	padding: 0 10px;
+	color: lighten($ls-text-color, 2%);
+}
 
+//Sport icon
+.ls-divider__sport-icon{
+	display: flex;
+	
+	> a{
+		padding: 0 8px;
+		margin-right: 13px;
+		text-decoration: none;
+		outline: none;
 
+		&:hover{
+			background-color: darken($ls-divider-bg, 5.2%);
+		}
+	}
+
+}

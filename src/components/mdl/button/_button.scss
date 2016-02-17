@@ -5,6 +5,16 @@
 	padding: $ls-button-padding;
 	min-width: 46px;
 	box-sizing: border-box;
+
+	&--delete-icon{
+	  float: left;
+	  padding: 0 8px;
+	  min-width: 40px;
+
+	  .icon{
+	  	vertical-align: middle;
+	  }
+	}
 }
 
 // Raised buttons
@@ -31,6 +41,11 @@
 
 	.mdl-button__icon-right{
 		float: right;
+		line-height: $ls-button-large-size;
+	}	
+
+	.mdl-button__icon-left{
+		float: left;
 		line-height: $ls-button-large-size;
 	}
 }
@@ -66,9 +81,12 @@
 }
 
 .mdl-button__icon-left{
-	margin-right: 25px;
+	margin-right: $ls-button-arrow-margin;
 }
 
+.mdl-button__icon-right{
+	margin-left: $ls-button-arrow-margin;
+}
 
 //Button group
 .mdl-button-group{
@@ -153,6 +171,10 @@ ul.mdl-button-group {
 		min-width: $button-min-width;
 		padding: 0 $button-padding;
 		color: $button-secondary-color;
+		
+		&:focus {
+			font-size: $ls-button-font-size;
+		}
 	}
 
 	&.mdl-button--large{

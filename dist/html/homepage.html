@@ -60,6 +60,15 @@
 		<script src="../assets/js/material-datepicker/material-datepicker/js/material.datepicker.js"></script>
 		<link rel="stylesheet" href="../assets/js/material-datepicker/material-datepicker/css/material.datepicker.css">
 
+		<!-- Google Charts -->
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+		<!-- jQuery UI -->
+		<script src="../assets/js/jquery-ui/jquery-ui.min.js"></script>
+
+		<!-- jQuery UI - Touch Punch -->
+		<script src="../assets/js/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
 		<!-- LS Scripts -->
 		<script src="../assets/js/app.js"></script>
 		
@@ -73,32 +82,31 @@
 
 			  <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-             <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="LIMO"></div>
-            <span class="mdl-layout-title">Football</span>
+
+                   <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="LIMO"></div>
+      
+      <span class="mdl-layout-title">Football</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
 
-        
-        
-        
-                  <label for="switch-1" class="mdl-switch-label-left">
-            <span class="mdl-switch__label">All</span>
-          </label>
-          <label class="mdl-switch mdl-switch-live mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-            <input type="checkbox" id="switch-1" class="mdl-switch__input" checked />
-            <span class="mdl-switch__label">Live</span>
-          </label>
-              </nav>
+                
+                
+                  
+                  
+                  
+                
+      </nav>
     </div>
 
     
     
     
   </header>
-	    <div class="mdl-layout__drawer">
+
+	          <div class="mdl-layout__drawer">
   <span class="mdl-layout-title">
-  	<img src="../assets/img/drawer-logo.png" width="159px" height="33px" alt="Logo">
+  	<img class="drawer__brand-logo" src="../assets/img/drawer-logo.png" alt="Logo">
   </span>
   <ul class="mdl-navigation">
     <li class="mdl-navigation__open mdl-navigation__active">
@@ -138,12 +146,12 @@
       <a class="mdl-navigation__link" href="#"><span class="icon icon-googleplus"></span></a>
     </li>
     <li><a class="mdl-navigation__link" href=""><span class="icon icon-help"></span>Help</a></li>
-    <li><a class="mdl-navigation__link" href=""><i class="icon material-icons">view_list</i>Sitemap</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-view_list"></span>Sitemap</a></li>
     <li><a class="mdl-navigation__link" href=""><span class="icon icon-info"></span>About WhatTheScore</a></li>
-    <li><a class="mdl-navigation__link" href=""><i class="icon material-icons">verified_user</i>Conditions and Privacy</a></li>
-    <li><a class="mdl-navigation__link" href=""><i class="icon material-icons">email</i>Contact us</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-verified_user"></span>Conditions and Privacy</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-email"></span>Contact us</a></li>
   </ul>
-</div>	
+</div>    	
 			<main class="mdl-layout__content">
   <div class="page-content">
 
@@ -159,12 +167,55 @@
     </a>
 </div>
 
+
+<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches ls-list-matches--mygames">
+    <li class="row row--divider ls-divider">
+	<div class="cell cell__divider-title cell__icon ls-divider__title"><span class="ls-divider__icon icon-bell"></span>My Games</div>
+</li>
+
+    <li class="row row--match">
+        <a href="#">
+            <div class="league-badge">Ligue 1</div>
+            <div class="cell cell__time"><span class="hour">18:00</span></div>
+            <div class="cell cell__team cell__team--team1 win"><span>MO Béjaia</span></div>
+            <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
+            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+    <li class="row row--match event-live event-paused">
+        <a href="#">
+            <div class="league-badge">Bund. 1</div>
+            <div class="cell cell__time"><span class="status">HT</span></div>
+            <div class="cell cell__team cell__team--team1"><span>PSG</span></div>
+            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
+            <div class="cell cell__team cell__team--team2"><span>Bordeaux</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+    <li class="row row--match event-live">
+        <a href="#">
+            <div class="league-badge">Serie A</div>
+            <div class="cell cell__time"><span class="status">24'</span></div>
+            <div class="cell cell__team cell__team--team1"><span>Perpignan long name</span></div>
+            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">0</span></div>
+            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+</ul>
+
 <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
     <li class="row row--divider ls-divider">
 	<div class="cell cell__divider-title cell__flag ls-divider__title"><img class="ls-divider__flag" src="../assets/img/flag-fr.png" alt="France"></div>
 	<div class="cell cell__league-name">Ligue 1</div>
-	<div class="cell cell__league-stage ls-divider__description">- Matchday 26</div>
-	<div class="cell cell__spacer ls-divider__spacer"></div>
+		<div class="cell cell__spacer ls-divider__spacer"></div>
 </li>    <li class="row row--match">
         <a href="#">
             <div class="cell cell__time"><span class="hour">18:00</span></div>
