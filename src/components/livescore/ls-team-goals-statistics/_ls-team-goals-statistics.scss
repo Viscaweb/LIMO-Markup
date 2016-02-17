@@ -131,11 +131,8 @@
           }
         }
 
-        &--empty{
-
-          .bar{
-            background-color: $ls-team-goals-stats-nodata-color;
-          }
+        .bar[style="width: 0%;"]{
+          background-color: $ls-team-goals-stats-nodata-color;
         }
       }
 

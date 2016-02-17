@@ -2,4 +2,4 @@ vendor/
 external/
 .idea/
 node_modules/
-.orig
+*.orig
