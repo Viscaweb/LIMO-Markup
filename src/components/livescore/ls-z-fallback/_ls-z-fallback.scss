@@ -756,3 +756,61 @@
 		}
 	}
 }
+
+//ls-team-cards-statistics
+.ls-team-cards-statistics{
+
+	.ls-list{
+
+		.row{
+
+			.cell{
+				border-bottom: 1px solid $ls-list-border-color;
+
+				&__name{
+					text-align: left;
+				}
+
+				&__yellow_cards, &__red_cards{
+					width: 70px;
+				}
+			}
+
+			&--head{
+
+				.cell{
+					border-bottom: 1px solid $ls-list-border-color;
+				}
+			}
+		}
+	}
+}
+
+//ls-team-detailed-statistics
+.ls-team-detailed-statistics{
+
+	.ls-list{
+
+		.row{
+
+			.cell{
+				border-bottom: 1px solid $ls-list-border-color;
+
+				&__name{
+					text-align: left;
+				}
+
+				&__value{
+					width: 70px;
+				}
+			}
+
+			&--head{
+
+				.cell{
+					border-bottom: 1px solid $ls-list-border-color;
+				}
+			}
+		}
+	}
+}
