@@ -733,3 +733,26 @@
 		}
 	}
 }
+
+//ls-player-information
+.ls-player-information{
+	
+	.row{
+		
+		.cell{
+			border-top: 1px solid $ls-list-border-color;
+
+			&__record{
+				text-align: left;
+			}
+
+			&__value{
+				text-align: right;
+			}
+
+			.club{
+				display: inline-block;
+			}
+		}
+	}
+}
