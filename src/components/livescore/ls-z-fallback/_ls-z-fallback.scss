@@ -649,3 +649,67 @@
     }
   }
 }
+
+//ls-players-standing
+.ls-players-standing{
+
+	.ls-divider{
+		width: 100%;
+		display: table;
+		table-layout: fixed;
+
+		.cell__flag{
+			display: table-cell;
+			vertical-align: middle;
+			width: 30px;
+		}
+	}
+
+	.top-players{
+
+		.player-info{
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+
+			.player{
+				display: table-cell;
+
+				.image{
+					display: inline-block;
+				}
+			}
+		}
+
+		.player-scores{
+			display: table;
+			table-layout: fixed;
+			width: 100%;
+
+			.player-score{
+				display: table-cell;
+			}
+		}
+	}
+
+	.ls-list{
+
+    .row{
+
+      .cell{
+				
+				&__num{
+					width: 38px;
+				}
+
+				&__player{
+					text-align: left;
+				}
+
+				&__goals, &__first, &__pen{
+					width: 46px;
+				}
+      }
+    }
+  }
+}
