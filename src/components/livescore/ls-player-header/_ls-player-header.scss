@@ -4,6 +4,7 @@
   .row {
     border: none;
     color: $ls-text-color;
+    box-sizing: border-box;
 
     a {
       text-decoration: none;
@@ -11,7 +12,7 @@
     }
 
     .cell {
-     padding:0px 16px ;
+     padding: 0;
 
       &__player--image {
         padding: 0;
@@ -42,8 +43,10 @@
         flex-flow: column;
         align-items: flex-start;
         justify-content: center;
+        overflow: hidden;
 
         .player-name {
+          width: 100%;
 
           .first-name{
             display: block;
@@ -51,6 +54,8 @@
             font-weight: $ls-font-weight-light;
             margin-bottom: 3px;
             color: #6c6c6c;
+            text-overflow: ellipsis;
+            overflow: hidden;
           }
 
           .last-name{
@@ -58,10 +63,13 @@
             font-size: ls-font-size(3px,'large');
             font-weight: $ls-font-weight-medium;
             margin-bottom: 5px;
+            text-overflow: ellipsis;
+            overflow: hidden;
           }
         }
 
         .player-country {
+          width: 100%;
           display: flex;
           align-items: center;
           font-weight: 500;
@@ -74,6 +82,11 @@
           > .country-flag {
               width: 26px;
               margin-right: 5px;
+          }
+
+          .country-name{
+            overflow: hidden;
+            text-overflow: ellipsis;
           }
         }
       }
