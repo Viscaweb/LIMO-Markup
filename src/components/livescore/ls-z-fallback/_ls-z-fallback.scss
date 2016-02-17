@@ -713,3 +713,23 @@
     }
   }
 }
+
+//ls-player-header
+.ls-player-header{
+	border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+
+	.row{
+
+		.cell{
+
+			&__player--image {
+				padding: 13px 0 13px 15px;
+				width: 99px;
+			}
+
+			&__player--info {
+				text-align: left;
+			}
+		}
+	}
+}
