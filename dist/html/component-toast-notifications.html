@@ -85,7 +85,7 @@
 
                    <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="LIMO"></div>
       
-      <span class="mdl-layout-title">Match Prediction</span>
+      <span class="mdl-layout-title">Toast Notifications</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
@@ -155,141 +155,117 @@
 			<main class="mdl-layout__content">
   <div class="page-content">
 
-							  	<script type="text/javascript">
-    google.charts.load("current", {packages:['corechart','bar']});
-    google.charts.setOnLoadCallback(drawChart);
+							
+	<div class="mdl-grid">
+	  <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
 
-    function drawChart() {
-      var data = new google.visualization.DataTable();
-      data.addColumn('string', 'Team');
-      data.addColumn('number', 'Prediction');
-      data.addColumn({type: 'string', role: 'annotation'});
+			<button id="toast-success-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+			  Success
+			</button>
 
-      data.addRows([
-        ['Paris',   20, '20%'],
-        ['Draw',   6, '6%'],
-        ['Saint Étienne', 74, '74%']
-      ]);
+			<button id="toast-error-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+			  Error
+			</button>
 
-        var formatter = new google.visualization.NumberFormat({
-            fractionDigits: 0,
-            suffix: '%'
-        });
-        
-        formatter.format(data, 1);
+			<button id="toast-warning-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+			  Warning
+			</button>
 
-      var options = {
-        height: 200,
-        colors: ['#FFFFFF'],
-        backgroundColor: { fill:'transparent' },
-        chartArea: {'width': '95%', 'height': '80%', 'left': 25 },
-        annotations: {
-            stemColor : 'none',
-            alwaysOutside: true,
-            textStyle: {
-            fontSize: 26,
-            color: '#FFF',
-            auraColor: 'none'
-          }
-        },
-        hAxis: {
-            textStyle:{
-                color: '#FFF',
-                fontSize: 14
-            },
-            gridlines: {
-                color: "#81B53A",
-            },
-            baselineColor: '#81B53A'
-        },
-        vAxis: {
-            viewWindow: {
-                min: 0,
-                max: 100
-            },
-            ticks: [0, 20, 40, 60, 80, 100],
-            textStyle:{color: '#FFF'},
-            //format: '#\'%\'',
-            gridlineColor: '#81B53A',
-            baselineColor: '#81B53A'
-        },
-        legend: { position: "none" }
-      };
+			<button id="toast-info-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+			  Info
+			</button>
 
-      var chart = new google.visualization.ColumnChart(document.getElementById("chart1"));
-      chart.draw(data, options);
-  }
+	  </div>
+	</div>
+	
+		<div id="toast-success" class="mdl-snackbar mdl-js-snackbar mdl-snackbar--success">
+    <div class="mdl-snackbar__icon"><span class="material-icons">done</span></div>
+    <div class="mdl-snackbar__text"></div>
+    <button type="button" class="mdl-snackbar__action"></button>
+	</div>
 
-    //Make google charts responsive
-    $(window).resize(function(){
-        drawChart();
-    });
-</script>
-<div class="ls-match-prediction">
-    <div class="make-prediction">
-        <span class="title">What is your prediction ?</span>
-        <span class="description">(This game is also part of the current prediction contest)</span>
-        <div class="ls-list">
-            <div class="row row__prediction">
-                <div class="cell cell__option">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--option">
-                      1
-                    </button>
-                    <div class="name">Paris</div>
-                </div>
-                <div class="cell cell__option">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--option">
-                      X
-                    </button>
-                    <div class="name">Draw</div>
-                </div>
-                <div class="cell cell__option cell__option--selected">
-                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--option">
-                      2
-                    </button>
-                    <div class="name">Saint Étienne</div>
-                </div>
-            </div>
-        </div>
-        <div class="ls-list">
-            <div class="row row__team-forms">
-                <div class="cell">
-                    <a href="#" class="team-form team-form--won">V</a>
-                    <a href="#" class="team-form team-form--won">V</a>
-                    <a href="#" class="team-form team-form--won">V</a>
-                    <a href="#" class="team-form team-form--draw">N</a>
-                    <a href="#" class="team-form team-form--won">V</a>
-                </div>
-                <div class="cell cell__title">
-                    <span>Team Forms</span>
-                </div>
-                <div class="cell">
-                    <a href="#" class="team-form team-form--won">V</a>
-                    <a href="#" class="team-form team-form--won">V</a>
-                    <a href="#" class="team-form team-form--lost">D</a>
-                    <a href="#" class="team-form team-form--won">V</a>
-                    <a href="#" class="team-form team-form--lost">D</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="prediction-chart">
-        <span class="title">Trend from the community</span>
-        <div class="chart-container" id="chart1"></div>
-    </div>
-</div>
+	<div id="toast-error" class="mdl-snackbar mdl-js-snackbar mdl-snackbar--error">
+    <div class="mdl-snackbar__icon"><span class="material-icons">clear</span></div>
+    <div class="mdl-snackbar__text"></div>
+    <button type="button" class="mdl-snackbar__action"></button>
+	</div>
+
+	<div id="toast-warning" class="mdl-snackbar mdl-js-snackbar mdl-snackbar--warning">
+    <div class="mdl-snackbar__icon"><span class="material-icons">warning</span></div>
+    <div class="mdl-snackbar__text"></div>
+    <button type="button" class="mdl-snackbar__action"></button>
+	</div>
+
+	<div id="toast-info" class="mdl-snackbar mdl-js-snackbar mdl-snackbar--info">
+    <div class="mdl-snackbar__icon"><span class="material-icons">info outline</span></div>
+    <div class="mdl-snackbar__text"></div>
+    <button type="button" class="mdl-snackbar__action"></button>
+	</div>
+	
+
 				
   </div>
 </main>
 
 		</div>
-			<script type="text/javascript">
-			$(document).ready(function(){
+	<script type="text/javascript">
+	var successBtn = document.querySelector('#toast-success-button');
+	var errorBtn = document.querySelector('#toast-error-button');
+	var warningBtn = document.querySelector('#toast-warning-button');
+	var infoBtn = document.querySelector('#toast-info-button');
 
-				//Init core JS
-				App.init();
+	var successToast = document.querySelector('#toast-success');
+	var errorToast = document.querySelector('#toast-error');
+	var warningToast = document.querySelector('#toast-warning');
+	var infoToast = document.querySelector('#toast-info');
 
-			});
-		</script>
-	</body>
+	successBtn.addEventListener('click', function() {
+    var data = {
+      message: 'This is a _success notification',
+      timeout: 4000,
+      actionHandler: function(){
+      	console.log("Action!");
+      },
+      actionText: 'Undo'
+    };
+    successToast.MaterialSnackbar.showSnackbar(data);
+	});
+
+	errorBtn.addEventListener('click', function() {
+    var data = {
+      message: 'This is a _error notification',
+      timeout: 4000,
+      actionHandler: function(){
+      	console.log("Action!");
+      },
+      actionText: 'Undo'
+    };
+    errorToast.MaterialSnackbar.showSnackbar(data);
+	});
+
+	warningBtn.addEventListener('click', function() {
+    var data = {
+      message: 'This is a _warning notification',
+      timeout: 4000,
+      actionHandler: function(){
+      	console.log("Action!");
+      },
+      actionText: 'Undo'
+    };
+    warningToast.MaterialSnackbar.showSnackbar(data);
+	});
+
+	infoBtn.addEventListener('click', function() {
+    var data = {
+      message: 'This is a _info notification',
+      timeout: 4000,
+      actionHandler: function(){
+      	console.log("Action!");
+      },
+      actionText: 'Undo'
+    };
+    infoToast.MaterialSnackbar.showSnackbar(data);
+	});
+</script>
+</body>
 </html>

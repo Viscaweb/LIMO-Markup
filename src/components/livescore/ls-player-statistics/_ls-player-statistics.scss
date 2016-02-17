@@ -3,6 +3,10 @@
   .player-stats{
     background: url("#{$ls-img-path}/green-field-horizontal.png");
 
+    @media #{$ls-retina} {
+      background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+    }
+
     .top-stats, .bottom-stats{
       display: flex;
       align-items: stretch;

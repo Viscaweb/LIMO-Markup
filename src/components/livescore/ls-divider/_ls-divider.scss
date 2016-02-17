@@ -42,6 +42,7 @@
 		outline: none;
 		padding: 0 10px;
 		color: darken($ls-color-white, 43%);
+		white-space: nowrap;
 
 		&:hover{
 			background-color: darken($ls-divider-bg, 5.2%);

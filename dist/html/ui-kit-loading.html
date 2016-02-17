@@ -152,18 +152,24 @@
     <li><a class="mdl-navigation__link" href=""><span class="icon icon-email"></span>Contact us</a></li>
   </ul>
 </div>    	
-			<main class="mdl-layout__content">
+			<main class="mdl-layout__content mdl-loading mdl-loading--active">
   <div class="page-content">
 
 							
+	<div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
+
 				
   </div>
 </main>
 
 		</div>
-	
-	<div class="mdl-loading mdl-loading--active">
-	<div class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active"></div>
-</div>
-</body>
+			<script type="text/javascript">
+			$(document).ready(function(){
+
+				//Init core JS
+				App.init();
+
+			});
+		</script>
+	</body>
 </html>

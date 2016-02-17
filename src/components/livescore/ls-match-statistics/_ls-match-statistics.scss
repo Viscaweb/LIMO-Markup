@@ -8,6 +8,10 @@
 .ls-possesion-graph{
   background: url("#{$ls-img-path}/green-field-horizontal.png");
 
+  @media #{$ls-retina} {
+    background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+  }
+
   .row{
 
     &__data{

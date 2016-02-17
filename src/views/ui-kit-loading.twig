@@ -3,9 +3,10 @@
 {# Page variables #}
 {% set page_title = 'UI Loading' %}
 {% set ls_header_brand_logo = true %}
+{% set ls_content_variables = 'mdl-loading mdl-loading--active' %}
 
-{% block footer_scripts %}
+{% set main_content %}
 
 	{% include 'blocks/loading.twig' %}
 
-{% endblock %}
+{% endset %}

@@ -42,6 +42,7 @@
 		color: lighten($ls-text-color, 30%);
 		text-align: center;
 		min-width: 30px;
+		opacity: 1;
 
 		&.ls-icon{
 			padding-left: 5px;
@@ -164,6 +165,7 @@
 			padding: $ls-drawer-link-padding;
 			font-weight: 300;
 			color: $ls-drawer-link-color;
+			opacity: 1;
 
 		  &:hover {
 	      background-color: darken($ls-color-white, 4%);

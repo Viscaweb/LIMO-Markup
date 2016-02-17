@@ -7,6 +7,10 @@
     background: url("#{$ls-img-path}/green-field-horizontal.png");
     padding: 20px;
 
+    @media #{$ls-retina} {
+      background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+    }
+
     .chart-container{
       position: relative;
     }

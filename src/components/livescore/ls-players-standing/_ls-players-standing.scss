@@ -6,6 +6,10 @@
     display: flex;
     align-items: flex-start;
 
+    @media #{$ls-retina} {
+      background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+    }
+
     .player{
       flex-grow: 1;
       flex-shrink: 1;
