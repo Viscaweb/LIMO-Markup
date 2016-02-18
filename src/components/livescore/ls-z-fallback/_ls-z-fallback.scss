@@ -893,7 +893,6 @@
 }
 
 //ls-team-over-under-statistics
-
 .ls-team-over-under-statistics{
 
 	.row{
@@ -925,4 +924,27 @@
 			}
 		}
 	}
+}
+
+//ls-team-roster
+.ls-team-roster{
+
+  .row{
+
+    .cell{
+      border-bottom: 1px solid $ls-list-border-color;
+
+      &__rank{
+        width: 38px;
+      }
+
+      &__player{
+        text-align: left;
+      }
+
+      &__number{
+        width: 40px;
+      }
+    }
+  }
 }
