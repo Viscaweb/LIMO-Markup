@@ -891,3 +891,38 @@
 		}
 	}
 }
+
+//ls-team-over-under-statistics
+
+.ls-team-over-under-statistics{
+
+	.row{
+
+		.cell{
+			border-bottom: 1px solid $ls-list-border-color;
+
+			&__stat{
+
+				.graph{
+
+					.circle{
+						display: inline-block;
+            line-height: ($ls-team-over-under-stats-second-size - 7px);
+						width: $ls-team-over-under-stats-second-size;
+            height: $ls-team-over-under-stats-second-size;
+
+            &--first{
+              line-height: ($ls-team-over-under-stats-first-size - 7px);
+              height: $ls-team-over-under-stats-first-size;
+             	width: $ls-team-over-under-stats-first-size;
+            }
+					}
+
+          .percent{
+            display: block;
+          }
+				}
+			}
+		}
+	}
+}
