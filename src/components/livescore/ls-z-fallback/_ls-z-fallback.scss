@@ -814,3 +814,80 @@
 		}
 	}
 }
+
+//ls-team-goals-statistics
+.ls-team-goals-statistics{
+
+	.goals-general{
+		display: table;
+		width: 100%;
+		table-layout: fixed;
+
+		.goals{
+			display: table-cell;
+		}
+	}
+
+	.ls-list.ls-list--goals-statistics{
+
+		.row{
+
+			.cell{
+				border-bottom: 1px solid $ls-list-border-color;
+
+				&__minute{ 
+					width: 70px;
+				}
+
+				&__goals{
+					position: relative;
+
+					.value{
+						position: absolute;
+						margin-top: -3px;
+					}
+
+					&--conceded{
+						text-align: right;
+
+						.bar{
+							float: right;
+							margin-right: 30px;
+							margin-left: 20px;
+						}
+
+						.value{
+							right: 10px;
+						}
+					}
+
+					&--scored{
+						text-align: left;
+
+						.bar{
+							float: left;
+							margin-left: 30px;
+							margin-right: 20px;
+						}
+
+						.value{
+							left: 10px;
+						}
+					}
+				}
+			}
+
+			&__half-time{
+				display: none;
+			}
+
+			&--head{
+
+				.cell{
+					border-top: 1px solid $ls-list-border-color;
+					border-bottom: 1px solid $ls-list-border-color;
+				}
+			}
+		}
+	}
+}
