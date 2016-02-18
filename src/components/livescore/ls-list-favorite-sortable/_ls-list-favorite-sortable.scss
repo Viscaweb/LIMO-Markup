@@ -1,6 +1,10 @@
 .ls-list-favorite-sortable {
   background: $ls-color-white;
 
+  .ls-col{
+    display: none;
+  }
+
   .row {
     display: flex;
     width: auto;
