@@ -1,6 +1,5 @@
 .ls-match-statistics {
   position: relative;
-  max-width: 600px;
   margin: auto;
 }
 
@@ -10,6 +9,10 @@
 
   @media #{$ls-retina} {
     background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+  }
+
+  .ls-col{
+    display: none;
   }
 
   .row{

@@ -965,6 +965,39 @@
 }
 
 //ls-match-statistics
+.ls-possesion-graph{
+  
+  .ls-col{
+    display: table-column;
+
+    &--value{
+      width: 10%;
+    }
+
+    &--graph{
+      width: 80%;
+    }
+  }
+
+  .row{
+
+    &--title{
+      display: block;
+      width: 996%;
+
+      > .cell{
+        display: block !important;
+      }
+    }
+
+    .cell{
+
+      &__graph{
+        width: 80%;
+      }
+    }
+  }
+}
 
 .ls-match-statistics-list{
 
