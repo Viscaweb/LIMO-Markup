@@ -959,3 +959,42 @@
     display: table-cell;
   }
 }
+
+//ls-match-statistics
+
+.ls-match-statistics-list{
+
+  > .row{
+
+    > .cell{
+
+      > .row{
+        display: table;
+
+        .cell{
+
+          &__value{
+            width: 50px;
+          }
+
+          &__graph{
+
+            &--home{
+
+              .bar{
+                float: right;
+              }
+            }
+           
+            &--away{
+
+              .bar{
+                float: left;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
