@@ -819,6 +819,7 @@
 .ls-team-goals-statistics{
 
 	.goals-general{
+    box-sizing: border-box;
 		display: table;
 		width: 100%;
 		table-layout: fixed;
@@ -835,11 +836,8 @@
 			.cell{
 				border-bottom: 1px solid $ls-list-border-color;
 
-				&__minute{ 
-					width: 70px;
-				}
-
 				&__goals{
+          width: 44%;
 					position: relative;
 
 					.value{
@@ -878,7 +876,13 @@
 			}
 
 			&__half-time{
-				display: none;
+			  display: block;
+        width: 228%;
+        border-top-width: 0;
+
+        .cell{
+          display: block !important;
+        }
 			}
 
 			&--head{
