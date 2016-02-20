@@ -2,12 +2,13 @@
 
   .total-goals{
     background: url("#{$ls-img-path}/green-field-horizontal.png");
-    padding: 30px 20px;
+    padding: 25px 20px;
     display: flex;
     align-items: center;
 
     @media #{$ls-retina} {
       background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+      background-size: 49px auto;
     }
 
     .title{
@@ -42,6 +43,10 @@
 
     .row{
 
+      > a{
+        color: $ls-text-color;
+      }
+
       .cell{
 
         &__date{
@@ -51,6 +56,7 @@
           flex-basis: 45px;
           justify-content: center;
           align-items: center;
+          color: $ls-player-matches-listing-date-color;
         }
 
         &__team{
@@ -68,6 +74,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          font-size: ls-font-size(1px,'large');
         }
 
         &__minute{
@@ -98,6 +105,7 @@
           padding-bottom: 7px;
           background-color: $ls-color-white;
           font-weight: $ls-font-weight-light;
+          color: $ls-player-matches-listing-header-color;
         }
       }
     }

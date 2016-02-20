@@ -13,6 +13,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 
 .ls-divider__description{
@@ -105,10 +107,7 @@
 		margin-right: 13px;
 		text-decoration: none;
 		outline: none;
-
-		&:hover{
-			background-color: darken($ls-divider-bg, 5.2%);
-		}
+		background-color: darken($ls-divider-bg, 5.2%);
 	}
 
 }

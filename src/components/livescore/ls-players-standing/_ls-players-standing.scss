@@ -6,6 +6,7 @@
 
     @media #{$ls-retina} {
       background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+      background-size: 49px auto;
     }
 
     .player-info, .player-scores{
