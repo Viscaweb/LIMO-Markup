@@ -107,10 +107,7 @@
 		margin-right: 13px;
 		text-decoration: none;
 		outline: none;
-
-		&:hover{
-			background-color: darken($ls-divider-bg, 5.2%);
-		}
+		background-color: darken($ls-divider-bg, 5.2%);
 	}
 
 }
