@@ -1215,3 +1215,70 @@
     }
   }
 }
+
+//comments-widget
+.comments-widget{
+
+  .comments{
+    display: block;
+  }
+
+  .comment{
+    box-sizing: border-box;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .row{
+
+      .cell{
+
+        &__avatar{
+          vertical-align: top;
+          width: 17%;
+        }
+
+        &__content{
+          text-align: left;
+        }
+      }
+
+      &__comment-actions{
+        display: block;
+        width: 590%;
+
+        .cell{
+          width: 10%;
+
+          &__left-actions{
+            text-align: left;
+
+            button{
+              text-align: left;
+            }
+          }
+
+          &__right-actions{
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+
+  .comment-compose{
+    display: table;
+    table-layout: fixed;
+
+    .comment-input{
+      display: table-cell;
+      vertical-align: top;
+    }
+
+    .comment-submit{
+      display: table-cell;
+      vertical-align: top;
+      width: 64px;
+    }
+  }
+}
