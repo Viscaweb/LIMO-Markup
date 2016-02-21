@@ -168,6 +168,7 @@ $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
 
 //Media Querys
 $ls-retina: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx)";
+$ls-high-dpi: "only screen and ( min-device-pixel-ratio: 1.25), only screen and ( min-resolution: 1.25dppx), only screen and (min-resolution: 192dpi)";
 
 /* ==========  TYPOGRAPHY  ========== */
 

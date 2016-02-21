@@ -1136,3 +1136,28 @@
     }
   } 
 }
+
+.match-betting-tips{
+
+  .row{
+
+    .cell{
+      border-bottom: $ls-list-border;
+
+      &__img{
+        width: 50px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+        @media #{$ls-high-dpi} {
+          width: 100px;
+        }
+      }
+
+      &__text{
+        padding: 20px 20px 20px 0;
+        text-align: left;
+      }
+    }
+  }
+}
