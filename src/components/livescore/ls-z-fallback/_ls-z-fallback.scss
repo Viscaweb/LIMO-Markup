@@ -1137,6 +1137,7 @@
   } 
 }
 
+//match-betting-tips
 .match-betting-tips{
 
   .row{
@@ -1157,6 +1158,59 @@
       &__text{
         padding: 20px 20px 20px 0;
         text-align: left;
+      }
+    }
+  }
+}
+
+//ls-player-statistics
+.ls-player-statistics{
+
+  .player-stats{
+    table-layout: fixed;
+    width: 100%;
+    display: table;
+
+    .top-stats{
+      display: table-row;
+    }
+
+    .bottom-stats{
+      display: block;
+      width: 300%;
+    }
+
+    .indicator, .cards{
+      display: table-cell;
+    }
+
+    .cards{
+      width: 10%;
+
+      .number{
+        float: right;
+
+        > span{
+          display: inline-block;
+        } 
+      }
+    }
+  }
+
+  .ls-list{
+
+    .row{
+
+      .cell{
+        border-bottom: $ls-list-border;
+
+        &__league{
+          text-align: left;
+        }
+
+        &__minutes, &__shirts, &__goals, &__yellow_cards, &__red_cards{
+          width: 40px;
+        }
       }
     }
   }
