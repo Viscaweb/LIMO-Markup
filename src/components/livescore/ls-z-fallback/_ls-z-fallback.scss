@@ -28,11 +28,48 @@
 }
 
 .ls-divider {
+
   .row {
     display: flex;
   }
+
   .cell {
     display: flex;
+
+    &__divider-title{
+      text-align: left;
+    }
+
+    &__league-name{
+      text-align: left;
+    }
+
+    &__flag{
+      width: 30px;
+    }
+
+    &__standing-icon{
+      text-align: right;
+    }
+
+    &__right-nav{
+      display: table-cell;
+      text-align: right;
+    }
+  }
+
+  &__right-nav{
+    display: table-cell;
+    text-align: right;
+  }
+
+  &__sport-icon{
+    width: 45px;
+    display: table-cell;
+
+    > a{
+      display: block;
+    }
   }
 }
 
