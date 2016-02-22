@@ -1282,3 +1282,67 @@
     }
   }
 }
+
+//ls-player-matches-listing
+
+.ls-player-matches-listing{
+
+  .total-goals{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    box-sizing: border-box;
+
+    .title, .icon, .counter{
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .icon{
+      width: 40px;
+    }
+
+    .counter{
+      width: 70px;
+    }
+  }
+
+  .ls-divider{
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+    .cell__flag{
+      display: table-cell;
+      vertical-align: middle;
+      width: 30px;
+    }
+
+    &__right-nav{
+      vertical-align: middle;
+    }
+  }
+
+  .ls-list-matches{
+
+    .ls-col{
+      display: table-column;
+
+      &--date{
+        width: 45px;
+      }
+
+      &--minute{
+        width: 45px;
+      }
+    }
+
+    .row{
+      display: table-row;
+
+      .cell{
+        border-bottom: $ls-list-border;
+      }
+    }
+  }
+}
