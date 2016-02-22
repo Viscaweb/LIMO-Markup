@@ -32,56 +32,56 @@
       }
 
       &__team {
-
         position: relative;
         font-size: 13px;
         font-weight: normal;
         padding-top:18px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
 
+        .qualified {
+          position: absolute;
+          bottom:1px;
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content:flex-end;
+          text-transform: uppercase;
+          font-size: 9px;
+          color: $ls-primary-color;
+
+          .icon-tick {
+            margin: 3px 2px;
+          }
+
+          @media #{$ls-small-portrait} {
+
+            .text{
+
+              span{
+                display: none;
+              }
+
+              &:after{
+                content: attr(data-short);
+              }
+            }
+          }
+        }
 
         &--team1 {
           padding-right: 10px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
 
           .qualified {
-            position: absolute;
-            bottom:1px;
             right: 10px;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content:flex-end;
-            text-transform: uppercase;
-            font-size: 9px;
-            color: $ls-primary-color;
-
-            .icon-tick {
-              margin: 3px 2px;
-            }
           }
         }
 
         &--team2 {
           padding-left: 10px;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
 
           .qualified {
-            position: absolute;
-            bottom:1px;
             left: 10px;
-            display: flex;
-            flex-flow: row nowrap;
-            justify-content:flex-end;
-            text-transform: uppercase;
-            font-size: 9px;
-            color: $ls-primary-color;
-
-            .icon-tick {
-              margin: 3px 2px;
-            }
           }
         }
       }
