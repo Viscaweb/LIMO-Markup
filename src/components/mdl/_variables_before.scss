@@ -98,8 +98,7 @@ $ls-collapsible-border-color:					darken($ls-color-white, 3.2%);
 
 //Dialog
 $ls-dialog-shadow: 							0 0 10px rgba(0, 0, 0, 0.17);
-$ls-dialog-border-color:                    #e7e7e7;
-$ls-dialog-border: 							1px solid $ls-dialog-border-color;
+$ls-dialog-border: 							1px solid #e7e7e7;
 $ls-dialog-padding: 						25px 25px 15px;
 $ls-dialog-title-font-size: 		17px;
 $ls-dialog-title-font-weight: 	600;
@@ -168,6 +167,7 @@ $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
 
 //Media Querys
 $ls-retina: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx)";
+$ls-small-portrait: "only screen and (max-device-width : 568px) and (orientation : portrait)";
 $ls-high-dpi: "only screen and ( min-device-pixel-ratio: 1.25), only screen and ( min-resolution: 1.25dppx), only screen and (min-resolution: 192dpi)";
 
 /* ==========  TYPOGRAPHY  ========== */
