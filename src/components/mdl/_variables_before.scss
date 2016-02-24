@@ -98,7 +98,8 @@ $ls-collapsible-border-color:					darken($ls-color-white, 3.2%);
 
 //Dialog
 $ls-dialog-shadow: 							0 0 10px rgba(0, 0, 0, 0.17);
-$ls-dialog-border: 							1px solid #e7e7e7;
+$ls-dialog-border-color:        #e7e7e7;
+$ls-dialog-border: 							1px solid $ls-dialog-border-color;
 $ls-dialog-padding: 						25px 25px 15px;
 $ls-dialog-title-font-size: 		17px;
 $ls-dialog-title-font-weight: 	600;
