@@ -1150,7 +1150,7 @@
         padding-top: 20px;
         padding-bottom: 20px;
 
-        @media #{$ls-high-dpi} {
+        @media #{$ls-high-dpi}, screen and (max-device-width:767px) {
           width: 100px;
         }
       }
