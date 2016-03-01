@@ -1013,11 +1013,11 @@
     display: table-column;
 
     &--value{
-      width: 10%;
+      width: 15%;
     }
 
     &--graph{
-      width: 80%;
+      width: 70%;
     }
   }
 
@@ -1025,7 +1025,7 @@
 
     &--title{
       display: block;
-      width: 996%;
+      width: 666%;
 
       > .cell{
         display: block !important;
