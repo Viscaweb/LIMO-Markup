@@ -11,6 +11,7 @@
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07);
     padding: 10px 14px 0;
     margin-bottom: 13px;
+    overflow: hidden;
 
     .row{
 
@@ -171,6 +172,7 @@
     background-color: rgba(244, 244, 244, 0.91);
     position: fixed;
     left: 0;
+    right: 0;
     bottom: 0;
     width: 100%;
     display: flex;
