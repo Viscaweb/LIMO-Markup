@@ -1388,3 +1388,29 @@
     vertical-align: middle;
   }
 }
+
+//match prediction
+.ls-match-prediction {
+  
+  .make-prediction{
+
+    .row{
+
+      &__team-forms{
+
+        .cell{
+
+          @media screen and (max-device-width: 350px){
+            &__title{
+              width: 23%;
+            }
+          }
+
+          .team-form{
+            margin-right: -1px;
+          }
+        }
+      }
+    }
+  }
+}
