@@ -46,6 +46,11 @@
 
     &__flag{
       width: 30px;
+      text-align: left;
+
+      @media #{$ls-high-dpi}, screen and (max-device-width:767px){
+        width: 40px;
+      }
     }
 
     &__standing-icon{
