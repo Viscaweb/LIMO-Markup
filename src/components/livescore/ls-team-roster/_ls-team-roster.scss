@@ -26,6 +26,7 @@
           padding-left: 7px;
           padding-right: 7px;
           overflow: hidden;
+          text-overflow: ellipsis;
 
           &_logo{
             max-height: 26px;
