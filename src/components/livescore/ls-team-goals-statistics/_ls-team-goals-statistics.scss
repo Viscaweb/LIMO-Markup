@@ -86,29 +86,39 @@
         overflow: hidden;
 
         .bar{
-          position: relative;
-          height: $ls-team-goals-stats-bar-height;
+          flex: 1 100%;
+          display: flex;
+          align-items: center;
 
-          &:before{
-            background-color: inherit;
-            content: "";
-            display: block;
-            width: 2px;
-            height: $ls-team-goals-stats-bar-height * 2;
+          > div{
             position: relative;
-            top: -4px;
+            height: $ls-team-goals-stats-bar-height;
+
+            &:before{
+              background-color: inherit;
+              content: "";
+              display: block;
+              width: 2px;
+              height: $ls-team-goals-stats-bar-height * 2;
+              position: relative;
+              top: -4px;
+            }
           }
         }
 
         .value{
+          flex: 0 auto;
           font-weight: $ls-font-weight-medium;
         }
 
         &--conceded{
-          justify-content: flex-end;
 
           .bar{
-            background-color: $ls-team-goals-stats-conceded-color;
+            justify-content: flex-end;
+
+            > div{
+              background-color: $ls-team-goals-stats-conceded-color;
+            }
           }
 
           .value{
@@ -119,10 +129,13 @@
         &--scored{
 
           .bar{
-            background-color: $ls-team-goals-stats-scored-color;
+            
+            > div{
+              background-color: $ls-team-goals-stats-scored-color;
 
-            &:before{
-              float: right;
+              &:before{
+                float: right;
+              }
             }
           }
 
@@ -131,8 +144,11 @@
           }
         }
 
-        .bar[style="width: 0%;"]{
-          background-color: $ls-team-goals-stats-nodata-color;
+        .bar{
+          
+          > div[style="width: 0%;"]{
+            background-color: $ls-team-goals-stats-nodata-color;
+          }
         }
       }
 
