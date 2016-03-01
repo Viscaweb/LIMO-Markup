@@ -1376,16 +1376,33 @@
   &__icon{
     display: table-cell;
     vertical-align: middle;
+    width: 30px;
+
+    @media screen and (max-device-width: 350px){
+      padding-left: 10px;
+    }
   }
 
   &__text{
     display: table-cell;
     vertical-align: middle;
+
+    @media screen and (max-device-width: 350px){
+      padding-right: 10px;
+      padding-left: 10px;
+    }
   }
 
   &__action{
     display: table-cell;
     vertical-align: middle;
+    width: 40px;
+
+    @media screen and (max-device-width: 350px){
+      padding-right: 10px;
+      padding-left: 10px;
+      width: 60px;
+    }
   }
 }
 
