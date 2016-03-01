@@ -160,6 +160,12 @@
     <div class="ls-col ls-col--team"></div>
     <div class="ls-col ls-col--icon"></div>
     <div class="ls-col ls-col--icon"></div>
+    <li class="row row__team row--definition">
+        <div class="cell cell__flag"></div>
+        <div class="cell cell__team"></div>
+        <div class="cell cell__drag"></div>
+        <div class="cell cell__favorite"></div>
+    </li>
 
     <li class="row row__team">
         <div class="cell cell__flag">
@@ -169,7 +175,7 @@
             <span>Barcelona</span>
         </div>
         <div class="cell cell__drag">
-            <i class="material-icons">reorder</i>
+            <i class="material-icons">&#xE8FE;</i>
         </div>
         <div class="cell cell__favorite">
             <span class="icon icon-star active"></span>
@@ -184,7 +190,7 @@
             <span>PSG</span>
         </div>
         <div class="cell cell__drag">
-            <i class="material-icons">reorder</i>
+            <i class="material-icons">&#xE8FE;</i>
         </div>
         <div class="cell cell__favorite">
             <span class="icon icon-star active"></span>
@@ -199,7 +205,7 @@
             <span>Marseille</span>
         </div>
         <div class="cell cell__drag">
-            <i class="material-icons">reorder</i>
+            <i class="material-icons">&#xE8FE;</i>
         </div>
         <div class="cell cell__favorite">
             <span class="icon icon-star active"></span>
@@ -214,7 +220,7 @@
             <span>Bayern Munich</span>
         </div>
         <div class="cell cell__drag">
-            <i class="material-icons">reorder</i>
+            <i class="material-icons">&#xE8FE;</i>
         </div>
         <div class="cell cell__favorite">
             <span class="icon icon-star active"></span>
@@ -229,7 +235,7 @@
             <span>France</span>
         </div>
         <div class="cell cell__drag">
-            <i class="material-icons">reorder</i>
+            <i class="material-icons">&#xE8FE;</i>
         </div>
         <div class="cell cell__favorite">
             <span class="icon icon-star active"></span>
@@ -244,7 +250,7 @@
             <span>Italie</span>
         </div>
         <div class="cell cell__drag">
-            <i class="material-icons">reorder</i>
+            <i class="material-icons">&#xE8FE;</i>
         </div>
         <div class="cell cell__favorite">
             <span class="icon icon-star active"></span>
@@ -255,10 +261,13 @@
 
 <script type="text/javascript">
     $('.ls-list-favorite-sortable').sortable({ 
+        items: 'li:not(.ls-col, .row--definition)',
         handle: ".cell__drag",
         placeholder: "row__team--placeholder",
         axis: "y"
     });
+
+    $( ".ls-list-favorite-sortable li" ).disableSelection();
 </script>
 				
   </div>

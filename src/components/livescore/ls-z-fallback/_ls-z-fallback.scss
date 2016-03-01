@@ -1124,14 +1124,30 @@
       }
 
       &--placeholder{
-        width: 3061%;
+        display: none;
       }
 
       &.ui-sortable-helper{
+        width: 100% !important;
+
+        .cell__flag{
+          width: 40px;
+        }
+
+        .cell__drag, .cell__favorite{
+          width: 40px;
+        }
         
         .cell__team{
           width: 85%;
         }
+      }
+    }
+
+    &--definition{
+
+      .cell{
+        padding: 0;
       }
     }
   } 
