@@ -719,6 +719,11 @@
 
 				.image{
 					display: inline-block;
+
+          > img{
+            max-height: calc(100% - 7px);
+            padding-top: 7px;
+          }
 				}
 			}
 		}
