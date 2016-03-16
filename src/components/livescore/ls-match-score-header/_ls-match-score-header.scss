@@ -54,8 +54,10 @@
             margin: 3px 2px;
           }
 
-          @media #{$ls-small-portrait} {
+          /* media query to target short version of the keywork */
 
+          /*@media #{$ls-small-portrait} {
+          
             .text{
 
               span{
@@ -66,7 +68,7 @@
                 content: attr(data-short);
               }
             }
-          }
+          }*/
         }
 
         &--team1 {
