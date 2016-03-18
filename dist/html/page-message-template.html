@@ -85,7 +85,7 @@
 
                    <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="LIMO"></div>
       
-      <span class="mdl-layout-title">UI Kit</span>
+      <span class="mdl-layout-title">Password Reset</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
@@ -93,7 +93,10 @@
                 
                 
                   
-                  
+                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Home
+          </button>
+          
                   
                 
       </nav>
@@ -152,96 +155,30 @@
     <li><a class="mdl-navigation__link" href=""><span class="icon icon-email"></span>Contact us</a></li>
   </ul>
 </div>    	
-			<main class="mdl-layout__content">
+			<main class="mdl-layout__content mdl-layout__content--flex">
 						
 				  <div class="page-content">
-							
-    <article class="ls-article">
-    <div class="mdl-card mdl-shadow--2dp ls-news-card">
-        <a href="#" class="mdl-card__title" style="background-image:url('/assets/img/content-top-image-1.jpg'); ">
-        </a>
-
-        <div class="mdl-card__supporting-text">
-
-            <h1>The concept of online Livescore app (h1)</h1>
-
-            <p class="introduction">
-                Intro paragraph using class="lead" : Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit amet non magna.
-            </p>
-            <p>
-                Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Donec sed odio dui. Maecenas sed diam eget risus varius blandit sit met non magna.
-            </p>
-            <h2>Never miss a score ! (h2)</h2>
-            <p>
-                Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.
-            </p>
-            <ul>
-                <li>List item</li>
-                <li>List item</li>
-                <li>List item</li>
-                <li>List item</li>
-                <li>List item</li>
-                <li>List item</li>
-                <li>List item</li>
-            </ul>
-            <h3>Make it your own (h3)</h3>
-            <p>
-                Maecenas sed diam eget risus varius blandit sit amet non magna. Donec ullamcorper nulla non metus auctor fringilla.
-            </p>
-        </div>
-        <div class="mdl-collapsible">
-            <div class="mdl-collapsible__heading">
-			<span class="mdl-collapsible__heading-title">
-				Past Results
-			</span>
-            </div>
-            <div class="mdl-collapsible__body">
-                <div class="mdl-collapsible__body-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolores.</p>
-                </div>
-            </div>
-        </div>
-        <div class="mdl-collapsible">
-            <div class="mdl-collapsible__heading">
-			<span class="mdl-collapsible__heading-title">
-				Past Results
-			</span>
-            </div>
-            <div class="mdl-collapsible__body">
-                <div class="mdl-collapsible__body-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolores.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora, dolores.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</article>
+								<div class="ls-message-widget">
+	<span class="ls-message-widget__icon icon-email"></span>
+	<span class="ls-message-widget__title">Your password has been successfuly reset</span>
+	<span class="ls-message-widget__description">We have sent you an email with a link to reset your password. If you cannot find that email in your inbox after a few minutes, please check your 'junk/spam' folders.</span>
+</div>
 				  </div>
-						
+							<div class="mdl-layout-spacer"></div>
+<div class="ls-forgot-password-button">
+	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  mdl-button--large mdl-button--block mdl-js-ripple-effect">
+		Continue
+	</button>
+</div>
 				</main>			
 								</div>
-	    <script type="text/javascript">
-        $(document).ready(function(){
+			<script type="text/javascript">
+			$(document).ready(function(){
 
-            /*mdl-collapsible*/
-            $(".mdl-collapsible__heading").click(function( e ){
-                var collapsible = $(this).parent();
-                var body = $(".mdl-collapsible__body", collapsible);
+				//Init core JS
+				App.init();
 
-                body.slideToggle({
-                    complete: function(){
-                        collapsible.toggleClass("mdl-collapsible-collapsed");
-                    }
-                });
-            });
-        });
-    </script>
-</body>
+			});
+		</script>
+	</body>
 </html>

@@ -36,10 +36,10 @@
           </label>
         {% endif %}
   
-        {# Cancel button #}
-        {% if ls_header_cancel_button %}
+        {# Custom button #}
+        {% if ls_header_button %}
           <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-            Cancel
+            {{ ls_header_button }}
           </button>
         {% endif %}
   

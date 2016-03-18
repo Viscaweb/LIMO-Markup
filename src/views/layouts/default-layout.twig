@@ -11,9 +11,19 @@
 			{% include 'structure/top-header.twig' %}
 
 			{% embed 'structure/main-content.twig' %}
+
+				{% block page_content_before %}
+					{{page_content_before}}
+				{% endblock %}
+
 				{% block main_content %}
 					{{main_content}}
 				{% endblock %}
+
+				{% block page_content_after %}
+					{{page_content_after}}
+				{% endblock %}
+
 			{% endembed %}
 			
 			{% block after_main_content %}
