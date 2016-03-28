@@ -17,6 +17,15 @@
 	  	top: -1px;
 	  }
 	}
+
+	&--facebook{
+		background-color: $ls-button-facebook-color;
+		color: $ls-color-white;
+
+		&:hover{
+			background-color: darken($ls-button-facebook-color, 5%);
+		}
+	}
 }
 
 // Raised buttons

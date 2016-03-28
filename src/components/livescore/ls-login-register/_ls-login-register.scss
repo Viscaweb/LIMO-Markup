@@ -1,0 +1,55 @@
+.ls-login-register{
+	padding: 20px;
+
+	&__logo{
+		text-align: center;
+		margin-top: 10px;
+
+		img{
+			max-width: 210px;
+		}
+	}
+
+	&__title{
+		font-weight: $ls-font-weight-light;
+		font-size: ls-font-size(2px);
+		line-height: ls-font-size(4px,'large');
+		display: block;
+		text-align: center;
+		margin: 25px 0 23px;
+	}
+
+	&__text{
+		text-align: center;
+		font-size: ls-font-size(2px);
+		line-height: ls-font-size(5px,'large');
+		font-weight: $ls-font-weight-light;
+		display: block;
+	}
+
+	.mdl-textfield{
+		display: block;
+		width: 100%;
+	}
+
+	.mdl-button--facebook{
+		margin-bottom: 18px;
+		
+		.icon{
+			font-size: ls-font-size(10px,'large');
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+	}
+
+	&__forgot-password{
+		text-align: right;
+		margin-bottom: 25px;
+
+		a{
+			color: $ls-link-color;
+			text-decoration: none;
+			font-weight: $ls-font-weight-light;
+		}
+	}
+}

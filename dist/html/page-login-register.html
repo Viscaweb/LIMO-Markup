@@ -74,18 +74,19 @@
 		
 								
 		
-	
+		
+
 </head>
 <body>
-	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer mdl-layout--fixed-tabs">
 
-		  <header class="mdl-layout__header">
+			  <header class="mdl-layout__header">
             
     <div class="mdl-layout__header-row">
 
                    <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="LIMO"></div>
       
-      <span class="mdl-layout-title">Match Head to Head</span>
+      <span class="mdl-layout-title">Connexion</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
@@ -93,24 +94,23 @@
                 
                 
                   
-                  
+                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Cancel
+          </button>
+          
                   
                 
       </nav>
     </div>
 
-          <!-- Tabs -->
-<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-  <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Match Details</a>
-  <a href="#scroll-tab-2" class="mdl-layout__tab">Live Comments</a>
-  <a href="#scroll-tab-3" class="mdl-layout__tab">Lineups</a>
-  <a href="#scroll-tab-4" class="mdl-layout__tab">Head to Head</a>
-  <a href="#scroll-tab-5" class="mdl-layout__tab">Odds</a>
-  <a href="#scroll-tab-6" class="mdl-layout__tab">Standings</a>
-</div>    
     
     
-            
+    
+        						<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+  <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Login</a>
+  <a href="#scroll-tab-2" class="mdl-layout__tab">Register</a>
+</div>
+				
   </header>
 
 	          <div class="mdl-layout__drawer">
@@ -160,120 +160,40 @@
     <li><a class="mdl-navigation__link" href=""><span class="icon icon-verified_user"></span>Conditions and Privacy</a></li>
     <li><a class="mdl-navigation__link" href=""><span class="icon icon-email"></span>Contact us</a></li>
   </ul>
-</div>    	  	
-  	<main class="mdl-layout__content">
-	    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
-	    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
-	    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
-	    <section class="mdl-layout__tab-panel" id="scroll-tab-4">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
-	    <section class="mdl-layout__tab-panel" id="scroll-tab-5">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
-	    <section class="mdl-layout__tab-panel" id="scroll-tab-6">
-	      <div class="page-content"><!-- Your content goes here --></div>
-	    </section>
-
-					
-    <div class="ls-divider">
-	<span class="ls-divider__title">Divider Simple</span>
-</div>    <div class="mdl-list ls-list ls-head-to-head">
-    <div class="row">
-        <div class="cell">
-            <div class="circle circle--first circle--gray1">
-                <span>4</span>
-            </div>
-        </div>
-        <div class="cell">
-            <div class="circle circle--third circle--gray3">
-                <span>1</span>
-            </div>
-        </div>
-        <div class="cell">
-            <div class="circle circle--second circle--gray2">
-                <span>2</span>
-            </div>
-        </div>
-    </div>
-    <div class="row row--infos">
-        <div class="cell">
-            <span>REAL M.</span>
-        </div>
-        <div class="cell">
-            <span>DRAW</span>
-        </div>
-        <div class="cell">
-            <span>BAYERN</span>
-        </div>
-    </div>
-</div>
-<div class="mdl-cell mdl-cell--12-col">
-    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--block mdl-js-ripple-effect">
-        + Show Game details
-    </button>
-</div>
-    <div class="ls-divider">
-	<span class="ls-divider__title">Divider Simple</span>
-</div>    <div class="team-form">
-    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
-        <div class="mdl-tabs__tab-bar">
-            <a href="#all-panel" class="mdl-tabs__tab is-active">All</a>
-            <a href="#home-panel" class="mdl-tabs__tab">Home</a>
-            <a href="#away-panel" class="mdl-tabs__tab">Away</a>
-            <a href="#next-panel" class="mdl-tabs__tab">Next</a>
-        </div>
-    </div>
-
-
-    <div class="mdl-list ls-list ls-head-to-head">
-        <div class="row">
-            <div class="cell">
-                <div class="circle circle--first circle--success">
-                    <span>4</span>
-                </div>
-            </div>
-            <div class="cell">
-                <div class="circle circle--third circle--gray3">
-                    <span>1</span>
-                </div>
-            </div>
-            <div class="cell">
-                <div class="circle circle--fourth circle--danger">
-                    <span>0</span>
-                </div>
-            </div>
-        </div>
-        <div class="row row--infos">
-            <div class="cell win">
-                <span>WIN</span>
-            </div>
-            <div class="cell draw">
-                <span>DRAW</span>
-            </div>
-            <div class="cell lost">
-                <span>BAYERN</span>
-            </div>
-        </div>
-    </div>
-    </div>
-        <div class="mdl-cell mdl-cell--12-col">
-            <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--block mdl-js-ripple-effect">
-                + Show Game details
-            </button>
-        </div>
-
-</div>
-
-			
-	</main>
+</div>    	
+			<main class="mdl-layout__content">
+						
+				  <div class="page-content">
+								<div class="ls-login-register">
+	<div class="ls-login-register__logo">
+		<img src="../assets/img/drawer-logo.png" alt="Logo">
 	</div>
+	<span class="ls-login-register__title">You need to be logged-in with your account to post a comment on this game</span>
+	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--facebook  mdl-button--large mdl-button--block mdl-js-ripple-effect">
+		<span class="icon icon-facebook"></span>Login with Facebook
+	</button>
+	<span class="ls-login-register__text">Or using your account:</span>
+	<form action="#">
+	  <div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="text" id="username" />
+	    <label class="mdl-textfield__label" for="username">Username</label>
+	  </div>
+	  <div class="mdl-textfield mdl-js-textfield">
+	    <input class="mdl-textfield__input" type="password" id="password" />
+	    <label class="mdl-textfield__label" for="password">Password</label>
+	  </div>
+	</form>
+	<div class="ls-login-register__forgot-password">
+		<a href="#" class="">Forgot your password?</a>
+	</div>
+	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  mdl-button--large mdl-button--block mdl-js-ripple-effect">
+		Login
+	</button>
+</div>
+				  </div>
+						
+				</main>			
+								</div>
 			<script type="text/javascript">
 			$(document).ready(function(){
 

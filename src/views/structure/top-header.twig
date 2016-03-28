@@ -1,5 +1,9 @@
 {% block top_header %}
   <header class="mdl-layout__header">
+    {# After header begins block #}
+    {% block top_header_prepend %}
+    {% endblock %}
+
     <div class="mdl-layout__header-row">
 
       {# Brand logo #}
@@ -73,6 +77,10 @@
     {% if ls_header_fixed_tabs == 'competition' %}
       {% include 'structure/fixed-tabs-competition.twig' %}
     {% endif %}
+
+    {# After header ends block #}
+    {% block top_header_append %}
+    {% endblock %}
 
   </header>
 

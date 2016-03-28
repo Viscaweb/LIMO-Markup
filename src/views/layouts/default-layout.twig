@@ -6,9 +6,15 @@
 
 </head>
 <body>
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header{{ ls_header_no_drawer ? ' mdl-layout--no-drawer-button' : ' mdl-layout--fixed-drawer' }}">
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header{{ ls_header_no_drawer ? ' mdl-layout--no-drawer-button' : ' mdl-layout--fixed-drawer' }}{{ ls_layout_variables ? ' ' ~ ls_layout_variables : '' }}">
 
-			{% include 'structure/top-header.twig' %}
+			{% embed 'structure/top-header.twig' %}
+
+				{% block top_header_append %}
+					{{top_header_append}}
+				{% endblock %}
+
+			{% endembed %}
 
 			{% embed 'structure/main-content.twig' %}
 
