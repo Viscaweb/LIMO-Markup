@@ -184,6 +184,12 @@ $ls-avatar-selector-img-bg: 							#f5f5f5;
 $ls-user-profile-header-avatar-size: 			58px;
 $ls-user-profile-header-user-desc-color: 	#c5c5c5;
 
+//User prediction statistics widget
+$ls-user-prediction-stats-chart-size: 		120px;
+$ls-user-prediction-stats-value-size: 		40px;
+$ls-user-prediction-stats-bar-color: 			#60a604;
+$ls-user-prediction-stats-progress-color: $ls-color-white;
+
 //Sprite
 $ls-image-sprite-icons : "../assets/img/sprite/sprite-icons.png";
 $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
