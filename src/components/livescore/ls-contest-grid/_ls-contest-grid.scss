@@ -1,0 +1,100 @@
+.ls-contest-grid{
+
+	.ls-list{
+		
+		.row{
+
+			&.event-cancelled{
+				background-color: $ls-contest-grid-event-cancelled-bg;
+			}
+
+			.cell{
+
+				&__date{
+					display: flex;
+					flex: 0 0 61px;
+					align-items: center;
+					justify-content: center;
+					color: $ls-contest-grid-date-color;
+				}
+
+				&__team__cards{
+					bottom: 2px;
+
+					> span{
+						height: 10px;
+						width: 7px;
+					}
+
+					.red-card{
+						background-color: $ls-contest-grid-red-card-color;
+					}
+				}
+
+				&__prediction{
+					flex: 0 0 84px;
+					padding: 4px 0;
+					
+					.mdl-button{
+						background-color: $ls-color-white;
+						padding: 0 10px;
+						font-size: ls-font-size(2px,'small');
+						font-weight: $ls-font-weight-light;
+						min-width: 25px;
+						height: $ls-contest-grid-buttons-height;
+						line-height: $ls-contest-grid-buttons-height - 1px;
+						border-top: 1px solid $ls-contest-grid-buttons-border-color;
+						border-bottom: 1px solid $ls-contest-grid-buttons-border-color;
+						border-right-width: 0;
+
+						&:first-child{
+							border-left: 1px solid $ls-contest-grid-buttons-border-color;
+						}
+
+						&:last-child{
+							border-right: 1px solid $ls-contest-grid-buttons-border-color;
+						}
+
+						&--cancelled, &--hidden{
+							width: 100%;
+						}
+
+						&.mdl-button--done{
+							border: 2px solid $ls-contest-grid-buttons-done-border-color;
+							background-color: $ls-contest-grid-buttons-done-bg-color;
+							line-height: $ls-contest-grid-buttons-height - 4px;
+						}
+
+						&.mdl-button--success{
+							background-color: $ls-contest-grid-buttons-success-bg-color;
+							color: $ls-color-white;
+						}
+
+						&.mdl-button--failed{
+							background-color: $ls-contest-grid-buttons-failed-bg-color;
+							color: $ls-color-white;
+						}
+
+						&.mdl-button--result{
+							background-color: $ls-contest-grid-buttons-result-bg-color;
+							color: $ls-green-active-color;
+						}
+					}
+				}
+
+				&__icon{
+					display: flex;
+					flex: 0 0 45px;
+					padding: 0;
+					align-items: center;
+					justify-content: center;
+					
+					span{
+						font-size: ls-font-size(1px,'large');
+						color: $ls-contest-grid-icons-color;
+					}
+				}
+			}
+		}
+	}
+}

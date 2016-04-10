@@ -190,6 +190,19 @@ $ls-user-prediction-stats-value-size: 		40px;
 $ls-user-prediction-stats-bar-color: 			#60a604;
 $ls-user-prediction-stats-progress-color: $ls-color-white;
 
+//Contest Grid
+$ls-contest-grid-icons-color: 							#b5b5b5;
+$ls-contest-grid-date-color: 								#989898;
+$ls-contest-grid-buttons-height: 						34px;
+$ls-contest-grid-buttons-border-color: 			#d3d3d3;
+$ls-contest-grid-buttons-done-border-color: #66a90e;
+$ls-contest-grid-buttons-done-bg-color: 		#f2f2f2;
+$ls-contest-grid-buttons-success-bg-color: 	$ls-green-active-color;
+$ls-contest-grid-buttons-failed-bg-color: 	#c30000;
+$ls-contest-grid-buttons-result-bg-color: 	#e0ecd0;
+$ls-contest-grid-red-card-color: 						#c10000;
+$ls-contest-grid-event-cancelled-bg: 				#f9f9f9;
+
 //Sprite
 $ls-image-sprite-icons : "../assets/img/sprite/sprite-icons.png";
 $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";

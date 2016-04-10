@@ -89,15 +89,17 @@
 
     &.event-won {
       background: $ls-color-event-won-bg;
-
     }
 
     &.event-lost {
       background: $ls-color-event-lost-bg;
-
     }
 
     &.event-draw {
+      background: $ls-color-event-draw-bg;
+    }
+
+    &.event-cancelled {
       background: $ls-color-event-draw-bg;
     }
 
