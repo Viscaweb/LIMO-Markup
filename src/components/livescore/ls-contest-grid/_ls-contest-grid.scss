@@ -8,6 +8,14 @@
 				background-color: $ls-contest-grid-event-cancelled-bg;
 			}
 
+			&.prediction-won {
+	      background: $ls-color-event-won-bg;
+	    }
+
+	    &.prediction-lost {
+	      background: $ls-color-event-lost-bg;
+	    }
+
 			.cell{
 
 				&__date{
@@ -55,27 +63,27 @@
 							border-right: 1px solid $ls-contest-grid-buttons-border-color;
 						}
 
-						&--cancelled, &--hidden{
+						&.ls-button--prediction--cancelled, &.ls-button--prediction--hidden{
 							width: 100%;
 						}
 
-						&.mdl-button--done{
+						&.ls-button--prediction--done{
 							border: 2px solid $ls-contest-grid-buttons-done-border-color;
 							background-color: $ls-contest-grid-buttons-done-bg-color;
 							line-height: $ls-contest-grid-buttons-height - 4px;
 						}
 
-						&.mdl-button--success{
+						&.ls-button--prediction--success{
 							background-color: $ls-contest-grid-buttons-success-bg-color;
 							color: $ls-color-white;
 						}
 
-						&.mdl-button--failed{
+						&.ls-button--prediction--failed{
 							background-color: $ls-contest-grid-buttons-failed-bg-color;
 							color: $ls-color-white;
 						}
 
-						&.mdl-button--result{
+						&.ls-button--prediction--result{
 							background-color: $ls-contest-grid-buttons-result-bg-color;
 							color: $ls-green-active-color;
 						}
