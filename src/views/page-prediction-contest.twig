@@ -1,0 +1,21 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set ls_header_brand_logo = true %}
+{% set page_title = 'Contest' %}
+{% set ls_header_icons = true %}
+{% set ls_layout_variables = 'mdl-layout--fixed-tabs' %}
+
+{% set top_header_append %}
+	{% include 'blocks/tabs/prediction-contest-tabs.html.twig' %}
+{% endset %}
+
+{% set main_content %}
+	{# Contest Grid Closed #}
+	{% include 'blocks/sports/listings/contest-grid-goal-statictics.html.twig' %}
+	{% include 'blocks/sports/listings/contest-grid-closed.html.twig' %}
+
+	{# Contest Grid Open #}
+	{% include 'blocks/sports/listings/contest-grid-goal-statictics-open.html.twig' %}
+	{% include 'blocks/sports/listings/contest-grid-open.html.twig' %}
+{% endset %}
