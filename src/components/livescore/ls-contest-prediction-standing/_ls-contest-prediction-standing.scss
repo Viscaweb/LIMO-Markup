@@ -1,0 +1,79 @@
+.ls-standing-table{
+	
+	&.ls-contest-prediction-standing{
+		width: 100%;
+		float: none;
+		box-shadow: none;
+
+		.row{
+			border: 0;
+			border-bottom: $ls-dialog-border;
+			background-color: $ls-color-white;
+
+			&.row--head{
+				background-color: $ls-color-white;
+
+				.cell{
+
+					&__total-points{
+						font-weight: $ls-font-weight-light;
+					}
+				}
+			}
+
+			.cell{
+				border-right-width: 0;
+
+				&__rank{
+					flex-basis: 35px;
+					font-weight: $ls-font-weight-medium;
+				}
+
+				&__team{
+
+					&--flag{
+
+						> img{
+							border-radius: 50%;
+						}
+					}
+				}
+
+				&__stat{
+					border-right-width: 1px;
+				}
+
+				&__total-points{
+					font-weight: $ls-font-weight-medium;
+				}
+			}
+
+			&--current-user{
+				background-color: $ls-contest-prediction-standing-current-user-bg;
+
+				.cell{
+					padding-top: 20px;
+					padding-bottom: 20px;
+					
+					&__rank{
+						background-color: $ls-contest-prediction-standing-current-user-bg-number;
+					}
+
+					&__total-points{
+						font-weight: $ls-font-weight-medium;
+						font-size: ls-font-size(1px);
+					}
+				}
+			}
+
+			&--show-all{
+				background-color: #fcfcfc;
+
+				.cell__button{
+					padding: 12px;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
