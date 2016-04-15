@@ -16,6 +16,23 @@
 	&.mdl-dialog--show{
 		visibility: visible;
 	}
+
+	&--no-padding{
+
+		.mdl-dialog__content{
+			padding: 0;		
+		}
+
+		.mdl-dialog__header{
+			padding: $ls-dialog-padding;
+			padding-bottom: 0;
+		}
+
+		.mdl-dialog__footer{
+			padding: $ls-dialog-padding;
+			padding-top: 10px;
+		}
+	}
 }
 
 .mdl-dialog__content{
