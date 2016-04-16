@@ -1,5 +1,5 @@
 {% block top_header %}
-  <header class="mdl-layout__header">
+  <header class="mdl-layout__header{{ ls_layout_header_variables ? ' ' ~ ls_layout_header_variables : '' }}">
     {# After header begins block #}
     {% block top_header_prepend %}
     {% endblock %}
