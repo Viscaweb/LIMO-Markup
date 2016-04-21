@@ -43,6 +43,7 @@
 				    padding-right: 10px;
 				    padding-top: 0;
 				    padding-bottom: 0;
+				    overflow: hidden;
 
 				    &--image{
 				    	display: flex;
@@ -62,8 +63,13 @@
 					    overflow-x: hidden;
 					    padding: 0 5px 0 0;
 					    position: relative;
-					    text-overflow: ellipsis;
 					    white-space: nowrap;
+
+					    > span{
+					    	display: block;
+						    overflow: hidden;
+						    text-overflow: ellipsis;
+					    }
 				    }
 					}
 				}
@@ -77,5 +83,6 @@
 	
 	.mdl-dialog__content{
 		min-width: $ls-contest-gifts-dialog-min-width;
+		max-width: 100%;
 	}
 }
