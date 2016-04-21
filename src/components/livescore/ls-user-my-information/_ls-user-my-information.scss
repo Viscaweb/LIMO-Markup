@@ -34,6 +34,7 @@
 				overflow: hidden;
 				border-radius: 50%;
 				position: relative;
+				z-index: 2;
 
 				> a{
 					display: block;
@@ -49,6 +50,7 @@
 					text-align: center;
 					z-index: 1;
 					outline: none;
+					overflow: hidden;
 
 					span{
 						color: $ls-color-white;
@@ -75,7 +77,7 @@
 		}
 
 		.user-name{
-			font-weight: $ls-font-weight-light;
+			font-weight: $ls-font-weight-thin;
 			font-size: ls-font-size(5px,'large');
 		}
 
