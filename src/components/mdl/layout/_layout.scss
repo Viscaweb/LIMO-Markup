@@ -325,6 +325,7 @@
 			padding: $ls-drawer-link-padding;
 			font-weight: $ls-font-weight-light;
 			color: $ls-drawer-link-color;
+			position: relative;
 
 	    .cat-icon{
 				vertical-align: middle;
@@ -336,9 +337,13 @@
 
 	    a.icon{
 	    	color: darken($ls-color-white, 30%);
-	    	float: right;
-	    	line-height: 27px;
 	    	text-decoration: none;
+	    	position: absolute;
+		    width: 45px;
+		    text-align: center;
+		    line-height: 44px;
+		    right: 0;
+		    top: 0;
 
 	    	span{
 	    		font-size: 20px;
