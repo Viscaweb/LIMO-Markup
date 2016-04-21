@@ -30,6 +30,15 @@
 	.mdl-textfield{
 		display: block;
 		width: 100%;
+		padding: $ls-user-myinfo-textfield-size 0;
+	}
+
+	.mdl-textfield__label {
+		top: ($input-text-padding + $ls-user-myinfo-textfield-size);
+
+		&:after {
+			bottom: $ls-user-myinfo-textfield-size;
+		}
 	}
 
 	.mdl-button--facebook{
@@ -45,6 +54,29 @@
 	&__forgot-password{
 		text-align: right;
 		margin-bottom: 25px;
+
+		a{
+			color: $ls-link-color;
+			text-decoration: none;
+			font-weight: $ls-font-weight-light;
+		}
+	}
+
+	&__terms{ 
+		margin-bottom: 25px;
+		display: flex;
+		align-items: center;
+		line-height: 18px;
+
+		.checkbox{
+			padding-right: 6px;
+			flex: 0 0 auto;
+		}
+
+		.message{
+			flex: 1 1 100%;
+			font-weight: $ls-font-weight-light;
+		}
 
 		a{
 			color: $ls-link-color;

@@ -103,14 +103,14 @@
 	.mdl-textfield{
 		display: block;
 		width: 100%;
-		padding: $ls-user-myinfo-textfield-size 0;
+		padding: $ls-login-register-textfield-size 0;
 	}
 
 	.mdl-textfield__label {
-		top: ($input-text-padding + $ls-user-myinfo-textfield-size);
+		top: ($input-text-padding + $ls-login-register-textfield-size);
 
 		&:after {
-			bottom: $ls-user-myinfo-textfield-size;
+			bottom: $ls-login-register-textfield-size;
 		}
 	}
 
