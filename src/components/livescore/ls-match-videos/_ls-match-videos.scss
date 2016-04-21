@@ -38,13 +38,16 @@
 
 		&__actions{
 			display: flex;
-			align-items: center;
+			align-items: stretch;
 			padding: 0;
+			background-color: $ls-color-white;
 		}
 
 		&__minute{
 			line-height: 37px;
-			text-align: center;
+			display: flex;
+	    align-items: center;
+	    justify-content: center;
 			flex: 0 0 37px;
 			background-color: $ls-green-active-color;
 			color: $ls-color-white;
@@ -52,11 +55,13 @@
 		}
 
 		&__name{
+			align-items: center;
+    	display: flex;
 			flex: 1 1 100%;
 			font-size: $ls-font-size-base;
 			font-weight: $ls-font-weight-light;
 			color: $ls-match-videos-name-color;
-			padding: 0 15px;
+			padding: 10px 15px;
 		}
 	}
 }
