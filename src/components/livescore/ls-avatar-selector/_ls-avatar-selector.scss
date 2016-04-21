@@ -28,6 +28,8 @@
 				height: $ls-avatar-selector-img-size;
 				background-color: $ls-avatar-selector-img-bg;
 				box-sizing: border-box;
+				position: relative;
+				z-index: 1;
 
 				img{
 					max-width: 100%;
