@@ -1,20 +1,24 @@
 .ls-contest-grid{
 
 	.ls-list{
-		
+
+		.prediction-won {
+      background: $ls-color-event-won-bg;
+    }
+
+    .prediction-lost {
+      background: $ls-color-event-lost-bg;
+    }
+
 		.row{
 
 			&.event-cancelled{
 				background-color: $ls-contest-grid-event-cancelled-bg;
+
+				&:active {
+	        background-color: $ls-list-pressed-color;
+	      }
 			}
-
-			&.prediction-won {
-	      background: $ls-color-event-won-bg;
-	    }
-
-	    &.prediction-lost {
-	      background: $ls-color-event-lost-bg;
-	    }
 
 			.cell{
 
