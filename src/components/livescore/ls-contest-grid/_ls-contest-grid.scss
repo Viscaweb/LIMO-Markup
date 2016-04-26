@@ -14,10 +14,6 @@
 
 			&.event-cancelled{
 				background-color: $ls-contest-grid-event-cancelled-bg;
-
-				&:active {
-	        background-color: $ls-list-pressed-color;
-	      }
 			}
 
 			.cell{
@@ -89,6 +85,19 @@
 				&.ls-button--prediction--done{
 					border: 2px solid $ls-contest-grid-buttons-done-border-color;
 					line-height: $ls-contest-grid-buttons-height - 4px;
+				}
+			}
+		}
+
+		&.mdl-list-linked{
+
+			.row{
+
+				&.event-cancelled{
+
+					&:active {
+		        background-color: $ls-list-pressed-color;
+		      }
 				}
 			}
 		}
