@@ -1,0 +1,80 @@
+.ls-user-profile-header{
+	background-color: $ls-color-white;
+	padding: 15px 20px;
+	display: flex;
+	
+	.user-avatar{
+		flex: 0 0 $ls-user-profile-header-avatar-size;
+
+		.img-container{
+			width: $ls-user-profile-header-avatar-size;
+			height: $ls-user-profile-header-avatar-size;
+			overflow: hidden;
+			border-radius: 50%;
+			position: relative;
+		}
+
+		.img-rounded{
+			width: 200%;
+			height: 200%;
+			overflow: hidden;
+			border-radius: 50%;
+			position: absolute;
+			top: -50%;
+			left: -50%;
+		}
+
+		img{
+	    position: absolute;
+	    min-width: 50%;
+	    margin: auto;
+	    min-height: 50%;
+	    left: 0;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    overflow-x: hidden;
+		}
+	}
+
+	.user-info{
+		display: flex;
+		flex: 1 1 100%;
+		align-items: left;
+    flex-direction: column;
+    justify-content: center;
+		padding-left: 11px;
+		padding-right: 8px;
+		overflow: hidden;
+	}
+
+	.user-name{
+		display: block;
+		font-size: ls-font-size(4px ,'large');
+		font-weight: $ls-font-weight-light;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		width: 100%;
+	}
+
+	.user-desc{
+		display: block;
+		font-size: $ls-font-size-small;
+		font-weight: $ls-font-weight-light;
+		color: $ls-user-profile-header-user-desc-color;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		width: 100%;
+	}
+
+	.user-position{
+		display: flex;
+		flex: 0 0 auto;
+		align-items: center;
+		font-weight: $ls-font-weight-light;
+		font-size: ls-font-size(1px ,'large');
+		color: $ls-green-active-color;
+	}
+}

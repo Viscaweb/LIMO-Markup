@@ -1,0 +1,32 @@
+.ls-message-widget{
+	padding: 20px;
+	text-align: center;
+
+	&__icon{
+		display: block;
+		font-size: $ls-message-widget-icon-size;
+		color: $ls-green-active-color;
+		margin-top: 15px;
+	}
+
+	&__title{
+		font-weight: $ls-font-weight-light;
+		font-size: ls-font-size(5px,'large');
+		line-height: ls-font-size(10px,'large');
+		display: block;
+		margin: 25px 0 23px;
+	}
+
+	&__description{
+		font-size: ls-font-size(2px);
+		line-height: ls-font-size(5px,'large');
+		font-weight: $ls-font-weight-light;
+		display: block;
+		margin-bottom: 15px;
+	}
+}
+
+//Bottom fixed button
+.ls-forgot-password-button{
+	padding: 20px;
+}
