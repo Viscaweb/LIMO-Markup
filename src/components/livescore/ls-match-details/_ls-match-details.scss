@@ -108,6 +108,11 @@
         .versus {
           padding: 0 6px;
         }
+
+        &--intermediary {
+          background-color: darken($ls-color-white, 3%);
+          color:lighten($ls-color-black , 15%);
+        }
       }
     }
   }
