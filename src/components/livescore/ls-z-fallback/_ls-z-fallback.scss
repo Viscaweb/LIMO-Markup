@@ -1442,3 +1442,23 @@
     }
   }
 }
+
+//dialog
+.mdl-dialog__content{
+  overflow: auto;
+}
+
+//Avatar Selector
+
+.ls-avatar-selector{
+
+  > ul{
+
+    li{
+      
+      .avatar{
+
+      }
+    }
+  }
+}
