@@ -1448,16 +1448,31 @@
   overflow: auto;
 }
 
-//Avatar Selector
+//Contest gift
+.ls-contest-gifts{
 
-.ls-avatar-selector{
+  &__list{
 
-  > ul{
+    ul{
+      width: 100% !important;
 
-    li{
-      
-      .avatar{
+      .row{
 
+        .cell{
+
+          &__prize{
+            text-align: left;
+
+            &--image{
+              display: inline-block;
+              min-width: 50px;
+            }
+
+            &--title{
+              display: inline-block;
+            }
+          }
+        }
       }
     }
   }
