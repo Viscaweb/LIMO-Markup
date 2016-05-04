@@ -1477,3 +1477,166 @@
     }
   }
 }
+
+//ls-contest-grid-goals-statistics
+.ls-contest-grid-goals-statistics{
+
+  .grid-stats{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    &--rank{
+
+      .title, .icon, .values{
+        display: table-cell;
+      }
+
+      .title{
+
+      }
+
+      .icon{
+       width: 25px;
+      }
+
+      .values{
+        white-space: nowrap;
+      }
+    }
+
+    &--bottom{
+
+      .stat{
+        display: table-cell;
+
+        .title{
+          display: inline-block;
+        }
+
+        .values{
+          float: right;
+        }
+      }
+    }
+
+    &--prediction-done{
+
+      .title, .values{
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .values{
+        text-align: right;
+      }
+    }
+  }
+}
+
+//Button Group Block
+.mdl-button-group{
+
+  &.mdl-button-group--block{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .mdl-button{
+      display: table-cell;
+
+      &--wide{
+        width: 70%;
+      }
+    }
+  }
+}
+
+//Contest Grid Closed
+.ls-contest-grid{
+
+  .ls-list{
+    
+    .row{
+
+      .cell{
+
+        &__date{
+          width: 61px;
+        }
+
+        &__prediction{
+          width: 84px;
+        }
+
+        &__icon{
+          width: 45px;
+        }
+      }
+    }
+  }
+}
+
+//Contest Grid Open
+.ls-contest-grid{
+
+  &--open{
+    
+    .ls-list{
+
+      .row{
+        
+        .ls-contest-grid__bottom, .ls-contest-grid__top{
+          display: table;
+          table-layout: fixed;
+          width: 100%;
+        }
+
+        .make-prediction, .tips, .league-data, .status{
+          display: table-cell;
+          box-sizing: border-box;
+        }
+
+        .status{
+          width: 30%;
+          vertical-align: middle;
+        }
+
+        .make-prediction{
+          
+          &__teams{
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+
+            .team, .versus{
+              display: table-cell;
+            }
+
+            .versus{
+              width: 30px;
+              text-align: center;
+            }
+          }
+
+          &__buttons{
+
+            .mdl-button-group{
+              border-collapse: separate;
+              border-spacing: 4px;
+            }
+          }
+        }
+
+        .tips{
+          vertical-align: bottom;
+          width: 38px;
+
+          @media #{$ls-high-dpi}, screen and (max-device-width:767px){
+            width: 48px;
+          }
+        }
+      }
+    }
+  }
+}
