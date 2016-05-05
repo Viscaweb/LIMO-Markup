@@ -1640,3 +1640,73 @@
     }
   }
 }
+
+//Contest prediction standing
+.ls-standing-table{
+
+  &.ls-contest-prediction-standing{
+    width: 100% !important;
+    
+    .row{
+
+      &.row--head{
+
+        .cell{
+
+          &__team{
+            text-align: left;
+            padding-left: 5px !important;
+          }
+        }
+      }
+
+      .cell{
+
+        &__rank{
+          width: 13% !important;
+        }
+
+        &__team{
+
+          &--flag{
+            padding: 0 5px !important;
+            width: auto;
+          }
+        }
+      }
+
+      &--show-all{
+        display: block;
+        width: 1115%;
+
+        .cell__button{
+          width: 10%;
+        }
+      }
+    }
+  }
+}
+
+//Legend
+.ls-legend{
+
+  .ls-legend__content{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 3px;
+
+    .row{
+      display: table-row;
+
+      .cell{
+        display: table-cell;
+
+        &__explanation{
+          padding-left: 12px;
+        }
+      }
+    }
+  }
+}
