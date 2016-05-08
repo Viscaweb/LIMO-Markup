@@ -1734,3 +1734,30 @@
     text-align: right;
   }
 }
+
+//User prediction statistics
+.ls-user-prediction-statistics{
+
+  .prediction-chart{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .chart, .scores{
+      display: table-cell;
+    }
+
+    .chart{
+      text-align: center;
+      vertical-align: middle;
+
+      .radial-progress{
+        display: inline-block;
+      }
+    }
+
+    .scores{
+      width: 100px;
+    }
+  }
+}
