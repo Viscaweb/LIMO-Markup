@@ -1784,3 +1784,22 @@
     }
   }
 }
+
+//Login register
+.ls-login-register{
+
+  &__terms{ 
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .checkbox, .message{
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .checkbox{
+      width: 25px;
+    }
+  }
+}
