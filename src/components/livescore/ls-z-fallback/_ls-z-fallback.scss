@@ -1710,3 +1710,27 @@
     }
   }
 }
+
+//Profile Header
+.ls-user-profile-header{
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+
+  .user-avatar, .user-info, .user-position{
+    display: table-cell;
+  }
+
+  .user-info, .user-position{
+    vertical-align: middle;
+  }
+
+  .user-avatar{
+    width: 58px;
+  }
+
+  .user-position{
+    width: 60px;
+    text-align: right;
+  }
+}
