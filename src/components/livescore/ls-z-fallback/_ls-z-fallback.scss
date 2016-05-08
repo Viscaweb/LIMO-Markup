@@ -1785,7 +1785,7 @@
   }
 }
 
-//Login register
+//Login Register
 .ls-login-register{
 
   &__terms{ 
@@ -1800,6 +1800,44 @@
 
     .checkbox{
       width: 25px;
+    }
+  }
+}
+
+//Match Videos
+.ls-match-videos{
+
+  .mdl-card{
+
+    &--expand{
+      position: relative;
+      background-image: url("../assets/img/video-default.png");
+      background-position: center;
+      background-size: cover;
+
+      .play-icon{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -43px;
+        margin-top: -43px;
+      }
+    }
+
+    &__actions{
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+    }
+
+    &__minute, &__name{
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    &__minute{
+      width: 37px;
+      text-align: center;
     }
   }
 }
