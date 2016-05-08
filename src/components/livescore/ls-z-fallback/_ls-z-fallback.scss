@@ -1761,3 +1761,26 @@
     }
   }
 }
+
+//Account Sync
+.ls-account-sync{
+
+  &__header{
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .user-avatar, .user-name{
+      display: table-cell;
+      vertical-align: middle;
+    }
+
+    .user-avatar{
+      width: 66px;
+
+      @media #{$ls-high-dpi}, screen and (max-device-width:767px){
+        width: 99px;
+      }
+    }
+  }
+}
