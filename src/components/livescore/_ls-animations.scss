@@ -4,7 +4,7 @@
 }
 
 .blinking {
-  animation: blinker 1s linear infinite;
+  animation: blinker 1s linear 3;
 }
 
 @keyframes blinker {
