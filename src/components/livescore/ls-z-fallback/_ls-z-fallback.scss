@@ -1806,8 +1806,12 @@
 
 //Match Videos
 .ls-match-videos{
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
 
   .mdl-card{
+    margin: 0 auto 15px;
 
     &--expand{
       position: relative;
