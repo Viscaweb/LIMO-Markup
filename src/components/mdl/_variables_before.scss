@@ -28,6 +28,14 @@ $ls-color-facebook: 		#395fa9;
 $ls-color-twitter: 			#27c4eb;
 $ls-color-googleplus: 	#b73d3d;
 
+//Event status
+$ls-color-highlight : rgb(255, 244, 206);
+$ls-color-updated : $ls-color-live;
+
+$ls-color-event-won-bg : rgb(233, 242, 226);
+$ls-color-event-lost-bg : rgb(245, 211, 207);
+$ls-color-event-draw-bg : rgb(250, 241, 230);
+
 //Typography
 $ls-font-size-base:          	14px;
 $ls-font-size-small:          $ls-font-size-base - 3px;

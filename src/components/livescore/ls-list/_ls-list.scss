@@ -23,7 +23,9 @@
     }
 
 	&.row--highlight {
-	  background: $ls-color-highlight;
+	  /*background: $ls-color-highlight;*/
+		animation-name: progressiveHighlight;
+		animation-duration: 6s;
 
 	}
 
