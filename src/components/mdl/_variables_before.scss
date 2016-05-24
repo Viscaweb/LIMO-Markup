@@ -272,7 +272,8 @@ $color-accent-contrast: "255, 255, 255";
 // and text-color-secondary-inverse.
 
 $text-color-primary: unquote("#484848");
-$text-link-color: unquote("rgb(#{$color-accent})") !default;
+//$text-link-color: unquote("rgb(#{$color-accent})") !default;
+$text-link-color: $ls-link-color !default;
 
 // Define whether to target elements directly for typographic enhancements.
 // Turning this off means you need to use mdl-* classes more often.
