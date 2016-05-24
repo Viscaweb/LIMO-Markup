@@ -164,6 +164,11 @@
 		flex : 0 0 54px;
 		background-color: rgba(0,0,0,0.02);
 	  }
+
+		&__hour {
+			color: lighten($ls-text-color, 30%);
+			font-weight: 400;
+		}
 	}
 
 	.icon-star {
