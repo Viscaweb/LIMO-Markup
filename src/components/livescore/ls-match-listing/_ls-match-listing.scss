@@ -166,6 +166,13 @@
 }
 
 .updated {
-  background: $ls-color-updated!important;
-  color: #fff!important;
+  /*background: $ls-color-updated!important;
+  color: #fff!important;*/
+  animation-name: progressiveUpdate;
+  animation-duration: 6s;
+
+  > a {
+    animation-name: progressiveUpdateLink;
+    animation-duration: 6s;
+  }
 }

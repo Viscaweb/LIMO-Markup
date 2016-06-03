@@ -28,6 +28,14 @@ $ls-color-facebook: 		#395fa9;
 $ls-color-twitter: 			#27c4eb;
 $ls-color-googleplus: 	#b73d3d;
 
+//Event status
+$ls-color-highlight : rgb(255, 244, 206);
+$ls-color-updated : $ls-color-live;
+
+$ls-color-event-won-bg : rgb(233, 242, 226);
+$ls-color-event-lost-bg : rgb(245, 211, 207);
+$ls-color-event-draw-bg : rgb(250, 241, 230);
+
 //Typography
 $ls-font-size-base:          	14px;
 $ls-font-size-small:          $ls-font-size-base - 3px;
@@ -266,7 +274,8 @@ $color-accent-contrast: "255, 255, 255";
 // and text-color-secondary-inverse.
 
 $text-color-primary: unquote("#484848");
-$text-link-color: unquote("rgb(#{$color-accent})") !default;
+//$text-link-color: unquote("rgb(#{$color-accent})") !default;
+$text-link-color: $ls-link-color !default;
 
 // Define whether to target elements directly for typographic enhancements.
 // Turning this off means you need to use mdl-* classes more often.
