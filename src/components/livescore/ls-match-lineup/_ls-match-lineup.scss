@@ -310,6 +310,10 @@
           margin-right: 2px;
         }
       }
+
+      &__divider-title {
+        text-transform: capitalize;
+      }
     }
   }
 }
