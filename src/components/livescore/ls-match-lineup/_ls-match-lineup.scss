@@ -258,6 +258,7 @@
       &.team1 {
         text-align: left;
       }
+
       &.team2 {
         text-align: right;
       }
@@ -273,7 +274,7 @@
         flex:1;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
 
         &:active {
           background-color: $ls-list-pressed-color;
@@ -287,27 +288,24 @@
           overflow-x: hidden;
           text-overflow: ellipsis;
           padding: 0 10px;
-        }
-
-        &.team1 {
-          justify-content: flex-start;
-          border-right: none;
+          flex: 1 0 auto;
         }
       }
 
-      &__icon {
-        flex:0 0 33px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        ~ .cell__icon {
-          border-right: none;
-        }
-
-        > span:not(last-child) {
+      &__player-icons {
+        flex: 0 1 auto;
+        white-space: normal;
+        
+        > span {
           margin-left: 2px;
           margin-right: 2px;
+        }
+      }
+
+      &.team1 {
+
+        .cell__player-icons{
+          text-align: right;
         }
       }
 
