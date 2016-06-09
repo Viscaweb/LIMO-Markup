@@ -1,5 +1,15 @@
 
 .mdl-snackbar {
+  justify-content: flex-start;
+
+  &__text{
+    padding: 14px 24px;
+    flex: 1 0 auto;
+  }
+
+  &__action{
+    padding: 14px 24px;
+  }
 
   &__icon{
     padding-left: 24px;
