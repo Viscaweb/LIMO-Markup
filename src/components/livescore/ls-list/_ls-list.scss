@@ -66,6 +66,11 @@
 	  line-height: 32px;
 	  border: none;
 
+		&.row--divider--center {
+			align-items: center;
+			justify-content: center;
+		}
+
 	  .cell {
 		display: flex;
 		flex: none;
@@ -112,7 +117,8 @@
 	  }
 
 	  &__time,
-	  &__team {
+	  &__team,
+      &__date{
 		white-space: nowrap;
 		text-overflow: ellipsis;
 		overflow: hidden;
@@ -125,6 +131,12 @@
 		font-weight: 300;
 		flex: 0 0 46px
 	  }
+
+      &__date {
+        color : lighten($ls-text-color, 30%);
+        font-weight: 300;
+        flex: 0 0 62px
+      }
 
 	  &__team {
 		position: relative;
