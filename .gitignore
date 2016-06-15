@@ -3,3 +3,4 @@ external/
 .idea/
 node_modules/
 *.orig
+*.log
