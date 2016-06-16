@@ -1,15 +1,77 @@
 // GENERAL ///////////////////////////
 
-.mdl-layout__content {
-  width: 100%;
-}
-
-.mdl-layout__content {
-  width: 100%;
-}
-
 .mdl-layout__header {
   display: block;
+  position: fixed;
+  top: 0;
+}
+
+.mdl-layout__header-row {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+
+  .mdl-navigation__link{
+    display: inline-block;
+  }
+}
+
+.mdl-layout-brand-logo,
+.mdl-layout-title,
+.mdl-layout-spacer,
+.mdl-navigation {
+  display: table-cell;
+}
+
+.mdl-layout-brand-logo{ 
+  width: $ls-brand-logo-size;
+
+  @media #{$ls-high-dpi}, screen and (max-device-width:767px){
+    width: $ls-brand-logo-size + 10px;
+  }
+}
+
+.mdl-layout-title {
+  padding-left: 15px;
+  vertical-align: middle;
+}
+
+.mdl-layout-spacer {
+  width: 0;
+}
+
+.mdl-navigation {
+  text-align: right;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.ls-toolbar-icon {
+
+  .mdl-layout__header & {
+    padding: 0 6px;
+  }
+}
+
+.mdl-switch{
+
+  .mdl-layout__header & {
+    display: inline-block;
+    width: auto;
+  }
+}
+
+.mdl-layout__content {
+  width: 100%;
+}
+
+.mdl-layout__content {
+  width: 100%;
+  padding-top: $layout-mobile-header-height;
+
+  .mdl-layout--fixed-tabs & {
+    padding-top: $layout-mobile-header-height + $layout-tab-bar-height;
+  }
 }
 
 .ls-list {
