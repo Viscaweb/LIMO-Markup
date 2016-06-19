@@ -14,13 +14,19 @@
   .mdl-navigation__link{
     display: inline-block;
   }
-}
 
-.mdl-layout-brand-logo,
-.mdl-layout-title,
-.mdl-layout-spacer,
-.mdl-navigation {
-  display: table-cell;
+  .mdl-layout-brand-logo,
+  .mdl-layout-title,
+  .mdl-layout-spacer,
+  .mdl-navigation {
+    display: table-cell;
+  }
+
+  .mdl-navigation {
+    text-align: right;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
 }
 
 .mdl-layout-brand-logo{ 
@@ -38,12 +44,6 @@
 
 .mdl-layout-spacer {
   width: 0;
-}
-
-.mdl-navigation {
-  text-align: right;
-  vertical-align: middle;
-  white-space: nowrap;
 }
 
 .ls-toolbar-icon {
