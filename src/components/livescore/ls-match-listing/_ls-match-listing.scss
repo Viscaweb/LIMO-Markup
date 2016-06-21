@@ -73,8 +73,9 @@
         }
       }
 
-      &.paused {
-        .match-list {
+      &.event-paused {
+
+        .cell {
 
           &__time {
 
@@ -82,33 +83,6 @@
               background: darken($ls-color-white, 30%);
               @extend .animation-reset;
             }
-          }
-        }
-      }
-    }
-
-    &.event-paused {
-
-      .cell {
-        
-        &__score {
-          color: $ls-color-live;
-        }
-
-        &__time {
-          color: $ls-color-live;
-
-          &:before {
-            content: '';
-            display: block;
-            float: left;
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: $ls-player-matches-listing-pause-bg;
-            margin-right: 4px;
-            margin-top: 5px;
-            animation: none;
           }
         }
       }
