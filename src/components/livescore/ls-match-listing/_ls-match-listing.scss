@@ -73,8 +73,9 @@
         }
       }
 
-      &.paused {
-        .match-list {
+      &.event-paused {
+
+        .cell {
 
           &__time {
 
