@@ -94,6 +94,21 @@
 }
 
 .ls-divider {
+  width: 100%;
+  display: table;
+  table-layout: fixed;
+  padding: 0;
+
+  &__title, 
+  &__spacer, 
+  &__right-nav {
+    display: table-cell;
+  }
+
+  &__title{
+    padding-left: 13px;
+    padding-right: 4px;
+  }
 
   .row {
     display: flex;
@@ -132,6 +147,7 @@
   &__right-nav{
     display: table-cell;
     text-align: right;
+    white-space: nowrap;
   }
 
   &__sport-icon{
@@ -140,6 +156,27 @@
 
     > a{
       display: block;
+    }
+  }
+
+  &.ls-divider--inline{
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+
+    .ls-divider{
+
+      &__title, 
+      &__spacer, 
+      &__description, 
+      &__right-nav {
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      &__right-nav {
+        float: right;
+      }
     }
   }
 }
