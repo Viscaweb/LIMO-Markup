@@ -157,27 +157,26 @@
 
 //Button group as ul
 ul.mdl-button-group {
-
   list-style-type: none;
   padding: 0;
+  margin: 0;
 
   li {
 
-	.mdl-button {
+		.mdl-button {
 
-	  &:last-child {
-		border-right-width:1px;
-	  }
-	}
+		  &:last-child {
+				border-right-width:1px;
+		  }
+		}
 
-	&:last-child {
+		&:last-child {
 
-	  .mdl-button {
-		border-right-width: 0;
-	  }
-	}
+		  .mdl-button {
+				border-right-width: 0;
+		  }
+		}
   }
-
 }
 
 //Button select
