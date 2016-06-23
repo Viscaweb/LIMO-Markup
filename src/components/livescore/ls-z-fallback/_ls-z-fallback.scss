@@ -1616,6 +1616,23 @@
       }
     }
   }
+
+  &.mdl-button-group--pagination{
+    width: auto;  
+  }
+}
+
+//Button group as ul
+ul.mdl-button-group {
+  width: auto;
+
+  li{
+    display: table-cell;
+
+    a{
+      display: block;
+    }
+  }
 }
 
 //Contest Grid Closed
