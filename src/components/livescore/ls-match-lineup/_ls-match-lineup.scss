@@ -225,6 +225,11 @@
             display: flex;
             flex-flow: row;
             justify-content: center;
+
+            span{
+              margin-left: 2px;
+              margin-right: 2px;
+            }
           }
         }
       }
