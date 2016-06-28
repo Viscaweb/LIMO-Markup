@@ -218,13 +218,15 @@
 
         .match-incidents {
           position: absolute;
-          bottom:-18px;
           width: 100%;
 
           &__icon {
+            width: 100%;
             display: flex;
-            flex-flow: row;
+            flex-flow: row wrap;
             justify-content: center;
+            position: absolute;
+            top: 1px;
 
             span{
               margin-left: 2px;
