@@ -110,5 +110,69 @@
 		outline: none;
 		background-color: darken($ls-divider-bg, 5.2%);
 	}
+}
 
+//Game type icon
+.ls-divider__game-type{
+	display: flex;
+	width: $ls-divider-game-type-icon-size;
+	margin-right: 9px;
+
+	&:before, 
+	&:after{
+		font-family: $ls-icons-font;
+		font-size: $ls-divider-game-type-icon-size;
+		letter-spacing: -6px;
+	}
+
+	&--women{
+
+		&:before{
+			content: '\e62a';
+			color: $ls-user-female-color;
+		}
+	}
+
+	&--men{
+
+		&:before{
+			content: '\e619';
+			color: $ls-user-male-color;
+		}
+	}
+
+	&--women-double,
+	&--men-double,
+	&--mixed-double{
+		width: $ls-divider-game-type-icon-size + 7px;
+	}
+
+	&--women-double{
+
+		&:before{
+			content: '\e62a\e62a';
+			color: $ls-user-female-color;
+		}
+	}
+
+	&--men-double{
+
+		&:before{
+			content: '\e619\e619';
+			color: $ls-user-male-color;
+		}
+	}
+
+	&--mixed-double{
+
+		&:before{
+			content: '\e619';
+			color: $ls-user-male-color;
+		}
+
+		&:after{
+			content: '\e62a';
+			color: $ls-user-female-color;
+		}
+	}
 }

@@ -22,6 +22,8 @@ $ls-success-color: 			#5da400;
 $ls-error-color: 				#ea0000;
 $ls-warning-color: 			#f6b514;
 $ls-info-color: 				#a4cfe9;
+$ls-user-female-color:	#ffaef7;
+$ls-user-male-color:		#8dc4ff;
 
 //Social colors
 $ls-color-facebook: 		#395fa9;
@@ -47,7 +49,10 @@ $ls-font-weight-medium: 			500;
 $ls-font-weight-bold: 				700;
 
 //Image paths
-$ls-img-path: "../assets/img";
+$ls-img-path: 								"../assets/img";
+
+//Icons
+$ls-icons-font: 							'LSicons';
 
 //Top Header
 $ls-top-header-border-bottom: 	1px solid #e2e2e2;
@@ -75,6 +80,7 @@ $ls-divider-padding: 							0 0 0 13px;
 $ls-divider-icon-size:						18px;
 $ls-divider-right-nav-icon-size:	20px;
 $ls-divider-icon-color:						darken($ls-color-white, 32.5%);
+$ls-divider-game-type-icon-size:	15px;
 
 //Buttons
 $ls-button-padding:							0 14px; 
