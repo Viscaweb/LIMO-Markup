@@ -184,7 +184,7 @@
 	<span class="ls-login-register__text">Or using your account:</span>
 	<form action="#">
 	  <div class="mdl-textfield mdl-js-textfield">
-	    <input class="mdl-textfield__input" type="text" id="username" />
+	    <input class="mdl-textfield__input" type="text" id="username" data-required="true" />
 	    <label class="mdl-textfield__label" for="username">Username</label>
 	  </div>
 	  <div class="mdl-textfield mdl-js-textfield">
@@ -217,6 +217,9 @@
 				//Init core JS
 				App.init();
 
+			});
+			$(window).load(function () {
+				$('input[data-required=true]').attr('required', true);
 			});
 		</script>
 	</body>

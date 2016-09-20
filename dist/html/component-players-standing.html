@@ -327,6 +327,9 @@
 				App.init();
 
 			});
+			$(window).load(function () {
+				$('input[data-required=true]').attr('required', true);
+			});
 		</script>
 	</body>
 </html>
