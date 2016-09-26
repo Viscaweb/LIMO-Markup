@@ -116,13 +116,14 @@
 .ls-divider__game-type{
 	display: flex;
 	width: $ls-divider-game-type-icon-size;
-	margin-right: 9px;
+	margin-right: 5px;
+	width: $ls-divider-game-type-icon-size + 7px;
+	justify-content: center;
 
 	&:before, 
 	&:after{
 		font-family: $ls-icons-font;
 		font-size: $ls-divider-game-type-icon-size;
-		letter-spacing: -6px;
 	}
 
 	&--women{
@@ -144,7 +145,12 @@
 	&--women-double,
 	&--men-double,
 	&--mixed-double{
-		width: $ls-divider-game-type-icon-size + 7px;
+		
+		&:before,
+		&:after{
+			letter-spacing: -4px;
+    	margin-left: -2px;
+		}
 	}
 
 	&--women-double{
