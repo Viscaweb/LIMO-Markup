@@ -142,15 +142,23 @@
 		}
 	}
 
-	&--women-double,
-	&--men-double,
-	&--mixed-double{
+	&--mixed-double {
 		
 		&:before,
 		&:after{
 			letter-spacing: -4px;
     	margin-left: -2px;
 		}
+	}
+
+	&--women-double,
+	&--men-double {
+		
+		&:before,
+		&:after{
+			letter-spacing: -6px;
+	    margin-left: -3px;
+  	}
 	}
 
 	&--women-double{
