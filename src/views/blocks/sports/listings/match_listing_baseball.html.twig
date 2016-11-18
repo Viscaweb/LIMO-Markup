@@ -1,6 +1,15 @@
 <div class="container--match-listing-baseball">
 
-    {#####   LEFT PART   #####}
+    {% if ls_page_type == 'my-games' %}
+        <ul class="mdl-list mdl-list-media ls-list ls-list-matches">
+            {% include 'blocks/dividers/divider-event-right-nav-li-sport-icon.twig' %}
+        </ul>
+    {% endif %}
+
+
+
+
+        {#####   LEFT PART   #####}
     <ul class="mdl-list ls-list ls-match-listing-baseball ls-match-listing-baseball--left">
         {#Header#}
 
