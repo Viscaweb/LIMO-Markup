@@ -53,7 +53,7 @@
 		<script src="../assets/main.js"></script>
 
 		<!-- Material Calendar -->
-		<script src="../assets/js/material-datepicker/libs/moment.min.js"></script>
+		<script src="../assets/js/material-datepicker/libs/moment-with-locales.min.js"></script>
 		<script src="../assets/js/material-datepicker/libs/jquery-2.1.3.min.js"></script>
 		<script src="../assets/js/material-datepicker/libs/knockout-3.2.0.js"></script>
 
@@ -100,6 +100,7 @@
       </nav>
     </div>
 
+    
     
     
     
@@ -220,6 +221,11 @@
 </li>
 
 
+		<li class="row row--divider row--divider--center ls-divider">
+	<div class="cell cell__divider-title ls-divider__title">Divider Simple</div>
+</li>
+
+
 		<li class="row row--divider ls-divider">
 	<div class="cell cell__divider-title cell__icon ls-divider__title"><span class="ls-divider__icon icon-bell"></span>My Games</div>
 </li>
@@ -260,6 +266,16 @@
 		<a href="#"><span class="ls-divider__icon icon-star active"></span></a>
 	</div>
 </li>		<li class="row row--divider ls-divider">
+	<div class="cell cell__flag ls-divider__title"><img class="ls-divider__flag" src="../assets/img/flag-dk.png" alt="Denmark"></div>
+	<div class="cell ls-divider__game-type ls-divider__game-type--mixed-double"></div>
+	<div class="cell cell__league-name">Denmark Danmarksserien</div>
+	<div class="cell cell__league-stage ls-divider__description">- Groupe 2 phase 1</div>
+	<div class="cell cell__spacer ls-divider__spacer"></div>
+	<div class="cell cell__standing-icon ls-divider__right-nav">
+		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
+		<a href="#"><span class="ls-divider__icon icon-star active"></span></a>
+	</div>
+</li>		<li class="row row--divider ls-divider">
 	<div class="ls-divider__sport-icon">
 		<a href="#"><span class="ls-divider__icon icon-football"></span></a>
 	</div>
@@ -283,6 +299,9 @@
 				//Init core JS
 				App.init();
 
+			});
+			$(window).load(function () {
+				$('input[data-required=true]').attr('required', true);
 			});
 		</script>
 	</body>

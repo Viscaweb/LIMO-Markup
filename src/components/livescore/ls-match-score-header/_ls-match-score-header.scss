@@ -19,7 +19,7 @@
   .row--match-score-header {
 
     .cell {
-        padding: 12px 0 9px 0;
+      padding: 12px 0 9px 0;
 
       &__flag {
         flex: 0 0 42px;
@@ -39,6 +39,7 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        color: $ls-match-score-header-team-color;
 
         .qualified {
           position: absolute;
@@ -73,6 +74,7 @@
 
         &--team1 {
           padding-right: 10px;
+          justify-content: flex-end;
 
           .qualified {
             right: 10px;

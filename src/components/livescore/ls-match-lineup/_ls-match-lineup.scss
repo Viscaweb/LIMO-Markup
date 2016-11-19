@@ -24,6 +24,10 @@
     height: 50%;
     padding: 4.2% 0.03% 0 0.03%;
 
+    @media #{$ls-small-devices}{
+      height: 48%;
+    }
+
     .legend {
       position: absolute;
       left: 0;
@@ -96,6 +100,11 @@
     box-sizing: border-box;
     padding: 0 0.03% 5.3% 0.03%;
 
+    @media #{$ls-small-devices}{
+      height: 48%;
+      margin-top: 3%;
+    }
+
     .legend {
       position: absolute;
       right: 0;
@@ -155,7 +164,6 @@
       }
     }
 
-
     .player__number {
       background: #E6E5FF;
       color:$ls-color-black ;
@@ -214,17 +222,28 @@
           -webkit-box-shadow: 1px 2px 0px 0px rgba(36,74,0,0.61);
           -moz-box-shadow: 1px 2px 0px 0px rgba(36,74,0,0.61);
           box-shadow: 1px 2px 0px 0px rgba(36,74,0,0.61);
+
+          @media #{$ls-small-devices}{
+            padding: 0 5px;
+          }
         }
 
         .match-incidents {
           position: absolute;
-          bottom:-18px;
           width: 100%;
 
           &__icon {
+            width: 100%;
             display: flex;
-            flex-flow: row;
+            flex-flow: row wrap;
             justify-content: center;
+            position: absolute;
+            top: 1px;
+
+            span{
+              margin-left: 2px;
+              margin-right: 2px;
+            }
           }
         }
       }
@@ -258,6 +277,7 @@
       &.team1 {
         text-align: left;
       }
+
       &.team2 {
         text-align: right;
       }
@@ -273,7 +293,7 @@
         flex:1;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
 
         &:active {
           background-color: $ls-list-pressed-color;
@@ -287,23 +307,29 @@
           overflow-x: hidden;
           text-overflow: ellipsis;
           padding: 0 10px;
-        }
-
-        &.team1 {
-          justify-content: flex-start;
-          border-right: none;
+          flex: 1 0 auto;
         }
       }
 
-      &__icon {
-        flex:0 0 33px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        ~ .cell__icon {
-          border-right: none;
+      &__player-icons {
+        flex: 0 1 auto;
+        white-space: normal;
+        
+        > span {
+          margin-left: 2px;
+          margin-right: 2px;
         }
+      }
+
+      &.team1 {
+
+        .cell__player-icons{
+          text-align: right;
+        }
+      }
+
+      &__divider-title {
+        text-transform: capitalize;
       }
     }
   }

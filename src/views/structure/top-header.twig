@@ -78,6 +78,10 @@
       {% include 'structure/fixed-tabs-competition.twig' %}
     {% endif %}
 
+    {% if ls_header_fixed_tabs == 'team' %}
+      {% include 'structure/fixed-tabs-team.twig' %}
+    {% endif %}
+
     {# After header ends block #}
     {% block top_header_append %}
     {% endblock %}

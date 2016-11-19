@@ -1,0 +1,13 @@
+{% extends "layouts/layout-team.twig" %}
+	
+{# Page variables #}
+{% set page_title = 'Paris Saint Germain' %}
+{% set ls_header_brand_logo = true %}
+
+{% set main_content_1 %}
+
+    {% include 'blocks/sports/team/team_header.html.twig' %}
+    {% include 'blocks/sports/listings/match_listing_by_team.html.twig' %}
+    {% include 'blocks/sports/team/team_shirts.html.twig' %}
+
+{% endset %}

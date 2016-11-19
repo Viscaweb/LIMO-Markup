@@ -22,11 +22,21 @@ $ls-success-color: 			#5da400;
 $ls-error-color: 				#ea0000;
 $ls-warning-color: 			#f6b514;
 $ls-info-color: 				#a4cfe9;
+$ls-user-female-color:	#ffaef7;
+$ls-user-male-color:		#8dc4ff;
 
 //Social colors
 $ls-color-facebook: 		#395fa9;
 $ls-color-twitter: 			#27c4eb;
 $ls-color-googleplus: 	#b73d3d;
+
+//Event status
+$ls-color-highlight : rgb(255, 244, 206);
+$ls-color-updated : $ls-color-live;
+
+$ls-color-event-won-bg : rgb(233, 242, 226);
+$ls-color-event-lost-bg : rgb(245, 211, 207);
+$ls-color-event-draw-bg : rgb(250, 241, 230);
 
 //Typography
 $ls-font-size-base:          	14px;
@@ -39,7 +49,10 @@ $ls-font-weight-medium: 			500;
 $ls-font-weight-bold: 				700;
 
 //Image paths
-$ls-img-path: "../assets/img";
+$ls-img-path: 								"../assets/img";
+
+//Icons
+$ls-icons-font: 							'LSicons';
 
 //Top Header
 $ls-top-header-border-bottom: 	1px solid #e2e2e2;
@@ -67,6 +80,7 @@ $ls-divider-padding: 							0 0 0 13px;
 $ls-divider-icon-size:						18px;
 $ls-divider-right-nav-icon-size:	20px;
 $ls-divider-icon-color:						darken($ls-color-white, 32.5%);
+$ls-divider-game-type-icon-size:	15px;
 
 //Buttons
 $ls-button-padding:							0 14px; 
@@ -223,6 +237,9 @@ $ls-match-videos-width: 										300px;
 $ls-match-videos-height: 										212px;
 $ls-match-videos-name-color: 								#0d0d0d;
 
+//Match score header
+$ls-match-score-header-team-color: 					#000000;
+
 //Sprite
 $ls-image-sprite-icons : "../assets/img/sprite/sprite-icons.png";
 $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
@@ -231,6 +248,7 @@ $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
 //Media Querys
 $ls-retina: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx)";
 $ls-small-portrait: "only screen and (max-device-width : 320px) and (orientation : portrait)";
+$ls-small-devices: "only screen and (max-device-width : 420px)";
 
 /* ==========  TYPOGRAPHY  ========== */
 
@@ -264,7 +282,8 @@ $color-accent-contrast: "255, 255, 255";
 // and text-color-secondary-inverse.
 
 $text-color-primary: unquote("#484848");
-$text-link-color: unquote("rgb(#{$color-accent})") !default;
+//$text-link-color: unquote("rgb(#{$color-accent})") !default;
+$text-link-color: $ls-link-color !default;
 
 // Define whether to target elements directly for typographic enhancements.
 // Turning this off means you need to use mdl-* classes more often.

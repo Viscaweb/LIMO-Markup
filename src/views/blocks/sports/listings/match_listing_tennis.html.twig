@@ -1,4 +1,8 @@
-<ul class="mdl-list ls-list ls-match-listing-tennis">
+<ul class="mdl-list mdl-list-media ls-list ls-match-listing-tennis">
+
+    {% if ls_page_type == 'my-games' %}
+        {% include 'blocks/dividers/divider-event-right-nav-li-sport-icon.twig' %}
+    {% endif %}
 
     <li class="row row--match">
         <div class="cell cell__time">

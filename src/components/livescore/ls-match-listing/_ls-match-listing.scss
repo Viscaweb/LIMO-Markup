@@ -1,5 +1,5 @@
 .ls-list-matches {
-
+  transform: translate3d(0, 0, 0);
   background: $ls-color-white;
 
   .row {
@@ -73,8 +73,9 @@
         }
       }
 
-      &.paused {
-        .match-list {
+      &.event-paused {
+
+        .cell {
 
           &__time {
 
@@ -166,6 +167,13 @@
 }
 
 .updated {
-  background: $ls-color-updated!important;
-  color: #fff!important;
+  /*background: $ls-color-updated!important;
+  color: #fff!important;*/
+  animation-name: progressiveUpdate;
+  animation-duration: 6s;
+
+  > a {
+    animation-name: progressiveUpdateLink;
+    animation-duration: 6s;
+  }
 }
