@@ -8,7 +8,7 @@
 
       {# Brand logo #}
       {% if ls_header_brand_logo %}
-       <div class="mdl-layout-brand-logo{{ ls_header_no_drawer ? ' mdl-layout-brand-logo--no-drawer' : '' }}"><img src="../assets/img/ls-app-logo.png" alt="{{ project }}"></div>
+       <div class="mdl-layout-brand-logo{{ ls_header_no_drawer ? ' mdl-layout-brand-logo--no-drawer' : '' }}"><img src="{{ basePath }}../assets/img/ls-app-logo.png" alt="{{ project }}"></div>
       {% endif %}
 
       <span class="mdl-layout-title">{{ page_title }}</span>
