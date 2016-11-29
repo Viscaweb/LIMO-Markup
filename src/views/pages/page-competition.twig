@@ -1,10 +1,14 @@
 {% extends "layouts/layout-competition.twig" %}
 	
 {# Page variables #}
+{% set basePath = '../../' %}
 {% set page_title = 'Champions League' %}
 {% set ls_header_brand_logo = true %}
 
-{% set main_content %}
+{% set content_tab_1 %}
     {% include 'blocks/sports/listings/match_listing_by_competition.html.twig' %}
+{% endset %}
 
+{% set content_tab_2 %}
+    {% include 'blocks/sports/table/standing-table.html.twig' %}
 {% endset %}
