@@ -6,10 +6,25 @@
 	padding: $ls-divider-padding;
 	display: flex;
 
+	&--h {
+		background-color: lighten($ls-divider-bg, 8%);
+		justify-content: center;
+	}
+
+	h1, h2, h3, {
+		&.ls-divider__title {
+			font-size: inherit;
+			line-height: inherit;
+			padding: 0;
+			margin: 0;
+			color: darken($ls-color-white, 25%);
+		}
+	}
+
 }
 
 //Title
-.ls-divider__title{
+.ls-divider__title {
   flex-shrink: 1;
   overflow: hidden;
   text-overflow: ellipsis;

@@ -5,8 +5,10 @@
 {% set page_title = 'Football' %}
 {% set ls_header_switch = true %}
 {% set ls_header_brand_logo = true %}
+{% set divider_title_h = 'Foot en Direct' %}
 
 {% set main_content %}
+	{% include 'blocks/dividers/divider-h1.twig' %}
 	{% include 'blocks/sports/listings/match_listing_general.html.twig' %}
 {% endset %}
 
