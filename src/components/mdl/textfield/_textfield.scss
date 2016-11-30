@@ -15,8 +15,19 @@ textarea.mdl-textfield__input{
 .mdl-textfield__label {
 
 	// Custom validation class
-  .form-not-submitted .mdl-textfield.is-invalid &:after {
-		background-color: $input-text-highlight-color;
+  .form-not-submitted .mdl-textfield.is-invalid & {
+    color: $input-text-label-color;
+    font-size: $input-text-font-size;
+
+    &:after {
+		  background-color: $input-text-highlight-color;
+    }
+  }
+
+  // Change font-size when is focused
+  .form-not-submitted .mdl-textfield.is-invalid.is-focused & {
+    font-size: $input-text-floating-label-fontsize;
+    color: $input-text-highlight-color;
   }
 }
 
