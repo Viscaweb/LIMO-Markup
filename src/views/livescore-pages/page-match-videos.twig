@@ -1,0 +1,14 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../../' %}
+{% set ls_header_brand_logo = true %}
+{% set page_title = 'PSG - Saint Etienne' %}
+
+{% set top_header_append %}
+	{% include 'blocks/tabs/match-videos-tabs.html.twig' %}
+{% endset %}
+
+{% set main_content %}
+	{% include 'blocks/sports/match/match-videos.html.twig' %}
+{% endset %}

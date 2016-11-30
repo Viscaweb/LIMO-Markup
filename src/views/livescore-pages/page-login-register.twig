@@ -1,0 +1,16 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../../' %}
+{% set ls_header_brand_logo = true %}
+{% set page_title = 'Connexion' %}
+{% set ls_header_button = 'Cancel' %}
+{% set ls_layout_variables = 'mdl-layout--fixed-tabs' %}
+
+{% set main_content %}
+	{% include 'blocks/login/login.html.twig' %}
+{% endset %}
+
+{% set top_header_append %}
+	{% include 'blocks/login/login-top-tabs.html.twig' %}
+{% endset %}

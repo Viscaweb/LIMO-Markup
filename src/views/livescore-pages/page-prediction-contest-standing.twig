@@ -1,0 +1,16 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../../' %}
+{% set ls_header_brand_logo = true %}
+{% set page_title = 'Contest Standings' %}
+{% set ls_header_button = 'Close' %}
+{% set ls_layout_variables = 'mdl-layout--fixed-tabs' %}
+
+{% set top_header_append %}
+	{% include 'blocks/tabs/prediction-contest-standings-tabs.html.twig' %}
+{% endset %}
+
+{% set main_content %}
+	{% include 'blocks/predictions/contest-prediction-standing.html.twig' %}
+{% endset %}
