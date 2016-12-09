@@ -22,7 +22,29 @@
 		line-height: ls-font-size(5px,'large');
 		font-weight: $ls-font-weight-light;
 		display: block;
-		margin-bottom: 15px;
+		margin-bottom: 43px;
+	}
+
+	&__app-link {
+		display: block;
+	}
+
+	&__app-icon {
+		display: block;
+		text-align: center;
+		margin-bottom: 13px;
+
+		> img {
+			max-width: $ls-message-widget-app-icon-size;
+			max-height: $ls-message-widget-app-icon-size;
+		}
+	}
+
+	&__app-description {
+		display: block;
+		font-weight: $ls-font-weight-bold;
+		font-size: ls-font-size(2px);
+		color: $ls-green-active-color;
 	}
 }
 
