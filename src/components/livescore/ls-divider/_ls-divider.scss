@@ -12,6 +12,7 @@
 	}
 
 	h1, h2, h3, {
+
 		&.ls-divider__title {
 			font-size: inherit;
 			line-height: inherit;
@@ -19,8 +20,11 @@
 			margin: 0;
 			color: darken($ls-color-white, 25%);
 		}
-	}
 
+		&.ls-divider__sub-title {
+			display: none;
+		}
+	}
 }
 
 //Title
