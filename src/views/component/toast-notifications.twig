@@ -9,7 +9,7 @@
 {% set main_content %}
 
   <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--4-col mdl-cell--2-col-phone">
+    <div class="mdl-cell mdl-cell--5-col mdl-cell--2-col-phone">
 
       <button id="toast-success-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
         Success
@@ -25,6 +25,10 @@
 
       <button id="toast-info-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
         Info
+      </button>
+
+      <button id="toast-loading-button" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+        Loading
       </button>
 
     </div>
@@ -59,6 +63,12 @@
     <div class="mdl-snackbar__text"></div>
     <button type="button" class="mdl-snackbar__action"></button>
   </div>
+
+  <div id="toast-loading" class="mdl-snackbar mdl-js-snackbar mdl-snackbar--loading">
+    <div class="mdl-snackbar__icon"><span class="material-icons">autorenew</span></div>
+    <div class="mdl-snackbar__text"></div>
+    <button type="button" class="mdl-snackbar__action"></button>
+  </div>
   
 
 <script type="text/javascript">
@@ -66,11 +76,13 @@
   var errorBtn = document.querySelector('#toast-error-button');
   var warningBtn = document.querySelector('#toast-warning-button');
   var infoBtn = document.querySelector('#toast-info-button');
+  var loadingBtn = document.querySelector('#toast-loading-button');
 
   var successToast = document.querySelector('#toast-success');
   var errorToast = document.querySelector('#toast-error');
   var warningToast = document.querySelector('#toast-warning');
   var infoToast = document.querySelector('#toast-info');
+  var loadingToast = document.querySelector('#toast-loading');
 
   var duration = 4000;
 
@@ -120,6 +132,14 @@
       actionText: 'Undo'
     };
     infoToast.MaterialSnackbar.showSnackbar(data);
+  });
+
+  loadingBtn.addEventListener('click', function() {
+    var data = {
+      message: 'Reconnecting & refreshing data',
+      timeout: duration
+    };
+    loadingToast.MaterialSnackbar.showSnackbar(data);
   });
 </script>
 {% endblock %}
