@@ -15,36 +15,36 @@ var App = (function () {
       /*Hide header on scroll*/
         var lsHeader = $(".mdl-layout--fixed-header .mdl-layout__header");
         var lsContent = $(".mdl-layout__content");
-        var lsHeaderHeight = $(lsHeader).outerHeight();
 
-        // Set content padding-top
-        // init controller
-        var controller = new ScrollMagic.Controller({container: lsContent[0] });
+        var elHeight  = 0,
+          elTop       = 0,
+          dHeight     = 0,
+          wHeight     = 0,
+          wScrollCurrent  = 0,
+          wScrollBefore = 0,
+          wScrollDiff   = 0;
 
-        // Set the auto hide scroll offset
-        var hideScrollOffset = lsHeaderHeight, cont = 0, contPos = 0;
-        var hideScroll = new ScrollMagic.Scene()
-          .addTo(controller).on('update', function( e ){
-            var direction = controller.info("scrollDirection");
+        lsContent.on( 'scroll', function(){
+          elHeight    = lsHeader.outerHeight();
+          dHeight     = lsContent[0].scrollHeight;
+          wHeight     = lsContent.outerHeight();
+          wScrollCurrent  = lsContent.scrollTop();
+          wScrollDiff = wScrollBefore - wScrollCurrent;
+          elTop       = parseInt( lsHeader.css( 'margin-top' ) ) + wScrollDiff;
 
-            if( direction == "FORWARD" ){
-              if( cont < lsHeaderHeight - (contPos - e.scrollPos) && cont <= lsHeaderHeight && e.scrollPos > 0 ){
-                lsHeader.css({"margin-top" : -Math.abs(cont) });
-                cont =  e.scrollPos - contPos;
-              }else if( cont >= lsHeaderHeight ) {
-                lsHeader.css({"margin-top" : -Math.abs(lsHeaderHeight) });
-                contPos = e.scrollPos;
-              }
-            }else if( direction == "REVERSE" ){
-              if( cont > lsHeaderHeight - (contPos - e.scrollPos) && cont > 0 ){
-                lsHeader.css({"margin-top" : (contPos - e.scrollPos) - lsHeaderHeight });
-                cont = lsHeaderHeight - (contPos - e.scrollPos);
-              }else if( cont <= 0 ) {
-                lsHeader.css({"margin-top" : 0 });
-                contPos = e.scrollPos;
-              }
+          if( wScrollCurrent <= 0 ) { // scrolled to the very top; element sticks to the top
+            lsHeader.css( 'margin-top', 0 );
+
+          } else if( wScrollDiff > 0 && wScrollCurrent + wHeight <= dHeight - 10 ) { // scrolled up; element slides in
+            lsHeader.css( 'margin-top', elTop > 0 ? 0 : elTop );
+          } else if( wScrollDiff < 0 ) { // scrolled down
+            if( wScrollCurrent + wHeight <= dHeight ) {
+              lsHeader.css( 'margin-top', Math.abs( elTop ) > elHeight ? -elHeight : elTop );
             }
-          });
+          }
+
+          wScrollBefore = wScrollCurrent;
+        });
     }
   };
  
