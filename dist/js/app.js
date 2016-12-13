@@ -11,7 +11,14 @@ var App = (function () {
           var drawer = $(".mdl-layout__drawer");
           drawer.toggleClass("is-visible");
         });
-        
+      
+      /*Hide header on scroll*/
+        var lsHeader = document.querySelector(".mdl-layout--fixed-header .mdl-layout__header");
+        // construct an instance of Headroom, passing the element
+        var headroom  = new Headroom(lsHeader);
+        // initialise
+        headroom.init(); 
+        alert("??");
     }
   };
  
