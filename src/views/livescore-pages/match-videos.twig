@@ -4,11 +4,14 @@
 {% set basePath = '../' %}
 {% set ls_header_brand_logo = true %}
 {% set page_title = 'PSG - Saint Etienne' %}
+{% set divider_title_h = 'PSG - Saint Etienne Videos' %}
+{% set divider_title_h2 = 'PSG - Saint Etienne H2' %}
 
 {% set top_header_append %}
 	{% include 'blocks/tabs/match-videos-tabs.html.twig' %}
 {% endset %}
 
 {% set main_content %}
+	{% include 'blocks/dividers/divider-h1.twig' %}
 	{% include 'blocks/sports/match/match-videos.html.twig' %}
 {% endset %}
