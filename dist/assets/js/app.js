@@ -13,7 +13,7 @@ var App = (function () {
         });
       
       /*Hide header on scroll*/
-        var lsHeader = $(".mdl-layout--fixed-header .mdl-layout__header");
+        var lsHeader = $(".mdl-layout--magic-header .mdl-layout__header");
         var lsContent = $(".mdl-layout__content");
 
         var elHeight  = 0,
