@@ -130,16 +130,25 @@
 
 .mdl-layout__drawer-button{
 	padding-right: 6px;
-	
+
 	.mdl-layout__header & {
 		margin-right: 0;
-
+	
 	  @media screen and (max-width: $layout-screen-size-threshold) {
 	  	margin: 0;
 	  	height: $layout-header-mobile-row-height - 1px;
 			line-height: $layout-header-mobile-row-height + 6;
 			padding-right: 0;
 	  }
+	}
+
+	// When it has auto/hide fixed header
+	.mdl-layout--fixed-header.mdl-layout--fixed-drawer .mdl-layout__header & {
+		position: fixed;
+
+		@media screen and (max-width: $layout-screen-size-threshold) {
+			position: absolute;
+		}
 	}
 }
 
