@@ -68,15 +68,12 @@
           &--team1{
             align-items: flex-end;
           }
-        }
 
-        &__score{
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: ls-font-size(1px,'large');
+          &__cards{
+            bottom: 2px;
+          }
         }
-
+        
         &__minute{
           padding: 0;
           flex-grow: 0;

@@ -1,0 +1,39 @@
+{% extends "layouts/default-layout.twig" %}
+
+	
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'My Games' %}
+{% set ls_header_live_switch = true %}
+{% set ls_header_brand_logo = true %}
+{% set ls_page_type = 'my-games' %}
+{% set divider_title_h = 'My Games' %}
+{% set divider_title_h2 = 'My Games H2' %}
+
+{% set main_content %}
+	{% include 'blocks/dividers/divider-h1.twig' %}
+
+	<div class="mdl-button-group mdl-button-group--block">
+		<a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+			<span class="mdl-button__icon icon-caret-left"></span>
+		</a>
+		<div class="mdl-button mdl-calendar mdl-button--raised mdl-button--large mdl-button--wide">
+			<input type="text" name="mdl-calendar1" value="01/08/2015" readonly="true">
+		</div>
+		<a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+			<span class="mdl-button__icon icon-caret-right"></span>
+		</a>
+	</div>
+
+	{% include 'blocks/sports/listings/match_listing_football.html.twig' %}
+	{% include 'blocks/sports/listings/match_listing_footus.html.twig' %}
+	{% include 'blocks/sports/listings/match_listing_rugby.html.twig' %}
+	{% include 'blocks/sports/listings/match_listing_tennis.html.twig' %}
+	{% include 'blocks/sports/listings/match_listing_baseball.html.twig' %}
+{% endset %}
+
+
+{# Scripts init #}
+{% block footer_scripts %}
+	{% include 'blocks/footer-scripts.twig' %}
+{% endblock %}

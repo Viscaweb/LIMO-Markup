@@ -1,0 +1,35 @@
+{% extends "layouts/default-layout.twig" %}
+
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'Sitemap' %}
+{% set ls_header_switch = false %}
+{% set ls_header_brand_logo = true %}
+
+{% set main_content %}
+    {% include 'blocks/others/sitemap.twig' %}
+
+
+{% endset %}
+
+{# Scripts init #}
+{% block footer_scripts %}
+    <script type="text/javascript">
+        $(document).ready(function(){
+
+            /*mdl-collapsible*/
+            $(".mdl-collapsible__heading").click(function( e ){
+                var collapsible = $(this).parent();
+                var body = $(".mdl-collapsible__body", collapsible);
+
+                body.slideToggle({
+                    complete: function(){
+                        collapsible.toggleClass("mdl-collapsible-collapsed");
+                    }
+                });
+            });
+        });
+    </script>
+{% endblock %}
+

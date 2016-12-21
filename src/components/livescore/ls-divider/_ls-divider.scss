@@ -6,10 +6,33 @@
 	padding: $ls-divider-padding;
 	display: flex;
 
+	&--h {
+		background-color: lighten($ls-divider-bg, 8%);
+		justify-content: center;
+	}
+
+	h1, h2, h3, {
+
+		&.ls-divider__title {
+			font-size: inherit;
+			line-height: inherit;
+			padding: 0;
+			margin: 0;
+			color: darken($ls-color-white, 25%);
+		}
+
+		&.ls-divider__sub-title {
+			position: absolute;
+			width: 1px;
+	    height: 1px;
+	    overflow: hidden;
+	    text-indent: -980px;
+		}
+	}
 }
 
 //Title
-.ls-divider__title{
+.ls-divider__title {
   flex-shrink: 1;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -110,5 +133,83 @@
 		outline: none;
 		background-color: darken($ls-divider-bg, 5.2%);
 	}
+}
 
+//Game type icon
+.ls-divider__game-type{
+	display: flex;
+	width: $ls-divider-game-type-icon-size;
+	margin-right: 5px;
+	width: $ls-divider-game-type-icon-size + 7px;
+	justify-content: center;
+
+	&:before, 
+	&:after{
+		font-family: $ls-icons-font;
+		font-size: $ls-divider-game-type-icon-size;
+	}
+
+	&--women{
+
+		&:before{
+			content: '\e62a';
+			color: $ls-user-female-color;
+		}
+	}
+
+	&--men{
+
+		&:before{
+			content: '\e619';
+			color: $ls-user-male-color;
+		}
+	}
+
+	&--mixed-double {
+		
+		&:before,
+		&:after{
+			letter-spacing: -4px;
+    	margin-left: -2px;
+		}
+	}
+
+	&--women-double,
+	&--men-double {
+		
+		&:before,
+		&:after{
+			letter-spacing: -6px;
+	    margin-left: -3px;
+  	}
+	}
+
+	&--women-double{
+
+		&:before{
+			content: '\e62a\e62a';
+			color: $ls-user-female-color;
+		}
+	}
+
+	&--men-double{
+
+		&:before{
+			content: '\e619\e619';
+			color: $ls-user-male-color;
+		}
+	}
+
+	&--mixed-double{
+
+		&:before{
+			content: '\e619';
+			color: $ls-user-male-color;
+		}
+
+		&:after{
+			content: '\e62a';
+			color: $ls-user-female-color;
+		}
+	}
 }

@@ -3,21 +3,24 @@
   margin: 0;
 
   > li {
-	list-style: none;
-	display: block;
-	padding: $ls-list-padding;
-	color: $ls-list-text-color;
-	border-top: 1px solid $ls-list-border-color;
-	line-height: 17px;
-	text-overflow: ellipsis;
-	overflow: hidden;
-	white-space: nowrap;
-	font-weight: 300;
+  	list-style: none;
+  	display: block;
+  	padding: $ls-list-padding;
+  	color: $ls-list-text-color;
+  	border-top: 1px solid $ls-list-border-color;
+  	line-height: 17px;
+  	text-overflow: ellipsis;
+  	overflow: hidden;
+  	white-space: nowrap;
+  	font-weight: 300;
 
-	&:last-child {
-	  border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
-	}
+  	&:last-child {
+  	  border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+  	}
 
+    > a {
+      color: $ls-list-text-color;
+    }
 
     h1, h2, h3, h4 {
       font-size: inherit;
@@ -28,11 +31,11 @@
   }
 
   &.mdl-list—condensed {
-	padding: 0;
+  	padding: 0;
 
-	li {
-	  line-height: 15px;
-	}
+  	li {
+  	  line-height: 15px;
+  	}
   }
 
   &.mdl-list-linked {
