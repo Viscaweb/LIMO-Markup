@@ -1,0 +1,553 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+		<title>The project: LIMO</title>
+
+		<meta name="theme-color" content="#263238">
+
+		<link rel="shortcut icon" href="../assets/favicon.png" />
+		<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+		<!--
+		<link rel="canonical" href="http://www.example.com/">
+		-->
+
+		<!-- Page styles -->
+		<link rel="stylesheet" href="../assets/prism-default.css">
+		<link rel="stylesheet" href="../material.min.css">
+		<link rel="stylesheet" href="../assets/main.css">
+
+		<!-- Fonts -->
+		<link href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href="../css/material.min.css" type="text/css" rel="stylesheet" />
+		<link href="../css/assets/main.css" type="text/css" rel="stylesheet" />
+
+		<link href="../assets/fonts/lsicons/style.css" type="text/css" rel="stylesheet" />
+
+		<link href="../assets/components.css" rel="stylesheet">
+		<script src="../assets/swfobject.js"></script>
+		<script src="../assets/snippets.js"></script>
+		<script src="../assets/components.js"></script>
+		<link rel="stylesheet" href="../components/demos.css">
+
+		<script src="../assets/index.js" async></script>
+
+		<!-- Material Design Lite -->
+		<script src="../js/material.min.js"></script>
+		<!-- Add Copy-to-CodePen buttons to code blocks -->
+		<script src="../assets/codepen.js"></script>
+		<!-- Enable Prism syntax highlighting -->
+		<script src="../assets/prism.js"></script>
+		<script src="../assets/prism-markup.min.js"></script>
+		<script src="../assets/prism-javascript.min.js"></script>
+		<script src="../assets/prism-css.min.js"></script>
+		<script src="../assets/prism-bash.min.js"></script>
+		<script src="../assets/main.js"></script>
+
+		<!-- Material Calendar -->
+		<script src="../assets/js/material-datepicker/libs/moment-with-locales.min.js"></script>
+		<script src="../assets/js/material-datepicker/libs/jquery-2.1.3.min.js"></script>
+		<script src="../assets/js/material-datepicker/libs/knockout-3.2.0.js"></script>
+
+		<script src="../assets/js/material-datepicker/material-datepicker/js/material.datepicker.js"></script>
+		<link rel="stylesheet" href="../assets/js/material-datepicker/material-datepicker/css/material.datepicker.css">
+
+		<!-- Google Charts -->
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+		<!-- jQuery UI -->
+		<script src="../assets/js/jquery-ui/jquery-ui.min.js"></script>
+
+		<!-- jQuery UI - Touch Punch -->
+		<script src="../assets/js/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+		<!-- LS Scripts -->
+		<script src="../assets/js/app.js"></script>
+		
+								
+		
+		
+
+</head>
+<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+
+			  <header class="mdl-layout__header">
+            
+    <div class="mdl-layout__header-row">
+
+                   <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="LIMO"></div>
+      
+      <span class="mdl-layout-title">Football</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+
+                
+                
+                  
+                  
+                  
+                
+      </nav>
+    </div>
+
+    
+    
+    
+        					
+				
+  </header>
+
+	          <div class="mdl-layout__drawer">
+  <span class="mdl-layout-title">
+  	<img class="drawer__brand-logo" src="../assets/img/drawer-logo.png" alt="Logo">
+  </span>
+  <ul class="mdl-navigation">
+    <li class="mdl-navigation__open mdl-navigation__active">
+    	<a class="mdl-navigation__link" href="#"><span class="icon icon-football"></span>Football</a>
+      <ul class="mdl-sub-navigation">
+        <li class="mdl-sub-navigation__category"><span class="cat-icon icon-star"></span><a href="#" class="icon"><span class="material-icons">&#xE8B8;</span></a>My Leagues</li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../assets/img/premier-league.png" alt="Premier League">Premier League</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../assets/img/championship.png" alt="Championship">Championship</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../assets/img/bundesliga.png" alt="Bundesliga">Bundesliga</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../assets/img/seriea.png" alt="Serie A">Serie A</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../assets/img/spanish-league.png" alt="Spanish League">Spanish League</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../assets/img/champions-league.png" alt="Champions League">Champions League</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../assets/img/league-cup.png" alt="League Cup">League Cup</a></li>
+        <li class="mdl-navigation__show-all"><a class="mdl-navigation__link" href="#"><span class="icon-caret-select"></span>Show All</a></li>
+      </ul>
+    	<ul class="mdl-sub-navigation">
+        <li class="mdl-sub-navigation__category"><span class="cat-icon icon-star"></span><a href="#" class="icon"><span class="material-icons">&#xE8B8;</span></a>My Leagues</li>
+    		<li><a class="mdl-navigation__link" href="#"><img src="../assets/img/psg.png" alt="Barcelona">Barcelona</a></li>
+    		<li><a class="mdl-navigation__link" href="#"><img src="../assets/img/manchester.png" alt="PSG">PSG</a></li>
+    		<li><a class="mdl-navigation__link" href="#"><img src="../assets/img/barcelona.png" alt="Juventus Turin">Juventus Turin</a></li>
+    		<li><a class="mdl-navigation__link" href="#"><img src="../assets/img/juventus.png" alt="Bayern Munich">Bayern Munich</a></li>
+        <li class="mdl-navigation__show-all"><a class="mdl-navigation__link" href="#"><span class="icon-caret-select"></span>Show All</a></li>
+    	</ul>
+    </li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-tennis"></span>Tennis</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-rugby"></span>Rugby</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-basketball"></span>Basketball</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-volley"></span>Voleyball</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-am-football"></span>American Football</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-baseball"></span>Baseball</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-hockey"></span>Ice Hockey</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-handball"></span>Handball</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-news"></span>Sports News</a></li>
+    <li class="mdl-navigation__app-link">
+      <a class="mdl-navigation__link"  href="">
+        <span class="app-link__logo"><img src="../assets/img/ls-app-logo-166.png" width="80px" alt="Marcadores for Android"></span>
+        <span class="app-link__tagline">Get the Marcadores.com app now!</span>
+      </a>
+      <a class="mdl-navigation__link" href="#">
+        <span class="app-link__store-btn"><img src="../assets/img/store-google-play.png" width="120px" alt="Get the app"></span>
+      </a>
+    </li>
+    <li class="mdl-navigation__social">
+      <a class="mdl-navigation__link" href="#"><span class="icon icon-facebook"></span></a>
+      <a class="mdl-navigation__link" href="#"><span class="icon icon-twitter"></span></a>
+      <a class="mdl-navigation__link" href="#"><span class="icon icon-googleplus"></span></a>
+    </li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-help"></span>Help</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-view_list"></span>Sitemap</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-info"></span>About WhatTheScore</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-verified_user"></span>Conditions and Privacy</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-email"></span>Contact us</a></li>
+  </ul>
+</div>    	
+			<main class="mdl-layout__content">
+						
+				  <div class="page-content">
+								<div class="mdl-button-group mdl-button-group--block">
+    <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+        <span class="mdl-button__icon icon-caret-left"></span>
+    </a>
+    <div class="mdl-button mdl-calendar mdl-button--raised mdl-button--large mdl-button--wide">
+        <input type="text" name="mdl-calendar1" value="01/08/2015" readonly="true">
+    </div>
+    <a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+        <span class="mdl-button__icon icon-caret-right"></span>
+    </a>
+</div>
+
+
+<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches ls-list-matches--mygames">
+    <li class="row row--divider ls-divider">
+	<div class="cell cell__divider-title cell__icon ls-divider__title"><span class="ls-divider__icon icon-bell"></span>My Games</div>
+</li>
+
+    <li class="row row--match">
+        <a href="#">
+            <div class="league-badge">Ligue 1</div>
+            <div class="cell cell__time"><span class="hour">18:00</span></div>
+            <div class="cell cell__team cell__team--team1 win"><span>MO Béjaia</span></div>
+            <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
+            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+    <li class="row row--match event-live event-paused">
+        <a href="#">
+            <div class="league-badge">Bund. 1</div>
+            <div class="cell cell__time"><span class="status">HT</span></div>
+            <div class="cell cell__team cell__team--team1"><span>PSG</span></div>
+            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
+            <div class="cell cell__team cell__team--team2"><span>Bordeaux</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+    <li class="row row--match event-live">
+        <a href="#">
+            <div class="league-badge">Serie A</div>
+            <div class="cell cell__time"><span class="status">24'</span></div>
+            <div class="cell cell__team cell__team--team1"><span>Perpignan long name</span></div>
+            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">0</span></div>
+            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+</ul>
+
+<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
+    <li class="row row--divider ls-divider">
+	<div class="cell cell__divider-title cell__flag ls-divider__title"><img class="ls-divider__flag" src="../assets/img/flag-fr.png" alt="France"></div>
+	<div class="cell cell__league-name">Ligue 1</div>
+		<div class="cell cell__spacer ls-divider__spacer"></div>
+</li>    <li class="row row--match">
+        <a href="#">
+            <div class="cell cell__time"><span class="hour">18:00</span></div>
+            <div class="cell cell__team cell__team--team1 win"><span>MO Béjaia</span></div>
+            <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
+            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+    <li class="row row--match event-live event-paused">
+        <a href="#">
+            <div class="cell cell__time"><span class="status">HT</span></div>
+            <div class="cell cell__team cell__team--team1"><span>PSG</span></div>
+            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
+            <div class="cell cell__team cell__team--team2"><span>Bordeaux</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+    <li class="row row--match event-live">
+        <a href="#">
+            <div class="cell cell__time"><span class="status">24'</span></div>
+            <div class="cell cell__team cell__team--team1"><span>Perpignan long name</span></div>
+            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">0</span></div>
+            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+</ul>
+
+<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
+    <li class="row row--divider ls-divider">
+	<div class="cell cell__flag ls-divider__title"><img class="ls-divider__flag" src="../assets/img/flag-dk.png" alt="Denmark"></div>
+	<div class="cell cell__league-name">Denmark Danmarksserien</div>
+	<div class="cell cell__league-stage ls-divider__description">- Groupe 2 phase 1</div>
+	<div class="cell cell__spacer ls-divider__spacer"></div>
+	<div class="cell cell__standing-icon ls-divider__right-nav">
+		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
+		<a href="#"><span class="ls-divider__icon icon-star active"></span></a>
+	</div>
+</li>    <li class="row row--match">
+        <a href="#">
+                <div class="cell cell__time"><span class="hour">18:00</span></div>
+                <div class="cell cell__team cell__team--team1">
+                    <span>MO Béjaia</span>
+                    <div class="cell__team__cards">
+                        <span class="red-card"></span>
+                    </div>
+                </div>
+                <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie long name</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+
+        </a>
+    </li>
+    <li class="row row--match event-live row--highlight">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">20'</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score updated"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away blink">1</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span><div class="cell__team__cards">
+                        <span class="red-card"></span>
+                        <span class="red-card"></span>
+                    </div></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match event-live event-paused">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">HT</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match">
+        <a href="#">
+                <div class="cell cell__time"><span class="hour">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">22/05</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score cell__hour"><span>20:45</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match">
+        <a href="#">
+                <div class="cell cell__time"><span class="hour">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+
+        </a>
+    </li>
+    <li class="row row--match event-live event-paused">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">HT</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match event-live event-paused">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">HT</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+</ul>
+
+<div class="ls-divider">
+	<div class="ls-divider__title"><img class="ls-divider__flag" src="../assets/img/flag-dk.png" alt="Denmark">Denmark Danmarksserien</div>
+	<div class="ls-divider__description">- Groupe 2 phase 1</div>
+	<div class="ls-divider__spacer"></div>
+	<nav class="ls-divider__right-nav">
+		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
+		<a href="#"><span class="ls-divider__icon icon-star active"></span></a>
+	</nav>
+</div>
+<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
+    <li class="row row--match">
+        <a href="#">
+                <div class="cell cell__time"><span class="hour">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+
+        </a>
+    </li>
+    <li class="row row--match event-live event-paused">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">HT</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match event-won">
+        <a href="#">
+                <div class="cell cell__date"><span class="hour">23/08/16</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+
+        </a>
+    </li>
+    <li class="row row--match event-draw">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match event-lost">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match">
+        <a href="#">
+                <div class="cell cell__time"><span class="hour">18:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+
+        </a>
+    </li>
+    <li class="row row--match">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">19:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+    <li class="row row--match event-live">
+        <a href="#">
+                <div class="cell cell__time"><span class="status">19:00</span></div>
+                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
+                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
+                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+                <div class="cell cell__caret">
+                    <span class="mdl-button__icon icon-caret-right"></span>
+                </div>
+        </a>
+    </li>
+</ul>
+
+				  </div>
+						
+				</main>			
+								</div>
+		<div class="mdl-dialog" id="dialog1">
+	<div class="mdl-dialog__content">
+		<div class="mdl-dialog__header">
+			<span class="mdl-dialog__header-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+		</div>
+		<div class="mdl-dialog__body">
+			<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+		</div>
+		<div class="mdl-dialog__footer">
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				CANCEL
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				AGREED
+			</button>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		var dp = $('.mdl-calendar > input[type="text"]');
+		dp.datepicker();
+
+
+		/*mdl-dialog*/
+		//This code should be on a js component
+		$('[data-toggle="mdl-dialog"]').click(function( e ){
+			var target = $(this).data("target");
+			$(target).addClass("mdl-dialog--show");
+
+			e.stopPropagation();
+		});
+
+		//Dialog close button
+		$(".mdl-dialog-close").click(function( e ){
+			var dialog = $(this).parents(".mdl-dialog");
+			dialog.removeClass("mdl-dialog--show");
+		});
+
+		//Hide dialog when click outside
+		$(document).on("click",function( e ){
+			if ( !$(e.target).closest(".mdl-dialog__content").length ) {
+				$(".mdl-dialog").removeClass('mdl-dialog--show');
+			}
+		});
+
+		/*mdl-collapsible*/
+		$(".mdl-collapsible__heading").click(function( e ){
+			var collapsible = $(this).parent();
+			var body = $(".mdl-collapsible__body", collapsible);
+
+			body.slideToggle({
+				complete: function(){
+					collapsible.toggleClass("mdl-collapsible-collapsed");
+				}
+			});
+		});
+	});
+</script></body>
+</html>

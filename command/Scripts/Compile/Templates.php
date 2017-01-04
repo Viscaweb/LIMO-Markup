@@ -85,7 +85,7 @@ class Templates implements ScriptInterface
     {
         $filesRaw = CliCommands::run(
             sprintf(
-                'find %s -type f -name "*.twig"',
+                'find %s -maxdepth 1 -type f -name "*.twig"',
                 $this->getTemplateFolder($basePath)
             )
         );

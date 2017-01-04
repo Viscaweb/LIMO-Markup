@@ -24,10 +24,6 @@
     height: 50%;
     padding: 4.2% 0.03% 0 0.03%;
 
-    @media #{$ls-small-devices}{
-      height: 48%;
-    }
-
     .legend {
       position: absolute;
       left: 0;
@@ -100,11 +96,6 @@
     box-sizing: border-box;
     padding: 0 0.03% 5.3% 0.03%;
 
-    @media #{$ls-small-devices}{
-      height: 48%;
-      margin-top: 3%;
-    }
-
     .legend {
       position: absolute;
       right: 0;
@@ -164,6 +155,7 @@
       }
     }
 
+
     .player__number {
       background: #E6E5FF;
       color:$ls-color-black ;
@@ -222,29 +214,17 @@
           -webkit-box-shadow: 1px 2px 0px 0px rgba(36,74,0,0.61);
           -moz-box-shadow: 1px 2px 0px 0px rgba(36,74,0,0.61);
           box-shadow: 1px 2px 0px 0px rgba(36,74,0,0.61);
-
-          @media #{$ls-small-devices}{
-            padding: 0 5px;
-          }
         }
 
         .match-incidents {
           position: absolute;
-          bottom: 0;
+          bottom:-18px;
           width: 100%;
 
           &__icon {
-            width: 100%;
             display: flex;
-            flex-flow: row wrap;
+            flex-flow: row;
             justify-content: center;
-            position: absolute;
-            top: 1px;
-
-            span{
-              margin-left: 2px;
-              margin-right: 2px;
-            }
           }
         }
       }

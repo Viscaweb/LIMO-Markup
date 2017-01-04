@@ -22,8 +22,6 @@ $ls-success-color: 			#5da400;
 $ls-error-color: 				#ea0000;
 $ls-warning-color: 			#f6b514;
 $ls-info-color: 				#a4cfe9;
-$ls-user-female-color:	#ffaef7;
-$ls-user-male-color:		#8dc4ff;
 
 //Social colors
 $ls-color-facebook: 		#395fa9;
@@ -49,10 +47,7 @@ $ls-font-weight-medium: 			500;
 $ls-font-weight-bold: 				700;
 
 //Image paths
-$ls-img-path: 								"../assets/img";
-
-//Icons
-$ls-icons-font: 							'LSicons';
+$ls-img-path: "../assets/img";
 
 //Top Header
 $ls-top-header-border-bottom: 	1px solid #e2e2e2;
@@ -113,7 +108,8 @@ $ls-collapsible-border-color:					darken($ls-color-white, 3.2%);
 
 //Dialog
 $ls-dialog-shadow: 							0 0 10px rgba(0, 0, 0, 0.17);
-$ls-dialog-border: 							1px solid #e7e7e7;
+$ls-dialog-border-color:        #e7e7e7;
+$ls-dialog-border: 							1px solid $ls-dialog-border-color;
 $ls-dialog-padding: 						25px 25px 15px;
 $ls-dialog-title-font-size: 		17px;
 $ls-dialog-title-font-weight: 	600;
@@ -177,7 +173,6 @@ $ls-team-over-under-stats-second-size: 		69px;
 
 //Message widget
 $ls-message-widget-icon-size: 						55px;
-$ls-message-widget-app-icon-size: 				73px;
 
 //Login Register
 $ls-login-register-textfield-size: 				10px;
@@ -249,7 +244,6 @@ $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
 $ls-retina: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx)";
 $ls-small-portrait: "only screen and (max-device-width : 320px) and (orientation : portrait)";
 $ls-high-dpi: "only screen and ( min-device-pixel-ratio: 1.25), only screen and ( min-resolution: 1.25dppx), only screen and (min-resolution: 192dpi)";
-$ls-small-devices: "only screen and (max-device-width : 420px)";
 
 /* ==========  TYPOGRAPHY  ========== */
 

@@ -36,7 +36,7 @@
     }
   }
 
-  &--warning, &--loading{
+  &--warning{
 
     .mdl-snackbar__icon, .mdl-snackbar__action{
       color: $ls-warning-color;
