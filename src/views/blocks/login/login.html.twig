@@ -1,15 +1,15 @@
 <div class="ls-login-register">
 	<div class="ls-login-register__logo">
-		<img src="../assets/img/drawer-logo.png" alt="Logo">
+		<img src="{{ basePath }}../assets/img/drawer-logo.png" alt="Logo">
 	</div>
 	<span class="ls-login-register__title">You need to be logged-in with your account to post a comment on this game</span>
 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--facebook  mdl-button--large mdl-button--block mdl-js-ripple-effect">
 		<span class="icon icon-facebook"></span>Login with Facebook
 	</button>
 	<span class="ls-login-register__text">Or using your account:</span>
-	<form action="#">
+	<form action="#" class="form-not-submitted">
 	  <div class="mdl-textfield mdl-js-textfield">
-	    <input class="mdl-textfield__input" type="text" id="username" />
+	    <input class="mdl-textfield__input" type="text" id="username" required />
 	    <label class="mdl-textfield__label" for="username">Username</label>
 	  </div>
 	  <div class="mdl-textfield mdl-js-textfield">

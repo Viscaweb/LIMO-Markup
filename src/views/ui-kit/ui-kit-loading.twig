@@ -1,0 +1,13 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'UI Loading' %}
+{% set ls_header_brand_logo = true %}
+{% set ls_content_variables = 'mdl-loading mdl-loading--active' %}
+
+{% set main_content %}
+
+	{% include 'blocks/loading.twig' %}
+
+{% endset %}

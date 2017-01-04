@@ -28,7 +28,7 @@
         justify-content: center;
         align-items: center;
         font-size: 12px;
-        color : lighten($ls-text-color, 30%);
+        color : lighten($ls-text-color, 15%);
       }
 
       &__comment-icon {
@@ -52,6 +52,7 @@
 
         img{
           max-width: 100%;
+          height: auto;
         }
       }
     }

@@ -1,0 +1,13 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set ls_header_brand_logo = true %}
+{% set page_title = 'Jean Lane Profile' %}
+{% set ls_header_button = 'Close' %}
+
+{% set main_content %}
+	{% include 'blocks/profile/user-profile-header.html.twig' %}
+	{% include 'blocks/profile/user-predictions-statistics.html.twig' %}
+	{% include 'blocks/predictions/contest-grid-closed.html.twig' %}
+{% endset %}

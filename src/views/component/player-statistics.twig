@@ -1,0 +1,11 @@
+{% extends "layouts/default-layout.twig" %}
+	
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'Player Statistics' %}
+{% set ls_header_brand_logo = true %}
+
+{% set main_content %}
+    {% include 'blocks/sports/player/player_statistics.html.twig' %}
+
+{% endset %}

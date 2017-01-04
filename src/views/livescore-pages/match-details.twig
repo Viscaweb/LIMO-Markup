@@ -1,0 +1,17 @@
+{% extends "layouts/layout-match.twig" %}
+
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'PSG - Saint Etienne' %}
+{% set ls_header_brand_logo = true %}
+{% set divider_title_h = 'PSG - Saint Etienne Score' %}
+{% set divider_title_h2 = 'PSG - Saint Etienne H2' %}
+
+
+{% set main_content %}
+	{% include 'blocks/dividers/divider-h1.twig' %}
+	{% include 'blocks/sports/match/match_details.html.twig' %}
+	{% include 'blocks/sports/match/match_incidents.html.twig' %}
+{% endset %}
+

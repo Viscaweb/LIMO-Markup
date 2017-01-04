@@ -1,0 +1,28 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'UI Kit' %}
+{% set ls_header_brand_logo = true %}
+
+{# Main content #}
+{% set main_content %}
+
+	{% include 'blocks/buttons.twig' %}
+
+	{% include 'blocks/dialog.twig' %}
+
+	{% include 'blocks/form-elements.twig' %}
+
+	<div class="mdl-grid mdl-grid--no-spacing">
+		{% include 'blocks/collapsible.twig' %}
+
+		{% include 'blocks/lists.twig' %}
+	</div>
+	
+{% endset %}
+
+{# Scripts init #}
+{% block footer_scripts %}
+	{% include 'blocks/footer-scripts.twig' %}
+{% endblock %}
