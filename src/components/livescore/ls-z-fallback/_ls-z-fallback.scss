@@ -576,6 +576,17 @@
     &__team--flag {
       width: 86px !important;
     }
+
+    &__team--infos {
+      text-align: left;
+
+      .team-title {
+        
+        .favorite-star {
+          display: inline-block;
+        }
+      }
+    }
   }
 }
 
