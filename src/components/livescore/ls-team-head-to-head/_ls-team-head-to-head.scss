@@ -17,27 +17,32 @@
         font-size:22px;
 
         &--first {
-          width:60px;
-          height:60px;
+          width: $ls-match-head-to-head-first-size;
+          height: $ls-match-head-to-head-first-size;
         }
+
         &--second {
-          width:40px;
-          height:40px;
+          width: $ls-match-head-to-head-second-size;
+          height: $ls-match-head-to-head-second-size;
         }
+
         &--third {
-          width:32px;
-          height:32px;
+          width: $ls-match-head-to-head-third-size;
+          height: $ls-match-head-to-head-third-size;
         }
+
         &--fourth {
-          width:20px;
-          height:20px;
+          width: $ls-match-head-to-head-fourth-size;
+          height: $ls-match-head-to-head-fourth-size;
           font-size:12px;
         }
+
         &--five {
-          width:20px;
-          height:20px;
+          width: $ls-match-head-to-head-fifth-size;
+          height: $ls-match-head-to-head-fifth-size;
           font-size:12px;
         }
+
         &--gray1 {
           background-color: darken($ls-color-white, 13.1%);
         }

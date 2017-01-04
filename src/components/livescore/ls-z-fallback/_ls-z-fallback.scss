@@ -1976,3 +1976,34 @@ ul.mdl-button-group {
     }
   }
 }
+
+// Head to head
+.ls-head-to-head {
+  .row {
+    .cell {
+      .circle {
+        display: inline-block;
+
+        &--first {
+          line-height: $ls-match-head-to-head-first-size;
+        }
+
+        &--second {
+          line-height: $ls-match-head-to-head-second-size;
+        }
+
+        &--third {
+          line-height: $ls-match-head-to-head-third-size;
+        }
+
+        &--fourth {
+          line-height: $ls-match-head-to-head-fourth-size;
+        }
+
+        &--five {
+          line-height: $ls-match-head-to-head-fifth-size;
+        }
+      }
+    }
+  }
+}
