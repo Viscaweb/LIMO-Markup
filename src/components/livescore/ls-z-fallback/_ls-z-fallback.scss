@@ -69,7 +69,7 @@
   width: 100%;
   padding-top: $layout-mobile-header-height;
 
-  .mdl-layout--fixed-tabs & {
+  .mdl-layout--fixed-tabs &, .has-tabs & {
     padding-top: $layout-mobile-header-height + $layout-tab-bar-height;
   }
 }
