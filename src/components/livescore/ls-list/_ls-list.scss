@@ -1,195 +1,197 @@
 .ls-list {
 
   .row {
-	width: 100%;
-	display: flex;
-	font-weight: 300;
-	align-content: stretch;
-	align-items: stretch;
-
-	> a {
-      width: 100%;
-      display: flex;
-      align-content: stretch;
-      align-items: stretch;
-      text-decoration: none;
-
-    }
-
-    a{
-      &:active {
-        background-color: $ls-list-pressed-color;
-      }
-    }
-
-	&.row--highlight {
-	  /*background: $ls-color-highlight;*/
-		animation-name: progressiveHighlight;
-		animation-duration: 6s;
-
-	}
-
-	&.row--head{
-	  background: #f7f7f7;
-	  /*border-bottom: lighten($ls-list-border-color, 5%);*/
-
-	  .cell {
-		align-items: center;
-	  }
-	}
-
-    &.row--visual-block {
-      background: $ls-advertisement-bg-color;
-      border-bottom: lighten($ls-list-border-color, 5%);
-      font-size:$ls-advertisement-font-size;
-      color:$ls-advertisement-font-color;
-
-      .cell {
-        align-items: center;
-        display:flex;
-        flex-flow: column;
-        justify-content: center;
-        text-transform: uppercase;
-        padding: 5px 10px 10px 10px;
-
-        img {
-          width: 100%;
-          height: auto;
-        }
-      }
-    }
-
-	&.row--divider{
-
-	  justify-content: flex-start;
-	  align-content: flex-start;
-	  line-height: 32px;
-	  border: none;
-
-		&.row--divider--center {
-			align-items: center;
-			justify-content: center;
-		}
-
-	  .cell {
+		width: 100%;
 		display: flex;
-		flex: none;
-		align-items: center;
-		flex-grow : 0;
-		padding: 0;
-		
-		&:first-child {
-		  padding-left: 13px;
-		}
-
-		&__league-name,
-		&__league-stage {
-		  display: block;
-		  overflow: hidden;
-		  text-overflow: ellipsis;
-		}
-
-		
-		&__league-name {
-		  font-weight: 400;
-		  padding-right: 4px;
-		  flex-shrink: 50;
-		}
-
-		&__league-stage {
-		  flex-shrink: 50;
-		}
-
-		&__divider-title {
-		  font-weight: 400;
-		  padding-right: 4px;
-		}
-	  }
-	}
-
-	.cell {
-	  flex: 1 100%;
-	  padding-top: 13px;
-	  padding-bottom: 13px;
-
-	  &__spacer {
-		flex-grow: 1 !important;
-	  }
-
-	  &__time,
-	  &__team,
-      &__date{
-		white-space: nowrap;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		padding-left: 5px;
-		padding-right: 5px;
-	  }
-
-	  &__time {
-		color : lighten($ls-text-color, 30%);
 		font-weight: 300;
-		flex: 0 0 46px
+		align-content: stretch;
+		align-items: stretch;
+
+		> a {
+	    width: 100%;
+	    display: flex;
+	    align-content: stretch;
+	    align-items: stretch;
+	    text-decoration: none;
 	  }
 
-      &__date {
-        color : lighten($ls-text-color, 30%);
-        font-weight: 300;
-        flex: 0 0 62px
-      }
+	  a{
+	    &:active {
+	      background-color: $ls-list-pressed-color;
+	    }
+	  }
 
-	  &__team {
-		position: relative;
-
-		&.win {
-		  font-weight: 600;
+		&.row--highlight {
+		  /*background: $ls-color-highlight;*/
+			animation-name: progressiveHighlight;
+			animation-duration: 6s;
 		}
-	  }
 
-	  &__team--team1 {
-		text-align: right;
+		&.row--head{
+		  background: #f7f7f7;
+		  /*border-bottom: lighten($ls-list-border-color, 5%);*/
 
-		.red-card {
-		  right: 5px;
+		  .cell {
+			align-items: center;
+		  }
 		}
+
+	  &.row--visual-block {
+	    background: $ls-advertisement-bg-color;
+	    border-bottom: lighten($ls-list-border-color, 5%);
+	    font-size:$ls-advertisement-font-size;
+	    color:$ls-advertisement-font-color;
+
+	    .cell {
+	      align-items: center;
+	      display:flex;
+	      flex-flow: column;
+	      justify-content: center;
+	      text-transform: uppercase;
+	      padding: 5px 10px 10px 10px;
+
+	      img {
+	        width: 100%;
+	        height: auto;
+	      }
+	    }
 	  }
 
-	  &__team--team2 {
-		text-align: left;
-	  }
+		&.row--divider{
 
-	  &__favorite {
-		flex : 0 0 35px;
-	  }
+		  justify-content: flex-start;
+		  align-content: flex-start;
+		  line-height: 32px;
+		  border: none;
 
-	  &__caret {
-		flex : 0 0 20px;
+			&.row--divider--center {
+				align-items: center;
+				justify-content: center;
+			}
 
-		.mdl-button__icon {
-		  color: lighten($ls-text-color, 50%);
+		  .cell {
+			display: flex;
+			flex: none;
+			align-items: center;
+			flex-grow : 0;
+			padding: 0;
+			
+			&:first-child {
+			  padding-left: 13px;
+			}
+
+			&__league-name,
+			&__league-stage {
+			  display: block;
+			  overflow: hidden;
+			  text-overflow: ellipsis;
+			}
+
+			
+			&__league-name {
+			  font-weight: 400;
+			  padding-right: 4px;
+			  flex-shrink: 50;
+			}
+
+			&__league-stage {
+			  flex-shrink: 50;
+			}
+
+			&__divider-title {
+			  font-weight: 400;
+			  padding-right: 4px;
+			}
+		  }
 		}
-	  }
 
-	  &__score {
-		font-weight: 600;
-		text-align: center;
-		flex : 0 0 54px;
-		background-color: rgba(0,0,0,0.02);
-	  }
+		.cell {
+		  flex: 1 100%;
+		  padding-top: 13px;
+		  padding-bottom: 13px;
 
-		&__hour {
-			color: lighten($ls-text-color, 30%);
-			font-weight: 400;
+		  &__spacer {
+			flex-grow: 1 !important;
+		  }
+
+		  &__time,
+		  &__team,
+	      &__date{
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			padding-left: 5px;
+			padding-right: 5px;
+		  }
+
+		  &__time {
+			color : lighten($ls-text-color, 30%);
+			font-weight: 300;
+			flex: 0 0 46px
+		  }
+
+	      &__date {
+	        color : lighten($ls-text-color, 30%);
+	        font-weight: 300;
+	        flex: 0 0 62px
+	      }
+
+		  &__team {
+			position: relative;
+
+			&.win {
+			  font-weight: 600;
+			}
+		  }
+
+		  &__team--team1 {
+			text-align: right;
+
+			.red-card {
+			  right: 5px;
+			}
+		  }
+
+		  &__team--team2 {
+			text-align: left;
+		  }
+
+		  &__favorite {
+			flex : 0 0 35px;
+		  }
+
+		  &__caret {
+			flex : 0 0 20px;
+
+			.mdl-button__icon {
+			  color: lighten($ls-text-color, 50%);
+			}
+		  }
+
+		  &__score {
+			font-weight: 600;
+			text-align: center;
+			flex : 0 0 54px;
+			background-color: rgba(0,0,0,0.02);
+		  }
+
+			&__hour {
+				color: lighten($ls-text-color, 30%);
+				font-weight: 400;
+			}
 		}
-	}
 
-	.icon-star {
-	  
-	  &.active {
-		color : $ls-star-active;
-	  }
-	}
+		.icon-star {
+		  
+		  &.active {
+			color : $ls-star-active;
+		  }
+		}
   }
 
+	// This class is to clear floating columns in standing tables see LIMO-268 
+	&-divider {
+		clear: both;
+	}
 }
 
