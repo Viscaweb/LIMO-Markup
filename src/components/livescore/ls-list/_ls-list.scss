@@ -190,8 +190,7 @@
   }
 
 	// This class is to clear floating columns in standing tables see LIMO-268 
-	&-divider {
+	&--clear {
 		clear: both;
 	}
 }
-
