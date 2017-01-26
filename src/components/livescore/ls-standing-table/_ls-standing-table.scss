@@ -4,6 +4,18 @@
   font-size: 12px;
   overflow: hidden;
 
+  .row {
+
+    &--show-all{
+      background-color: #fcfcfc!important;
+
+      .cell__button{
+        padding: 12px !important;
+        text-align: center;
+      }
+    }
+
+  }
 
   /* ---- Left Side ----- */
 
@@ -172,6 +184,7 @@
         }
 
       }
+
     }
 
     .row--head {
@@ -223,6 +236,13 @@
 
         &__point {
           padding: 4px 0;
+        }
+      }
+
+      &--show-all{
+
+        .cell__button{
+          opacity: 0;
         }
       }
     }
