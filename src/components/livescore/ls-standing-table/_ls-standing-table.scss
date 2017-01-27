@@ -15,6 +15,26 @@
       }
     }
 
+    .cell {
+
+      &__stat {
+        display: flex;
+        justify-content: center;
+        flex: 0 0 20px;
+        font-size: 12px;
+        font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", sans-serif;
+
+        &--down {
+          color: $ls-cell-stat-down;
+        }
+
+        &--up {
+          color: $ls-cell-stat-up;
+        }
+      }
+
+    }
+
   }
 
   /* ---- Left Side ----- */
@@ -98,21 +118,7 @@
           }
         }
 
-        &__stat {
-          display: flex;
-          justify-content: center;
-          flex: 0 0 20px;
-          font-size: 12px;
-          font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", sans-serif;
 
-          &--down {
-            color: $ls-cell-stat-down;
-          }
-
-          &--up {
-            color: $ls-cell-stat-up;
-          }
-        }
 
         &__team {
           display: flex;
