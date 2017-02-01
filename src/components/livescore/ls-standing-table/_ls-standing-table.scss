@@ -312,6 +312,16 @@
 
 /* ---- @ media ----- */
 
+@media (max-width: 640px) {
+  .ls-standing-table--left {
+    width: 60%;
+  }
+
+  .ls-standing-table--right {
+    width: 40%;
+  }
+}
+
 @media (max-width: 320px) {
 
   .ls-standing-table--left {
