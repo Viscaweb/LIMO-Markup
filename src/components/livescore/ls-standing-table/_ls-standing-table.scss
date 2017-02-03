@@ -301,8 +301,23 @@
         &--blue {
           background-color: $ls-rank-blue-color;
         }
+        &--clear-blue {
+          background-color: $ls-rank-clear-blue-color;
+        }
         &--red {
           background-color: $ls-rank-red-color;
+        }
+        &--clear-red {
+          background-color: $ls-rank-clear-red-color;
+        }
+        &--orange {
+          background-color: $ls-rank-orange-color;
+        }
+        &--clear-orange {
+          background-color: $ls-rank-clear-orange-color;
+        }
+        &--grey {
+          background-color: $ls-rank-grey-color;
         }
       }
     }
