@@ -121,7 +121,11 @@
         justify-content: center;
         color : lighten($ls-text-color, 30%);
         font-weight: 300;
-        font-size: 13px;
+        font-size: 12px;
+        white-space: normal;
+        text-align: center;
+        padding: 0px 4px;
+
 
         .live,
         .paused{
