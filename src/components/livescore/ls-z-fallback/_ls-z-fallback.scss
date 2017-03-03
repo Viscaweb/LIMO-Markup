@@ -68,10 +68,11 @@
   .mdl-layout__content {
     width: 100%;
     padding-top: $layout-mobile-header-height;
+  }
 
-    .mdl-layout--fixed-tabs &, .has-tabs & {
-      padding-top: $layout-mobile-header-height + $layout-tab-bar-height;
-    }
+  .mdl-layout--fixed-tabs .mdl-layout__content, 
+  .has-tabs .mdl-layout__content {
+    padding-top: $layout-mobile-header-height + $layout-tab-bar-height;
   }
 
   .ls-list {
@@ -108,6 +109,15 @@
     &__title {
       padding-left: 13px;
       padding-right: 4px;
+    }
+
+    // Headings divider
+    &--h {
+      text-align: center;
+
+      .ls-divider__title {
+        display: block;
+      }
     }
 
     .row {
