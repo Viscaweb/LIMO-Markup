@@ -84,6 +84,14 @@
       width: 100%;
       display: table-row;
       padding: 0 !important;
+
+      .cell__team--team1 {
+        text-align: right;
+      }
+
+      .cell__team--team2 {
+        text-align: left;
+      }
     }
 
     .cell {
