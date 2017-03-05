@@ -46,19 +46,13 @@
     width: 0;
   }
 
-  .ls-toolbar-icon {
-
-    .mdl-layout__header & {
-      padding: 0 6px;
-    }
+  .mdl-layout__header .ls-toolbar-icon {
+    padding: 0 6px;
   }
 
-  .mdl-switch {
-
-    .mdl-layout__header & {
-      display: inline-block;
-      width: auto;
-    }
+  .mdl-layout__header .mdl-switch {
+    display: inline-block;
+    width: auto;
   }
 
   .mdl-layout__content {
