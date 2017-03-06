@@ -69,6 +69,15 @@
     padding-top: $layout-mobile-header-height + $layout-tab-bar-height;
   }
 
+  .mdl-layout__tab-bar {
+    white-space: nowrap;
+  }
+
+  .mdl-layout__tab {
+    display: inline-block;
+    float: none;
+  }
+
   .ls-list {
     width: 100%;
     display: table;
