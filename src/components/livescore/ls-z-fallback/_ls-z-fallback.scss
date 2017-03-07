@@ -1510,13 +1510,25 @@
 
   //Snackbar
   .mdl-snackbar {
-    display: table;
+    display: none;
     table-layout: fixed;
+
+    @media #{$ls-phone} {
+      left: 0;
+    }
+
+    &--active {
+      display: table;
+    }
 
     &__icon {
       display: table-cell;
       vertical-align: middle;
       width: 30px;
+
+      > span {
+        vertical-align: middle;
+      }
 
       @media screen and (max-device-width: 350px) {
         padding-left: 10px;
@@ -1525,7 +1537,9 @@
 
     &__text {
       display: table-cell;
+      width: 100%;
       vertical-align: middle;
+      float: none;
 
       @media screen and (max-device-width: 350px) {
         padding-right: 10px;
@@ -1536,7 +1550,8 @@
     &__action {
       display: table-cell;
       vertical-align: middle;
-      width: 40px;
+      float: none;
+      width: 80px;
 
       @media screen and (max-device-width: 350px) {
         padding-right: 10px;
