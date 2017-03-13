@@ -40,6 +40,15 @@
 
     }
 
+    &.live {
+
+      .cell {
+
+        &__team--title a {
+          font-weight: 600;
+        }
+      }
+    }
   }
 
   /* ---- Left Side ----- */
