@@ -2048,4 +2048,13 @@
       }
     }
   }
+
+  // User my information
+  .ls-user-my-information__header .user-avatar .img-rounded > a {
+    background-color: transparent;
+
+    .mdl-ripple {
+      display: none;
+    }
+  }
 }
