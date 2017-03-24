@@ -18,7 +18,14 @@
 
         {# Season button #}
         {% if ls_header_season_button %}
-          <a class="mdl-navigation__link ls-season-button" href="#"><span id="headerNavSeasonLabel">14/15</span></a>
+          <div class="mdl-navigation__link ls-season-button" href="#">
+            <select>
+              <option value="1">14/15</option>
+              <option value="1">14/13</option>
+              <option value="1">14/16</option>
+              <option value="1">14/17</option>
+            </select>
+          </div>
         {% endif %}
 
         {# Two labels switch #}
