@@ -32,7 +32,15 @@
 	}
 
 	@media screen and (max-width: $layout-screen-size-threshold) {
-		background-position: center 11px;
+		.mdl-layout__header & {
+			line-height: 1;
+			background-position: center 11px;
+
+			select {
+				height: $layout-mobile-header-height;	
+				line-height: $layout-mobile-header-height + 1px;	
+			}
+		}
 	}
 }
 
