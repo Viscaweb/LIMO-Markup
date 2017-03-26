@@ -1,3 +1,21 @@
 .mdl-layout__tab-bar {
   height: $layout-tab-bar-height;
 }
+
+.mdl-tabs--scrollable {
+	overflow: hidden;
+	height: $ls-tab-height;
+	
+	.mdl-tabs__tab-bar {
+		justify-content: flex-start;
+		overflow-x: scroll;
+		overflow-y: hidden;
+		width: 100%;
+		padding-bottom: 50px;
+	}
+
+	.mdl-tabs__tab {
+		flex-grow: 0;
+		flex-shrink: 0;
+	}
+}
