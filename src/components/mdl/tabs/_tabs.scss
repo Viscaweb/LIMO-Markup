@@ -5,6 +5,7 @@
 .mdl-tabs--scrollable {
 	overflow: hidden;
 	height: $ls-tab-height;
+	border-bottom: 1px solid $tab-border-color;
 	
 	.mdl-tabs__tab-bar {
 		justify-content: flex-start;
