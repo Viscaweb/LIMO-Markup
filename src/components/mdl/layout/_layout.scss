@@ -372,12 +372,16 @@
 //Tabs
 .mdl-layout__tab-bar-container {
 	border-bottom: $ls-top-header-border-bottom;
+
+	// This fixes the little jump while page is still loading see LIMO-263
+	.mdl-layout__tab-bar {
+		padding-bottom: $layout-tab-bar-height * 2;
+	}
 }
 
-.mdl-layout__tab-bar{
+.mdl-layout__tab-bar {
 	padding-left: 0;
 	width: 100%;
-	padding-bottom: $layout-tab-bar-height * 2;
 }
 
 //Directional buttons are not working
