@@ -92,6 +92,10 @@
 			  font-weight: 400;
 			  padding-right: 4px;
 			  flex-shrink: 50;
+
+			  > a {
+			  	color: $ls-divider-title-color;
+			  }
 			}
 
 			&__league-stage {

@@ -39,6 +39,11 @@
   white-space: nowrap;
   display: flex;
   align-items: center;
+	color: $ls-divider-title-color;
+
+  > a {
+  	color: $ls-divider-title-color;
+  }
 }
 
 .ls-divider__description{
