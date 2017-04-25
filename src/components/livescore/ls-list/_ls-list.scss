@@ -32,7 +32,19 @@
 		  /*border-bottom: lighten($ls-list-border-color, 5%);*/
 
 		  .cell {
-			align-items: center;
+				align-items: center;
+
+				&--content-left {
+					padding-left: $ls-list-heading-h-padding;
+					padding-right: $ls-list-heading-h-padding;
+					justify-content: left;
+				}
+
+				&--content-right {
+					padding-left: $ls-list-heading-h-padding;
+					padding-right: $ls-list-heading-h-padding;
+					justify-content: right;
+				}
 		  }
 		}
 

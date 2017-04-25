@@ -10,11 +10,11 @@
       .circle {
         border-radius: 50%;
         background-color: lighten($ls-text-color, 13.1%);
-        color:$ls-color-white;
+        color: $ls-color-white;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size:22px;
+        font-size: 22px;
 
         &--first {
           width: $ls-match-head-to-head-first-size;
@@ -45,21 +45,53 @@
 
         &--gray1 {
           background-color: darken($ls-color-white, 13.1%);
+
+          &.circle--bordered {
+            border-color: darken($ls-color-white, 13.1%);
+          }
         }
+
         &--gray2 {
           background-color: darken($ls-color-white, 30.5%);
+
+          &.circle--bordered {
+            border-color: darken($ls-color-white, 30.5%);
+          }
         }
+
         &--gray3 {
           background-color: darken($ls-color-white, 32.4%);
+
+          &.circle--bordered {
+            border-color: darken($ls-color-white, 32.4%);
+          }
         }
+
         &--success {
-          background-color:$ls-primary-color;
+          background-color: $ls-primary-color;
+
+          &.circle--bordered {
+            border-color: $ls-green-active-color;
+          }
         }
+
         &--danger {
-          background-color:$ls-color-live;
+          background-color: $ls-color-live;
+
+          &.circle--bordered {
+            border-color: $ls-color-live;
+          }
+        }
+
+        &--bordered {
+          background-color: transparent;
+          border-width: 4px;
+          border-style: solid;
+          color: $ls-text-color;
         }
       }
     }
+
     &--infos {
 
       .cell {

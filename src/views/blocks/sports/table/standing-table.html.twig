@@ -1,3 +1,4 @@
+{% if not standing_table_basic %}
 <div class="mdl-button mdl-button--raised mdl-button--large mdl-button__select mdl-button--block">
     <select>
         <option value="0">General</option>
@@ -6,7 +7,7 @@
         <option value="3">Option 4</option>
     </select>
 </div>
-
+{% endif %}
 <div class="container">
 
 {#####   LEFT PART   #####}
@@ -458,7 +459,7 @@
                 38
             </div>
         </li>
-
+        {% if not standing_table_basic %}
         <li class="row row--show-all">
             <div class="cell cell__button">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
@@ -466,7 +467,7 @@
                 </button>
             </div>
         </li>
-
+        {% endif %}
 
     </ul>
 
@@ -1122,8 +1123,8 @@
             <div class="cell cell__point">
                 38
             </div>
-        </li>
-
+        </li>   
+        {% if not standing_table_basic %}
         <li class="row row--show-all">
             <div class="cell cell__button">
                 <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
@@ -1131,13 +1132,13 @@
                 </button>
             </div>
         </li>
-
+        {% endif %}
     </ul>
-
 
 {#####   LEGEND   #####}
     <div class="clear"></div>
 
+    {% if not standing_table_basic %}
     <div class="ls-legend">
         <div class="ls-legend__title">
             <span>LEGEND</span>
@@ -1199,5 +1200,5 @@
             </li>
         </ul>
     </div>
+    {% endif %}
 </div>
-

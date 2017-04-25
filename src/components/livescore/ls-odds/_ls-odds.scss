@@ -5,11 +5,17 @@
   a {
     display: block;
     text-decoration: none;
-    color: #0F87FF;
+    color: $ls-odds-link-color;
     font-weight: inherit;
   }
-  .row {
 
+  &.mdl-list > li {
+    > a {
+      color: $ls-odds-link-color;
+    }
+  }
+
+  .row {
     padding: 0;
 
     .cell {
@@ -26,6 +32,7 @@
         img {
           max-width: 60px;
           height: auto;
+          margin-right: $ls-odds-img-margin;
         }
       }
 

@@ -50,6 +50,7 @@
         </div>
     </li>
 
+    {% if not match_details_hide_scores %}
     {#row - score#}
     <li class="row row--score">
         <div class="cell cell__score-infos">
@@ -98,5 +99,5 @@
         </div>
         <div class="cell cell__score-infos--spacer"></div>
     </li>
-
+    {% endif %}
 </ul>

@@ -98,9 +98,14 @@ $ls-button-facebook-color:			#4168ae;
 $ls-switch-compact-label-height: 				40px;
 $ls-switch-compact-label-font-size: 		12px;
 
+//View more button
+$ls-view-more-button-padding: 	25px 0;
+$ls-view-more-button-color: 		$ls-green-active-color;
+
 //Lists
-$ls-list-padding:				13px 15px;
-$ls-list-text-color:		$ls-color-black;
+$ls-list-padding:						13px 15px;
+$ls-list-text-color:				$ls-color-black;
+$ls-list-heading-h-padding: 10px;
 /*
 $ls-list-border-color:	    blue;
 */
@@ -158,6 +163,10 @@ $ls-match-statistics-list-bg: 									$ls-color-white;
 $ls-match-statistics-bar-height: 								9px;
 $ls-match-statistics-bar-bg: 										$ls-grey-contrast;
 $ls-match-statistics-bar-high-bg: 							$ls-green-active-color;
+
+//Odds
+$ls-odds-img-margin: 										7px;
+$ls-odds-link-color: 										#0F87FF;
 
 //Comment thread widget
 $ls-comment-thread-avatar-size: 				64px;

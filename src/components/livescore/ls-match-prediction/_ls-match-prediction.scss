@@ -29,7 +29,7 @@
       .cell{
         text-align: center;
 
-        &__option{
+        &__option {
           padding-left: 3px;
           padding-right: 3px;
 
@@ -58,16 +58,21 @@
             }
           }
         }
+
+        &__team-form-title {
+          font-weight: $ls-font-weight-medium;
+          padding-bottom: 0;
+        }
       }
 
-      &__team-forms{
+      &__team-forms {
 
-        .cell{
+        .cell {
           display: flex;
           align-items: center;
           justify-content: center;
 
-          .team-form{
+          .team-form {
             display: inline-block;
             text-decoration: none;
             min-width: 20px;
@@ -79,22 +84,22 @@
             font-weight: 300;
             border-radius: 6px;
 
-            &--draw{
+            &--draw {
               background-color: darken($ls-grey-contrast, 5%);
             }
 
-            &--won{
+            &--won {
               background-color: $ls-green-active-color;
             }
 
-            &--lost{
+            &--lost {
               background-color: $ls-red-draw;
             }
           }
 
-          &__title{
+          &__title {
 
-            span{
+            span {
               font-size: ls-font-size(2px,'small');
             }
           }
@@ -104,7 +109,7 @@
   }
 
   /*Prediction chart*/
-  .prediction-chart{
+  .prediction-chart {
     background: url("#{$ls-img-path}/green-field-horizontal.png");
     padding: 20px;
 
@@ -113,7 +118,7 @@
       background-size: 49px auto;
     }
 
-    .title{
+    .title {
       display: block;
       color: rgba($ls-color-white, 0.57);
       font-size: ls-font-size(2px,'large');

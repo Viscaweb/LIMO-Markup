@@ -72,55 +72,156 @@
 		
 								
 		
-		
-
+	
 </head>
 <body>
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
 
-			  <header class="mdl-layout__header">
-            
+		  <header class="mdl-layout__header">
     <div class="mdl-layout__header-row">
-
-                   <div class="mdl-layout-brand-logo"><img src="../../assets/img/ls-app-logo.png" alt="LIMO"></div>
-      
-      <span class="mdl-layout-title">Champions League</span>
+             <div class="mdl-layout-brand-logo"><img src="../../assets/img/ls-app-logo.png" alt="LIMO"></div>
+            <span class="mdl-layout-title">PSG - Saint Etienne</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
 
-                          <div class="mdl-navigation__link ls-season-button" href="#">
-            <select>
-              <option value="1">14/15</option>
-              <option value="1">14/13</option>
-              <option value="1">14/16</option>
-              <option value="1">14/17</option>
-            </select>
-          </div>
         
-                
-                  
-                  
-                  
-                
-      </nav>
+        
+        
+              </nav>
     </div>
 
     
-    
+<ul class="mdl-list ls-list ls-list-match-score-header">
+
+    <li class="row row--match-score-header">
+        <a class="cell cell__flag" href="#">
+            <img src="../../assets/img/psg.png" alt="PSG">
+        </a>
+        <a class="cell cell__team cell__team--team1" href="#">
+            <span class="">PSG</span>
+        </a>
+        <div class="cell cell__score-box">
+            <div class="cell__score--number">
+                <span class=""></span>
+                <span class="versus"> - </span>
+                <span class=""></span>
+            </div>
+            <div class="cell__score--add">
+                <span>
+                    20h30
+                </span>
+            </div>
+        </div>
+        <a class="cell cell__team cell__team--team2" href="#">
+            <span class="">ASSE</span>
+        </a>
+        <a class="cell cell__flag" href="#">
+            <img src="../../assets/img/saint-etienne.png" alt="Saint Etienne">
+        </a>
+    </li>
+
+    <li class="row row--match-score-header">
+        <a class="cell cell__flag" href="#">
+            <img src="../../assets/img/psg.png" alt="PSG">
+        </a>
+        <a class="cell cell__team cell__team--team1" href="#">
+            <span class="">PSG</span>
+        </a>
+        <div class="cell cell__score-box">
+            <div class="cell__score--number">
+                <span class="">2</span>
+                <span class="versus"> - </span>
+                <span class="">1</span>
+            </div>
+            <div class="cell__score--add">
+                <span class="live">
+                    90'+4
+                </span>
+            </div>
+        </div>
+        <a class="cell cell__team cell__team--team2" href="#">
+            <span class="">ASSE</span>
+        </a>
+        <a class="cell cell__flag" href="#">
+            <img src="../../assets/img/saint-etienne.png" alt="Saint Etienne">
+        </a>
+    </li>
+
+
+    <li class="row row--match-score-header">
+        <a class="cell cell__flag" href="#">
+            <img src="../../assets/img/psg.png" alt="PSG">
+        </a>
+        <a class="cell cell__team cell__team--team1" href="#">
+            <span class="">PSG</span>
+        </a>
+        <div class="cell cell__score-box">
+            <div class="cell__score--number">
+                <span class="">2</span>
+                <span class="versus"> - </span>
+                <span class="">1</span>
+            </div>
+            <div class="cell__score--add">
+                <span class="paused">
+                    HT
+                </span>
+            </div>
+        </div>
+        <a class="cell cell__team cell__team--team2" href="#">
+            <span class="">ASSE</span>
+        </a>
+        <a class="cell cell__flag" href="#">
+            <img src="../../assets/img/saint-etienne.png" alt="Saint Etienne">
+        </a>
+    </li>
+
+
+    <li class="row row--match-score-header">
+        <a class="cell cell__flag" href="#">
+            <img src="../../assets/img/psg.png" alt="PSG">
+        </a>
+        <a class="cell cell__team cell__team--team1" href="#">
+            <span class="">PSG</span>
+            <div class="qualified">
+                <span class="icon-tick"></span>
+                <span data-short="QFD" class="text"><span>Qualified</span></span>
+            </div>
+        </a>
+        <div class="cell cell__score-box">
+            <div class="cell__score--number">
+                <span class="">2</span>
+                <span class="versus"> - </span>
+                <span class="">1</span>
+            </div>
+            <div class="cell__score--add">
+                <span>
+                    Finished
+                </span>
+            </div>
+        </div>
+        <a class="cell cell__team cell__team--team2" href="#">
+            <span class="">ASSE</span>
+        </a>
+        <a class="cell cell__flag" href="#">
+            <img src="../../assets/img/saint-etienne.png" alt="Saint Etienne">
+        </a>
+    </li>
+
+</ul>
+
           <!-- Tabs -->
 <div class="mdl-layout__tab-bar mdl-js-ripple-effect">
-  <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Results</a>
-  <a href="#scroll-tab-2" class="mdl-layout__tab">Standings</a>
-  <a href="#scroll-tab-3" class="mdl-layout__tab">Teams</a>
-  <a href="#scroll-tab-4" class="mdl-layout__tab">Scorers</a>
+  <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Match Details</a>
+  <a href="#scroll-tab-2" class="mdl-layout__tab">Live Comments</a>
+  <a href="#scroll-tab-3" class="mdl-layout__tab">Lineups</a>
+  <a href="#scroll-tab-4" class="mdl-layout__tab">Head to Head</a>
+  <a href="#scroll-tab-5" class="mdl-layout__tab">Odds</a>
+  <a href="#scroll-tab-6" class="mdl-layout__tab">Standings</a>
 </div>    
     
-        					
-				
   </header>
-
-	          <div class="mdl-layout__drawer">
+	    <div class="mdl-layout__drawer">
   <span class="mdl-layout-title">
   	<img class="drawer__brand-logo" src="../../assets/img/drawer-logo.png" alt="Logo">
   </span>
@@ -176,192 +277,131 @@
     <li><a class="mdl-navigation__link" href=""><span class="icon icon-verified_user"></span>Conditions and Privacy</a></li>
     <li><a class="mdl-navigation__link" href=""><span class="icon icon-email"></span>Contact us</a></li>
   </ul>
-</div>    	
-			<main class="mdl-layout__content">
-						
-				  <div class="page-content">
-									<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-			<div class="page-content">    <div class="ls-divider ls-divider--h">
-	<h1 class="ls-divider__title">Champions League</h1>
-	<h2 class="ls-divider__sub-title">Champions League H2</h2>
-</div>    <div class="mdl-button-group mdl-button-group--block">
-    <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
-        <span class="mdl-button__icon icon-caret-left"></span>
-    </a>
-    <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--wide">
-        <span class="mdl-button__value">Matchday 37</span><span class="mdl-button__icon mdl-button__icon-right icon-caret-down"></span>
-    </a>
-    <a class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
-        <span class="mdl-button__icon icon-caret-right"></span>
-    </a>
-</div>
+</div>	  	
+  	<main class="mdl-layout__content">
+	    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-4">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-5">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
+	    <section class="mdl-layout__tab-panel" id="scroll-tab-6">
+	      <div class="page-content"><!-- Your content goes here --></div>
+	    </section>
 
-<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
-    <li class="row row--divider ls-divider">
-	<div class="cell cell__divider-title cell__icon ls-divider__title">
-		<span class="ls-divider__icon icon-calendar"></span>Saturday May 23rd
-	</div>
-</li>
+						<div class="ls-divider ls-divider--h">
+	<h1 class="ls-divider__title">PSG - Saint Etienne Score</h1>
+	<h2 class="ls-divider__sub-title">PSG - Saint Etienne H2</h2>
+</div>	<ul class="mdl-list mdl-list—condensed ls-list ls-list-details">
 
-    <li class="row row--match">
-        <a href="#">
-            <div class="cell cell__time"><span class="hour">18:00</span></div>
-            <div class="cell cell__team cell__team--team1 win"><span>MO Béjaia</span></div>
-            <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
-            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-            <div class="cell cell__caret">
-                <span class="mdl-button__icon icon-caret-right"></span>
+    
+    <li class="row row--head">
+        <div class="cell__team">
+            <span>Paris Saint Germain</span>
+            <span class="versus">-</span>
+            <span>Saint Etienne</span>
+        </div>
+    </li>
+
+
+    <li class="row">
+        <div class="cell cell__details">
+            <div class="cell cell__details-infos">
+                <span>League 1</span>
+                <span class="sep"> - </span>
+                <span>Matchday 15</span>
             </div>
-        </a>
-    </li>
-    <li class="row row--match event-live event-paused">
-        <a href="#">
-            <div class="cell cell__time"><span class="status">HT</span></div>
-            <div class="cell cell__team cell__team--team1"><span>PSG</span></div>
-            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
-            <div class="cell cell__team cell__team--team2"><span>Bordeaux</span></div>
-            <div class="cell cell__caret">
-                <span class="mdl-button__icon icon-caret-right"></span>
+        </div>
+        <div class="cell cell__details">
+            <div class="cell cell__details-icon">
+                <span class="icon-calendar"></span>
             </div>
-        </a>
-    </li>
-    <li class="row row--match event-live">
-        <a href="#">
-            <div class="cell cell__time"><span class="status">24'</span></div>
-            <div class="cell cell__team cell__team--team1"><span>Perpignan long name</span></div>
-            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">0</span></div>
-            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-            <div class="cell cell__caret">
-                <span class="mdl-button__icon icon-caret-right"></span>
+            <div class="cell cell__details-infos">
+                <span>30/05/2015</span>
+                <span class="versus"> - </span>
+                <span>20h30</span>
             </div>
-        </a>
+        </div>
     </li>
-</ul>
 
-<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
-    <li class="row row--divider ls-divider">
-	<div class="cell cell__divider-title cell__icon ls-divider__title">
-		<span class="ls-divider__icon icon-calendar"></span>Saturday May 23rd
-	</div>
-</li>
+    <li class="row">
+        <div class="cell cell__details">
+            <div class="cell cell__details-icon">
+                <span class="icon-location-pin"></span>
+            </div>
+            <div class="cell cell__details-infos">
+                <span>Stade de france long textslgslhvsljsl</span>
+            </div>
+        </div>
+        <div class="cell cell__details">
+            <div class="cell cell__details-icon">
+                <span class="icon-referee"></span>
+            </div>
+            <div class="cell cell__details-infos">
+                <span>Andrea Gervasoni long textvfzfzz</span>
+            </div>
+        </div>
+    </li>
 
-    <li class="row row--match">
-        <a href="#">
-                <div class="cell cell__time"><span class="hour">18:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span><span class="red-card">1</span></div>
-                <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie long name</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
+    </ul>	<div class="ls-match-prediction">
+    <div class="make-prediction">
+        <span class="title">What is your prediction ?</span>
+        <span class="description">(This game is also part of the current prediction contest)</span>
+        <div class="ls-list">
+            <div class="row row__prediction">
+                <div class="cell cell__option">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--option">
+                      1
+                    </button>
+                    <div class="name">Paris</div>
                 </div>
-
-        </a>
-    </li>
-    <li class="row row--match event-live row--highlight">
-        <a href="#">
-                <div class="cell cell__time"><span class="status">20'</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score updated"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span><span class="red-card">2</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
+                <div class="cell cell__option">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--option">
+                      X
+                    </button>
+                    <div class="name">Draw</div>
                 </div>
-        </a>
-    </li>
-    <li class="row row--match event-live event-paused">
-        <a href="#">
-                <div class="cell cell__time"><span class="status">HT</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
+                <div class="cell cell__option cell__option--selected">
+                    <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--option">
+                      2
+                    </button>
+                    <div class="name">Saint Étienne</div>
                 </div>
-        </a>
+            </div>
+        </div>
+    </div>
+</div>	<ul class="mdl-list ls-list ls-odds">
+    <li class="row row--head">
+        <div class="cell cell--content-left">Bet website</div>
+        <div class="cell cell__odds"><span>1</span></div>
+        <div class="cell cell__odds "><span>N</span></div>
+        <div class="cell cell__odds"><span>2</span></div>
     </li>
-    <li class="row row--match">
-        <a href="#">
-                <div class="cell cell__time"><span class="hour">18:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
+    <li class="row">
+        <div class="cell cell__bookmaker">
+            <img src="../../assets/img/bovada.png" alt="Bovada"/>BetClic
+        </div>
+        <a class="cell cell__odds"><span>4.33</span></a>
+        <a class="cell cell__odds">
+            <span class="cell__odds--arrow">
+                <span class="icon-arrow-down"></span>
+            </span>
+            <span>3.00</span>
         </a>
+        <a class="cell cell__odds"><span>2.OO</span></a>
     </li>
-    <li class="row row--match">
-        <a href="#">
-                <div class="cell cell__time"><span class="status">18:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-        </a>
-    </li>
-    <li class="row row--match">
-        <a href="#">
-                <div class="cell cell__time"><span class="status">18:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-        </a>
-    </li>
-    <li class="row row--match">
-        <a href="#">
-                <div class="cell cell__time"><span class="hour">18:00</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score"></span> <span class="versus"> - </span> <span class="away"></span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-
-        </a>
-    </li>
-    <li class="row row--match event-live event-paused">
-        <a href="#">
-                <div class="cell cell__time"><span class="status">HT</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-        </a>
-    </li>
-    <li class="row row--match event-live event-paused">
-        <a href="#">
-                <div class="cell cell__time"><span class="status">HT</span></div>
-                <div class="cell cell__team cell__team--team1"><span>MO Béjaia</span></div>
-                <div class="cell cell__score"><span class="home-score">13</span> <span class="versus"> - </span> <span class="away">4</span></div>
-                <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
-                <div class="cell cell__caret">
-                    <span class="mdl-button__icon icon-caret-right"></span>
-                </div>
-        </a>
-    </li>
-</ul>
-</div>
-		</section>
-		<section class="mdl-layout__tab-panel" id="scroll-tab-2">
-			<div class="page-content">    <div class="ls-divider ls-divider--h">
-	<h1 class="ls-divider__title">Champions League</h1>
-	<h2 class="ls-divider__sub-title">Champions League H2</h2>
-</div>    <div class="mdl-button mdl-button--raised mdl-button--large mdl-button__select mdl-button--block">
-    <select>
-        <option value="0">General</option>
-        <option value="1">Option 2</option>
-        <option value="2">Option 3</option>
-        <option value="3">Option 4</option>
-    </select>
-</div>
-<div class="container">
+</ul>	<div class="ls-divider">
+	<span class="ls-divider__title">Standings</span>
+</div>	<div class="container">
 
     <ul class="mdl-list mdl-list-linked ls-list ls-standing-table ls-standing-table--left">
                 <li class="row row--head">
@@ -788,13 +828,6 @@
             </div>
             <div class="cell cell__total-points">
                 38
-            </div>
-        </li>
-                <li class="row row--show-all">
-            <div class="cell cell__button">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                    SHOW ALL
-                </button>
             </div>
         </li>
         
@@ -1431,246 +1464,84 @@
                 38
             </div>
         </li>   
-                <li class="row row--show-all">
-            <div class="cell cell__button">
-                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-                    SHOW ALL
-                </button>
-            </div>
-        </li>
             </ul>
 
     <div class="clear"></div>
 
-    <div class="ls-legend">
-        <div class="ls-legend__title">
-            <span>LEGEND</span>
-        </div>
-        <ul class="ls-legend__content">
-            <li class="row">
-                <div class="cell cell__rank cell__rank--green"></div>
-                <div class="cell cell__explanation">
-                    <span>Qualified for Champions League</span>
-                </div>
-            </li>
-            <li class="row">
-                <div class="cell cell__rank cell__rank--clear-green"></div>
-                <div class="cell cell__explanation">
-                    <span>Qualified for Europa League</span>
-                </div>
-            </li>
-            <li class="row">
-                <div class="cell cell__rank cell__rank--blue"></div>
-                <div class="cell cell__explanation">
-                    <span>Qualified for French Cup</span>
-                </div>
-            </li>
-            <li class="row">
-                <div class="cell cell__rank cell__rank--blue"></div>
-                <div class="cell cell__explanation">
-                    <span>Qualified for French Cup</span>
-                </div>
-            </li>
-            <li class="row">
-                <div class="cell cell__rank cell__rank--red"></div>
-                <div class="cell cell__explanation">
-                    <span>Downgraded to League 2</span>
-                </div>
-            </li>
-            <li class="row">
-                <div class="cell cell__rank cell__rank--clear-red"></div>
-                <div class="cell cell__explanation">
-                    <span>Downgraded to League 2</span>
-                </div>
-            </li>
-            <li class="row">
-                <div class="cell cell__rank cell__rank--orange"></div>
-                <div class="cell cell__explanation">
-                    <span>Downgraded to League 2</span>
-                </div>
-            </li>
-            <li class="row">
-                <div class="cell cell__rank cell__rank--clear-orange"></div>
-                <div class="cell cell__explanation">
-                    <span>Downgraded to League 2</span>
-                </div>
-            </li>
-            <li class="row">
-                <div class="cell cell__rank cell__rank--grey"></div>
-                <div class="cell cell__explanation">
-                    <span>Downgraded to League 2</span>
-                </div>
-            </li>
-        </ul>
-    </div>
-    </div></div>
-		</section>
-		<section class="mdl-layout__tab-panel" id="scroll-tab-3">
-			<div class="page-content">    <div class="ls-divider ls-divider--h">
-	<h1 class="ls-divider__title">Champions League</h1>
-	<h2 class="ls-divider__sub-title">Champions League H2</h2>
-</div>
-</div>
-		</section>
-		<section class="mdl-layout__tab-panel" id="scroll-tab-4">
-			<div class="page-content">    <div class="ls-divider ls-divider--h">
-	<h1 class="ls-divider__title">Champions League</h1>
-	<h2 class="ls-divider__sub-title">Champions League H2</h2>
-</div>    <div class="ls-players-standing">
-    <div class="top-players">
-        <div class="player-info">
-            <div class="player">
-                <a href="#">                   
-                    <div class="image">
-                        <img src="../../assets/img/player3.png" alt="Player 3">
-                    </div>
-                    <div class="name">Karim Benzema</div>
-                </a>
-            </div>
-            <div class="player">
-                <a href="#">
-                    <div class="image">
-                        <img src="../../assets/img/player1.png" alt="Player 1">
-                    </div>
-                    <div class="name">Christiano Ronaldo</div>
-                </a>
-            </div>
-            <div class="player">
-                <a href="#">
-                    <div class="image">
-                        <img src="../../assets/img/player4.png" alt="Player 4">
-                    </div>
-                    <div class="name">Jese Rodriguez</div>
-                </a>
+</div>	<div class="ls-view-more-button">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--block mdl-js-ripple-effect">
+        VIEW MORE DETAILS
+    </button>
+</div>	<div class="ls-divider">
+	<span class="ls-divider__title">Head to Head</span>
+</div>	<div class="mdl-list ls-list ls-head-to-head">
+    <div class="row">
+        <div class="cell">
+            <div class="circle circle--bordered circle--third circle--success">
+                <span>4</span>
             </div>
         </div>
-        <div class="player-scores">
-            <div class="player-score"><div class="score">8</div></div>
-            <div class="player-score"><div class="score">30</div></div>
-            <div class="player-score"><div class="score">5</div></div>
+        <div class="cell">
+            <div class="circle circle--bordered circle--second circle--gray1">
+                <span>6</span>
+            </div>
+        </div>
+        <div class="cell">
+            <div class="circle circle--bordered circle--first circle--success">
+                <span>8</span>
+            </div>
         </div>
     </div>
-
-    <li class="row row--divider ls-divider">
-	<div class="cell cell__divider-title cell__flag ls-divider__title"><img class="ls-divider__flag" src="../../assets/img/flag-fr.png" alt="France"></div>
-	<div class="cell cell__league-name">Scorers in League 1</div>
-		<div class="cell cell__spacer ls-divider__spacer"></div>
-</li>
-    <ul class="mdl-list ls-list">
-        <li class="row row--head">
-            <div class="cell cell__num">Num</div>
-            <div class="cell cell__player">Player</div>
-            <div class="cell cell__goals">Goals</div>
-            <div class="cell cell__first">1st</div>
-            <div class="cell cell__pen">Pen.</div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>1</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_min1.png" alt="Player 1"><a href="#"><span class="name">Sergio Ramos</span></a></div>
-            <div class="cell cell__goals"><span>30</span></div>
-            <div class="cell cell__first"><span>8</span></div>
-            <div class="cell cell__pen"><span>3</span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>2</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_no_image_min.png" alt=""><a href="#"><span class="name">Marcelo</span></a></div>
-            <div class="cell cell__goals"><span>8</span></div>
-            <div class="cell cell__first"><span>3</span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>3</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_min2.png" alt=""><a href="#"><span class="name">Alvaro Arbeloa</span></a></div>
-            <div class="cell cell__goals"><span>5</span></div>
-            <div class="cell cell__first"><span>2</span></div>
-            <div class="cell cell__pen"><span>1</span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>4</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_min3.png" alt=""><a href="#"><span class="name">Nacho Fernandez</span></a></div>
-            <div class="cell cell__goals"><span>5</span></div>
-            <div class="cell cell__first"><span>3</span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>5</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_min4.png" alt=""><a href="#"><span class="name">Fabio Coentrao</span></a></div>
-            <div class="cell cell__goals"><span>5</span></div>
-            <div class="cell cell__first"><span></span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>6</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_no_image_min.png" alt=""><a href="#"><span class="name">Danilo</span></a></div>
-            <div class="cell cell__goals"><span>4</span></div>
-            <div class="cell cell__first"><span></span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>7</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_min5.png" alt=""><a href="#"><span class="name">Denis Cheryshev</span></a></div>
-            <div class="cell cell__goals"><span>4</span></div>
-            <div class="cell cell__first"><span></span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>8</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_min6.png" alt=""><a href="#"><span class="name">Jese Rodriguez</span></a></div>
-            <div class="cell cell__goals"><span>4</span></div>
-            <div class="cell cell__first"><span></span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>9</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_min6.png" alt=""><a href="#"><span class="name">Borja Mayoral</span></a></div>
-            <div class="cell cell__goals"><span>3</span></div>
-            <div class="cell cell__first"><span></span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>10</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_no_image_min.png" alt=""><a href="#"><span class="name">Alvaro Arbeloa</span></a></div>
-            <div class="cell cell__goals"><span>3</span></div>
-            <div class="cell cell__first"><span>1</span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>11</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_min7.png" alt=""><a href="#"><span class="name">Lucas Vazquez</span></a></div>
-            <div class="cell cell__goals"><span>3</span></div>
-            <div class="cell cell__first"><span></span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>12</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_no_image_min.png" alt=""><a href="#"><span class="name">Fabio Coentrao</span></a></div>
-            <div class="cell cell__goals"><span>2</span></div>
-            <div class="cell cell__first"><span>1</span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>13</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_min8.png" alt=""><a href="#"><span class="name">Danilo</span></a></div>
-            <div class="cell cell__goals"><span>2</span></div>
-            <div class="cell cell__first"><span></span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-        <li class="row">
-            <div class="cell cell__num"><span>14</span></div>
-            <div class="cell cell__player"><img src="../../assets/img/player_min9.png" alt=""><a href="#"><span class="name">Denis Cheryshev</span></a></div>
-            <div class="cell cell__goals"><span>2</span></div>
-            <div class="cell cell__first"><span>2</span></div>
-            <div class="cell cell__pen"><span></span></div>
-        </li>
-    </ul>
-</div></div>
-		</section>
-	
-
-				  </div>
-						
-				</main>			
-								</div>
+    <div class="row row--infos">
+        <div class="cell">
+            <span>Paris</span>
+        </div>
+        <div class="cell">
+            <span>Draws</span>
+        </div>
+        <div class="cell">
+            <span>Saint Etienne</span>
+        </div>
+    </div>
+</div>	<div class="ls-view-more-button">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--block mdl-js-ripple-effect">
+        VIEW MORE DETAILS
+    </button>
+</div>	<div class="ls-divider">
+	<span class="ls-divider__title">Team Forms</span>
+</div>	<div class="ls-match-prediction">
+    <div class="make-prediction">
+        <div class="ls-list ls-prediction-forms">
+            <div class="row">
+                <div class="cell cell__team-form-title">PSG</div>
+                <div class="cell cell__team-form-title">ASSE</div>
+            </div>
+            <div class="row row__team-forms">
+                <div class="cell">
+                    <a href="#" class="team-form team-form--won">V</a>
+                    <a href="#" class="team-form team-form--won">V</a>
+                    <a href="#" class="team-form team-form--won">V</a>
+                    <a href="#" class="team-form team-form--draw">N</a>
+                    <a href="#" class="team-form team-form--won">V</a>
+                </div>
+                <div class="cell">
+                    <a href="#" class="team-form team-form--won">V</a>
+                    <a href="#" class="team-form team-form--won">V</a>
+                    <a href="#" class="team-form team-form--lost">D</a>
+                    <a href="#" class="team-form team-form--won">V</a>
+                    <a href="#" class="team-form team-form--lost">D</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>	<div class="ls-view-more-button">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--large mdl-button--block mdl-js-ripple-effect">
+        VIEW MORE DETAILS
+    </button>
+</div>
+			
+	</main>
+	</div>
 			<script type="text/javascript">
 			$(document).ready(function(){
 
@@ -1679,5 +1550,5 @@
 
 			});
 		</script>
-			</body>
+	</body>
 </html>
