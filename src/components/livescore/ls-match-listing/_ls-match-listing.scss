@@ -110,6 +110,8 @@
       background: #f5f5f5;
       padding: 0px 4px;
       font-size: 10px;
+      line-height: 13px;
+      height: 14px;
 
       &:after {
         content: "";
@@ -119,7 +121,7 @@
         width: 0;
         height: 0;
         border-right: 8px solid transparent;
-        border-top: 18px solid #f5f5f5;
+        border-top: 15px solid #f5f5f5;
       }
     }
   }
@@ -157,7 +159,7 @@
       .cell {
 
         &__time {
-          padding-top: 24px;
+          padding-top: 20px;
           padding-bottom: 2px;
 
         }
