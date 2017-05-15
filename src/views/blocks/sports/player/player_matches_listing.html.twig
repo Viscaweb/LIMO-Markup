@@ -5,7 +5,9 @@
         <div class="counter">69</div>
     </div>
 
-    {% include 'blocks/dividers/divider-event-li-counter.twig' %}
+    {% if not player_match_listing_basic %}
+        {% include 'blocks/dividers/divider-event-li-counter.twig' %}
+    {% endif %}
 
     <ul class="mdl-list mdl-list-media ls-list ls-list-matches">
         <div class="ls-col ls-col--date"></div>
