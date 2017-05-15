@@ -85,6 +85,10 @@
       {% include 'structure/fixed-tabs-competition.twig' %}
     {% endif %}
 
+    {% if ls_header_fixed_tabs == 'player-information' %}
+      {% include 'structure/fixed-tabs-player-information.twig' %}
+    {% endif %}
+
     {% if ls_header_fixed_tabs == 'team' %}
       {% include 'structure/fixed-tabs-team.twig' %}
     {% endif %}

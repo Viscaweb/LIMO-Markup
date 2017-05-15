@@ -84,7 +84,7 @@
 
                    <div class="mdl-layout-brand-logo"><img src="../../assets/img/ls-app-logo.png" alt="LIMO"></div>
       
-      <span class="mdl-layout-title">Player Goals</span>
+      <span class="mdl-layout-title">Player header</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
@@ -101,7 +101,12 @@
     
     
     
-    
+          <!-- Tabs -->
+<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+  <a href="#scroll-tab-1" class="mdl-layout__tab is-active">Infos</a>
+  <a href="#scroll-tab-2" class="mdl-layout__tab">Statistics</a>
+  <a href="#scroll-tab-3" class="mdl-layout__tab">Goals</a>
+</div>    
     
         					
 				
@@ -167,21 +172,223 @@
 			<main class="mdl-layout__content">
 						
 				  <div class="page-content">
-							    <div class="ls-player-matches-listing">
+									<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+			<div class="page-content">    <ul class="mdl-list ls-list ls-player-header">
+    <li class="row">
+        <div class="cell cell__player--image">
+            <div class="img-container">
+                <img src="../../assets/img/player5.png" alt="Player 5">
+            </div>
+        </div>
+        <div class="cell cell__player--info">
+            <div class="player-name">
+                <span class="first-name">Zlatan</span>
+                <span class="last-name">Ibrahimovic</span>
+            </div>
+            <a href="" class="player-country">
+                <img class="country-flag" src="../../assets/img/flag-se.png"><span class="country-name">Sweden</span>
+            </a>
+            </div>
+        </div>
+    </li>
+</ul>    <ul class="mdl-list ls-list ls-player-information">
+    <li class="row">
+        <div class="cell cell__record"><span>Date of Birth</span></div>
+        <div class="cell cell__value"><span>03/10/1981</span></div>
+    </li>
+    <li class="row">
+        <div class="cell cell__record"><span>Age</span></div>
+        <div class="cell cell__value"><span>31 years old</span></div>
+    </li>
+    <li class="row">
+        <div class="cell cell__record"><span>Height</span></div>
+        <div class="cell cell__value"><span>195 cm</span></div>
+    </li>
+    <li class="row">
+        <div class="cell cell__record"><span>Weight</span></div>
+        <div class="cell cell__value"><span>95 kg</span></div>
+    </li>
+    <li class="row">
+        <div class="cell cell__record"><span>Position</span></div>
+        <div class="cell cell__value"><span>Forward</span></div>
+    </li>
+    <li class="row">
+        <div class="cell cell__record"><span>Club</span></div>
+        <div class="cell cell__value">
+            <div class="club">
+                <img src="../../assets/img/se.png" alt="Sweden">
+                <span class="name">Sweden</span>
+            </div>
+            <div class="club">
+                <img src="../../assets/img/psg.png" alt="PSG">
+                <span class="name">PSG</span>
+            </div>
+        </div>
+    </li>
+</ul></div>
+		</section>
+		<section class="mdl-layout__tab-panel" id="scroll-tab-2">
+			<div class="page-content">	<div class="ls-player-statistics">
+    <div class="player-stats">
+        <div class="top-stats">
+            <div class="indicator">
+                <div class="icon"><span class="icon-whistle"></span></div>
+                <div class="value">32</div>
+                <div class="name">Games Played</div>
+            </div>
+            <div class="indicator">
+                <div class="icon"><span class="icon-stopwatch"></span></div>
+                <div class="value">2644’</div>
+                <div class="name">Minutes Played</div>
+            </div>
+            <div class="indicator">
+                <div class="icon"><span class="icon-football"></span></div>
+                <div class="value">69</div>
+                <div class="name">Goals</div>
+            </div>
+        </div>
+        <div class="bottom-stats">
+            <div class="cards">
+                <span class="name">Yellow Cards</span>
+                <div class="number">
+                    <span class="value">2</span>
+                    <span class="card card--yellow"></span>
+                </div>
+            </div>
+            <div class="cards">
+                <span class="name">Red Cards</span>
+                <div class="number">
+                    <span class="value">0</span>
+                    <span class="card card--red"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ls-divider">
+	<span class="ls-divider__title">Detailed Statistics</span>
+</div>
+    <ul class="mdl-list ls-list">
+        <li class="row row--head">
+            <div class="cell cell__league">League</div>
+            <div class="cell cell__minutes"><span class="sprite-icons clock"></span></div>
+            <div class="cell cell__shirts"><span class="sprite-icons shirt"></span></div>
+            <div class="cell cell__goals"><span class="sprite-icons goal"></span></div>
+            <div class="cell cell__yellow_cards"><span class="sprite-icons yellow-card"></span></div>
+            <div class="cell cell__red_cards"><span class="sprite-icons red-card"></span></div>
+        </li>
+        <li class="row">
+            <div class="cell cell__league"><img src="../../assets/img/flag-int.png" alt="France"><span class="name">Champions League</span></div>
+            <div class="cell cell__minutes"><span>826’</span></div>
+            <div class="cell cell__shirts"><span>11</span></div>
+            <div class="cell cell__goals"><span>8</span></div>
+            <div class="cell cell__yellow_cards"><span>0</span></div>
+            <div class="cell cell__red_cards"><span>0</span></div>
+        </li>
+        <li class="row">
+            <div class="cell cell__league"><img src="../../assets/img/flag-int.png" alt="Int"><span class="name">Int. Friendlies</span></div>
+            <div class="cell cell__minutes"><span>180’</span></div>
+            <div class="cell cell__shirts"><span>1</span></div>
+            <div class="cell cell__goals"><span>3</span></div>
+            <div class="cell cell__yellow_cards"><span>0</span></div>
+            <div class="cell cell__red_cards"><span>0</span></div>
+        </li>
+        <li class="row">
+            <div class="cell cell__league"><img src="../../assets/img/flag-sp.png" alt="Spain"><span class="name">Spanish League</span></div>
+            <div class="cell cell__minutes"><span>2644'</span></div>
+            <div class="cell cell__shirts"><span>32</span></div>
+            <div class="cell cell__goals"><span>46</span></div>
+            <div class="cell cell__yellow_cards"><span>1</span></div>
+            <div class="cell cell__red_cards"><span>0</span></div>
+        </li>
+        <li class="row">
+            <div class="cell cell__league"><img src="../../assets/img/flag-sp.png" alt="Spain"><span class="name">Spanish League</span></div>
+            <div class="cell cell__minutes"><span></span></div>
+            <div class="cell cell__shirts"><span></span></div>
+            <div class="cell cell__goals"><span>4</span></div>
+            <div class="cell cell__yellow_cards"><span>0</span></div>
+            <div class="cell cell__red_cards"><span>0</span></div>
+        </li>
+        <li class="row">
+            <div class="cell cell__league"><img src="../../assets/img/flag-int.png" alt="Int"><span class="name">World Cup</span></div>
+            <div class="cell cell__minutes"><span>720’</span></div>
+            <div class="cell cell__shirts"><span>1</span></div>
+            <div class="cell cell__goals"><span>8</span></div>
+            <div class="cell cell__yellow_cards"><span>0</span></div>
+            <div class="cell cell__red_cards"><span>0</span></div>
+        </li>
+    </ul>
+</div>	<script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+    var data = google.visualization.arrayToDataTable([
+      ['Task', 'Hours per Day'],
+      ["1' - 15'",     37],
+      ["16' - 30'",     56],
+      ["31' - 45'",      70],
+      ["46' - 60'",  50],
+      ["61' - 75'", 54],
+      ["76' - 90'",    99]
+    ]);
+
+    var options = {
+        height: 300,
+        colors: ['#FFFFFF'],
+        backgroundColor: { fill:'transparent' },
+        pieHole: 0.5,
+        pieSliceBorderColor: '#79B228',
+        chartArea: {'width': '95%', 'height': '95%'},
+        pieSliceText: 'label',
+        tooltip: { text:'value' },
+        pieSliceTextStyle:{ color: '#4d9e01' },
+        legend: { position: "none" }
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('chart1'));
+
+    chart.draw(data, options);
+    }
+
+    //Make google charts responsive
+    $(window).resize(function(){
+        drawChart();
+    });
+</script>
+
+<div class="ls-divider">
+	<span class="ls-divider__title">Goals Distribution</span>
+</div>
+<div class="mdl-button mdl-button--raised mdl-button--large mdl-button__select mdl-button--block">
+    <select>
+        <option value="0">All Time</option>
+        <option value="1">Option 2</option>
+        <option value="2">Option 3</option>
+        <option value="3">Option 4</option>
+    </select>
+</div>
+
+<div class="ls-player-goals-chart">
+    <div class="chart">
+        <span class="title">This chart provides a breakdown of Lionel Messi scoring record.</span>
+        <div class="chart-container">
+            <div id="chart1"></div>
+        </div>
+        <div class="description">Lionel Messi scored most goals (99) between 76' and 90'</div>
+    </div>
+</div></div>
+		</section>
+		<section class="mdl-layout__tab-panel" id="scroll-tab-3">
+			<div class="page-content">    <div class="ls-player-matches-listing">
     <div class="total-goals">
         <div class="title">All Goals</div>
         <div class="icon"><span class="icon-football"></span></div>
         <div class="counter">69</div>
     </div>
 
-            <li class="row row--divider ls-divider">
-	<div class="cell cell__divider-title cell__flag ls-divider__title"><img class="ls-divider__flag" src="../../assets/img/flag-sp.png" alt="Spain"></div>
-	<div class="cell cell__league-name">Spanish League</div>
-	<div class="cell cell__spacer ls-divider__spacer"></div>
-	<nav class="ls-divider__right-nav">
-		<span class="ls-divider__counter">34</span>
-	</nav>
-</li>    
+    
     <ul class="mdl-list mdl-list-media ls-list ls-list-matches">
         <div class="ls-col ls-col--date"></div>
         <div class="ls-col ls-col--team"></div>
@@ -264,7 +471,9 @@
             <div class="cell cell__minute"><span>82'</span></div>
         </li>
     </ul>
-</div>
+</div></div>
+		</section>
+	
 
 				  </div>
 						
