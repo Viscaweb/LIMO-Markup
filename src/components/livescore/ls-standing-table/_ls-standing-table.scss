@@ -9,10 +9,10 @@
 
   .row {
 
-    &--show-all{
+    &--show-all {
       background-color: #fcfcfc!important;
 
-      .cell__button{
+      .cell__button {
         padding: 12px !important;
         text-align: center;
       }
@@ -54,6 +54,34 @@
     }
   }
 
+  &__column {
+
+    .row {
+      padding: 0;
+
+      &--selected {
+
+        .cell {
+          background: $ls-row-selected-color;
+        }
+      }
+
+      .cell {
+        border-right: $ls-dialog-border;
+        text-align: center;
+        align-items: center;
+      }
+    }
+
+    .row--head {
+      padding: 0;
+
+      .cell {
+        color: lighten($ls-text-color, 20%);
+      }
+    }
+  }
+
   /* ---- Left Side ----- */
 
   &--left {
@@ -64,14 +92,9 @@
 
 
     .row {
-      padding: 0;
       box-sizing: border-box;
       border: $ls-dialog-border;
       border-bottom: 0;
-
-      &--selected {
-        background: $ls-row-selected-color;
-      }
 
       a {
         color: #0053A8;
@@ -85,8 +108,6 @@
 
       .cell {
         padding: 5px 0;
-        border-right: $ls-dialog-border;
-        align-items: center;
 
         &__rank {
           flex: 0 0 25px;
@@ -134,8 +155,6 @@
           }
         }
 
-
-
         &__team {
           display: flex;
           justify-content: flex-start;
@@ -162,8 +181,6 @@
             font-weight: 300;
             line-height: 22px;
           }
-
-
         }
 
         &__total-points {
@@ -184,35 +201,30 @@
         }
       }
 
-
       &.live {
 
         .cell {
 
           &__team:before {
-              content: '';
-              position: absolute;
-              right: 0;
-              display: block;
-              float: right;
-              width: 6px;
-              height: 6px;
-              border-radius: 50%;
-              background: $ls-color-live;
-              margin-right: 4px;
-              @extend .blinking;
+            content: '';
+            position: absolute;
+            right: 0;
+            display: block;
+            float: right;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $ls-color-live;
+            margin-right: 4px;
+            @extend .blinking;
           }
         }
-
       }
-
     }
 
     .row--head {
-      padding: 0;
 
       .cell {
-        color: lighten($ls-text-color, 20%);
 
         &__team {
           padding-left: 5px;
@@ -224,7 +236,6 @@
   /* ---- Right Side ----- */
 
   &--right {
-
     padding: 0;
     margin: 0;
     flex: 0 1 auto;
@@ -236,41 +247,24 @@
     }
 
     .row {
-      padding: 0;
       margin: 0;
       display: flex;
 
-      &--selected {
-
-        .cell {
-          background: $ls-row-selected-color;
-        }
-      }
-
       .cell {
         padding: 2px 0;
-        border-right: $ls-dialog-border;
         border-bottom: $ls-dialog-border;
         min-width: 32px;
-        text-align: center;
 
         &__point {
           padding: 4px 0;
         }
       }
 
-      &--show-all{
+      &--show-all {
 
-        .cell__button{
+        .cell__button {
           opacity: 0;
         }
-      }
-    }
-
-    .row--head {
-
-      .cell {
-        color: lighten($ls-text-color, 20%);
       }
     }
   }
