@@ -1,3 +1,6 @@
+.ls-standing-table-container {
+  display: flex;
+}
 
 .ls-standing-table {
 
@@ -54,8 +57,7 @@
   /* ---- Left Side ----- */
 
   &--left {
-    width: 50%;
-    float: left;
+    flex: 1 0 50%;
     -webkit-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
     box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
@@ -225,8 +227,7 @@
 
     padding: 0;
     margin: 0;
-    width: 50%;
-    float: left;
+    flex: 0 1 auto;
     white-space: nowrap;
     overflow-x: auto;
 
@@ -346,26 +347,6 @@
 }
 
 /* ---- @ media ----- */
-
-@media (max-width: 640px) {
-  .ls-standing-table--left {
-    width: 60%;
-  }
-
-  .ls-standing-table--right {
-    width: 40%;
-  }
-}
-
-@media (max-width: 320px) {
-
-  .ls-standing-table--left {
-    width: 70%;
-  }
-  .ls-standing-table--right {
-    width: 30%;
-  }
-}
 
 @media (min-width: 600px) {
 
