@@ -393,6 +393,7 @@
 	text-transform: none;
 	font-weight: $ls-tab-font-weight;
 	font-size: 13px;
+	-webkit-tap-highlight-color: rgba(0,0,0,.1);
 
 	.mdl-layout.is-upgraded &.is-active {
   	color: $ls-tab-text-color-active;
