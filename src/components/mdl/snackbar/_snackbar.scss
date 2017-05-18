@@ -2,6 +2,10 @@
 .mdl-snackbar {
   justify-content: flex-start;
 
+  @media(max-width: $snackbar-tablet-breakpoint - 1) {
+    max-height: none;
+  }
+
   &__text{
     padding: 14px 24px;
     flex: 1 1 auto;
