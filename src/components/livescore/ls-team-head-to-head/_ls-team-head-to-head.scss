@@ -52,18 +52,18 @@
         }
 
         &--gray2 {
-          background-color: darken($ls-color-white, 30.5%);
+          background-color: darken($ls-color-white, 29%);
 
           &.circle--bordered {
-            border-color: darken($ls-color-white, 30.5%);
+            border-color: darken($ls-color-white, 29%);
           }
         }
 
         &--gray3 {
-          background-color: darken($ls-color-white, 32.4%);
+          background-color: darken($ls-color-white, 51%);
 
           &.circle--bordered {
-            border-color: darken($ls-color-white, 32.4%);
+            border-color: darken($ls-color-white, 51%);
           }
         }
 
