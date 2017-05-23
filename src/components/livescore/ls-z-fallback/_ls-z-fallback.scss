@@ -486,6 +486,7 @@
 
     &--left {
       width: 50% !important;
+      float: left;
       border-bottom: 1px solid $ls-dialog-border-color;
 
       .row {
@@ -545,6 +546,30 @@
         .cell__team {
           padding-bottom: 6px !important;
         }
+      }
+    }
+
+    &--right {
+      display: block;
+      width: 50% !important;
+      float: left;
+
+      .row {
+        width: 100%;
+        display: table-row;
+        padding: 0!important;
+
+        &--head {
+
+          .cell {
+            line-height: 23px;
+          }
+        }
+      }
+
+      .cell {
+        width: 32px;
+        display: table-cell !important;
       }
     }
   }
