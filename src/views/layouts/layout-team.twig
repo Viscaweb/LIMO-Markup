@@ -3,12 +3,12 @@
 <head>
 
 	{% include 'structure/head.twig' %}
-	{% set ls_header_fixed_tabs = 'team' %}
+	{% set ls_header_tabs = 'team' %}
 	{% set ls_header_season_button = true %}
 
 </head>
 <body>
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header{{ ls_layout_variables ? ' ' ~ ls_layout_variables : '' }}">
 
 			{% include 'structure/top-header.twig' %}
 			<main class="mdl-layout__content{{ ls_content_variables ? ' ' ~ ls_content_variables : '' }}">
