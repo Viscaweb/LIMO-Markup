@@ -11,22 +11,36 @@
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-tabs">
 
 			{% include 'structure/top-header.twig' %}
+			<main class="mdl-layout__content{{ ls_content_variables ? ' ' ~ ls_content_variables : '' }}">
+				<div class="page-content">
+                    {% block main_content %}
+					<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+					  <div class="page-content">{{main_content_1}}</div>
+					</section>
+					<section class="mdl-layout__tab-panel" id="scroll-tab-2">
+					  <div class="page-content">{{main_content_2}}</div>
+					</section>
+					<section class="mdl-layout__tab-panel" id="scroll-tab-3">
+					  <div class="page-content">{{main_content_3}}</div>
+					</section>
+					<section class="mdl-layout__tab-panel" id="scroll-tab-4">
+						<div class="page-content">{{main_content_4}}</div>
+					</section>
+					<section class="mdl-layout__tab-panel" id="scroll-tab-5">
+						<div class="page-content">{{main_content_5}}</div>
+					</section>
+					<section class="mdl-layout__tab-panel" id="scroll-tab-6">
+						<div class="page-content">{{main_content_6}}</div>
+					</section>
 
-    	<main class="mdl-layout__content">
-		    <section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
-		      <div class="page-content">{{main_content_1}}</div>
-		    </section>
-		    <section class="mdl-layout__tab-panel" id="scroll-tab-2">
-		      <div class="page-content"><!-- Your content goes here --></div>
-		    </section>
-		    <section class="mdl-layout__tab-panel" id="scroll-tab-3">
-		      <div class="page-content"><!-- Your content goes here --></div>
-		    </section>
 
-			{% block main_content %}
-				{{main_content}}
-			{% endblock %}
-    	</main>
+					{{main_content}}
+				{% endblock %}
+				</div>
+
+			</main>
+
+
 		</div>
 		
 	{% block footer_scripts %}
