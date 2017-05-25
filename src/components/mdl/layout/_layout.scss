@@ -1,3 +1,7 @@
+* { 
+	-webkit-tap-highlight-color: transparent; 
+}
+
 .mdl-layout__drawer-button {
   color: unquote("rgb(#{$color-primary})");
 }
