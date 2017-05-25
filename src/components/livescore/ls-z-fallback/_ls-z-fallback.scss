@@ -415,6 +415,19 @@
       }
     }
 
+    .row--empty {
+      display: block;
+      width: 240%;
+      height: $ls-match-incidents-empty-row-height;
+
+      span {
+        display: block;
+        text-align: center;
+        width: 100% !important;
+        line-height: $ls-match-incidents-empty-row-height;
+      }
+    }
+
     .cell__team {
       width: 42% !important;
       border-top: 1px solid $ls-list-border-color;

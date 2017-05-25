@@ -45,12 +45,22 @@
     }
   }
 
-  .row--separator{
+  .row--separator {
     padding: 8px 0;
     display: flex;
     justify-content: center;
     background: #f7f7f7;
     border-bottom: lighten($ls-list-border-color, 5%);
+  }
+
+  .row--empty {
+    padding: 21px 0;
+    display: flex;
+    justify-content: center;
+
+    > span {
+      color: hsl(0, 0%, 56%);
+    }
   }
 
 
