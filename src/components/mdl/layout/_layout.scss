@@ -2,6 +2,45 @@
 	-webkit-tap-highlight-color: transparent; 
 }
 
+// Custom strcutural changes (LIMO-260) 
+body {
+	min-height: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+
+.mdl-layout {
+	height: 100%;
+	display: block;
+	-webkit-overflow-scrolling: auto;
+}
+
+.mdl-layout__container {
+	position: static;
+}
+
+.mdl-layout__content {
+	display: block;
+}
+
+.mdl-layout__obfuscator {
+	position: fixed;
+}
+
+.mdl-layout__drawer {
+	position: fixed;
+	-webkit-overflow-scrolling: touch;
+}
+
+.mdl-layout__drawer.is-visible ~ .mdl-layout__content.mdl-layout__content {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	-webkit-overflow-scrolling: auto;
+}
+// End of LIMO-260
+
+
 .mdl-layout__drawer-button {
   color: unquote("rgb(#{$color-primary})");
 }
