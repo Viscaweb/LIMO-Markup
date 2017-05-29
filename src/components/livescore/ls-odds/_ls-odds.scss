@@ -53,6 +53,16 @@
             color:#7AB748;
           }
         }
+
+
+        &--won {
+          background: $ls-color-event-won-bg;
+        }
+
+        &--lost {
+          background: $ls-color-event-lost-bg;
+        }
+
       }
     }
 
