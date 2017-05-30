@@ -1,5 +1,19 @@
 // GENERAL ///////////////////////////
 .no-flexbox, .flexbox-legacy, .flexboxtweener {
+
+  // Custom strcutural changes (LIMO-260) 
+    // Drawer.
+    .mdl-layout__drawer {
+      left: (-$layout-drawer-width - 10px);
+      transform: none;
+
+      &.is-visible {
+        left: 0;
+        transform: none;
+      }
+    }
+  // End of LIMO-260
+  
   .mdl-layout__header {
     display: block;
     position: fixed;
