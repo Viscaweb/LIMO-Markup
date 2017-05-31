@@ -1,5 +1,10 @@
 .ls-standing-table-container {
   display: flex;
+  flex-wrap: wrap;
+
+  > ul {
+    width: 100%;
+  }
 }
 
 .ls-standing-table {
@@ -238,7 +243,7 @@
   &--right {
     padding: 0;
     margin: 0;
-    flex: 0 1 auto;
+    flex: 0 1 50%;
     white-space: nowrap;
     overflow-x: auto;
 
