@@ -3,12 +3,11 @@
   flex-wrap: wrap;
 
   > ul {
-    width: 100%;
+    flex: 1 0 100%;
   }
 }
 
 .ls-standing-table {
-
   font-size: 12px;
   overflow: hidden;
 
@@ -90,11 +89,13 @@
   /* ---- Left Side ----- */
 
   &--left {
-    flex: 1 0 50%;
     -webkit-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
     box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
-
+    
+    .ls-standing-table-container & {
+      flex: 1 0 50%;
+    }
 
     .row {
       box-sizing: border-box;
@@ -243,9 +244,12 @@
   &--right {
     padding: 0;
     margin: 0;
-    flex: 0 1 50%;
     white-space: nowrap;
     overflow-x: auto;
+
+    .ls-standing-table-container & {
+      flex: 0 1 50%;
+    }
 
     &::-webkit-scrollbar {
       display: none;
