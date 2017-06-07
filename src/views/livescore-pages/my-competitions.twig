@@ -1,0 +1,12 @@
+{% extends "layouts/default-layout.twig" %}
+
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'My Competitions' %}
+{% set ls_header_switch = true %}
+{% set ls_header_brand_logo = true %}
+
+{% set main_content %}
+  {% include 'blocks/sports/listings/favorite_sortable_list.html.twig' %}
+{% endset %}

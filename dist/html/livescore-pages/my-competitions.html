@@ -84,7 +84,7 @@
 
                    <div class="mdl-layout-brand-logo"><img src="../../assets/img/ls-app-logo.png" alt="LIMO"></div>
       
-      <span class="mdl-layout-title">Match Statistics</span>
+      <span class="mdl-layout-title">My Competitions</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
@@ -168,221 +168,120 @@
 			<main class="mdl-layout__content">
 						
 				  <div class="page-content">
-							  	
-<div class="ls-match-statistics">
-    <div class="ls-possesion-graph ls-list">
-        <div class="ls-col ls-col--value"></div>
-        <div class="ls-col ls-col--graph"></div>
-        <div class="ls-col ls-col--value"></div>
-        <div class="row row--title">
-            <div class="cell cell__title">
-                <span>Possesion</span>
-            </div>
+							  <ul class="mdl-list mdl-list-linked ls-list ls-list-favorite-sortable">
+    <div class="ls-col ls-col--flag"></div>
+    <div class="ls-col ls-col--team"></div>
+    <div class="ls-col ls-col--icon"></div>
+    <div class="ls-col ls-col--icon"></div>
+    <li class="row row__team row--definition">
+        <div class="cell cell__flag"></div>
+        <div class="cell cell__team"></div>
+        <div class="cell cell__drag"></div>
+        <div class="cell cell__favorite"></div>
+    </li>
+
+    <li class="row row__team">
+        <div class="cell cell__flag">
+            <img src="../../assets/img/barcelona.png" alt="Barcelona"/>
         </div>
-        <div class="row row__data">
-            <div class="cell cell__value cell__value--home">
-                <span>44%</span>
-            </div>
-            <div class="cell cell__graph cell__graph--away">
-                <div class="bar-container">
-                    <div class="bar">
-                        <div class="progress" style="width: 60%;"></div>
-                    </div>
-                    <span class="separator"></span>
-                </div> 
-            </div>
-            <div class="cell cell__value cell__value--away">
-                <span>56%</span>
-            </div>
+        <div class="cell cell__team">
+            <span>Barcelona</span>
         </div>
-    </div>
-    <ul class="ls-match-statistics-list ls-list">
-        <li class="row">
-            <div class="cell">
-                <div class="row">
-                    <div class="cell cell__title">
-                        <span>Shots on target</span>
-                    </div>
-                </div>
-                <div class="row row__data">
-                    <div class="cell cell__value cell__value--home">
-                        <span>4</span>
-                    </div>
-                    <div class="cell cell__graph cell__graph--home">
-                        <div class="bar" style="width: 30%;"></div>
-                    </div>
-                    <div class="cell cell__graph cell__graph--away cell__graph--high">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
-                    <div class="cell cell__value cell__value--away">
-                        <span>15</span>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li class="row">
-            <div class="cell">
-                <div class="row">
-                    <div class="cell cell__title">
-                        <span>Shots off target</span>
-                    </div>
-                </div>
-                <div class="row row__data">
-                    <div class="cell cell__value cell__value--home">
-                        <span>4</span>
-                    </div>
-                    <div class="cell cell__graph cell__graph--home">
-                        <div class="bar" style="width: 35%;"></div>
-                    </div>
-                    <div class="cell cell__graph cell__graph--away cell__graph--high">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
-                    <div class="cell cell__value cell__value--away">
-                        <span>15</span>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li class="row">
-            <div class="cell">
-                <div class="row">
-                    <div class="cell cell__title">
-                        <span>Free kicks</span>
-                    </div>
-                </div>
-                <div class="row row__data">
-                    <div class="cell cell__value cell__value--home">
-                        <span>10</span>
-                    </div>
-                    <div class="cell cell__graph cell__graph--home cell__graph--high">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
-                    <div class="cell cell__graph cell__graph--away">
-                        <div class="bar" style="width: 80%;"></div>
-                    </div>
-                    <div class="cell cell__value cell__value--away">
-                        <span>9</span>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li class="row">
-            <div class="cell">
-                <div class="row">
-                    <div class="cell cell__title">
-                        <span>Corner</span>
-                    </div>
-                </div>
-                <div class="row row__data">
-                    <div class="cell cell__value cell__value--home">
-                        <span>5</span>
-                    </div>
-                    <div class="cell cell__graph cell__graph--home">
-                        <div class="bar" style="width: 70%;"></div>
-                    </div>
-                    <div class="cell cell__graph cell__graph--away cell__graph--high">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
-                    <div class="cell cell__value cell__value--away">
-                        <span>8</span>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li class="row">
-            <div class="cell">
-                <div class="row">
-                    <div class="cell cell__title">
-                        <span>Offsides</span>
-                    </div>
-                </div>
-                <div class="row row__data">
-                    <div class="cell cell__value cell__value--home">
-                        <span>0</span>
-                    </div>
-                    <div class="cell cell__graph cell__graph--home">
-                        <div class="bar" style="width: 0%;"></div>
-                    </div>
-                    <div class="cell cell__graph cell__graph--away cell__graph--high">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
-                    <div class="cell cell__value cell__value--away">
-                        <span>3</span>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li class="row">
-            <div class="cell">
-                <div class="row">
-                    <div class="cell cell__title">
-                        <span>Throw-ins</span>
-                    </div>
-                </div>
-                <div class="row row__data">
-                    <div class="cell cell__value cell__value--home">
-                        <span>10</span>
-                    </div>
-                    <div class="cell cell__graph cell__graph--home">
-                        <div class="bar" style="width: 50%;"></div>
-                    </div>
-                    <div class="cell cell__graph cell__graph--away cell__graph--high">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
-                    <div class="cell cell__value cell__value--away">
-                        <span>25</span>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li class="row">
-            <div class="cell">
-                <div class="row">
-                    <div class="cell cell__title">
-                        <span>Goalkeeper saves</span>
-                    </div>
-                </div>
-                <div class="row row__data">
-                    <div class="cell cell__value cell__value--home">
-                        <span>12</span>
-                    </div>
-                    <div class="cell cell__graph cell__graph--home cell__graph--high">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
-                    <div class="cell cell__graph cell__graph--away">
-                        <div class="bar" style="width: 10%;"></div>
-                    </div>
-                    <div class="cell cell__value cell__value--away">
-                        <span>1</span>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li class="row">
-            <div class="cell">
-                <div class="row">
-                    <div class="cell cell__title">
-                        <span>Goal kicks</span>
-                    </div>
-                </div>
-                <div class="row row__data">
-                    <div class="cell cell__value cell__value--home">
-                        <span>11</span>
-                    </div>
-                    <div class="cell cell__graph cell__graph--home cell__graph--high">
-                        <div class="bar" style="width: 100%;"></div>
-                    </div>
-                    <div class="cell cell__graph cell__graph--away">
-                        <div class="bar" style="width: 80%;"></div>
-                    </div>
-                    <div class="cell cell__value cell__value--away">
-                        <span>9</span>
-                    </div>
-                </div>
-            </div>
-        </li>
-    </ul>
-</div>
+        <div class="cell cell__drag">
+            <i class="material-icons">&#xE8FE;</i>
+        </div>
+        <div class="cell cell__favorite">
+            <span class="icon icon-star active"></span>
+        </div>
+    </li>
+
+    <li class="row row__team">
+        <div class="cell cell__flag">
+            <img src="../../assets/img/psg.png" alt="PSG"/>
+        </div>
+        <div class="cell cell__team">
+            <span>PSG</span>
+        </div>
+        <div class="cell cell__drag">
+            <i class="material-icons">&#xE8FE;</i>
+        </div>
+        <div class="cell cell__favorite">
+            <span class="icon icon-star active"></span>
+        </div>
+    </li>
+
+    <li class="row row__team">
+        <div class="cell cell__flag">
+            <img src="../../assets/img/marseille.png" alt="Marseille"/>
+        </div>
+        <div class="cell cell__team">
+            <span>Marseille</span>
+        </div>
+        <div class="cell cell__drag">
+            <i class="material-icons">&#xE8FE;</i>
+        </div>
+        <div class="cell cell__favorite">
+            <span class="icon icon-star active"></span>
+        </div>
+    </li>
+
+    <li class="row row__team">
+        <div class="cell cell__flag">
+            <img src="../../assets/img/bayern-munich.png" alt="Bayern Munich"/>
+        </div>
+        <div class="cell cell__team">
+            <span>Bayern Munich</span>
+        </div>
+        <div class="cell cell__drag">
+            <i class="material-icons">&#xE8FE;</i>
+        </div>
+        <div class="cell cell__favorite">
+            <span class="icon icon-star active"></span>
+        </div>
+    </li>
+
+    <li class="row row__team">
+        <div class="cell cell__flag">
+            <img src="../../assets/img/fr.png" alt="France"/>
+        </div>
+        <div class="cell cell__team">
+            <span>France</span>
+        </div>
+        <div class="cell cell__drag">
+            <i class="material-icons">&#xE8FE;</i>
+        </div>
+        <div class="cell cell__favorite">
+            <span class="icon icon-star active"></span>
+        </div>
+    </li>
+
+    <li class="row row__team">
+        <div class="cell cell__flag">
+            <img src="../../assets/img/it.png" alt="Italie"/>
+        </div>
+        <div class="cell cell__team">
+            <span>Italie</span>
+        </div>
+        <div class="cell cell__drag">
+            <i class="material-icons">&#xE8FE;</i>
+        </div>
+        <div class="cell cell__favorite">
+            <span class="icon icon-star active"></span>
+        </div>
+    </li>
+
+</ul>
+
+<script type="text/javascript">
+    $('.ls-list-favorite-sortable').sortable({ 
+        items: 'li:not(.ls-col, .row--definition)',
+        handle: ".cell__drag",
+        placeholder: "row__team--placeholder",
+        axis: "y"
+    });
+
+    $( ".ls-list-favorite-sortable li" ).disableSelection();
+</script>
 				  </div>
 						
 				</main>			
