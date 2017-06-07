@@ -1,9 +1,18 @@
 <div class="ls-message-widget">
-	<span class="ls-message-widget__icon icon-email"></span>
-	<span class="ls-message-widget__title">Your password has been successfuly reset</span>
-	<span class="ls-message-widget__description">We have sent you an email with a link to reset your password. If you cannot find that email in your inbox after a few minutes, please check your 'junk/spam' folders.</span>
-	<a href="#" class="ls-message-widget__app-link mdl-js-button mdl-js-ripple-effect">
-		<span class="ls-message-widget__app-icon"><img src="{{ basePath }}../assets/img/icon-marca.png" alt="App Logo"></span>
-		<span class="ls-message-widget__app-description">Open Marcadores App</span>
-	</a>
+	<span class="ls-message-widget__icon {{ message_icon }}"></span>
+	<span class="ls-message-widget__title">{{ message_title }}</span>
+	<span class="ls-message-widget__description">{{ message_description  }}</span>
+
+    {# If reset from app, link to open app #}
+    {% if app_open_link %}
+		<a href="#" class="ls-message-widget__app-link mdl-js-button mdl-js-ripple-effect">
+			<span class="ls-message-widget__app-icon"><img src="{{ basePath }}../assets/img/icon-marca.png" alt="App Logo"></span>
+			<span class="ls-message-widget__app-description">Open Marcadores App</span>
+		</a>
+    {% endif %}
+
 </div>
+
+
+
+
