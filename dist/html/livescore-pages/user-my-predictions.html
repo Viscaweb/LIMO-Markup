@@ -84,7 +84,7 @@
 
                    <div class="mdl-layout-brand-logo"><img src="../../assets/img/ls-app-logo.png" alt="LIMO"></div>
       
-      <span class="mdl-layout-title">Jean Lane Profile</span>
+      <span class="mdl-layout-title">Contest</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
@@ -92,12 +92,14 @@
                 
                 
                   
-                          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
-            Close
-          </button>
-          
                   
-                
+                  
+                          <a class="mdl-navigation__link ls-toolbar-icon" href="#"><span class="icon icon-gift"></span></a>
+          <a class="mdl-navigation__link ls-toolbar-icon" href="#">
+            <span class="icon icon-standings"></span>
+            <span class="text">245<small>th</small></span>
+          </a>
+        
       </nav>
     </div>
 
@@ -107,6 +109,11 @@
     
     
       
+                <!-- Tabs -->
+<div class="mdl-layout__tab-bar">
+  <a href="#scroll-tab-1" class="mdl-layout__tab is-active">My Predictions</a>
+  <a href="#scroll-tab-2" class="mdl-layout__tab">Statistics</a>
+</div>      
         					
 				
   </header>
@@ -172,71 +179,8 @@
 			<main class="mdl-layout__content">
 						
 				  <div class="page-content">
-								<div class="ls-user-profile-header">
-	<div class="user-avatar">
-		<div class="img-rounded">
-			<img src="../../assets/img/avatar4.png" alt="User Avatar">
-		</div>
-	</div>
-	<div class="user-info">
-		<span class="user-name">Jean Lane</span>
-		<span class="user-desc">Member since 3 month</span>
-	</div>
-	<div class="user-position">46th</div>
-</div>	<div class="ls-user-prediction-statistics">
-  <div class="mdl-button-group mdl-button-group--block">
-		<div class="mdl-button mdl-button--raised mdl-button--large mdl-button__select mdl-button--wide mdl-button--leagues">
-	  	<select>
-	  		<option value="0">All Leagues</option>
-	  		<option value="1">Option 2</option>
-	  		<option value="2">Option 3</option>
-	  		<option value="3">Option 4</option>
-	  	</select>
-  	</div>
-		<div class="mdl-button mdl-button--raised mdl-button--large mdl-button__select mdl-button--wide mdl-button--results">
-	  	<select>
-	  		<option value="0">All Results</option>
-	  		<option value="1">Option 2</option>
-	  		<option value="2">Option 3</option>
-	  		<option value="3">Option 4</option>
-	  	</select>
-  	</div>
-	</div>
-
-	<div class="prediction-chart">
-		<div class="chart">
-			<span class="title">My Success Rate</span>
-			<div class="radial-progress" data-progress="78">
-				<div class="circle">
-					<div class="mask full">
-						<div class="fill"></div>
-					</div>
-					<div class="mask half">
-						<div class="fill"></div>
-						<div class="fill fix"></div>
-					</div>
-				</div>
-				<div class="inset">
-					<div class="percentage"></div>
-				</div>
-			</div>
-		</div>
-		<div class="scores">
-			<div class="score score--total">
-				<span class="title">Total</span>
-				<span class="value">43</span>
-			</div>
-			<div class="score score--won">
-				<span class="title">Won</span>
-				<span class="value">36</span>
-			</div>
-			<div class="score score--lost">
-				<span class="title">Lost</span>
-				<span class="value">7</span>
-			</div>
-		</div>
-	</div>
-</div>	<div class="ls-contest-grid">
+									<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+			<div class="page-content">    <div class="ls-contest-grid">
   <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
     <li class="row row--match">
       <a href="#">    
@@ -387,7 +331,217 @@
       </a>
     </li>
   </ul>
-</div>
+</div></div>
+		</section>
+		<section class="mdl-layout__tab-panel" id="scroll-tab-2">
+			<div class="page-content">    <div class="ls-user-prediction-statistics">
+  <div class="mdl-button-group mdl-button-group--block">
+		<div class="mdl-button mdl-button--raised mdl-button--large mdl-button__select mdl-button--wide mdl-button--leagues">
+	  	<select>
+	  		<option value="0">All Leagues</option>
+	  		<option value="1">Option 2</option>
+	  		<option value="2">Option 3</option>
+	  		<option value="3">Option 4</option>
+	  	</select>
+  	</div>
+		<div class="mdl-button mdl-button--raised mdl-button--large mdl-button__select mdl-button--wide mdl-button--results">
+	  	<select>
+	  		<option value="0">All Results</option>
+	  		<option value="1">Option 2</option>
+	  		<option value="2">Option 3</option>
+	  		<option value="3">Option 4</option>
+	  	</select>
+  	</div>
+	</div>
+
+	<div class="prediction-chart">
+		<div class="chart">
+			<span class="title">My Success Rate</span>
+			<div class="radial-progress" data-progress="78">
+				<div class="circle">
+					<div class="mask full">
+						<div class="fill"></div>
+					</div>
+					<div class="mask half">
+						<div class="fill"></div>
+						<div class="fill fix"></div>
+					</div>
+				</div>
+				<div class="inset">
+					<div class="percentage"></div>
+				</div>
+			</div>
+		</div>
+		<div class="scores">
+			<div class="score score--total">
+				<span class="title">Total</span>
+				<span class="value">43</span>
+			</div>
+			<div class="score score--won">
+				<span class="title">Won</span>
+				<span class="value">36</span>
+			</div>
+			<div class="score score--lost">
+				<span class="title">Lost</span>
+				<span class="value">7</span>
+			</div>
+		</div>
+	</div>
+</div>    <div class="ls-contest-grid">
+  <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
+    <li class="row row--match">
+      <a href="#">    
+        <div class="cell cell__date"><span>14/09</span></div>
+        <div class="cell cell__team cell__team--team1"><span>PSG</span></div>
+        <div class="cell cell__prediction">
+          <div class="mdl-button-group mdl-button-group--block">
+            <div class="mdl-button mdl-js-button mdl-button--raised">1</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised">X</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--done">2</div>
+          </div>
+        </div>
+        <div class="cell cell__team cell__team--team2"><span>Evian</span></div>
+        <div class="cell cell__icon"><span class="material-icons">&#xE88D;</span></div>
+      </a>
+    </li>
+    <li class="row row--match">
+      <a href="#">
+        <div class="cell cell__date"><span>12/09</span></div>
+        <div class="cell cell__team cell__team--team1"><span>Brest</span></div>
+        <div class="cell cell__prediction">
+         <div class="mdl-button-group mdl-button-group--block">
+           <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--done">1</div>
+           <div class="mdl-button mdl-js-button mdl-button--raised">X</div>
+           <div class="mdl-button mdl-js-button mdl-button--raised">2</div>
+         </div>
+        </div>
+        <div class="cell cell__team cell__team--team2"><span>PSG</span></div>
+        <div class="cell cell__icon"><span class="material-icons">&#xE8B5;</span></div>
+      </a> 
+    </li>
+    <li class="row row--match prediction-won">
+      <a href="#">
+        <div class="cell cell__date"><span>29/08</span></div>
+        <div class="cell cell__team cell__team--team1"><span>Lille</span></div>
+        <div class="cell cell__prediction">
+          <div class="mdl-button-group mdl-button-group--block">
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--success">1</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised">X</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised">2</div>
+          </div>
+        </div>
+        <div class="cell cell__team cell__team--team2"><span>PSG</span></div>
+        <div class="cell cell__icon"></div>
+      </a>
+    </li>
+    <li class="row row--match prediction-won">
+      <a href="#">
+        <div class="cell cell__date"><span>29/08</span></div>
+        <div class="cell cell__team cell__team--team1"><span>PSG</span></div>
+        <div class="cell cell__prediction">
+          <div class="mdl-button-group mdl-button-group--block">
+            <div class="mdl-button mdl-js-button mdl-button--raised">1</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--success">X</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised">2</div>
+          </div>
+        </div>
+        <div class="cell cell__team cell__team--team2"><span>Barcelona</span></div>
+        <div class="cell cell__icon"></div>
+      </a>
+    </li>
+    <li class="row row--match prediction-lost">
+      <a href="#">
+        <div class="cell cell__date"><span>22/08</span></div>
+        <div class="cell cell__team cell__team--team1 win"><span>Guingamp</span><div class="cell__team__cards">
+          <span class="red-card"></span>
+        </div></div>
+        <div class="cell cell__prediction">
+          <div class="mdl-button-group mdl-button-group--block">
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--failed">1</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised">X</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--result">2</div>
+          </div>
+        </div>
+        <div class="cell cell__team cell__team--team2"><span>PSG</span></div>
+        <div class="cell cell__icon"></div>
+      </a>
+    </li>
+    <li class="row row--match prediction-lost">
+      <a href="#">
+        <div class="cell cell__date"><span>15/08</span></div>
+        <div class="cell cell__team cell__team--team1 win"><span>PSG</span></div>
+        <div class="cell cell__prediction">
+          <div class="mdl-button-group mdl-button-group--block">
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--result">1</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised">X</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--failed">2</div>
+          </div>
+        </div>
+        <div class="cell cell__team cell__team--team2"><span>St Etienne</span></div>
+        <div class="cell cell__icon"></div>
+      </a>
+    </li>
+    <li class="row row--match prediction-lost">
+      <a href="#">
+        <div class="cell cell__date"><span>03/08</span></div>
+        <div class="cell cell__team cell__team--team1"><span>Lorient</span></div>
+        <div class="cell cell__prediction">
+          <div class="mdl-button-group mdl-button-group--block">
+            <div class="mdl-button mdl-js-button mdl-button--raised">1</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--failed">X</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--result">2</div>
+          </div>
+        </div>
+        <div class="cell cell__team cell__team--team2"><span>PSG</span></div>
+        <div class="cell cell__icon"></div>
+      </a>
+    </li>
+    <li class="row row--match prediction-won">
+      <a href="#">
+        <div class="cell cell__date"><span>01/08</span></div>
+        <div class="cell cell__team cell__team--team1"><span>PSG</span></div>
+        <div class="cell cell__prediction">
+          <div class="mdl-button-group mdl-button-group--block">
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--success">1</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised">X</div>
+            <div class="mdl-button mdl-js-button mdl-button--raised">2</div>
+          </div>
+        </div>
+        <div class="cell cell__team cell__team--team2"><span>Juventus</span></div>
+        <div class="cell cell__icon"></div>
+      </a>
+    </li>
+    <li class="row row--match event-cancelled">
+      <a href="#">
+        <div class="cell cell__date"><span>22/07/14</span></div>
+        <div class="cell cell__team cell__team--team1"><span>Real Madrid</span></div>
+        <div class="cell cell__prediction">
+          <div class="mdl-button-group mdl-button-group--block">
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--cancelled">Cancelled</div>
+          </div>
+        </div>
+        <div class="cell cell__team cell__team--team2 win"><span>PSG</span></div>
+        <div class="cell cell__icon"><span class="material-icons">warning</span></div>
+      </a>
+    </li>
+    <li class="row row--match prediction-won">
+      <a href="#">
+        <div class="cell cell__date"><span>22/07/14</span></div>
+        <div class="cell cell__team cell__team--team1 win"><span>PSG</span></div>
+        <div class="cell cell__prediction">
+          <div class="mdl-button-group mdl-button-group--block">
+            <div class="mdl-button mdl-js-button mdl-button--raised ls-button--prediction--hidden">Hidden</div>
+          </div>
+        </div>
+        <div class="cell cell__team cell__team--team2"><span>Grenoble</span></div>
+        <div class="cell cell__icon"></div>
+      </a>
+    </li>
+  </ul>
+</div></div>
+		</section>
+	
+
 				  </div>
 						
 				</main>			
