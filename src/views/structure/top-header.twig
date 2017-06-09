@@ -93,6 +93,10 @@
       {% include 'structure/fixed-tabs-team.twig' %}
     {% endif %}
 
+      {% if ls_header_tabs == 'predictions-contest' %}
+          {% include 'structure/fixed-tabs-contest.twig' %}
+      {% endif %}
+
     {# After header ends block #}
     {% block top_header_append %}
     {% endblock %}

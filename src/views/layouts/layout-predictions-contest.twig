@@ -1,0 +1,16 @@
+{% extends "layouts/default-layout.twig" %}
+
+{% set ls_header_fixed_tabs = 'predictions-contest' %}
+
+
+{% set main_content %}
+		<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+			<div class="page-content">{{content_tab_1}}</div>
+		</section>
+		<section class="mdl-layout__tab-panel" id="scroll-tab-2">
+			<div class="page-content">{{content_tab_2}}</div>
+		</section>
+	{{main_content}}
+{% endset %}
+
+

@@ -1,25 +1,29 @@
-{% extends "layouts/default-layout.twig" %}
+{% extends "layouts/layout-predictions-contest.twig" %}
 
 {# Page variables #}
 {% set basePath = '../' %}
 {% set ls_header_brand_logo = true %}
 {% set page_title = 'Contest' %}
 {% set ls_header_icons = true %}
-{% set ls_layout_variables = 'mdl-layout--fixed-tabs' %}
 
 {% set top_header_append %}
 	{% include 'blocks/tabs/prediction-contest-tabs.html.twig' %}
 {% endset %}
 
-{% set main_content %}
-	{# Contest Grid Closed #}
-	{% include 'blocks/predictions/contest-grid-goal-statictics.html.twig' %}
-	{% include 'blocks/predictions/contest-grid-closed.html.twig' %}
+{% set content_tab_1 %}
+    {# Contest Grid Closed #}
+    {% include 'blocks/predictions/contest-grid-goal-statictics.html.twig' %}
+    {% include 'blocks/predictions/contest-grid-closed.html.twig' %}
 
-	{# Contest Grid Open #}
-	{% include 'blocks/predictions/contest-grid-goal-statictics-open.html.twig' %}
-	{% include 'blocks/predictions/contest-grid-open.html.twig' %}
+    {# Contest Grid Open #}
+    {% include 'blocks/predictions/contest-grid-goal-statictics-open.html.twig' %}
+    {% include 'blocks/predictions/contest-grid-open.html.twig' %}
 {% endset %}
+
+{% set content_tab_2 %}
+    {% include 'blocks/sports/listings/comment_thread.html.twig' %}
+{% endset %}
+
 
 {% block footer_scripts %}
 	{% include 'blocks/predictions/prediction-contest-dialog.html.twig' %}
