@@ -10,6 +10,13 @@
 		<meta name="theme-color" content="#263238">
 
 		<link rel="shortcut icon" href="{{ basePath }}../assets/favicon.png" />
+		<link rel="apple-touch-icon" href="{{ basePath }}../assets/img/apple-icon-512-x-512.png" />
+		<link rel="apple-touch-icon" href="{{ basePath }}../assets/img/apple-icon-29-x-29.png" sizes="29x29" />
+		<link rel="apple-touch-icon" href="{{ basePath }}../assets/img/apple-icon-40-x-40.png" sizes="40x40" />
+		<link rel="apple-touch-icon" href="{{ basePath }}../assets/img/apple-icon-60-x-60.png" sizes="60x60" />
+		<link rel="apple-touch-icon" href="{{ basePath }}../assets/img/apple-icon-76-x-76.png" sizes="76x76" />
+		<link rel="apple-touch-icon" href="{{ basePath }}../assets/img/apple-icon-167-x-167.png" sizes="167x167" />
+
 		<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
 		<!--
 		<link rel="canonical" href="http://www.example.com/">
@@ -17,6 +24,9 @@
 
 		<!-- Page styles -->
 		<link rel="stylesheet" href="{{ basePath }}../assets/prism-default.css">
+
+		<!-- ATH -->
+    <link rel="stylesheet" type="text/css" href="{{ basePath }}../assets/js/ath/style/addtohomescreen.css">
 
 		<!-- Fonts -->
 		<link href='https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
@@ -63,9 +73,13 @@
 
 		<!-- jQuery UI - Touch Punch -->
 		<script src="{{ basePath }}../assets/js/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-	
+
+		<!-- ATH -->
+		<script type="text/javascript" src="{{ basePath }}../assets/js/ath/src/addtohomescreen.min.js"></script>
+
 		<!-- LS Scripts -->
 		<script src="{{ basePath }}../assets/js/app.js"></script>
+    
 		
 		{% block page_resources_header %}
 			{# This is for specific pages scripts use #}			
