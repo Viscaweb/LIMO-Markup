@@ -20,3 +20,10 @@
 		flex-shrink: 0;
 	}
 }
+
+.mdl-tabs--fixed {
+
+	.mdl-tabs__tab {
+		flex-grow: 1;
+	}
+}

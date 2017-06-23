@@ -1,0 +1,111 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set ls_header_brand_logo = true %}
+{% set page_title = 'Login/Register dialog' %}
+
+{% set main_content %}
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+
+      <button data-toggle="mdl-dialog" data-target="#login-register-dialog" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+        Login
+      </button>
+
+      <button data-toggle="mdl-dialog" data-target="#register-confirmation-dialog" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+        Register Confirmation
+      </button>
+
+    </div>
+  </div>
+{% endset %}
+
+{% block footer_scripts %}
+
+<div class="mdl-dialog mdl-dialog--no-padding" id="login-register-dialog">
+	<div class="mdl-dialog__content">
+		<div class="mdl-tabs mdl-tabs--fixed mdl-js-tabs mdl-js-ripple-effect">			
+			<div class="mdl-tabs__tab-bar">
+			  <a href="#scroll-tab-1" class="mdl-tabs__tab is-active">Login</a>
+			  <a href="#scroll-tab-2" class="mdl-tabs__tab">Register</a>
+			</div>
+		</div>
+		<div class="ls-login-register">
+			<div class="ls-login-register__logo">
+				<img src="{{ basePath }}../assets/img/drawer-logo.png" alt="Logo">
+			</div>
+			<span class="ls-login-register__title">You need to be logged-in with your account to post a comment on this game</span>
+			<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--facebook  mdl-button--large mdl-button--block mdl-js-ripple-effect">
+				<span class="icon icon-facebook"></span>Login with Facebook
+			</button>
+			<span class="ls-login-register__text">Or using your account:</span>
+			<form action="#" class="form-not-submitted">
+			  <div class="mdl-textfield mdl-js-textfield">
+			    <input class="mdl-textfield__input" type="text" id="username" required />
+			    <label class="mdl-textfield__label" for="username">Username</label>
+			  </div>
+			  <div class="mdl-textfield mdl-js-textfield">
+			    <input class="mdl-textfield__input" type="password" id="password" />
+			    <label class="mdl-textfield__label" for="password">Password</label>
+			  </div>
+			</form>
+			<div class="ls-login-register__forgot-password">
+				<a href="#" class="">Forgot your password?</a>
+			</div>
+		</div>
+		<div class="mdl-dialog__footer">
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				CLOSE
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				LOGIN
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="mdl-dialog" id="register-confirmation-dialog">
+	<div class="mdl-dialog__content">
+		<div class="mdl-dialog__body">
+			<div class="ls-message-widget">
+				<span class="ls-message-widget__icon icon-email"></span>
+				<span class="ls-message-widget__title">Finalise your registration on WhatsTheScore.com</span>
+				<span class="ls-message-widget__description">We have sent you an <b>email with a link to validate your account</b>.</span>
+				<span class="ls-message-widget__description">If you cannot find that email in your inbox after a few minutes. please check your 'junk/spam' folders.</span>
+			</div>
+		</div>
+		<div class="mdl-dialog__footer">
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				CLOSE
+			</button>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	/*mdl-dialog*/
+	//This code should be on a js component
+	$('[data-toggle="mdl-dialog"]').click(function( e ){
+		var target = $(this).data("target");
+		$(target).addClass("mdl-dialog--show");
+
+		e.stopPropagation();
+	});
+
+	//Dialog close button
+	$(".mdl-dialog-close").click(function( e ){
+		var dialog = $(this).parents(".mdl-dialog");
+		dialog.removeClass("mdl-dialog--show");
+	});
+
+	//Hide dialog when click outside
+	$(document).on("click",function( e ){
+		if ( !$(e.target).closest(".mdl-dialog__content").length ) {
+			$(".mdl-dialog").removeClass('mdl-dialog--show');
+		}
+	});
+
+</script>
+{% endblock %}
