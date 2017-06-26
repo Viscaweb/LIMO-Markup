@@ -6,7 +6,11 @@
 		justify-content: center;
 	  align-items: center;
 	  height: 100%;
-	  color: $ls-green-active-color;
+		color: lighten($ls-text-color, 50%);
+
+		&.is-active {
+			color: $ls-green-active-color;
+		}
 	}
 
 	.icon{
