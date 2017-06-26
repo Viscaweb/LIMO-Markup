@@ -9,19 +9,6 @@
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
 
-        {% if ls_header_season_button %}
-          <a class="mdl-navigation__link ls-season-button" href="#">14/15</a>
-        {% endif %}
-
-        {% if ls_header_star_icon %}
-            <a class="mdl-navigation__link ls-icon ls-active" href="#"><span class="icon-star"></span></a>
-        {% endif %}
-
-        {% if ls_header_star_icon_active %}
-          <a class="mdl-navigation__link ls-icon ls-active" href="#"><span class="icon-star"></span></a>
-        {% endif %}
-
-
           {% if ls_header_bell_icon %}
               <a class="mdl-navigation__link ls-toolbar-icon" href="#"><span class="icon icon-bell"></span></a>
           {% endif %}
@@ -30,16 +17,6 @@
               <a class="mdl-navigation__link ls-toolbar-icon ls-active" href="#"><span class="icon icon-bell"></span></a>
           {% endif %}
 
-
-        {% if ls_header_switch %}
-          <label for="switch-1" class="mdl-switch-label-left">
-            <span class="mdl-switch__label">All</span>
-          </label>
-          <label class="mdl-switch mdl-switch-live mdl-js-switch mdl-js-ripple-effect" for="switch-1">
-            <input type="checkbox" id="switch-1" class="mdl-switch__input" checked />
-            <span class="mdl-switch__label">Live</span>
-          </label>
-        {% endif %}
       </nav>
     </div>
 

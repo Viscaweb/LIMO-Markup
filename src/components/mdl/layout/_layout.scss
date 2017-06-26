@@ -95,12 +95,12 @@ body {
 		min-width: 30px;
 		opacity: 1;
 
-		&.ls-icon{
+		&.ls-toolbar-icon{
 			padding-left: 5px;
 			padding-right: 5px;
 			font-size: 19px;
 			
-			&.ls-active{
+			&.is-active{
 
 				.icon-star{
 					color: $ls-star-active;
