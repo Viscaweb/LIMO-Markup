@@ -53,19 +53,6 @@
             color: $ls-grey-contrast;
           }
         }
-
-        &__favorite {
-          display: flex;
-          flex: 0 0 40px;
-          flex-wrap: nowrap;
-          justify-content: center;
-          padding: 0;
-
-          > span{
-            line-height: 20px;
-            font-size: ls-font-size(4px, 'large');
-          }
-        }
       }
 
       &--placeholder{

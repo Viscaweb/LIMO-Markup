@@ -127,28 +127,24 @@
   }
 
 
-
   > .row:active {
 
-      &.row--highlight {
-        background: darken($ls-color-highlight, 5%);
-      }
+    &.row--highlight {
+      background: darken($ls-color-highlight, 5%);
+    }
 
-      &.event-won {
-        background: darken($ls-color-event-won-bg, 5%);
-      }
+    &.event-won {
+      background: darken($ls-color-event-won-bg, 5%);
+    }
 
-      &.event-lost {
-        background: darken($ls-color-event-lost-bg, 5%);
-      }
+    &.event-lost {
+      background: darken($ls-color-event-lost-bg, 5%);
+    }
 
-      &.event-draw {
-        background: darken($ls-color-event-draw-bg, 5%);
-      }
-
-
-
-  }
+    &.event-draw {
+      background: darken($ls-color-event-draw-bg, 5%);
+    }
+}
 
   &.ls-list-matches--mygames {
 
