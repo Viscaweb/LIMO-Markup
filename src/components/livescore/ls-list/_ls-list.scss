@@ -187,7 +187,7 @@
           &.icon-bell {
           	color: hsl(0, 0%, 94%);
 
-          	&.active {
+          	&.is-active {
           		color: $ls-green-active-color;
           	}
           }
@@ -224,7 +224,7 @@
 
 		.icon-star {
 			
-			&.active {
+			&.is-active {
 				color : $ls-star-active;
 			}
 		}
