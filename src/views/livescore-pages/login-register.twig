@@ -1,4 +1,4 @@
-{% extends "layouts/default-layout.twig" %}
+{% extends "layouts/layout-authentication.twig" %}
 
 {# Page variables #}
 {% set basePath = '../' %}
@@ -7,10 +7,11 @@
 {% set ls_header_button = 'Cancel' %}
 {% set ls_layout_variables = 'mdl-layout--fixed-tabs' %}
 
-{% set main_content %}
-	{% include 'blocks/login/login.html.twig' %}
+
+{% set content_tab_1 %}
+    {% include 'blocks/login/login.html.twig' %}
+{% endset %}
+{% set content_tab_2 %}
+    {% include 'blocks/login/register.html.twig' %}
 {% endset %}
 
-{% set top_header_append %}
-	{% include 'blocks/login/login-top-tabs.html.twig' %}
-{% endset %}

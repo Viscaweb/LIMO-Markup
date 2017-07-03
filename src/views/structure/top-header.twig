@@ -109,6 +109,10 @@
           {% include 'structure/fixed-tabs-predictions.twig' %}
       {% endif %}
 
+      {% if ls_header_fixed_tabs == 'login-register' %}
+          {% include 'structure/fixed-tabs-login.twig' %}
+      {% endif %}
+
     {# After header ends block #}
     {% block top_header_append %}
     {% endblock %}

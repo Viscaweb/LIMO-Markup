@@ -4,11 +4,15 @@
 	</div>
 	<span class="ls-login-register__title">You need to be logged-in with your account to post a comment on this game</span>
 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--facebook  mdl-button--large mdl-button--block mdl-js-ripple-effect">
-		<span class="icon icon-facebook"></span>Login with Facebook
+		<span class="icon icon-facebook"></span>Register with Facebook
 	</button>
-	<span class="ls-login-register__text">Or using your account:</span>
+	<span class="ls-login-register__text">Or creating your account:</span>
 	<form action="#" class="form-not-submitted">
-	  <div class="mdl-textfield mdl-js-textfield">
+		<div class="mdl-textfield mdl-js-textfield">
+			<input class="mdl-textfield__input" type="email" id="email" required />
+			<label class="mdl-textfield__label" for="username">Email</label>
+		</div>
+		<div class="mdl-textfield mdl-js-textfield">
 	    <input class="mdl-textfield__input" type="text" id="username" required />
 	    <label class="mdl-textfield__label" for="username">Username</label>
 	  </div>
@@ -17,10 +21,15 @@
 	    <label class="mdl-textfield__label" for="password">Password</label>
 	  </div>
 	</form>
-	<div class="ls-login-register__forgot-password">
-		<a href="#" class="">Forgot your password?</a>
+	<div class="ls-login-register__terms">
+		<div class="checkbox">
+			<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect" for="checkbox-1">
+			  <input type="checkbox" id="checkbox-1" class="mdl-checkbox__input" checked />
+			</label>
+		</div>
+		<div class="message">I have read and agree to the <a href="#">Terms and of use</a></div>
 	</div>
 	<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored  mdl-button--large mdl-button--block mdl-js-ripple-effect">
-		Login
+		Register
 	</button>
 </div>
