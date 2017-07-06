@@ -1,14 +1,6 @@
 .ls-login-register{
 	padding: 20px;
 
-	// Style inside the dialog component
-	.mdl-dialog & {
-		flex-grow: 1;
-	  flex-shrink: 1;
-	  overflow: auto;
-	  -webkit-overflow-scrolling: touch;
-	}
-
 	&__logo{
 		text-align: center;
 		margin-top: 10px;

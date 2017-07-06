@@ -30,29 +30,12 @@
 			  <a href="#scroll-tab-1" class="mdl-tabs__tab is-active">Login</a>
 			  <a href="#scroll-tab-2" class="mdl-tabs__tab">Register</a>
 			</div>
-		</div>
-		<div class="ls-login-register">
-			<div class="ls-login-register__logo">
-				<img src="{{ basePath }}../assets/img/drawer-logo.png" alt="Logo">
-			</div>
-			<span class="ls-login-register__title">You need to be logged-in with your account to post a comment on this game</span>
-			<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--facebook  mdl-button--large mdl-button--block mdl-js-ripple-effect">
-				<span class="icon icon-facebook"></span>Login with Facebook
-			</button>
-			<span class="ls-login-register__text">Or using your account:</span>
-			<form action="#" class="form-not-submitted">
-			  <div class="mdl-textfield mdl-js-textfield">
-			    <input class="mdl-textfield__input" type="text" id="username" required />
-			    <label class="mdl-textfield__label" for="username">Username</label>
-			  </div>
-			  <div class="mdl-textfield mdl-js-textfield">
-			    <input class="mdl-textfield__input" type="password" id="password" />
-			    <label class="mdl-textfield__label" for="password">Password</label>
-			  </div>
-			</form>
-			<div class="ls-login-register__forgot-password">
-				<a href="#" class="">Forgot your password?</a>
-			</div>
+			<section class="mdl-tabs__panel is-active" id="scroll-tab-1">
+				{% include 'blocks/login/login.html.twig' with { 'hide_login_register_buttons': true } %}
+			</section>
+			<section class="mdl-tabs__panel" id="scroll-tab-2">
+				{% include 'blocks/login/register.html.twig' with { 'hide_login_register_buttons': true } %}
+			</section>
 		</div>
 		<div class="mdl-dialog__footer">
 			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
