@@ -1,7 +1,7 @@
 <div class="ls-message-widget">
 	<span class="ls-message-widget__icon {{ message_icon }}"></span>
 	<span class="ls-message-widget__title">{{ message_title }}</span>
-	<span class="ls-message-widget__description">{{ message_description  }}</span>
+	<span class="ls-message-widget__description">{{ message_description | raw }}</span>
 
     {# If reset from app, link to open app #}
     {% if app_open_link %}
