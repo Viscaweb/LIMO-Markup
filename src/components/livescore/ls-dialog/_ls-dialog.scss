@@ -8,7 +8,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	z-index: 2000;
+	z-index: $ls-dialog-z-index;
 	padding: 20px;
 	box-sizing: border-box;
 	visibility: hidden;

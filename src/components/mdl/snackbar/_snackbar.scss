@@ -1,6 +1,7 @@
 
 .mdl-snackbar {
   justify-content: flex-start;
+  z-index: $ls-snackbar-z-index;
 
   @media(max-width: $snackbar-tablet-breakpoint - 1) {
     max-height: none;
