@@ -116,7 +116,12 @@
 //Flags images
 .ls-divider__flag{
 	vertical-align: middle;
-	max-height: 14px;
+	height: 14px;
+
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
 
 	.ls-divider__title & {
 		margin-right: 9px;
