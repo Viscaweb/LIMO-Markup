@@ -172,9 +172,17 @@
             display: flex;
             justify-content: center;
 
-            > img {
-              max-height: 22px;
-              max-width: 22px;
+            .icon-placeholder {
+              display: inline-flex;
+              aling-items: center;
+              justify-content: center;
+              width: 22px;
+              height: 22px;
+            }
+
+            img {
+              max-height: 100%;
+              max-width: 100%;
             }
           }
 
