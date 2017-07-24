@@ -29,10 +29,15 @@
 
       .club{
         text-align: center;
-
-        > img{
-          max-height: 58px;
-          max-width: 58px;
+          
+        .icon-placeholder {
+          width: 58px;
+          height: 58px;
+        }
+  
+        img{
+          max-height: 100%;
+          max-width: 100%;
         }
 
         .name{
