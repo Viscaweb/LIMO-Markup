@@ -323,11 +323,16 @@ body {
 				font-size: $ls-drawer-sub-navigation-font-size;
 				color: $ls-color-black;
 
-				img{
+				.icon-placeholder {
+					width: $ls-drawer-link-league-logo-size;
+					height: $ls-drawer-link-league-logo-size;
 					vertical-align: middle;
-					max-width: 21px;
-					max-height: 21px;
 					margin-right: 10px;
+				}
+
+				img{
+					max-width: 100%;
+					max-height: 100%;
 				}
 			}
 
