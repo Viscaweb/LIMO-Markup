@@ -25,9 +25,15 @@
 
         &__flag {
           flex: 0 0 34px;
+          
+          .icon-placeholder {
+            width: 24px;
+            vertical-align: middle;
+          }
 
-          > img {
-            max-width: 24px;
+          img {
+            max-width: 100%;
+            max-height: 100%;
           }
         }
 
