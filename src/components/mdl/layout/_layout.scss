@@ -104,10 +104,6 @@ body {
 
 				.icon-star{
 					color: $ls-star-active;
-
-					&:hover{
-						color: lighten($ls-text-color, 30%);
-					}
 				}
 			}
 		}
