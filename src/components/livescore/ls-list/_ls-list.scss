@@ -185,7 +185,8 @@
           font-size: ls-font-size(4px, 'large');
 
           &.icon-bell {
-          	color: hsl(0, 0%, 94%);
+			  color: hsl(0, 0%, 94%);
+			  padding: 8px;
 
           	&.is-active {
           		color: $ls-green-active-color;
