@@ -134,7 +134,7 @@ $ls-dialog-max-width: 					700px;
 $ls-dialog-z-index: 						2000;
 
 //Snackbar
-$ls-snackbar-z-index: 					2001;
+$ls-snackbar-z-index: 					2147483648; // This value should be always higher than $ls-dialog-z-index
 
 //Datepicker
 $ls-calendar-shadow: 						0 0 10px rgba(0, 0, 0, 0.17);
