@@ -59,6 +59,11 @@
             color: $ls-grey-contrast;
           }
         }
+
+        &__favorite {
+          padding-top: 0;
+          padding-bottom: 0;
+        }
       }
 
       &--placeholder{
