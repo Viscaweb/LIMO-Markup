@@ -271,6 +271,7 @@
         padding: 2px 0;
         border-bottom: $ls-dialog-border;
         min-width: 32px;
+        flex: 1;
 
         &__point {
           padding: 4px 0;
@@ -354,14 +355,5 @@
 
   .mdl-dialog__content {
     width: 100%;
-  }
-}
-
-/* ---- @ media ----- */
-
-@media (min-width: 600px) {
-
-  .ls-standing-table--right .row .cell {
-    flex: 1;
   }
 }
