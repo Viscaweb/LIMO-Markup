@@ -7,7 +7,7 @@
     width: auto;
     background: $ls-color-white;
     border-bottom: $ls-list-border;
-    padding: 0 10px 0 14px !important;
+    padding: 0;
 
     > a {
       color: $ls-text-color;
@@ -25,6 +25,7 @@
 
       &__flag {
         flex: 0 0 34px;
+        padding-left: 14px;
 
         .icon-placeholder {
           width: 21px;
@@ -53,6 +54,7 @@
         flex-wrap: nowrap;
         justify-content: flex-end;
         min-width: 135px;
+        padding-right: 10px;
 
         > span{
           position: relative;
