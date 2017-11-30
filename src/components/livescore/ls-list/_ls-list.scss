@@ -132,6 +132,7 @@
 
 			&__time,
 			&__team,
+			&__teams,
 			&__date {
 				white-space: nowrap;
 				text-overflow: ellipsis;
@@ -152,8 +153,12 @@
 				flex: 0 0 62px
 			}
 
+			&__teams {
+				padding: 0;
+			}
+
 			&__team {
-			position: relative;
+				position: relative;
 
 				&.win {
 					font-weight: 600;
