@@ -63,7 +63,8 @@
 	}
 }
 
-.material-datepicker{
+.material-datepicker {
+	font-family: $preferred_font;
 	background-color: $ls-color-white;
 	box-shadow: $ls-calendar-shadow;
 	transform: scale(1);
