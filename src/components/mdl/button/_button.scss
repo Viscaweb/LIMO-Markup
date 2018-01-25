@@ -223,3 +223,14 @@ ul.mdl-button-group {
 		}
 	}
 }
+
+//Rounded
+.mdl-button.mdl-button--rounded {
+	border-radius: 22px;
+}
+
+//Gradient
+.mdl-button.mdl-button--gradient {
+	background-image: linear-gradient($ls-button-gradient-start-color, $ls-button-gradient-end-color);
+	color: $ls-color-white;
+}

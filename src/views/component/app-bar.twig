@@ -1,0 +1,17 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'App bar' %}
+{% set ls_header_brand_logo = true %}
+
+{% set main_content %}
+    <div class="ls-app-bar">
+    <a href="#" class="ls-app-bar__link"></a>
+    <div class="ls-app-bar__content">The iOS application is ready</div>
+    <div class="ls-app-bar__button">
+      <button class="mdl-button mdl-js-button mdl-button--gradient mdl-button--rounded">Open in app</button>
+    </div>
+  </div>
+{% endset %}
+

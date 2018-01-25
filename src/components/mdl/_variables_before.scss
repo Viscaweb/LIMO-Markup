@@ -94,6 +94,9 @@ $ls-button-large-icon-size:			20px;
 $ls-button-arrow-margin:				15px;
 $ls-button-facebook-color:			#4168ae;
 
+$ls-button-gradient-start-color:#1fa931;
+$ls-button-gradient-end-color:	#1bb380;
+
 //Switch Button
 $ls-switch-compact-label-height: 				40px;
 $ls-switch-compact-label-font-size: 		12px;
@@ -134,6 +137,12 @@ $ls-dialog-z-index: 						2000;
 
 //Snackbar
 $ls-snackbar-z-index: 					2001;
+
+//App bar
+$ls-app-bar-zindex: 						4;
+$ls-app-bar-border-color: 			#adadad;
+$ls-app-bar-bg-color: 					$ls-color-white;
+$ls-app-bar-button-height: 			38px;
 
 //Datepicker
 $ls-calendar-shadow: 						0 0 10px rgba(0, 0, 0, 0.17);
