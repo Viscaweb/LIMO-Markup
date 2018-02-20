@@ -278,6 +278,18 @@ body {
 		}
 
 		.mdl-navigation__timezone-selector {
+			position: relative;
+
+			&:after {
+				position: absolute;
+				display: block;
+				right: 14px;
+				bottom: 11px;
+				content: "\e62f";
+				font-family: $ls-icons-font;
+				font-size: 18px;
+				color: $ls-drawer-show-all-color;
+			}
 
 			&-label {
 				display: block;
@@ -300,6 +312,10 @@ body {
 				border: 0;
 				background: transparent;
 				text-align-last:left;
+
+				&:active {
+					background-color: rgba(0,0,0,0.06);
+				}
 			}
 		}
 
