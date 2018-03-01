@@ -1,5 +1,9 @@
 // App bar
 
+.ls-app-bar--active {
+	padding-bottom: 80px;
+}
+
 .ls-app-bar {
 	position: fixed;
 	display: none;

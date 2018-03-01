@@ -4,8 +4,13 @@
 {% set basePath = '../' %}
 {% set page_title = 'App bar' %}
 {% set ls_header_brand_logo = true %}
+{% set ls_layout_variables = 'ls-app-bar--active' %}
 
 {% set main_content %}
+		{% include 'blocks/dividers/divider-h1.twig' %}
+	{% include 'blocks/sports/listings/match_listing_general.html.twig' %}
+	{% include 'blocks/dividers/divider-right-nav.twig' %}
+	{% include 'blocks/sports/listings/countries_list.html.twig' %}
     <div class="ls-app-bar">
     <a href="#" class="ls-app-bar__link"></a>
     <a href="#" class="ls-app-bar__close"><i class="material-icons">close</i></a>
@@ -19,9 +24,11 @@
 {# Scripts init #}
 {% block footer_scripts %}
 	<script type="text/javascript">
-	$(".ls-app-bar__close").on("click",function(){
-		var bar = $(this).parent();
-		bar.fadeOut();
+	$(".ls-app-bar__close").on("click",function(e){
+		$(this).parent().fadeOut(function(){
+			$(".ls-app-bar--active").removeClass('ls-app-bar--active');
+		});
+		e.preventDefault();
 	});
 	</script>
 {% endblock %}
