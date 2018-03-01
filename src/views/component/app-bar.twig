@@ -8,6 +8,7 @@
 {% set main_content %}
     <div class="ls-app-bar">
     <a href="#" class="ls-app-bar__link"></a>
+    <a href="#" class="ls-app-bar__close"><i class="material-icons">close</i></a>
     <div class="ls-app-bar__content">The iOS application is ready</div>
     <div class="ls-app-bar__button">
       <button class="mdl-button mdl-js-button mdl-button--gradient mdl-button--rounded">Open in app</button>
@@ -15,3 +16,12 @@
   </div>
 {% endset %}
 
+{# Scripts init #}
+{% block footer_scripts %}
+	<script type="text/javascript">
+	$(".ls-app-bar__close").on("click",function(){
+		var bar = $(this).parent();
+		bar.fadeOut();
+	});
+	</script>
+{% endblock %}

@@ -88,7 +88,7 @@
 		
 
 </head>
-<body>
+<body class="wf-materialicons-n4-active">
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
 
 			  <header class="mdl-layout__header">
@@ -197,6 +197,7 @@
 				  <div class="page-content">
 							    <div class="ls-app-bar">
     <a href="#" class="ls-app-bar__link"></a>
+    <a href="#" class="ls-app-bar__close"><i class="material-icons">close</i></a>
     <div class="ls-app-bar__content">The iOS application is ready</div>
     <div class="ls-app-bar__button">
       <button class="mdl-button mdl-js-button mdl-button--gradient mdl-button--rounded">Open in app</button>
@@ -215,5 +216,11 @@
 
 			});
 		</script>
-			</body>
+			<script type="text/javascript">
+	$(".ls-app-bar__close").on("click",function(){
+		var bar = $(this).parent();
+		bar.fadeOut();
+	});
+	</script>
+</body>
 </html>
