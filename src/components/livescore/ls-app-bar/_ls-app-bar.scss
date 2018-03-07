@@ -56,10 +56,10 @@
 	text-align: right;	
 	justify-content: flex-end;
 	padding-right: 9px;
+  padding-left: 40px;
 
 	@media #{$ls-small-devices} {
 		justify-content: flex-start;
-    padding-left: 40px;
 	}
 }
 
