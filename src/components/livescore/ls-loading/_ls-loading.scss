@@ -30,6 +30,7 @@
 	}
 
 	&--active{
+		min-height: $spinner-container-min-height;
 
 		&:after{
 			visibility: visible;

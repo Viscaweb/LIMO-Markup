@@ -513,7 +513,7 @@ $footer-underline-color: $footer-color !default;
 
 $spinner-size: 28px !default;
 $spinner-stroke-width: 3px !default;
-
+$spinner-container-min-height: $spinner-size + 40px;
 
 /* ICON TOGGLE */
 
