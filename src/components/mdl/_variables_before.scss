@@ -280,6 +280,14 @@ $ls-match-head-to-head-fifth-size:					20px;
 //Match incidents
 $ls-match-incidents-empty-row-height: 			58px;
 
+//Panel
+$ls-panel-wrapper-padding: 									15px;
+$ls-panel-wrapper-margin: 									0 0 20px;
+$ls-panel-bg: 															darken($ls-color-white, 3.2%);
+$ls-panel-border-color: 										darken($ls-panel-bg, 11.2%);
+$ls-panel-head-padding: 										12px 40px 12px 14px;
+$ls-panel-body-padding: 										12px 14px 15px;
+
 //Sprite
 $ls-image-sprite-icons : "../assets/img/sprite/sprite-icons.png";
 $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
