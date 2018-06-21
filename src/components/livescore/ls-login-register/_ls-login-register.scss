@@ -1,0 +1,87 @@
+.ls-login-register{
+	padding: 20px;
+
+	&__logo{
+		text-align: center;
+		margin-top: 10px;
+
+		img{
+			max-width: 210px;
+		}
+	}
+
+	&__title{
+		font-weight: $ls-font-weight-light;
+		font-size: ls-font-size(2px);
+		line-height: ls-font-size(4px,'large');
+		display: block;
+		text-align: center;
+		margin: 25px 0 23px;
+	}
+
+	&__text{
+		text-align: center;
+		font-size: ls-font-size(2px);
+		line-height: ls-font-size(5px,'large');
+		font-weight: $ls-font-weight-light;
+		display: block;
+	}
+
+	.mdl-textfield{
+		display: block;
+		width: 100%;
+		padding: $ls-user-myinfo-textfield-size 0;
+	}
+
+	.mdl-textfield__label {
+		top: ($input-text-padding + $ls-user-myinfo-textfield-size);
+
+		&:after {
+			bottom: $ls-user-myinfo-textfield-size;
+		}
+	}
+
+	.mdl-button--facebook{
+		margin-bottom: 18px;
+		
+		.icon{
+			font-size: ls-font-size(10px,'large');
+			vertical-align: middle;
+			margin-right: 5px;
+		}
+	}
+
+	&__forgot-password{
+		text-align: right;
+		margin-bottom: 25px;
+
+		a{
+			color: $ls-link-color;
+			text-decoration: none;
+			font-weight: $ls-font-weight-light;
+		}
+	}
+
+	&__terms{ 
+		margin-bottom: 25px;
+		display: flex;
+		align-items: center;
+		line-height: 18px;
+
+		.checkbox{
+			padding-right: 6px;
+			flex: 0 0 auto;
+		}
+
+		.message{
+			flex: 1 1 100%;
+			font-weight: $ls-font-weight-light;
+		}
+
+		a{
+			color: $ls-link-color;
+			text-decoration: none;
+			font-weight: $ls-font-weight-light;
+		}
+	}
+}

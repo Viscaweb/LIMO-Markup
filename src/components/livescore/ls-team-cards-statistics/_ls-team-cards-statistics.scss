@@ -1,0 +1,46 @@
+.ls-team-cards-statistics{
+
+  .ls-list{
+    background-color: $ls-color-white;
+
+    .row{
+      padding: 0;
+
+      .cell{
+        border-right: $ls-list-border;
+        padding: 9px 0;
+
+        &__name{
+          display: flex;
+          align-items: center;
+          padding-left: 13px;
+          padding-right: 13px;
+          overflow: hidden;
+
+          span{
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        &__yellow_cards, &__red_cards{          
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 70px;
+          text-align: center;
+        }
+      }
+
+      &--head{
+
+        .cell{
+          padding-top: 5px;
+          padding-bottom: 5px;
+          background-color: $ls-color-white;
+          font-weight: $ls-font-weight-light;
+          border-color: $ls-color-white;
+        }
+      }
+    }
+  }
+}

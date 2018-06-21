@@ -1,0 +1,47 @@
+// Panel widget
+
+.panel-wrapper {
+	padding: $ls-panel-wrapper-padding;
+	margin: $ls-panel-wrapper-margin;
+}
+
+.panel {
+	border: 1px solid $ls-panel-border-color;
+}
+
+.panel-head {
+	background-color: $ls-panel-bg;
+	padding: $ls-panel-head-padding;
+	border-bottom: 1px solid $ls-panel-border-color;
+}
+
+.panel-body {
+	padding: $ls-panel-body-padding;
+
+	h1 {
+		font-size: 27px;
+    line-height: 1.3;
+    margin: 15px 0;
+	}
+
+	h2 {
+		font-size: 22px;
+    line-height: 1.3;
+    margin: 15px 0;
+	}
+
+	h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 12px 0;
+	}
+
+	p {
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

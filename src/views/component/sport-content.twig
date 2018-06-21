@@ -1,0 +1,23 @@
+{% extends "layouts/default-layout.twig" %}
+
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'Sport Content' %}
+{% set ls_header_switch = true %}
+{% set ls_header_brand_logo = true %}
+
+{% set main_content %}
+  	{% include 'blocks/sports/sport-content.twig' %}
+{% endset %}
+
+{# Scripts init #}
+{% block footer_scripts %}
+<script type="text/javascript">
+	$('.sport-content__show-more').on('click', toggleReadMore);
+	function toggleReadMore(event) {
+	    var $widget = $(event.currentTarget).parents('.panel-sport-content');
+	    $widget.find('.sport-content--collapsed').toggleClass('in');
+	}
+</script>
+{% endblock %}

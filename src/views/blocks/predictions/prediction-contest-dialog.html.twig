@@ -1,0 +1,87 @@
+{# MD Dialog #}
+<div class="mdl-dialog mdl-dialog--no-padding mdl-dialog--contest-gifts" id="contest-gifts">
+	<div class="mdl-dialog__content">
+		<div class="mdl-dialog__header">
+			<span class="mdl-dialog__header-title">Gifts & Rules</span>
+		</div>
+		<div class="mdl-dialog__body">
+			<div class="ls-contest-gifts">
+				<div class="ls-contest-gifts__monthly-gift">
+					<div class="title">Monthly Gift</div>
+					<div class="description">1st <small>wins a shirt!</small></div>
+					<img src="{{ basePath }}../assets/img/monthly-gift.png" alt="Monthly Gift">
+				</div>
+				<div class="ls-contest-gifts__list">
+					<div class="title">Contest Gifts</div>
+					<ul class="mdl-list mdl-list-linked ls-list ls-standing-table ls-standing-table--left ls-contest-prediction-standing">
+					  <li class="row">
+					    <div class="cell cell__rank cell__rank--green">1st</div>
+					    <div class="cell cell__prize">
+					      <div class="cell__prize--image"><img src="{{ basePath }}../assets/img/prize-iphone6.png" alt="Avatar"></div>
+					      <div class="cell__prize--title"><span>iPhone 6s</span></div>
+					    </div>
+					  </li>
+					  <li class="row">
+					    <div class="cell cell__rank cell__rank--green">2nd</div>
+					    <div class="cell cell__prize">
+					      <div class="cell__prize--image"><img src="{{ basePath }}../assets/img/prize-ps4.png" alt="Avatar"></div>
+					      <div class="cell__prize--title"><span>PS4 + 1 jeu (FIFA ou PES)</span></div>
+					    </div>
+					  </li>
+					  <li class="row">
+					    <div class="cell cell__rank cell__rank--green">2nd</div>
+					    <div class="cell cell__prize">
+					      <div class="cell__prize--image"><img src="{{ basePath }}../assets/img/prize-ps4.png" alt="Avatar"></div>
+					      <div class="cell__prize--title"><span>PS4 + 1 jeu (FIFA ou PES)</span></div>
+					    </div>
+					  </li>
+					  <li class="row">
+					    <div class="cell cell__rank cell__rank--green">2nd</div>
+					    <div class="cell cell__prize">
+					      <div class="cell__prize--image"><img src="{{ basePath }}../assets/img/prize-ps4.png" alt="Avatar"></div>
+					      <div class="cell__prize--title"><span>PS4 + 1 jeu (FIFA ou PES)</span></div>
+					    </div>
+					  </li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="mdl-dialog__footer">
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				CLOSE
+			</button>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		//Init core JS
+		App.init();
+	});
+
+	/*mdl-dialog*/
+	//This code should be on a js component
+	var dilogToggle = $(".icon-gift").parent(".ls-toolbar-icon");
+	dilogToggle.data("target", "#contest-gifts");
+
+	dilogToggle.click(function( e ){
+		var target = $(this).data("target");
+		$(target).addClass("mdl-dialog--show");
+
+		e.stopPropagation();
+	});
+
+	//Dialog close button
+	$(".mdl-dialog-close").click(function( e ){
+		var dialog = $(this).parents(".mdl-dialog");
+		dialog.removeClass("mdl-dialog--show");
+	});
+
+	//Hide dialog when click outside
+	$(document).on("click",function( e ){
+		if ( !$(e.target).closest(".mdl-dialog__content").length ) {
+			$(".mdl-dialog").removeClass('mdl-dialog--show');
+		}
+	});
+</script>

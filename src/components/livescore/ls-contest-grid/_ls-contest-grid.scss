@@ -1,0 +1,405 @@
+.ls-contest-grid{
+
+	.ls-list{
+
+		.prediction-won {
+      background: $ls-color-event-won-bg;
+    }
+
+    .prediction-lost {
+      background: $ls-color-event-lost-bg;
+    }
+
+		.row{
+
+			&.event-cancelled{
+				background-color: $ls-contest-grid-event-cancelled-bg;
+			}
+
+			.cell{
+
+				&__date{
+					display: flex;
+					flex: 0 0 61px;
+					align-items: center;
+					justify-content: center;
+					color: $ls-contest-grid-date-color;
+				}
+
+				&__team__cards{
+					bottom: 2px;
+
+					> span{
+						height: 10px;
+						width: 7px;
+					}
+
+					.red-card{
+						background-color: $ls-contest-grid-red-card-color;
+					}
+				}
+
+				&__prediction{
+					flex: 0 0 84px;
+					padding: 4px 0;
+				}
+
+				&__icon{
+					display: flex;
+					flex: 0 0 45px;
+					padding: 0;
+					align-items: center;
+					justify-content: center;
+					
+					span{
+						font-size: ls-font-size(1px,'large');
+						color: $ls-contest-grid-icons-color;
+					}
+				}
+			}
+
+			.mdl-button{
+				background-color: $ls-color-white;
+				padding: 0 10px;
+				font-size: ls-font-size(2px,'small');
+				font-weight: $ls-font-weight-light;
+				min-width: 25px;
+				height: $ls-contest-grid-buttons-height;
+				line-height: $ls-contest-grid-buttons-height - 1px;
+				border-top: 1px solid $ls-contest-grid-buttons-border-color;
+				border-bottom: 1px solid $ls-contest-grid-buttons-border-color;
+				border-right-width: 0;
+
+				&:first-child{
+					border-left: 1px solid $ls-contest-grid-buttons-border-color;
+				}
+
+				&:last-child{
+					border-right: 1px solid $ls-contest-grid-buttons-border-color;
+				}
+
+				&.ls-button--prediction--cancelled, &.ls-button--prediction--hidden{
+					width: 100%;
+				}
+
+				&.ls-button--prediction--done{
+					border: 2px solid $ls-contest-grid-buttons-done-border-color;
+					line-height: $ls-contest-grid-buttons-height - 4px;
+				}
+			}
+		}
+
+		&.mdl-list-linked{
+
+			.row{
+
+				&.event-cancelled{
+
+					&:active {
+		        background-color: $ls-list-pressed-color;
+		      }
+				}
+			}
+		}
+	}
+
+	&--open{
+
+		.ls-list{
+
+			.row{
+				flex-direction: column;
+
+				.ls-contest-grid__top{
+					display: flex;
+
+					.league-data{
+						flex-grow: 0;
+			      flex-shrink: 0;
+			      flex-basis: 70%;
+						max-width: 70%;
+
+			      a{
+			      	display: inline-block;
+			      	background-color: $ls-contest-grid-league-data-bg;
+			      	color: $ls-contest-grid-league-data-color;
+			      	font-size: ls-font-size(1px, 'small');
+			      	font-weight: $ls-font-weight-light;
+			      	text-decoration: none;
+			      	padding: 3px 3px 3px 13px;
+			      	position: relative;
+			      	max-width: 100%;
+    					box-sizing: border-box;
+    					outline: none;
+
+			      	&:after{
+			      		content: "";
+			      		position: absolute;
+						    top: 0;
+						    right: -12px;
+						    width: 0;
+						    height: 0;
+						    border-right: 12px solid transparent;
+						    border-top: 24px solid $ls-contest-grid-league-data-bg;
+			      	}
+
+			      	span{
+			      		display: block;
+						    overflow: hidden;
+						    text-overflow: ellipsis;
+			      	}
+			      }
+					}
+
+					.status{
+						flex-grow: 1;
+			      flex-shrink: 1;
+			      flex-basis: 30%;
+			      text-align: right;
+			      color: $ls-contest-grid-icons-color;
+			      font-size: $ls-font-size-small;
+			      padding: 3px 18px 3px 12px;
+			      box-sizing: border-box;
+
+			      .icon{
+			      	font-size: ls-font-size(1px,'large');
+							color: $ls-contest-grid-icons-color;
+							margin-left: 5px;
+							vertical-align: middle;
+			      }
+					}
+				}
+
+				.ls-contest-grid__bottom{
+					display: flex;
+
+					.make-prediction{
+						flex-grow: 1;
+			      flex-shrink: 1;
+			      flex-basis: 100%;
+			      padding: 0 20px 15px 20px;
+			      overflow: hidden;
+
+			      &__teams{
+							display: flex;
+
+							.team{
+								flex-grow: 1;
+					      flex-shrink: 1;
+					      flex-basis: 100%;
+					      padding: 6px 0;
+					      text-overflow: ellipsis;
+					      overflow: hidden;
+
+					      &--home{
+					      	text-align: right;
+					      }
+							}
+
+							.versus{
+								padding: 6px 5px;
+								flex-grow: 0;
+					      flex-shrink: 0;
+					      flex-basis: auto;
+					      color: $ls-contest-grid-icons-color;
+							}
+			      }
+
+			      &__buttons{
+
+			      }
+					}
+
+					.tips{
+						display: flex;
+						flex-grow: 0;
+			      flex-shrink: 0;
+			      flex-basis: auto;
+			      padding: 0 18px 15px 0;
+			      align-items: flex-end;
+
+			      a{
+							display: block;
+							border-radius: 50%;
+							width: $ls-contest-grid-tips-icon-size;
+							height: $ls-contest-grid-tips-icon-size;
+							line-height: $ls-contest-grid-tips-icon-size + 9px;
+							border: 1px solid $ls-contest-grid-tips-icon-border-color;
+							text-align: center;
+							color: $ls-contest-grid-icons-color;
+							text-decoration: none;
+
+							span{
+								font-size: $ls-contest-grid-tips-icon-size - 12px;
+								color: $ls-contest-grid-icons-color;
+							}
+			      }
+					}
+				}
+
+				.mdl-button{
+					flex: 1 1 100%;
+					margin: 0 3px;
+					border-width: 0;
+					height: 38px;
+					line-height: 38px;
+					background: $button-primary-color;
+					border-radius: 2px;
+					
+					&:first-child, &:last-child{
+						border-width: 0;
+					}
+
+					&.ls-button--prediction--done{
+						border-width: 3px;
+						line-height: 32px;
+					}
+				}
+
+				&.event-cancelled{
+					background-color: $ls-color-white;
+
+					.ls-contest-grid__bottom{
+
+						.make-prediction__buttons{
+
+							.mdl-button-group{
+								opacity: 0.4;	
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.ls-list{
+
+		.row{
+
+			.mdl-button{
+
+				&.ls-button--prediction--done{
+					background-color: $ls-contest-grid-buttons-done-bg-color;
+				}
+
+				&.ls-button--prediction--success{
+					background-color: $ls-contest-grid-buttons-success-bg-color;
+					color: $ls-color-white;
+				}
+
+				&.ls-button--prediction--failed{
+					background-color: $ls-contest-grid-buttons-failed-bg-color;
+					color: $ls-color-white;
+				}
+
+				&.ls-button--prediction--result{
+					background-color: $ls-contest-grid-buttons-result-bg-color;
+					color: $ls-green-active-color;
+				}
+			}
+		}
+	}
+}
+
+.ls-contest-grid-goals-statistics{
+  background: url("#{$ls-img-path}/green-field-horizontal.png");
+
+  @media #{$ls-retina} {
+    background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+    background-size: 49px auto;
+  }
+
+	.grid-stats{
+		display: flex;
+    align-items: center;
+
+    .title{
+    	flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 100%;
+      color: rgba(255, 255, 255, 0.57);
+      font-weight: $ls-font-weight-light;
+    }
+
+    .icon{
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
+      color: #abd07b;
+      font-size: ls-font-size(5px, 'large');
+    }
+
+    .values{
+    	padding-left: 10px;
+      flex-grow: 0;
+      flex-shrink: 0;
+      flex-basis: auto;
+      color: $ls-color-white;
+			font-size: 0;
+			line-height: 10px;
+
+			.value, .slash{
+	      font-size: ls-font-size(5px, 'large');
+	      font-weight: $ls-font-weight-thin;
+			}
+
+      .value{
+
+	      &--big{
+	      	display: inline-block;
+	      	font-weight: $ls-font-weight-normal;
+	      	font-size: ls-font-size(15px, 'large');
+	      	line-height: ls-font-size(11px, 'large');
+	      	margin-right: 5px;
+	      }
+      }
+    }
+
+    &--rank, &--prediction-done{
+			padding: 13px 20px;
+			border-bottom: 1px solid #84bc43;
+    }
+
+    &--bottom{
+
+    	.stat{
+    		display: flex;
+	    	flex-grow: 1;
+	      flex-shrink: 1;
+	      flex-basis: 100%;
+	      padding: 11px 20px;
+	      border-right: 1px solid #84bc43;
+
+		    &:last-child{
+	      	border-right: 0;
+	      }
+
+	      .values{
+
+					.value, .slash{
+						line-height: 22px;
+					}
+	      }
+    	}
+    }
+
+    &--prediction-done{
+    	padding: 8px 20px;
+
+    	.values{
+
+    		.value{
+
+    			&--big{
+    				background-color: rgba(255, 255, 255, 0.22);
+    				min-width: 35px;
+    				padding: 3px 5px;
+    				text-align: center;
+    				font-size: ls-font-size(11px, 'large');
+    			}
+    		}
+    	}
+    }
+	}
+}

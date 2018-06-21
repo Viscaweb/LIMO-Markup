@@ -1,0 +1,92 @@
+<div class="ls-player-statistics">
+    <div class="player-stats">
+        <div class="top-stats">
+            <div class="indicator">
+                <div class="icon"><span class="icon-whistle"></span></div>
+                <div class="value">32</div>
+                <div class="name">Games Played</div>
+            </div>
+            <div class="indicator">
+                <div class="icon"><span class="icon-stopwatch"></span></div>
+                <div class="value">2644’</div>
+                <div class="name">Minutes Played</div>
+            </div>
+            <div class="indicator">
+                <div class="icon"><span class="icon-football"></span></div>
+                <div class="value">69</div>
+                <div class="name">Goals</div>
+            </div>
+        </div>
+        <div class="bottom-stats">
+            <div class="cards">
+                <span class="name">Yellow Cards</span>
+                <div class="number">
+                    <span class="value">2</span>
+                    <span class="card card--yellow"></span>
+                </div>
+            </div>
+            <div class="cards">
+                <span class="name">Red Cards</span>
+                <div class="number">
+                    <span class="value">0</span>
+                    <span class="card card--red"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include 'blocks/dividers/divider-simple.twig' with {
+        'divider_title': 'Detailed Statistics'
+    } %}
+
+    <ul class="mdl-list ls-list">
+        <li class="row row--head">
+            <div class="cell cell__league">League</div>
+            <div class="cell cell__minutes"><span class="sprite-icons clock"></span></div>
+            <div class="cell cell__shirts"><span class="sprite-icons shirt"></span></div>
+            <div class="cell cell__goals"><span class="sprite-icons goal"></span></div>
+            <div class="cell cell__yellow_cards"><span class="sprite-icons yellow-card"></span></div>
+            <div class="cell cell__red_cards"><span class="sprite-icons red-card"></span></div>
+        </li>
+        <li class="row">
+            <div class="cell cell__league"><img src="{{ basePath }}../assets/img/flag-int.png" alt="France"><span class="name">Champions League</span></div>
+            <div class="cell cell__minutes"><span>826’</span></div>
+            <div class="cell cell__shirts"><span>11</span></div>
+            <div class="cell cell__goals"><span>8</span></div>
+            <div class="cell cell__yellow_cards"><span>0</span></div>
+            <div class="cell cell__red_cards"><span>0</span></div>
+        </li>
+        <li class="row">
+            <div class="cell cell__league"><img src="{{ basePath }}../assets/img/flag-int.png" alt="Int"><span class="name">Int. Friendlies</span></div>
+            <div class="cell cell__minutes"><span>180’</span></div>
+            <div class="cell cell__shirts"><span>1</span></div>
+            <div class="cell cell__goals"><span>3</span></div>
+            <div class="cell cell__yellow_cards"><span>0</span></div>
+            <div class="cell cell__red_cards"><span>0</span></div>
+        </li>
+        <li class="row">
+            <div class="cell cell__league"><img src="{{ basePath }}../assets/img/flag-sp.png" alt="Spain"><span class="name">Spanish League</span></div>
+            <div class="cell cell__minutes"><span>2644'</span></div>
+            <div class="cell cell__shirts"><span>32</span></div>
+            <div class="cell cell__goals"><span>46</span></div>
+            <div class="cell cell__yellow_cards"><span>1</span></div>
+            <div class="cell cell__red_cards"><span>0</span></div>
+        </li>
+        <li class="row">
+            <div class="cell cell__league"><img src="{{ basePath }}../assets/img/flag-sp.png" alt="Spain"><span class="name">Spanish League</span></div>
+            <div class="cell cell__minutes"><span></span></div>
+            <div class="cell cell__shirts"><span></span></div>
+            <div class="cell cell__goals"><span>4</span></div>
+            <div class="cell cell__yellow_cards"><span>0</span></div>
+            <div class="cell cell__red_cards"><span>0</span></div>
+        </li>
+        <li class="row">
+            <div class="cell cell__league"><img src="{{ basePath }}../assets/img/flag-int.png" alt="Int"><span class="name">World Cup</span></div>
+            <div class="cell cell__minutes"><span>720’</span></div>
+            <div class="cell cell__shirts"><span>1</span></div>
+            <div class="cell cell__goals"><span>8</span></div>
+            <div class="cell cell__yellow_cards"><span>0</span></div>
+            <div class="cell cell__red_cards"><span>0</span></div>
+        </li>
+    </ul>
+</div>

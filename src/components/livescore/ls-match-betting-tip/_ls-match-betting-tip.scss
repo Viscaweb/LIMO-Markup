@@ -1,0 +1,106 @@
+.match-betting-tips{
+  background: $ls-color-white;
+
+  .row{
+    box-sizing: border-box;
+    padding: 20px 0;
+
+    .cell{
+
+      &__img{
+        display: flex;
+        flex: 0 0 50px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 20px;
+
+        img{
+          max-width: 50px;
+          max-height: 50px;
+        }
+      }
+
+      &__text{
+        display: flex;
+        padding: 0 20px 0 0;
+        align-items: center;
+        white-space: normal;
+        font-size: ls-font-size(2px);
+        line-height: ls-font-size(5px,'large');
+      }
+    }
+  }
+}
+
+.ls-team-header {
+
+  background: $ls-color-white;
+
+  .row {
+    border: none;
+    color: $ls-text-color;
+
+    a {
+      text-decoration: none;
+      color: $ls-text-color;
+    }
+
+    .cell {
+     padding:0px 16px ;
+
+      &__team--flag {
+        padding: 0;
+        flex: 0 0 86px;
+        display: flex;
+        justify-content: flex-start;
+
+        > img {
+            max-width: 70px;
+            max-height: 70px;
+         }
+      }
+
+      &__team--infos {
+        padding-left: 0;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        .team-title {
+          font-size: 20px;
+          font-weight: 500;
+          margin-bottom: 3px;
+          white-space: normal;
+          display: flex;
+          align-items: baseline;
+
+          > .favorite-star {
+            padding: 0 6px;
+            font-size: 16px;
+
+            a {
+              color: #E2E2E2;
+            }
+          }
+        }
+
+        .team-country {
+          display: flex;
+          align-items: center;
+          font-weight: 500;
+          color: lighten($ls-text-color,35%);
+          font-size:  $card-font-size - 4 ;
+          clear: both;
+          text-transform: uppercase;
+          text-decoration: none;
+
+          > .country-flag {
+              width: 26px;
+              margin-right: 5px;
+          }
+        }
+      }
+    }
+  }
+}

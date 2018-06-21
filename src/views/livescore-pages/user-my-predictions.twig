@@ -1,0 +1,17 @@
+{% extends "layouts/layout-predictions.twig" %}
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set ls_header_brand_logo = true %}
+{% set page_title = 'Contest' %}
+{% set ls_header_icons = true %}
+
+
+{% set content_tab_1 %}
+    {% include 'blocks/predictions/contest-grid-closed.html.twig' %}
+{% endset %}
+
+{% set content_tab_2 %}
+    {% include 'blocks/profile/user-predictions-statistics.html.twig' %}
+    {% include 'blocks/predictions/contest-grid-closed.html.twig' %}
+{% endset %}

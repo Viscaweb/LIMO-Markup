@@ -1,4 +1,6 @@
 vendor/
 external/
-dist/
 .idea/
+node_modules/
+*.orig
+*.log

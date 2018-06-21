@@ -1,0 +1,170 @@
+.ls-user-prediction-statistics{
+
+	.mdl-button-group{
+
+		.mdl-button--leagues{
+			flex-basis: 45%;
+
+			select{
+				padding-left: 20px;
+			}
+		}
+
+		select{
+			font-size: $ls-font-size-base;
+		}
+	}
+
+	.prediction-chart{
+		background: url("#{$ls-img-path}/green-field-horizontal.png");
+		display: flex;
+
+    @media #{$ls-retina} {
+      background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+      background-size: 49px auto;
+    }
+
+    .chart{
+    	flex: 1 1 100%;
+    	flex-direction: column;
+    	display: flex;
+			padding: 10px;
+			border-right: 1px solid #84bc43;
+			align-items: center;
+			justify-content: center;
+			color: $ls-color-white;
+
+			.title{
+				font-size: $ls-font-size-large;
+				font-weight: $ls-font-weight-light;
+			}
+
+			.radial-progress {
+				$circle-size: $ls-user-prediction-stats-chart-size;
+				$circle-background: $ls-user-prediction-stats-bar-color;
+				$circle-color: $ls-user-prediction-stats-progress-color;
+				$inset-size: $ls-user-prediction-stats-chart-size - 20px;
+				$transition-length: 1s;
+
+				margin-top: 18px;
+				width:  $circle-size;
+				height: $circle-size;
+				background-color: $circle-background;
+				border-radius: 50%;
+				box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.14);
+
+				.circle {
+
+					.mask, .fill, .shadow {
+						width:    $circle-size;
+						height:   $circle-size;
+						position: absolute;
+						border-radius: 50%;
+					}
+
+					.mask, .fill {
+						-webkit-backface-visibility: hidden;
+						transition: -webkit-transform $transition-length;
+						transition: -ms-transform $transition-length;
+						transition: transform $transition-length;
+						border-radius: 50%;
+					}
+
+					.mask {
+						clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+
+						.fill {
+							clip: rect(0px, $circle-size/2, $circle-size, 0px);
+							background-color: $circle-color;
+						}
+					}
+				}
+
+				.inset {
+					width:       $inset-size;
+					height:      $inset-size;
+					position:    absolute;
+					margin-left: ($circle-size - $inset-size)/2;
+					margin-top:  ($circle-size - $inset-size)/2;
+					border-radius: 50%;
+
+					background: url("#{$ls-img-path}/green-field-horizontal.png");
+					background-position: 2px 0;
+
+			    @media #{$ls-retina} {
+			      background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+			      background-size: 49px auto;
+			      background-position: -10px 0;
+			    }
+
+					.percentage {
+						width:       100%;
+						position:    absolute;
+						line-height: $inset-size;
+						text-align:  center;
+						color:       $ls-color-white;
+						font-weight: $ls-font-weight-thin;
+						font-size:   $ls-user-prediction-stats-value-size;
+					}
+				}
+
+				$i: 0;
+				$increment: 180deg / 100;
+
+				@while $i <= 100 {
+
+					&[data-progress="#{$i}"] {
+
+						.circle {
+							.mask.full, .fill {
+								-webkit-transform: rotate($increment * $i);
+								-ms-transform: rotate($increment * $i);
+								transform: rotate($increment * $i);
+							}
+
+							.fill.fix {
+								-webkit-transform: rotate($increment * $i * 2);
+								-ms-transform: rotate($increment * $i * 2);
+								transform: rotate($increment * $i * 2);
+							}
+						}
+
+						.inset .percentage:before {
+							content: "#{$i}%"
+						}
+					}
+
+					$i: $i + 1;
+				}
+			}
+    }
+
+    .scores{
+    	flex: 0 0 100px;
+			
+			.score{
+				text-align: center;
+				color: $ls-color-white;
+				border-bottom: 1px solid #84bc43;
+				padding: 8px;
+
+				&:last-child{
+					border-bottom-width: 0;
+				}
+
+				.title{
+					display: block;
+					font-size: $ls-font-size-small;
+					font-weight: $ls-font-weight-light;
+				}
+
+				.value{
+					display: block;
+					font-size: ls-font-size(13px,'large');
+					line-height: ls-font-size(13px,'large');
+					font-weight: $ls-font-weight-light;
+				}
+			}
+    }
+	}
+}

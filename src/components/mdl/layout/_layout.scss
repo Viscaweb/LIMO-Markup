@@ -1,9 +1,60 @@
+* { 
+	-webkit-tap-highlight-color: transparent; 
+}
+
+// Custom strcutural changes (LIMO-260) 
+body {
+	min-height: 100%;
+	-webkit-overflow-scrolling: touch;
+}
+
+.mdl-layout {
+	height: 100%;
+	display: block;
+	-webkit-overflow-scrolling: auto;
+}
+
+.mdl-layout__container {
+	position: static;
+}
+
+.mdl-layout__content {
+	display: block;
+}
+
+.mdl-layout__obfuscator {
+	position: fixed;
+}
+
+.mdl-layout__drawer {
+	position: fixed;
+	-webkit-overflow-scrolling: touch;
+}
+
+.mdl-layout__drawer.is-visible ~ .mdl-layout__content.mdl-layout__content {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	-webkit-overflow-scrolling: auto;
+}
+// End of LIMO-260
+
+
 .mdl-layout__drawer-button {
   color: unquote("rgb(#{$color-primary})");
 }
 
 .mdl-layout__header {
 	box-shadow: none;
+	position: relative;
+
+	&--no-padding{
+
+		.mdl-layout__header-row{
+			padding-right: 0;
+		}
+	}
 
 	//Aligment fix in header
 	.mdl-switch{
@@ -40,13 +91,16 @@
 	//General link elements
 	.mdl-navigation__link{
 		color: lighten($ls-text-color, 30%);
+		text-align: center;
+		min-width: 30px;
+		opacity: 1;
 
-		&.ls-icon{
+		&.ls-toolbar-icon{
 			padding-left: 5px;
 			padding-right: 5px;
 			font-size: 19px;
 			
-			&.ls-active{
+			&.is-active{
 
 				.icon-star{
 					color: $ls-star-active;
@@ -57,19 +111,32 @@
 				}
 			}
 		}
+
+		&:active{
+			background-color: darken($ls-color-white, 10%);
+		}
 	}
 }
 
 .mdl-layout__header-row{
 	border-bottom: $ls-top-header-border-bottom;
+
+	.mdl-layout--no-drawer-button &{
+	  padding: 0 $layout-header-desktop-indent;
+
+    @media screen and (max-width: $layout-screen-size-threshold) {
+      padding: 0 $layout-header-mobile-indent;
+    }
+	}
 }
 
 .mdl-layout-brand-logo{
 	height: $layout-header-desktop-row-height;
-	line-height: $layout-header-desktop-row-height;
+	line-height: $layout-header-desktop-row-height - 5px;
 	position: relative;
 	padding-right: 15px;
 	margin-right: 15px;
+	cursor: pointer;
 
 	img{
 		width: $ls-brand-logo-size;	
@@ -90,23 +157,41 @@
 
 	@media screen and (max-width: $layout-screen-size-threshold) {
 		height: $layout-header-mobile-row-height;
-		line-height: $layout-header-mobile-row-height;
+		line-height: $layout-header-mobile-row-height - 2px;
 		padding-right: 10px;
 		margin-right: 10px;
+  }
+
+  &--no-drawer{
+		padding-right: 0;
+
+  	&:after{
+  		display: none;
+  	}
   }
 }
 
 .mdl-layout__drawer-button{
+	padding-right: 6px;
 
-	
 	.mdl-layout__header & {
 		margin-right: 0;
-
+	
 	  @media screen and (max-width: $layout-screen-size-threshold) {
 	  	margin: 0;
 	  	height: $layout-header-mobile-row-height - 1px;
 			line-height: $layout-header-mobile-row-height + 6;
+			padding-right: 0;
 	  }
+	}
+
+	// When it has auto/hide fixed header
+	.mdl-layout--fixed-header.mdl-layout--fixed-drawer .mdl-layout__header & {
+		position: fixed;
+
+		@media screen and (max-width: $layout-screen-size-threshold) {
+			position: absolute;
+		}
 	}
 }
 
@@ -114,6 +199,7 @@
 	font-size: 16px;
 	flex-shrink: 1;
 	overflow: hidden;
+	line-height: inherit;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
@@ -128,6 +214,7 @@
 		padding: 15px;
 		text-align: center;
 		flex-shrink: 0;
+		background: $ls-color-white;
 	}
 
 	& .mdl-navigation {
@@ -139,6 +226,7 @@
 			padding: $ls-drawer-link-padding;
 			font-weight: 300;
 			color: $ls-drawer-link-color;
+			opacity: 1;
 
 		  &:hover {
 	      background-color: darken($ls-color-white, 4%);
@@ -158,6 +246,77 @@
 			text-align: center;
 			display: block;
 			padding: 20px;
+		}
+
+	  .mdl-navigation__app-link {
+		  background-color: darken($ls-color-white, 3.5%);
+		  display: block;
+
+		  .mdl-navigation__link {
+				display: flex;
+				align-items: center;
+				
+				&:first-child {
+				  padding-top: 20px;
+				}
+
+				&:last-child {
+				  padding-bottom: 20px;
+				}
+
+				.app-link {
+				  &__logo { flex: 0 0 80px;  padding-right: 10px;  }
+				  &__tagline {  font-weight: 400; line-height: 20px}
+				  &__store-btn {
+						text-align: center;
+						width: 100%;
+						border-top: 1px solid darken($ls-color-white, 10%);
+						padding-top: 20px;
+				  }
+				}
+		  }
+		}
+
+		.mdl-navigation__timezone-selector {
+			position: relative;
+
+			&:after {
+				position: absolute;
+				display: block;
+				right: 14px;
+				bottom: 11px;
+				content: "\e62f";
+				font-family: $ls-icons-font;
+				font-size: 18px;
+				color: $ls-drawer-show-all-color;
+			}
+
+			&-label {
+				display: block;
+				padding: 10px 16px 0;
+			}
+
+			select {
+				@include typo-preferred-font(true);
+				font-size: $ls-drawer-link-font-size;
+				padding: $ls-drawer-link-padding;
+				font-weight: 300;
+				color: $ls-drawer-link-color;
+				position: relative;
+				z-index: 2;
+				appearance: none;
+				outline: none;
+				width: 100%;
+				height: $ls-timezone-selector-height;
+				line-height: 1;
+				border: 0;
+				background: transparent;
+				text-align-last:left;
+
+				&:active {
+					background-color: rgba(0,0,0,0.06);
+				}
+			}
 		}
 
 		//Social links
@@ -209,6 +368,21 @@
 					margin-right: 10px;
 				}
 			}
+
+			& .mdl-navigation__show-all{
+				
+				a{
+					color: $ls-drawer-show-all-color;
+				}
+
+				span{
+					margin-left: 1px;
+					vertical-align: middle;
+					margin-right: 10px;
+					font-size: $ls-drawer-link-icon-size - 2px;
+					color: $ls-drawer-show-all-color;
+				}
+			}
 		}
 
 		& .mdl-navigation__open{
@@ -229,7 +403,7 @@
 	    line-height: 26px;
 	    text-transform: uppercase;
 
-	    .icon{
+	    a.icon{
 	    	color: darken($ls-color-white, 30%);
 	    	font-size: 15px;
 	    	float: right;
@@ -237,20 +411,80 @@
 	    	text-decoration: none;
 	    }
 		}
+
+		& .mdl-sub-navigation__category{
+	    font-size: $ls-drawer-link-font-size;
+			padding: $ls-drawer-link-padding;
+			font-weight: $ls-font-weight-light;
+			color: $ls-drawer-link-color;
+			position: relative;
+
+	    .cat-icon{
+				vertical-align: middle;
+				font-size: $ls-drawer-link-icon-size;
+				line-height: $ls-drawer-link-icon-size - 1px;
+				margin-right: 8px;
+				color: $ls-green-active-color;
+	    }
+
+	    a.icon{
+	    	color: darken($ls-color-white, 30%);
+	    	text-decoration: none;
+	    	position: absolute;
+		    width: 45px;
+		    text-align: center;
+		    line-height: 44px;
+		    right: 0;
+		    top: 0;
+
+	    	span{
+	    		font-size: 20px;
+	    		vertical-align: middle;
+	    	}
+	    }
+		}
+	}
+
+	.drawer__brand-logo {
+		max-width:80%;
 	}
 }
 
 //Tabs
 .mdl-layout__tab-bar-container {
 	border-bottom: $ls-top-header-border-bottom;
+
+	// This fixes the little jump while page is still loading see LIMO-263
+	.mdl-layout__tab-bar {
+		padding-bottom: $layout-tab-bar-height * 2;
+	}
+}
+
+.mdl-layout__tab-bar {
+	padding-left: 0;
+	width: 100%;
+}
+
+//Directional buttons are not working
+.mdl-layout__tab-bar-button{
+	display: none;
 }
 
 .mdl-layout__tab {
 	text-transform: none;
 	font-weight: $ls-tab-font-weight;
 	font-size: 13px;
+	-webkit-tap-highlight-color: rgba(0,0,0,.1);
 
 	.mdl-layout.is-upgraded &.is-active {
   	color: $ls-tab-text-color-active;
 	}
+}
+
+//Flexbox content
+.mdl-layout__content--flex{
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+					flex-direction: column;
 }

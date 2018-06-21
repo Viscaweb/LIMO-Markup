@@ -1,0 +1,131 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set ls_header_brand_logo = true %}
+{% set page_title = 'Login/Register dialog' %}
+
+{% set main_content %}
+  <div class="mdl-grid">
+    <div class="mdl-cell mdl-cell--12-col">
+
+      <button data-toggle="mdl-dialog" data-target="#login-register-dialog" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+        Login
+      </button>
+
+      <button data-toggle="mdl-dialog" data-target="#register-confirmation-dialog" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+        Register Confirmation
+      </button>
+
+      <button data-toggle="mdl-dialog" data-target="#forgot-password-dialog" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+        Forgot Password
+      </button>
+
+      <button data-toggle="mdl-dialog" data-target="#forgot-password-confirmation-dialog" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect">
+        Forgot Password Confirmation
+      </button>
+
+    </div>
+  </div>
+{% endset %}
+
+{% block footer_scripts %}
+
+<div class="mdl-dialog mdl-dialog--no-padding" id="login-register-dialog">
+	<div class="mdl-dialog__content">
+		<div class="mdl-tabs mdl-tabs--fixed mdl-js-tabs mdl-js-ripple-effect">			
+			<div class="mdl-tabs__tab-bar">
+			  <a href="#scroll-tab-1" class="mdl-tabs__tab is-active">Login</a>
+			  <a href="#scroll-tab-2" class="mdl-tabs__tab">Register</a>
+			</div>
+			<section class="mdl-tabs__panel is-active" id="scroll-tab-1">
+				{% include 'blocks/login/login.html.twig' with { 'hide_login_register_buttons': true } %}
+			</section>
+			<section class="mdl-tabs__panel" id="scroll-tab-2">
+				{% include 'blocks/login/register.html.twig' with { 'hide_login_register_buttons': true } %}
+			</section>
+		</div>
+		<div class="mdl-dialog__footer">
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				CLOSE
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				LOGIN
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="mdl-dialog" id="register-confirmation-dialog">
+	<div class="mdl-dialog__content">
+		<div class="mdl-dialog__body">
+			<div class="ls-message-widget">
+				<span class="ls-message-widget__icon icon-email"></span>
+				<span class="ls-message-widget__title">Finalise your registration on WhatsTheScore.com</span>
+				<span class="ls-message-widget__description">We have sent you an <b>email with a link to validate your account</b>.</span>
+				<span class="ls-message-widget__description">If you cannot find that email in your inbox after a few minutes. please check your 'junk/spam' folders.</span>
+			</div>
+		</div>
+		<div class="mdl-dialog__footer">
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				CLOSE
+			</button>
+		</div>
+	</div>
+</div>
+
+<div class="mdl-dialog" id="forgot-password-dialog">
+	<div class="mdl-dialog__content">
+		<div class="mdl-dialog__body">
+			{% include 'blocks/login/forgot-password.html.twig' %}
+		</div>
+		<div class="mdl-dialog__footer">
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">BACK</button>
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">SEND</button>
+		</div>
+	</div>
+</div>
+
+<div class="mdl-dialog" id="forgot-password-confirmation-dialog">
+	<div class="mdl-dialog__content">
+		<div class="mdl-dialog__body">
+			<div class="ls-message-widget">
+				<span class="ls-message-widget__icon icon-email"></span>
+				<span class="ls-message-widget__title">Your password has been successfully reset</span>
+				<span class="ls-message-widget__description">We have sent you an email with a link to reset your password. If you cannot find that email in your inbox after a few minutes, please check your 'junk/spam' folders.</span>
+			</div>
+		</div>
+		<div class="mdl-dialog__footer">
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				CLOSE
+			</button>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	
+	/*mdl-dialog*/
+	//This code should be on a js component
+	$('[data-toggle="mdl-dialog"]').click(function( e ){
+		var target = $(this).data("target");
+		$(target).addClass("mdl-dialog--show");
+
+		e.stopPropagation();
+	});
+
+	//Dialog close button
+	$(".mdl-dialog-close").click(function( e ){
+		var dialog = $(this).parents(".mdl-dialog");
+		dialog.removeClass("mdl-dialog--show");
+	});
+
+	//Hide dialog when click outside
+	$(document).on("click",function( e ){
+		if ( !$(e.target).closest(".mdl-dialog__content").length ) {
+			$(".mdl-dialog").removeClass('mdl-dialog--show');
+		}
+	});
+
+</script>
+{% endblock %}

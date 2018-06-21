@@ -1,0 +1,24 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'Add to Homescreen' %}
+{% set ls_header_brand_logo = true %}
+
+{# Main content #}
+{% set main_content %}
+{% endset %}
+
+{# Scripts init #}
+{% block footer_scripts %}
+
+{# ATH #}
+<script type="text/javascript">
+addToHomescreen({
+    startDelay: 0,
+    lifespan: 0,
+    message: '<b>Add to the home screen</b><br> Tap <span class="ath-action-icon">icon</span> and then Add to Home Screen'
+});
+</script>
+
+{% endblock %}

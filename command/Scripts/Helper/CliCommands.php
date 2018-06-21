@@ -7,13 +7,16 @@ namespace Scripts\Helper;
 class CliCommands
 {
     const COMMAND_INFINITE_LOOP = "while true\ndo\n%s\ndone";
-    const COMMAND_FSWATCH = 'fswatch-run %s %s %s -i=%s';
+    const COMMAND_FSWATCH = 'fswatch-run %s %s %s';
     const COMMAND_INOTIFY = 'inotifywait -qq -r -e modify -e move -e create -e delete %s && %s';
     const COMMAND_RUN_TASK = 'cd %s && php application.php %s %s %s';
     const COMMAND_MDL_GULP_TASK = 'cd %s && gulp %s';
     const COMMAND_COMMON = '%s %s';
 
     const ARG_AS_BG = '> /dev/null 2>&1 &';
+    const ARG_ONLY_ERRORS = '2>&1 >/dev/null';
+
+    const DISPLAY_COMMANDS = false;
 
     /**
      * @param $command
@@ -22,6 +25,11 @@ class CliCommands
      */
     static public function run($command)
     {
+        if (self::DISPLAY_COMMANDS) {
+            echo "$command\n";
+            flush();
+        }
+
         return shell_exec($command);
     }
 
@@ -117,17 +125,26 @@ class CliCommands
     }
 
     /**
-     * @param string $taskName Task name
+     * @param string    $taskName Task name
+     * @param bool|true $throwErrors
      *
      * @return string
      */
-    static public function runTaskMdlGulp($taskName)
-    {
+    static public function runTaskMdlGulp(
+        $taskName,
+        $throwErrors = false
+    ) {
         $mdlFolder = realpath(
             __DIR__.'/../../../external/material-design-lite'
         );
+
+        $commandTemplate = self::COMMAND_MDL_GULP_TASK;
+        if ($throwErrors) {
+            $commandTemplate .= ' '.self::ARG_ONLY_ERRORS;
+        }
+
         $command = sprintf(
-            self::COMMAND_MDL_GULP_TASK,
+            $commandTemplate,
             escapeshellarg($mdlFolder),
             $taskName
         );

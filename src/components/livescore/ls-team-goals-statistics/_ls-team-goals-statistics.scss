@@ -1,0 +1,181 @@
+.ls-team-goals-statistics {
+  background-color: $ls-color-white;
+
+  .goals-general{
+    display: flex;
+    align-items: stretch;
+    padding: 25px 20px;
+
+    .goals{
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 100%;
+      text-align: center;
+      border-right: 1px solid #e8e8e8;
+
+      .icon{ 
+        text-align: center;
+
+        > span{
+          font-size: ls-font-size(21px,'large');
+        }
+      }
+
+      .name{
+        font-weight: $ls-font-weight-light;
+        font-size: ls-font-size(1px);
+      }
+
+      .value{
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: $ls-font-weight-thin;
+        font-size: ls-font-size(40px,'large');
+        line-height: ls-font-size(40px,'large');
+      }
+
+      &--scored{
+
+        .icon{
+
+          > span{
+            color: $ls-team-goals-stats-scored-color;
+          }
+        }
+
+        .name, .value{
+          color: $ls-team-goals-stats-scored-color;
+        }
+      }
+
+      &--conceded{
+
+        .icon{
+
+          > span{
+            color: $ls-team-goals-stats-conceded-color;
+          }
+        }
+
+        .name, .value{
+          color: $ls-team-goals-stats-conceded-color;
+        }
+      }
+
+      &:last-child{
+        border-right: 0;
+      }
+    }
+  }
+}
+
+.ls-list.ls-list--goals-statistics{
+  
+  .row{
+    padding: 0;
+
+    .cell{
+      border-right: $ls-list-border;
+      padding: 11px 0;
+
+      &__goals{
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+        padding-right: 12px;
+        overflow: hidden;
+
+        .bar{
+          flex: 1 100%;
+          display: flex;
+          align-items: center;
+
+          > div{
+            position: relative;
+            height: $ls-team-goals-stats-bar-height;
+
+            &:before{
+              background-color: inherit;
+              content: "";
+              display: block;
+              width: 2px;
+              height: $ls-team-goals-stats-bar-height * 2;
+              position: relative;
+              top: -4px;
+            }
+          }
+        }
+
+        .value{
+          flex: 0 auto;
+          font-weight: $ls-font-weight-medium;
+        }
+
+        &--conceded{
+
+          .bar{
+            justify-content: flex-end;
+
+            > div{
+              background-color: $ls-team-goals-stats-conceded-color;
+            }
+          }
+
+          .value{
+            margin-left: 20px;
+          }
+        }
+
+        &--scored{
+
+          .bar{
+            
+            > div{
+              background-color: $ls-team-goals-stats-scored-color;
+
+              &:before{
+                float: right;
+              }
+            }
+          }
+
+          .value{
+            margin-right: 20px;
+          }
+        }
+
+        .bar{
+          
+          > div[style="width: 0%;"]{
+            background-color: $ls-team-goals-stats-nodata-color;
+          }
+        }
+      }
+
+      &__minute{          
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 70px;
+        text-align: center;
+        background-color: #fafafa;
+      }
+
+      &__half-time{
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    &--head{
+
+      .cell{
+        padding-top: 7px;
+        padding-bottom: 7px;
+        background-color: $ls-color-white;
+        font-weight: $ls-font-weight-light;
+        color: #9b9b9b;
+        border-color: $ls-color-white;
+      }
+    }
+  }
+}

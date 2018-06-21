@@ -1,0 +1,15 @@
+{% extends "layouts/default-layout.twig" %}
+
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'News' %}
+{% set ls_header_switch = false %}
+{% set ls_header_brand_logo = true %}
+{% set divider_title_h = 'Sports News' %}
+{% set divider_title_h2 = 'Sports News H2' %}
+
+{% set main_content %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/news/news_listing.twig' %}
+{% endset %}

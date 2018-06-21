@@ -1,0 +1,359 @@
+.ls-standing-table-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  > ul {
+    flex: 1 0 100%;
+  }
+}
+
+.ls-standing-table {
+  font-size: 12px;
+  overflow: hidden;
+
+  .row {
+
+    &--show-all {
+      background-color: #fcfcfc!important;
+
+      .cell__button {
+        padding: 12px !important;
+        text-align: center;
+      }
+    }
+
+    .cell {
+
+      &__stat {
+        display: flex;
+        justify-content: center;
+        flex: 0 0 20px;
+        font-size: 12px;
+        font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", sans-serif;
+
+        &--down {
+          color: $ls-cell-stat-down;
+        }
+
+        &--up {
+          color: $ls-cell-stat-up;
+        }
+
+        /* to remove when we stop displaying the = sign */
+        .icon-equal {
+          color: #cecece;
+        }
+      }
+
+    }
+
+    &.live {
+
+      .cell {
+
+        &__team--title a {
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__column {
+
+    .row {
+      padding: 0;
+
+      &--selected {
+
+        .cell {
+          background: $ls-row-selected-color;
+        }
+      }
+
+      .cell {
+        border-right: $ls-dialog-border;
+        text-align: center;
+        align-items: center;
+      }
+    }
+
+    .row--head {
+      padding: 0;
+
+      .cell {
+        color: lighten($ls-text-color, 20%);
+      }
+    }
+  }
+
+  /* ---- Left Side ----- */
+
+  &--left {
+    -webkit-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+    box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+    
+    .ls-standing-table-container & {
+      flex: 1 0 50%;
+    }
+
+    .row {
+      box-sizing: border-box;
+      border: $ls-dialog-border;
+      border-bottom: 0;
+
+      a {
+        color: #0053A8;
+        text-decoration: none;
+        font-weight: 300;
+      }
+
+      &:last-child {
+        border-bottom: $ls-dialog-border;
+      }
+
+      .cell {
+        padding: 5px 0;
+
+        &__rank {
+          flex: 0 0 25px;
+          display: flex;
+          justify-content: center;
+
+          &--green {
+            background-color: $ls-rank-green-color;
+          }
+
+          &--clear-green {
+            background-color: $ls-rank-clear-green-color;
+          }
+
+          &--blue {
+            background-color: $ls-rank-blue-color;
+          }
+
+          &--clear-blue {
+            background-color: $ls-rank-clear-blue-color;
+          }
+
+          &--grey {
+            background-color: $ls-rank-grey-color;
+          }
+
+          &--orange {
+            background-color: $ls-rank-orange-color;
+          }
+
+          &--clear-orange {
+            background-color: $ls-rank-clear-orange-color;
+          }
+
+          &--red {
+            background-color: $ls-rank-red-color;
+          }
+
+          &--clear-red {
+            background-color: $ls-rank-clear-red-color;
+          }
+
+          &--large {
+            flex: 0 0 50px;
+          }
+        }
+
+        &__team {
+          display: flex;
+          justify-content: flex-start;
+          padding-right: 10px;
+
+          &--flag {
+            padding: 0 5px;
+            flex: 0 0 22px;
+            display: flex;
+            justify-content: center;
+
+            > img {
+              max-height: 22px;
+              max-width: 22px;
+            }
+          }
+
+          &--title {
+            position: relative;
+            padding: 0 5px 0 0;
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            font-weight: 300;
+            line-height: 22px;
+          }
+        }
+
+        &__total-points {
+          position: relative;
+          flex: 0 0 32px;
+          display: flex;
+          justify-content: center;
+          font-weight: 600;
+        }
+
+        &__point-detail {
+          position: absolute;
+          right: 0;
+          bottom: -5px;
+          font-size: 9px;
+          color: rgb(255, 0, 0);
+          margin: 3px;
+        }
+      }
+
+      &.live {
+
+        .cell {
+
+          &__team:before {
+            content: '';
+            position: absolute;
+            right: 0;
+            display: block;
+            float: right;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $ls-color-live;
+            margin-right: 4px;
+            @extend .blinking;
+          }
+        }
+      }
+    }
+
+    .row--head {
+
+      .cell {
+
+        &__team {
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+
+  /* ---- Right Side ----- */
+
+  &--right {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow-x: auto;
+
+    .ls-standing-table-container & {
+      flex: 0 1 50%;
+    }
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .row {
+      margin: 0;
+      display: flex;
+
+      .cell {
+        padding: 2px 0;
+        border-bottom: $ls-dialog-border;
+        min-width: 32px;
+
+        &__point {
+          padding: 4px 0;
+        }
+      }
+
+      &--show-all {
+
+        .cell__button {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+.ls-legend {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
+  background: darken($ls-color-white, 5%);
+  padding: 15px;
+
+  &__title {
+    color: lighten($ls-text-color, 20%);
+    margin-bottom: 12px;
+  }
+
+  &__content {
+
+    margin: 0;
+    padding: 0;
+
+    .row {
+      display: flex;
+      margin-bottom: 4px;
+    }
+
+    .cell {
+
+      &__rank {
+        border: $ls-dialog-border;
+        width: 24px;
+        height: 17px;
+        margin-right: 12px;
+
+        &--green {
+          background-color: $ls-rank-green-color;
+        }
+        &--clear-green {
+          background-color: $ls-rank-clear-green-color;
+        }
+        &--blue {
+          background-color: $ls-rank-blue-color;
+        }
+        &--clear-blue {
+          background-color: $ls-rank-clear-blue-color;
+        }
+        &--red {
+          background-color: $ls-rank-red-color;
+        }
+        &--clear-red {
+          background-color: $ls-rank-clear-red-color;
+        }
+        &--orange {
+          background-color: $ls-rank-orange-color;
+        }
+        &--clear-orange {
+          background-color: $ls-rank-clear-orange-color;
+        }
+        &--grey {
+          background-color: $ls-rank-grey-color;
+        }
+      }
+    }
+  }
+}
+
+// Dialog
+.mdl-dialog--standings {
+
+  .mdl-dialog__content {
+    width: 100%;
+  }
+}
+
+/* ---- @ media ----- */
+
+@media (min-width: 600px) {
+
+  .ls-standing-table--right .row .cell {
+    flex: 1;
+  }
+}

@@ -1,0 +1,290 @@
+.ls-match-listing-baseball {
+
+  font-size: 12px;
+  overflow: hidden;
+  border-bottom:none ;
+  border-top: 1px solid darken($ls-list-border-color, 11.2%);
+
+  >li:last-child{
+    border-bottom: none !important;
+  }
+
+  /* ---- Left Side ----- */
+
+  &--left {
+    width: 55%;
+    float: left;
+    background: $ls-color-white;
+    -webkit-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+    box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+
+    .row--match {
+      box-sizing: border-box;
+      padding: 0;
+
+      &.event-live {
+
+        .cell {
+
+          &__score {
+            color: $ls-color-live;
+          }
+
+          &__time {
+            color: $ls-color-live;
+
+            &:before {
+              content: '';
+              display: block;
+              float: left;
+              width: 6px;
+              height: 6px;
+              border-radius: 50%;
+              background: $ls-color-live;
+              margin-right: 4px;
+              @extend .blinking;
+            }
+          }
+        }
+
+        &.paused {
+          .match-list {
+
+            &__time {
+
+              &:before {
+                background: darken($ls-color-white, 30%);
+                @extend .animation-reset;
+              }
+            }
+          }
+        }
+      }
+
+      &.event-won {
+        background: $ls-color-event-won-bg;
+      }
+
+      &.event-lost {
+        background: $ls-color-event-lost-bg;
+      }
+
+      &.event-draw {
+        background: $ls-color-event-draw-bg;
+      }
+
+      .cell {
+        border-right: $ls-list-border;
+        padding: 0;
+
+        &__time {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &__score {
+          flex: 0 0 30px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &__opposition {
+          display: flex;
+          flex-flow: column;
+
+          > .row {
+            display: flex;
+          }
+
+          &__title {
+            flex:1;
+            position: relative;
+            padding: 5px 5px 5px 5px;
+          }
+
+          span {
+            display: block;
+            overflow-x: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+          }
+
+        }
+
+        .win {
+          font-weight: 500;
+        }
+      }
+    }
+
+    .row--empty {
+      width: auto;
+      background: $ls-color-white;
+      height: 16px;
+      padding: 0;
+      justify-content: flex-end;
+      -webkit-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+      -moz-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+      box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
+
+      .cell {
+        padding: 0;
+        background: #FAFAFA;
+        height: 16px;
+        flex:0 0 30px;
+      }
+    }
+  }
+
+  /* ---- Right Side ----- */
+
+  &--right {
+
+    padding: 0;
+    margin: 0;
+    width: 45%;
+    float: left;
+    white-space: nowrap;
+    overflow-x: auto;
+    background: #FCFCFC;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .row {
+      padding: 0;
+      margin: 0;
+      display: flex;
+
+      .cell {
+
+        &__points {
+
+        }
+
+        &__point {
+          border-right: $ls-list-border;
+          height: 27px;
+          min-width: 24px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
+
+    .row--head {
+      border: $ls-list-border;
+      border-bottom:none ;
+      border-left: none;
+
+      .cell {
+        background: #FAFAFA;
+        border-right: $ls-list-border;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 16px;
+        min-width: 24px;
+        color: lighten($ls-text-color, 20%);
+      }
+    }
+  }
+
+/* ---- Border ----- */
+
+  /*Border */
+
+  .row--head {
+    border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+    border-top: none;
+  }
+  .row--empty {
+    border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+    border-right: 1px solid darken($ls-list-border-color, 11.2%);
+    border-top: none;
+
+    .cell {
+      border-left: 1px solid darken($ls-list-border-color, 11.2%);
+    }
+  }
+
+  .row--match {
+    border-top: none;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .cell {
+      border-right: $ls-list-border;
+    }
+
+    .cell__time {
+      border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+
+    }
+
+    .cell__score {
+      border-right: 1px solid darken($ls-list-border-color, 11.2%);
+    }
+
+    .cell__opposition > .row{
+      border-bottom: $ls-list-border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    .cell__opposition {
+      border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+      border-right: none;
+    }
+    .cell__opposition__title {
+      border-right: 1px solid darken($ls-list-border-color, 11.2%);
+    }
+
+    .cell__points > .row {
+      border-bottom: $ls-list-border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    .cell__points {
+      border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+      border-right: none;
+    }
+  }
+}
+
+
+/* ---- @ media ----- */
+
+@media (max-width: 320px) {
+
+  .ls-match-listing-baseball--left {
+    width: 70%;
+  }
+  .ls-match-listing-baseball--right {
+    width: 30%;
+  }
+}
+
+@media (min-width: 600px) {
+
+  .ls-match-listing-baseball--left {
+    width: 40%;
+  }
+  .ls-match-listing-baseball--right {
+    width: 60%;
+  }
+
+  .ls-match-listing-baseball--right .row .cell {
+    flex: 1;
+  }
+}

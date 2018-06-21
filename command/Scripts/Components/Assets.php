@@ -52,6 +52,10 @@ class Assets implements ScriptInterface
         );
         $folderMdlAssets = $this->getMdlFolder($basePath);
 
+        if (!is_dir($folderMdlAssets)){
+            CliCommands::run('mkdir -p '.$folderMdlAssets);
+        }
+
         $queryTemplate = 'cp -R %s %s';
         $query = sprintf(
             $queryTemplate,

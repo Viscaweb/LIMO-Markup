@@ -1,0 +1,66 @@
+.ls-avatar-selector{
+	padding-top: 15px;
+
+	> ul{
+		padding: 0;
+		margin: 0;
+
+		li{
+			display: inline-block;
+			width: $ls-avatar-selector-item-width;
+			text-align: center;
+			margin: 0 5px 22px;
+
+			a{
+				display: block;
+				outline: none;
+				text-decoration: none;
+			}
+			
+			.avatar{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin: 0 auto;
+				border-radius: 50%;
+				overflow: hidden;
+				width: $ls-avatar-selector-img-size;
+				height: $ls-avatar-selector-img-size;
+				background-color: $ls-avatar-selector-img-bg;
+				box-sizing: border-box;
+				position: relative;
+				z-index: 1;
+
+				img{
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+
+			.name{
+				display: block;
+				overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+				color: $ls-text-color;
+				font-weight: $ls-font-weight-light;
+				font-size: ls-font-size(2px,'small');
+			}
+
+			&.selected{
+
+				.avatar{
+					border: 3px solid $ls-green-active-color;
+				}
+			}
+		}
+	}
+}
+
+//Modal Dialog
+.mdl-dialog--avatar-selector{
+	
+	.mdl-dialog__content{
+		max-width: $ls-avatar-selector-modal-width;
+	}
+}

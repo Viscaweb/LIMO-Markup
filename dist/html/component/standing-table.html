@@ -1,0 +1,2721 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+		<title>The project: LIMO</title>
+
+		<meta name="theme-color" content="#263238">
+
+		<link rel="shortcut icon" href="../../assets/favicon.png" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-512-x-512.png" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-29-x-29.png" sizes="29x29" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-40-x-40.png" sizes="40x40" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-60-x-60.png" sizes="60x60" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-76-x-76.png" sizes="76x76" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-167-x-167.png" sizes="167x167" />
+
+		<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+		<!--
+		<link rel="canonical" href="http://www.example.com/">
+		-->
+
+		<!-- Page styles -->
+		<link rel="stylesheet" href="../../assets/prism-default.css">
+
+		<!-- ATH -->
+    <link rel="stylesheet" type="text/css" href="../../assets/js/ath/style/addtohomescreen.css">
+
+		<!-- Fonts -->
+		<link href='//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href="../../assets/fonts/lsicons/style.css" type="text/css" rel="stylesheet" />
+
+		<link href="../../assets/components.css" rel="stylesheet">
+		<script src="../../assets/swfobject.js"></script>
+		<script src="../../assets/snippets.js"></script>
+		<script src="../../assets/components.js"></script>
+		<link rel="stylesheet" href="../../components/demos.css">
+
+		<script src="../../assets/index.js" async></script>
+
+		<!-- Material Design Lite -->
+		<script src="../../js/material.min.js"></script>
+		<!-- Add Copy-to-CodePen buttons to code blocks -->
+		<script src="../../assets/codepen.js"></script>
+		<!-- Enable Prism syntax highlighting -->
+		<script src="../../assets/prism.js"></script>
+		<script src="../../assets/prism-markup.min.js"></script>
+		<script src="../../assets/prism-javascript.min.js"></script>
+		<script src="../../assets/prism-css.min.js"></script>
+		<script src="../../assets/prism-bash.min.js"></script>
+		<script src="../../assets/main.js"></script>
+
+		<!-- Material Calendar -->
+		<script src="../../assets/js/material-datepicker/libs/moment-with-locales.min.js"></script>
+		<script src="../../assets/js/material-datepicker/libs/jquery-2.1.3.min.js"></script>
+		<script src="../../assets/js/material-datepicker/libs/knockout-3.2.0.js"></script>
+
+		<script src="../../assets/js/material-datepicker/material-datepicker/js/material.datepicker.js"></script>
+		<link rel="stylesheet" href="../../assets/js/material-datepicker/material-datepicker/css/material.datepicker.css">
+
+		<!-- Google Charts -->
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+		<!-- jQuery UI -->
+		<script src="../../assets/js/jquery-ui/jquery-ui.min.js"></script>
+
+		<!-- jQuery UI - Touch Punch -->
+		<script src="../../assets/js/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+		<!-- ATH -->
+		<script type="text/javascript" src="../../assets/js/ath/src/addtohomescreen.min.js"></script>
+
+		<!-- LS Scripts -->
+		<script src="../../assets/js/app.js"></script>
+   
+		<link href="../../css/material.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../css/assets/main.css" type="text/css" rel="stylesheet" /> 
+		
+								
+		
+		
+
+</head>
+<body class="wf-materialicons-n4-active">
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+
+			  <header class="mdl-layout__header">
+            
+    <div class="mdl-layout__header-row">
+
+                   <div class="mdl-layout-brand-logo"><img src="../../assets/img/ls-app-logo.png" alt="LIMO"></div>
+      
+      <span class="mdl-layout-title">Standing Table</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+
+                
+                
+                  
+                  
+                  
+                
+          
+          
+      </nav>
+    </div>
+
+    
+    
+    
+    
+    
+      
+      
+      
+        					
+				
+  </header>
+
+	          <div class="mdl-layout__drawer">
+  <span class="mdl-layout-title">
+  	<img class="drawer__brand-logo" src="../../assets/img/drawer-logo.png" alt="Logo">
+  </span>
+  <ul class="mdl-navigation">
+    <li><a class="mdl-navigation__link" href=""><span class="icon material-icons">&#xE853;</span>My Profile</a></li>
+    <li class="mdl-navigation__open mdl-navigation__active">
+    	<a class="mdl-navigation__link" href="#"><span class="icon icon-football"></span>Football</a>
+      <ul class="mdl-sub-navigation">
+        <li class="mdl-sub-navigation__category"><span class="cat-icon icon-star"></span><a href="#" class="icon"><span class="material-icons">&#xE8B8;</span></a>My Leagues</li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../../assets/img/premier-league.png" alt="Premier League">Premier League</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../../assets/img/championship.png" alt="Championship">Championship</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../../assets/img/bundesliga.png" alt="Bundesliga">Bundesliga</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../../assets/img/seriea.png" alt="Serie A">Serie A</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../../assets/img/spanish-league.png" alt="Spanish League">Spanish League</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../../assets/img/champions-league.png" alt="Champions League">Champions League</a></li>
+        <li><a class="mdl-navigation__link" href="#"><img src="../../assets/img/league-cup.png" alt="League Cup">League Cup</a></li>
+        <li class="mdl-navigation__show-all"><a class="mdl-navigation__link" href="#"><span class="icon-caret-select"></span>Show All</a></li>
+      </ul>
+    	<ul class="mdl-sub-navigation">
+        <li class="mdl-sub-navigation__category"><span class="cat-icon icon-star"></span><a href="#" class="icon"><span class="material-icons">&#xE8B8;</span></a>My Leagues</li>
+    		<li><a class="mdl-navigation__link" href="#"><img src="../../assets/img/psg.png" alt="Barcelona">Barcelona</a></li>
+    		<li><a class="mdl-navigation__link" href="#"><img src="../../assets/img/manchester.png" alt="PSG">PSG</a></li>
+    		<li><a class="mdl-navigation__link" href="#"><img src="../../assets/img/barcelona.png" alt="Juventus Turin">Juventus Turin</a></li>
+    		<li><a class="mdl-navigation__link" href="#"><img src="../../assets/img/juventus.png" alt="Bayern Munich">Bayern Munich</a></li>
+        <li class="mdl-navigation__show-all"><a class="mdl-navigation__link" href="#"><span class="icon-caret-select"></span>Show All</a></li>
+    	</ul>
+    </li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-tennis"></span>Tennis</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-rugby"></span>Rugby</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-basketball"></span>Basketball</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-volley"></span>Voleyball</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-am-football"></span>American Football</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-baseball"></span>Baseball</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-hockey"></span>Ice Hockey</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-handball"></span>Handball</a></li>
+    <li class="mdl-navigation__app-link">
+      <a class="mdl-navigation__link"  href="">
+        <span class="app-link__logo"><img src="../../assets/img/ls-app-logo-166.png" width="80px" alt="Marcadores for Android"></span>
+        <span class="app-link__tagline">Get the Marcadores.com app now!</span>
+      </a>
+      <a class="mdl-navigation__link" href="#">
+        <span class="app-link__store-btn"><img src="../../assets/img/store-google-play.png" width="120px" alt="Get the app"></span>
+      </a>
+    </li>
+    <li class="mdl-navigation__social">
+      <a class="mdl-navigation__link" href="#"><span class="icon icon-facebook"></span></a>
+      <a class="mdl-navigation__link" href="#"><span class="icon icon-twitter"></span></a>
+      <a class="mdl-navigation__link" href="#"><span class="icon icon-googleplus"></span></a>
+    </li>
+    <li class="mdl-navigation__timezone-selector">
+      <label class="mdl-navigation__timezone-selector-label" for="timezone-selector">Fuseau horaire</label>
+      <select name="" id="timezone-selector">
+        <option value="UTC−12:00">UTC−12:00</option>
+        <option value="UTC−11:00">UTC−11:00</option>
+        <option value="UTC−10:00">UTC−10:00</option>
+        <option value="UTC−09:30">UTC−09:30</option>
+      </select>
+    </li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-help"></span>Help</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-help"></span>Help</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-view_list"></span>Sitemap</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-info"></span>About WhatTheScore</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-verified_user"></span>Conditions and Privacy</a></li>
+    <li><a class="mdl-navigation__link" href=""><span class="icon icon-email"></span>Contact us</a></li>
+  </ul>
+</div>    	
+			<main class="mdl-layout__content">
+						
+				  <div class="page-content">
+								<div class="ls-divider ls-divider--inline">
+	<div class="ls-divider__title"><img class="ls-divider__flag" src="../../assets/img/flag-fr.png" alt="France">Ligue 1</div>
+	<div class="ls-divider__description">- Matchday 26</div>
+</div>
+
+	<div class="mdl-button mdl-button--raised mdl-button--large mdl-button__select mdl-button--block">
+    <select>
+        <option value="0">General</option>
+        <option value="1">Option 2</option>
+        <option value="2">Option 3</option>
+        <option value="3">Option 4</option>
+    </select>
+</div>
+<div class="container ls-standing-table-container">
+
+    <ul class="mdl-list mdl-list-linked ls-list ls-standing-table ls-standing-table__column ls-standing-table--left">
+                <li class="row row--head">
+            <div class="cell cell__rank">
+                #
+            </div>
+            <div class="cell cell__stat">
+                <span class="icon-arrow-up-down"></span>
+            </div>
+            <div class="cell cell__team">
+                Team
+            </div>
+            <div class="cell cell__total-points">
+                Pts
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--green">
+                1
+            </div>
+            <div class="cell cell__stat cell__stat--up">
+                <span>+1</span>
+            </div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/psg.png" alt="PSG">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>PSG</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row live">
+            <div class="cell cell__rank cell__rank--green">
+                2
+            </div>
+            <div class="cell cell__stat">
+            </div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/lyon.png" alt="Lyon">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Lyon</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row row--selected live">
+            <div class="cell cell__rank cell__rank--clear-green">
+                3
+            </div>
+            <div class="cell cell__stat">
+            </div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/monaco.png" alt="Moncao">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Monaco</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--blue">
+                4
+            </div>
+            <div class="cell cell__stat cell__stat--down">
+                <span>-2</span>
+            </div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/marseille.png" alt="Marseille">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Marseille</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--clear-blue">
+                5
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/saint-etienne.png" alt="Saint Etienne">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Saint Etienne</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row live">
+            <div class="cell cell__rank cell__rank--grey">
+                6
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/bordeaux.png" alt="Bordeaux">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Bordeaux</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row live">
+            <div class="cell cell__rank cell__rank--grey">
+                7
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/montpellier.png" alt="Montpellier">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Montpellier</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--grey">
+                8
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/lille.png" alt="Lille">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Lille</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--grey">
+                9
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/rennes.png" alt="Rennes">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Rennes</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--grey">
+                10
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/guingamp.png" alt="Guingamp">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Guingamp</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--grey">
+                11
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/nice.png" alt="Nice">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Nice</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--grey">
+                12
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/bastia.png" alt="Bastia">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Bastia</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--grey">
+                13
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/caen.png" alt="Caen">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Caen</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--grey">
+                14
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/nantes.png" alt="Nantes">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Nantes</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--grey">
+                15
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/reims.png" alt="Reims">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Reims</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--grey">
+                16
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/lorient.png" alt="Lorient">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Lorient</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+                <div id="tt1" class="cell__point-detail"> P
+                    <div class="mdl-tooltip" for="tt1">
+                        -6 point - Federation décision
+                    </div>
+                </div>
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--orange">
+                17
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/toulouse.png" alt="Toulouse">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Toulouse</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--clear-orange">
+                18
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/evian.png" alt="Evian">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Evian</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--red">
+                19
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/metz.png" alt="Metz">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Metz</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__rank cell__rank--clear-red">
+                20
+            </div>
+            <div class="cell cell__stat"></div>
+            <div class="cell cell__team">
+                <div class="cell__team--flag">
+                    <img src="../../assets/img/lens.png" alt="Lens">
+                </div>
+                <div class="cell__team--title">
+                    <a href="">
+                        <span>Lens</span>
+                    </a>
+                </div>
+            </div>
+            <div class="cell cell__total-points">
+                38
+            </div>
+        </li>
+                <li class="row row--show-all">
+            <div class="cell cell__button">
+                <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                    SHOW ALL
+                </button>
+            </div>
+        </li>
+        
+    </ul>
+
+    <ul class="ls-standing-table ls-standing-table__column ls-standing-table--right">
+
+                <li class="row row--head">
+            <div class="cell">
+
+            </div>
+            <div class="cell">
+                P
+            </div>
+            <div class="cell">
+                W
+            </div>
+            <div class="cell">
+                D
+            </div>
+            <div class="cell">
+                L
+            </div>
+            <div class="cell">
+                GF
+            </div>
+            <div class="cell">
+                GA
+            </div>
+            <div class="cell">
+                +/-
+            </div>
+            <div class="cell">
+                M
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row row--selected">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row ">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>
+
+                <li class="row ">
+            <div class="cell cell__point cell__stat cell__stat--up">
+                +1
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+            <div class="cell cell__point">
+                38
+            </div>
+        </li>   
+                            </ul>
+
+   <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches ls-list--clear" id="body-standing-mobile-divider-41171">
+      <li class="row row--divider ls-divider" id="row-divider-mobile-41171">
+         <div id="cell-matches-competition-stage1898" class="cell cell__flag ls-divider__title" colspan="1" data-competition-stage-id="1898"><span>Phase de poule - Groupe A</span></div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-linked ls-list ls-standing-table ls-standing-table__column ls-standing-table--left" id="body-standing-mobile-41171-left">
+      <li class="row row--head" id="row-standing-mobile-header592ef459744c15.76866288">
+         <div id="592ef45974527" class="cell cell__rank">
+            #
+         </div>
+         <div id="592ef4597459c" class="cell cell__team">
+            Equipes
+         </div>
+         <div id="592ef4597460c" class="cell cell__total-points"><span title="Points">Pts</span></div>
+      </li>
+      <li data-team-id="10" class="row" data-id="1800681" id="row-standing-team-10-left">
+         <div id="cell-standing-pos-1" class="cell cell__number cell__rank cell__rank--green">
+            1
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459746965.15441535" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/10.png" alt="Arsenal"></div>
+            <div class="cell__team--title"><a href="/football/angleterre/equipes/arsenal" title="Arsenal"><span>Arsenal</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef45974c404.87348248" class="cell cell__total-points">
+            14
+         </div>
+      </li>
+      <li data-team-id="93" class="row" data-id="1800683" id="row-standing-team-93-left">
+         <div id="cell-standing-pos-2" class="cell cell__number cell__rank cell__rank--green">
+            2
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef45974e869.39869253" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/93.png" alt="PSG"></div>
+            <div class="cell__team--title"><a href="/football/france/equipes/psg" title="PSG"><span>PSG</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef459752f02.97941413" class="cell cell__total-points">
+            12
+         </div>
+      </li>
+      <li data-team-id="18707" class="row" data-id="1800687" id="row-standing-team-18707-left">
+         <div id="cell-standing-pos-3" class="cell cell__number cell__rank cell__rank--blue">
+            3
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef4597555b5.99707984" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/18707.png" alt="Razgrad"></div>
+            <div class="cell__team--title"><a href="/football/bulgarie/equipes/razgrad" title="Razgrad"><span>Razgrad</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef45975a5a8.77524414" class="cell cell__total-points">
+            3
+         </div>
+      </li>
+      <li data-team-id="3369" class="row" data-id="1800685" id="row-standing-team-3369-left">
+         <div id="cell-standing-pos-4" class="cell cell__number cell__rank cell__rank--grey">
+            4
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef45975cfe2.73076189" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/3369.png" alt="Bâle"></div>
+            <div class="cell__team--title"><a href="/football/suisse/equipes/bale" title="Bâle"><span>Bâle</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef459761785.85989206" class="cell cell__total-points">
+            2
+         </div>
+      </li>
+   </ul>
+
+   <ul class="ls-standing-table ls-standing-table__column ls-standing-table--right" id="body-standing-mobile-41171-right">
+      <li class="row row--head" id="row-standing-mobile-header592ef459763a46.99741483">
+         <div id="592ef45976514" class="cell"><span title="Nombre de matchs joués">J</span></div>
+         <div id="592ef45976596" class="cell"><span title="Gagnés">G</span></div>
+         <div id="592ef45976612" class="cell"><span title="Nuls">N</span></div>
+         <div id="592ef4597668c" class="cell"><span title="Perdus">P</span></div>
+         <div id="592ef45976706" class="cell"><span title="Buts inscrits">+</span></div>
+         <div id="592ef4597677e" class="cell"><span title="Buts encaissés">-</span></div>
+         <div id="592ef459767f7" class="cell"><span title="Différence de buts">+/-</span></div>
+      </li>
+      <li data-team-id="10" class="row" data-id="1800681" id="row-standing-team-10-right">
+         <div id="592ef45976883" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef459768fe" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef45976978" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef459769f1" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef45976a6a" class="cell cell__point">
+            18
+         </div>
+         <div id="592ef45976ae4" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45976b5e" class="cell cell__point">
+            12
+         </div>
+      </li>
+      <li data-team-id="93" class="row" data-id="1800683" id="row-standing-team-93-right">
+         <div id="592ef45976bef" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45976c7e" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef45976cf9" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef45976d6f" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef45976de5" class="cell cell__point">
+            13
+         </div>
+         <div id="592ef45976e5c" class="cell cell__point">
+            7
+         </div>
+         <div id="592ef45976ed2" class="cell cell__point">
+            6
+         </div>
+      </li>
+      <li data-team-id="18707" class="row" data-id="1800687" id="row-standing-team-18707-right">
+         <div id="592ef45976f5b" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45976fd2" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef45977048" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef459770bd" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef45977133" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef459771a8" class="cell cell__point">
+            15
+         </div>
+         <div id="592ef4597721e" class="cell cell__point">
+            -9
+         </div>
+      </li>
+      <li data-team-id="3369" class="row" data-id="1800685" id="row-standing-team-3369-right">
+         <div id="592ef459772a1" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45977309" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef45977381" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef459773f8" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef4597746e" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef459774e3" class="cell cell__point">
+            12
+         </div>
+         <div id="592ef45977559" class="cell cell__point">
+            -9
+         </div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches ls-list--clear" id="body-standing-mobile-divider-41195">
+      <li class="row row--divider ls-divider" id="row-divider-mobile-41195">
+         <div id="cell-matches-competition-stage1899" class="cell cell__flag ls-divider__title" colspan="1" data-competition-stage-id="1899"><span>Phase de poule - Groupe B</span></div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-linked ls-list ls-standing-table ls-standing-table__column ls-standing-table--left" id="body-standing-mobile-41195-left">
+      <li class="row row--head" id="row-standing-mobile-header592ef459776862.09174125">
+         <div id="592ef4597770d" class="cell cell__rank">
+            #
+         </div>
+         <div id="592ef45977788" class="cell cell__team">
+            Equipes
+         </div>
+         <div id="592ef459777ff" class="cell cell__total-points"><span title="Points">Pts</span></div>
+      </li>
+      <li data-team-id="112" class="row" data-id="1800693" id="row-standing-team-112-left">
+         <div id="cell-standing-pos-1" class="cell cell__number cell__rank cell__rank--green">
+            1
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459778623.91579398" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/112.png" alt="Naples"></div>
+            <div class="cell__team--title"><a href="/football/italie/equipes/naples" title="Naples"><span>Naples</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef45977ea83.72900609" class="cell cell__total-points">
+            11
+         </div>
+      </li>
+      <li data-team-id="24" class="row" data-id="1800691" id="row-standing-team-24-left">
+         <div id="cell-standing-pos-2" class="cell cell__number cell__rank cell__rank--green">
+            2
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459781190.42969002" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/24.png" alt="Benfica"></div>
+            <div class="cell__team--title"><a href="/football/portugal/equipes/benfica" title="Benfica"><span>Benfica</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef4597852e5.35751168" class="cell cell__total-points">
+            8
+         </div>
+      </li>
+      <li data-team-id="1961" class="row" data-id="1800695" id="row-standing-team-1961-left">
+         <div id="cell-standing-pos-3" class="cell cell__number cell__rank cell__rank--blue">
+            3
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459787e80.43323201" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/1961.png" alt="Besiktas"></div>
+            <div class="cell__team--title"><a href="/football/turquie/equipes/besiktas" title="Besiktas"><span>Besiktas</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef45978bfb6.37798849" class="cell cell__total-points">
+            7
+         </div>
+      </li>
+      <li data-team-id="7003" class="row" data-id="1800689" id="row-standing-team-7003-left">
+         <div id="cell-standing-pos-4" class="cell cell__number cell__rank cell__rank--grey">
+            4
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef45978e2b1.60771780" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/7003.png" alt="Dinamo Kiev"></div>
+            <div class="cell__team--title"><a href="/football/ukraine/equipes/dinamo-kiev" title="Dinamo Kiev"><span>Dinamo Kiev</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef459792693.13730340" class="cell cell__total-points">
+            5
+         </div>
+      </li>
+   </ul>
+
+   <ul class="ls-standing-table ls-standing-table__column ls-standing-table--right" id="body-standing-mobile-41195-right">
+      <li class="row row--head" id="row-standing-mobile-header592ef4597946c9.64298649">
+         <div id="592ef459795c6" class="cell"><span title="Nombre de matchs joués">J</span></div>
+         <div id="592ef45979644" class="cell"><span title="Gagnés">G</span></div>
+         <div id="592ef459796bd" class="cell"><span title="Nuls">N</span></div>
+         <div id="592ef45979734" class="cell"><span title="Perdus">P</span></div>
+         <div id="592ef459797ab" class="cell"><span title="Buts inscrits">+</span></div>
+         <div id="592ef45979822" class="cell"><span title="Buts encaissés">-</span></div>
+         <div id="592ef45979898" class="cell"><span title="Différence de buts">+/-</span></div>
+      </li>
+      <li data-team-id="112" class="row" data-id="1800693" id="row-standing-team-112-right">
+         <div id="592ef45979920" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45979998" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef45979a10" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef45979a86" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef45979afd" class="cell cell__point">
+            11
+         </div>
+         <div id="592ef45979b74" class="cell cell__point">
+            8
+         </div>
+         <div id="592ef45979bea" class="cell cell__point">
+            3
+         </div>
+      </li>
+      <li data-team-id="24" class="row" data-id="1800691" id="row-standing-team-24-right">
+         <div id="592ef45979c6f" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45979ce6" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef45979d5d" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef45979dd3" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef45979e4a" class="cell cell__point">
+            10
+         </div>
+         <div id="592ef45979ec0" class="cell cell__point">
+            10
+         </div>
+         <div id="592ef45979f36" class="cell cell__point">
+            0
+         </div>
+      </li>
+      <li data-team-id="1961" class="row" data-id="1800695" id="row-standing-team-1961-right">
+         <div id="592ef45979fba" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597a031" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef4597a0a7" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef4597a11d" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef4597a194" class="cell cell__point">
+            9
+         </div>
+         <div id="592ef4597a1ee" class="cell cell__point">
+            14
+         </div>
+         <div id="592ef4597a266" class="cell cell__point">
+            -5
+         </div>
+      </li>
+      <li data-team-id="7003" class="row" data-id="1800689" id="row-standing-team-7003-right">
+         <div id="592ef4597a2ec" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597a366" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef4597a3de" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4597a456" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef4597a4cf" class="cell cell__point">
+            8
+         </div>
+         <div id="592ef4597a547" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597a5bf" class="cell cell__point">
+            2
+         </div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches ls-list--clear" id="body-standing-mobile-divider-41189">
+      <li class="row row--divider ls-divider" id="row-divider-mobile-41189">
+         <div id="cell-matches-competition-stage1900" class="cell cell__flag ls-divider__title" colspan="1" data-competition-stage-id="1900"><span>Phase de poule - Groupe C</span></div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-linked ls-list ls-standing-table ls-standing-table__column ls-standing-table--left" id="body-standing-mobile-41189-left">
+      <li class="row row--head" id="row-standing-mobile-header592ef4597a6f73.05984844">
+         <div id="592ef4597a783" class="cell cell__rank">
+            #
+         </div>
+         <div id="592ef4597a801" class="cell cell__team">
+            Equipes
+         </div>
+         <div id="592ef4597a87c" class="cell cell__total-points"><span title="Points">Pts</span></div>
+      </li>
+      <li data-team-id="50" class="row" data-id="1800699" id="row-standing-team-50-left">
+         <div id="cell-standing-pos-1" class="cell cell__number cell__rank cell__rank--green">
+            1
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef4597a8e60.93921950" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/50.png" alt="Barcelone"></div>
+            <div class="cell__team--title"><a href="/football/espagne/equipes/barcelone" title="Barcelone"><span>Barcelone</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef4597ad065.47504325" class="cell cell__total-points">
+            15
+         </div>
+      </li>
+      <li data-team-id="83" class="row" data-id="1800697" id="row-standing-team-83-left">
+         <div id="cell-standing-pos-2" class="cell cell__number cell__rank cell__rank--green">
+            2
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef4597af813.94368396" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/83.png" alt="Manchester City"></div>
+            <div class="cell__team--title"><a href="/football/angleterre/equipes/manchester-city" title="Manchester City"><span>Manchester City</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef4597b3c15.25806930" class="cell cell__total-points">
+            9
+         </div>
+      </li>
+      <li data-team-id="85" class="row" data-id="1800701" id="row-standing-team-85-left">
+         <div id="cell-standing-pos-3" class="cell cell__number cell__rank cell__rank--blue">
+            3
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef4597b6378.30884157" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/85.png" alt="Mönchengladbach"></div>
+            <div class="cell__team--title"><a href="/football/allemagne/equipes/monchengladbach" title="Mönchengladbach"><span>Mönchengladbach</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef4597ba065.19113440" class="cell cell__total-points">
+            5
+         </div>
+      </li>
+      <li data-team-id="1575" class="row" data-id="1800703" id="row-standing-team-1575-left">
+         <div id="cell-standing-pos-4" class="cell cell__number cell__rank cell__rank--grey">
+            4
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef4597bc792.55418689" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/1575.png" alt="Celtic Glasgow"></div>
+            <div class="cell__team--title"><a href="/football/ecosse/equipes/celtic-glasgow" title="Celtic Glasgow"><span>Celtic Glasgow</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef4597c11f4.25388311" class="cell cell__total-points">
+            3
+         </div>
+      </li>
+   </ul>
+
+   <ul class="ls-standing-table ls-standing-table__column ls-standing-table--right" id="body-standing-mobile-41189-right">
+      <li class="row row--head" id="row-standing-mobile-header592ef4597c38c4.09664873">
+         <div id="592ef4597c4d3" class="cell"><span title="Nombre de matchs joués">J</span></div>
+         <div id="592ef4597c551" class="cell"><span title="Gagnés">G</span></div>
+         <div id="592ef4597c5cc" class="cell"><span title="Nuls">N</span></div>
+         <div id="592ef4597c643" class="cell"><span title="Perdus">P</span></div>
+         <div id="592ef4597c6ba" class="cell"><span title="Buts inscrits">+</span></div>
+         <div id="592ef4597c730" class="cell"><span title="Buts encaissés">-</span></div>
+         <div id="592ef4597c7a6" class="cell"><span title="Différence de buts">+/-</span></div>
+      </li>
+      <li data-team-id="50" class="row" data-id="1800699" id="row-standing-team-50-right">
+         <div id="592ef4597c82e" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597c8a8" class="cell cell__point">
+            5
+         </div>
+         <div id="592ef4597c91f" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef4597c997" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef4597ca0e" class="cell cell__point">
+            20
+         </div>
+         <div id="592ef4597ca85" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef4597cafb" class="cell cell__point">
+            16
+         </div>
+      </li>
+      <li data-team-id="83" class="row" data-id="1800697" id="row-standing-team-83-right">
+         <div id="592ef4597cb80" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597cbf7" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4597cc6e" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef4597cce5" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef4597cd5c" class="cell cell__point">
+            12
+         </div>
+         <div id="592ef4597cdd2" class="cell cell__point">
+            10
+         </div>
+         <div id="592ef4597ce49" class="cell cell__point">
+            2
+         </div>
+      </li>
+      <li data-team-id="85" class="row" data-id="1800701" id="row-standing-team-85-right">
+         <div id="592ef4597cecc" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597cf43" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef4597cfba" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4597d031" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef4597d0a9" class="cell cell__point">
+            5
+         </div>
+         <div id="592ef4597d121" class="cell cell__point">
+            12
+         </div>
+         <div id="592ef4597d199" class="cell cell__point">
+            -7
+         </div>
+      </li>
+      <li data-team-id="1575" class="row" data-id="1800703" id="row-standing-team-1575-right">
+         <div id="592ef4597d21e" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597d295" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef4597d30c" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef4597d382" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef4597d3f9" class="cell cell__point">
+            5
+         </div>
+         <div id="592ef4597d470" class="cell cell__point">
+            16
+         </div>
+         <div id="592ef4597d4e8" class="cell cell__point">
+            -11
+         </div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches ls-list--clear" id="body-standing-mobile-divider-44441">
+      <li class="row row--divider ls-divider" id="row-divider-mobile-44441">
+         <div id="cell-matches-competition-stage1901" class="cell cell__flag ls-divider__title" colspan="1" data-competition-stage-id="1901"><span>Phase de poule - Groupe D</span></div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-linked ls-list ls-standing-table ls-standing-table__column ls-standing-table--left" id="body-standing-mobile-44441-left">
+      <li class="row row--head" id="row-standing-mobile-header592ef4597d6154.94400878">
+         <div id="592ef4597d69a" class="cell cell__rank">
+            #
+         </div>
+         <div id="592ef4597d716" class="cell cell__team">
+            Equipes
+         </div>
+         <div id="592ef4597d78e" class="cell cell__total-points"><span title="Points">Pts</span></div>
+      </li>
+      <li data-team-id="18" class="row" data-id="1821451" id="row-standing-team-18-left">
+         <div id="cell-standing-pos-1" class="cell cell__number cell__rank cell__rank--green">
+            1
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef4597d7f43.62680972" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/18.png" alt="Atletico Madrid"></div>
+            <div class="cell__team--title"><a href="/football/espagne/equipes/atletico-madrid" title="Atletico Madrid"><span>Atletico Madrid</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef4597db7a5.53170438" class="cell cell__total-points">
+            15
+         </div>
+      </li>
+      <li data-team-id="23" class="row" data-id="1821449" id="row-standing-team-23-left">
+         <div id="cell-standing-pos-2" class="cell cell__number cell__rank cell__rank--green">
+            2
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef4597dded0.50128370" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/23.png" alt="Bayern Munich"></div>
+            <div class="cell__team--title"><a href="/football/allemagne/equipes/bayern-munich" title="Bayern Munich"><span>Bayern Munich</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef4597e1c21.68479599" class="cell cell__total-points">
+            12
+         </div>
+      </li>
+      <li data-team-id="4889" class="row" data-id="1821447" id="row-standing-team-4889-left">
+         <div id="cell-standing-pos-3" class="cell cell__number cell__rank cell__rank--blue">
+            3
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef4597e4303.12533714" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/4889.png" alt="Rostov"></div>
+            <div class="cell__team--title"><a href="/football/russie/equipes/rostov" title="Rostov"><span>Rostov</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef4597e7dd9.17503625" class="cell cell__total-points">
+            5
+         </div>
+      </li>
+      <li data-team-id="95" class="row" data-id="1821445" id="row-standing-team-95-left">
+         <div id="cell-standing-pos-4" class="cell cell__number cell__rank cell__rank--grey">
+            4
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef4597ea7e3.38810777" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/95.png" alt="PSV"></div>
+            <div class="cell__team--title"><a href="/football/pays-bas/equipes/psv" title="PSV"><span>PSV</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef4597eeb99.10622035" class="cell cell__total-points">
+            2
+         </div>
+      </li>
+   </ul>
+
+   <ul class="ls-standing-table ls-standing-table__column ls-standing-table--right" id="body-standing-mobile-44441-right">
+      <li class="row row--head" id="row-standing-mobile-header592ef4597f1098.27594615">
+         <div id="592ef4597f251" class="cell"><span title="Nombre de matchs joués">J</span></div>
+         <div id="592ef4597f2cf" class="cell"><span title="Gagnés">G</span></div>
+         <div id="592ef4597f348" class="cell"><span title="Nuls">N</span></div>
+         <div id="592ef4597f3bf" class="cell"><span title="Perdus">P</span></div>
+         <div id="592ef4597f436" class="cell"><span title="Buts inscrits">+</span></div>
+         <div id="592ef4597f4ac" class="cell"><span title="Buts encaissés">-</span></div>
+         <div id="592ef4597f522" class="cell"><span title="Différence de buts">+/-</span></div>
+      </li>
+      <li data-team-id="18" class="row" data-id="1821451" id="row-standing-team-18-right">
+         <div id="592ef4597f5aa" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597f622" class="cell cell__point">
+            5
+         </div>
+         <div id="592ef4597f69b" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef4597f712" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef4597f789" class="cell cell__point">
+            7
+         </div>
+         <div id="592ef4597f800" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4597f877" class="cell cell__point">
+            5
+         </div>
+      </li>
+      <li data-team-id="23" class="row" data-id="1821449" id="row-standing-team-23-right">
+         <div id="592ef4597f8fb" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597f972" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef4597f9e9" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef4597fa60" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4597fad8" class="cell cell__point">
+            14
+         </div>
+         <div id="592ef4597fb4f" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597fbc7" class="cell cell__point">
+            8
+         </div>
+      </li>
+      <li data-team-id="4889" class="row" data-id="1821447" id="row-standing-team-4889-right">
+         <div id="592ef4597fc4b" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597fcc2" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef4597fd39" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4597fdaf" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef4597fe26" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4597fe9e" class="cell cell__point">
+            12
+         </div>
+         <div id="592ef4597ff15" class="cell cell__point">
+            -6
+         </div>
+      </li>
+      <li data-team-id="95" class="row" data-id="1821445" id="row-standing-team-95-right">
+         <div id="592ef4597ff9e" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45980016" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef4598008d" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef45980103" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef4598017b" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef459801f2" class="cell cell__point">
+            11
+         </div>
+         <div id="592ef45980269" class="cell cell__point">
+            -7
+         </div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches ls-list--clear" id="body-standing-mobile-divider-41199">
+      <li class="row row--divider ls-divider" id="row-divider-mobile-41199">
+         <div id="cell-matches-competition-stage1902" class="cell cell__flag ls-divider__title" colspan="1" data-competition-stage-id="1902"><span>Phase de poule - Groupe E</span></div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-linked ls-list ls-standing-table ls-standing-table__column ls-standing-table--left" id="body-standing-mobile-41199-left">
+      <li class="row row--head" id="row-standing-mobile-header592ef459803913.96417312">
+         <div id="592ef45980415" class="cell cell__rank">
+            #
+         </div>
+         <div id="592ef45980491" class="cell cell__team">
+            Equipes
+         </div>
+         <div id="592ef45980509" class="cell cell__total-points"><span title="Points">Pts</span></div>
+      </li>
+      <li data-team-id="12" class="row" data-id="1801367" id="row-standing-team-12-left">
+         <div id="cell-standing-pos-1" class="cell cell__number cell__rank cell__rank--green">
+            1
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459805706.84049491" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/12.png" alt="Monaco"></div>
+            <div class="cell__team--title"><a href="/football/france/equipes/monaco" title="Monaco"><span>Monaco</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef4598091f6.95815400" class="cell cell__total-points">
+            11
+         </div>
+      </li>
+      <li data-team-id="22" class="row" data-id="1801361" id="row-standing-team-22-left">
+         <div id="cell-standing-pos-2" class="cell cell__number cell__rank cell__rank--green">
+            2
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef45980ba15.31549905" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/22.png" alt="Bayer Leverkusen"></div>
+            <div class="cell__team--title"><a href="/football/allemagne/equipes/bayer-leverkusen" title="Bayer Leverkusen"><span>Bayer Leverkusen</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef45980ef24.54268208" class="cell cell__total-points">
+            10
+         </div>
+      </li>
+      <li data-team-id="118" class="row" data-id="1801363" id="row-standing-team-118-left">
+         <div id="cell-standing-pos-3" class="cell cell__number cell__rank cell__rank--blue">
+            3
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459811420.62613961" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/118.png" alt="Tottenham"></div>
+            <div class="cell__team--title"><a href="/football/angleterre/equipes/tottenham" title="Tottenham"><span>Tottenham</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef459815885.13690227" class="cell cell__total-points">
+            7
+         </div>
+      </li>
+      <li data-team-id="4911" class="row" data-id="1801365" id="row-standing-team-4911-left">
+         <div id="cell-standing-pos-4" class="cell cell__number cell__rank cell__rank--grey">
+            4
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459817ee7.76881041" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/4911.png" alt="CSKA Moscou"></div>
+            <div class="cell__team--title"><a href="/football/russie/equipes/cska-moscou" title="CSKA Moscou"><span>CSKA Moscou</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef45981c496.58340058" class="cell cell__total-points">
+            3
+         </div>
+      </li>
+   </ul>
+
+   <ul class="ls-standing-table ls-standing-table__column ls-standing-table--right" id="body-standing-mobile-41199-right">
+      <li class="row row--head" id="row-standing-mobile-header592ef45981eac0.32816617">
+         <div id="592ef45981ff3" class="cell"><span title="Nombre de matchs joués">J</span></div>
+         <div id="592ef45982070" class="cell"><span title="Gagnés">G</span></div>
+         <div id="592ef459820e8" class="cell"><span title="Nuls">N</span></div>
+         <div id="592ef4598215e" class="cell"><span title="Perdus">P</span></div>
+         <div id="592ef459821d3" class="cell"><span title="Buts inscrits">+</span></div>
+         <div id="592ef45982249" class="cell"><span title="Buts encaissés">-</span></div>
+         <div id="592ef459822bf" class="cell"><span title="Différence de buts">+/-</span></div>
+      </li>
+      <li data-team-id="12" class="row" data-id="1801367" id="row-standing-team-12-right">
+         <div id="592ef45982344" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef459823bc" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef45982432" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef459824a8" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef4598251e" class="cell cell__point">
+            9
+         </div>
+         <div id="592ef45982594" class="cell cell__point">
+            7
+         </div>
+         <div id="592ef4598260a" class="cell cell__point">
+            2
+         </div>
+      </li>
+      <li data-team-id="22" class="row" data-id="1801361" id="row-standing-team-22-right">
+         <div id="592ef4598268c" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45982703" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4598277b" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef459827f0" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef45982867" class="cell cell__point">
+            8
+         </div>
+         <div id="592ef459828de" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef45982954" class="cell cell__point">
+            4
+         </div>
+      </li>
+      <li data-team-id="118" class="row" data-id="1801363" id="row-standing-team-118-right">
+         <div id="592ef459829d7" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45982a4d" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef45982ac3" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef45982b3a" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef45982baf" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45982c26" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45982c9c" class="cell cell__point">
+            0
+         </div>
+      </li>
+      <li data-team-id="4911" class="row" data-id="1801365" id="row-standing-team-4911-right">
+         <div id="592ef45982d1d" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45982d94" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef45982e0a" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef45982e82" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef45982ef7" class="cell cell__point">
+            5
+         </div>
+         <div id="592ef45982f6e" class="cell cell__point">
+            11
+         </div>
+         <div id="592ef45982fe4" class="cell cell__point">
+            -6
+         </div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches ls-list--clear" id="body-standing-mobile-divider-44443">
+      <li class="row row--divider ls-divider" id="row-divider-mobile-44443">
+         <div id="cell-matches-competition-stage1903" class="cell cell__flag ls-divider__title" colspan="1" data-competition-stage-id="1903"><span>Phase de poule - Groupe F</span></div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-linked ls-list ls-standing-table ls-standing-table__column ls-standing-table--left" id="body-standing-mobile-44443-left">
+      <li class="row row--head" id="row-standing-mobile-header592ef459830fe2.12488223">
+         <div id="592ef45983180" class="cell cell__rank">
+            #
+         </div>
+         <div id="592ef459831fa" class="cell cell__team">
+            Equipes
+         </div>
+         <div id="592ef45983271" class="cell cell__total-points"><span title="Points">Pts</span></div>
+      </li>
+      <li data-team-id="27" class="row" data-id="1819409" id="row-standing-team-27-left">
+         <div id="cell-standing-pos-1" class="cell cell__number cell__rank cell__rank--green">
+            1
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459832d43.95235867" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/27.png" alt="Borussia Dortmund"></div>
+            <div class="cell__team--title"><a href="/football/allemagne/equipes/borussia-dortmund" title="Borussia Dortmund"><span>Borussia Dortmund</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef459836903.47656971" class="cell cell__total-points">
+            14
+         </div>
+      </li>
+      <li data-team-id="97" class="row" data-id="1819403" id="row-standing-team-97-left">
+         <div id="cell-standing-pos-2" class="cell cell__number cell__rank cell__rank--green">
+            2
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459838852.80427809" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/97.png" alt="Real Madrid"></div>
+            <div class="cell__team--title"><a href="/football/espagne/equipes/real-madrid" title="Real Madrid"><span>Real Madrid</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef45983cff6.12231910" class="cell cell__total-points">
+            12
+         </div>
+      </li>
+      <li data-team-id="4971" class="row" data-id="1819405" id="row-standing-team-4971-left">
+         <div id="cell-standing-pos-3" class="cell cell__number cell__rank cell__rank--blue">
+            3
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef45983ef85.57922527" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/4971.png" alt="Legia"></div>
+            <div class="cell__team--title"><a href="/football/pologne/equipes/legia" title="Legia"><span>Legia</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef459842e20.35596562" class="cell cell__total-points">
+            4
+         </div>
+      </li>
+      <li data-team-id="111" class="row" data-id="1819407" id="row-standing-team-111-left">
+         <div id="cell-standing-pos-4" class="cell cell__number cell__rank cell__rank--grey">
+            4
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459844d12.54220701" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/111.png" alt="Sporting"></div>
+            <div class="cell__team--title"><a href="/football/portugal/equipes/sporting" title="Sporting"><span>Sporting</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef459848656.18398186" class="cell cell__total-points">
+            3
+         </div>
+      </li>
+   </ul>
+
+   <ul class="ls-standing-table ls-standing-table__column ls-standing-table--right" id="body-standing-mobile-44443-right">
+      <li class="row row--head" id="row-standing-mobile-header592ef45984a575.71027466">
+         <div id="592ef45984b8d" class="cell"><span title="Nombre de matchs joués">J</span></div>
+         <div id="592ef45984c09" class="cell"><span title="Gagnés">G</span></div>
+         <div id="592ef45984c82" class="cell"><span title="Nuls">N</span></div>
+         <div id="592ef45984cf7" class="cell"><span title="Perdus">P</span></div>
+         <div id="592ef45984d6d" class="cell"><span title="Buts inscrits">+</span></div>
+         <div id="592ef45984de3" class="cell"><span title="Buts encaissés">-</span></div>
+         <div id="592ef45984e59" class="cell"><span title="Différence de buts">+/-</span></div>
+      </li>
+      <li data-team-id="27" class="row" data-id="1819409" id="row-standing-team-27-right">
+         <div id="592ef45984ede" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45984f56" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef45984fcd" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef45985043" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef459850b9" class="cell cell__point">
+            21
+         </div>
+         <div id="592ef4598512f" class="cell cell__point">
+            9
+         </div>
+         <div id="592ef459851a5" class="cell cell__point">
+            12
+         </div>
+      </li>
+      <li data-team-id="97" class="row" data-id="1819403" id="row-standing-team-97-right">
+         <div id="592ef45985229" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4598529f" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef45985315" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef4598538b" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef45985402" class="cell cell__point">
+            16
+         </div>
+         <div id="592ef45985478" class="cell cell__point">
+            10
+         </div>
+         <div id="592ef459854ef" class="cell cell__point">
+            6
+         </div>
+      </li>
+      <li data-team-id="4971" class="row" data-id="1819405" id="row-standing-team-4971-right">
+         <div id="592ef45985571" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef459855e8" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef4598565e" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef459856d4" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef4598574a" class="cell cell__point">
+            9
+         </div>
+         <div id="592ef459857c0" class="cell cell__point">
+            24
+         </div>
+         <div id="592ef45985836" class="cell cell__point">
+            -15
+         </div>
+      </li>
+      <li data-team-id="111" class="row" data-id="1819407" id="row-standing-team-111-right">
+         <div id="592ef459858b8" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4598592f" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef459859a5" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef45985a1b" class="cell cell__point">
+            5
+         </div>
+         <div id="592ef45985a91" class="cell cell__point">
+            5
+         </div>
+         <div id="592ef45985b07" class="cell cell__point">
+            8
+         </div>
+         <div id="592ef45985b7d" class="cell cell__point">
+            -3
+         </div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches ls-list--clear" id="body-standing-mobile-divider-41197">
+      <li class="row row--divider ls-divider" id="row-divider-mobile-41197">
+         <div id="cell-matches-competition-stage1904" class="cell cell__flag ls-divider__title" colspan="1" data-competition-stage-id="1904"><span>Phase de poule - Groupe G</span></div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-linked ls-list ls-standing-table ls-standing-table__column ls-standing-table--left" id="body-standing-mobile-41197-left">
+      <li class="row row--head" id="row-standing-mobile-header592ef45985c959.09635630">
+         <div id="592ef45985d15" class="cell cell__rank">
+            #
+         </div>
+         <div id="592ef45985d91" class="cell cell__team">
+            Equipes
+         </div>
+         <div id="592ef45985e08" class="cell cell__total-points"><span title="Points">Pts</span></div>
+      </li>
+      <li data-team-id="175" class="row" data-id="1801369" id="row-standing-team-175-left">
+         <div id="cell-standing-pos-1" class="cell cell__number cell__rank cell__rank--green">
+            1
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef45985e6a0.30480016" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/175.png" alt="Leicester"></div>
+            <div class="cell__team--title"><a href="/football/angleterre/equipes/leicester" title="Leicester"><span>Leicester</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef459862bb0.99822795" class="cell cell__total-points">
+            13
+         </div>
+      </li>
+      <li data-team-id="55" class="row" data-id="1801375" id="row-standing-team-55-left">
+         <div id="cell-standing-pos-2" class="cell cell__number cell__rank cell__rank--green">
+            2
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459864b91.06904797" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/55.png" alt="Porto"></div>
+            <div class="cell__team--title"><a href="/football/portugal/equipes/porto" title="Porto"><span>Porto</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef459867ff4.75811535" class="cell cell__total-points">
+            11
+         </div>
+      </li>
+      <li data-team-id="167" class="row" data-id="1801373" id="row-standing-team-167-left">
+         <div id="cell-standing-pos-3" class="cell cell__number cell__rank cell__rank--blue">
+            3
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459869fa9.48948557" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/167.png" alt="Copenhague"></div>
+            <div class="cell__team--title"><a href="/football/danemark/equipes/copenhague" title="Copenhague"><span>Copenhague</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef45986def1.23734885" class="cell cell__total-points">
+            9
+         </div>
+      </li>
+      <li data-team-id="1215" class="row" data-id="1801371" id="row-standing-team-1215-left">
+         <div id="cell-standing-pos-4" class="cell cell__number cell__rank cell__rank--grey">
+            4
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459870450.71939935" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/1215.png" alt="Bruges"></div>
+            <div class="cell__team--title"><a href="/football/belgique/equipes/bruges" title="Bruges"><span>Bruges</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef459874d05.63367391" class="cell cell__total-points">
+            0
+         </div>
+      </li>
+   </ul>
+
+   <ul class="ls-standing-table ls-standing-table__column ls-standing-table--right" id="body-standing-mobile-41197-right">
+      <li class="row row--head" id="row-standing-mobile-header592ef459876e37.58561708">
+         <div id="592ef45987819" class="cell"><span title="Nombre de matchs joués">J</span></div>
+         <div id="592ef45987896" class="cell"><span title="Gagnés">G</span></div>
+         <div id="592ef4598790f" class="cell"><span title="Nuls">N</span></div>
+         <div id="592ef45987985" class="cell"><span title="Perdus">P</span></div>
+         <div id="592ef459879fb" class="cell"><span title="Buts inscrits">+</span></div>
+         <div id="592ef45987a70" class="cell"><span title="Buts encaissés">-</span></div>
+         <div id="592ef45987ae5" class="cell"><span title="Différence de buts">+/-</span></div>
+      </li>
+      <li data-team-id="175" class="row" data-id="1801369" id="row-standing-team-175-right">
+         <div id="592ef45987b6a" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45987be4" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef45987c5b" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef45987cd9" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef45987d50" class="cell cell__point">
+            7
+         </div>
+         <div id="592ef45987dc5" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45987e3a" class="cell cell__point">
+            1
+         </div>
+      </li>
+      <li data-team-id="55" class="row" data-id="1801375" id="row-standing-team-55-right">
+         <div id="592ef45987ebb" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef45987f30" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef45987fa6" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4598801a" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef45988090" class="cell cell__point">
+            9
+         </div>
+         <div id="592ef45988105" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef4598817a" class="cell cell__point">
+            6
+         </div>
+      </li>
+      <li data-team-id="167" class="row" data-id="1801373" id="row-standing-team-167-right">
+         <div id="592ef459881f9" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4598826f" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef459882e4" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef45988359" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef459883ce" class="cell cell__point">
+            7
+         </div>
+         <div id="592ef45988443" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef459884b8" class="cell cell__point">
+            5
+         </div>
+      </li>
+      <li data-team-id="1215" class="row" data-id="1801371" id="row-standing-team-1215-right">
+         <div id="592ef45988538" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef459885ad" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef45988622" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef45988697" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4598870c" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef45988781" class="cell cell__point">
+            14
+         </div>
+         <div id="592ef459887f6" class="cell cell__point">
+            -12
+         </div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches ls-list--clear" id="body-standing-mobile-divider-41327">
+      <li class="row row--divider ls-divider" id="row-divider-mobile-41327">
+         <div id="cell-matches-competition-stage1905" class="cell cell__flag ls-divider__title" colspan="1" data-competition-stage-id="1905"><span>Phase de poule - Groupe H</span></div>
+      </li>
+   </ul>
+
+   <ul class="mdl-list mdl-list-linked ls-list ls-standing-table ls-standing-table__column ls-standing-table--left" id="body-standing-mobile-41327-left">
+      <li class="row row--head" id="row-standing-mobile-header592ef459889030.43303573">
+         <div id="592ef4598897f" class="cell cell__rank">
+            #
+         </div>
+         <div id="592ef459889f8" class="cell cell__team">
+            Equipes
+         </div>
+         <div id="592ef45988a6e" class="cell cell__total-points"><span title="Points">Pts</span></div>
+      </li>
+      <li data-team-id="77" class="row" data-id="1801381" id="row-standing-team-77-left">
+         <div id="cell-standing-pos-1" class="cell cell__number cell__rank cell__rank--green">
+            1
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef45988ace3.38726262" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/77.png" alt="Juventus"></div>
+            <div class="cell__team--title"><a href="/football/italie/equipes/juventus-turin" title="Juventus"><span>Juventus</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef45988f4c2.63867290" class="cell cell__total-points">
+            14
+         </div>
+      </li>
+      <li data-team-id="107" class="row" data-id="1801377" id="row-standing-team-107-left">
+         <div id="cell-standing-pos-2" class="cell cell__number cell__rank cell__rank--green">
+            2
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef4598918a0.19155590" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/107.png" alt="FC Séville"></div>
+            <div class="cell__team--title"><a href="/football/espagne/equipes/fc-seville" title="FC Séville"><span>FC Séville</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef459896612.21646977" class="cell cell__total-points">
+            11
+         </div>
+      </li>
+      <li data-team-id="90" class="row" data-id="1801379" id="row-standing-team-90-left">
+         <div id="cell-standing-pos-3" class="cell cell__number cell__rank cell__rank--blue">
+            3
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef459898a69.36117897" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/90.png" alt="Lyon"></div>
+            <div class="cell__team--title"><a href="/football/france/equipes/lyon" title="Lyon"><span>Lyon</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef45989cdc7.47787128" class="cell cell__total-points">
+            8
+         </div>
+      </li>
+      <li data-team-id="4423" class="row" data-id="1801383" id="row-standing-team-4423-left">
+         <div id="cell-standing-pos-4" class="cell cell__number cell__rank cell__rank--grey">
+            4
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Standing-StandingTeamWithIconCellModel592ef45989f036.96862058" class="cell cell__team">
+            <div class="cell__team--flag"><img src="https://ls-cdn-medias.s3.amazonaws.com/team/s/4423.png" alt="Dinamo Zagreb"></div>
+            <div class="cell__team--title"><a href="/football/croatie/equipes/dinamo-zagreb" title="Dinamo Zagreb"><span>Dinamo Zagreb</span></a></div>
+         </div>
+         <div id="cell_Visca-Bundle-SportBundle-Model-Cells-Mobile-StandingPointsMobileCellModel592ef4598a3390.13877061" class="cell cell__total-points">
+            0
+         </div>
+      </li>
+   </ul>
+
+   <ul class="ls-standing-table ls-standing-table__column ls-standing-table--right" id="body-standing-mobile-41327-right">
+      <li class="row row--head" id="row-standing-mobile-header592ef4598a5218.81392025">
+         <div id="592ef4598a649" class="cell"><span title="Nombre de matchs joués">J</span></div>
+         <div id="592ef4598a6c4" class="cell"><span title="Gagnés">G</span></div>
+         <div id="592ef4598a73c" class="cell"><span title="Nuls">N</span></div>
+         <div id="592ef4598a7b3" class="cell"><span title="Perdus">P</span></div>
+         <div id="592ef4598a827" class="cell"><span title="Buts inscrits">+</span></div>
+         <div id="592ef4598a89c" class="cell"><span title="Buts encaissés">-</span></div>
+         <div id="592ef4598a911" class="cell"><span title="Différence de buts">+/-</span></div>
+      </li>
+      <li data-team-id="77" class="row" data-id="1801381" id="row-standing-team-77-right">
+         <div id="592ef4598a994" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4598aa0c" class="cell cell__point">
+            4
+         </div>
+         <div id="592ef4598aa81" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4598aaf7" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef4598ab6e" class="cell cell__point">
+            11
+         </div>
+         <div id="592ef4598abe4" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4598ac58" class="cell cell__point">
+            9
+         </div>
+      </li>
+      <li data-team-id="107" class="row" data-id="1801377" id="row-standing-team-107-right">
+         <div id="592ef4598acd9" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4598ad4e" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef4598adc4" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4598ae38" class="cell cell__point">
+            1
+         </div>
+         <div id="592ef4598aead" class="cell cell__point">
+            7
+         </div>
+         <div id="592ef4598af22" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef4598af97" class="cell cell__point">
+            4
+         </div>
+      </li>
+      <li data-team-id="90" class="row" data-id="1801379" id="row-standing-team-90-right">
+         <div id="592ef4598b017" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4598b08d" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4598b102" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4598b177" class="cell cell__point">
+            2
+         </div>
+         <div id="592ef4598b1ec" class="cell cell__point">
+            5
+         </div>
+         <div id="592ef4598b261" class="cell cell__point">
+            3
+         </div>
+         <div id="592ef4598b2d7" class="cell cell__point">
+            2
+         </div>
+      </li>
+      <li data-team-id="4423" class="row" data-id="1801383" id="row-standing-team-4423-right">
+         <div id="592ef4598b356" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4598b3cc" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef4598b441" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef4598b4b6" class="cell cell__point">
+            6
+         </div>
+         <div id="592ef4598b52b" class="cell cell__point">
+            0
+         </div>
+         <div id="592ef4598b5a0" class="cell cell__point">
+            15
+         </div>
+         <div id="592ef4598b616" class="cell cell__point">
+            -15
+         </div>
+      </li>
+   </ul>
+
+</div>
+
+
+        <div class="ls-legend">
+        <div class="ls-legend__title">
+            <span>LEGEND</span>
+        </div>
+        <ul class="ls-legend__content">
+            <li class="row">
+                <div class="cell cell__rank cell__rank--green"></div>
+                <div class="cell cell__explanation">
+                    <span>Qualified for Champions League</span>
+                </div>
+            </li>
+            <li class="row">
+                <div class="cell cell__rank cell__rank--clear-green"></div>
+                <div class="cell cell__explanation">
+                    <span>Qualified for Europa League</span>
+                </div>
+            </li>
+            <li class="row">
+                <div class="cell cell__rank cell__rank--blue"></div>
+                <div class="cell cell__explanation">
+                    <span>Qualified for French Cup</span>
+                </div>
+            </li>
+            <li class="row">
+                <div class="cell cell__rank cell__rank--blue"></div>
+                <div class="cell cell__explanation">
+                    <span>Qualified for French Cup</span>
+                </div>
+            </li>
+            <li class="row">
+                <div class="cell cell__rank cell__rank--red"></div>
+                <div class="cell cell__explanation">
+                    <span>Downgraded to League 2</span>
+                </div>
+            </li>
+            <li class="row">
+                <div class="cell cell__rank cell__rank--clear-red"></div>
+                <div class="cell cell__explanation">
+                    <span>Downgraded to League 2</span>
+                </div>
+            </li>
+            <li class="row">
+                <div class="cell cell__rank cell__rank--orange"></div>
+                <div class="cell cell__explanation">
+                    <span>Downgraded to League 2</span>
+                </div>
+            </li>
+            <li class="row">
+                <div class="cell cell__rank cell__rank--clear-orange"></div>
+                <div class="cell cell__explanation">
+                    <span>Downgraded to League 2</span>
+                </div>
+            </li>
+            <li class="row">
+                <div class="cell cell__rank cell__rank--grey"></div>
+                <div class="cell cell__explanation">
+                    <span>Downgraded to League 2</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+				  </div>
+						
+				</main>			
+								</div>
+			<script type="text/javascript">
+			$(document).ready(function(){
+
+				//Init core JS
+				App.init();
+
+			});
+		</script>
+			</body>
+</html>

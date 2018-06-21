@@ -15,3 +15,9 @@ Then, compile the whole project: `php application.php compile`
 You can compile in real time by doing: `php application.php watch`
 ** NOTE: Make sure `fswatch` is installed on your system.
 To install it, you can perform: `brew install fswatch` 
+This project requires an older version of node (`v5.11.1`) in order to compile succesfully.
+
+### Others
+ 
+*If you have this error message: Error: Cannot find module 'npmlog'*
+Please look at: [GitHub: Cannot find module npmlog](https://github.com/tj/n/issues/101)

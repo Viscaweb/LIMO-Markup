@@ -1,0 +1,46 @@
+{% extends "layouts/layout-team.twig" %}
+	
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'Paris Saint Germain' %}
+{% set ls_header_brand_logo = true %}
+{% set ls_header_star_icon = true %}
+{% set divider_title_h = 'PSG Scores' %}
+{% set divider_title_h2 = 'PSG H2' %}
+
+{% set main_content_1 %}
+    {% include 'blocks/sports/team/team_header.html.twig' %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/listings/match_listing_by_team.html.twig' %}
+    {% include 'blocks/sports/team/team_shirts.html.twig' %}
+{% endset %}
+
+{% set main_content_2 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/listings/match_listing_by_team_full.html.twig' %}
+{% endset %}
+
+{% set main_content_3 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/dividers/divider-event.twig' %}
+    {% include 'blocks/sports/table/standing-table.html.twig' %}
+{% endset %}
+
+{% set main_content_4 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/team/team_detailed_statistics.html.twig' %}
+    {% include 'blocks/sports/team/team_over_under_statistics.html.twig' %}
+    {% include 'blocks/sports/team/team_detailed_statistics.html.twig' %}
+    {% include 'blocks/sports/team/team_goals_statistics.html.twig' %}
+    {% include 'blocks/sports/team/team_standing_statistics.twig' %}
+{% endset %}
+
+{% set main_content_5 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/team/team_roster.html.twig' %}
+{% endset %}
+
+{% set main_content_6 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/player/players_standing.html.twig' %}
+{% endset %}

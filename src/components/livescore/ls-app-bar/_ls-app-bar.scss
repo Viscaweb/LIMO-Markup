@@ -1,0 +1,82 @@
+// App bar
+
+.ls-app-bar--active {
+	padding-bottom: 80px;
+}
+
+.ls-app-bar {
+	position: fixed;
+	display: none;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid $ls-app-bar-border-color;
+	background-color: $ls-app-bar-bg-color;
+	width: 100%;
+	z-index: $ls-app-bar-zindex;
+
+	@media screen and (max-width: $layout-screen-size-threshold) {
+		display: flex;
+	}
+}
+
+.ls-app-bar__link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.ls-app-bar__close {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	left: 0;
+	padding: 0 5px;
+	height: 100%;
+	z-index: 2;
+
+	i {
+		color: $ls-text-color;
+	}
+}
+
+.ls-app-bar__content, 
+.ls-app-bar__button {
+	display: flex;
+  align-items: center;
+	flex: 1 1 100%;
+	padding: 9px 0;
+}
+
+.ls-app-bar__content {
+	text-align: right;	
+	justify-content: flex-end;
+	padding-right: 9px;
+  padding-left: 40px;
+
+	@media #{$ls-small-devices} {
+		justify-content: flex-start;
+	}
+}
+
+.ls-app-bar__button {
+	padding-left: 9px;
+
+	@media #{$ls-small-devices} {
+		flex: 0 1 auto;
+    padding-right: 10px;
+	}
+
+	.mdl-button {
+		height: $ls-app-bar-button-height;
+		font-weight: $ls-font-weight-normal;
+
+		@media #{$ls-small-devices} {
+			white-space: nowrap;
+		}
+	}
+}

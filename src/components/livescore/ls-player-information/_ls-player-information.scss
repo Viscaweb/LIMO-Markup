@@ -1,0 +1,50 @@
+.ls-player-information{
+  background-color: $ls-color-white;
+
+  .row{
+    padding: 0;
+
+    .cell{
+      border-right: $ls-list-border;
+      padding: 13px 23px;
+
+      &__record{
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 30%;
+        align-items: center;
+      }
+
+      &__value{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        justify-content: flex-end;
+        font-weight: $ls-font-weight-normal;
+      }
+
+      .club{
+        text-align: center;
+
+        > img{
+          max-height: 58px;
+          max-width: 58px;
+        }
+
+        .name{
+          display: block;
+          margin-top: 10px;
+          font-weight: $ls-font-weight-light;
+        }
+
+        & + .club{
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}

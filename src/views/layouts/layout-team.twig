@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	{% include 'structure/head.twig' %}
+	{% set ls_header_tabs = 'team' %}
+	{% set ls_header_season_button = true %}
+
+</head>
+<body>
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header{{ ls_layout_variables ? ' ' ~ ls_layout_variables : '' }}">
+
+			{% include 'structure/top-header.twig' %}
+			<main class="mdl-layout__content{{ ls_content_variables ? ' ' ~ ls_content_variables : '' }}">
+				<div class="page-content">
+                    {% block main_content %}
+					<section class="mdl-layout__tab-panel is-active" id="scroll-tab-1">
+					  <div class="page-content">{{main_content_1}}</div>
+					</section>
+					<section class="mdl-layout__tab-panel" id="scroll-tab-2">
+					  <div class="page-content">{{main_content_2}}</div>
+					</section>
+					<section class="mdl-layout__tab-panel" id="scroll-tab-3">
+					  <div class="page-content">{{main_content_3}}</div>
+					</section>
+					<section class="mdl-layout__tab-panel" id="scroll-tab-4">
+						<div class="page-content">{{main_content_4}}</div>
+					</section>
+					<section class="mdl-layout__tab-panel" id="scroll-tab-5">
+						<div class="page-content">{{main_content_5}}</div>
+					</section>
+					<section class="mdl-layout__tab-panel" id="scroll-tab-6">
+						<div class="page-content">{{main_content_6}}</div>
+					</section>
+
+
+					{{main_content}}
+				{% endblock %}
+				</div>
+
+			</main>
+
+
+		</div>
+		
+	{% block footer_scripts %}
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+				//Init core JS
+				App.init();
+
+			});
+		</script>
+	{% endblock %}
+</body>
+</html>

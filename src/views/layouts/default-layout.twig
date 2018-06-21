@@ -5,18 +5,46 @@
 	{% include 'structure/head.twig' %}		
 
 </head>
-<body>
-		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+<body class="wf-materialicons-n4-active">
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header{{ ls_header_no_drawer ? ' mdl-layout--no-drawer-button' : ' mdl-layout--fixed-drawer' }}{{ ls_layout_variables ? ' ' ~ ls_layout_variables : '' }}">
 
-			{% include 'structure/top-header.twig' %}
-    	{% embed 'structure/main-content.twig' %}
+			{% embed 'structure/top-header.twig' %}
+
+				{% block top_header_append %}
+					{{top_header_append}}
+				{% endblock %}
+
+			{% endembed %}
+
+			{% embed 'structure/main-content.twig' %}
+
+				{% block page_content_before %}
+					{{page_content_before}}
+				{% endblock %}
+
 				{% block main_content %}
 					{{main_content}}
 				{% endblock %}
-    	{% endembed %}
 
+				{% block page_content_after %}
+					{{page_content_after}}
+				{% endblock %}
+
+			{% endembed %}
+			
+			{% block after_main_content %}
+			{% endblock %}
 		</div>
+	{% block footer_scripts_init %}
+		<script type="text/javascript">
+			$(document).ready(function(){
 
+				//Init core JS
+				App.init();
+
+			});
+		</script>
+	{% endblock %}
 	{% block footer_scripts %}
 	{% endblock %}
 </body>

@@ -1,0 +1,123 @@
+{# MD Dialog #}
+<div class="mdl-dialog mdl-dialog--avatar-selector" id="avatar-selector">
+	<div class="mdl-dialog__content">
+		<div class="mdl-dialog__header">
+			<span class="mdl-dialog__header-title">Select from My Teams</span>
+		</div>
+		<div class="mdl-dialog__body">
+			<div class="ls-avatar-selector">
+				<ul>
+					<li>
+						<a href="#">
+							<div class="avatar mdl-js-ripple-effect">
+								<img src="{{ basePath }}../assets/img/cvf.png" alt="Team">
+								<span class="mdl-ripple"></span>
+							</div>
+							<span class="name">Real Madrid</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="avatar mdl-js-ripple-effect">
+								<img src="{{ basePath }}../assets/img/barcelona.png" alt="Team">
+								<span class="mdl-ripple"></span>
+							</div>
+							<span class="name">PSG</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="avatar mdl-js-ripple-effect">
+								<img src="{{ basePath }}../assets/img/team1.png" alt="Team">
+								<span class="mdl-ripple"></span>
+							</div>
+							<span class="name">Barcelona</span>
+						</a>
+					</li>
+					<li class="selected">
+						<a href="#">
+							<div class="avatar mdl-js-ripple-effect">
+								<img src="{{ basePath }}../assets/img/real-madrid.png" alt="Team">
+								<span class="mdl-ripple"></span>
+							</div>
+							<span class="name">Cetla Vigo long text</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="avatar mdl-js-ripple-effect">
+								<img src="{{ basePath }}../assets/img/psg.png" alt="Team">
+								<span class="mdl-ripple"></span>
+							</div>
+							<span class="name">Real Madrid</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="avatar mdl-js-ripple-effect">
+								<img src="{{ basePath }}../assets/img/team2.png" alt="Team">
+								<span class="mdl-ripple"></span>
+							</div>
+							<span class="name">PSG</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="avatar mdl-js-ripple-effect">
+								<img src="{{ basePath }}../assets/img/real-madrid.png" alt="Team">
+								<span class="mdl-ripple"></span>
+							</div>
+							<span class="name">Cetla Vigo long text</span>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div class="avatar mdl-js-ripple-effect">
+								<img src="{{ basePath }}../assets/img/psg.png" alt="Team">
+								<span class="mdl-ripple"></span>
+							</div>
+							<span class="name">Real Madrid</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="mdl-dialog__footer">
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				CANCEL
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				SELECT
+			</button>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		//Init core JS
+		App.init();
+	});
+
+	/*mdl-dialog*/
+	//This code should be on a js component
+	$('[data-toggle="mdl-dialog"]').click(function( e ){
+		var target = $(this).data("target");
+		$(target).addClass("mdl-dialog--show");
+
+		e.stopPropagation();
+	});
+
+	//Dialog close button
+	$(".mdl-dialog-close").click(function( e ){
+		var dialog = $(this).parents(".mdl-dialog");
+		dialog.removeClass("mdl-dialog--show");
+	});
+
+	//Hide dialog when click outside
+	$(document).on("click",function( e ){
+		if ( !$(e.target).closest(".mdl-dialog__content").length ) {
+			$(".mdl-dialog").removeClass('mdl-dialog--show');
+		}
+	});
+</script>

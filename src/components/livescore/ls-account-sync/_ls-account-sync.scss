@@ -1,0 +1,100 @@
+.ls-account-sync{
+
+	&__header{
+		background-color: $ls-color-white;
+		display: flex;
+
+		.user-avatar{
+			padding: 15px 13px 15px 20px;
+			flex: 0 0 66px;
+			
+			.img-rounded{
+				width: 66px;
+				height: 66px;
+				overflow: hidden;
+				border-radius: 50%;
+			}
+
+			img{
+				max-width: 100%;
+				max-height: 100%;
+			}
+		}
+
+		.user-name{
+			display: flex;
+			align-items: center;
+			font-weight: $ls-font-weight-light;
+			font-size: ls-font-size(5px,'large');
+		}
+	}
+
+	&__body{
+		padding: 20px;
+		background-color: $ls-account-sync-body-color;
+	}
+
+	&__title{
+		font-weight: $ls-font-weight-light;
+		font-size: ls-font-size(5px,'large');
+		line-height: ls-font-size(10px,'large');
+		display: block;
+		text-align: center;
+		margin: 10px 0 35px;
+	}
+
+	&__icons{
+		text-align: center;
+
+		> span{
+			color: $ls-account-sync-icons-color;
+			font-size: ls-font-size(27px, 'large');
+			margin: 0 7px;
+		}
+	}
+
+	&__success-text{
+		text-align: center;
+		color: $ls-green-active-color;
+		font-size: ls-font-size(4px, 'large');
+		font-weight: $ls-font-weight-light;
+		margin: 8px 0 20px;
+
+		.icon{
+			margin-right: 8px;
+			vertical-align: middle;
+		}
+	}
+
+	&__list{
+		text-align: center;
+		margin-bottom: 25px;
+
+		ul{
+			display: inline-block;
+			padding: 0;
+			list-style: none;
+			text-align: left;
+		}
+
+		li{
+			font-size: $ls-font-size-large;
+			line-height: ls-font-size(10px, 'large');
+			font-weight: $ls-font-weight-light;
+			color: $ls-account-sync-list-text-color;
+
+			.icon{
+				color: $ls-account-sync-list-icons-color;
+				margin-right: 8px;
+			}
+		}
+	}
+
+	&__text{
+		text-align: center;
+		font-size: ls-font-size(2px);
+		line-height: ls-font-size(5px,'large');
+		font-weight: $ls-font-weight-light;
+		display: block;
+	}
+}
