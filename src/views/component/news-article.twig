@@ -1,0 +1,16 @@
+{% extends "layouts/default-layout.twig" %}
+
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = '2014 World Cup : five questions regarding the french team players list for Brazil' %}
+{% set ls_header_switch = false %}
+{% set ls_header_brand_logo = true %}
+
+{% set main_content %}
+    {% include 'blocks/news/news_article.twig' %}
+    {% include 'blocks/news/news_most_recent.twig' %}
+    {% include 'blocks/placeholders/placeholder_news_bottom.twig' %}
+
+
+{% endset %}

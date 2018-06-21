@@ -1,0 +1,130 @@
+.ls-match-prediction {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+
+  /*Make prediction*/
+  .make-prediction{
+    background-color: $ls-color-white;
+    padding: 16px;
+
+    .title{
+      font-size: ls-font-size(3px,'large');
+      display: block;
+      text-align: center;
+      margin-bottom: 8px;
+      margin-top: 20px;
+    }
+
+    .description{ 
+      display: block;
+      font-size: ls-font-size(1px,'small');
+      color: darken($ls-color-white, 20%);
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .row{
+
+      .cell{
+        text-align: center;
+
+        &__option {
+          padding-left: 3px;
+          padding-right: 3px;
+
+          .mdl-button--option{
+            text-align: center;
+            margin: 0 auto 9px;
+            border-radius: 4px;
+            background-color: darken($ls-color-white, 8%);
+            max-width: 100px;
+            width: 100%;
+            height: 40px;
+            margin-bottom: 9px;
+            box-sizing: border-box;
+          }
+
+          .name{
+            text-align: center;
+            display: block;
+            color: lighten($ls-text-color, 10%);
+          }
+
+          &--selected{
+
+            .mdl-button--option{
+              border:3px solid $ls-green-active-color;
+            }
+          }
+        }
+
+        &__team-form-title {
+          font-weight: $ls-font-weight-medium;
+          padding-bottom: 0;
+        }
+      }
+
+      &__team-forms {
+
+        .cell {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .team-form {
+            display: inline-block;
+            text-decoration: none;
+            min-width: 20px;
+            height: 20px;
+            line-height: 22px;
+            font-size: $ls-font-size-base;
+            margin-right: 1px;
+            color: $ls-color-white;
+            font-weight: 300;
+            border-radius: 6px;
+
+            &--draw {
+              background-color: darken($ls-grey-contrast, 5%);
+            }
+
+            &--won {
+              background-color: $ls-green-active-color;
+            }
+
+            &--lost {
+              background-color: $ls-red-draw;
+            }
+          }
+
+          &__title {
+
+            span {
+              font-size: ls-font-size(2px,'small');
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /*Prediction chart*/
+  .prediction-chart {
+    background: url("#{$ls-img-path}/green-field-horizontal.png");
+    padding: 20px;
+
+    @media #{$ls-retina} {
+      background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+      background-size: 49px auto;
+    }
+
+    .title {
+      display: block;
+      color: rgba($ls-color-white, 0.57);
+      font-size: ls-font-size(2px,'large');
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 5px;
+    }
+  }
+}

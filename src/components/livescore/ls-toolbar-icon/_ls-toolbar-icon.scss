@@ -1,0 +1,34 @@
+.ls-toolbar-icon{
+
+	.mdl-layout__header &{
+		padding: 0 8px;
+		display: flex;
+		justify-content: center;
+	  align-items: center;
+	  height: 100%;
+		color: lighten($ls-text-color, 50%);
+
+		&.is-active {
+			color: $ls-green-active-color;
+		}
+	}
+
+	.icon{
+		font-size: ls-font-size(4px,'large');
+  	vertical-align: middle;
+	}
+
+	.text{
+		font-weight: 400;
+		font-size: ls-font-size(1px,'large');
+		line-height: 17px;
+
+		small{
+			font-size: $ls-font-size-small;
+		}
+	}
+
+	.icon + .text, .text + .icon{
+		margin-left: 5px;
+	}
+}

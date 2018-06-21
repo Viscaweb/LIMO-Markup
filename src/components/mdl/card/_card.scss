@@ -1,0 +1,14 @@
+.mdl-card--full {
+  width: 100%;
+  max-width: 100%;
+}
+
+.mdl-card__actions--right {
+	text-align: right;
+}
+
+.mdl-card__supporting-text--scroll {
+	height: $card-supporting-text-scroll-height;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}

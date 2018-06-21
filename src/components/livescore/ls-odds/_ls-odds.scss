@@ -1,0 +1,139 @@
+.ls-odds {
+  background: $ls-color-white;
+  font-size: 12px;
+
+  a {
+    display: block;
+    text-decoration: none;
+    color: $ls-odds-link-color;
+    font-weight: inherit;
+  }
+
+  &.mdl-list > li {
+    > a {
+      color: $ls-odds-link-color;
+    }
+  }
+
+  .row {
+    padding: 0;
+
+    .cell {
+      padding: 8px 0;
+      border-right:$ls-list-border;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__bookmaker {
+        padding: 3px 10px;
+        justify-content: flex-start;
+
+        img {
+          max-width: 60px;
+          height: auto;
+          margin-right: $ls-odds-img-margin;
+        }
+      }
+
+      &__odds {
+        flex: 0 0 50px;
+        position: relative;
+
+        &--arrow {
+          position: absolute;
+          top: 9px;
+          left: 1px;
+          font-size: 9px;
+
+          .icon-arrow-down {
+            color:#C80000;
+          }
+          .icon-arrow-up {
+            color:#7AB748;
+          }
+        }
+
+
+        &--won {
+          background: $ls-color-event-won-bg;
+        }
+
+        &--lost {
+          background: $ls-color-event-lost-bg;
+        }
+
+        &--best {
+          font-weight: 600;
+        }
+
+      }
+    }
+
+    &--head {
+      background: $ls-color-white !important;
+      color: lighten($ls-text-color, 10%);
+
+      .cell {
+        padding: 4px 0;
+
+      }
+    }
+  }
+}
+
+.ls-odds-tabs {
+
+  .row {
+
+    .cell {
+
+      &__player {
+        align-items: stretch;
+      }
+
+      &__player-odds {
+        flex-flow: column;
+        flex:0 0 184px ;
+        padding: 0;
+
+        .row {
+
+          .cell {
+            flex: 0 0 50px;
+            box-sizing: border-box;
+
+            &__bookmaker {
+              flex: 0 0 35px;
+              padding:0 5px;
+
+              span {
+                width: 100%;
+                overflow: hidden;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &--head {
+
+      .cell {
+        white-space: normal;
+        box-sizing: border-box;
+        text-align: center;
+        line-height: 12px;
+        padding: 3px 3px;
+
+        &__bookmaker {
+          flex: 0 0 35px;
+        }
+      }
+    }
+  }
+}
+
+.ls-odds-tabs {
+  height: auto;
+}

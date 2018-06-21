@@ -1,0 +1,127 @@
+.ls-user-my-information{
+
+	&__header{
+		background-color: $ls-color-white;
+		position: relative;
+		text-align: center;
+		padding: 32px 0 22px;
+
+		&:before{
+			position: absolute;
+			content: "";
+			display: block;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 80px;
+			background: url("#{$ls-img-path}/green-field-horizontal.png");
+			z-index: 1;
+	    
+	    @media #{$ls-retina} {
+	      background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+	      background-size: 49px auto;
+	    }
+		}
+
+		.user-avatar{
+			display: inline-block;
+			z-index: 2;
+			position: relative;
+			
+			.img-rounded{
+				width: 112px;
+				height: 112px;
+				overflow: hidden;
+				border-radius: 50%;
+				position: relative;
+				z-index: 2;
+				background-color:#f6f6f6;
+
+				> a{
+					display: block;
+					border-radius: 50%;
+					background-color: rgba(0, 0, 0, 0.32);
+					height: 68px;
+					width: 68px;
+					margin-left: -34px;
+					position: absolute;
+					left: 50%;
+					bottom: -36px;
+					padding-top: 9px;
+					text-align: center;
+					z-index: 1;
+					outline: none;
+					overflow: hidden;
+
+					span{
+						color: $ls-color-white;
+						font-size: $ls-user-myinfo-avatar-icon-size;
+					}
+				}
+
+				&:after{
+					content: "";
+					border-radius: 50%;
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.32) inset;
+				}
+			}
+
+			img{
+				max-width: 100%;
+				max-height: 100%;
+				min-height: 100%;
+			}
+		}
+
+		.user-name{
+			font-weight: $ls-font-weight-thin;
+			font-size: ls-font-size(5px,'large');
+		}
+
+		.mdl-menu{
+			left: 0;
+			
+			&__container, &__outline{
+				width: $ls-user-myinfo-avatar-menu-width !important;
+			}
+
+			&__container{
+				top: 98px !important;
+				right: 50% !important;
+				margin-right: -($ls-user-myinfo-avatar-menu-width / 2);
+			}
+		}
+	}
+
+	&__body{
+		padding: 20px;
+	}
+
+	.mdl-textfield{
+		display: block;
+		width: 100%;
+		padding: $ls-login-register-textfield-size 0;
+	}
+
+	.mdl-textfield__label {
+		top: ($input-text-padding + $ls-login-register-textfield-size);
+
+		&:after {
+			bottom: $ls-login-register-textfield-size;
+		}
+	}
+
+	.mdl-button--change-password{
+		margin-top: 15px;
+	}
+
+	.form-intro-text {
+		margin-top:20px;
+		font-weight: 200;
+	}
+}

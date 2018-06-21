@@ -1,0 +1,188 @@
+.ls-match-listing-footus {
+  font-size: 12px;
+  overflow: hidden;
+  background: $ls-color-white;
+  border-top: 1px solid darken($ls-list-border-color, 11.2%);
+
+
+  .row--match {
+    box-sizing: border-box;
+    padding: 0;
+
+    &.event-live {
+
+      .cell {
+
+        &__score {
+          color: $ls-color-live;
+        }
+
+        &__time {
+          color: $ls-color-live;
+
+          &:before {
+            content: '';
+            display: block;
+            float: left;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: $ls-color-live;
+            margin-right: 4px;
+            @extend .blinking;
+          }
+        }
+      }
+
+      &.paused {
+        .match-list {
+
+          &__time {
+
+            &:before {
+              background: darken($ls-color-white, 30%);
+              @extend .animation-reset;
+            }
+          }
+        }
+      }
+    }
+
+    &.event-won {
+      background: $ls-color-event-won-bg;
+    }
+
+    &.event-lost {
+      background: $ls-color-event-lost-bg;
+    }
+
+    &.event-draw {
+      background: $ls-color-event-draw-bg;
+    }
+
+
+    .cell {
+      border-right: $ls-list-border;
+      padding: 0;
+
+      &__time {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__score {
+        flex: 0 0 30px; /* Foot US */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__opposition {
+        display: flex;
+        flex: 1;
+        flex-flow: column;
+
+        > .row {
+          display: flex;
+        }
+
+        &__title {
+          flex:1;
+          position: relative;
+          padding: 5px 5px 5px 5px; /* Foot US */
+        }
+
+        span {
+          display: block;
+          overflow-x: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+      }
+
+      &__points {
+        flex:0 0 112px;  /* Foot US */
+        display: flex;
+        flex-flow: column;
+
+        > .row {
+          display: flex;
+        }
+      }
+
+      &__point {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height:27px;
+      }
+
+      &__point-detail {
+        position: absolute;
+        right: 0px;
+        bottom: -7px;
+        font-size: 6px;
+        margin: 3px;
+      }
+
+      .win {
+        font-weight: 500;
+      }
+    }
+  }
+
+  /*Border */
+
+
+  .row--match {
+    border-top: none;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .cell {
+      border-right: $ls-list-border;
+    }
+
+    .cell__time {
+      border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+
+    }
+
+    .cell__score {
+      border-right: 1px solid darken($ls-list-border-color, 11.2%);
+    }
+
+    .cell__opposition > .row{
+      border-bottom: $ls-list-border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    .cell__opposition {
+      border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+      border-right: none;
+    }
+    .cell__opposition__title {
+      border-right: 1px solid darken($ls-list-border-color, 11.2%);
+    }
+
+    .cell__points > .row {
+      border-bottom: $ls-list-border;
+
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+    .cell__points {
+      border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+      border-right: none;
+    }
+  }
+}
+

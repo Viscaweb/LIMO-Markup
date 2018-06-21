@@ -1,0 +1,115 @@
+.ls-head-to-head {
+
+  .row {
+
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .circle {
+        border-radius: 50%;
+        background-color: lighten($ls-text-color, 13.1%);
+        color: $ls-color-white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+
+        &--first {
+          width: $ls-match-head-to-head-first-size;
+          height: $ls-match-head-to-head-first-size;
+        }
+
+        &--second {
+          width: $ls-match-head-to-head-second-size;
+          height: $ls-match-head-to-head-second-size;
+        }
+
+        &--third {
+          width: $ls-match-head-to-head-third-size;
+          height: $ls-match-head-to-head-third-size;
+        }
+
+        &--fourth {
+          width: $ls-match-head-to-head-fourth-size;
+          height: $ls-match-head-to-head-fourth-size;
+          font-size:12px;
+        }
+
+        &--five {
+          width: $ls-match-head-to-head-fifth-size;
+          height: $ls-match-head-to-head-fifth-size;
+          font-size:12px;
+        }
+
+        &--gray1 {
+          background-color: darken($ls-color-white, 13.1%);
+
+          &.circle--bordered {
+            border-color: darken($ls-color-white, 13.1%);
+          }
+        }
+
+        &--gray2 {
+          background-color: darken($ls-color-white, 29%);
+
+          &.circle--bordered {
+            border-color: darken($ls-color-white, 29%);
+          }
+        }
+
+        &--gray3 {
+          background-color: darken($ls-color-white, 51%);
+
+          &.circle--bordered {
+            border-color: darken($ls-color-white, 51%);
+          }
+        }
+
+        &--success {
+          background-color: $ls-primary-color;
+
+          &.circle--bordered {
+            border-color: $ls-green-active-color;
+          }
+        }
+
+        &--danger {
+          background-color: $ls-color-live;
+
+          &.circle--bordered {
+            border-color: $ls-color-live;
+          }
+        }
+
+        &--bordered {
+          background-color: transparent;
+          border-width: 4px;
+          border-style: solid;
+          color: $ls-text-color;
+        }
+      }
+    }
+
+    &--infos {
+
+      .cell {
+        padding-top:0;
+
+        &.win{
+          color:$ls-primary-color;
+        }
+
+        &.draw{
+          color:lighten($ls-text-color, 32.4%);
+        }
+
+        &.lost{
+          color:$ls-color-live;
+        }
+      }
+    }
+  }
+}
+

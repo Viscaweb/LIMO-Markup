@@ -1,0 +1,156 @@
+.ls-player-statistics{
+
+  .player-stats{
+    background: url("#{$ls-img-path}/green-field-horizontal.png");
+
+    @media #{$ls-retina} {
+      background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+      background-size: 49px auto;
+    }
+
+    .top-stats, .bottom-stats{
+      display: flex;
+      align-items: stretch;
+    }
+
+    .bottom-stats{
+      border-top: 1px solid #84bc43;
+    }
+
+    .indicator{
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 100%;
+      text-align: center;
+      border-right: 1px solid #84bc43;
+      padding: 30px 0 20px;
+
+      .icon{ 
+        text-align: center;
+
+        > span{
+          color: #abd07b;
+          font-size: ls-font-size(21px,'large');
+        }
+      }
+
+      .name{
+        color: rgba(255, 255, 255, 0.57);
+        font-weight: $ls-font-weight-light;
+      }
+
+      .value{
+        margin-top: 15px;
+        color: $ls-color-white;
+        font-weight: $ls-font-weight-thin;
+        font-size: ls-font-size(23px,'large');
+        line-height: ls-font-size(23px,'large');
+      }
+
+      &:last-child{
+        border-right: 0;
+      }
+    }
+
+    .cards{
+      padding: 25px 15px;
+      flex-grow: 1;
+      flex-shrink: 1;
+      flex-basis: 100%;
+      display: flex;
+      align-items: center;
+
+      .name{
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 100%;
+        color: rgba(255, 255, 255, 0.57);
+        font-weight: $ls-font-weight-light;
+      }
+
+      .number{
+        display: flex;
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+        align-items: center;
+        justify-content: flex-end;
+
+        .value{
+          margin-right: 10px;
+          font-size: ls-font-size(11px, 'large');
+          line-height: ls-font-size(2px, 'large');
+          color: $ls-color-white;
+          font-weight: $ls-font-weight-light;
+        }
+
+        .card{
+          width: 14px;
+          height: 20px;
+
+          &--yellow{
+            background-color: #ffde00;
+          }
+
+          &--red{
+            background-color: #dc0000;
+          }
+        }
+      }
+
+      & + .cards{
+        border-left: 1px solid #84bc43;
+      }
+    }
+  }
+
+  .ls-list{
+    background-color: $ls-color-white;
+
+    .row{
+      padding: 0;
+
+      .cell{
+        border-right: $ls-list-border;
+        padding: 9px 0;
+
+        &__league{
+          display: flex;
+          align-items: center;
+          padding-left: 7px;
+          padding-right: 7px;
+          overflow: hidden;
+
+          > img{
+            max-height: 17px;
+            max-width: 100%;
+            min-width: 25px;
+            margin-right: 10px;
+          }
+
+          .name{
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+
+        &__minutes, &__shirts, &__goals, &__yellow_cards, &__red_cards{          
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 40px;
+          text-align: center;
+        }
+      }
+
+      &--head{
+
+        .cell{
+          padding-top: 5px;
+          padding-bottom: 5px;
+          background-color: $ls-color-white;
+          font-weight: $ls-font-weight-light;
+        }
+      }
+    }
+  }
+}

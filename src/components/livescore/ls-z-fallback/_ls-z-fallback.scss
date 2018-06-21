@@ -1,0 +1,2117 @@
+// GENERAL ///////////////////////////
+.no-flexbox, .flexbox-legacy, .flexboxtweener {
+
+  // Custom strcutural changes (LIMO-260) 
+    // Drawer.
+    .mdl-layout__drawer {
+      left: (-$layout-drawer-width - 10px);
+      transform: none;
+
+      &.is-visible {
+        left: 0;
+        transform: none;
+      }
+    }
+  // End of LIMO-260
+  
+  .mdl-layout__header {
+    display: block;
+    position: fixed;
+    top: 0;
+  }
+
+  .mdl-layout__header-row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+    .mdl-navigation__link {
+      display: inline-block;
+    }
+
+    .mdl-layout-brand-logo,
+    .mdl-layout-title,
+    .mdl-layout-spacer,
+    .mdl-navigation {
+      display: table-cell;
+    }
+
+    .mdl-navigation {
+      text-align: right;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+  }
+
+  .mdl-layout-brand-logo {
+    width: $ls-brand-logo-size;
+
+    @media #{$ls-high-dpi}, screen and (max-device-width: 767px) {
+      width: $ls-brand-logo-size + 10px;
+    }
+  }
+
+  .mdl-layout-title {
+    padding-left: 15px;
+    vertical-align: middle;
+  }
+
+  .mdl-layout-spacer {
+    width: 0;
+  }
+
+  .mdl-layout__header .ls-toolbar-icon {
+    padding: 0 6px;
+  }
+
+  .mdl-layout__header .mdl-switch {
+    display: inline-block;
+    width: auto;
+  }
+
+  .mdl-layout__content {
+    width: 100%;
+  }
+
+  .mdl-layout__content {
+    width: 100%;
+    padding-top: $layout-mobile-header-height;
+  }
+
+  .mdl-layout--fixed-tabs .mdl-layout__content, 
+  .has-tabs .mdl-layout__content {
+    padding-top: $layout-mobile-header-height + $layout-tab-bar-height;
+  }
+
+  .mdl-layout__tab-bar {
+    white-space: nowrap;
+  }
+
+  .mdl-layout__tab {
+    display: inline-block;
+    float: none;
+  }
+
+  .ls-list {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+
+    .row {
+      width: 100%;
+      display: table-row;
+      padding: 0 !important;
+
+      .cell__team--team1 {
+        text-align: right;
+      }
+
+      .cell__team--team2 {
+        text-align: left;
+      }
+    }
+
+    .cell {
+      display: table-cell !important;
+      vertical-align: middle;
+      text-align: center;
+      height: 100%;
+    }
+  }
+
+  .ls-divider {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    padding: 0;
+
+    &__title,
+    &__spacer,
+    &__right-nav {
+      display: table-cell;
+    }
+
+    &__title {
+      padding-left: 13px;
+      padding-right: 4px;
+    }
+
+    // Headings divider
+    &--h {
+      text-align: center;
+
+      .ls-divider__title {
+        display: block;
+      }
+    }
+
+    .row {
+      display: flex;
+    }
+
+    .cell {
+      display: flex;
+
+      &__divider-title {
+        text-align: left;
+      }
+
+      &__league-name {
+        text-align: left;
+      }
+
+      &__flag {
+        width: 30px;
+        text-align: left;
+
+        @media #{$ls-high-dpi}, screen and (max-device-width: 767px) {
+          width: 40px;
+        }
+      }
+
+      &__standing-icon {
+        text-align: right;
+      }
+
+      &__right-nav {
+        display: table-cell;
+        text-align: right;
+      }
+    }
+
+    &__right-nav {
+      display: table-cell;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    &__sport-icon {
+      width: 45px;
+      display: table-cell;
+
+      > a {
+        display: block;
+      }
+    }
+
+    &.ls-divider--inline {
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+
+      .ls-divider {
+
+        &__title,
+        &__spacer,
+        &__description,
+        &__right-nav {
+          display: inline-block;
+          vertical-align: top;
+        }
+
+        &__right-nav {
+          float: right;
+        }
+      }
+    }
+  }
+
+  // COUNTRIES LIST ///////////////////////////
+
+  .ls-list-countries {
+
+    .cell {
+
+      &__flag {
+        width: 34px !important;
+        padding: 10px !important;
+        border-top: 1px solid $ls-list-border-color;
+
+      }
+      &__country {
+        width: 100% !important;
+        text-align: left;
+        padding-left: 5px !important;
+        border-top: 1px solid $ls-list-border-color;
+
+      }
+      &__badge {
+        width: 120px;
+        padding-bottom: 15px !important;
+        border-top: 1px solid $ls-list-border-color;
+
+        > span {
+          display: block !important;
+          min-width: 0 !important;
+          width: 45px;
+          float: left;
+          padding-top: 3 !important;
+
+          &:after {
+            left: 15px;
+          }
+        }
+
+        > span + span {
+          &:after {
+            left: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  // MATCH LISTING ///////////////////////////
+
+  .ls-list-matches {
+
+    .row {
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+    }
+    .row > a {
+      width: 100%;
+      display: table-row !important;
+      padding: 0 !important;
+    }
+
+    .cell {
+
+      &__time {
+        width: 46px !important;
+      }
+      &__team {
+        width: 100% !important;
+
+        span {
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
+      }
+      &__score {
+        width: 54px !important;
+      }
+      &__caret {
+        width: 20px !important;
+      }
+    }
+  }
+
+  // MATCH DETAILS ///////////////////////////
+
+  .ls-list-details {
+
+    .row--head {
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+
+      .cell__team {
+        width: 100%;
+        display: table-row;
+        padding: 0 !important;
+        text-align: center;
+        line-height: 34px;
+        vertical-align: middle;
+      }
+
+      .versus {
+        padding: 0 4px;
+      }
+    }
+
+    .row {
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+
+      &--score {
+        border-top: 1px solid #fff !important;
+      }
+
+      .cell {
+
+        &__details {
+          width: 50% !important;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          padding-right: 5px;
+          box-sizing: border-box;
+          text-align: left;
+          border-right: 5px solid #fff;
+
+          &-icon {
+            width: 30px;
+          }
+          &-infos {
+            text-align: left;
+            padding-left: 10px;
+          }
+        }
+        &__score-box {
+          .score-home,
+          .versus,
+          .score-away {
+            display: inline-block !important;
+          }
+        }
+      }
+    }
+  }
+
+  // MATCH COMMENT ///////////////////////////
+
+  .ls-list-comments {
+
+    .row {
+      display: table !important;
+    }
+
+    .row {
+      &--visual-block span,
+      &--visual-block img {
+        display: block;
+      }
+    }
+
+    .cell {
+
+      &__comment-minute {
+        width: 40px !important;
+      }
+      &__comment-icon {
+        width: 40px !important;
+      }
+      &__comment-comment {
+        text-align: left;
+      }
+    }
+
+  }
+
+  // MATCH INCIDENT ///////////////////////////
+
+  .ls-list-incidents {
+
+    .row--head {
+
+      .cell__team {
+        border-top: 1px solid $ls-list-border-color;
+
+        &--team1 {
+          padding-left: 10px;
+          span {
+            float: left;
+          }
+        }
+        &--team2 {
+          padding-right: 10px;
+          span {
+            float: right;
+          }
+        }
+      }
+    }
+
+    .row--separator {
+      display: block;
+      width: 240%;
+      height: 30px;
+
+      span {
+        display: block;
+        text-align: center;
+        width: 100% !important;
+        line-height: 30px;
+      }
+    }
+
+    .row--empty {
+      display: block;
+      width: 240%;
+      height: $ls-match-incidents-empty-row-height;
+
+      span {
+        display: block;
+        text-align: center;
+        width: 100% !important;
+        line-height: $ls-match-incidents-empty-row-height;
+      }
+    }
+
+    .cell__team {
+      width: 42% !important;
+      border-top: 1px solid $ls-list-border-color;
+
+      // Team 1
+      &--team1 .cell__player {
+        float: left;
+        span {
+          width: 100%;
+          text-align: right;
+          float: right;
+        }
+      }
+      &--team1 .cell__player--substitution {
+        float: left;
+        text-align: right;
+
+        span {
+          display: block;
+        }
+      }
+      &--team1 .cell__incident-icon {
+        float: right;
+      }
+
+      //Team 2
+      &--team2 .cell__player {
+        float: left;
+
+        span {
+          width: 100%;
+          text-align: left;
+          float: left;
+        }
+      }
+      &--team2 .cell__player--substitution {
+        float: left;
+
+        span {
+          display: block;
+        }
+      }
+      &--team2 .cell__incident-icon {
+        float: left;
+      }
+    }
+
+    .cell__incident-minute {
+      width: 16% !important;
+      border-top: 1px solid $ls-list-border-color;
+    }
+
+    .cell__player {
+      width: 80% !important;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .cell__incident-icon {
+      width: 20% !important;
+    }
+  }
+
+  // STANDING TABLE ///////////////////////////
+
+  .ls-standing-table {
+    background: $ls-color-white;
+
+    &--left {
+      width: 50% !important;
+      float: left;
+      border-bottom: 1px solid $ls-dialog-border-color;
+
+      .row {
+        border: none;
+      }
+
+      .cell {
+        border: none;
+
+        &__rank {
+          width: 25px !important;
+          border-top: 1px solid $ls-dialog-border-color;
+
+        }
+        &__stat {
+          width: 20px !important;
+          border-top: 1px solid $ls-dialog-border-color;
+        }
+        &__team {
+          padding: 4px 0 5px 0 !important;
+          width: 100%;
+          border-top: 1px solid $ls-dialog-border-color;
+
+          &--flag {
+            float: left;
+            padding: 0 !important;
+            width: 34%;
+          }
+          &--title {
+            padding-bottom: 1px !important;
+            a {
+              width: 100%;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              float: left;
+
+              span {
+                width: 100%;
+                text-align: left;
+                float: left;
+              }
+            }
+          }
+        }
+        &__total-points {
+          width: 32px !important;
+          border-top: 1px solid $ls-dialog-border-color;
+        }
+      }
+
+      .row--head {
+
+        .cell {
+          border-top: none;
+        }
+        .cell__team {
+          padding-bottom: 6px !important;
+        }
+      }
+    }
+
+    &--right {
+      display: block;
+      width: 50% !important;
+      float: left;
+
+      .row {
+        width: 100%;
+        display: table-row;
+        padding: 0!important;
+
+        &--head {
+
+          .cell {
+            line-height: 23px;
+          }
+        }
+      }
+
+      .cell {
+        width: 32px;
+        display: table-cell !important;
+      }
+    }
+  }
+
+  // ODDS ///////////////////////////
+
+  .ls-odds {
+    border-bottom: 1px solid $ls-list-border-color;
+
+    .cell {
+      border-top: 1px solid $ls-list-border-color;
+
+      &__odds {
+        width: 50px !important;
+        min-width: 50px;
+      }
+      &__bookmaker img {
+        float: left
+      }
+    }
+  }
+
+  .ls-odds-tabs {
+    border-bottom: 1px solid $ls-list-border-color;
+
+    .cell__bookmaker {
+      width: 71px !important;
+      min-width: 71px;
+    }
+  }
+
+  // TEAM HEADER ///////////////////////////
+
+  .ls-team-header {
+
+    .row {
+      display: table !important;
+      padding: 5px !important;
+    }
+
+    .cell {
+
+      &__team--flag {
+        width: 86px !important;
+      }
+
+      &__team--infos {
+        text-align: left;
+
+        .team-title {
+
+          .favorite-star {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+
+  // EMPTY ///////////////////////////
+
+  .ls-empty {
+    text-align: center;
+    display: block;
+    width: 100%;
+
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  // MATCH LINEUP ///////////////////////////
+
+  .ls-grid {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    height: 100%;
+
+    .row {
+      width: 100%;
+      padding: 0 !important;
+      text-align: center;
+      height: 50px;
+    }
+
+    .cell {
+      display: table-cell !important;
+      vertical-align: middle;
+      text-align: center;
+      height: 100%;
+
+      .player__number {
+        text-align: center;
+        margin: auto;
+      }
+
+      .player__name {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .ls-substitute {
+  }
+
+  // TEAM SCORE ///////////////////////////
+
+  .ls-list-match-score-header {
+    border-bottom: 1px solid $ls-dialog-border-color;
+
+    .row {
+      padding: 0 10px !important;
+      box-sizing: border-box;
+
+      .cell {
+
+        &__flag {
+          width: 43px !important;
+        }
+        &__team {
+          width: 100% !important;
+
+          span {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+        &__score-box {
+          width: 72px !important;
+          padding: 0 10px;
+
+        }
+        .versus {
+          padding: 0;
+        }
+
+      }
+    }
+  }
+
+  // OTHER SPORT ///////////////////////////
+
+  //FOOT US
+  .ls-match-listing-footus,
+  .ls-match-listing-rugby,
+  .ls-match-listing-tennis {
+
+    .row {
+      display: table;
+
+      .cell {
+
+        &__time {
+          width: 46px;
+          box-sizing: border-box;
+          padding-left: 5px;
+
+          &:before {
+            margin-top: 5px !important;
+          }
+        }
+
+        &__opposition__title {
+          width: 100%;
+          max-width: 100%;
+          text-align: left;
+          box-sizing: border-box;
+          padding-right: 5px;
+
+          span {
+            display: block;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+          }
+        }
+
+        &__score {
+          width: 30px;
+          min-width: 30px;
+        }
+      }
+
+      .cell__points {
+        display: table !important;
+        table-layout: fixed;
+        width: 100%;
+
+        > .row {
+          display: table-row !important
+
+        }
+        .cell__point {
+          width: 100%;
+          min-width: 100%;
+          border-bottom: 1px solid $ls-list-border-color;
+        }
+
+        > .row:last-child {
+
+          .cell__point {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+  }
+
+  .ls-match-listing-baseball {
+
+    &--left {
+
+      width: 55%;
+
+      .row--empty {
+
+        .cell {
+          height: 20px;
+          line-height: 20px;
+        }
+      }
+
+      .row {
+        display: table !important;
+        width: 100%;
+        table-layout: fixed;
+
+        .cell {
+
+          &__time {
+            width: 46px !important;
+            box-sizing: border-box;
+            padding-left: 5px;
+
+            &:before {
+              margin-top: 5px !important;
+            }
+          }
+
+          &__opposition__title {
+            width: 100%;
+            max-width: 100%;
+            text-align: left;
+            box-sizing: border-box;
+            padding-right: 5px;
+
+            span {
+              display: block;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+          }
+
+          &__score {
+            width: 30px;
+            min-width: 30px;
+          }
+        }
+      }
+    }
+
+    &--right {
+
+      .row--head {
+        .cell {
+          height: 20px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+
+  //ls-players-standing
+  .ls-players-standing {
+
+    .ls-divider {
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+
+      .cell__flag {
+        display: table-cell;
+        vertical-align: middle;
+        width: 30px;
+      }
+    }
+
+    .top-players {
+
+      .player-info {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+
+        .player {
+          display: table-cell;
+
+          .image {
+            display: inline-block;
+
+            > img {
+              max-height: calc(100% - 7px);
+              padding-top: 7px;
+            }
+          }
+        }
+      }
+
+      .player-scores {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+
+        .player-score {
+          display: table-cell;
+        }
+      }
+    }
+
+    .ls-list {
+
+      .row {
+
+        .cell {
+
+          &__num {
+            width: 38px;
+          }
+
+          &__player {
+            text-align: left;
+          }
+
+          &__goals, &__first, &__pen {
+            width: 46px;
+          }
+        }
+      }
+    }
+  }
+
+  //ls-player-header
+  .ls-player-header {
+    border-bottom: 1px solid darken($ls-list-border-color, 11.2%);
+
+    .row {
+
+      .cell {
+
+        &__player--image {
+          padding: 13px 0 13px 15px;
+          width: 99px;
+        }
+
+        &__player--info {
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  //ls-player-information
+  .ls-player-information {
+
+    .row {
+
+      .cell {
+        border-top: 1px solid $ls-list-border-color;
+
+        &__record {
+          text-align: left;
+        }
+
+        &__value {
+          text-align: right;
+        }
+
+        .club {
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  //ls-team-cards-statistics
+  .ls-team-cards-statistics {
+
+    .ls-list {
+
+      .row {
+
+        .cell {
+          border-bottom: 1px solid $ls-list-border-color;
+
+          &__name {
+            text-align: left;
+          }
+
+          &__yellow_cards, &__red_cards {
+            width: 70px;
+          }
+        }
+
+        &--head {
+
+          .cell {
+            border-bottom: 1px solid $ls-list-border-color;
+          }
+        }
+      }
+    }
+  }
+
+  //ls-team-detailed-statistics
+  .ls-team-detailed-statistics {
+
+    .ls-list {
+
+      .row {
+
+        .cell {
+          border-bottom: 1px solid $ls-list-border-color;
+
+          &__name {
+            text-align: left;
+          }
+
+          &__value {
+            width: 70px;
+          }
+        }
+
+        &--head {
+
+          .cell {
+            border-bottom: 1px solid $ls-list-border-color;
+          }
+        }
+      }
+    }
+  }
+
+  //ls-team-goals-statistics
+  .ls-team-goals-statistics {
+
+    .goals-general {
+      box-sizing: border-box;
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+
+      .goals {
+        display: table-cell;
+      }
+    }
+
+    .ls-list.ls-list--goals-statistics {
+
+      .row {
+
+        .cell {
+          border-bottom: 1px solid $ls-list-border-color;
+
+          &__goals {
+            width: 44%;
+            position: relative;
+
+            .value {
+              position: absolute;
+              margin-top: -3px;
+            }
+
+            .bar {
+              box-sizing: border-box;
+              width: 100%;
+            }
+
+            &--conceded {
+              text-align: right;
+
+              .bar {
+                padding-right: 30px;
+
+                > div {
+                  float: right;
+                }
+              }
+
+              .value {
+                right: 10px;
+              }
+            }
+
+            &--scored {
+              text-align: left;
+
+              .bar {
+                float: left;
+                padding-left: 30px;
+              }
+
+              .value {
+                left: 10px;
+              }
+            }
+          }
+        }
+
+        &__half-time {
+          display: block;
+          width: 228%;
+          border-top-width: 0;
+
+          .cell {
+            display: block !important;
+          }
+        }
+
+        &--head {
+
+          .cell {
+            border-top: 1px solid $ls-list-border-color;
+            border-bottom: 1px solid $ls-list-border-color;
+          }
+        }
+      }
+    }
+  }
+
+  //ls-team-over-under-statistics
+  .ls-team-over-under-statistics {
+
+    .row {
+
+      .cell {
+        border-bottom: 1px solid $ls-list-border-color;
+
+        &__stat {
+
+          .graph {
+
+            .circle {
+              display: inline-block;
+              line-height: ($ls-team-over-under-stats-second-size - 7px);
+              width: $ls-team-over-under-stats-second-size;
+              height: $ls-team-over-under-stats-second-size;
+
+              &--first {
+                line-height: ($ls-team-over-under-stats-first-size - 7px);
+                height: $ls-team-over-under-stats-first-size;
+                width: $ls-team-over-under-stats-first-size;
+              }
+            }
+
+            .percent {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //ls-team-roster
+  .ls-team-roster {
+
+    .row {
+
+      .cell {
+        border-bottom: 1px solid $ls-list-border-color;
+
+        &__rank {
+          width: 38px;
+        }
+
+        &__player {
+          text-align: left;
+        }
+
+        &__number {
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  //ls-team-shirts
+  .ls-team-shirts {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+
+    .shirt {
+      display: table-cell;
+    }
+  }
+
+  //ls-match-statistics
+  .ls-possesion-graph {
+
+    .ls-col {
+      display: table-column;
+
+      &--value {
+        width: 15%;
+      }
+
+      &--graph {
+        width: 70%;
+      }
+    }
+
+    .row {
+
+      &--title {
+        display: block;
+        width: 666%;
+
+        > .cell {
+          display: block !important;
+        }
+      }
+
+      .cell {
+
+        &__graph {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  .ls-match-statistics-list {
+
+    > .row {
+
+      > .cell {
+
+        > .row {
+          display: table;
+
+          .cell {
+
+            &__value {
+              width: 50px;
+            }
+
+            &__graph {
+
+              &--home {
+
+                .bar {
+                  float: right;
+                }
+              }
+
+              &--away {
+
+                .bar {
+                  float: left;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //ls-list-favorite-sortable
+  .ls-list-favorite-sortable {
+
+    //Column definition
+    .ls-col {
+      display: table-column;
+
+      &--flag {
+        width: 40px;
+      }
+
+      &--team {
+        width: 80%;
+      }
+
+      &--drag, &--favorite {
+        width: 40px;
+      }
+    }
+
+    .row {
+
+      &__team {
+
+        .cell {
+          border-bottom: $ls-list-border;
+
+          &__flag {
+            text-align: left;
+            width: 40px;
+            box-sizing: content-box;
+          }
+
+          &__team {
+            text-align: left;
+          }
+
+          &__drag, &__favorite {
+            width: 40px;
+          }
+
+          &:first-child {
+            padding-left: 14px;
+          }
+
+          &:last-child {
+            padding-left: 10px;
+          }
+        }
+
+        &--placeholder {
+          display: none;
+        }
+
+        &.ui-sortable-helper {
+          width: 100% !important;
+
+          .cell__flag {
+            width: 40px;
+          }
+
+          .cell__drag, .cell__favorite {
+            width: 40px;
+          }
+
+          .cell__team {
+            width: 85%;
+          }
+        }
+      }
+
+      &--definition {
+
+        .cell {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  //match-betting-tips
+  .match-betting-tips {
+
+    .row {
+
+      .cell {
+        border-bottom: $ls-list-border;
+
+        &__img {
+          width: 50px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+
+          @media #{$ls-high-dpi}, screen and (max-device-width: 767px) {
+            width: 100px;
+          }
+        }
+
+        &__text {
+          padding: 20px 20px 20px 0;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  //ls-player-statistics
+  .ls-player-statistics {
+
+    .player-stats {
+      table-layout: fixed;
+      width: 100%;
+      display: table;
+
+      .top-stats {
+        display: table-row;
+      }
+
+      .bottom-stats {
+        display: block;
+        width: 300%;
+      }
+
+      .indicator, .cards {
+        display: table-cell;
+      }
+
+      .cards {
+        width: 10%;
+
+        .number {
+          float: right;
+
+          > span {
+            display: inline-block;
+          }
+        }
+      }
+    }
+
+    .ls-list {
+
+      .row {
+
+        .cell {
+          border-bottom: $ls-list-border;
+
+          &__league {
+            text-align: left;
+          }
+
+          &__minutes, &__shirts, &__goals, &__yellow_cards, &__red_cards {
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  //comments-widget
+  .comments-widget {
+
+    .comments {
+      display: block;
+    }
+
+    .comment {
+      box-sizing: border-box;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+
+      .row {
+
+        .cell {
+
+          &__avatar {
+            vertical-align: top;
+            width: 17%;
+          }
+
+          &__content {
+            text-align: left;
+          }
+        }
+
+        &__comment-actions {
+          display: block;
+          width: 590%;
+
+          .cell {
+            width: 10%;
+
+            &__left-actions {
+              text-align: left;
+
+              button {
+                text-align: left;
+              }
+            }
+
+            &__right-actions {
+              text-align: right;
+            }
+          }
+        }
+      }
+    }
+
+    .comment-compose {
+      display: table;
+      table-layout: fixed;
+
+      .comment-input {
+        display: table-cell;
+        vertical-align: top;
+      }
+
+      .comment-submit {
+        display: table-cell;
+        vertical-align: top;
+        width: 64px;
+      }
+    }
+  }
+
+  //ls-player-matches-listing
+
+  .ls-player-matches-listing {
+
+    .total-goals {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      box-sizing: border-box;
+
+      .title, .icon, .counter {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .icon {
+        width: 40px;
+      }
+
+      .counter {
+        width: 70px;
+      }
+    }
+
+    .ls-divider {
+      width: 100%;
+      display: table;
+      table-layout: fixed;
+
+      .cell__flag {
+        display: table-cell;
+        vertical-align: middle;
+        width: 30px;
+      }
+
+      &__right-nav {
+        vertical-align: middle;
+      }
+    }
+
+    .ls-list-matches {
+
+      .ls-col {
+        display: table-column;
+
+        &--date {
+          width: 45px;
+        }
+
+        &--minute {
+          width: 45px;
+        }
+      }
+
+      .row {
+        display: table-row;
+
+        .cell {
+          border-bottom: $ls-list-border;
+        }
+      }
+    }
+  }
+
+  //Snackbar
+  .mdl-snackbar {
+    display: none;
+    table-layout: fixed;
+
+    @media #{$ls-phone} {
+      left: 0;
+    }
+
+    &--active {
+      display: table;
+    }
+
+    &__icon {
+      display: table-cell;
+      vertical-align: middle;
+      width: 30px;
+
+      > span {
+        vertical-align: middle;
+      }
+
+      @media screen and (max-device-width: 350px) {
+        padding-left: 10px;
+      }
+    }
+
+    &__text {
+      display: table-cell;
+      width: 100%;
+      vertical-align: middle;
+      float: none;
+
+      @media screen and (max-device-width: 350px) {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+
+    &__action {
+      display: table-cell;
+      vertical-align: middle;
+      float: none;
+      width: 80px;
+
+      @media screen and (max-device-width: 350px) {
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 60px;
+      }
+    }
+  }
+
+  //match prediction
+  .ls-match-prediction {
+
+    .make-prediction {
+
+      .row {
+
+        &__team-forms {
+
+          .cell {
+
+            @media screen and (max-device-width: 350px) {
+              &__title {
+                width: 23%;
+              }
+            }
+
+            .team-form {
+              margin-right: -1px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Dialog
+  .mdl-dialog__content {
+    overflow: auto;
+    box-shadow: none;
+  }
+
+  .mdl-dialog__footer {
+    padding-bottom: 10px;
+  }
+
+  //Contest gift
+  .ls-contest-gifts {
+
+    &__list {
+
+      ul {
+        width: 100% !important;
+
+        .row {
+
+          .cell {
+
+            &__prize {
+              text-align: left;
+
+              &--image {
+                display: inline-block;
+                min-width: 50px;
+              }
+
+              &--title {
+                display: inline-block;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //ls-contest-grid-goals-statistics
+  .ls-contest-grid-goals-statistics {
+
+    .grid-stats {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+
+      &--rank {
+
+        .title, .icon, .values {
+          display: table-cell;
+        }
+
+        .title {
+
+        }
+
+        .icon {
+          width: 25px;
+        }
+
+        .values {
+          white-space: nowrap;
+        }
+      }
+
+      &--bottom {
+
+        .stat {
+          display: table-cell;
+
+          .title {
+            display: inline-block;
+          }
+
+          .values {
+            float: right;
+          }
+        }
+      }
+
+      &--prediction-done {
+
+        .title, .values {
+          display: table-cell;
+          vertical-align: middle;
+        }
+
+        .values {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  //Button Group Block
+  .mdl-button-group {
+
+    &.mdl-button-group--block {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+
+      .mdl-button {
+        display: table-cell;
+
+        &--wide {
+          width: 70%;
+        }
+      }
+    }
+
+    &.mdl-button-group--pagination {
+      width: auto;
+    }
+  }
+
+  //Button group as ul
+  ul.mdl-button-group {
+    width: auto;
+
+    li {
+      display: table-cell;
+
+      a {
+        display: block;
+      }
+    }
+  }
+
+  //Contest Grid Closed
+  .ls-contest-grid {
+
+    .ls-list {
+
+      .row {
+
+        .cell {
+
+          &__date {
+            width: 61px;
+          }
+
+          &__prediction {
+            width: 84px;
+          }
+
+          &__icon {
+            width: 45px;
+          }
+        }
+      }
+    }
+  }
+
+  //Contest Grid Open
+  .ls-contest-grid {
+
+    &--open {
+
+      .ls-list {
+
+        .row {
+
+          .ls-contest-grid__bottom, .ls-contest-grid__top {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+          }
+
+          .make-prediction, .tips, .league-data, .status {
+            display: table-cell;
+            box-sizing: border-box;
+          }
+
+          .status {
+            width: 30%;
+            vertical-align: middle;
+          }
+
+          .make-prediction {
+
+            &__teams {
+              display: table;
+              table-layout: fixed;
+              width: 100%;
+
+              .team, .versus {
+                display: table-cell;
+              }
+
+              .versus {
+                width: 30px;
+                text-align: center;
+              }
+            }
+
+            &__buttons {
+
+              .mdl-button-group {
+                border-collapse: separate;
+                border-spacing: 4px;
+              }
+            }
+          }
+
+          .tips {
+            vertical-align: bottom;
+            width: 38px;
+
+            @media #{$ls-high-dpi}, screen and (max-device-width: 767px) {
+              width: 48px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Contest prediction standing
+  .ls-standing-table {
+
+    &.ls-contest-prediction-standing {
+      width: 100% !important;
+
+      .row {
+
+        &.row--head {
+
+          .cell {
+
+            &__team {
+              text-align: left;
+              padding-left: 5px !important;
+            }
+          }
+        }
+
+        .cell {
+
+          &__rank {
+            width: 13% !important;
+          }
+
+          &__team {
+
+            &--flag {
+              padding: 0 5px !important;
+              width: auto;
+            }
+          }
+        }
+
+        &--show-all {
+          display: block;
+          width: 1115%;
+
+          .cell__button {
+            width: 10%;
+          }
+        }
+      }
+    }
+  }
+
+  //Legend
+  .ls-legend {
+
+    .ls-legend__content {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 3px;
+
+      .row {
+        display: table-row;
+
+        .cell {
+          display: table-cell;
+
+          &__explanation {
+            padding-left: 12px;
+          }
+        }
+      }
+    }
+  }
+
+  //Profile Header
+  .ls-user-profile-header {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+
+    .user-avatar, .user-info, .user-position {
+      display: table-cell;
+    }
+
+    .user-info, .user-position {
+      vertical-align: middle;
+    }
+
+    .user-avatar {
+      width: 58px;
+    }
+
+    .user-position {
+      width: 60px;
+      text-align: right;
+    }
+  }
+
+  //User prediction statistics
+  .ls-user-prediction-statistics {
+
+    .prediction-chart {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+
+      .chart, .scores {
+        display: table-cell;
+      }
+
+      .chart {
+        text-align: center;
+        vertical-align: middle;
+
+        .radial-progress {
+          display: inline-block;
+        }
+      }
+
+      .scores {
+        width: 100px;
+      }
+    }
+  }
+
+  //Account Sync
+  .ls-account-sync {
+
+    &__header {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+
+      .user-avatar, .user-name {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .user-avatar {
+        width: 66px;
+
+        @media #{$ls-high-dpi}, screen and (max-device-width: 767px) {
+          width: 99px;
+        }
+      }
+    }
+  }
+
+  //Login Register
+  .ls-login-register {
+
+    &__terms {
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+
+      .checkbox, .message {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      .checkbox {
+        width: 25px;
+      }
+    }
+  }
+
+  //Match Videos
+  .ls-match-videos {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+
+    .mdl-card {
+      margin: 0 auto 15px;
+
+      &--expand {
+        position: relative;
+        background-image: url("../assets/img/video-default.png");
+        background-position: center;
+        background-size: cover;
+
+        .play-icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-left: -43px;
+          margin-top: -43px;
+        }
+      }
+
+      &__actions {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+      }
+
+      &__minute, &__name {
+        display: table-cell;
+        vertical-align: middle;
+      }
+
+      &__minute {
+        width: 37px;
+        text-align: center;
+      }
+    }
+  }
+
+  //Avatar Selector
+  .ls-avatar-selector {
+
+    > ul {
+
+      li {
+        margin: 0 4px 22px;
+      }
+    }
+  }
+
+  // Head to head
+  .ls-head-to-head {
+    .row {
+      .cell {
+        .circle {
+          display: inline-block;
+
+          &--first {
+            line-height: $ls-match-head-to-head-first-size;
+          }
+
+          &--second {
+            line-height: $ls-match-head-to-head-second-size;
+          }
+
+          &--third {
+            line-height: $ls-match-head-to-head-third-size;
+          }
+
+          &--fourth {
+            line-height: $ls-match-head-to-head-fourth-size;
+          }
+
+          &--five {
+            line-height: $ls-match-head-to-head-fifth-size;
+          }
+        }
+      }
+    }
+  }
+
+  // User my information
+  .ls-user-my-information__header .user-avatar .img-rounded > a {
+    background-color: transparent;
+
+    .mdl-ripple {
+      display: none;
+    }
+  }
+}

@@ -1,63 +1,63 @@
 $.fn.datepicker = function (options) {
 	var pickerHtml =
    	[
-	   	'<div class="material-datepicker hide" tabindex="0">',
-	    	'<section class="top-date">',
-	    		'<span data-bind="text: month"></span> ',
-	    		'<span data-bind="text: year"></span>',
-	    	'</section>',
-	    	'<section class="middle-date">',
-	    		'<span class="day" data-bind="text: shortDay"></span>, ',
-	    		'<span class="month" data-bind="text: shortMonth"></span> ',
-	    		'<span class="date" data-bind="text: date"></span>',
-	    	'</section>',
-	    	'<section class="calendar no-select">',
-	    	  '<div class="mdl-button-group mdl-button-group--block">',
-				  	'<a data-bind="click: prevMonth" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">',
-							'<span class="mdl-button__icon icon-caret-left"></span>',
-						'</a>',
-				  	'<div class="mdl-button mdl-button--raised mdl-button--large mdl-button--wide" data-bind="text: viewingMonthName() + \' \' + viewingYear()">',
+   		'<div class="material-datepicker-container hide">',
+		   	'<div class="material-datepicker" tabindex="0">',
+		    	'<section class="top-date">',
+		    		'<span data-bind="text: month"></span> ',
+		    		'<span data-bind="text: year"></span>',
+		    	'</section>',
+		    	'<section class="middle-date">',
+		    		'<span class="day" data-bind="text: shortDay"></span>, ',
+		    		'<span class="month" data-bind="text: shortMonth"></span> ',
+		    		'<span class="date" data-bind="text: date"></span>',
+		    	'</section>',
+		    	'<section class="calendar no-select">',
+		    	  '<div class="mdl-button-group mdl-button-group--block">',
+					  	'<a data-bind="click: prevMonth" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">',
+								'<span class="mdl-button__icon icon-caret-left"></span>',
+							'</a>',
+					  	'<div class="mdl-button mdl-button--raised mdl-button--large mdl-button--wide" data-bind="text: viewingMonthName() + \' \' + viewingYear()">',
+							'</div>',
+					  	'<a data-bind="click: nextMonth" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">',
+								'<span class="mdl-button__icon icon-caret-right"></span>',
+							'</a>',
 						'</div>',
-				  	'<a data-bind="click: nextMonth" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">',
-							'<span class="mdl-button__icon icon-caret-right"></span>',
-						'</a>',
-					'</div>',
-	    		'<div class="headings" data-bind="foreach: daysShort">',
-		    		'<span data-bind="text: $data" class="day heading"></span>',
-		    	'</div>',
-	    		'<div class="days" data-bind="foreach : monthStruct()">',
-	    			'<a data-bind="css:{ selected: $parent.isSelected($data), today: $parent.isToday($data) },text: $data, click: function(data,event){ $parent.chooseDate(data) }" class="day" data-bind="text: $data"></a>',
-	    		'</div>',
-	    	'</section>',
+		    		'<div class="headings" data-bind="foreach: daysShort">',
+			    		'<span data-bind="text: $data" class="day heading"></span>',
+			    	'</div>',
+		    		'<div class="days" data-bind="foreach : monthStruct()">',
+		    			'<a data-bind="css:{ selected: $parent.isSelected($data), today: $parent.isToday($data) },text: $data, click: function(data,event){ $parent.chooseDate(data) }" class="day" data-bind="text: $data"></a>',
+		    		'</div>',
+		    	'</section>',
+			'</div>',
 		'</div>'
    	].join('\n');
 
 	var field = this;
 	var picker = $(pickerHtml);
+	var picker_el = $(".material-datepicker", picker);
+
 	// insert picker after the field in the DOM
-	$(field).after(picker);
+	$("body").append(picker);
 
 	// show picker when field is in focus
-	$(field).focus(function(){
+	$(field).focus(function( e ){
 		picker.removeClass('hide');
 	});
 
-	$(field).focusout(function(){
-		setTimeout(function() {
-			if (!picker.is(":focus")) {
-				picker.addClass('hide');
-			}
-		}, 10);
-
+	//Prevent the picker close clicking the input
+	$(field).click(function( e ){
+		e.stopPropagation();
+    e.preventDefault();
 	});
 
-	picker.focusout(function(){
-		setTimeout(function() {
-			if (!($(field).is(":focus"))) {
-				picker.addClass('hide');
-			}
-		}, 10);
-	});
+	//Hide datepicker when click outside
+  $(document).on("click",function(e){
+    if ( !$(e.target).closest(picker_el).length ) {
+      picker.addClass('hide');
+    }
+  });
 
 	// setup picker position in relation to the field
 	var fieldHeight = $(field).height();

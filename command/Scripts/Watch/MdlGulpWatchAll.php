@@ -1,6 +1,7 @@
 <?php
 namespace Scripts\Watch;
 
+use Scripts\Exceptions\GulpCouldNotCompileException;
 use Scripts\Helper\CliCommands;
 use Scripts\Interfaces\ScriptInterface;
 use Symfony\Component\Console\Input\InputInterface;
@@ -11,6 +12,8 @@ use Symfony\Component\Console\Output\OutputInterface;
  */
 class MdlGulpWatchAll implements ScriptInterface
 {
+
+    const MESSAGE_TEMPLATE = "Something wrong happened at %s with the message: %s";
 
     /**
      * Return the description of the task.
@@ -25,9 +28,9 @@ class MdlGulpWatchAll implements ScriptInterface
     /**
      * Execute the script
      *
-     * @param InputInterface  $input
+     * @param InputInterface $input
      * @param OutputInterface $output
-     * @param string          $basePath
+     * @param string $basePath
      *
      * @throws \Exception
      *
@@ -40,9 +43,35 @@ class MdlGulpWatchAll implements ScriptInterface
     ) {
         $this->createWatchAllTask($basePath);
 
-        CliCommands::runTaskMdlGulp('watchall');
+        do {
+            try {
+                $output->writeln('Watching to compile...');
+                $this->runWatchAll();
+            } catch (GulpCouldNotCompileException $ex) {
+                $message = sprintf(
+                    self::MESSAGE_TEMPLATE,
+                    date('c'),
+                    $ex->getMessage()
+                );
+                $output->writeln($message);
+                sleep(1);
+            }
+        } while (1);
 
         return true;
+    }
+
+    /**
+     * This method is infinite, the command is always running unless an exception is thrown.
+     *
+     * @throws GulpCouldNotCompileException
+     */
+    private function runWatchAll()
+    {
+        $outputErrors = CliCommands::runTaskMdlGulp('watchall', true);
+        if (!empty($outputErrors)) {
+            throw new GulpCouldNotCompileException($outputErrors);
+        }
     }
 
     /**
@@ -53,7 +82,7 @@ class MdlGulpWatchAll implements ScriptInterface
      */
     private function createWatchAllTask($basePath)
     {
-        $gulpFile = $basePath.'/external/material-design-lite/gulpfile.js';
+        $gulpFile = $basePath.'/external/material-design-lite/gulpfile.babel.js';
         $gulpContent = file_get_contents($gulpFile);
 
         if (strstr($gulpContent, 'watchall')) {

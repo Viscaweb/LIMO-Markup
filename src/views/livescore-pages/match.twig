@@ -1,0 +1,87 @@
+{% extends "layouts/layout-match.twig" %}
+
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'PSG - Saint Etienne' %}
+{% set ls_header_brand_logo = true %}
+{% set divider_title_h = 'PSG - Saint Etienne Score' %}
+{% set divider_title_h2 = 'PSG - Saint Etienne H2' %}
+{% set ls_layout_variables = 'mdl-layout--magic-header' %}
+{% set ls_header_bell_icon = true %}
+
+
+
+
+{% set content_tab_1 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/match/match_details.html.twig' %}
+    {% include 'blocks/sports/match/match_summary_prediction.html.twig' %}
+    {% include 'blocks/sports/match/match_summary_odds.html.twig' %}
+    {% include 'blocks/dividers/divider-simple.twig' with { 'divider_title':'Standings' } %}
+    {% include 'blocks/sports/table/standing-table.html.twig' with { 'standing_table_basic':true } %}
+    {% include 'blocks/view-more-button.html.twig' %}
+    {% include 'blocks/dividers/divider-simple.twig' with { 'divider_title':'Head to Head' } %}
+    {% include 'blocks/sports/match/match_summary_head_to_head.html.twig' %}
+    {% include 'blocks/view-more-button.html.twig' %}
+    {% include 'blocks/dividers/divider-simple.twig' with { 'divider_title':'Team Forms' } %}
+    {% include 'blocks/sports/match/match_summary_prediction_forms.html.twig' %}
+    {% include 'blocks/view-more-button.html.twig' %}
+{% endset %}
+
+{% set content_tab_2 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/match/match_prediction.html.twig' %}
+    {% include 'blocks/sports/match/match_betting_tip.html.twig' %}
+{% endset %}
+
+{% set content_tab_3 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/match/match_comments.html.twig' %}
+{% endset %}
+
+{% set content_tab_4 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/match/match_lineup.html.twig' %}
+{% endset %}
+
+{% set content_tab_5 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/dividers/divider-simple.twig' %}
+    {% include 'blocks/sports/match/team_head2head.html.twig' %}
+    {% include 'blocks/dividers/divider-simple.twig' %}
+    {% include 'blocks/sports/team/team_form.html.twig' %}
+{% endset %}
+
+{% set content_tab_6 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/dividers/divider-simple.twig' %}
+    {% include 'blocks/sports/odds/odds-3col.html.twig' %}
+    {% include 'blocks/dividers/divider-simple.twig' %}
+    {% include 'blocks/sports/odds/odds-2col.html.twig' %}
+    {% include 'blocks/dividers/divider-simple.twig' %}
+    {% include 'blocks/sports/odds/odds-1col.html.twig' %}
+    {% include 'blocks/dividers/divider-simple.twig' %}
+    {% include 'blocks/sports/odds/odds-tabs.html.twig' %}
+{% endset %}
+
+{% set content_tab_7 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/dividers/divider-event.twig' %}
+    {% include 'blocks/sports/table/standing-table.html.twig' %}
+{% endset %}
+
+{% set content_tab_8 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/match/match_statistics.html.twig' %}
+{% endset %}
+
+{% set content_tab_9 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/match/match-videos.html.twig' %}
+{% endset %}
+
+{% set content_tab_10 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/listings/comment_thread.html.twig' %}
+{% endset %}

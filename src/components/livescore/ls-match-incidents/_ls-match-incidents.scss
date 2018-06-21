@@ -1,0 +1,140 @@
+.ls-list-incidents {
+
+  background: $ls-color-white;
+
+  .row {
+    display: flex;
+    width: auto;
+    background: $ls-color-white;
+    padding:0 14px;
+
+    .cell {
+      padding: 8px 0 6px 0;
+    }
+  }
+
+  .row--head{
+    background: #f7f7f7;
+    border-bottom: lighten($ls-list-border-color, 5%);
+
+    .cell {
+
+      display: flex;
+      align-items: center;
+
+      &__team {
+
+          &--team1{
+            padding: 0;
+            justify-content: flex-start;
+          }
+
+          &--team2{
+            padding: 0;
+            justify-content: flex-end;
+          }
+      }
+
+      &__period {
+        flex: 0 0 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color:#FAFAFA;
+      }
+    }
+  }
+
+  .row--separator {
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    background: #f7f7f7;
+    border-bottom: lighten($ls-list-border-color, 5%);
+  }
+
+  .row--empty {
+    padding: 21px 0;
+    display: flex;
+    justify-content: center;
+
+    > span {
+      color: hsl(0, 0%, 56%);
+    }
+  }
+
+
+  .row--incident {
+
+    .cell {
+
+      &__team {
+
+        &--team1 {
+
+          display: flex;
+
+          .cell__player {
+           padding: 0;
+           text-overflow: ellipsis;
+           overflow: hidden;
+           white-space: nowrap;
+            line-height: 14px;
+
+            &--substitution {
+              padding: 0;
+              display: flex;
+              flex-flow: column;
+
+              span {
+                line-height: 14px;
+              }
+            }
+          }
+        }
+
+        &--team2 {
+
+          display: flex;
+
+          .cell__player {
+            padding: 0;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+
+            &--substitution {
+              padding: 0;
+              display: flex;
+              flex-flow: column;
+
+              span {
+                line-height: 15px;
+              }
+            }
+          }
+        }
+      }
+
+      &__incident-minute {
+        padding: 0;
+        flex: 0 0 48px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FAFAFA;
+        font-size: 12px;
+      }
+
+      &__incident-icon {
+        padding: 0;
+        flex: 0 0 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+    }
+  }
+}
+

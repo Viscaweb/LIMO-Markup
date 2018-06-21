@@ -1,0 +1,120 @@
+.ls-list-details {
+
+  background: $ls-color-white;
+
+  .row--head {
+
+    font-weight: 400;
+    justify-content: center;
+
+    .cell {
+      &__team {
+        padding: 10px 0;
+      }
+      &.versus {
+        padding: 0 5px;
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+    width: auto;
+    background: $ls-color-white;
+    padding: 0 14px;
+    border-top:none;
+    border-bottom: $ls-list-border;
+
+    > a {
+      color: $ls-text-color;
+    }
+
+    .cell {
+      padding: 7px 0 5px 0;
+
+      &__details {
+        width: 50%;
+        display: flex;
+        padding-right: 5px;
+        box-sizing: border-box;
+
+        &-infos {
+          padding: 0;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+          font-weight: normal;
+          font-size: 13px;
+        }
+
+        &-icon {
+          padding: 0;
+          flex: 0 0 25px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          > span {
+            font-size: 18px;
+            color: $ls-primary-color;
+          }
+        }
+      }
+    }
+  }
+
+  .row--score {
+    padding-top: 6px;
+    border: none;
+
+
+    ~ .row--score {
+      padding: 2px 0;
+      border: none;
+    }
+
+    &:last-of-type {
+      padding-bottom: 6px;
+    }
+
+    .cell {
+
+      &__score-infos {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 6px;
+        font-size: 14px;
+        text-transform: uppercase;
+        color: $ls-text-color;
+
+        &--spacer {
+          flex: 1;
+          padding: 0 6px;
+        }
+      }
+
+      &__score-box {
+        flex: 0 0 69px;
+        background: #494949;
+        display: flex;
+        justify-content: center;
+        color: $ls-color-white;
+        font-size: 19px;
+        font-weight: 400;
+        padding: 4px 8px;
+
+        .versus {
+          padding: 0 6px;
+        }
+
+        &--intermediary {
+          background-color: darken($ls-color-white, 3%);
+          color:lighten($ls-color-black , 15%);
+        }
+      }
+    }
+  }
+}
+

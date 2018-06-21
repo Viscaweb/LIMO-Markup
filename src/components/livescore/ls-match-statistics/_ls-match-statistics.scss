@@ -1,0 +1,168 @@
+.ls-match-statistics {
+  position: relative;
+  margin: auto;
+}
+
+/*Possesion Graph*/
+.ls-possesion-graph{
+  background: url("#{$ls-img-path}/green-field-horizontal.png");
+
+  @media #{$ls-retina} {
+    background-image: url("#{$ls-img-path}/green-field-horizontal-2x.png");
+    background-size: 49px auto;
+  }
+
+  .ls-col{
+    display: none;
+  }
+
+  .row{
+
+    &__data{
+      padding-bottom: 10px;
+    }
+
+    .cell{
+
+      &__title{
+        text-align: center;
+        font-size: ls-font-size(2px);
+        color: rgba($ls-color-white, 0.57);
+        padding-bottom: 0;
+      }
+
+      &__value{
+        display: flex;
+        flex: 0 0 60px;
+        color: $ls-color-white;
+        font-size: ls-font-size(10px);
+        justify-content: center;
+        align-items: center;
+      }
+
+      &__graph{
+        
+        .bar-container{
+          position: relative;
+        }
+
+        .bar{
+          display: flex;
+          background-color: rgba(0, 0, 0, 0.12);
+          border: 2px solid #4d8700;
+        }
+
+        .progress{
+          background-color: $ls-color-white;
+          height: $ls-match-statistics-possesion-bar-height;
+        }
+
+        .separator{
+          background-color: #56a000;
+          width: 3px;
+          height: 100%;
+          top: 0;
+          position: absolute;
+          left: 50%;
+          margin-left: -1px;
+        }
+
+        &--away{
+
+          .bar{
+            justify-content: flex-end;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*Graph list*/
+.ls-match-statistics-list{
+  margin: 0;
+  padding: 0;
+  background-color: $ls-match-statistics-list-bg;
+  
+  > .row{
+    border-bottom: 1px solid #efefef;
+
+    > .cell{
+      padding: 0;
+    }
+  }
+
+  .row{
+
+    .cell{
+
+      &__title{
+        text-align: center;
+        color: lighten($ls-text-color, 3%);
+        padding-top: 6px;
+        padding-bottom: 0;
+        line-height: 21px;
+      }
+
+      &__value{
+        flex: 0 0 50px;
+        color: lighten($ls-text-color, 10%);
+        font-size: ls-font-size(2px);
+        justify-content: center;
+      }
+
+      &__graph{
+
+        .bar{
+          position: relative;
+          background-color: $ls-match-statistics-bar-bg;
+          height: $ls-match-statistics-bar-height;
+
+          &:before{
+            background-color: inherit;
+            content: "";
+            display: block;
+            width: 2px;
+            height: $ls-match-statistics-bar-height * 2;
+            position: relative;
+            top: -4px;
+          }
+        }
+
+        &--high{
+          
+          .bar{
+            background-color: $ls-match-statistics-bar-high-bg;
+          }
+        }
+
+        &--home{
+          justify-content: flex-end;
+          padding-right: 1px;
+        }
+
+        &--away{
+          padding-left: 1px;
+          justify-content: flex-start;
+
+          .bar{
+
+            &:before{
+              float: right;
+            }
+          }
+        }
+      }
+    }
+
+    &__data{
+
+      > .cell{
+        padding-top: 0;
+        padding-bottom: 6px;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

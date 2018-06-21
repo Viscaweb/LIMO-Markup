@@ -76,18 +76,49 @@ class Install implements ScriptInterface
 
         CliCommands::run(
             sprintf(
-                'cd %s && git clone %s . > /dev/null 2>&1',
+                'cd %s && git clone %s . && git checkout %s > /dev/null 2>&1',
                 escapeshellarg($folder),
-                escapeshellarg(self::GIT_PROJECT_URL)
+                escapeshellarg(self::GIT_PROJECT_URL),
+                escapeshellarg($this->gitCloneVersionId())
             )
         );
 
         return $this->isGitInitialized($folder);
     }
 
+    /**
+     * @return string
+     */
+    private function gitCloneVersionId()
+    {
+        return 'v1.1.3';
+    }
+
+    /**
+     * @param $folder
+     *
+     * @return bool
+     */
     private function isGitInitialized($folder)
     {
-        return file_exists($folder.'.git/HEAD');
+        if (!file_exists($folder.'.git/HEAD')) {
+            return false;
+        }
+
+        $gitVersion = CliCommands::run(
+            sprintf(
+                'cd %s && git branch | grep \*',
+                escapeshellarg($folder)
+            )
+        );
+        $gitVersion = trim($gitVersion);
+
+        if (!strstr($gitVersion, $this->gitCloneVersionId())) {
+            return false;
+        }
+
+        return true;
+
     }
 
 }

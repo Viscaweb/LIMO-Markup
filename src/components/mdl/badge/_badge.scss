@@ -1,0 +1,40 @@
+.mdl-badge {
+
+  &.mdl-badge-countries {
+    margin-right: 0;
+
+    &:after{
+      right: 0;
+    }
+  }
+
+  &.mdl-badge--large {
+
+    &:after{
+      font-size: 13px;
+      font-weight: 300 ;
+      width: 25px;
+      height: 25px;
+    }
+  }
+
+  &.mdl-badge--normal {
+
+    &:after{
+     color: lighten($ls-color-black, 10%);
+      background: #ededed;
+    }
+  }
+
+  &.live {
+
+    &:after{
+      color: $ls-color-white;
+      background: $ls-color-live;
+    }
+  }
+
+
+
+
+}

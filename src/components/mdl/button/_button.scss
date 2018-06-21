@@ -5,6 +5,27 @@
 	padding: $ls-button-padding;
 	min-width: 46px;
 	box-sizing: border-box;
+
+	&--delete-icon{
+	  float: left;
+	  padding: 0 8px;
+	  min-width: 40px;
+
+	  .icon{
+	  	vertical-align: middle;
+	  	position: relative;
+	  	top: -1px;
+	  }
+	}
+
+	&--facebook{
+		background-color: $ls-button-facebook-color;
+		color: $ls-color-white;
+
+		&:hover{
+			background-color: darken($ls-button-facebook-color, 5%);
+		}
+	}
 }
 
 // Raised buttons
@@ -32,6 +53,11 @@
 	.mdl-button__icon-right{
 		float: right;
 		line-height: $ls-button-large-size;
+	}	
+
+	.mdl-button__icon-left{
+		float: left;
+		line-height: $ls-button-large-size;
 	}
 }
 
@@ -39,6 +65,34 @@
 .mdl-button--block{
 	display: block;
 	width: 100%;
+}
+
+//Multi line buttons
+.mdl-button--multiline{
+	padding: 10px 45px;
+	height: auto;
+	line-height: ls-font-size(7px, 'large');
+
+	.mdl-button__icon-right, .mdl-button__icon-left{
+		position: absolute;
+		top: 50%;
+		line-height: 10px;
+		margin-top: -6px;
+	}
+
+	.mdl-button__icon-right{
+		right: 17px;
+	}
+
+	.mdl-button__icon-left{
+		left: 17px;
+	}
+}
+
+//Button emphasis text
+.mdl-button__emphasis{
+	display: block;
+	font-weight: $ls-font-weight-normal;
 }
 
 //Icon buttons
@@ -66,9 +120,12 @@
 }
 
 .mdl-button__icon-left{
-	margin-right: 25px;
+	margin-right: $ls-button-arrow-margin;
 }
 
+.mdl-button__icon-right{
+	margin-left: $ls-button-arrow-margin;
+}
 
 //Button group
 .mdl-button-group{
@@ -92,6 +149,34 @@
 			flex-grow: 1;
 		}
 	}
+
+    &.mdl-button-group--pagination {
+	  	justify-content: center;
+	}
+}
+
+//Button group as ul
+ul.mdl-button-group {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+
+  li {
+
+		.mdl-button {
+
+		  &:last-child {
+				border-right-width:1px;
+		  }
+		}
+
+		&:last-child {
+
+		  .mdl-button {
+				border-right-width: 0;
+		  }
+		}
+  }
 }
 
 //Button select
@@ -110,6 +195,9 @@
 	}
 
 	select{
+		@include typo-preferred-font(true);
+		font-size: $ls-button-font-size;
+		font-weight: 300;
 		position: relative;
 		z-index: 2;
 		appearance:none;
@@ -121,6 +209,10 @@
 		min-width: $button-min-width;
 		padding: 0 $button-padding;
 		color: $button-secondary-color;
+		
+		&:focus {
+			font-size: $ls-button-font-size;
+		}
 	}
 
 	&.mdl-button--large{
@@ -130,4 +222,15 @@
 			height: $ls-button-large-size;
 		}
 	}
+}
+
+//Rounded
+.mdl-button.mdl-button--rounded {
+	border-radius: 22px;
+}
+
+//Gradient
+.mdl-button.mdl-button--gradient {
+	background-image: linear-gradient($ls-button-gradient-start-color, $ls-button-gradient-end-color);
+	color: $ls-color-white;
 }

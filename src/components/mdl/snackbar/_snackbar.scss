@@ -1,0 +1,59 @@
+
+.mdl-snackbar {
+  justify-content: flex-start;
+  z-index: $ls-snackbar-z-index;
+
+  @media(max-width: $snackbar-tablet-breakpoint - 1) {
+    max-height: none;
+  }
+
+  &__text{
+    padding: 14px 24px;
+    flex: 1 1 auto;
+  }
+
+  &__action{
+    padding: 14px 24px;
+    overflow: visible;
+  }
+
+  &__icon{
+    padding-left: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span{
+      max-width: 24px;
+    }
+  }
+
+  &--success{
+
+    .mdl-snackbar__icon, .mdl-snackbar__action{
+      color: $ls-success-color;
+    }
+  }
+
+  &--error{
+
+    .mdl-snackbar__icon, .mdl-snackbar__action{
+      color: $ls-error-color;
+    }
+  }
+
+  &--warning, &--loading{
+
+    .mdl-snackbar__icon, .mdl-snackbar__action{
+      color: $ls-warning-color;
+    }
+  }
+
+  &--info{
+
+    .mdl-snackbar__icon, .mdl-snackbar__action{
+      color: $ls-info-color;
+    }
+  }
+
+}

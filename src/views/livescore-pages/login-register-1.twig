@@ -1,0 +1,33 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set ls_header_brand_logo = true %}
+{% set page_title = 'Connexion' %}
+{% set ls_header_button = 'Cancel' %}
+{% set ls_layout_variables = 'mdl-layout--fixed-tabs' %}
+
+
+
+{% set main_content %}
+
+    <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+        <div class="mdl-tabs__tab-bar">
+            <a href="#starks-panel" class="mdl-tabs__tab is-active">Login</a>
+            <a href="#lannisters-panel" class="mdl-tabs__tab">Register</a>
+        </div>
+
+        <div class="mdl-tabs__panel is-active" id="starks-panel">
+
+            {% include 'blocks/login/login.html.twig' %}
+        </div>
+        <div class="mdl-tabs__panel" id="lannisters-panel">
+
+            {% include 'blocks/login/register.html.twig' %}
+        </div>
+
+    </div>
+
+{% endset %}
+
+

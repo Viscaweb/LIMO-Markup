@@ -1,0 +1,78 @@
+.mdl-collapsible{
+	
+	&.mdl-collapsible-collapsed + .mdl-collapsible{
+
+		.mdl-collapsible__heading{
+			border-top-width: 0;
+		}
+	}
+}
+
+.mdl-collapsible__heading{
+	background-color: $ls-collapsible-border-color;
+	padding: $ls-collapsible-heading-padding;
+	padding-right: 40px;
+	border-width: 1px 0;
+	border-color: darken($ls-collapsible-border-color, 11.2%);
+	border-style: solid;
+	position: relative;
+	cursor: pointer;
+
+	&:after{
+		content: 'remove';
+		font-family: 'Material Icons';
+		font-size: 24px;
+		position: absolute;
+		z-index: 1;
+		right: 20px;
+		top: 0;
+		color: lighten($button-secondary-color, 25%);
+		line-height: 44px;
+	  /* Support for all WebKit browsers. */
+	  -webkit-font-smoothing: antialiased;
+	  /* Support for Safari and Chrome. */
+	  text-rendering: optimizeLegibility;
+
+	  /* Support for Firefox. */
+	  -moz-osx-font-smoothing: grayscale;
+
+	  /* Support for IE. */
+	  font-feature-settings: 'liga';
+	}
+
+	.mdl-collapsible-collapsed &{
+
+		&:after{
+			content: 'add';
+		}
+	}
+
+	&:hover{
+		background-color: darken($ls-collapsible-border-color, 3%);
+	}
+}
+
+.mdl-collapsible__heading-title{
+	display: block;
+	font-weight: 400;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	padding: 0;
+	font-size: inherit;
+	margin: 0;
+	line-height: inherit;
+}
+
+.mdl-collapsible__body{
+	background-color: $ls-color-white;
+	position: relative;
+
+	.mdl-collapsible-collapsed & {
+		display: none;
+	}
+}
+
+.mdl-collapsible__body-content{
+	padding: $ls-collapsible-content-padding;
+}

@@ -1,21 +1,55 @@
-.ls-season-button{
-	font-size: 10px;
+.ls-season-button {
 	outline: none;
 	background: url("../assets/img/calendar-container.png") no-repeat;
-	background-position: center 18px;
+	background-position: center 19px;
 	background-size: 25px 24px;
 
-	&:active{
+	&:active {
 		background-color: darken($ls-color-white, 10%);
 	}
 
-	.mdl-layout__header & {
-		padding-left: 7px;
-		padding-right: 7px;
+	select {
+		@include typo-preferred-font(true);
+		font-size: 10px;
+		font-weight: 300;
+		position: relative;
+		z-index: 2;
+		appearance: none;
+		outline: none;
+		width: 100%;
+		border: 0;
+		background: transparent;
+		height: $layout-header-desktop-row-height;
+		line-height: $layout-header-desktop-row-height;
 		color: $ls-primary-color;
+		text-align: center;
+		text-align-last:center;
+	}
+
+	.mdl-layout__header & {
+		padding-left: 5px;
+		padding-right: 5px;
 	}
 
 	@media screen and (max-width: $layout-screen-size-threshold) {
-		background-position: center 11px;
+		.mdl-layout__header & {
+			line-height: 1;
+			background-position: center 11px;
+
+			select {
+				height: $layout-mobile-header-height;	
+				line-height: $layout-mobile-header-height + 1px;	
+			}
+		}
+	}
+}
+
+.ls-hidden-select {
+
+	font-size: $ls-button-font-size;
+
+	&:focus,
+	&:active{
+		font-size: $ls-button-font-size;
 	}
 }

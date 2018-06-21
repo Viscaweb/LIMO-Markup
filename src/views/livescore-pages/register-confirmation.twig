@@ -1,0 +1,15 @@
+{% extends "layouts/default-layout.twig" %}
+
+{# Page variables #}
+{% set basePath = '../' %}
+{% set ls_header_brand_logo = true %}
+{% set page_title = 'Password Forgotten' %}
+{% set ls_header_button = 'Home' %}
+{% set ls_content_variables = 'mdl-layout__content--flex' %}
+{% set message_icon = 'icon-email' %}
+{% set message_title = 'Finalise your registration on WhatsTheScore.com' %}
+{% set message_description = '<b>We have sent you an <b>email with a link to validate your account</b><p>If you cannot find that email in your inbox after a few minutes. please check your junk/spam folders.</p>' %}
+
+{% set main_content %}
+	{% include 'blocks/login/message-widget.html.twig' %}
+{% endset %}

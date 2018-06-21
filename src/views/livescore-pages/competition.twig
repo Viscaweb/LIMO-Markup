@@ -1,0 +1,29 @@
+{% extends "layouts/layout-competition.twig" %}
+	
+{# Page variables #}
+{% set basePath = '../' %}
+{% set page_title = 'Champions League' %}
+{% set ls_header_brand_logo = true %}
+{% set divider_title_h = 'Champions League' %}
+{% set divider_title_h2 = 'Champions League H2' %}
+
+{% set content_tab_1 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/listings/match_listing_by_competition.html.twig' %}
+{% endset %}
+
+{% set content_tab_2 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/table/standing-table.html.twig' %}
+{% endset %}
+
+{% set content_tab_3 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/listings/teams_list.html.twig' %}
+
+{% endset %}
+
+{% set content_tab_4 %}
+    {% include 'blocks/dividers/divider-h1.twig' %}
+    {% include 'blocks/sports/player/players_standing.html.twig' %}
+{% endset %}

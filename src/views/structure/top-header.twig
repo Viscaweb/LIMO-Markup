@@ -1,27 +1,35 @@
 {% block top_header %}
-  <header class="mdl-layout__header">
+  <header class="mdl-layout__header{{ ls_layout_header_variables ? ' ' ~ ls_layout_header_variables : '' }}">
+    {# After header begins block #}
+    {% block top_header_prepend %}
+    {% endblock %}
+
     <div class="mdl-layout__header-row">
+
+      {# Brand logo #}
       {% if ls_header_brand_logo %}
-       <div class="mdl-layout-brand-logo"><img src="../assets/img/ls-app-logo.png" alt="{{ project }}"></div>
+       <div class="mdl-layout-brand-logo{{ ls_header_no_drawer ? ' mdl-layout-brand-logo--no-drawer' : '' }}"><img src="{{ basePath }}../assets/img/ls-app-logo.png" alt="{{ project }}"></div>
       {% endif %}
+
       <span class="mdl-layout-title">{{ page_title }}</span>
       <!-- Add spacer, to align navigation to the right -->
       <div class="mdl-layout-spacer"></div>
       <nav class="mdl-navigation">
 
+        {# Season button #}
         {% if ls_header_season_button %}
-          <a class="mdl-navigation__link ls-season-button" href="#">14/15</a>
+          <div class="mdl-navigation__link ls-season-button" href="#">
+            <select>
+              <option value="1">14/15</option>
+              <option value="1">14/13</option>
+              <option value="1">14/16</option>
+              <option value="1">14/17</option>
+            </select>
+          </div>
         {% endif %}
 
-        {% if ls_header_star_icon %}
-          <a class="mdl-navigation__link ls-icon" href="#"><span class="icon-star"></span></a>
-        {% endif %}
-
-        {% if ls_header_star_icon_active %}
-          <a class="mdl-navigation__link ls-icon ls-active" href="#"><span class="icon-star"></span></a>
-        {% endif %}
-
-        {% if ls_header_switch %}
+        {# Two labels switch #}
+        {% if ls_header_two_labels_switch %}
           <label for="switch-1" class="mdl-switch-label-left">
             <span class="mdl-switch__label">All</span>
           </label>
@@ -30,6 +38,46 @@
             <span class="mdl-switch__label">Live</span>
           </label>
         {% endif %}
+
+        {# One label switch button #}
+        {% if ls_header_live_switch %}
+          <label class="mdl-switch mdl-switch-live mdl-js-switch mdl-js-ripple-effect mdl-switch--compact" for="live-switch">
+            <input type="checkbox" id="live-switch" class="mdl-switch__input" checked />
+            <span class="mdl-switch__label">En Directo</span>
+          </label>
+        {% endif %}
+  
+        {# Custom button #}
+        {% if ls_header_button %}
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            {{ ls_header_button }}
+          </button>
+        {% endif %}
+  
+        {# Close button #}
+        {% if ls_header_close_button %}
+          <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+            Close
+          </button>
+        {% endif %}
+  
+        {# Icons #}
+        {% if ls_header_icons %}
+          <a class="mdl-navigation__link ls-toolbar-icon" href="#"><span class="icon icon-gift"></span></a>
+          <a class="mdl-navigation__link ls-toolbar-icon" href="#">
+            <span class="icon icon-standings"></span>
+            <span class="text">245<small>th</small></span>
+          </a>
+        {% endif %}
+
+          {% if ls_header_star_icon %}
+              <a class="mdl-navigation__link ls-toolbar-icon" href="#"><span class="icon-star"></span></a>
+          {% endif %}
+
+          {% if ls_header_star_icon_active %}
+              <a class="mdl-navigation__link ls-toolbar-icon is-active" href="#"><span class="icon-star"></span></a>
+          {% endif %}
+
       </nav>
     </div>
 
@@ -37,12 +85,43 @@
       {% include 'structure/scrollable-tabs.twig' %}
     {% endif %}
 
-    {% if ls_header_fixed_tabs %}
+    {% if ls_header_fixed_tabs == 'true' %}
       {% include 'structure/fixed-tabs.twig' %}
     {% endif %}
 
+    {% if ls_header_fixed_tabs == 'competition' %}
+      {% include 'structure/fixed-tabs-competition.twig' %}
+    {% endif %}
+
+    {% if ls_header_fixed_tabs == 'player-information' %}
+      {% include 'structure/fixed-tabs-player-information.twig' %}
+    {% endif %}
+
+    {% if ls_header_tabs == 'team' %}
+      {% include 'structure/fixed-tabs-team.twig' %}
+    {% endif %}
+
+      {% if ls_header_tabs == 'predictions-contest' %}
+          {% include 'structure/fixed-tabs-contest.twig' %}
+      {% endif %}
+
+      {% if ls_header_tabs == 'predictions' %}
+          {% include 'structure/fixed-tabs-predictions.twig' %}
+      {% endif %}
+
+      {% if ls_header_fixed_tabs == 'login-register' %}
+          {% include 'structure/fixed-tabs-login.twig' %}
+      {% endif %}
+
+    {# After header ends block #}
+    {% block top_header_append %}
+    {% endblock %}
+
   </header>
+
 	{% block top_header_drawer %}
-    {% include 'structure/top-header/drawer.twig' %}
+    {% if ls_header_no_drawer != 'true' %}
+      {% include 'structure/top-header/drawer.twig' %}
+    {% endif %}
 	{% endblock %}
 {% endblock %}
