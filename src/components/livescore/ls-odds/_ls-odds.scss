@@ -76,11 +76,136 @@
 
       .cell {
         padding: 4px 0;
+      }
+    }
+  }
 
+  &.ls-odds-v2 {
+
+    .row {
+
+      .cell {
+        border-right-width: 0;
+
+        &__bookmaker,
+        &__bonus {
+          flex: 0 0 29%;
+          box-sizing: border-box;
+        }
+
+        &__odds,
+        &__bonus {
+
+          > span {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 32px;
+            border-radius: 4px;
+            color: $new-match-odds-widget-text-color;
+            font-size: 12px;
+            font-weight: 400;
+            box-sizing: border-box;
+            border: 2px solid transparent;
+          }
+        }
+
+        &__bookmaker {
+          text-align: center;
+          justify-content: center;
+          padding: 7px 4px;
+        }
+
+        &__odds {
+          flex: 11.11%;
+          padding: 7px 4px;
+
+          &--best > span {
+            border-color: $new-match-odds-widget-light-green;
+            background-color: fade-out($new-match-odds-widget-light-green, 0.25%);
+            font-weight: 600;
+          }
+
+          &--won,
+          &--lost {
+            background-color: transparent;
+          }
+
+          &--won {
+            > span {
+              background-color: fade-out($new-match-odds-widget-light-green, 0.5%);
+            }
+          }
+
+          &--lost {
+            > span {
+              background-color: fade-out($new-match-odds-widget-light-red, 0.5%);
+            }
+          }
+        }
+
+        &__bonus {
+          padding: 7px 4px;
+
+          > span {
+            font-size: 14px;
+            font-weight: 600;
+            background-color: $new-match-odds-widget-bonus-bg;
+          }
+        }
+      }
+
+      &--head {
+        background-color: #eaeaea !important;
+
+        .cell {
+          white-space: normal;
+          font-weight: bold;
+          line-height: 1.25;
+          padding-top: 5px;
+          padding-bottom: 5px;
+
+          &__bookmaker {
+            justify-content: center;
+            text-align: center;
+            padding-right: 7px;
+            padding-left: 7px;
+          }
+
+          &__odds {
+            background-color: $new-match-odds-widget-heading-bg;
+
+            > span {
+              font-size: 14px;
+              color: white;
+            }
+
+            &--draw {
+              background-color: $new-match-odds-widget-heading-bg-accent;
+            }
+          }
+
+          &__bonus {
+            background-color: $new-match-odds-widget-heading-bg-accent;
+            color: $new-match-odds-widget-bonus-bg;
+            justify-content: center;
+            text-align: center;
+            text-transform: uppercase;
+            padding-right: 7px;
+            padding-left: 7px;
+
+            > span {
+              font-size: 12px;
+            }
+          }
+        }
       }
     }
   }
 }
+
+
 
 .ls-odds-tabs {
 
