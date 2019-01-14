@@ -41,7 +41,7 @@ $ls-color-event-draw-bg : rgb(250, 241, 230);
 //Typography
 $ls-font-size-base:          	14px;
 $ls-font-size-small:          $ls-font-size-base - 3px;
-$ls-font-size-large:          $ls-font-size-base + 3px; 
+$ls-font-size-large:          $ls-font-size-base + 3px;
 $ls-font-weight-thin:		 			100;
 $ls-font-weight-light:	 			300;
 $ls-font-weight-normal: 			400;
@@ -88,11 +88,11 @@ $ls-divider-icon-color:						darken($ls-color-white, 32.5%);
 $ls-divider-game-type-icon-size:	15px;
 
 //Buttons
-$ls-button-padding:							0 14px; 
-$ls-button-default-bg:					0 14px; 
-$ls-button-font-weight:					300; 
+$ls-button-padding:							0 14px;
+$ls-button-default-bg:					0 14px;
+$ls-button-font-weight:					300;
 $ls-button-font-size:						16px;
-$ls-button-large-size:					46px; 
+$ls-button-large-size:					46px;
 $ls-button-large-icon-size:			20px;
 $ls-button-arrow-margin:				15px;
 $ls-button-facebook-color:			#4168ae;
@@ -292,6 +292,14 @@ $ls-panel-body-padding: 										12px 14px 15px;
 $ls-image-sprite-icons : "../assets/img/sprite/sprite-icons.png";
 $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
 
+// New match odds widget
+$new-match-odds-widget-heading-bg:                 #454a4c;
+$new-match-odds-widget-heading-bg-accent:          #313536;
+$new-match-odds-widget-bonus-bg:                   #ffd800;
+$new-match-odds-widget-text-color:                 #5c5c5c;
+$new-match-odds-widget-text-color-secondary:       #808080;
+$new-match-odds-widget-light-green:                #d1e9be;
+$new-match-odds-widget-light-red:                  #eebaba;
 
 //Media Querys
 $ls-retina: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx)";
@@ -309,12 +317,12 @@ $ls-divider-right-nav-icon-size:	20px;
 $ls-divider-icon-color:						darken($ls-color-white, 32.5%);
 
 //Buttons
-$ls-button-padding:							0 14px; 
-$ls-button-default-bg:					0 14px; 
-$ls-button-font-weight:					300; 
-$ls-button-font-size:						14px; 
-$ls-button-large-size:					46px; 
-$ls-button-large-icon-size:			20px; 
+$ls-button-padding:							0 14px;
+$ls-button-default-bg:					0 14px;
+$ls-button-font-weight:					300;
+$ls-button-font-size:						14px;
+$ls-button-large-size:					46px;
+$ls-button-large-icon-size:			20px;
 
 //Dialog
 $ls-dialog-shadow: 							0 0 10px rgba(0, 0, 0, 0.17);
