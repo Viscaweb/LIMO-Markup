@@ -301,6 +301,40 @@ $new-match-odds-widget-text-color-secondary:       #808080;
 $new-match-odds-widget-light-green:                #d1e9be;
 $new-match-odds-widget-light-red:                  #eebaba;
 
+// Article components
+$article-general-padding:                   16px;
+
+// Blockquote
+$blockquote-font-size:                             20px;
+$blockquote-font-weight:                           normal;
+$blockquote-line-height:                           1.4;
+$blockquote-text-color:                            $ls-primary-color;
+$blockquote-padding:                               48px 0 0 0;
+$blockquote-highlight-color:                       $ls-primary-color;
+$blockquote-highlight-text-size:                   20px;
+$blockquote-highlight-line-height:                 1.4;
+$blockquote-highlight-padding:                     20px 0 0;
+$blockquote-max-width:                             790px;
+
+// Ordered list
+$ordered-list-margin:                              0 30px;
+$ordered-list-title-size:                          20px;
+$ordered-list-number-size:                         24px;
+$ordered-list-number-color:                        $ls-primary-color;
+$ordered-list-number-text-size:                    14px;
+$ordered-list-number-margin:                       13px;
+$ordered-list-item-padding:                        $ordered-list-number-size + $ordered-list-number-margin;
+$ordered-list-max-width:                           790px;
+
+// Alert
+$blockquote-alert-bg-color:                      rgba(255, 216, 0, 0.2);
+$blockquote-alert-text-color:                    #3e4e5a;
+$blockquote-alert-border-color:                  #ffd800;
+$blockquote-alert-border-width:                  4px;
+$blockquote-alert-border-width-small-phone:      2px;
+$blockquote-alert-padding:                       15px 15px 15px 20px;
+$blockquote-alert-max-width:                     790px;
+
 //Media Querys
 $ls-retina: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx)";
 $ls-small-portrait: "only screen and (max-device-width : 320px) and (orientation : portrait)";
