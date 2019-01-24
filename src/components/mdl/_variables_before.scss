@@ -64,14 +64,22 @@ $ls-tab-font-weight: 					300;
 $ls-tab-height: 							48px;
 
 //Drawer
-$ls-drawer-link-color:								darken($ls-text-color, 7%);
-$ls-drawer-link-font-size:						17px;
-$ls-drawer-sub-navigation-font-size:	15px;
-$ls-drawer-link-active-padding:				11px 16px;
-$ls-drawer-link-padding:							10px 16px;
-$ls-drawer-sub-nav-link-padding:			8px 16px;
-$ls-drawer-link-icon-size:						20px;
-$ls-drawer-show-all-color:						#bcbcbc;
+$ls-drawer-primary-link-color:              $ls-primary-color;
+$ls-drawer-primary-link-active-color:       #4f8b00;
+$ls-drawer-primary-subnav-bg-color:         #424749;
+$ls-drawer-primary-subnav-bg-active-color:  #767e82;
+$ls-drawer-primary-subnav-category-color:   #424749;
+$ls-drawer-primary-show-all-color:				  #FFFFFF;
+$ls-drawer-link-color:								      darken($ls-text-color, 7%);
+$ls-drawer-link-font-size:						      16px;
+$ls-drawer-sub-navigation-font-size:	      15px;
+$ls-drawer-link-active-padding:				      11px 16px;
+$ls-drawer-link-active-bg:				          linear-gradient(96deg, rgba(255, 238, 0, 0.07), rgba(255, 238, 0, 0.27));
+$ls-drawer-link-active-color:				        #167773;
+$ls-drawer-link-padding:							      11px 16px;
+$ls-drawer-sub-nav-link-padding:			      11px 16px;
+$ls-drawer-link-icon-size:						      20px;
+$ls-drawer-show-all-color:						      #BCBCBC;
 
 //Timezone selector
 $ls-timezone-selector-height:					45px;

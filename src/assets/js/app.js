@@ -5,13 +5,19 @@ var App = (function () {
 
   return {
     init: function (options) {
-      
+
       /*Trigger mdl-drawer with brand-logo*/
         $(".mdl-layout-brand-logo").click(function( e ){
           var drawer = $(".mdl-layout__drawer");
           drawer.toggleClass("is-visible");
         });
-      
+
+      /*Left drawer sub menus open/close interaction*/
+      $('.mdl-layout__drawer .mdl-navigation__parent > a').on('cick',function( e ){
+        alert("hey");
+        e.preventDefault();
+      });
+
       /*Hide header on scroll*/
         var lsHeader = $(".mdl-layout--fixed-header .mdl-layout__header");
         var lsContent = $(".mdl-layout__content");
@@ -47,5 +53,5 @@ var App = (function () {
         });
     }
   };
- 
+
 })();
