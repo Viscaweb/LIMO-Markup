@@ -13,10 +13,61 @@ var App = (function () {
         });
 
       /*Left drawer sub menus open/close interaction*/
-      $('.mdl-layout__drawer .mdl-navigation__parent > a').on('cick',function( e ){
-        alert("hey");
-        e.preventDefault();
-      });
+      var subMenu = {
+        selectors: {
+          anchors:     '.mdl-layout__drawer .mdl-navigation__parent > a',
+          subMenu:     '.mdl-sub-navigation'
+        },
+        classNames: {
+          open:        'mdl-navigation__open'
+        },
+        menuIsOpen: function(menuItem){
+          return menuItem.hasClass(this.classNames.open) ? true : false;
+        },
+        addOpenClasses: function(menuItem){
+          menuItem.addClass(this.classNames.open);
+        },
+        removeOpenClasses: function(menuItem){
+          menuItem.removeClass(this.classNames.open);
+        },
+        closeOpenMenus: function(menuItem){
+          menuItem.siblings(this.selectors.openItems).each(function(i, el){
+            var menuElement = $(el);
+
+            $(this.selectors.subMenu, el).slideUp(function(){
+              this.removeOpenClasses(menuElement);
+            }.bind(this));
+          }.bind(this));
+        },
+        openMenu: function(menuItem){
+          var subMenu = menuItem.find(this.selectors.subMenu);
+
+          if( this.menuIsOpen(menuItem) ) {
+            subMenu.slideUp(function(){
+              this.removeOpenClasses(menuItem);
+            }.bind(this));
+          } else {
+            subMenu.slideDown(function(){
+              this.addOpenClasses(menuItem);
+            }.bind(this));
+          }
+        },
+        init: function(){
+          // Bind the main event
+          $(this.selectors.anchors).on('click',function(e){
+            e.preventDefault();
+            var anchor = $(e.target);
+            var menuItem = anchor.parent();
+
+            this.closeOpenMenus(menuItem);
+            this.openMenu(menuItem);
+
+          }.bind(this));
+        }
+      };
+
+      // Initalize sub menu open/close interaction
+      subMenu.init();
 
       /*Hide header on scroll*/
         var lsHeader = $(".mdl-layout--fixed-header .mdl-layout__header");
