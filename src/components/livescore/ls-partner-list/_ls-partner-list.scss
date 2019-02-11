@@ -59,10 +59,12 @@
 
   .partner-list--small & {
     flex: 0 0 96px;
+    min-height: 88px;
   }
 
   img {
     max-width: 80px;
+    margin-bottom: 0;
   }
 }
 
@@ -84,7 +86,7 @@
   }
 
   &--right {
-    flex: 0 0 auto;
+    flex: 1 1 100%;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
