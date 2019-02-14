@@ -1,6 +1,6 @@
 <div class="mdl-grid mdl-grid--no-spacing">
   <div class="mdl-cell mdl-cell--12-col ">
-    <article class="ls-article ls-article--new">
+    <article class="ls-article">
       <div class="ls-article-heading">
         <h1>H1 Lorem Ipsum is simply dummy text of the printing and typesetting industry</h1>
         <img src="{{ basePath }}../assets/img/content-top-image-1.jpg" alt="Image">
@@ -43,7 +43,7 @@
 
         <blockquote class="blockquote">
           <p>Cuando les hayas pillado el punto apuesta fuerte y el dinero llegará más pronto que tarde. </p>
-          <div class="blockquote-details"><strong>Marti Gif.</strong> Read more about him in <a href="#">this link.</a></div>
+          <div class="blockquote-details"><p><strong>Marti Gif.</strong> Read more about him in <a href="#">this link.</a></p></div>
         </blockquote>
 
         <h2>Why do we use it? (H2)</h2>
@@ -52,6 +52,8 @@
         <div class="blockquote-alert">
           <p>Si quieres convertirte en un apostador Pro más te vale dejar de fardar de tus hazañas y <strong>centrarte en cómo seguir ganando dinero.</strong></p>
         </div>
+
+        {% include 'blocks/partner-list.twig' %}
       </div>
     </article>
   </div>
