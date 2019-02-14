@@ -1,8 +1,8 @@
-* { 
-	-webkit-tap-highlight-color: transparent; 
+* {
+	-webkit-tap-highlight-color: transparent;
 }
 
-// Custom strcutural changes (LIMO-260) 
+// Custom strcutural changes (LIMO-260)
 body {
 	min-height: 100%;
 	-webkit-overflow-scrolling: touch;
@@ -29,6 +29,11 @@ body {
 .mdl-layout__drawer {
 	position: fixed;
 	-webkit-overflow-scrolling: touch;
+
+	@media screen and (max-width: $layout-screen-size-threshold) {
+		top: $layout-header-mobile-row-height;
+		height: calc(100% - #{$layout-header-mobile-row-height});
+	}
 }
 
 .mdl-layout__drawer.is-visible ~ .mdl-layout__content.mdl-layout__content {
@@ -37,6 +42,14 @@ body {
 	right: 0;
 	left: 0;
 	-webkit-overflow-scrolling: auto;
+}
+
+.mdl-layout__drawer ~ .mdl-layout__obfuscator {
+	top: $layout-desktop-header-height;
+
+	@media screen and (max-width: $layout-screen-size-threshold) {
+		top: $layout-header-mobile-row-height;
+	}
 }
 // End of LIMO-260
 
@@ -58,7 +71,7 @@ body {
 
 	//Aligment fix in header
 	.mdl-switch{
-		
+
 		.mdl-switch__label{
 			left: 0;
 
@@ -72,7 +85,7 @@ body {
 			padding-left: 40px;
 		}
 	}
-	
+
 	//Switch header style
 	.mdl-switch__label{
 		font-size: 15px;
@@ -99,7 +112,7 @@ body {
 			padding-left: 5px;
 			padding-right: 5px;
 			font-size: 19px;
-			
+
 			&.is-active{
 
 				.icon-star{
@@ -139,7 +152,7 @@ body {
 	cursor: pointer;
 
 	img{
-		width: $ls-brand-logo-size;	
+		width: $ls-brand-logo-size;
 		height: $ls-brand-logo-size;
 	}
 
@@ -176,7 +189,7 @@ body {
 
 	.mdl-layout__header & {
 		margin-right: 0;
-	
+
 	  @media screen and (max-width: $layout-screen-size-threshold) {
 	  	margin: 0;
 	  	height: $layout-header-mobile-row-height - 1px;
@@ -224,7 +237,7 @@ body {
 		& .mdl-navigation__link{
 			font-size: $ls-drawer-link-font-size;
 			padding: $ls-drawer-link-padding;
-			font-weight: 300;
+			font-weight: 600;
 			color: $ls-drawer-link-color;
 			opacity: 1;
 
@@ -237,6 +250,59 @@ body {
 				font-size: $ls-drawer-link-icon-size;
 				margin-right: 7px;
 				color: $ls-green-active-color;
+			}
+		}
+
+		.mdl-navigation__parent {
+
+			> .mdl-navigation__link {
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPjx0aXRsZT5jYXJldC1kb3duPC90aXRsZT48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjkuOTM4IDEwLjI0bC0xLjk5MS0xLjg0OWMtMC4yODQtMC4yODQtMC43MTEtMC4yODQtMC45OTYgMGwtMTEuMTY0IDEwLjE2OS0xMS4zMDctMTAuMDk4Yy0wLjI4NC0wLjI4NC0wLjcxMS0wLjIxMy0wLjk5NiAwbC0xLjkyIDEuODQ5Yy0wLjI4NCAwLjI4NC0wLjI4NCAwLjcxMSAwIDAuOTI0bDExLjQ0OSAxMC4yNGMwIDAuMTQyIDAuMDcxIDAuMjg0IDAuMjEzIDAuMzU2bDEuOTkxIDEuODQ5YzAuMjg0IDAuMjg0IDAuNzExIDAuMjg0IDAuOTk2IDBsMTMuNzI0LTEyLjUxNmMwLjI4NC0wLjIxMyAwLjI4NC0wLjY0IDAtMC45MjR6Ij48L3BhdGg+PC9zdmc+);
+				background-repeat: no-repeat;
+				background-position: right 10px center;
+				background-size: 12px;
+			}
+
+			&.mdl-navigation__open > .mdl-navigation__link {
+				background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPjx0aXRsZT5jYXJldC11cDwvdGl0bGU+PHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTI5LjkzOCAyMC44MzZsLTExLjQ0OS0xMC4zMTFjMC0wLjE0Mi0wLjA3MS0wLjI4NC0wLjIxMy0wLjM1NmwtMS45OTEtMS44NDljLTAuMjg0LTAuMjg0LTAuNzExLTAuMjg0LTAuOTk2IDBsLTEzLjcyNCAxMi41ODdjLTAuMjg0IDAuMjg0LTAuMjg0IDAuNzExIDAgMC45MjRsMS45OTEgMS44NDljMC4yODQgMC4yODQgMC43MTEgMC4yODQgMC45OTYgMGwxMS4wOTMtMTAuMTY5IDExLjMwNyAxMC4wOThjMC4yODQgMC4yODQgMC43MTEgMC4yODQgMC45OTYgMGwxLjkyLTEuODQ5YzAuMzU2LTAuMjg0IDAuMzU2LTAuNzExIDAuMDcxLTAuOTI0eiI+PC9wYXRoPjwvc3ZnPg==);
+			}
+		}
+
+		&.mdl-navigation--primary {
+
+			.mdl-navigation__link {
+				color: $ls-color-white;
+				background-color: $ls-drawer-primary-link-color;
+			}
+
+			.mdl-sub-navigation {
+
+				.mdl-sub-navigation__category,
+				.mdl-navigation__link {
+					color: $ls-color-white;
+				}
+
+				.mdl-sub-navigation__category {
+					background-color: darken($ls-drawer-primary-subnav-bg-color, 2%);
+				}
+
+				.mdl-navigation__link {
+					background-color: $ls-drawer-primary-subnav-bg-color;
+					padding-left: 16px;
+				}
+
+				.mdl-navigation__active > .mdl-navigation__link {
+					background-color: $ls-drawer-primary-subnav-bg-active-color;
+				}
+			}
+
+			.mdl-navigation__active > .mdl-navigation__link {
+				background-image: none;
+				background-color: $ls-drawer-primary-link-active-color;
+				color: $ls-color-white;
+			}
+
+			.mdl-navigation__show-all a span {
+					color: $ls-drawer-primary-show-all-color;
 			}
 		}
 
@@ -255,7 +321,7 @@ body {
 		  .mdl-navigation__link {
 				display: flex;
 				align-items: center;
-				
+
 				&:first-child {
 				  padding-top: 20px;
 				}
@@ -337,11 +403,12 @@ body {
 
 		//Active navigation list
 		& .mdl-navigation__active{
-			
+
 			& > .mdl-navigation__link{
 				padding: $ls-drawer-link-active-padding;
-				background-color: $ls-green-active-color;
-				color: $ls-color-white;
+				background-image: $ls-drawer-link-active-bg;
+				background-color: white;
+				color: $ls-drawer-link-active-color;
 
 				.icon{
 					color: $ls-color-white;
@@ -370,7 +437,7 @@ body {
 			}
 
 			& .mdl-navigation__show-all{
-				
+
 				a{
 					color: $ls-drawer-show-all-color;
 				}
@@ -386,7 +453,7 @@ body {
 		}
 
 		& .mdl-navigation__open{
-			
+
 			.mdl-sub-navigation {
 				display: block;
 			}
