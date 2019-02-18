@@ -1,6 +1,6 @@
-@import "_color-definitions";
-@import "functions";
-@import "ls-typography/ls-typography";
+@import "./../../../node_modules/material-design-lite/src/_color-definitions";
+@import "./../../../node_modules/material-design-lite/src/functions";
+@import "./../livescore/ls-typography/ls-typography";
 
 /* Livescore custom styles */
 $ls-brand-logo-size: 25px;
