@@ -7,11 +7,15 @@
 .text-nowrap         { white-space: nowrap !important; }
 
 // Text primary links color
-.text-primary a {
+.text-primary {
   color: $ls-primary-color;
 
-  &:hover {
+  a {
     color: $ls-primary-color;
+
+    &:hover {
+      color: $ls-primary-color;
+    }
   }
 }
 
