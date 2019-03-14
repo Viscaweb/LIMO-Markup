@@ -117,6 +117,12 @@
     }
   }
 
+  ul {
+    li * {
+      white-space: normal !important;
+    }
+  }
+
   // Blockquote
   .blockquote {
     position: relative;
