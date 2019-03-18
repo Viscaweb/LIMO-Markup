@@ -124,7 +124,7 @@
 
           &--best > span {
             border-color: $new-match-odds-widget-light-green;
-            background-color: fade-out($new-match-odds-widget-light-green, 0.25%);
+            background-color: fade-out($new-match-odds-widget-light-green, 0.75%);
             font-weight: 600;
           }
 
@@ -198,6 +198,40 @@
 
             > span {
               font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ls-odds-over-under {
+
+    .row {
+      .cell {
+        &__bookmaker {
+          flex: 0 0 40%;
+        }
+      }
+
+      &--head {
+        .cell {
+
+          > span {
+            font-weight: 600;
+            height: auto;
+            font-size: 11px;
+          }
+
+          &__bookmaker {
+            justify-content: flex-start;
+          }
+
+          &__odds {
+            background-color: transparent;
+
+            > span {
+              color: $ls-text-color;
             }
           }
         }
