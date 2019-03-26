@@ -111,6 +111,7 @@
 
     .league-badge {
       position: absolute;
+      top: 0;
       color:#8f8f8f;
       background: #f5f5f5;
       padding: 0px 4px;
@@ -176,7 +177,7 @@
 // Match cell component
 .match {
   display: flex;
-  align-items: stretch;
+  align-items: center;
   justify-content: center;
   color: $ls-text-color;
   text-decoration: none;
@@ -223,14 +224,15 @@
   &__score {
     position: relative;
     display: flex;
-    flex: 0 0 54px;
+    flex: 0 0 $ls-match-listing-score-min-width;
     font-size: 14px;
-    min-height: 28px;
+    height: $ls-match-listing-score-height;
     background-color: rgba(0,0,0,.02);
     align-items: center;
     justify-content: center;
     padding: 0;
     font-weight: 600;
+    border-radius: 2px;
 
     &--updated {
       animation-name: progressiveUpdate;

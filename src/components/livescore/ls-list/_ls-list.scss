@@ -11,7 +11,7 @@
 			width: 100%;
 			display: flex;
 			align-content: stretch;
-			align-items: stretch;
+			align-items: center;
 			text-decoration: none;
 		}
 
@@ -22,14 +22,12 @@
 		}
 
 		&.row--highlight {
-			/*background: $ls-color-highlight;*/
 			animation-name: progressiveHighlight;
 			animation-duration: 6s;
 		}
 
 		&.row--head{
 			background: #f7f7f7;
-			/*border-bottom: lighten($ls-list-border-color, 5%);*/
 
 			.cell {
 				align-items: center;
@@ -87,7 +85,7 @@
 				align-items: center;
 				flex-grow : 0;
 				padding: 0;
-			
+
 				&:first-child {
 					padding-left: 13px;
 				}
@@ -99,7 +97,7 @@
 					text-overflow: ellipsis;
 				}
 
-				
+
 				&__league-name {
 					font-weight: 400;
 					padding-right: 4px;
@@ -210,11 +208,31 @@
 			&__score {
 				font-weight: 600;
 				text-align: center;
-				flex : 0 0 54px;
+				height: $ls-match-listing-score-height;
+				flex : 0 0 $ls-match-listing-score-min-width;
+				padding: 0;
 				background-color: rgba(0,0,0,0.02);
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				border-radius: $ls-match-listing-score-border-radius;
+
+				.mdl-button {
+					width: 100%;
+					padding: 0 5px;
+					font-size: 10px;
+					font-weight: $ls-font-weight-bold;
+					line-height: 1;
+					height: $ls-match-listing-score-height;
+
+					&:after {
+						display: inline-block;
+						content: "\e60d";
+						font-family: $ls-icons-font;
+						font-size: 8px;
+						margin-left: 3px;
+					}
+				}
 
 				> span {
 					margin: 0 2px;
@@ -228,14 +246,14 @@
 		}
 
 		.icon-star {
-			
+
 			&.is-active {
 				color : $ls-star-active;
 			}
 		}
 	}
 
-	// This class is to clear floating columns in standing tables see LIMO-268 
+	// This class is to clear floating columns in standing tables see LIMO-268
 	&--clear {
 		clear: both;
 	}
