@@ -54,12 +54,14 @@
 .mr-4 { margin-right: $ls-font-size-base + (($ls-font-size-base / 5)*4) !important; }
 .mr-5 { margin-right: $ls-font-size-base * 2 !important; }
 
+.pt-0 { padding-top: 0 !important; }
 .pt-1 { padding-top: $ls-font-size-base !important; }
 .pt-2 { padding-top: $ls-font-size-base + (($ls-font-size-base / 5)*2) !important; }
 .pt-3 { padding-top: $ls-font-size-base + (($ls-font-size-base / 5)*3) !important; }
 .pt-4 { padding-top: $ls-font-size-base + (($ls-font-size-base / 5)*4) !important; }
 .pt-5 { padding-top: $ls-font-size-base * 2 !important; }
 
+.pb-0 { padding-bottom: 0 !important; }
 .pb-1 { padding-bottom: $ls-font-size-base !important; }
 .pb-2 { padding-bottom: $ls-font-size-base + (($ls-font-size-base / 5)*2) !important; }
 .pb-3 { padding-bottom: $ls-font-size-base + (($ls-font-size-base / 5)*3) !important; }
