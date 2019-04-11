@@ -258,6 +258,23 @@
     flex-direction: column;
     justify-content: center;
     padding: 0 4px;
+
+    .mdl-button {
+      width: 100%;
+      padding: 0 5px;
+      font-size: 10px;
+      font-weight: $ls-font-weight-bold;
+      line-height: 1;
+      height: $ls-match-listing-score-height;
+
+      &:after {
+        display: inline-block;
+        content: "\e60d";
+        font-family: $ls-icons-font;
+        font-size: 8px;
+        margin-left: 3px;
+      }
+    }
   }
 }
 
