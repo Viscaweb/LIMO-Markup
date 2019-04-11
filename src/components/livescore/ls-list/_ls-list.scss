@@ -1,260 +1,137 @@
+@import "ls-list-cells";
+
 .ls-list {
+  .row {
+    width: 100%;
+    display: flex;
+    font-weight: 300;
+    align-content: stretch;
+    align-items: stretch;
 
-	.row {
-		width: 100%;
-		display: flex;
-		font-weight: 300;
-		align-content: stretch;
-		align-items: stretch;
+    > a {
+      width: 100%;
+      display: flex;
+      align-content: stretch;
+      align-items: center;
+      text-decoration: none;
+    }
 
-		> a {
-			width: 100%;
-			display: flex;
-			align-content: stretch;
-			align-items: center;
-			text-decoration: none;
-		}
+    a {
+      &:active {
+        background-color: $ls-list-pressed-color;
+      }
+    }
 
-		a{
-			&:active {
-				background-color: $ls-list-pressed-color;
-			}
-		}
+    &.row--highlight {
+      animation-name: progressiveHighlight;
+      animation-duration: 6s;
+    }
 
-		&.row--highlight {
-			animation-name: progressiveHighlight;
-			animation-duration: 6s;
-		}
+    &.row--head {
+      background: #f7f7f7;
 
-		&.row--head{
-			background: #f7f7f7;
-
-			.cell {
-				align-items: center;
-
-				&--content-left {
-					padding-left: $ls-list-heading-h-padding;
-					padding-right: $ls-list-heading-h-padding;
-					justify-content: left;
-				}
-
-				&--content-right {
-					padding-left: $ls-list-heading-h-padding;
-					padding-right: $ls-list-heading-h-padding;
-					justify-content: right;
-				}
-			}
-		}
-
-		&.row--visual-block {
-			background: $ls-advertisement-bg-color;
-			border-bottom: lighten($ls-list-border-color, 5%);
-			font-size:$ls-advertisement-font-size;
-			color:$ls-advertisement-font-color;
-
-			.cell {
-				align-items: center;
-				display:flex;
-				flex-flow: column;
-				justify-content: center;
-				text-transform: uppercase;
-				padding: 5px 10px 10px 10px;
-
-				img {
-					width: 100%;
-					height: auto;
-				}
-			}
-		}
-
-		&.row--divider {
-
-			justify-content: flex-start;
-			align-content: flex-start;
-			line-height: 32px;
-			border: none;
-
-			&.row--divider--center {
-				align-items: center;
-				justify-content: center;
-			}
-
-			.cell {
-				display: flex;
-				flex: none;
-				align-items: center;
-				flex-grow : 0;
-				padding: 0;
-
-				&:first-child {
-					padding-left: 13px;
-				}
-
-				&__league-name,
-				&__league-stage {
-					display: block;
-					overflow: hidden;
-					text-overflow: ellipsis;
-				}
-
-
-				&__league-name {
-					font-weight: 400;
-					padding-right: 4px;
-					flex-shrink: 50;
-
-					> a {
-						color: $ls-divider-title-color;
-					}
-				}
-
-				&__league-stage {
-					flex-shrink: 50;
-				}
-
-				&__divider-title {
-					font-weight: 400;
-					padding-right: 4px;
-				}
-			}
-		}
-
-		.cell {
-			flex: 1 100%;
-			padding-top: 13px;
-			padding-bottom: 13px;
-
-			&__spacer {
-				flex-grow: 1 !important;
-			}
-
-			&__time,
-			&__team,
-			&__teams,
-			&__date {
-				white-space: nowrap;
-				text-overflow: ellipsis;
-				overflow: hidden;
-				padding-left: 5px;
-				padding-right: 5px;
-			}
-
-			&__time {
-				color : lighten($ls-text-color, 30%);
-				font-weight: 300;
-				flex: 0 0 46px
-			}
-
-			&__date {
-				color : lighten($ls-text-color, 30%);
-				font-weight: 300;
-				flex: 0 0 62px
-			}
-
-			&__teams {
-				padding: 0;
-			}
-
-			&__team {
-				position: relative;
-
-				&.win {
-					font-weight: 600;
-				}
-			}
-
-			&__team--team1 {
-				text-align: right;
-
-				.red-card {
-					right: 5px;
-				}
-			}
-
-			&__team--team2 {
-				text-align: left;
-			}
-
-		  &__favorite {
-        display: flex;
-        flex: 0 0 40px;
-        flex-wrap: nowrap;
-        justify-content: center;
+      .cell {
         align-items: center;
-        padding: 0;
 
-        > span {
-          line-height: 20px;
-          font-size: ls-font-size(4px, 'large');
+        &--content-left {
+          padding-left: $ls-list-heading-h-padding;
+          padding-right: $ls-list-heading-h-padding;
+          justify-content: left;
+        }
 
-          &.icon-bell {
-          	color: hsl(0, 0%, 94%);
-
-          	&.is-active {
-          		color: $ls-green-active-color;
-          	}
-          }
+        &--content-right {
+          padding-left: $ls-list-heading-h-padding;
+          padding-right: $ls-list-heading-h-padding;
+          justify-content: right;
         }
       }
+    }
 
-			&__caret {
-				flex : 0 0 20px;
+    &.row--visual-block {
+      background: $ls-advertisement-bg-color;
+      border-bottom: lighten($ls-list-border-color, 5%);
+      font-size: $ls-advertisement-font-size;
+      color: $ls-advertisement-font-color;
 
-				.mdl-button__icon {
-					color: lighten($ls-text-color, 50%);
-				}
-			}
+      .cell {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-transform: uppercase;
+        padding: 5px 10px 10px 10px;
 
-			&__score {
-				font-weight: 600;
-				text-align: center;
-				height: $ls-match-listing-score-height;
-				flex : 0 0 $ls-match-listing-score-min-width;
-				padding: 0;
-				background-color: rgba(0,0,0,0.02);
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				border-radius: $ls-match-listing-score-border-radius;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
 
-				.mdl-button {
-					width: 100%;
-					padding: 0 5px;
-					font-size: 10px;
-					font-weight: $ls-font-weight-bold;
-					line-height: 1;
-					height: $ls-match-listing-score-height;
+    &.row--divider {
 
-					&:after {
-						display: inline-block;
-						content: "\e60d";
-						font-family: $ls-icons-font;
-						font-size: 8px;
-						margin-left: 3px;
-					}
-				}
+      justify-content: flex-start;
+      align-content: flex-start;
+      line-height: 32px;
+      border: none;
 
-				> span {
-					margin: 0 2px;
-				}
-			}
+      &.row--divider--center {
+        align-items: center;
+        justify-content: center;
+      }
 
-			&__hour {
-				color: lighten($ls-text-color, 30%);
-				font-weight: 400;
-			}
-		}
+      .cell {
+        display: flex;
+        flex: none;
+        align-items: center;
+        flex-grow: 0;
+        padding: 0;
 
-		.icon-star {
+        &:first-child {
+          padding-left: 13px;
+        }
 
-			&.is-active {
-				color : $ls-star-active;
-			}
-		}
-	}
+        &__league-name,
+        &__league-stage {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
 
-	// This class is to clear floating columns in standing tables see LIMO-268
-	&--clear {
-		clear: both;
-	}
+
+        &__league-name {
+          font-weight: 400;
+          padding-right: 4px;
+          flex-shrink: 50;
+
+          > a {
+            color: $ls-divider-title-color;
+          }
+        }
+
+        &__league-stage {
+          flex-shrink: 50;
+        }
+
+        &__divider-title {
+          font-weight: 400;
+          padding-right: 4px;
+        }
+      }
+    }
+
+
+
+    .icon-star {
+
+      &.is-active {
+        color: $ls-star-active;
+      }
+    }
+  }
+
+  // This class is to clear floating columns in standing tables see LIMO-268
+  &--clear {
+    clear: both;
+  }
 }
