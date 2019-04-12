@@ -38,4 +38,4 @@ require('./build/build')(gulp, config, function (path) { return config.mdlPath +
 
 // gulp.task('build', ['clean']);
 
-gulp.task('default', ['styles']);
+gulp.task('default', ['styles', 'styles-grid', 'scripts', 'mocha']);

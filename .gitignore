@@ -4,3 +4,4 @@ external/
 node_modules/
 *.orig
 *.log
+/.tmp/
