@@ -12000,6 +12000,76 @@ a {
   font-weight: inherit;
   text-decoration: none; }
 
+.mdl-list {
+  padding: 0;
+  margin: 0;
+  /* &.mdl-list-countries{
+
+    > li{
+        line-height: 15px;
+    }
+  }*/ }
+  .mdl-list > li {
+    list-style: none;
+    display: block;
+    padding: 13px 15px;
+    color: #000000;
+    border-top: 1px solid #f7f7f7;
+    line-height: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 300; }
+    .mdl-list > li:last-child {
+      border-bottom: 1px solid #dadada; }
+    .mdl-list > li > a {
+      color: #000000; }
+    .mdl-list > li h1, .mdl-list > li h2, .mdl-list > li h3, .mdl-list > li h4 {
+      font-size: inherit;
+      padding: 0;
+      margin: 0;
+      line-height: inherit; }
+  .mdl-list.mdl-list—condensed {
+    padding: 0; }
+    .mdl-list.mdl-list—condensed li {
+      line-height: 15px; }
+  .mdl-list.mdl-list-linked {
+    padding: 0; }
+    .mdl-list.mdl-list-linked > li {
+      padding: 0; }
+      .mdl-list.mdl-list-linked > li:active {
+        background-color: #f1f1f1; }
+      .mdl-list.mdl-list-linked > li > a {
+        display: block;
+        padding: 13px 15px;
+        color: #484848;
+        text-decoration: none;
+        font-weight: 300; }
+  .mdl-list.mdl-list-media > li {
+    padding: 0; }
+    .mdl-list.mdl-list-media > li > a {
+      padding: 0;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      text-decoration: none; }
+  .mdl-list .mdl-list__info {
+    padding: 13px 21px;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .mdl-list .mdl-list__info-title {
+    display: block;
+    color: #000000;
+    line-height: 27px;
+    font-weight: 300; }
+  .mdl-list .mdl-list__info-desc {
+    display: block;
+    font-size: 12px;
+    color: #626161;
+    font-weight: 300;
+    line-height: 24px; }
+
 .animation-reset, .ls-list-matches .row--match.event-live.event-paused .cell__time:before, .ls-match-listing-baseball--left .row--match.event-live.paused .match-list__time:before, .ls-match-listing-footus .row--match.event-live.paused .match-list__time:before, .ls-match-listing-rugby .row--match.event-live.paused .match-list__time:before, .ls-match-listing-tennis .row--match.event-live.paused .match-list__time:before {
   animation: none !important;
   -webkit-animation: none !important; }
