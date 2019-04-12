@@ -11,8 +11,6 @@ const config = {
     dist: path.resolve('./dist')
 };
 
-console.log(config.mdlPath);
-
 gulp.task('copy-ls-scripts', () => {
     return gulp.src([config.srcPath + '/assets/js/app.js'])
         .pipe(gulp.dest(config.dist + '/js'));
