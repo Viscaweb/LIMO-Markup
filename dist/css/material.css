@@ -16686,6 +16686,91 @@ $ls-list-border-color:	    blue;
       margin-bottom: 20px;
       margin-top: 5px; }
 
+.match-pronostics p {
+  font-size: 11px;
+  line-height: 1.5;
+  margin-bottom: 20px; }
+
+.match-pronostic-block {
+  margin-bottom: 20px; }
+  .match-pronostic-block:last-child {
+    margin-bottom: 0; }
+
+.match-pronostic-block-header {
+  background-color: #000000;
+  font-size: 12px;
+  line-height: 1.19;
+  padding: 9px 10px;
+  text-align: center;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px; }
+  .match-pronostic-block-header span {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ffd800; }
+
+.match-pronostic-block-body {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  overflow: hidden; }
+
+.match-pronostic-block-column {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 1 1 33.33%;
+      -ms-flex: 1 1 33.33%;
+          flex: 1 1 33.33%;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  box-sizing: border-box; }
+  .match-pronostic-block-column--logo, .match-pronostic-block-column--odds {
+    background-color: #FFFFFF;
+    border-right: 1px solid #000000;
+    color: #484848; }
+  .match-pronostic-block-column--odds span,
+  .match-pronostic-block-column--bonus span {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 3px; }
+  .match-pronostic-block-column--bonus {
+    background-color: #ffd800;
+    color: #3e4e5a; }
+  .match-pronostic-block-column--cta {
+    -webkit-flex: 1 1 100%;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%; }
+    .match-pronostic-block-column--cta a {
+      display: block;
+      width: 100%;
+      padding: 10px 10px;
+      background-color: #5da400;
+      text-transform: uppercase;
+      text-align: center;
+      color: #FFFFFF;
+      font-size: 15px;
+      font-weight: bold;
+      line-height: 1.35; }
+      .match-pronostic-block-column--cta a:hover {
+        color: #FFFFFF;
+        background-color: #63ae00; }
+      .match-pronostic-block-column--cta a:active {
+        background-color: #579a00; }
+      .panel-inverse .match-pronostic-block-column--cta a {
+        color: #FFFFFF; }
+        .panel-inverse .match-pronostic-block-column--cta a:hover {
+          color: #FFFFFF; }
+
 .ls-list-match-score-header {
   background: #FFFFFF; }
   .ls-list-match-score-header .row {
