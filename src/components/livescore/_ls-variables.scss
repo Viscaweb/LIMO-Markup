@@ -1,5 +1,6 @@
 @import "./../../../node_modules/material-design-lite/src/_color-definitions";
 @import "./../../../node_modules/material-design-lite/src/functions";
+@import "../../../node_modules/material-design-lite/src/variables";
 @import "./../livescore/ls-typography/ls-typography";
 
 /* Livescore custom styles */
@@ -747,9 +748,6 @@ $grid-phone-gutter: $grid-desktop-gutter !default;
 $grid-phone-margin: $grid-desktop-margin !default;
 
 $grid-cell-default-columns: $grid-phone-columns !default;
-
-@import "../../../node_modules/material-design-lite/src/variables";
-
 
 /* TEXTFIELD */
 
