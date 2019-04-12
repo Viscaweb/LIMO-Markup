@@ -16771,6 +16771,53 @@ $ls-list-border-color:	    blue;
         .panel-inverse .match-pronostic-block-column--cta a:hover {
           color: #FFFFFF; }
 
+.match-score {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 0 15px; }
+
+.match-score-team {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 0.79; }
+  .panel-inverse .match-score-team {
+    color: #FFFFFF; }
+    .panel-inverse .match-score-team.match-score-team--preferred {
+      color: #ffd800;
+      font-weight: bold; }
+  .match-score-team:first-child .match-score-team-name {
+    text-align: right;
+    padding-right: 6px;
+    padding-left: 0; }
+
+.match-score-team-name {
+  -webkit-flex: 1 1 100%;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
+  padding-left: 6px; }
+
+.match-score-value {
+  padding: 0 4px;
+  font-size: 20px; }
+
+.match-score-divider {
+  font-size: 14px;
+  padding: 0 2px; }
+
 .ls-list-match-score-header {
   background: #FFFFFF; }
   .ls-list-match-score-header .row {
