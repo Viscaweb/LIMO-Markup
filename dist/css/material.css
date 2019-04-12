@@ -11605,6 +11605,8 @@ $ls-list-border-color:	    blue;
         font-size: 20px;
         margin-bottom: 12px;
         line-height: 26px; }
+  .ls-article ul li * {
+    white-space: normal !important; }
   .ls-article .blockquote {
     position: relative;
     margin: 0 auto 32px;
@@ -15178,21 +15180,7 @@ $ls-list-border-color:	    blue;
                 justify-content: flex-end;
         text-transform: uppercase;
         font-size: 9px;
-        color: #5da400;
-        /* media query to target short version of the keywork */
-        /*@media only screen and (max-device-width : 320px) and (orientation : portrait) {
-          
-            .text{
-
-              span{
-                display: none;
-              }
-
-              &:after{
-                content: attr(data-short);
-              }
-            }
-          }*/ }
+        color: #5da400; }
         .ls-list-match-score-header .row--match-score-header .cell__team .qualified .icon-tick {
           margin: 3px 2px; }
       .ls-list-match-score-header .row--match-score-header .cell__team--team1 {
@@ -15256,6 +15244,14 @@ $ls-list-border-color:	    blue;
       padding: 0px 4px; }
       .ls-list-match-score-header .row--match-score-header .cell__score--add span.divider {
         margin: 0 4px; }
+    .ls-list-match-score-header .row--match-score-header .cell__score--date, .ls-list-match-score-header .row--match-score-header .cell__score--time {
+      text-align: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      font-size: 12px; }
+    .ls-list-match-score-header .row--match-score-header .cell__score--time {
+      font-weight: bold; }
   .ls-list-match-score-header .row--match-score-header.live .cell__score--add span.minute, .ls-list-match-score-header .row--match-score-header.paused .cell__score--add span.minute {
     position: relative;
     color: #e33000;
@@ -15273,198 +15269,10 @@ $ls-list-border-color:	    blue;
       margin-right: 4px; }
   .ls-list-match-score-header .row--match-score-header.live.live .cell__score--add span.minute:before, .ls-list-match-score-header .row--match-score-header.paused.live .cell__score--add span.minute:before {
     background: #e33000; }
+  .ls-list-match-score-header .row--match-score-header.scheduled .cell__score-box {
+    padding-top: 8px;
+    background-color: transparent; }
 
-/*  .flag--team-home{
-    flex: 0 0 40px;
-    display: flex;
-    justify-content: flex-start;
-
-    > img {
-      max-width: 32px;
-      max-height: 32px;
-    }
-  }
-
-  .flag--team-away{
-    flex: 0 0 40px;
-    display: flex;
-    justify-content: flex-end;
-
-    > img {
-      max-width: 32px;
-      max-height: 32px;
-    }
-  }
-
-  .team-home {
-    flex-grow: 1;
-    display: flex;
-    flex-flow: column nowrap;
-    align-self: stretch;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    padding-right:15px;
-
-    &__title{
-      display: flex;
-      flex: 0 0 32px;
-      justify-content: flex-end;
-      align-items: flex-end;
-    }
-
-      &--add{
-        display: flex;
-        flex: 0 0 18px;
-        min-width: 55px;
-        justify-content: flex-end;
-
-      &__content {
-        flex: 0 0 55px;
-        justify-content: flex-end;
-      }
-    }
-  }
-
-
-  .team-away {
-    flex-grow: 1;
-    display: flex;
-    flex-flow: column nowrap;
-    align-self: stretch;
-    justify-content: flex-start;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    padding-left:15px;
-
-    &__title{
-      display: flex;
-      flex: 0 0 32px;
-      flex-grow: 1;
-      justify-content: flex-start;
-      align-items: flex-end;
-    }
-
-      &--add{
-        display: flex;
-        flex: 0 0 18px;
-        min-width: 55px;
-        justify-content: flex-start;
-
-      &__content {
-
-        display: flex;*/
-/*
-
-        flex: 0 0 55px;
-        justify-content: flex-start;
-      }
-    }
-  }
-
-  .score-box {
-    position: relative;
-    flex: 0 0 56px; */
-/*Attention pour les score > à 9 */
-/*
-
-    display: flex;
-    flex-flow: column nowrap;
-    align-self: stretch;
-    justify-content: center;
-    align-items: flex-end;
-    padding: 6px 9px 0 9px;
-    background-color:darken($ls-color-white , 5%);
-
-    &--result {
-      align-self: stretch;
-      display: flex;
-      font-weight: bold;
-      justify-content: center;
-      flex-flow: row nowrap;
-      font-size: 29px;
-      color:lighten($ls-color-black , 15%);
-
-      &__home{
-      }
-
-      &__away{
-      }
-
-      &__separator{
-        padding: 0 7px;
-      }
-    }
-
-    &--add{
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-      width: 100%;
-      flex: 0 0 17px;
-
-      &__hour{
-        color : lighten($ls-text-color, 30%);
-        font-weight: 300;
-        font-size: 13px;
-      }
-
-      &__time{
-        color : $ls-color-live;
-        font-weight: 300;
-
-        &.live:before{
-          content: '';
-          position: absolute;
-          left: 17px;
-          top: 38px;
-          display: block;
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: #e33000;
-          margin-right: 4px;
-          @extend .blinking;
-        }
-
-        &.paused:before{
-          content: '';
-          position: absolute;
-          left: 17px;
-          top: 38px;
-          display: block;
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: #C8C8C8;
-          margin-right: 4px;
-        }
-      }
-
-      &__over{
-        color : lighten($ls-text-color, 30%);
-        font-weight: 300;
-        font-size: 12px;
-      }
-    }
-  }
-}
-
-.qualified {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  text-transform: uppercase;
-  font-size: 8px;
-
-  color: $ls-primary-color;
-
-  .icon-tick{
-    margin:5px 3px;
-  }
-}
-*/
 .ls-match-statistics {
   position: relative;
   margin: auto; }
@@ -15859,7 +15667,7 @@ $ls-list-border-color:	    blue;
       padding: 7px 4px; }
       .ls-odds.ls-odds-v2 .row .cell__odds--best > span {
         border-color: #d1e9be;
-        background-color: rgba(209, 233, 190, 0.75);
+        background-color: rgba(209, 233, 190, 0.25);
         font-weight: 600; }
       .ls-odds.ls-odds-v2 .row .cell__odds--won, .ls-odds.ls-odds-v2 .row .cell__odds--lost {
         background-color: transparent; }
@@ -15907,6 +15715,22 @@ $ls-list-border-color:	    blue;
         padding-left: 7px; }
         .ls-odds.ls-odds-v2 .row--head .cell__bonus > span {
           font-size: 12px; }
+  .ls-odds.ls-odds-over-under .row .cell__bookmaker {
+    -webkit-flex: 0 0 40%;
+        -ms-flex: 0 0 40%;
+            flex: 0 0 40%; }
+  .ls-odds.ls-odds-over-under .row--head .cell > span {
+    font-weight: 600;
+    height: auto;
+    font-size: 11px; }
+  .ls-odds.ls-odds-over-under .row--head .cell__bookmaker {
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .ls-odds.ls-odds-over-under .row--head .cell__odds {
+    background-color: transparent; }
+    .ls-odds.ls-odds-over-under .row--head .cell__odds > span {
+      color: #484848; }
 
 .ls-odds-tabs .row .cell__player {
   -webkit-align-items: stretch;
@@ -20293,14 +20117,27 @@ span.sprite-icons.webmaster-border{
 
 .panel {
   border: 1px solid #dadada; }
+  .panel.panel-inverse {
+    border-color: #313536;
+    color: #FFFFFF; }
+    .panel.panel-inverse p {
+      color: #FFFFFF; }
 
 .panel-head {
   background-color: #f7f7f7;
   padding: 12px 40px 12px 14px;
   border-bottom: 1px solid #dadada; }
+  .panel-inverse .panel-head {
+    background-color: #454a4c;
+    color: #FFFFFF;
+    border-color: #313536; }
+  .panel-inverse .panel-head.panel-head--primary, .panel-head.panel-head--primary {
+    background-color: #5da400; }
 
 .panel-body {
   padding: 12px 14px 15px; }
+  .panel-inverse .panel-body {
+    background-color: #313536; }
   .panel-body h1 {
     font-size: 27px;
     line-height: 1.3;
