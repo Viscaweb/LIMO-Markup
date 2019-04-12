@@ -1,7 +1,7 @@
 @import "./../../../node_modules/material-design-lite/src/_color-definitions";
 @import "./../../../node_modules/material-design-lite/src/functions";
-@import "../../../node_modules/material-design-lite/src/variables";
 @import "./../livescore/ls-typography/ls-typography";
+
 
 /* Livescore custom styles */
 $ls-brand-logo-size: 25px;
@@ -367,6 +367,7 @@ $blockquote-alert-border-width:                  4px;
 $blockquote-alert-border-width-small-phone:      2px;
 $blockquote-alert-padding:                       15px 15px 15px 20px;
 $blockquote-alert-max-width:                     790px;
+
 
 //Media Querys
 $ls-retina: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (   min--moz-device-pixel-ratio: 2), only screen and (     -o-min-device-pixel-ratio: 2/1), only screen and (        min-device-pixel-ratio: 2), only screen and (                min-resolution: 192dpi), only screen and (                min-resolution: 2dppx)";
@@ -906,3 +907,6 @@ $data-table-cell-top: $data-table-card-padding / 2;
 
 /* MEDIA QUERIES */
 $ls-phone: "( max-width: #{$grid-tablet-breakpoint} )";
+
+
+@import "../../../node_modules/material-design-lite/src/variables";
