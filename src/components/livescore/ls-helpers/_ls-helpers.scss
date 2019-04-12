@@ -1,0 +1,29 @@
+@import "spacing";
+
+// Helpers
+.text-left           { text-align: left !important; }
+.text-right          { text-align: right !important; }
+.text-center         { text-align: center !important; }
+.text-justify        { text-align: justify !important; }
+.text-nowrap         { white-space: nowrap !important; }
+
+// Text primary links color
+.text-primary {
+  color: $ls-primary-color;
+
+  a {
+    color: $ls-primary-color;
+
+    &:hover {
+      color: $ls-primary-color;
+    }
+  }
+}
+
+.text-semi-bold      { font-weight: $ls-font-weight-medium; }
+.text-bold           { font-weight: $ls-font-weight-bold; }
+
+// Images
+.my-100 { max-height: 100% !important; }
+.mh-100 { max-width: 100% !important; }
+

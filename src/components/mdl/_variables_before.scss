@@ -23,7 +23,9 @@ $ls-error-color: 				#ea0000;
 $ls-warning-color: 			#f6b514;
 $ls-yellow-color:       #ffd800;
 $ls-yellow-color-shade: #e1b902;
+$ls-yellow-text-contrast-color: #3e4e5a;
 $ls-dark-contrast-color:#454a4c;
+$ls-dark-shade-color:   #313536;
 $ls-secondary-color:    #167773;
 $ls-info-color: 				#a4cfe9;
 $ls-user-female-color:	#ffaef7;
@@ -299,19 +301,37 @@ $ls-panel-bg: 															darken($ls-color-white, 3.2%);
 $ls-panel-border-color: 										darken($ls-panel-bg, 11.2%);
 $ls-panel-head-padding: 										12px 40px 12px 14px;
 $ls-panel-body-padding: 										12px 14px 15px;
+$ls-panel-inverse-heading-bg-color: 			  $ls-dark-contrast-color;
+$ls-panel-inverse-body-bg-color: 					  $ls-dark-shade-color;
+$ls-panel-inverse-border-color: 					  $ls-dark-shade-color;
 
 //Sprite
 $ls-image-sprite-icons : "../assets/img/sprite/sprite-icons.png";
 $ls-image-sprite-icons-retina : "../assets/img/sprite/sprite-icons@2x.png";
 
 // New match odds widget
-$new-match-odds-widget-heading-bg:                 #454a4c;
-$new-match-odds-widget-heading-bg-accent:          #313536;
+$new-match-odds-widget-heading-bg:                 $ls-dark-contrast-color;
+$new-match-odds-widget-heading-bg-accent:          $ls-dark-shade-color;
 $new-match-odds-widget-bonus-bg:                   #ffd800;
 $new-match-odds-widget-text-color:                 #5c5c5c;
 $new-match-odds-widget-text-color-secondary:       #808080;
 $new-match-odds-widget-light-green:                #d1e9be;
 $new-match-odds-widget-light-red:                  #eebaba;
+
+// Match score widget
+$match-score-header-font-size:                     14px;
+$match-score-header-value-font-size:               20px;
+$match-score-header-margin:                        0 0 15px;
+
+// Match pronostics widget
+$match-pronostics-bg-color:                        $ls-color-black;
+$match-pronostics-body-font-size:                  11px;
+$match-pronostics-body-line-height:                1.5;
+$match-pronostics-header-font-size:                12px;
+$match-pronostics-numbers-font-size:               14px;
+$match-pronostics-cta-font-size:                   15px;
+$match-pronostics-margin-bottom:                   20px;
+$match-pronostics-border-radius:                   4px;
 
 // Article components
 $article-general-padding:                   16px;

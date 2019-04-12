@@ -1,0 +1,103 @@
+// Match pronostics
+
+.match-pronostics {
+
+  p {
+    font-size: $match-pronostics-body-font-size;
+    line-height: $match-pronostics-body-line-height;
+    margin-bottom: 20px;
+  }
+}
+
+.match-pronostic-block {
+  margin-bottom: $match-pronostics-margin-bottom;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.match-pronostic-block-header {
+  background-color: $match-pronostics-bg-color;
+  font-size: $match-pronostics-header-font-size;
+  line-height: 1.19;
+  padding: 9px 10px;
+  text-align: center;
+  border-top-left-radius: $match-pronostics-border-radius;
+  border-top-right-radius: $match-pronostics-border-radius;
+
+  span {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $ls-yellow-color;
+  }
+}
+
+.match-pronostic-block-body {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom-left-radius: $match-pronostics-border-radius;
+  border-bottom-right-radius: $match-pronostics-border-radius;
+  overflow: hidden;
+}
+
+.match-pronostic-block-column {
+  display: flex;
+  flex: 1 1 33.33%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+
+  &--logo,
+  &--odds {
+    background-color: $ls-color-white;
+    border-right: 1px solid $match-pronostics-bg-color;
+    color: $ls-text-color;
+  }
+
+  &--odds span,
+  &--bonus span {
+    font-size: $match-pronostics-numbers-font-size;
+    font-weight: bold;
+    margin-left: 3px;
+  }
+
+  &--bonus {
+    background-color: $ls-yellow-color;
+    color: $ls-yellow-text-contrast-color;
+  }
+
+  &--cta {
+    flex: 1 1 100%;
+
+    a {
+      display: block;
+      width: 100%;
+      padding: 10px 10px;
+      background-color: $ls-primary-color;
+      text-transform: uppercase;
+      text-align: center;
+      color: $ls-color-white;
+      font-size: $match-pronostics-cta-font-size;
+      font-weight: bold;
+      line-height: 1.35;
+
+      &:hover {
+        color: $ls-color-white;
+        background-color: lighten($ls-primary-color, 2%);
+      }
+
+      &:active {
+        background-color: darken($ls-primary-color, 2%);
+      }
+
+      .panel-inverse & {
+        color: $ls-color-white;
+
+        &:hover {
+          color: $ls-color-white;
+        }
+      }
+    }
+  }
+}

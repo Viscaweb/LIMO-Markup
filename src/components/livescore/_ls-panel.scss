@@ -7,16 +7,40 @@
 
 .panel {
 	border: 1px solid $ls-panel-border-color;
+
+	&.panel-inverse {
+		border-color: $ls-panel-inverse-border-color;
+		color: $ls-color-white;
+
+		p {
+			color: $ls-color-white;
+		}
+	}
 }
 
 .panel-head {
 	background-color: $ls-panel-bg;
 	padding: $ls-panel-head-padding;
 	border-bottom: 1px solid $ls-panel-border-color;
+
+	.panel-inverse & {
+		background-color: $ls-panel-inverse-heading-bg-color;
+		color: $ls-color-white;
+		border-color: $ls-panel-inverse-border-color;
+	}
+
+	.panel-inverse &.panel-head--primary,
+	&.panel-head--primary {
+		background-color: $ls-primary-color;
+	}
 }
 
 .panel-body {
 	padding: $ls-panel-body-padding;
+
+	.panel-inverse & {
+		background-color: $ls-panel-inverse-body-bg-color;
+	}
 
 	h1 {
 		font-size: 27px;
