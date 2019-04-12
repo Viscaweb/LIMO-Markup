@@ -24,7 +24,10 @@ gulp.task('copy-ls-datepicker', () => {
 });
 
 gulp.task('copy-assets', () => {
-    return gulp.src(config.srcPath + '/assets/**/*')
+    return gulp.src([
+        config.srcPath + '/assets/**/*',
+        config.mdlPath + '/dist/assets/**/*'
+    ])
         .pipe(gulp.dest(config.dist + '/assets'));
 });
 
