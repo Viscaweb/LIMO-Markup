@@ -161,7 +161,7 @@ module.exports = function (gulp, config, mdlPath) {
             .pipe($.concat('material.min.css.template'))
             .pipe($.header(banner, {pkg}))
             .pipe($.sourcemaps.write('.'))
-            .pipe(gulp.dest('dist'))
+            .pipe(gulp.dest(config.dist + '/css'))
             .pipe($.size({title: 'styles'}));
     });
 
@@ -181,13 +181,13 @@ module.exports = function (gulp, config, mdlPath) {
             // Concatenate Styles
             .pipe($.concat('material.css'))
             .pipe($.header(banner, {pkg}))
-            .pipe(gulp.dest(config.dist))
+            .pipe(gulp.dest(config.dist + '/css'))
             // Minify Styles
             .pipe($.if('*.css', $.csso()))
             .pipe($.concat('material.min.css'))
             .pipe($.header(banner, {pkg}))
             .pipe($.sourcemaps.write('.'))
-            .pipe(gulp.dest(config.dist))
+            .pipe(gulp.dest(config.dist + '/css'))
             .pipe($.size({title: 'styles'}));
     });
 
@@ -238,7 +238,7 @@ module.exports = function (gulp, config, mdlPath) {
             // Concatenate Scripts
             .pipe($.concat('material.js'))
             .pipe($.iife({useStrict: true}))
-            .pipe(gulp.dest('dist'))
+            .pipe(gulp.dest(config.dist + '/js'))
             // Minify Scripts
             .pipe($.uglify({
                 sourceRoot: '.',
@@ -248,12 +248,12 @@ module.exports = function (gulp, config, mdlPath) {
             .pipe($.concat('material.min.js'))
             // Write Source Maps
             .pipe($.sourcemaps.write('.'))
-            .pipe(gulp.dest('dist'))
+            .pipe(gulp.dest(config.dist + '/js'))
             .pipe($.size({title: 'scripts'}));
     });
 
 // Clean Output Directory
-    gulp.task('clean', () => del(['dist', '.publish']));
+    gulp.task('clean', () => del([config.dist + '/**/*', '.publish']));
 
 // Copy package manger and LICENSE files to dist
     gulp.task('metadata', () => {

@@ -1,0 +1,889 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+	
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+		<title>The project: LIMO</title>
+
+		<meta name="theme-color" content="#263238">
+
+		<link rel="shortcut icon" href="../../assets/favicon.png" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-512-x-512.png" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-29-x-29.png" sizes="29x29" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-40-x-40.png" sizes="40x40" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-60-x-60.png" sizes="60x60" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-76-x-76.png" sizes="76x76" />
+		<link rel="apple-touch-icon" href="../../assets/img/apple-icon-167-x-167.png" sizes="167x167" />
+
+		<!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+		<!--
+		<link rel="canonical" href="http://www.example.com/">
+		-->
+
+		<!-- Page styles -->
+		<link rel="stylesheet" href="../../assets/prism-default.css">
+
+		<!-- ATH -->
+    <link rel="stylesheet" type="text/css" href="../../assets/js/ath/style/addtohomescreen.css">
+
+		<!-- Fonts -->
+		<link href='//fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en' rel='stylesheet' type='text/css'>
+		<link href="//fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+		<link href="../../assets/fonts/lsicons/style.css" type="text/css" rel="stylesheet" />
+
+		<link href="../../assets/components.css" rel="stylesheet">
+		<script src="../../assets/swfobject.js"></script>
+		<script src="../../assets/snippets.js"></script>
+		<script src="../../assets/components.js"></script>
+		<link rel="stylesheet" href="../../components/demos.css">
+
+		<script src="../../assets/index.js" async></script>
+
+		<!-- Material Design Lite -->
+		<script src="../../js/material.min.js"></script>
+		<!-- Add Copy-to-CodePen buttons to code blocks -->
+		<script src="../../assets/codepen.js"></script>
+		<!-- Enable Prism syntax highlighting -->
+		<script src="../../assets/prism.js"></script>
+		<script src="../../assets/prism-markup.min.js"></script>
+		<script src="../../assets/prism-javascript.min.js"></script>
+		<script src="../../assets/prism-css.min.js"></script>
+		<script src="../../assets/prism-bash.min.js"></script>
+		<script src="../../assets/main.js"></script>
+
+		<!-- Material Calendar -->
+		<script src="../../assets/js/material-datepicker/libs/moment-with-locales.min.js"></script>
+		<script src="../../assets/js/material-datepicker/libs/jquery-2.1.3.min.js"></script>
+		<script src="../../assets/js/material-datepicker/libs/knockout-3.2.0.js"></script>
+
+		<script src="../../assets/js/material-datepicker/material-datepicker/js/material.datepicker.js"></script>
+		<link rel="stylesheet" href="../../assets/js/material-datepicker/material-datepicker/css/material.datepicker.css">
+
+		<!-- Google Charts -->
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+		<!-- jQuery UI -->
+		<script src="../../assets/js/jquery-ui/jquery-ui.min.js"></script>
+
+		<!-- jQuery UI - Touch Punch -->
+		<script src="../../assets/js/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+
+		<!-- ATH -->
+		<script type="text/javascript" src="../../assets/js/ath/src/addtohomescreen.min.js"></script>
+
+		<!-- LS Scripts -->
+		<script src="../../assets/js/app.js"></script>
+   
+		<link href="../../css/material.min.css" type="text/css" rel="stylesheet" />
+		<link href="../../css/assets/main.css" type="text/css" rel="stylesheet" /> 
+		
+								
+		
+		
+
+</head>
+<body class="wf-materialicons-n4-active">
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
+
+			  <header class="mdl-layout__header">
+            
+    <div class="mdl-layout__header-row">
+
+                   <div class="mdl-layout-brand-logo"><img src="../../assets/img/ls-app-logo.png" alt="LIMO"></div>
+      
+      <span class="mdl-layout-title">My Games</span>
+      <!-- Add spacer, to align navigation to the right -->
+      <div class="mdl-layout-spacer"></div>
+      <nav class="mdl-navigation">
+
+                
+                
+                          <label class="mdl-switch mdl-switch-live mdl-js-switch mdl-js-ripple-effect mdl-switch--compact" for="live-switch">
+            <input type="checkbox" id="live-switch" class="mdl-switch__input" checked />
+            <span class="mdl-switch__label">En Directo</span>
+          </label>
+          
+                  
+                  
+                
+          
+          
+      </nav>
+    </div>
+
+    
+    
+    
+    
+    
+      
+      
+      
+        					
+				
+  </header>
+
+	          <div class="mdl-layout__drawer">
+  <ul class="mdl-navigation mdl-navigation--primary">
+    <li class="mdl-navigation__active"><a class="mdl-navigation__link" href="">Inicio</a></li>
+    <li><a class="mdl-navigation__link" href="">Apuestas de fútbol</a></li>
+    <li class="mdl-navigation__parent">
+      <a class="mdl-navigation__link" href="">Casas de apuestas</a>
+      <ul class="mdl-sub-navigation">
+        <li><a class="mdl-navigation__link" href="#">William Hill</a></li>
+        <li class="mdl-navigation__active"><a class="mdl-navigation__link" href="#">Betway</a></li>
+        <li><a class="mdl-navigation__link" href="#">Bet 365</a></li>
+        <li><a class="mdl-navigation__link" href="#">Codere</a></li>
+      </ul>
+    </li>
+    <li class="mdl-navigation__parent">
+      <a class="mdl-navigation__link" href="">Pronósticos</a>
+      <ul class="mdl-sub-navigation">
+        <li><a class="mdl-navigation__link" href="#">LaLiga</a></li>
+        <li><a class="mdl-navigation__link" href="#">Champions League</a></li>
+        <li><a class="mdl-navigation__link" href="#">Premiere Ligue</a></li>
+      </ul>
+    </li>
+    <li><a class="mdl-navigation__link" href="">Consejos y guías</a></li>
+    <li><a class="mdl-navigation__link" href="">Noticias</a></li>
+    <li><a class="mdl-navigation__link" href="">My Profile</a></li>
+    <li class="mdl-navigation__parent">
+    	<a class="mdl-navigation__link" href="#">Football</a>
+      <ul class="mdl-sub-navigation">
+        <li class="mdl-sub-navigation__category"><a href="#" class="icon"><span class="material-icons">&#xE8B8;</span></a>My Leagues</li>
+        <li><a class="mdl-navigation__link" href="#">Premier League</a></li>
+        <li><a class="mdl-navigation__link" href="#">Championship</a></li>
+        <li><a class="mdl-navigation__link" href="#">Bundesliga</a></li>
+        <li><a class="mdl-navigation__link" href="#">Serie A</a></li>
+        <li><a class="mdl-navigation__link" href="#">Spanish League</a></li>
+        <li><a class="mdl-navigation__link" href="#">Champions League</a></li>
+        <li><a class="mdl-navigation__link" href="#">League Cup</a></li>
+        <li class="mdl-navigation__show-all"><a class="mdl-navigation__link" href="#"><span class="icon-caret-select"></span>Show All</a></li>
+      </ul>
+    	<ul class="mdl-sub-navigation">
+        <li class="mdl-sub-navigation__category"><a href="#" class="icon"><span class="material-icons">&#xE8B8;</span></a>My Leagues</li>
+    		<li><a class="mdl-navigation__link" href="#">Barcelona</a></li>
+    		<li><a class="mdl-navigation__link" href="#">PSG</a></li>
+    		<li><a class="mdl-navigation__link" href="#">Juventus Turin</a></li>
+    		<li><a class="mdl-navigation__link" href="#">Bayern Munich</a></li>
+        <li class="mdl-navigation__show-all"><a class="mdl-navigation__link" href="#"><span class="icon-caret-select"></span>Show All</a></li>
+    	</ul>
+    </li>
+    <li><a class="mdl-navigation__link" href="">Tennis</a></li>
+    <li><a class="mdl-navigation__link" href="">Rugby</a></li>
+    <li><a class="mdl-navigation__link" href="">Basketball</a></li>
+    <li><a class="mdl-navigation__link" href="">Voleyball</a></li>
+    <li><a class="mdl-navigation__link" href="">American Football</a></li>
+    <li><a class="mdl-navigation__link" href="">Baseball</a></li>
+    <li><a class="mdl-navigation__link" href="">Ice Hockey</a></li>
+    <li><a class="mdl-navigation__link" href="">Handball</a></li>
+  </ul>
+  <ul class="mdl-navigation">
+    <li class="mdl-navigation__app-link">
+      <a class="mdl-navigation__link"  href="">
+        <span class="app-link__logo"><img src="../../assets/img/ls-app-logo-166.png" width="80px" alt="Marcadores for Android"></span>
+        <span class="app-link__tagline">Get the Marcadores.com app now!</span>
+      </a>
+      <a class="mdl-navigation__link" href="#">
+        <span class="app-link__store-btn"><img src="../../assets/img/store-google-play.png" width="120px" alt="Get the app"></span>
+      </a>
+    </li>
+    <li class="mdl-navigation__social">
+      <a class="mdl-navigation__link" href="#"><span class="icon icon-facebook"></span></a>
+      <a class="mdl-navigation__link" href="#"><span class="icon icon-twitter"></span></a>
+      <a class="mdl-navigation__link" href="#"><span class="icon icon-googleplus"></span></a>
+    </li>
+    <li class="mdl-navigation__timezone-selector">
+      <label class="mdl-navigation__timezone-selector-label" for="timezone-selector">Fuseau horaire</label>
+      <select name="" id="timezone-selector">
+        <option value="UTC−12:00">UTC−12:00</option>
+        <option value="UTC−11:00">UTC−11:00</option>
+        <option value="UTC−10:00">UTC−10:00</option>
+        <option value="UTC−09:30">UTC−09:30</option>
+      </select>
+    </li>
+    <li class="mdl-navigation__active"><a class="mdl-navigation__link" href="">Help</a></li>
+    <li><a class="mdl-navigation__link" href="">Sitemap</a></li>
+    <li><a class="mdl-navigation__link" href="">Conditions and Privacy</a></li>
+    <li><a class="mdl-navigation__link" href="">Contact us</a></li>
+    <li><a class="mdl-navigation__link" href="">About WhatTheScore</a></li>
+  </ul>
+</div>
+    	
+			<main class="mdl-layout__content">
+						
+				  <div class="page-content">
+								<div class="ls-divider ls-divider--h">
+	<h1 class="ls-divider__title">My Games</h1>
+	<h2 class="ls-divider__sub-title">My Games H2</h2>
+</div>
+	<div class="mdl-button-group mdl-button-group--block">
+		<a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+			<span class="mdl-button__icon icon-caret-left"></span>
+		</a>
+		<div class="mdl-button mdl-calendar mdl-button--raised mdl-button--large mdl-button--wide">
+			<input type="text" name="mdl-calendar1" value="01/08/2015" readonly="true">
+		</div>
+		<a href="#" class="mdl-button mdl-js-button mdl-button--raised mdl-button--large">
+			<span class="mdl-button__icon icon-caret-right"></span>
+		</a>
+	</div>
+
+	<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
+            <li class="row row--divider ls-divider">
+	<div class="ls-divider__sport-icon">
+		<a href="#"><span class="ls-divider__icon icon-football"></span></a>
+	</div>
+	<div class="cell cell__flag ls-divider__title"><img class="ls-divider__flag" src="../../assets/img/flag-fr.png" alt="France"></div>
+	<div class="cell cell__league-name">Ligue 1</div>
+	<div class="cell cell__spacer ls-divider__spacer"></div>
+	<div class="cell cell__standing-icon ls-divider__right-nav">
+		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
+		<a href="#"><span class="ls-divider__icon icon-star is-active"></span></a>
+	</div>
+</li>        <li class="row row--match">
+        <a href="#">
+            <div class="cell cell__time"><span class="hour">18:00</span></div>
+            <div class="cell cell__team cell__team--team1 win"><span>MO Béjaia</span></div>
+            <div class="cell cell__score"><span class="home-score">2</span> <span class="versus"> - </span> <span class="away">4</span></div>
+            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+    <li class="row row--match event-live event-paused">
+        <a href="#">
+            <div class="cell cell__time"><span class="status">HT</span></div>
+            <div class="cell cell__team cell__team--team1"><span>PSG</span></div>
+            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">1</span></div>
+            <div class="cell cell__team cell__team--team2"><span>Bordeaux</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+    <li class="row row--match event-live">
+        <a href="#">
+            <div class="cell cell__time"><span class="status">24'</span></div>
+            <div class="cell cell__team cell__team--team1"><span>Perpignan long name</span></div>
+            <div class="cell cell__score"><span class="home-score">0</span> <span class="versus"> - </span> <span class="away">0</span></div>
+            <div class="cell cell__team cell__team--team2"><span>JS Kabylie</span></div>
+            <div class="cell cell__caret">
+                <span class="mdl-button__icon icon-caret-right"></span>
+            </div>
+        </a>
+    </li>
+</ul>
+	<ul class="mdl-list mdl-list-media ls-list ls-match-listing-footus">
+
+            <li class="row row--divider ls-divider">
+	<div class="ls-divider__sport-icon">
+		<a href="#"><span class="ls-divider__icon icon-football"></span></a>
+	</div>
+	<div class="cell cell__flag ls-divider__title"><img class="ls-divider__flag" src="../../assets/img/flag-fr.png" alt="France"></div>
+	<div class="cell cell__league-name">Ligue 1</div>
+	<div class="cell cell__spacer ls-divider__spacer"></div>
+	<div class="cell cell__standing-icon ls-divider__right-nav">
+		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
+		<a href="#"><span class="ls-divider__icon icon-star is-active"></span></a>
+	</div>
+</li>    
+    <li class="row row--match event-live">
+        <a href="#">
+        <div class="cell cell__time">
+            <span>140'</span>
+        </div>
+        <div class="cell cell__opposition">
+            <div class="row">
+                <div class="cell cell__opposition__title">
+                    <span>Baltimore Ravens</span>
+                </div>
+                <div class="cell cell__score"><span>22</span></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__opposition__title ">
+                    <span>Buffalo Bills</span>
+                </div>
+                <div class="cell cell__score"><span>24</span></div>
+            </div>
+        </div>
+        <div class="cell cell__points">
+            <div class="row">
+                <div class="cell cell__point">18</div>
+                <div class="cell cell__point">1</div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__point">23</div>
+                <div class="cell cell__point">4</div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+            </div>
+        </div>
+        </a>
+    </li>
+    <li class="row row--match">
+        <div class="cell cell__time">
+            <span>Term</span>
+        </div>
+        <div class="cell cell__opposition">
+            <div class="row">
+                <div class="cell cell__opposition__title win">
+                    <span>Cleveland Gladiators</span>
+                </div>
+                <div class="cell cell__score"><span>66</span></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__opposition__title ">
+                    <span>New Orleans Saints</span>
+                </div>
+                <div class="cell cell__score"><span>57</span></div>
+            </div>
+        </div>
+        <div class="cell cell__points">
+            <div class="row">
+                <div class="cell cell__point">7</div>
+                <div class="cell cell__point">12</div>
+                <div class="cell cell__point">23</div>
+                <div class="cell cell__point">17</div>
+            </div>
+            <div class="row">
+                <div class="cell cell__point">24</div>
+                <div class="cell cell__point">12</div>
+                <div class="cell cell__point">14</div>
+                <div class="cell cell__point">16</div>
+            </div>
+        </div>
+    </li>
+
+    <li class="row row--match">
+        <div class="cell cell__time">
+            <span>20h45</span>
+        </div>
+        <div class="cell cell__opposition">
+            <div class="row">
+                <div class="cell cell__opposition__title">
+                    <span>Greenbay Packers</span>
+                </div>
+                <div class="cell cell__score"><span>-</span></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__opposition__title ">
+                    <span>Dallas Cowboys</span>
+                </div>
+                <div class="cell cell__score"><span>-</span></div>
+            </div>
+        </div>
+        <div class="cell cell__points">
+            <div class="row">
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+
+	<ul class="mdl-list mdl-list-media ls-list ls-match-listing-rugby">
+
+            <li class="row row--divider ls-divider">
+	<div class="ls-divider__sport-icon">
+		<a href="#"><span class="ls-divider__icon icon-football"></span></a>
+	</div>
+	<div class="cell cell__flag ls-divider__title"><img class="ls-divider__flag" src="../../assets/img/flag-fr.png" alt="France"></div>
+	<div class="cell cell__league-name">Ligue 1</div>
+	<div class="cell cell__spacer ls-divider__spacer"></div>
+	<div class="cell cell__standing-icon ls-divider__right-nav">
+		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
+		<a href="#"><span class="ls-divider__icon icon-star is-active"></span></a>
+	</div>
+</li>    
+    <li class="row row--match">
+        <div class="cell cell__time">
+            <span>Term</span>
+        </div>
+        <div class="cell cell__opposition">
+            <div class="row">
+                <div class="cell cell__opposition__title win">
+                    <span>Hurricanes</span>
+                </div>
+                <div class="cell cell__score"><span>66</span></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__opposition__title ">
+                    <span>Higlanders</span>
+                </div>
+                <div class="cell cell__score"><span>57</span></div>
+            </div>
+        </div>
+        <div class="cell cell__points">
+            <div class="row">
+                <div class="cell cell__point">24</div>
+                <div class="cell cell__point">17</div>
+            </div>
+            <div class="row">
+                <div class="cell cell__point">8</div>
+                <div class="cell cell__point">14</div>
+            </div>
+        </div>
+    </li>
+    <li class="row row--match event-live">
+        <div class="cell cell__time">
+            <span>140'</span>
+        </div>
+        <div class="cell cell__opposition">
+            <div class="row">
+                <div class="cell cell__opposition__title">
+                    <span>Central Cheetahs</span>
+                </div>
+                <div class="cell cell__score"><span>13</span></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__opposition__title ">
+                    <span>Blues</span>
+                </div>
+                <div class="cell cell__score"><span>20</span></div>
+            </div>
+        </div>
+        <div class="cell cell__points">
+            <div class="row">
+                <div class="cell cell__point">3</div>
+                <div class="cell cell__point">17</div>
+            </div>
+            <div class="row">
+                <div class="cell cell__point">10</div>
+                <div class="cell cell__point">8</div>
+            </div>
+        </div>
+    </li>
+    <li class="row row--match">
+        <div class="cell cell__time">
+            <span>20h45</span>
+        </div>
+        <div class="cell cell__opposition">
+            <div class="row">
+                <div class="cell cell__opposition__title">
+                    <span>Central Cheetahs</span>
+                </div>
+                <div class="cell cell__score"><span>-</span></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__opposition__title ">
+                    <span>Blues</span>
+                </div>
+                <div class="cell cell__score"><span>-</span></div>
+            </div>
+        </div>
+        <div class="cell cell__points">
+            <div class="row">
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+
+	<ul class="mdl-list mdl-list-media ls-list ls-match-listing-tennis">
+
+            <li class="row row--divider ls-divider">
+	<div class="ls-divider__sport-icon">
+		<a href="#"><span class="ls-divider__icon icon-football"></span></a>
+	</div>
+	<div class="cell cell__flag ls-divider__title"><img class="ls-divider__flag" src="../../assets/img/flag-fr.png" alt="France"></div>
+	<div class="cell cell__league-name">Ligue 1</div>
+	<div class="cell cell__spacer ls-divider__spacer"></div>
+	<div class="cell cell__standing-icon ls-divider__right-nav">
+		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
+		<a href="#"><span class="ls-divider__icon icon-star is-active"></span></a>
+	</div>
+</li>    
+    <li class="row row--match">
+        <div class="cell cell__time">
+            <span>Term</span>
+        </div>
+        <div class="cell cell__opposition">
+            <div class="row">
+                <div class="cell cell__opposition__title win">
+                    <span>Wawrinka (longtext)</span>
+                </div>
+                <div class="cell cell__score"><span>3</span></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__opposition__title ">
+                    <span>Janowics</span>
+                </div>
+                <div class="cell cell__score"><span>2</span></div>
+            </div>
+        </div>
+        <div class="cell cell__points">
+            <div class="row">
+                <div class="cell cell__point">6</div>
+                <div class="cell cell__point">6
+                    <div class="cell__point-detail"> 6  </div>
+                </div>
+                <div class="cell cell__point">6</div>
+                <div class="cell cell__point">6</div>
+                <div class="cell cell__point">6</div>
+
+            </div>
+            <div class="row">
+                <div class="cell cell__point">6</div>
+                <div class="cell cell__point">7</div>
+                <div class="cell cell__point">4</div>
+                <div class="cell cell__point">3</div>
+                <div class="cell cell__point">1</div>
+            </div>
+        </div>
+    </li>
+
+    <li class="row row--match event-live event-paused tennis-double">
+        <div class="cell cell__time">
+            <span>140'</span>
+        </div>
+        <div class="cell cell__opposition">
+            <div class="row">
+                <div class="cell cell__opposition__title">
+                    <span>I. Kremer</span>
+                    <span>A. Vrljic</span>
+                    <span class="icon-tennis"></span>
+                </div>
+                <div class="cell cell__score"><span>40</span></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__opposition__title ">
+                    <span>P. Olaru</span>
+                    <span>S. Peer</span>
+                </div>
+                <div class="cell cell__score"><span>30</span></div>
+            </div>
+        </div>
+        <div class="cell cell__points">
+            <div class="row">
+                <div class="cell cell__point">3
+                    <div id="tt1" class="cell__point-detail">12</div>
+                </div>
+                <div class="cell cell__point">6
+                    <div id="tt1" class="cell__point-detail">10</div>
+                </div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+
+            </div>
+            <div class="row">
+                <div class="cell cell__point">6</div>
+                <div class="cell cell__point">7</div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+            </div>
+        </div>
+    </li>
+
+    <li class="row row--match event-live">
+        <div class="cell cell__time">
+            <span>30'</span>
+        </div>
+        <div class="cell cell__opposition">
+            <div class="row">
+                <div class="cell cell__opposition__title">
+                    <span>Wawrinka</span>
+                    <span class="icon-tennis"></span>
+                </div>
+                <div class="cell cell__score"><span>40</span></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__opposition__title ">
+                    <span>Janowics</span>
+                </div>
+                <div class="cell cell__score updated"><span>30</span></div>
+            </div>
+        </div>
+        <div class="cell cell__points">
+            <div class="row">
+                <div class="cell cell__point">3
+                    <div class="cell__point-detail">12</div>
+                </div>
+                <div class="cell cell__point">6</div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+
+            </div>
+            <div class="row">
+                <div class="cell cell__point">6
+                    <div class="cell__point-detail">10</div>
+                </div>
+                <div class="cell cell__point">7</div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+            </div>
+        </div>
+    </li>
+
+    <li class="row row--match">
+        <div class="cell cell__time">
+            <span>20h45</span>
+        </div>
+        <div class="cell cell__opposition">
+            <div class="row">
+                <div class="cell cell__opposition__title">
+                    <span>R. Federer</span>
+                </div>
+                <div class="cell cell__score"><span>-</span></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__opposition__title ">
+                    <span>R. Nadal</span>
+                </div>
+                <div class="cell cell__score"><span>-</span></div>
+            </div>
+        </div>
+        <div class="cell cell__points">
+            <div class="row">
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+            </div>
+            <div class="row">
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+                <div class="cell cell__point"></div>
+            </div>
+        </div>
+    </li>
+</ul>
+
+
+	<div class="container--match-listing-baseball">
+
+            <ul class="mdl-list mdl-list-media ls-list ls-list-matches">
+            <li class="row row--divider ls-divider">
+	<div class="ls-divider__sport-icon">
+		<a href="#"><span class="ls-divider__icon icon-football"></span></a>
+	</div>
+	<div class="cell cell__flag ls-divider__title"><img class="ls-divider__flag" src="../../assets/img/flag-fr.png" alt="France"></div>
+	<div class="cell cell__league-name">Ligue 1</div>
+	<div class="cell cell__spacer ls-divider__spacer"></div>
+	<div class="cell cell__standing-icon ls-divider__right-nav">
+		<a href="#"><span class="ls-divider__icon icon-standings"></span></a>
+		<a href="#"><span class="ls-divider__icon icon-star is-active"></span></a>
+	</div>
+</li>        </ul>
+    
+
+
+
+            <ul class="mdl-list ls-list ls-match-listing-baseball ls-match-listing-baseball--left">
+        
+        <li class="row row--empty">
+            <div class="cell"></div>
+        </li>
+
+        <li class="row row--match ">
+            <div class="cell cell__time">
+                <span>Term</span>
+            </div>
+            <div class="cell cell__opposition">
+                <div class="row">
+                    <div class="cell cell__opposition__title">
+                        <span>Baltimore Ravens</span>
+                    </div>
+                    <div class="cell cell__score"><span>22</span></div>
+                </div>
+                <div class="row">
+                    <div class="cell cell__opposition__title ">
+                        <span>Buffalo Bills long text qhfqhf
+                        </span>
+                    </div>
+                    <div class="cell cell__score"><span>24</span></div>
+                </div>
+            </div>
+        </li>
+        <li class="row row--match event-live">
+            <div class="cell cell__time">
+                <span>140'</span>
+            </div>
+            <div class="cell cell__opposition">
+                <div class="row">
+                    <div class="cell cell__opposition__title">
+                        <span>Baltimore Ravens</span>
+                    </div>
+                    <div class="cell cell__score"><span>22</span></div>
+                </div>
+                <div class="row">
+                    <div class="cell cell__opposition__title ">
+                        <span>Buffalo Bills</span>
+                    </div>
+                    <div class="cell cell__score"><span>24</span></div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+        <ul class="ls-match-listing-baseball ls-match-listing-baseball--right">
+
+                <li class="row row--head">
+            <div class="cell">1</div>
+            <div class="cell">2</div>
+            <div class="cell">3</div>
+            <div class="cell">4</div>
+            <div class="cell">5</div>
+            <div class="cell">6</div>
+            <div class="cell">7</div>
+            <div class="cell">8</div>
+        </li>
+        <li class="row row--match">
+            <div class="cell cell__points">
+                <div class="row">
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                </div>
+                <div class="row">
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                </div>
+            </div>
+        </li>
+        <li class="row row--match">
+            <div class="cell cell__points">
+                <div class="row">
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                </div>
+                <div class="row">
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                    <div class="cell cell__point">38</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <div class="clear"></div>
+
+</div>
+
+
+				  </div>
+						
+				</main>			
+								</div>
+			<script type="text/javascript">
+			$(document).ready(function(){
+
+				//Init core JS
+				App.init();
+
+			});
+		</script>
+			<div class="mdl-dialog" id="dialog1">
+	<div class="mdl-dialog__content">
+		<div class="mdl-dialog__header">
+			<span class="mdl-dialog__header-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span>
+		</div>
+		<div class="mdl-dialog__body">
+			<p>Aenean lacinia bibendum nulla sed consectetur. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+		</div>
+		<div class="mdl-dialog__footer">
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				CANCEL
+			</button>
+			<button class="mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect mdl-dialog-close">
+				AGREED
+			</button>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		var dp = $('.mdl-calendar > input[type="text"]');
+		dp.datepicker();
+
+
+		/*mdl-dialog*/
+		//This code should be on a js component
+		$('[data-toggle="mdl-dialog"]').click(function( e ){
+			var target = $(this).data("target");
+			$(target).addClass("mdl-dialog--show");
+
+			e.stopPropagation();
+		});
+
+		//Dialog close button
+		$(".mdl-dialog-close").click(function( e ){
+			var dialog = $(this).parents(".mdl-dialog");
+			dialog.removeClass("mdl-dialog--show");
+		});
+
+		//Hide dialog when click outside
+		$(document).on("click",function( e ){
+			if ( !$(e.target).closest(".mdl-dialog__content").length ) {
+				$(".mdl-dialog").removeClass('mdl-dialog--show');
+			}
+		});
+
+		/*mdl-collapsible*/
+		$(".mdl-collapsible__heading").click(function( e ){
+			var collapsible = $(this).parent();
+			var body = $(".mdl-collapsible__body", collapsible);
+
+			body.slideToggle({
+				complete: function(){
+					collapsible.toggleClass("mdl-collapsible-collapsed");
+				}
+			});
+		});
+	});
+</script></body>
+</html>

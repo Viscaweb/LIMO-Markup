@@ -1,0 +1,118 @@
+<script type="text/javascript">
+    google.charts.load("current", {packages:['corechart','line']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+      var data = new google.visualization.DataTable();
+
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Team 1');
+      data.addColumn('number', 'Team 2');
+
+      data.addRows([
+        [0, 13, 16],  
+        [1, 8, 16],  
+        [2, 7, 15],  
+        [3, 7, 11],  
+        [4, 9, 14],
+        [5, 4, 16],  
+        [6, 2, 15],  
+        [7, 1, 15],  
+        [8, 1, 16],  
+        [9, 1, 17], 
+        [10, 1, 17],
+        [11, 4, 17], 
+        [12, 3, 17], 
+        [13, 1, 17], 
+        [14, 1, 15], 
+        [15, 3, 14]
+      ]);
+
+      var options = {
+        height: 300,
+        colors: ['#005596','#c80027'],
+        backgroundColor: { fill:'transparent' },
+        chartArea: {'width': '94%', 'height': '90%', 'left': 20 , 'top': 5},
+        pointSize: 7,
+        lineWidth: 4,
+        annotations: {
+            stemColor : 'none',
+            alwaysOutside: true,
+            textStyle: {
+            fontSize: 26,
+            color: '#FFF',
+            auraColor: 'none'
+          }
+        },
+        hAxis: {
+            viewWindow: {
+                min: 0,
+                max: 20
+            },
+            ticks: [0, 4, 8, 12, 16, 20],
+            textStyle:{
+                color: '#FFF',
+                fontSize: 14
+            },
+            gridlines: {
+                color: "#81B53A",
+            },
+            gridlineColor: '#81B53A',
+            baselineColor: '#81B53A'
+        },
+        vAxis: {
+            direction: -1,
+            viewWindow: {
+                min: 1,
+                max: 20
+            },
+            ticks: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+            textStyle:{
+                color: '#FFF',
+                fontSize: 10
+            },
+            //format: '#\'%\'',
+            gridlineColor: '#81B53A',
+            baselineColor: '#81B53A'
+        },
+        legend: { position: "none" }
+      };
+
+    function placeMarker(dataTable) {
+        var cli = this.getChartLayoutInterface();
+        var chartArea = cli.getChartAreaBoundingBox();
+        var team1 = document.querySelector('.chart-container .team1');
+        var team2 = document.querySelector('.chart-container .team2');
+
+        team1.style.top = Math.floor(cli.getYLocation(dataTable.getValue(15, 1))) - 20 + "px";
+        team1.style.left = Math.floor(cli.getXLocation(15)) - 10 + "px";
+
+        team2.style.top = Math.floor(cli.getYLocation(dataTable.getValue(15, 2))) - 20 + "px";
+        team2.style.left = Math.floor(cli.getXLocation(15)) - 10 + "px";
+    };
+
+    var chart = new google.visualization.LineChart(document.getElementById("chart1"));
+      
+    google.visualization.events.addListener(chart, 'ready', placeMarker.bind(chart, data));
+    chart.draw(data, options);
+  }
+
+    //Make google charts responsive
+    $(window).resize(function(){
+        drawChart();
+    });
+</script>
+
+<div class="ls-divider">
+	<span class="ls-divider__title">League Position</span>
+</div>
+<div class="ls-team-standing-statistics">
+    <div class="chart">
+        <span class="title">Position Evolution</span>
+        <div class="chart-container">
+            <div id="chart1"></div>
+            <div class="chart-marker team1"><img src="../assets/img/psg.png" alt="PSG"></div>
+            <div class="chart-marker team2"><img src="../assets/img/rennes.png" alt="Rennes"></div>
+        </div>
+    </div>
+</div>
