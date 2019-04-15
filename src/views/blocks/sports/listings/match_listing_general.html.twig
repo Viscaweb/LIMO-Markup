@@ -141,6 +141,25 @@
 </ul>
 
 <ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
+    {% include 'blocks/dividers/divider-event-li.twig' %}
+    <li class="row row--match" data-match-name="Atlético de Madrid - Girona">
+        <div class="cell cell__time"><span title="Finalizado">Fin.</span></div>
+        <div class="team win cell cell__team cell__team--team1" data-goto="1"><span title="Atlético de Madrid">Atlético de Madrid</span></div>
+        <div class="cell cell__score" data-goto="1">
+            <span class="home-score">2</span>
+            <span class="versus"> - </span>
+            <span class="away-score">0</span>
+        </div>
+        <div class="team cell cell__team cell__team--team2" data-goto="1">
+            <span title="Girona">Girona</span>
+        </div>
+        <div class="cell cell__favorite">
+            <span class="icon icon-bell" rel="tooltip"></span>
+        </div>
+    </li>
+</ul>
+
+<ul class="mdl-list mdl-list-media mdl-list-linked ls-list ls-list-matches">
     {% include 'blocks/dividers/divider-event-right-nav-li.twig' %}
     <li class="row row--match">
         <div class="cell cell__time"><span class="hour">18:00</span></div>
