@@ -28,6 +28,11 @@
 		color: $ls-color-white;
 		border-color: $ls-panel-inverse-border-color;
 	}
+
+	.panel-inverse &.panel-head--primary,
+	&.panel-head--primary {
+		background-color: $ls-primary-color;
+	}
 }
 
 .panel-body {
