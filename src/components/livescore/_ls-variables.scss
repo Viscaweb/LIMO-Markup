@@ -188,7 +188,12 @@ $ls-rank-clear-red-color:         rgba(239, 216, 216, 1);
 $ls-cell-stat-up:                 rgba(93, 164, 0, 1);
 $ls-cell-stat-down:               rgba(229, 104, 13, 1);
 
-//Match Statistics |
+// Match listings
+$ls-match-listing-score-border-radius:          2px;
+$ls-match-listing-score-height:                 26px;
+$ls-match-listing-score-min-width:              70px;
+
+//Match Statistics
 $ls-match-statistics-possesion-bar-height: 			26px;
 $ls-match-statistics-list-bg: 									$ls-color-white;
 $ls-match-statistics-bar-height: 								9px;
