@@ -11610,14 +11610,17 @@ body {
   .mdl-layout__drawer .mdl-navigation {
     margin: 0;
     padding: 0; }
+    .mdl-layout__drawer .mdl-navigation .mdl-navigation__link--dropdown,
     .mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
       font-size: 16px;
       padding: 11px 16px;
       font-weight: 600;
       color: #363636;
       opacity: 1; }
+      .mdl-layout__drawer .mdl-navigation .mdl-navigation__link--dropdown:hover,
       .mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
         background-color: whitesmoke; }
+      .mdl-layout__drawer .mdl-navigation .mdl-navigation__link--dropdown .icon,
       .mdl-layout__drawer .mdl-navigation .mdl-navigation__link .icon {
         vertical-align: middle;
         font-size: 20px;

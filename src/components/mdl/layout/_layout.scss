@@ -129,6 +129,25 @@ body {
 			background-color: darken($ls-color-white, 10%);
 		}
 	}
+
+	/**
+	 * Link with a separated dropdown button.
+	 * Useful to keep the link.
+	 */
+	.mdl-navigation__link--dropdown {
+		//color: $ls-color-white;
+		//background-color: $ls-drawer-primary-link-color;
+		//display: flex;
+		//padding: $ls-drawer-link-padding;
+	}
+
+	.mdl-navigation__link__caption {
+
+	}
+
+	.mdl-navigation__link__dropdown {
+
+	}
 }
 
 .mdl-layout__header-row{
@@ -234,6 +253,7 @@ body {
 		margin: 0;
 		padding: 0;
 
+		& .mdl-navigation__link--dropdown,
 		& .mdl-navigation__link{
 			font-size: $ls-drawer-link-font-size;
 			padding: $ls-drawer-link-padding;
