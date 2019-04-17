@@ -13,62 +13,62 @@ $ls-color-white: 				#FFFFFF;
 $ls-color-live: 				#e33000;
 $ls-color-live-rgb: 		"277, 48, 0";
 $ls-text-color: 				#484848;
-$ls-primary-color:			#5da400;
-$ls-green-active-color:	#5da400;
-$ls-grey-contrast: 			#d8d8d8;
+$ls-primary-color:			    #5da400;
+$ls-green-active-color:	        #5da400;
+$ls-grey-contrast: 			    #d8d8d8;
 $ls-star-active:				#ffc600;
-$ls-red-draw:						#cc0000;
+$ls-red-draw:					#cc0000;
 $ls-link-color: 				#0053a8;
-$ls-success-color: 			#5da400;
+$ls-success-color: 			    #5da400;
 $ls-error-color: 				#ea0000;
-$ls-warning-color: 			#f6b514;
-$ls-yellow-color:       #ffd800;
-$ls-yellow-color-shade: #e1b902;
+$ls-warning-color: 			    #f6b514;
+$ls-yellow-color:               #ffd800;
+$ls-yellow-color-shade:         #e1b902;
 $ls-yellow-text-contrast-color: #3e4e5a;
-$ls-dark-contrast-color:#454a4c;
-$ls-dark-shade-color:   #313536;
-$ls-secondary-color:    #167773;
+$ls-dark-contrast-color:        #454a4c;
+$ls-dark-shade-color:           #313536;
+$ls-secondary-color:            #167773;
 $ls-info-color: 				#a4cfe9;
-$ls-user-female-color:	#ffaef7;
-$ls-user-male-color:		#8dc4ff;
+$ls-user-female-color:	        #ffaef7;
+$ls-user-male-color:		    #8dc4ff;
 
 //Social colors
-$ls-color-facebook: 		#395fa9;
-$ls-color-twitter: 			#27c4eb;
-$ls-color-googleplus: 	#b73d3d;
+$ls-color-facebook: 		    #395fa9;
+$ls-color-twitter: 			    #27c4eb;
+$ls-color-googleplus: 	        #b73d3d;
 
 //Event status
-$ls-color-highlight : rgb(255, 244, 206);
-$ls-color-updated : $ls-color-live;
+$ls-color-highlight :           rgb(255, 244, 206);
+$ls-color-updated :             $ls-color-live;
 
-$ls-color-event-won-bg : rgb(233, 242, 226);
-$ls-color-event-lost-bg : rgb(245, 211, 207);
-$ls-color-event-draw-bg : rgb(250, 241, 230);
+$ls-color-event-won-bg :        rgb(233, 242, 226);
+$ls-color-event-lost-bg :       rgb(245, 211, 207);
+$ls-color-event-draw-bg :       rgb(250, 241, 230);
 
 //Typography
 $ls-font-size-base:          	14px;
-$ls-font-size-small:          $ls-font-size-base - 3px;
-$ls-font-size-large:          $ls-font-size-base + 3px;
-$ls-font-weight-thin:		 			100;
-$ls-font-weight-light:	 			300;
-$ls-font-weight-normal: 			400;
-$ls-font-weight-medium: 			500;
-$ls-font-weight-bold: 				700;
+$ls-font-size-small:            $ls-font-size-base - 3px;
+$ls-font-size-large:            $ls-font-size-base + 3px;
+$ls-font-weight-thin:		 	100;
+$ls-font-weight-light:	 		300;
+$ls-font-weight-normal: 		400;
+$ls-font-weight-medium: 		500;
+$ls-font-weight-bold: 			700;
 
 //Image paths
-$ls-img-path: 								"../assets/img";
+$ls-img-path: 					"../assets/img";
 
 //Icons
-$ls-icons-font: 							'LSicons';
+$ls-icons-font: 				'LSicons';
 
 //Top Header
 $ls-top-header-border-bottom: 	1px solid #e2e2e2;
 
 //Tabs
-$ls-tab-text-color: 					lighten($ls-text-color, 31.8%);
+$ls-tab-text-color: 			lighten($ls-text-color, 31.8%);
 $ls-tab-text-color-active: 		lighten($ls-color-black, 5%);
-$ls-tab-font-weight: 					300;
-$ls-tab-height: 							48px;
+$ls-tab-font-weight: 			300;
+$ls-tab-height: 				48px;
 
 //Drawer
 $ls-drawer-primary-link-color:              $ls-primary-color;
@@ -76,57 +76,57 @@ $ls-drawer-primary-link-active-color:       #4f8b00;
 $ls-drawer-primary-subnav-bg-color:         #424749;
 $ls-drawer-primary-subnav-bg-active-color:  #767e82;
 $ls-drawer-primary-subnav-category-color:   #424749;
-$ls-drawer-primary-show-all-color:				  #FFFFFF;
-$ls-drawer-link-color:								      darken($ls-text-color, 7%);
-$ls-drawer-link-font-size:						      16px;
-$ls-drawer-sub-navigation-font-size:	      15px;
-$ls-drawer-link-active-padding:				      11px 16px;
-$ls-drawer-link-active-bg:				          linear-gradient(96deg, rgba(255, 238, 0, 0.07), rgba(255, 238, 0, 0.27));
-$ls-drawer-link-active-color:				        #167773;
-$ls-drawer-link-padding:							      11px 16px;
-$ls-drawer-sub-nav-link-padding:			      11px 16px;
-$ls-drawer-link-icon-size:						      20px;
-$ls-drawer-show-all-color:						      #BCBCBC;
+$ls-drawer-primary-show-all-color:			#FFFFFF;
+$ls-drawer-link-color:						darken($ls-text-color, 7%);
+$ls-drawer-link-font-size:					16px;
+$ls-drawer-sub-navigation-font-size:	    15px;
+$ls-drawer-link-active-padding:				11px 16px;
+$ls-drawer-link-active-bg:				    linear-gradient(96deg, rgba(255, 238, 0, 0.07), rgba(255, 238, 0, 0.27));
+$ls-drawer-link-active-color:				#167773;
+$ls-drawer-link-padding:					11px 16px;
+$ls-drawer-sub-nav-link-padding:			11px 16px;
+$ls-drawer-link-icon-size:					20px;
+$ls-drawer-show-all-color:					#BCBCBC;
 
 //Timezone selector
-$ls-timezone-selector-height:					45px;
+$ls-timezone-selector-height:				45px;
 
 //Dividers
-$ls-divider-bg:										darken($ls-color-white, 10%);
+$ls-divider-bg:								darken($ls-color-white, 10%);
 $ls-divider-font-size:						13px;
 $ls-divider-title-color:					#000;
-$ls-divider-height:								32px;
-$ls-divider-padding: 							0 0 0 13px;
+$ls-divider-height:							32px;
+$ls-divider-padding: 						0 0 0 13px;
 $ls-divider-icon-size:						18px;
-$ls-divider-right-nav-icon-size:	20px;
+$ls-divider-right-nav-icon-size:	        20px;
 $ls-divider-icon-color:						darken($ls-color-white, 32.5%);
-$ls-divider-game-type-icon-size:	15px;
+$ls-divider-game-type-icon-size:	        15px;
 
 //Buttons
 $ls-button-padding:							0 14px;
-$ls-button-default-bg:					0 14px;
-$ls-button-font-weight:					300;
+$ls-button-default-bg:					    0 14px;
+$ls-button-font-weight:					    300;
 $ls-button-font-size:						16px;
-$ls-button-large-size:					46px;
-$ls-button-large-icon-size:			20px;
-$ls-button-arrow-margin:				15px;
-$ls-button-facebook-color:			#4168ae;
+$ls-button-large-size:					    46px;
+$ls-button-large-icon-size:			        20px;
+$ls-button-arrow-margin:				    15px;
+$ls-button-facebook-color:			        #4168ae;
 
-$ls-button-gradient-start-color:#1fa931;
-$ls-button-gradient-end-color:	#1bb380;
+$ls-button-gradient-start-color:            #1fa931;
+$ls-button-gradient-end-color:	            #1bb380;
 
 //Switch Button
-$ls-switch-compact-label-height: 				40px;
+$ls-switch-compact-label-height: 			40px;
 $ls-switch-compact-label-font-size: 		12px;
 
 //View more button
-$ls-view-more-button-padding: 	16px;
-$ls-view-more-button-color: 		$ls-green-active-color;
+$ls-view-more-button-padding: 	            16px;
+$ls-view-more-button-color: 		        $ls-green-active-color;
 
 //Lists
-$ls-list-padding:						13px 15px;
-$ls-list-text-color:				$ls-color-black;
-$ls-list-heading-h-padding: 10px;
+$ls-list-padding:						    13px 15px;
+$ls-list-text-color:				        $ls-color-black;
+$ls-list-heading-h-padding:                 10px;
 /*
 $ls-list-border-color:	    blue;
 */
@@ -138,44 +138,44 @@ $ls-list-border:            1px solid $ls-list-border-color;
 //Collapsible
 $ls-collapsible-heading-padding:			12px 14px;
 $ls-collapsible-content-padding:			12px 14px;
-$ls-collapsible-border-color:					darken($ls-color-white, 3.2%);
+$ls-collapsible-border-color:				darken($ls-color-white, 3.2%);
 
 //Dialog
 $ls-dialog-shadow: 							0 0 10px rgba(0, 0, 0, 0.17);
-$ls-dialog-border-color:        #e7e7e7;
+$ls-dialog-border-color:                    #e7e7e7;
 $ls-dialog-border: 							1px solid $ls-dialog-border-color;
 $ls-dialog-padding: 						25px 25px 15px;
-$ls-dialog-title-font-size: 		17px;
-$ls-dialog-title-font-weight: 	600;
-$ls-dialog-title-line-height: 	21px;
-$ls-dialog-body-font-size: 			15px;
-$ls-dialog-body-font-weight: 		300;
-$ls-dialog-max-width: 					700px;
+$ls-dialog-title-font-size: 		        17px;
+$ls-dialog-title-font-weight: 	            600;
+$ls-dialog-title-line-height: 	            21px;
+$ls-dialog-body-font-size: 			        15px;
+$ls-dialog-body-font-weight: 		        300;
+$ls-dialog-max-width: 					    700px;
 $ls-dialog-z-index: 						2000;
 
 //Snackbar
-$ls-snackbar-z-index: 					2001;
+$ls-snackbar-z-index: 					    2001;
 
 //App bar
 $ls-app-bar-zindex: 						4;
-$ls-app-bar-border-color: 			#adadad;
-$ls-app-bar-bg-color: 					$ls-color-white;
-$ls-app-bar-button-height: 			38px;
+$ls-app-bar-border-color: 			        #adadad;
+$ls-app-bar-bg-color: 					    $ls-color-white;
+$ls-app-bar-button-height: 			        38px;
 
 //Datepicker
 $ls-calendar-shadow: 						0 0 10px rgba(0, 0, 0, 0.17);
 
 //Comments
-$ls-color-comment-goal:            rgba(218, 228, 204, 1);
+$ls-color-comment-goal:                     rgba(218, 228, 204, 1);
 
 //Advertisement
-$ls-advertisement-bg-color:        rgba(241, 241, 241, 1);
-$ls-advertisement-font-color:      rgba(178, 178, 178, 1);
-$ls-advertisement-font-size:       8px;
+$ls-advertisement-bg-color:                 rgba(241, 241, 241, 1);
+$ls-advertisement-font-color:               rgba(178, 178, 178, 1);
+$ls-advertisement-font-size:                8px;
 
 
 //Standing-table
-$ls-row-selected-color:             rgba(219, 232, 237, 1);
+$ls-row-selected-color:           rgba(219, 232, 237, 1);
 $ls-rank-grey-color:              rgba(235, 235, 235, 1);
 $ls-rank-green-color:             rgba(190, 209, 166, 1);
 $ls-rank-clear-green-color:       rgba(212, 222, 200, 1);
@@ -194,20 +194,20 @@ $ls-match-listing-score-height:                 26px;
 $ls-match-listing-score-min-width:              70px;
 
 //Match Statistics
-$ls-match-statistics-possesion-bar-height: 			26px;
-$ls-match-statistics-list-bg: 									$ls-color-white;
-$ls-match-statistics-bar-height: 								9px;
-$ls-match-statistics-bar-bg: 										$ls-grey-contrast;
-$ls-match-statistics-bar-high-bg: 							$ls-green-active-color;
+$ls-match-statistics-possesion-bar-height: 		26px;
+$ls-match-statistics-list-bg: 					$ls-color-white;
+$ls-match-statistics-bar-height: 				9px;
+$ls-match-statistics-bar-bg: 					$ls-grey-contrast;
+$ls-match-statistics-bar-high-bg: 				$ls-green-active-color;
 
 //Odds
-$ls-odds-img-margin: 										7px;
-$ls-odds-link-color: 										#0F87FF;
+$ls-odds-img-margin: 							7px;
+$ls-odds-link-color: 							#0F87FF;
 
 //Comment thread widget
 $ls-comment-thread-avatar-size: 				64px;
 $ls-comment-thread-own-color: 					#e0e8d5;
-$ls-comment-thread-compose-height: 			66px;
+$ls-comment-thread-compose-height: 			    66px;
 
 //Player matches listing widget
 $ls-player-matches-listing-minute-bg: 		#f4f9ed;
@@ -225,91 +225,91 @@ $ls-team-over-under-stats-first-size: 		96px;
 $ls-team-over-under-stats-second-size: 		69px;
 
 //Message widget
-$ls-message-widget-icon-size: 						55px;
+$ls-message-widget-icon-size: 					55px;
 $ls-message-widget-app-icon-size: 				73px;
 
 //Login Register
 $ls-login-register-textfield-size: 				10px;
 
 //Account sync widget
-$ls-account-sync-icons-color: 						#626262;
+$ls-account-sync-icons-color: 					#626262;
 $ls-account-sync-list-icons-color: 				#707070;
 $ls-account-sync-list-text-color: 				#5d5d5d;
-$ls-account-sync-body-color: 							#fafafa;
+$ls-account-sync-body-color: 					#fafafa;
 
 //User my information widget
-$ls-user-myinfo-textfield-size: 					10px;
+$ls-user-myinfo-textfield-size: 				10px;
 $ls-user-myinfo-avatar-icon-size: 				30px;
 $ls-user-myinfo-avatar-menu-width: 				208px;
 
 //Avatar selector
-$ls-avatar-selector-modal-width: 					280px;
-$ls-avatar-selector-item-width: 					102px;
-$ls-avatar-selector-img-size: 						70px;
-$ls-avatar-selector-img-bg: 							#f5f5f5;
+$ls-avatar-selector-modal-width: 				280px;
+$ls-avatar-selector-item-width: 				102px;
+$ls-avatar-selector-img-size: 					70px;
+$ls-avatar-selector-img-bg: 					#f5f5f5;
 
 //Contest gifts
 $ls-contest-gifts-dialog-min-width: 			263px;
 
 //User profile header
 $ls-user-profile-header-avatar-size: 			58px;
-$ls-user-profile-header-user-desc-color: 	#c5c5c5;
+$ls-user-profile-header-user-desc-color: 	    #c5c5c5;
 
 //User prediction statistics widget
-$ls-user-prediction-stats-chart-size: 		120px;
-$ls-user-prediction-stats-value-size: 		40px;
+$ls-user-prediction-stats-chart-size: 		    120px;
+$ls-user-prediction-stats-value-size: 		    40px;
 $ls-user-prediction-stats-bar-color: 			#60a604;
-$ls-user-prediction-stats-progress-color: $ls-color-white;
+$ls-user-prediction-stats-progress-color:       $ls-color-white;
 
 //Contest Grid
-$ls-contest-grid-icons-color: 							#b5b5b5;
-$ls-contest-grid-date-color: 								#989898;
-$ls-contest-grid-buttons-height: 						34px;
+$ls-contest-grid-icons-color: 					#b5b5b5;
+$ls-contest-grid-date-color: 					#989898;
+$ls-contest-grid-buttons-height: 				34px;
 $ls-contest-grid-buttons-border-color: 			#d3d3d3;
-$ls-contest-grid-buttons-done-border-color: #66a90e;
+$ls-contest-grid-buttons-done-border-color:     #66a90e;
 $ls-contest-grid-buttons-done-bg-color: 		#f2f2f2;
-$ls-contest-grid-buttons-success-bg-color: 	$ls-green-active-color;
-$ls-contest-grid-buttons-failed-bg-color: 	#c30000;
-$ls-contest-grid-buttons-result-bg-color: 	#e0ecd0;
-$ls-contest-grid-red-card-color: 						#c10000;
-$ls-contest-grid-event-cancelled-bg: 				#f9f9f9;
-$ls-contest-grid-league-data-bg: 						#ebebeb;
-$ls-contest-grid-league-data-color: 				#969696;
-$ls-contest-grid-tips-icon-size: 						36px;
+$ls-contest-grid-buttons-success-bg-color: 	    $ls-green-active-color;
+$ls-contest-grid-buttons-failed-bg-color: 	    #c30000;
+$ls-contest-grid-buttons-result-bg-color: 	    #e0ecd0;
+$ls-contest-grid-red-card-color: 				#c10000;
+$ls-contest-grid-event-cancelled-bg: 			#f9f9f9;
+$ls-contest-grid-league-data-bg: 				#ebebeb;
+$ls-contest-grid-league-data-color: 			#969696;
+$ls-contest-grid-tips-icon-size: 				36px;
 $ls-contest-grid-tips-icon-border-color: 		#c0c0c0;
 
 //Contest prediction standing
-$ls-contest-prediction-standing-current-user-bg-number:	#d0d9c3;
-$ls-contest-prediction-standing-current-user-bg:				#e0e8d5;
+$ls-contest-prediction-standing-current-user-bg-number:	  #d0d9c3;
+$ls-contest-prediction-standing-current-user-bg:		  #e0e8d5;
 
 //Match videos
-$ls-match-videos-width: 										300px;
-$ls-match-videos-height: 										212px;
-$ls-match-videos-name-color: 								#0d0d0d;
+$ls-match-videos-width: 								  300px;
+$ls-match-videos-height: 								  212px;
+$ls-match-videos-name-color: 							  #0d0d0d;
 
 //Match score header
 $ls-match-score-header-team-color: 					#000000;
 
 //Match head to head
-$ls-match-head-to-head-first-size:					60px;
-$ls-match-head-to-head-second-size:					40px;
-$ls-match-head-to-head-third-size:					32px;
-$ls-match-head-to-head-fourth-size:					20px;
-$ls-match-head-to-head-fifth-size:					20px;
+$ls-match-head-to-head-first-size:				60px;
+$ls-match-head-to-head-second-size:				40px;
+$ls-match-head-to-head-third-size:				32px;
+$ls-match-head-to-head-fourth-size:				20px;
+$ls-match-head-to-head-fifth-size:				20px;
 
 //Match incidents
 $ls-match-incidents-empty-row-height: 			58px;
 
 //Panel
-$ls-panel-wrapper-padding: 									15px;
-$ls-panel-wrapper-margin: 									0 0 20px;
-$ls-panel-bg: 															darken($ls-color-white, 3.2%);
-$ls-panel-border-color: 										darken($ls-panel-bg, 11.2%);
-$ls-panel-head-padding: 										12px 40px 12px 14px;
-$ls-panel-body-padding: 										12px 14px 15px;
-$ls-panel-inverse-heading-bg-color: 			  $ls-dark-contrast-color;
-$ls-panel-inverse-body-bg-color: 					  $ls-dark-shade-color;
-$ls-panel-inverse-border-color: 					  $ls-dark-shade-color;
+$ls-panel-wrapper-padding: 						15px;
+$ls-panel-wrapper-margin: 						0 0 20px;
+$ls-panel-bg: 									darken($ls-color-white, 3.2%);
+$ls-panel-border-color: 						darken($ls-panel-bg, 11.2%);
+$ls-panel-head-padding: 						12px 40px 12px 14px;
+$ls-panel-body-padding: 						12px 14px 15px;
+$ls-panel-inverse-heading-bg-color: 			$ls-dark-contrast-color;
+$ls-panel-inverse-body-bg-color: 				$ls-dark-shade-color;
+$ls-panel-inverse-border-color: 				$ls-dark-shade-color;
 
 //Sprite
 $ls-image-sprite-icons : "../assets/img/sprite/sprite-icons.png";
@@ -340,7 +340,7 @@ $match-pronostics-margin-bottom:                   20px;
 $match-pronostics-border-radius:                   4px;
 
 // Article components
-$article-general-padding:                   16px;
+$article-general-padding:                          16px;
 
 // Blockquote
 $blockquote-font-size:                             20px;
