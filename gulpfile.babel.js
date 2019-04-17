@@ -36,7 +36,7 @@ gulp.task('twig', () => {
     exec('php application.php compile', (err, stdout, stderr) => {
         if (err) {
             // node couldn't execute the command
-            console.log('ERROR!');
+            console.log('ERROR: ' + stderr);
             return;
         }
     });
