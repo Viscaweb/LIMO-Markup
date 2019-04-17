@@ -13864,7 +13864,7 @@ a {
 
 .ls-contest-grid-goals-statistics {
   background: url("../assets/img/green-field-horizontal.png"); }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .ls-contest-grid-goals-statistics {
       background-image: url("../assets/img/green-field-horizontal-2x.png");
       background-size: 49px auto; } }
@@ -15798,7 +15798,10 @@ $ls-list-border-color:	    blue;
       margin-right: 4px; }
   .ls-list-matches .row--match {
     color: #484848;
-    padding: 0; }
+    padding: 0;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .ls-list-matches .row--match.event-live .cell__score {
       color: #e33000; }
     .ls-list-matches .row--match.event-live .cell__time {
@@ -16715,7 +16718,7 @@ $ls-list-border-color:	    blue;
   .ls-match-prediction .prediction-chart {
     background: url("../assets/img/green-field-horizontal.png");
     padding: 20px; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .ls-match-prediction .prediction-chart {
         background-image: url("../assets/img/green-field-horizontal-2x.png");
         background-size: 49px auto; } }
@@ -17012,7 +17015,7 @@ $ls-list-border-color:	    blue;
 /*Possesion Graph*/
 .ls-possesion-graph {
   background: url("../assets/img/green-field-horizontal.png"); }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .ls-possesion-graph {
       background-image: url("../assets/img/green-field-horizontal-2x.png");
       background-size: 49px auto; } }
@@ -17151,7 +17154,7 @@ $ls-list-border-color:	    blue;
       -webkit-justify-content: center;
           -ms-flex-pack: center;
               justify-content: center; }
-      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+      @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
         .ls-match-videos .mdl-card--expand {
           background-image: url("../assets/img/video-default2x.png"); } }
       .ls-match-videos .mdl-card--expand .play-icon {
@@ -17512,7 +17515,7 @@ $ls-list-border-color:	    blue;
   .ls-player-goals-chart .chart {
     background: url("../assets/img/green-field-horizontal.png");
     padding: 20px; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .ls-player-goals-chart .chart {
         background-image: url("../assets/img/green-field-horizontal-2x.png");
         background-size: 49px auto; } }
@@ -17700,7 +17703,7 @@ $ls-list-border-color:	    blue;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .ls-player-matches-listing .total-goals {
       background-image: url("../assets/img/green-field-horizontal-2x.png");
       background-size: 49px auto; } }
@@ -17819,7 +17822,7 @@ $ls-list-border-color:	    blue;
 
 .ls-player-statistics .player-stats {
   background: url("../assets/img/green-field-horizontal.png"); }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .ls-player-statistics .player-stats {
       background-image: url("../assets/img/green-field-horizontal-2x.png");
       background-size: 49px auto; } }
@@ -17970,7 +17973,7 @@ $ls-list-border-color:	    blue;
 .ls-players-standing .top-players {
   background: url("../assets/img/green-field-horizontal.png");
   padding: 30px 10px 20px; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .ls-players-standing .top-players {
       background-image: url("../assets/img/green-field-horizontal-2x.png");
       background-size: 49px auto; } }
@@ -18213,7 +18216,7 @@ span.sprite-icons {
   background-size: 292px;
   background-repeat: no-repeat; }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   span.sprite-icons {
     background-image: url("../assets/img/sprite/sprite-icons@2x.png"); } }
 
@@ -19293,7 +19296,7 @@ span.sprite-icons.webmaster-border{
   .ls-team-standing-statistics .chart {
     background: url("../assets/img/green-field-horizontal.png");
     padding: 20px; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .ls-team-standing-statistics .chart {
         background-image: url("../assets/img/green-field-horizontal-2x.png");
         background-size: 49px auto; } }
@@ -19359,7 +19362,7 @@ span.sprite-icons.webmaster-border{
     height: 80px;
     background: url("../assets/img/green-field-horizontal.png");
     z-index: 1; }
-    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
       .ls-user-my-information__header:before {
         background-image: url("../assets/img/green-field-horizontal-2x.png");
         background-size: 49px auto; } }
@@ -19453,7 +19456,7 @@ span.sprite-icons.webmaster-border{
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .ls-user-prediction-statistics .prediction-chart {
       background-image: url("../assets/img/green-field-horizontal-2x.png");
       background-size: 49px auto; } }
@@ -19511,7 +19514,7 @@ span.sprite-icons.webmaster-border{
         border-radius: 50%;
         background: url("../assets/img/green-field-horizontal.png");
         background-position: 2px 0; }
-        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+        @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
           .ls-user-prediction-statistics .prediction-chart .chart .radial-progress .inset {
             background-image: url("../assets/img/green-field-horizontal-2x.png");
             background-size: 49px auto;
