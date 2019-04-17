@@ -20,18 +20,7 @@ class Compile extends Command
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         $basePath = realpath(__DIR__.'/../');
-        $scripts = [
-            new Scripts\Compile\Clean(),
-            new Scripts\Mdl\Install(),
-            new Scripts\Mdl\Reset(),
-            new Scripts\Components\Assets(),
-            new Scripts\Components\Livescore(),
-            new Scripts\Components\Mdl(),
-            new Scripts\Mdl\Compile(),
-            new Scripts\Compile\Templates(),
-            new Scripts\Compile\MoveFiles(),
-            new Scripts\Compile\OpenCompiled(),
-        ];
+        $scripts = [new Scripts\Compile\Templates()];
 
         /** @var \Scripts\Interfaces\ScriptInterface $script */
         foreach ($scripts as $script) {
