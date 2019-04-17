@@ -276,13 +276,11 @@ body {
     }
 
     .mdl-navigation__link__dropdown {
-      border-left: 1px solid $ls-green-active-color;
+      border-left: 1px solid desaturate($ls-green-active-color, 30%);
       margin: 10px 0;
       cursor: pointer;
       flex: 0 1 35px;
     }
-
-
 
     .mdl-navigation__parent {
 
