@@ -18362,6 +18362,106 @@ $ls-list-border-color:	    blue;
     padding: 20px 0 25px 0;
     color: #959494; }
 
+.review-header {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 24px 0 0;
+  background: url("../assets/img/review/header-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
+  .review-header .review-stars {
+    margin-bottom: 32px; }
+  .review-header .btn-cta {
+    border-radius: 0;
+    margin-bottom: 0; }
+
+.review-header-title {
+  color: white;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.83;
+  margin: 0 0 8px;
+  text-align: center; }
+
+.review-header-bookmaker {
+  text-align: center;
+  margin-bottom: 36px; }
+  .review-header-bookmaker img {
+    max-width: 266px;
+    height: auto; }
+
+.review-header-promo {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 14px; }
+  .review-header-promo .icon {
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 5px; }
+    .review-header-promo .icon svg {
+      width: 24px;
+      height: 24px; }
+  .review-header-promo .text {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 7px; }
+    .review-header-promo .text .value {
+      line-height: 1.6;
+      font-size: 28px;
+      font-weight: bold;
+      color: #ffd800; }
+
+.btn-cta {
+  display: block;
+  background-color: #ffd800;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIiB2aWV3Qm94PSIwIDAgMzIgMzIiPjx0aXRsZT5jYXJldC1yaWdodDwvdGl0bGU+PHBhdGggZmlsbD0iIzNlNGU1YSIgZD0iTTIzLjQ2NyAxNS42NDRsLTEyLjU4Ny0xMy43MjRjLTAuMjg0LTAuMjg0LTAuNzExLTAuMjg0LTAuOTI0IDBsLTEuODQ5IDEuOTkxYy0wLjI4NCAwLjI4NC0wLjI4NCAwLjcxMSAwIDAuOTk2bDEwLjE2OSAxMS4wOTMtMTAuMDk4IDExLjIzNmMtMC4yODQgMC4yODQtMC4yODQgMC43MTEgMCAwLjk5NmwxLjg0OSAxLjkyYzAuMjg0IDAuMjg0IDAuNzExIDAuMjg0IDAuOTI0IDBsMTAuMzExLTExLjQ0OWMwLjE0MiAwIDAuMjg0LTAuMDcxIDAuMzU2LTAuMjEzbDEuODQ5LTEuOTkxYzAuMjEzLTAuMDcxIDAuMjEzLTAuNTY5IDAtMC44NTN6Ij48L3BhdGg+PC9zdmc+);
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  color: #484848;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  padding: 18px 30px 18px 10px;
+  width: 100%;
+  transition: all 200ms ease;
+  border-width: 2px;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+  margin-bottom: 32px; }
+  .ls-article .btn-cta {
+    text-decoration: none; }
+  .btn-cta:hover {
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3); }
+  .btn-cta:active {
+    box-shadow: none;
+    border-color: #e1b902; }
+
 .ls-season-button {
   outline: none;
   background: url("../assets/img/calendar-container.png") no-repeat;
