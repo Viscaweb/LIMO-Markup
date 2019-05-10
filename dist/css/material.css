@@ -11305,6 +11305,8 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     color: #5c5c5c; }
     .mdl-button--colored-secondary .mdl-ripple {
       background: #ffe033; }
+    .mdl-button--colored-secondary:active, .mdl-button--colored-secondary:focus {
+      background-color: #ffd800; }
 
 .mdl-button--raised {
   box-shadow: none; }

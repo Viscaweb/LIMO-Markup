@@ -38,6 +38,10 @@ $button-secondary-bg: #ffd800;
 		& .mdl-ripple {
 			background: lighten($button-secondary-bg, 10);
 		}
+
+		&:active, &:focus {
+			background-color: $button-secondary-bg;
+		}
 	}
 }
 
