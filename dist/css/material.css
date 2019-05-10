@@ -12383,6 +12383,16 @@ a {
   display: -ms-flexbox !important;
   display: flex !important; }
 
+.flex-row {
+  -webkit-flex-direction: row !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important; }
+
+.flex-column {
+  -webkit-flex-direction: column !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important; }
+
 .justify-content-center {
   -webkit-justify-content: center !important;
       -ms-flex-pack: center !important;
@@ -20893,7 +20903,7 @@ span.sprite-icons.webmaster-border{
 
 .widget-postforecast {
   background-color: #3E5B20;
-  background-image: url("../img/widgets/postforecast.jpg");
+  background-image: url("../assets/img/widgets/postforecast.jpg");
   background-size: cover;
   background-position: center; }
   .widget-postforecast .widget-postforecast-main {
@@ -20905,7 +20915,7 @@ span.sprite-icons.webmaster-border{
       .widget-postforecast .widget-postforecast-main .description .lead {
         font-weight: bold;
         font-size: 20px;
-        margin-bottom: 2em; }
+        margin-bottom: 1.5em; }
       .widget-postforecast .widget-postforecast-main .description a {
         color: #FFF;
         font-weight: bold; }
@@ -20926,11 +20936,11 @@ span.sprite-icons.webmaster-border{
         font-size: 55px;
         margin: 0em; }
   .widget-postforecast .widget-postforecast-footer {
-    padding: 3em 4em;
+    padding: 1em 1.5em;
     color: #effbde;
     background: rgba(0, 0, 0, 0.4); }
     .widget-postforecast .widget-postforecast-footer .caption {
-      margin-right: 3em; }
+      margin-right: 1em; }
 
 .no-flexbox .mdl-layout__drawer, .flexbox-legacy .mdl-layout__drawer, .flexboxtweener .mdl-layout__drawer {
   left: -263px;

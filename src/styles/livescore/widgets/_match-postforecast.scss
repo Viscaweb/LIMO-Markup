@@ -5,7 +5,7 @@
 
   // styles...
   background-color: #3E5B20;
-  background-image: url('../img/widgets/postforecast.jpg');
+  background-image: url('../assets/img/widgets/postforecast.jpg');
   background-size: cover;
   background-position: center;
 
@@ -21,7 +21,7 @@
       .lead {
         font-weight: bold;
         font-size: 20px;
-        margin-bottom: $spacer * 2;
+        margin-bottom: $spacer * 1.5;
       }
 
       a {
@@ -40,18 +40,18 @@
       .lead {
         font-weight: bold;
         font-size: 55px;
-        margin: $spacer*0;
+        margin: $spacer * 0;
       }
     }
   }
 
   .widget-postforecast-footer {
-    padding: $spacer*3 $spacer*4;
+    padding: $spacer $spacer * 1.5;
     color: $text-color;
     background: $transparent-black;
 
     .caption {
-      margin-right: $spacer*3;
+      margin-right: $spacer;
     }
   }
 }

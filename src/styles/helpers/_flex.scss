@@ -2,6 +2,17 @@
   display: flex !important;
 }
 
+// Direction
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+
+// Justify Content
 .justify-content-center {
   justify-content: center !important;
 }
