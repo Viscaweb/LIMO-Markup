@@ -20941,7 +20941,8 @@ span.sprite-icons.webmaster-border{
       .widget-postforecast .widget-postforecast-main .potential-earns .lead {
         font-weight: bold;
         font-size: 55px;
-        margin: 0em; }
+        margin: 0em;
+        line-height: 1; }
   .widget-postforecast .widget-postforecast-footer {
     padding: 1em 1.5em;
     color: #effbde;
