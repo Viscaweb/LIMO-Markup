@@ -12,7 +12,7 @@
 
   .widget-postforecast-main {
     color: #FFF;
-    padding: $spacer*4;
+    padding: $spacer * 1.5;
 
     .description {
       color: $text-color;
@@ -21,7 +21,7 @@
       .lead {
         font-weight: bold;
         font-size: 20px;
-        margin-bottom: $spacer*3;
+        margin-bottom: $spacer * 2;
       }
 
       a {

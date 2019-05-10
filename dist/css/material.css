@@ -20898,14 +20898,14 @@ span.sprite-icons.webmaster-border{
   background-position: center; }
   .widget-postforecast .widget-postforecast-main {
     color: #FFF;
-    padding: 4em; }
+    padding: 1.5em; }
     .widget-postforecast .widget-postforecast-main .description {
       color: #effbde;
       text-shadow: 0 1px rgba(0, 0, 0, 0.4); }
       .widget-postforecast .widget-postforecast-main .description .lead {
         font-weight: bold;
         font-size: 20px;
-        margin-bottom: 3em; }
+        margin-bottom: 2em; }
       .widget-postforecast .widget-postforecast-main .description a {
         color: #FFF;
         font-weight: bold; }
