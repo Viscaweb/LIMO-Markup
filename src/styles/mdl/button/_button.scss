@@ -40,8 +40,9 @@ $button-secondary-bg: #ffd800;
 		}
 
 		&:active,
+		&:hover,
 		&:focus,
-		&mdl-button--raised:focus:not(:active){
+		&.mdl-button--raised:focus:not(:active){
 			background-color: $button-secondary-bg;
 		}
 	}

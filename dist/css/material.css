@@ -11305,7 +11305,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     color: #5c5c5c; }
     .mdl-button--colored-secondary .mdl-ripple {
       background: #ffe033; }
-    .mdl-button--colored-secondary:active, .mdl-button--colored-secondary:focus, .mdl-button--colored-secondarymdl-button--raised:focus:not(:active) {
+    .mdl-button--colored-secondary:active, .mdl-button--colored-secondary:hover, .mdl-button--colored-secondary:focus, .mdl-button--colored-secondary.mdl-button--raised:focus:not(:active) {
       background-color: #ffd800; }
 
 .mdl-button--raised {
