@@ -34,6 +34,10 @@ $button-secondary-bg: #ffd800;
 	&--colored-secondary {
 		background-color: $button-secondary-bg;
 		color: $button-secondary-color;
+
+		& .mdl-ripple {
+			background: lighten($button-secondary-bg, 10);
+		}
 	}
 }
 
