@@ -1,3 +1,6 @@
+$button-secondary-color: #5c5c5c;
+$button-secondary-bg: #ffd800;
+
 .mdl-button {
 	text-transform: none;
 	font-weight: $ls-button-font-weight;
@@ -24,6 +27,23 @@
 
 		&:hover{
 			background-color: darken($ls-button-facebook-color, 5%);
+		}
+	}
+
+
+	&--colored-secondary {
+		background-color: $button-secondary-bg;
+		color: $button-secondary-color;
+
+		& .mdl-ripple {
+			background: lighten($button-secondary-bg, 10);
+		}
+
+		&:active,
+		&:hover,
+		&:focus,
+		&.mdl-button--raised:focus:not(:active){
+			background-color: $button-secondary-bg;
 		}
 	}
 }

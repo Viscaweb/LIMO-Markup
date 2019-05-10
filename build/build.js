@@ -168,13 +168,13 @@ module.exports = function (gulp, config, mdlPath) {
 // Compile and Automatically Prefix Stylesheets (production)
     gulp.task('styles', () => {
         // For best performance, don't add Sass partials to `gulp.src`
-        return gulp.src(config.srcPath + 'livescore.scss')
+        return gulp.src(config.stylesPath + 'livescore.scss')
             // Generate Source Maps
             .pipe($.sourcemaps.init())
             .pipe($.sass({
                 includePaths: ['node_modules'],
                 precision: 10,
-                onError: console.error.bind(console, 'Sass error:')
+                //onError: console.error.bind(console, 'Sass error:')
             }))
             .pipe($.cssInlineImages({webRoot: config.mdlPath + 'src'}))
             .pipe($.autoprefixer(AUTOPREFIXER_BROWSERS))

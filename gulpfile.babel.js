@@ -5,9 +5,10 @@ import path from 'path';
 import runSequence from 'run-sequence';
 
 const config = {
-    'mdlPath' : path.resolve('./node_modules/material-design-lite/') + '/',
-    'srcPath' : path.resolve('./src/') + '/',
-    livescoreComponentsPath: path.resolve('./src/components/livescore/') + '/',
+    mdlPath : path.resolve('./node_modules/material-design-lite/') + '/',
+    srcPath : path.resolve('./src/') + '/',
+    stylesPath: path.resolve('./src/styles/') + '/',
+    livescoreComponentsPath: path.resolve('./src/styles/livescore/') + '/',
     dist: path.resolve('./dist')
 };
 

@@ -11300,6 +11300,13 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     color: #FFFFFF; }
     .mdl-button--facebook:hover {
       background-color: #3a5d9b; }
+  .mdl-button--colored-secondary {
+    background-color: #ffd800;
+    color: #5c5c5c; }
+    .mdl-button--colored-secondary .mdl-ripple {
+      background: #ffe033; }
+    .mdl-button--colored-secondary:active, .mdl-button--colored-secondary:hover, .mdl-button--colored-secondary:focus, .mdl-button--colored-secondary.mdl-button--raised:focus:not(:active) {
+      background-color: #ffd800; }
 
 .mdl-button--raised {
   box-shadow: none; }
@@ -11343,7 +11350,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 
 .mdl-button__icon {
   vertical-align: middle;
-  color: #888888; }
+  color: #9c9c9c; }
   .mdl-button--large .mdl-button__icon {
     font-size: 20px; }
     .mdl-button--large .mdl-button__icon.icon-caret-down, .mdl-button--large .mdl-button__icon.icon-caret-up, .mdl-button--large .mdl-button__icon.icon-caret-left, .mdl-button--large .mdl-button__icon.icon-caret-right {
@@ -11403,7 +11410,7 @@ ul.mdl-button-group {
     z-index: 1;
     right: 20px;
     top: 0;
-    color: #888888; }
+    color: #9c9c9c; }
   .mdl-button__select select {
     font-family: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif;
     font-size: 14px;
@@ -11420,7 +11427,7 @@ ul.mdl-button-group {
     height: 36px;
     min-width: 64px;
     padding: 0 8px;
-    color: #484848; }
+    color: #5c5c5c; }
     .mdl-button__select select:focus {
       font-size: 14px; }
   .mdl-button__select.mdl-button--large select {
@@ -12102,192 +12109,6 @@ a {
     font-weight: 300;
     line-height: 24px; }
 
-.animation-reset, .ls-list-matches .row--match.event-live.event-paused .cell__time:before, .ls-match-listing-baseball--left .row--match.event-live.paused .match-list__time:before, .ls-match-listing-footus .row--match.event-live.paused .match-list__time:before, .ls-match-listing-rugby .row--match.event-live.paused .match-list__time:before, .ls-match-listing-tennis .row--match.event-live.paused .match-list__time:before {
-  animation: none !important;
-  -webkit-animation: none !important; }
-
-.blinking, .ls-list-matches .row--match.event-live .cell__time:before, .ls-match-listing-baseball--left .row--match.event-live .cell__time:before, .ls-match-listing-footus .row--match.event-live .cell__time:before, .ls-match-listing-rugby .row--match.event-live .cell__time:before, .ls-match-listing-tennis .row--match.event-live .cell__time:before, .ls-list-match-score-header .row--match-score-header.live.live .cell__score--add span.minute:before, .ls-standing-table--left .row.live .cell__team:before {
-  -webkit-animation: blinker 1s infinite;
-          animation: blinker 1s infinite; }
-
-.blink {
-  -webkit-animation: blinker 1s linear 4;
-          animation: blinker 1s linear 4; }
-
-@-webkit-keyframes blinker {
-  0% {
-    opacity: 1.0; }
-  50% {
-    opacity: .0; }
-  100% {
-    opacity: 1.0; } }
-
-@keyframes blinker {
-  0% {
-    opacity: 1.0; }
-  50% {
-    opacity: .0; }
-  100% {
-    opacity: 1.0; } }
-
-.bounce {
-  -webkit-animation: bounce 1s .5s;
-          animation: bounce 1s .5s; }
-
-@-webkit-keyframes bounce {
-  0% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    opacity: 1; }
-  50% {
-    -webkit-transform: scale(1.6);
-            transform: scale(1.6);
-    opacity: .7; }
-  60% {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    opacity: 1; }
-  80% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95); }
-  100% {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85); } }
-
-@keyframes bounce {
-  0% {
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-    opacity: 1; }
-  50% {
-    -webkit-transform: scale(1.6);
-            transform: scale(1.6);
-    opacity: .7; }
-  60% {
-    -webkit-transform: scale(0.6);
-            transform: scale(0.6);
-    opacity: 1; }
-  80% {
-    -webkit-transform: scale(0.95);
-            transform: scale(0.95); }
-  100% {
-    -webkit-transform: scale(0.85);
-            transform: scale(0.85); } }
-
-@-webkit-keyframes progressiveHighlight {
-  0% {
-    background-color: #fff4ce; }
-  90% {
-    background-color: #fff4ce; }
-  100% { } }
-
-@keyframes progressiveHighlight {
-  0% {
-    background-color: #fff4ce; }
-  90% {
-    background-color: #fff4ce; }
-  100% { } }
-
-@-webkit-keyframes progressiveUpdate {
-  0% {
-    background-color: #e33000;
-    color: #FFFFFF; }
-  90% {
-    background-color: #e33000;
-    color: #FFFFFF; }
-  100% { } }
-
-@keyframes progressiveUpdate {
-  0% {
-    background-color: #e33000;
-    color: #FFFFFF; }
-  90% {
-    background-color: #e33000;
-    color: #FFFFFF; }
-  100% { } }
-
-@-webkit-keyframes progressiveUpdateLink {
-  0% {
-    color: #FFFFFF; }
-  90% {
-    color: #FFFFFF; }
-  100% { } }
-
-@keyframes progressiveUpdateLink {
-  0% {
-    color: #FFFFFF; }
-  90% {
-    color: #FFFFFF; }
-  100% { } }
-
-.showHide {
-  -webkit-animation: showHide 1s linear 4;
-          animation: showHide 1s linear 4; }
-
-@-webkit-keyframes showHide {
-  0% {
-    opacity: 1; }
-  90% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-@keyframes showHide {
-  0% {
-    opacity: 1; }
-  90% {
-    opacity: 1; }
-  100% {
-    opacity: 0; } }
-
-.hide {
-  display: none !important; }
-
-.panel-wrapper {
-  padding: 15px;
-  margin: 0 0 20px; }
-
-.panel {
-  border: 1px solid #dadada; }
-  .panel.panel-inverse {
-    border-color: #313536;
-    color: #FFFFFF; }
-    .panel.panel-inverse p {
-      color: #FFFFFF; }
-
-.panel-head {
-  background-color: #f7f7f7;
-  padding: 12px 40px 12px 14px;
-  border-bottom: 1px solid #dadada; }
-  .panel-inverse .panel-head {
-    background-color: #454a4c;
-    color: #FFFFFF;
-    border-color: #313536; }
-  .panel-inverse .panel-head.panel-head--primary, .panel-head.panel-head--primary {
-    background-color: #5da400; }
-
-.panel-body {
-  padding: 12px 14px 15px; }
-  .panel-inverse .panel-body {
-    background-color: #313536; }
-  .panel-body h1 {
-    font-size: 27px;
-    line-height: 1.3;
-    margin: 15px 0; }
-  .panel-body h2 {
-    font-size: 22px;
-    line-height: 1.3;
-    margin: 15px 0; }
-  .panel-body h3 {
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 1.35;
-    margin: 12px 0; }
-  .panel-body p {
-    margin-bottom: 30px; }
-    .panel-body p:last-child {
-      margin-bottom: 0; }
-
 .m-0 {
   margin: 0 !important; }
 
@@ -12564,6 +12385,31 @@ a {
   padding-left: 3em !important;
   padding-right: 3em !important; }
 
+.d-flex {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
+
+.flex-row {
+  -webkit-flex-direction: row !important;
+      -ms-flex-direction: row !important;
+          flex-direction: row !important; }
+
+.flex-column {
+  -webkit-flex-direction: column !important;
+      -ms-flex-direction: column !important;
+          flex-direction: column !important; }
+
+.justify-content-center {
+  -webkit-justify-content: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important; }
+
+.justify-content-space-between {
+  -webkit-justify-content: space-between !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important; }
+
 .text-left {
   text-align: left !important; }
 
@@ -12597,6 +12443,192 @@ a {
 
 .mh-100 {
   max-width: 100% !important; }
+
+.animation-reset, .ls-list-matches .row--match.event-live.event-paused .cell__time:before, .ls-match-listing-baseball--left .row--match.event-live.paused .match-list__time:before, .ls-match-listing-footus .row--match.event-live.paused .match-list__time:before, .ls-match-listing-rugby .row--match.event-live.paused .match-list__time:before, .ls-match-listing-tennis .row--match.event-live.paused .match-list__time:before {
+  animation: none !important;
+  -webkit-animation: none !important; }
+
+.blinking, .ls-list-matches .row--match.event-live .cell__time:before, .ls-match-listing-baseball--left .row--match.event-live .cell__time:before, .ls-match-listing-footus .row--match.event-live .cell__time:before, .ls-match-listing-rugby .row--match.event-live .cell__time:before, .ls-match-listing-tennis .row--match.event-live .cell__time:before, .ls-list-match-score-header .row--match-score-header.live.live .cell__score--add span.minute:before, .ls-standing-table--left .row.live .cell__team:before {
+  -webkit-animation: blinker 1s infinite;
+          animation: blinker 1s infinite; }
+
+.blink {
+  -webkit-animation: blinker 1s linear 4;
+          animation: blinker 1s linear 4; }
+
+@-webkit-keyframes blinker {
+  0% {
+    opacity: 1.0; }
+  50% {
+    opacity: .0; }
+  100% {
+    opacity: 1.0; } }
+
+@keyframes blinker {
+  0% {
+    opacity: 1.0; }
+  50% {
+    opacity: .0; }
+  100% {
+    opacity: 1.0; } }
+
+.bounce {
+  -webkit-animation: bounce 1s .5s;
+          animation: bounce 1s .5s; }
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1; }
+  50% {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    opacity: .7; }
+  60% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 1; }
+  80% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85); } }
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    opacity: 1; }
+  50% {
+    -webkit-transform: scale(1.6);
+            transform: scale(1.6);
+    opacity: .7; }
+  60% {
+    -webkit-transform: scale(0.6);
+            transform: scale(0.6);
+    opacity: 1; }
+  80% {
+    -webkit-transform: scale(0.95);
+            transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(0.85);
+            transform: scale(0.85); } }
+
+@-webkit-keyframes progressiveHighlight {
+  0% {
+    background-color: #fff4ce; }
+  90% {
+    background-color: #fff4ce; }
+  100% { } }
+
+@keyframes progressiveHighlight {
+  0% {
+    background-color: #fff4ce; }
+  90% {
+    background-color: #fff4ce; }
+  100% { } }
+
+@-webkit-keyframes progressiveUpdate {
+  0% {
+    background-color: #e33000;
+    color: #FFFFFF; }
+  90% {
+    background-color: #e33000;
+    color: #FFFFFF; }
+  100% { } }
+
+@keyframes progressiveUpdate {
+  0% {
+    background-color: #e33000;
+    color: #FFFFFF; }
+  90% {
+    background-color: #e33000;
+    color: #FFFFFF; }
+  100% { } }
+
+@-webkit-keyframes progressiveUpdateLink {
+  0% {
+    color: #FFFFFF; }
+  90% {
+    color: #FFFFFF; }
+  100% { } }
+
+@keyframes progressiveUpdateLink {
+  0% {
+    color: #FFFFFF; }
+  90% {
+    color: #FFFFFF; }
+  100% { } }
+
+.showHide {
+  -webkit-animation: showHide 1s linear 4;
+          animation: showHide 1s linear 4; }
+
+@-webkit-keyframes showHide {
+  0% {
+    opacity: 1; }
+  90% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+@keyframes showHide {
+  0% {
+    opacity: 1; }
+  90% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+.hide {
+  display: none !important; }
+
+.panel-wrapper {
+  padding: 15px;
+  margin: 0 0 20px; }
+
+.panel {
+  border: 1px solid #dadada; }
+  .panel.panel-inverse {
+    border-color: #313536;
+    color: #FFFFFF; }
+    .panel.panel-inverse p {
+      color: #FFFFFF; }
+
+.panel-head {
+  background-color: #f7f7f7;
+  padding: 12px 40px 12px 14px;
+  border-bottom: 1px solid #dadada; }
+  .panel-inverse .panel-head {
+    background-color: #454a4c;
+    color: #FFFFFF;
+    border-color: #313536; }
+  .panel-inverse .panel-head.panel-head--primary, .panel-head.panel-head--primary {
+    background-color: #5da400; }
+
+.panel-body {
+  padding: 12px 14px 15px; }
+  .panel-inverse .panel-body {
+    background-color: #313536; }
+  .panel-body h1 {
+    font-size: 27px;
+    line-height: 1.3;
+    margin: 15px 0; }
+  .panel-body h2 {
+    font-size: 22px;
+    line-height: 1.3;
+    margin: 15px 0; }
+  .panel-body h3 {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 12px 0; }
+  .panel-body p {
+    margin-bottom: 30px; }
+    .panel-body p:last-child {
+      margin-bottom: 0; }
 
 .ls-404 {
   width: 100%;
@@ -13163,7 +13195,7 @@ a {
     text-align: center;
     text-transform: capitalize;
     cursor: pointer;
-    color: #484848;
+    color: #5c5c5c;
     position: relative;
     z-index: 2; }
   .mdl-calendar:after {
@@ -13174,7 +13206,7 @@ a {
     z-index: 1;
     right: 20px;
     top: 0;
-    color: #888888; }
+    color: #9c9c9c; }
   .mdl-calendar.mdl-button--large input[type="text"] {
     line-height: 46px;
     height: 46px; }
@@ -13290,7 +13322,7 @@ a {
     z-index: 1;
     right: 20px;
     top: 0;
-    color: #888888;
+    color: #9c9c9c;
     line-height: 44px;
     /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
@@ -20875,6 +20907,48 @@ span.sprite-icons.webmaster-border{
   text-align: center;
   padding: 10px 0;
   border-top: 1px solid #f5f5f5; }
+
+.widget-postforecast {
+  background-color: #3E5B20;
+  background-image: url("../assets/img/widgets/postforecast.jpg");
+  background-size: cover;
+  background-position: left center; }
+  .widget-postforecast .widget-postforecast-main {
+    color: #FFF;
+    padding: 1.5em; }
+    .widget-postforecast .widget-postforecast-main .description {
+      color: #effbde;
+      text-shadow: 0 1px rgba(0, 0, 0, 0.4); }
+      .widget-postforecast .widget-postforecast-main .description .lead {
+        font-weight: bold;
+        font-size: 20px;
+        margin-bottom: 1em; }
+      .widget-postforecast .widget-postforecast-main .description a {
+        color: #FFF;
+        font-weight: bold; }
+    .widget-postforecast .widget-postforecast-main .potential-earns {
+      text-align: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      text-shadow: 0 3px 1px rgba(0, 0, 0, 0.4); }
+      .widget-postforecast .widget-postforecast-main .potential-earns .lead {
+        font-weight: bold;
+        font-size: 55px;
+        margin: 0em;
+        line-height: 1; }
+  .widget-postforecast .widget-postforecast-footer {
+    padding: 1em 1.5em;
+    color: #effbde;
+    background: rgba(0, 0, 0, 0.4); }
+    .widget-postforecast .widget-postforecast-footer .caption {
+      margin-bottom: 1em; }
 
 .no-flexbox .mdl-layout__drawer, .flexbox-legacy .mdl-layout__drawer, .flexboxtweener .mdl-layout__drawer {
   left: -263px;
