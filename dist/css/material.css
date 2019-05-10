@@ -11300,6 +11300,9 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
     color: #FFFFFF; }
     .mdl-button--facebook:hover {
       background-color: #3a5d9b; }
+  .mdl-button--colored-secondary {
+    background-color: #ffd800;
+    color: #5c5c5c; }
 
 .mdl-button--raised {
   box-shadow: none; }
@@ -11343,7 +11346,7 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
 
 .mdl-button__icon {
   vertical-align: middle;
-  color: #888888; }
+  color: #9c9c9c; }
   .mdl-button--large .mdl-button__icon {
     font-size: 20px; }
     .mdl-button--large .mdl-button__icon.icon-caret-down, .mdl-button--large .mdl-button__icon.icon-caret-up, .mdl-button--large .mdl-button__icon.icon-caret-left, .mdl-button--large .mdl-button__icon.icon-caret-right {
@@ -11403,7 +11406,7 @@ ul.mdl-button-group {
     z-index: 1;
     right: 20px;
     top: 0;
-    color: #888888; }
+    color: #9c9c9c; }
   .mdl-button__select select {
     font-family: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif;
     font-size: 14px;
@@ -11420,7 +11423,7 @@ ul.mdl-button-group {
     height: 36px;
     min-width: 64px;
     padding: 0 8px;
-    color: #484848; }
+    color: #5c5c5c; }
     .mdl-button__select select:focus {
       font-size: 14px; }
   .mdl-button__select.mdl-button--large select {
@@ -13188,7 +13191,7 @@ a {
     text-align: center;
     text-transform: capitalize;
     cursor: pointer;
-    color: #484848;
+    color: #5c5c5c;
     position: relative;
     z-index: 2; }
   .mdl-calendar:after {
@@ -13199,7 +13202,7 @@ a {
     z-index: 1;
     right: 20px;
     top: 0;
-    color: #888888; }
+    color: #9c9c9c; }
   .mdl-calendar.mdl-button--large input[type="text"] {
     line-height: 46px;
     height: 46px; }
@@ -13315,7 +13318,7 @@ a {
     z-index: 1;
     right: 20px;
     top: 0;
-    color: #888888;
+    color: #9c9c9c;
     line-height: 44px;
     /* Support for all WebKit browsers. */
     -webkit-font-smoothing: antialiased;
@@ -20905,7 +20908,7 @@ span.sprite-icons.webmaster-border{
   background-color: #3E5B20;
   background-image: url("../assets/img/widgets/postforecast.jpg");
   background-size: cover;
-  background-position: center; }
+  background-position: left center; }
   .widget-postforecast .widget-postforecast-main {
     color: #FFF;
     padding: 1.5em; }
@@ -20915,7 +20918,7 @@ span.sprite-icons.webmaster-border{
       .widget-postforecast .widget-postforecast-main .description .lead {
         font-weight: bold;
         font-size: 20px;
-        margin-bottom: 1.5em; }
+        margin-bottom: 1em; }
       .widget-postforecast .widget-postforecast-main .description a {
         color: #FFF;
         font-weight: bold; }
@@ -20940,7 +20943,7 @@ span.sprite-icons.webmaster-border{
     color: #effbde;
     background: rgba(0, 0, 0, 0.4); }
     .widget-postforecast .widget-postforecast-footer .caption {
-      margin-right: 1em; }
+      margin-bottom: 1em; }
 
 .no-flexbox .mdl-layout__drawer, .flexbox-legacy .mdl-layout__drawer, .flexboxtweener .mdl-layout__drawer {
   left: -263px;

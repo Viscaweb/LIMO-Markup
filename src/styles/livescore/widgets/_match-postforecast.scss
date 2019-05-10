@@ -7,7 +7,7 @@
   background-color: #3E5B20;
   background-image: url('../assets/img/widgets/postforecast.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: left center;
 
 
   .widget-postforecast-main {
@@ -21,7 +21,7 @@
       .lead {
         font-weight: bold;
         font-size: 20px;
-        margin-bottom: $spacer * 1.5;
+        margin-bottom: $spacer;
       }
 
       a {
@@ -51,7 +51,7 @@
     background: $transparent-black;
 
     .caption {
-      margin-right: $spacer;
+      margin-bottom: $spacer;
     }
   }
 }

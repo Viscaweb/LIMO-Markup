@@ -1,3 +1,6 @@
+$button-secondary-color: #5c5c5c;
+$button-secondary-bg: #ffd800;
+
 .mdl-button {
 	text-transform: none;
 	font-weight: $ls-button-font-weight;
@@ -25,6 +28,12 @@
 		&:hover{
 			background-color: darken($ls-button-facebook-color, 5%);
 		}
+	}
+
+
+	&--colored-secondary {
+		background-color: $button-secondary-bg;
+		color: $button-secondary-color;
 	}
 }
 
