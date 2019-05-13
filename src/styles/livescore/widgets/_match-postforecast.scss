@@ -21,7 +21,7 @@
       .lead {
         font-weight: bold;
         font-size: 20px;
-        margin-bottom: $spacer;
+        margin-bottom: ($spacer * 0.25);
       }
 
       a {
