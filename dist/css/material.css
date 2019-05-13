@@ -11302,7 +11302,8 @@ _:-ms-input-placeholder, :root .mdl-slider.mdl-slider.is-upgraded {
       background-color: #3a5d9b; }
   .mdl-button--colored-secondary {
     background-color: #ffd800;
-    color: #5c5c5c; }
+    color: #5c5c5c;
+    font-weight: bold; }
     .mdl-button--colored-secondary .mdl-ripple {
       background: #ffe033; }
     .mdl-button--colored-secondary:active, .mdl-button--colored-secondary:hover, .mdl-button--colored-secondary:focus, .mdl-button--colored-secondary.mdl-button--raised:focus:not(:active) {
@@ -20922,7 +20923,7 @@ span.sprite-icons.webmaster-border{
       .widget-postforecast .widget-postforecast-main .description .lead {
         font-weight: bold;
         font-size: 20px;
-        margin-bottom: 1em; }
+        margin-bottom: 0.25em; }
       .widget-postforecast .widget-postforecast-main .description a {
         color: #FFF;
         font-weight: bold; }
