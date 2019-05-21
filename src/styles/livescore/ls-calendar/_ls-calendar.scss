@@ -2,6 +2,21 @@
 	overflow: visible;
 	padding: 0;
 	will-change: inherit;
+	position: relative;
+
+	.selected-date {
+		display: block;
+	}
+
+	input[type="date"] {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 100%;
+		display: block;
+	}
 
 	input[type="text"]{
 		@include typo-preferred-font(true);

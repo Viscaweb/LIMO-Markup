@@ -13178,7 +13178,18 @@ a {
 .mdl-calendar {
   overflow: visible;
   padding: 0;
-  will-change: inherit; }
+  will-change: inherit;
+  position: relative; }
+  .mdl-calendar .selected-date {
+    display: block; }
+  .mdl-calendar input[type="date"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    display: block; }
   .mdl-calendar input[type="text"] {
     font-family: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif;
     font-size: 14px;
