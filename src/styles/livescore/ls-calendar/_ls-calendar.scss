@@ -17,6 +17,7 @@
 		width: 100%;
 		display: block;
 		opacity: 0;
+		z-index: 10;
 
 		// This fixes chrome desktop requiring to click on the
 		// arrow icon to trigger the datepicker.
