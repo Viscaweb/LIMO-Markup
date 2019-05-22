@@ -7,6 +7,7 @@ import {copyTasks} from './build/copy';
 import concat from 'gulp-concat';
 import postcss from 'gulp-postcss';
 import cssnano from 'cssnano';
+import urlRebase from 'postcss-url'
 
 const config = {
     mdlPath : path.resolve('./node_modules/material-design-lite/') + '/',
@@ -24,7 +25,18 @@ gulp.task('final_css', () => {
         config.dist + '/css/material.min.css'
     ])
         .pipe(concat('style.css'))
-        .pipe(postcss([cssnano()]))
+        .pipe(postcss([
+            urlRebase([
+                {filter: '**/fonts/*.eot', url: 'rebase'},
+                {filter: '**/fonts/*.ttf', url: 'rebase'},
+                {filter: '**/fonts/*.woff', url: 'rebase'},
+                {filter: '**/fonts/*.svg', url: 'rebase'},
+            ]),
+            cssnano()
+        ], {
+            from: config.dist + "/assets/fonts/lsicons/style.css",
+            to: config.dist + "/css/style.css"
+        }))
         .pipe(gulp.dest('./dist/css'));
 });
 
