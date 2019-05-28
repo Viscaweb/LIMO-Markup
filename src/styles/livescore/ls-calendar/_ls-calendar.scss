@@ -15,6 +15,7 @@
 		right: 0;
 		bottom: 0;
 		width: 100%;
+		min-width: 100%; 	// This fixes iOS Safari not expanding to full width.
 		display: block;
 		opacity: 0;
 		z-index: 10;

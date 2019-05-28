@@ -13189,6 +13189,7 @@ a {
     right: 0;
     bottom: 0;
     width: 100%;
+    min-width: 100%;
     display: block;
     opacity: 0;
     z-index: 10; }
