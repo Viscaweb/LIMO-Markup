@@ -3,6 +3,11 @@
 import gulp from 'gulp';
 import path from 'path';
 import runSequence from 'run-sequence';
+import {copyTasks} from './build/copy';
+import concat from 'gulp-concat';
+import postcss from 'gulp-postcss';
+import cssnano from 'cssnano';
+import urlRebase from 'postcss-url'
 
 const config = {
     mdlPath : path.resolve('./node_modules/material-design-lite/') + '/',
@@ -12,25 +17,32 @@ const config = {
     dist: path.resolve('./dist')
 };
 
-gulp.task('copy-ls-scripts', () => {
-    return gulp.src([config.srcPath + '/assets/js/app.js'])
-        .pipe(gulp.dest(config.dist + '/js'));
-});
+require('./build/build')(gulp, config, function (path) { return config.mdlPath + path; });
 
-gulp.task('copy-ls-datepicker', () => {
-    return gulp.src(config.srcPath + '/assets/js/material-datepicker/**/*')
-        .pipe(gulp.dest(config.dist + '/js/material-datepicker'));
-});
-
-gulp.task('copy-assets', () => {
+gulp.task('final_css', () => {
     return gulp.src([
-        config.srcPath + '/assets/**/*',
-        config.mdlPath + '/dist/assets/**/*'
+        config.dist + '/assets/fonts/lsicons/style.css',
+        config.dist + '/css/material.min.css'
     ])
-        .pipe(gulp.dest(config.dist + '/assets'));
+        .pipe(concat('style.css'))
+        .pipe(postcss([
+            urlRebase([
+                {filter: '**/fonts/*.eot', url: 'rebase'},
+                {filter: '**/fonts/*.ttf', url: 'rebase'},
+                {filter: '**/fonts/*.woff', url: 'rebase'},
+                {filter: '**/fonts/*.svg', url: 'rebase'},
+            ]),
+            cssnano()
+        ], {
+            from: config.dist + "/assets/fonts/lsicons/style.css",
+            to: config.dist + "/css/style.css"
+        }))
+        .pipe(gulp.dest('./dist/css'));
 });
 
-gulp.task('copy', ['copy-ls-scripts', 'copy-ls-datepicker', 'copy-assets']);
+
+// Install copy tasks
+copyTasks(gulp, config);
 
 gulp.task('twig', () => {
     const { exec } = require('child_process');
@@ -43,8 +55,6 @@ gulp.task('twig', () => {
     });
 });
 
-require('./build/build')(gulp, config, function (path) { return config.mdlPath + path; });
-
 gulp.task('default', ['clean'], cb => {
-    runSequence(['styles', 'styles-grid', 'scripts', 'mocha', 'copy', 'twig'], cb)
+    runSequence('styles', 'styles-grid', 'scripts', 'mocha', 'copy', 'twig', 'final_css', cb)
 });
