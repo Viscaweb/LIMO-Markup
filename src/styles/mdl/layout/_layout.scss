@@ -54,11 +54,6 @@ body {
 
 // End of LIMO-260
 
-
-.mdl-layout__drawer-button {
-  color: unquote("rgb(#{$color-primary})");
-}
-
 .mdl-layout__header {
   box-shadow: none;
   position: relative;
@@ -186,7 +181,21 @@ body {
 }
 
 .mdl-layout__drawer-button {
-  padding-right: 6px;
+  color: unquote("rgb(#{$color-primary})");
+  //padding-right: 6px;
+
+  // Caption for the button
+  span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    display: inline;
+    line-height: 1;
+    text-align: center;
+  }
 
   .mdl-layout__header & {
     margin-right: 0;
@@ -196,6 +205,10 @@ body {
       height: $layout-header-mobile-row-height - 1px;
       line-height: $layout-header-mobile-row-height + 6;
       padding-right: 0;
+
+      span {
+        bottom: 2px;
+      }
     }
   }
 

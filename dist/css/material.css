@@ -11496,9 +11496,6 @@ body {
     .mdl-layout__drawer ~ .mdl-layout__obfuscator {
       top: 50px; } }
 
-.mdl-layout__drawer-button {
-  color: rgb(93, 164, 0); }
-
 .mdl-layout__header {
   box-shadow: none;
   position: relative; }
@@ -11575,7 +11572,17 @@ body {
       display: none; }
 
 .mdl-layout__drawer-button {
-  padding-right: 6px; }
+  color: rgb(93, 164, 0); }
+  .mdl-layout__drawer-button span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    display: inline;
+    line-height: 1;
+    text-align: center; }
   .mdl-layout__header .mdl-layout__drawer-button {
     margin-right: 0; }
     @media screen and (max-width: 1024px) {
@@ -11583,7 +11590,9 @@ body {
         margin: 0;
         height: 49px;
         line-height: 56px;
-        padding-right: 0; } }
+        padding-right: 0; }
+        .mdl-layout__header .mdl-layout__drawer-button span {
+          bottom: 2px; } }
   .mdl-layout--fixed-header.mdl-layout--fixed-drawer .mdl-layout__header .mdl-layout__drawer-button {
     position: fixed; }
     @media screen and (max-width: 1024px) {
