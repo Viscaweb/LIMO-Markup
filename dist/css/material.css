@@ -22059,3 +22059,19 @@ span.sprite-icons.webmaster-border{
   background-color: transparent; }
   .no-flexbox .ls-user-my-information__header .user-avatar .img-rounded > a .mdl-ripple, .flexbox-legacy .ls-user-my-information__header .user-avatar .img-rounded > a .mdl-ripple, .flexboxtweener .ls-user-my-information__header .user-avatar .img-rounded > a .mdl-ripple {
     display: none; }
+
+.ls-alert p {
+  margin: 0 auto;
+  padding: 15px 15px 15px 20px;
+  box-sizing: border-box; }
+  .ls-alert p a {
+    color: #3e4e5a;
+    text-decoration: underline; }
+    .ls-alert p a:hover, .ls-alert p a:visited {
+      color: #3e4e5a;
+      text-decoration: underline; }
+
+.ls-alert.ls-alert--info {
+  background-color: rgba(255, 216, 0, 0.2);
+  border-left: 4px solid #ffd800;
+  color: #3e4e5a; }

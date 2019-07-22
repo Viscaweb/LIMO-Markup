@@ -1,0 +1,24 @@
+.ls-alert {
+  p {
+    margin: 0 auto;
+    padding: $blockquote-alert-padding;
+    box-sizing: border-box;
+
+    a {
+      color: $blockquote-alert-text-color;
+      text-decoration: underline;
+
+      &:hover,
+      &:visited {
+        color: $blockquote-alert-text-color;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &.ls-alert--info {
+    background-color: $blockquote-alert-bg-color;
+    border-left: $blockquote-alert-border-width solid $blockquote-alert-border-color;
+    color: $blockquote-alert-text-color;
+  }
+}
