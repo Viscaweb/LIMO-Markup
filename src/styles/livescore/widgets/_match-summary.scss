@@ -1,3 +1,5 @@
+$break-vertical-max: 339px;
+
 .card--match-summary {
   font-family: $preferred_font;
 
@@ -21,6 +23,10 @@
 
     padding-top: 2em;
     padding-bottom: 2.5em;
+
+    @media screen and (max-width: $break-vertical-max) {
+      flex-direction: column;
+    }
   }
 
   .team {
@@ -35,6 +41,20 @@
       font-weight: $ls-font-weight-bold;
       margin-bottom: $sp4;
     }
+
+    @media screen and (max-width: $break-vertical-max) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: auto;
+
+      &:last-child {
+        flex-direction: row-reverse;
+      }
+
+      .team__name {
+        margin-bottom: 0;
+      }
+    }
   }
 
   .info {
@@ -42,11 +62,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 2em;
+    margin: 2em 10px 0 10px;
 
     .time {
       font-weight: $ls-font-weight-bold - 100;
       font-size: 2.5em;
+      margin-bottom: 10px;
+      line-height: 1;
     }
 
     .date {
@@ -57,6 +79,12 @@
     .info__score {
       font-size: 1.9em;
       font-weight: $ls-font-weight-bold;
+      display: flex;
+      flex-direction: row;
+
+      .versus {
+        margin: 0 10px;
+      }
     }
 
     .info__halftime-score {
@@ -76,6 +104,28 @@
       font-weight: $ls-font-weight-bold;
       margin-left: 5px;
     }
+
+    .match-is-live {
+      display: block;
+      margin-top: 1em;
+      font-weight: normal;
+      text-transform: initial;
+    }
+
+
+    @media screen and (max-width: $break-vertical-max) {
+      flex-direction: row;
+      margin: 10px;
+
+      .info__score {
+        margin-bottom: 0 !important;
+        margin-right: 10px !important;
+      }
+
+      .match-is-live {
+        margin-top: 0;
+      }
+    }
   }
 
   &.card--match-summary--inprogress {
@@ -83,7 +133,7 @@
       background: $ls-live-color;
       color: #FFF;
       border-radius: 8px;
-      padding: 5px 20px;
+      padding: 10px 20px;
       margin-bottom: 10px;
     }
   }

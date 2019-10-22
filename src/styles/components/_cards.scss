@@ -1,6 +1,7 @@
 //@import "./variables.scss";
 
 $white: #fff;
+$card-border-lines: #eee;
 $card-background: $white;
 $card-text-color: $ls-text-color;
 $card-padding: $sp3;
@@ -16,6 +17,10 @@ $card-padding-xl: $sp5;
 
 .card__header {
   padding: $sp3;
+
+  &.card__header--with-separator {
+    border-bottom: 1px solid $card-border-lines;
+  }
 }
 
 .card__title {

@@ -20880,6 +20880,11 @@ span.sprite-icons.webmaster-border{
             justify-content: space-between;
     padding-top: 2em;
     padding-bottom: 2.5em; }
+    @media screen and (max-width: 339px) {
+      .card--match-summary .card__body {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column; } }
   .card--match-summary .team {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -20898,6 +20903,21 @@ span.sprite-icons.webmaster-border{
       font-size: 19px;
       font-weight: 700;
       margin-bottom: 1.5em; }
+    @media screen and (max-width: 339px) {
+      .card--match-summary .team {
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-justify-content: space-between;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        width: auto; }
+        .card--match-summary .team:last-child {
+          -webkit-flex-direction: row-reverse;
+              -ms-flex-direction: row-reverse;
+                  flex-direction: row-reverse; }
+        .card--match-summary .team .team__name {
+          margin-bottom: 0; } }
   .card--match-summary .info {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
@@ -20911,16 +20931,26 @@ span.sprite-icons.webmaster-border{
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-top: 2em; }
+    margin: 2em 10px 0 10px; }
     .card--match-summary .info .time {
       font-weight: 600;
-      font-size: 2.5em; }
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      line-height: 1; }
     .card--match-summary .info .date {
       font-weight: 700;
       color: #454a4c; }
     .card--match-summary .info .info__score {
       font-size: 1.9em;
-      font-weight: 700; }
+      font-weight: 700;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row; }
+      .card--match-summary .info .info__score .versus {
+        margin: 0 10px; }
     .card--match-summary .info .info__halftime-score {
       font-weight: 700;
       margin-bottom: 1em; }
@@ -20933,11 +20963,27 @@ span.sprite-icons.webmaster-border{
       color: #2e9fc7;
       font-weight: 700;
       margin-left: 5px; }
+    .card--match-summary .info .match-is-live {
+      display: block;
+      margin-top: 1em;
+      font-weight: normal;
+      text-transform: initial; }
+    @media screen and (max-width: 339px) {
+      .card--match-summary .info {
+        -webkit-flex-direction: row;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        margin: 10px; }
+        .card--match-summary .info .info__score {
+          margin-bottom: 0 !important;
+          margin-right: 10px !important; }
+        .card--match-summary .info .match-is-live {
+          margin-top: 0; } }
   .card--match-summary.card--match-summary--inprogress .info__score {
     background: #2e9fc7;
     color: #FFF;
     border-radius: 8px;
-    padding: 5px 20px;
+    padding: 10px 20px;
     margin-bottom: 10px; }
 
 .no-flexbox .mdl-layout__drawer, .flexbox-legacy .mdl-layout__drawer, .flexboxtweener .mdl-layout__drawer {
@@ -22161,6 +22207,8 @@ span.sprite-icons.webmaster-border{
 
 .card__header {
   padding: 1em; }
+  .card__header.card__header--with-separator {
+    border-bottom: 1px solid #eee; }
 
 .card__title {
   display: inline-block;
