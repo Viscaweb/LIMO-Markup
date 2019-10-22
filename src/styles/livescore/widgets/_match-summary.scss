@@ -1,0 +1,140 @@
+$break-vertical-max: 339px;
+
+.card--match-summary {
+  font-family: $preferred_font;
+
+  .card__header {
+    text-align: center;
+    text-transform: uppercase;
+    .card__title {
+      font-size: $ls-font-size-large;
+      font-weight: $ls-font-weight-medium;
+
+      a {
+        color: $ls-primary-color;
+      }
+    }
+  }
+
+  .card__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-top: 2em;
+    padding-bottom: 2.5em;
+
+    @media screen and (max-width: $break-vertical-max) {
+      flex-direction: column;
+    }
+  }
+
+  .team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 200px;
+
+    .team__name {
+      font-size: $ls-font-size-large + 2;
+      font-weight: $ls-font-weight-bold;
+      margin-bottom: $sp4;
+    }
+
+    @media screen and (max-width: $break-vertical-max) {
+      flex-direction: row;
+      justify-content: space-between;
+      width: auto;
+
+      &:last-child {
+        flex-direction: row-reverse;
+      }
+
+      .team__name {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .info {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em 10px 0 10px;
+
+    .time {
+      font-weight: $ls-font-weight-bold - 100;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      line-height: 1;
+    }
+
+    .date {
+      font-weight: $ls-font-weight-bold;
+      color: $ls-dark-contrast-color;
+    }
+
+    .info__score {
+      font-size: 1.9em;
+      font-weight: $ls-font-weight-bold;
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+
+      .versus {
+        margin: 0 10px;
+      }
+    }
+
+    .info__halftime-score {
+      font-weight: $ls-font-weight-bold;
+      margin-bottom: $sp3;
+    }
+
+    .info__status {
+      font-weight: $ls-font-weight-bold;
+      color: $ls-live-color;
+      text-transform: uppercase;
+      text-align: center;
+    }
+
+    .period, .minute {
+      color: $ls-live-color;
+      font-weight: $ls-font-weight-bold;
+      margin-left: 5px;
+    }
+
+    .match-is-live {
+      display: block;
+      margin-top: 1em;
+      font-weight: normal;
+      text-transform: initial;
+    }
+
+
+    @media screen and (max-width: $break-vertical-max) {
+      flex-direction: row;
+      margin: 10px;
+
+      .info__score {
+        margin-bottom: 0;
+        margin-right: 10px;
+      }
+
+      .match-is-live {
+        margin-top: 0;
+      }
+    }
+  }
+
+  &.card--match-summary--inprogress {
+    .info__score {
+      background: $ls-live-color;
+      color: #FFF;
+      border-radius: 8px;
+      padding: 10px 20px;
+    }
+  }
+}

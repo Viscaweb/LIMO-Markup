@@ -20,6 +20,7 @@ $ls-grey-contrast: 			    #d8d8d8;
 $ls-star-active:				#ffc600;
 $ls-red-draw:					#cc0000;
 $ls-link-color: 				#0053a8;
+$ls-live-color:                 #2e9fc7;
 $ls-success-color: 			    #5da400;
 $ls-error-color: 				#ea0000;
 $ls-warning-color: 			    #f6b514;
@@ -61,6 +62,8 @@ $ls-img-path: 					"../assets/img";
 
 //Icons
 $ls-icons-font: 				'LSicons';
+
+$border-radius: 4px;
 
 //Top Header
 $ls-top-header-border-bottom: 	1px solid #e2e2e2;
@@ -380,6 +383,7 @@ $ls-retina: "only screen and (-webkit-min-device-pixel-ratio: 2), only screen an
 $ls-small-portrait: "only screen and (max-device-width : 320px) and (orientation : portrait)";
 $ls-high-dpi: "only screen and ( min-device-pixel-ratio: 1.25), only screen and ( min-resolution: 1.25dppx), only screen and (min-resolution: 192dpi)";
 $ls-small-devices: "only screen and (max-device-width : 420px)";
+$screen-sm-min: 768px;
 
 //Dividers
 $ls-divider-bg:										darken($ls-color-white, 10%);

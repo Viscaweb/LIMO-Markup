@@ -7,6 +7,12 @@ $spacers: (
   4: ($spacer * 1.5),
   5: ($spacer * 3)
 );
+$sp0: map_get($spacers, 0);
+$sp1: map_get($spacers, 1);
+$sp2: map_get($spacers, 2);
+$sp3: map_get($spacers, 3);
+$sp4: map_get($spacers, 4);
+$sp5: map_get($spacers, 5);
 
 @each $prop, $abbrev in (margin: m, padding: p) {
   @each $size, $length in $spacers {
