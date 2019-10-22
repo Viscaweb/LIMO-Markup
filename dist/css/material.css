@@ -20757,7 +20757,8 @@ span.sprite-icons.webmaster-border{
     -webkit-justify-content: flex-end;
         -ms-flex-pack: end;
             justify-content: flex-end;
-    width: 200px; }
+    width: 200px;
+    color: #454a4c; }
     .card--match-summary .team .team__name {
       font-size: 19px;
       font-weight: 700;
