@@ -20948,7 +20948,8 @@ span.sprite-icons.webmaster-border{
       display: flex;
       -webkit-flex-direction: row;
           -ms-flex-direction: row;
-              flex-direction: row; }
+              flex-direction: row;
+      margin-bottom: 10px; }
       .card--match-summary .info .info__score .versus {
         margin: 0 10px; }
     .card--match-summary .info .info__halftime-score {
@@ -20975,16 +20976,15 @@ span.sprite-icons.webmaster-border{
                 flex-direction: row;
         margin: 10px; }
         .card--match-summary .info .info__score {
-          margin-bottom: 0 !important;
-          margin-right: 10px !important; }
+          margin-bottom: 0;
+          margin-right: 10px; }
         .card--match-summary .info .match-is-live {
           margin-top: 0; } }
   .card--match-summary.card--match-summary--inprogress .info__score {
     background: #2e9fc7;
     color: #FFF;
     border-radius: 8px;
-    padding: 10px 20px;
-    margin-bottom: 10px; }
+    padding: 10px 20px; }
 
 .no-flexbox .mdl-layout__drawer, .flexbox-legacy .mdl-layout__drawer, .flexboxtweener .mdl-layout__drawer {
   left: -263px;

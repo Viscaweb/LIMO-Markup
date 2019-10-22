@@ -81,6 +81,7 @@ $break-vertical-max: 339px;
       font-weight: $ls-font-weight-bold;
       display: flex;
       flex-direction: row;
+      margin-bottom: 10px;
 
       .versus {
         margin: 0 10px;
@@ -118,8 +119,8 @@ $break-vertical-max: 339px;
       margin: 10px;
 
       .info__score {
-        margin-bottom: 0 !important;
-        margin-right: 10px !important;
+        margin-bottom: 0;
+        margin-right: 10px;
       }
 
       .match-is-live {
@@ -134,7 +135,6 @@ $break-vertical-max: 339px;
       color: #FFF;
       border-radius: 8px;
       padding: 10px 20px;
-      margin-bottom: 10px;
     }
   }
 }
