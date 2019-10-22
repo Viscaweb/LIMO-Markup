@@ -35,6 +35,7 @@ $break-vertical-max: 339px;
     align-items: center;
     justify-content: flex-end;
     width: 200px;
+    color: $ls-dark-contrast-color;
 
     .team__name {
       font-size: $ls-font-size-large + 2;
