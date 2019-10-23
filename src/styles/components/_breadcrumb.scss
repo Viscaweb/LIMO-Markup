@@ -1,0 +1,42 @@
+.breadcrumb {
+  $breadcrumb-color: #4a4a4a;
+  $breadcrumb-active-color: lighten($breadcrumb-color, 10%);
+  $breadcrumb-font-size: 11px;
+
+  list-style: none;
+  padding: 0;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 0 $sp3 0;
+
+  li + li {
+    padding-left: $sp2;
+  }
+
+  li + li::before {
+    display: inline-block;
+    padding-right: $sp2;
+    color: #6c757d;
+    content: "/";
+  }
+
+  a, h1, h2, h3, h4, h5, h6 {
+    color: $breadcrumb-color;
+    font-size: $breadcrumb-font-size;
+    font-weight: $ls-font-weight-medium;
+    line-height: 1;
+    margin: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    display: inline;
+  }
+
+  .active {
+    a, h1, h2, h3, h4, h5, h6 {
+      color: $breadcrumb-active-color;
+    }
+  }
+}
