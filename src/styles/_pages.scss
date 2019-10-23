@@ -1,0 +1,15 @@
+/**
+ * Match page has a gray background
+ */
+.body--match {
+  $background-color: #f3f3f5;
+  .mdl-layout__content > .page-content {
+    padding: $sp3;
+    background-color: $background-color;
+  }
+
+  .panel, .panel-match-odds {
+    margin-bottom: $sp3;
+    background: #FFF !important;
+  }
+}
