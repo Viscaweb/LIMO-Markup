@@ -12,8 +12,7 @@ $ls-color-black: 				#000000;
 $ls-color-white: 				#FFFFFF;
 $ls-color-live: 				#e33000;
 $ls-color-live-rgb: 		"277, 48, 0";
-$ls-text-color: 				#484848;
-$ls-text-dark-color:            #06082e;
+
 $ls-primary-color:			    #5da400;
 $ls-green-active-color:	        #5da400;
 $ls-grey-contrast: 			    #d8d8d8;
@@ -33,6 +32,10 @@ $ls-secondary-color:            #167773;
 $ls-info-color: 				#a4cfe9;
 $ls-user-female-color:	        #ffaef7;
 $ls-user-male-color:		    #8dc4ff;
+
+$ls-text-grayed:                $ls-dark-shade-color;
+$ls-text-color: 				#484848;
+$ls-text-dark-color:            #06082e;
 
 //Social colors
 $ls-color-facebook: 		    #395fa9;

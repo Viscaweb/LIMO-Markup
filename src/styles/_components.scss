@@ -61,7 +61,7 @@
 @import "livescore/ls-team-cards-statistics/ls-team-cards-statistics";
 @import "livescore/ls-team-detailed-statistics/ls-team-detailed-statistics";
 @import "livescore/ls-team-goals-statistics/ls-team-goals-statistics";
-@import "livescore/ls-team-head-to-head/ls-team-head-to-head";
+//@import "livescore/ls-team-head-to-head/ls-team-head-to-head";
 @import "livescore/ls-team-header/ls-team-header";
 @import "livescore/ls-team-roster/ls-team-roster";
 @import "livescore/ls-team-shirts/ls-team-shirts";
@@ -78,6 +78,4 @@
 @import "livescore/widgets/widgets";
 @import "livescore/ls-z-fallback/ls-z-fallback";
 
-@import "components/alerts";
-@import "components/breadcrumb";
-@import "components/cards";
+@import "components/components";
