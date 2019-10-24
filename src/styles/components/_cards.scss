@@ -32,7 +32,7 @@ $card-padding-xl: $sp5;
   line-height: 1;
 }
 
-.card__body {
+.card__body, .card__footer {
   display: block;
   color: $card-text-color;
   padding: $card-padding;

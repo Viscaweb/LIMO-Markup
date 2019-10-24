@@ -19166,82 +19166,6 @@ span.sprite-icons.webmaster-border{
     color: #9b9b9b;
     border-color: #FFFFFF; }
 
-.ls-head-to-head .row .cell {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center; }
-  .ls-head-to-head .row .cell .circle {
-    border-radius: 50%;
-    background-color: dimgray;
-    color: #FFFFFF;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    font-size: 22px; }
-    .ls-head-to-head .row .cell .circle--first {
-      width: 60px;
-      height: 60px; }
-    .ls-head-to-head .row .cell .circle--second {
-      width: 40px;
-      height: 40px; }
-    .ls-head-to-head .row .cell .circle--third {
-      width: 32px;
-      height: 32px; }
-    .ls-head-to-head .row .cell .circle--fourth {
-      width: 20px;
-      height: 20px;
-      font-size: 12px; }
-    .ls-head-to-head .row .cell .circle--five {
-      width: 20px;
-      height: 20px;
-      font-size: 12px; }
-    .ls-head-to-head .row .cell .circle--gray1 {
-      background-color: #dedede; }
-      .ls-head-to-head .row .cell .circle--gray1.circle--bordered {
-        border-color: #dedede; }
-    .ls-head-to-head .row .cell .circle--gray2 {
-      background-color: #b5b5b5; }
-      .ls-head-to-head .row .cell .circle--gray2.circle--bordered {
-        border-color: #b5b5b5; }
-    .ls-head-to-head .row .cell .circle--gray3 {
-      background-color: #7d7d7d; }
-      .ls-head-to-head .row .cell .circle--gray3.circle--bordered {
-        border-color: #7d7d7d; }
-    .ls-head-to-head .row .cell .circle--success {
-      background-color: #5da400; }
-      .ls-head-to-head .row .cell .circle--success.circle--bordered {
-        border-color: #5da400; }
-    .ls-head-to-head .row .cell .circle--danger {
-      background-color: #e33000; }
-      .ls-head-to-head .row .cell .circle--danger.circle--bordered {
-        border-color: #e33000; }
-    .ls-head-to-head .row .cell .circle--bordered {
-      background-color: transparent;
-      border-width: 4px;
-      border-style: solid;
-      color: #484848; }
-
-.ls-head-to-head .row--infos .cell {
-  padding-top: 0; }
-  .ls-head-to-head .row--infos .cell.win {
-    color: #5da400; }
-  .ls-head-to-head .row--infos .cell.draw {
-    color: #9b9b9b; }
-  .ls-head-to-head .row--infos .cell.lost {
-    color: #e33000; }
-
 .ls-team-header {
   background: #FFFFFF; }
   .ls-team-header .row {
@@ -20846,6 +20770,56 @@ span.sprite-icons.webmaster-border{
     border-radius: 8px;
     padding: 10px 20px; }
 
+.card--head-to-head .progressbar__legend-value {
+  min-width: 70px; }
+
+.card--head-to-head .head-to-head__intro {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3em; }
+
+.card--head-to-head .head-to-head__intro__team {
+  font-weight: 700;
+  text-align: center; }
+  .card--head-to-head .head-to-head__intro__team img {
+    margin: 0.5em auto;
+    display: block; }
+
+.card--head-to-head .head-to-head__intro__hero {
+  text-align: center; }
+  .card--head-to-head .head-to-head__intro__hero strong {
+    display: block;
+    font-size: 17px;
+    margin-bottom: 5px; }
+  .card--head-to-head .head-to-head__intro__hero small {
+    font-size: 11px; }
+
+.card--head-to-head .progressbar__legend-value .legend {
+  text-transform: lowercase; }
+
+.card--head-to-head .progress {
+  height: 6px; }
+  .card--head-to-head .progress .progress-bar {
+    background-color: #92d41f; }
+  .card--head-to-head .progress .progress-bar--tied {
+    background-color: #fbd900; }
+
+.card--head-to-head .card__footer {
+  text-align: center;
+  font-weight: 700; }
+  .card--head-to-head .card__footer a {
+    color: #2e9fc7; }
+
 .no-flexbox .mdl-layout__drawer, .flexbox-legacy .mdl-layout__drawer, .flexboxtweener .mdl-layout__drawer {
   left: -263px;
   -webkit-transform: none;
@@ -22108,7 +22082,7 @@ span.sprite-icons.webmaster-border{
   font-weight: 700;
   line-height: 1; }
 
-.card__body {
+.card__body, .card__footer {
   display: block;
   color: #484848;
   padding: 1em; }
@@ -22156,6 +22130,128 @@ span.sprite-icons.webmaster-border{
   background: none;
   box-shadow: none; }
 
+.progress-top-labels {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+  .progress-top-labels .progressbar__legend-value:last-child {
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end; }
+  .progress-top-labels .progressbar__legend-value:nth-child(2):not(:last-child) {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center; }
+
+.progressbar__legend-value {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  font-size: 1.3em; }
+  .progressbar__legend-value .legend {
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1;
+    margin-bottom: 3px;
+    word-wrap: anywhere; }
+  .progressbar__legend-value .number {
+    font-weight: 700; }
+  .progressbar__legend-value.progressbar__legend-value--highlighted .number {
+    color: #5da400;
+    font-weight: 700; }
+
+.progress {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: .4rem;
+  overflow: hidden;
+  font-size: .75rem;
+  background-color: #e9ecef;
+  border-radius: .25rem; }
+  @media (min-width: 768px) {
+    .progress {
+      height: .6rem; } }
+  .progress .progress-bar {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #007bff;
+    transition: width .6s ease; }
+
+.match-list.match-list--vertical .match-item {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  border-top: 1px solid #e2e2e2;
+  color: #313536; }
+  .match-list.match-list--vertical .match-item .match-item__when, .match-list.match-list--vertical .match-item .match-item__teams, .match-list.match-list--vertical .match-item .match-item__score {
+    padding: 0.5em 1em; }
+  .match-list.match-list--vertical .match-item .match-item__when {
+    -webkit-flex-basis: 130px;
+        -ms-flex-preferred-size: 130px;
+            flex-basis: 130px; }
+    .match-list.match-list--vertical .match-item .match-item__when .match-item__competition {
+      font-size: 12px; }
+  .match-list.match-list--vertical .match-item .match-item__teams {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1; }
+  .match-list.match-list--vertical .match-item .match-item__teams__team, .match-list.match-list--vertical .match-item .match-item__score__outcome {
+    margin-bottom: 7px; }
+    .match-list.match-list--vertical .match-item .match-item__teams__team:last-child, .match-list.match-list--vertical .match-item .match-item__score__outcome:last-child {
+      margin-bottom: 0; }
+  .match-list.match-list--vertical .match-item .match-item__teams__team__logo {
+    width: 18px; }
+  .match-list.match-list--vertical .match-item .match-item__score {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-basis: 70px;
+        -ms-flex-preferred-size: 70px;
+            flex-basis: 70px;
+    text-align: center; }
+  .match-list.match-list--vertical .match-item .match-item__score__outcome {
+    font-weight: 700; }
+  .match-list.match-list--vertical .match-item .match-item__teams__team.winner, .match-list.match-list--vertical .match-item .match-item__score__outcome.winner {
+    font-weight: 700;
+    color: #06082e; }
+  .match-list.match-list--vertical .match-item .match-item__date {
+    color: #484848; }
+
 /**
  * Match page has a gray background
  */
@@ -22163,6 +22259,6 @@ span.sprite-icons.webmaster-border{
   padding: 1em;
   background-color: #f3f3f5; }
 
-.body--match .panel, .body--match .panel-match-odds {
+.body--match .panel, .body--match .panel-match-odds, .body--match .panel-sport-match-incidents {
   margin-bottom: 1em;
   background-color: #FFF !important; }
