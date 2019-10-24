@@ -22,7 +22,7 @@
   }
 
   .head-to-head__intro__hero {
-    text-align:center;
+    text-align: center;
 
     strong {
       display: block;
@@ -34,8 +34,20 @@
       font-size: $ls-font-size-small;
     }
   }
-  .progressbar__legend-value .legend {
-    text-transform: lowercase;
+
+  .progressbar__legend-value {
+    .number {
+      font-weight: $ls-font-weight-light;
+    }
+
+    &.highlighted .number {
+      font-weight: $ls-font-weight-bold;
+      color: #92d41f;
+    }
+
+    .legend {
+      text-transform: lowercase;
+    }
   }
 
   .progress {
