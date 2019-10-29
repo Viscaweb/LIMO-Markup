@@ -6,14 +6,17 @@
     flex-direction: row;
 
     border-top: 1px solid #e2e2e2;
-    color: $ls-text-grayed;
+    color: $ls-text-color-grayed;
 
     .match-item__when, .match-item__teams {
-      padding: $sp2 $sp3;
+      padding: $spacer-2 $spacer-3;
     }
 
     .match-item__when {
-      flex-basis: 130px;
+      flex-basis: 110px;
+      padding-right: 0;
+
+      .match-item__date,
       .match-item__competition {
         font-size: $ls-font-size-base - 2;
       }
@@ -23,6 +26,7 @@
       display: flex;
       flex-direction: column;
       flex-grow: 1;
+      font-size: $ls-font-size-base - 2;
 
       .match-item__teams__team{
         display: flex;
@@ -41,6 +45,9 @@
         .team__logo {
           width: 18px;
           margin-right: 5px;
+          img {
+            width: 100%;
+          }
         }
 
         .team__name {
@@ -55,6 +62,53 @@
           flex-shrink: 0;
           text-align: center;
         }
+      }
+    }
+
+    $radius: 20px;
+    .team__outcome {
+      flex-basis: $radius;
+      flex-grow: 0;
+      flex-shrink: 0;
+
+      display: flex;
+      flex-direction: column;
+
+      padding: $spacer-2 $spacer-2 $spacer-2 0;
+    }
+
+    .team__outcome__value {
+      width: $radius;
+      height: $radius;
+      border-radius: $radius/2;
+
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      color: $ls-color-white;
+      font-size: 12px;
+      font-weight: $ls-font-weight-bold;
+      text-transform: uppercase;
+    }
+
+    .team__outcome--win {
+      justify-content: flex-start;
+      .team__outcome__value {
+        background-color: $ls-primary;
+      }
+    }
+    .team__outcome--lost {
+      justify-content: flex-end;
+      .team__outcome__value {
+        background-color: $ls-danger;
+      }
+    }
+    .team__outcome--draw {
+      justify-content: center;
+      .team__outcome__value {
+        background-color: $ls-warning;
       }
     }
 

@@ -1,0 +1,33 @@
+//Typography
+$preferred_font: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif !default;
+$performance_font: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif !default;
+$ls-font-size-base:          	14px;
+$ls-font-size-small:            $ls-font-size-base - 3px;
+$ls-font-size-large:            $ls-font-size-base + 3px;
+
+$ls-font-weight-thin:		 	100;
+$ls-font-weight-light:	 		300;
+$ls-font-weight-normal: 		400;
+$ls-font-weight-medium: 		500;
+$ls-font-weight-bold: 			700;
+
+$ls-link-color:                 #2e9fc7;
+
+// Colors
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%); // #222
+$gray-dark:              lighten($gray-base, 20%);   // #333
+$gray:                   lighten($gray-base, 33.5%); // #555
+$gray-light:             lighten($gray-base, 46.7%); // #777
+$gray-lighter:           lighten($gray-base, 93.5%); // #eee
+
+$ls-primary: #94da1c;
+$ls-warning: #fbd900;
+$ls-danger: #f67f62;
+$ls-dark-shade-color:           #313536;
+
+$ls-border-color: #6c757d;
+
+$ls-text-color-grayed:      $ls-dark-shade-color;
+$ls-text-color: 			#484848;
+$ls-text-dark-color:        #06082e;

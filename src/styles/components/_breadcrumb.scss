@@ -9,16 +9,16 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 0 0 $sp3 0;
+  margin: 0 0 $spacer-3 0;
 
   li + li {
-    padding-left: $sp2;
+    padding-left: $spacer-2;
   }
 
   li + li::before {
     display: inline-block;
-    padding-right: $sp2;
-    color: #6c757d;
+    padding-right: $spacer-2;
+    color: $ls-border-color;
     content: "/";
   }
 
