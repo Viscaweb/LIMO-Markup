@@ -18,7 +18,7 @@ $ls-green-active-color:	        #5da400;
 $ls-grey-contrast: 			    #d8d8d8;
 $ls-star-active:				#ffc600;
 $ls-red-draw:					#cc0000;
-$ls-link-color: 				#0053a8;
+//$ls-link-color: 				#0053a8;
 $ls-live-color:                 #2e9fc7;
 $ls-success-color: 			    #5da400;
 $ls-error-color: 				#ea0000;
@@ -27,15 +27,12 @@ $ls-yellow-color:               #ffd800;
 $ls-yellow-color-shade:         #e1b902;
 $ls-yellow-text-contrast-color: #3e4e5a;
 $ls-dark-contrast-color:        #454a4c;
-$ls-dark-shade-color:           #313536;
 $ls-secondary-color:            #167773;
 $ls-info-color: 				#a4cfe9;
 $ls-user-female-color:	        #ffaef7;
 $ls-user-male-color:		    #8dc4ff;
 
-$ls-text-grayed:                $ls-dark-shade-color;
-$ls-text-color: 				#484848;
-$ls-text-dark-color:            #06082e;
+
 
 //Social colors
 $ls-color-facebook: 		    #395fa9;
@@ -50,15 +47,7 @@ $ls-color-event-won-bg :        rgb(233, 242, 226);
 $ls-color-event-lost-bg :       rgb(245, 211, 207);
 $ls-color-event-draw-bg :       rgb(250, 241, 230);
 
-//Typography
-$ls-font-size-base:          	14px;
-$ls-font-size-small:            $ls-font-size-base - 3px;
-$ls-font-size-large:            $ls-font-size-base + 3px;
-$ls-font-weight-thin:		 	100;
-$ls-font-weight-light:	 		300;
-$ls-font-weight-normal: 		400;
-$ls-font-weight-medium: 		500;
-$ls-font-weight-bold: 			700;
+
 
 //Image paths
 $ls-img-path: 					"../assets/img";
@@ -414,11 +403,6 @@ $ls-dialog-title-font-weight: 	600;
 $ls-dialog-title-line-height: 	21px;
 $ls-dialog-body-font-size: 			15px;
 $ls-dialog-body-font-weight: 		300;
-
-/* ==========  TYPOGRAPHY  ========== */
-
-$preferred_font: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif !default;
-$performance_font: "SF UI Display", "Helvetica Neue", Roboto, "Segoe UI", Arial, sans-serif !default;
 
 
 /* ==========  Color & Themes  ========== */

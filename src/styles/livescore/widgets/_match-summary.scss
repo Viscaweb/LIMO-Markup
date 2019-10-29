@@ -40,7 +40,7 @@ $break-vertical-max: 339px;
     .team__name {
       font-size: $ls-font-size-large + 2;
       font-weight: $ls-font-weight-bold;
-      margin-bottom: $sp4;
+      margin-bottom: $spacer-4;
     }
 
     @media screen and (max-width: $break-vertical-max) {
@@ -91,7 +91,7 @@ $break-vertical-max: 339px;
 
     .info__halftime-score {
       font-weight: $ls-font-weight-bold;
-      margin-bottom: $sp3;
+      margin-bottom: $spacer-3;
     }
 
     .info__status {

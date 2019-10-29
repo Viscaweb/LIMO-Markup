@@ -4,12 +4,12 @@
 .body--match {
   $background-color: #f3f3f5;
   .mdl-layout__content > .page-content {
-    padding: $sp3;
+    padding: $spacer-3;
     background-color: $background-color;
   }
 
   .panel, .panel-match-odds, .panel-sport-match-incidents {
-    margin-bottom: $sp3;
+    margin-bottom: $spacer-3;
     background-color: #FFF !important;
   }
 }

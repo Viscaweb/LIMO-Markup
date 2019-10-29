@@ -1,11 +1,10 @@
 //@import "./variables.scss";
 
-$white: #fff;
 $card-border-lines: #eee;
-$card-background: $white;
+$card-background: $ls-color-white;
 $card-text-color: $ls-text-color;
-$card-padding: $sp3;
-$card-padding-xl: $sp5;
+$card-padding: $spacer-3;
+$card-padding-xl: $spacer-5;
 
 .card {
   border-radius: $border-radius;
@@ -15,7 +14,7 @@ $card-padding-xl: $sp5;
 }
 
 .card__header {
-  padding: $sp3;
+  padding: $spacer-3;
 
   &.card__header--with-separator {
     border-bottom: 1px solid $card-border-lines;
@@ -30,6 +29,10 @@ $card-padding-xl: $sp5;
   font-size: 18px;
   font-weight: $ls-font-weight-bold;
   line-height: 1;
+
+  &.card__title--with-bolded {
+    font-weight: $ls-font-weight-normal;
+  }
 }
 
 .card__body, .card__footer {
@@ -58,16 +61,15 @@ $card-padding-xl: $sp5;
   .card__title {
     display: inline-block;
     padding-bottom: 0;
-    margin: 0 0 $sp4 0;
+    margin: 0 0 $spacer-4 0;
 
     font-size: 22px;
     color: $ls-dark-contrast-color;
-    font-weight: 400;
+    font-weight: $ls-font-weight-normal;
 
     span {
       color: $ls-text-dark-color;
-      font-weight: 700;
-      //border-bottom: 3px solid $primary;
+      font-weight: $ls-font-weight-bold;
     }
   }
 
