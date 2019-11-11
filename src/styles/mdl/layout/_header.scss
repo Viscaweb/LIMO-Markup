@@ -1,0 +1,177 @@
+
+.mdl-layout__header {
+  box-shadow: none;
+  position: relative;
+
+  &--no-padding {
+    .mdl-layout__header-row {
+      padding-right: 0;
+    }
+  }
+
+  //Aligment fix in header
+  .mdl-switch {
+    .mdl-switch__label {
+      left: 0;
+
+      &:first-child {
+        position: relative;
+        left: 1px;
+      }
+    }
+
+    &.is-upgraded {
+      padding-left: 40px;
+    }
+  }
+
+  //Switch header style
+  .mdl-switch__label {
+    font-size: 15px;
+    color: lighten($ls-text-color, 20%);
+  }
+
+  //Second label in switch component
+  .mdl-switch-label-left {
+    margin: 0 5px;
+
+    .mdl-switch__label {
+      left: 0;
+    }
+  }
+
+  //General link elements
+  .mdl-navigation__link {
+    color: lighten($ls-text-color, 30%);
+    text-align: center;
+    min-width: 30px;
+    opacity: 1;
+
+    &.ls-toolbar-icon {
+      padding-left: 5px;
+      padding-right: 5px;
+      font-size: 19px;
+
+      &.is-active {
+
+        .icon-star {
+          color: $ls-star-active;
+
+          &:hover {
+            color: lighten($ls-text-color, 30%);
+          }
+        }
+      }
+    }
+
+    &:active {
+      background-color: darken($ls-color-white, 10%);
+    }
+  }
+}
+
+
+.mdl-layout__header-row {
+  border-bottom: $ls-top-header-border-bottom;
+
+  .mdl-layout--no-drawer-button & {
+    padding: 0 $layout-header-desktop-indent;
+
+    @media screen and (max-width: $layout-screen-size-threshold) {
+      padding: 0 $layout-header-mobile-indent;
+    }
+  }
+}
+
+.mdl-layout-brand-central-logo {
+  text-align: center;
+  img {
+    height: $ls-brand-logo-size;
+  }
+}
+
+
+.mdl-layout-brand-logo {
+  height: $layout-header-desktop-row-height;
+  line-height: $layout-header-desktop-row-height - 5px;
+  position: relative;
+  padding-right: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+
+  img {
+    width: $ls-brand-logo-size;
+    height: $ls-brand-logo-size;
+  }
+
+  &:after {
+    content: "";
+    height: 100%;
+    width: 4px;
+    position: absolute;
+    top: 0;
+    right: -4px;
+    background-color: rgba(0, 0, 0, 0.02);
+    border-left: 1px solid darken($ls-color-white, 11.2%);
+    transform: rotate(7deg);
+  }
+
+  @media screen and (max-width: $layout-screen-size-threshold) {
+    height: $layout-header-mobile-row-height;
+    line-height: $layout-header-mobile-row-height - 2px;
+    padding-right: 10px;
+    margin-right: 10px;
+  }
+
+  &--no-drawer {
+    padding-right: 0;
+
+    &:after {
+      display: none;
+    }
+  }
+}
+
+
+// Hamburguer menu
+.mdl-layout__drawer-button {
+  color: unquote("rgb(#{$color-primary})");
+  //padding-right: 6px;
+
+  // Caption for the button
+  span {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    display: inline;
+    line-height: 1;
+    text-align: center;
+  }
+
+  .mdl-layout__header & {
+    margin-right: 0;
+
+    @media screen and (max-width: $layout-screen-size-threshold) {
+      margin: 0;
+      height: $layout-header-mobile-row-height - 1px;
+      line-height: $layout-header-mobile-row-height + 6;
+      padding-right: 0;
+
+      span {
+        bottom: 2px;
+      }
+    }
+  }
+
+  // When it has auto/hide fixed header
+  .mdl-layout--fixed-header.mdl-layout--fixed-drawer .mdl-layout__header & {
+    position: fixed;
+
+    @media screen and (max-width: $layout-screen-size-threshold) {
+      position: absolute;
+    }
+  }
+}
