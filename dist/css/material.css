@@ -11453,48 +11453,6 @@ ul.mdl-button-group {
   overflow-x: hidden;
   overflow-y: scroll; }
 
-* {
-  -webkit-tap-highlight-color: transparent; }
-
-body {
-  min-height: 100%;
-  -webkit-overflow-scrolling: touch; }
-
-.mdl-layout {
-  height: 100%;
-  display: block;
-  -webkit-overflow-scrolling: auto; }
-
-.mdl-layout__container {
-  position: static; }
-
-.mdl-layout__content {
-  display: block; }
-
-.mdl-layout__obfuscator {
-  position: fixed; }
-
-.mdl-layout__drawer {
-  position: fixed;
-  -webkit-overflow-scrolling: touch; }
-  @media screen and (max-width: 1024px) {
-    .mdl-layout__drawer {
-      top: 50px;
-      height: calc(100% - 50px); } }
-
-.mdl-layout__drawer.is-visible ~ .mdl-layout__content.mdl-layout__content {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  -webkit-overflow-scrolling: auto; }
-
-.mdl-layout__drawer ~ .mdl-layout__obfuscator {
-  top: 64px; }
-  @media screen and (max-width: 1024px) {
-    .mdl-layout__drawer ~ .mdl-layout__obfuscator {
-      top: 50px; } }
-
 .mdl-layout__header {
   box-shadow: none;
   position: relative; }
@@ -11537,6 +11495,11 @@ body {
     @media screen and (max-width: 1024px) {
       .mdl-layout--no-drawer-button .mdl-layout__header-row {
         padding: 0 16px; } }
+
+.mdl-layout-brand-central-logo {
+  text-align: center; }
+  .mdl-layout-brand-central-logo img {
+    height: 25px; }
 
 .mdl-layout-brand-logo {
   height: 64px;
@@ -11597,16 +11560,6 @@ body {
     @media screen and (max-width: 1024px) {
       .mdl-layout--fixed-header.mdl-layout--fixed-drawer .mdl-layout__header .mdl-layout__drawer-button {
         position: absolute; } }
-
-.mdl-layout-title {
-  font-size: 16px;
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1;
-  overflow: hidden;
-  line-height: inherit;
-  text-overflow: ellipsis;
-  white-space: nowrap; }
 
 .mdl-layout__drawer {
   border-right: 0;
@@ -11851,6 +11804,58 @@ body {
           vertical-align: middle; }
   .mdl-layout__drawer .drawer__brand-logo {
     max-width: 80%; }
+
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  min-height: 100%;
+  -webkit-overflow-scrolling: touch; }
+
+.mdl-layout {
+  height: 100%;
+  display: block;
+  -webkit-overflow-scrolling: auto; }
+
+.mdl-layout__container {
+  position: static; }
+
+.mdl-layout__content {
+  display: block; }
+
+.mdl-layout__obfuscator {
+  position: fixed; }
+
+.mdl-layout__drawer {
+  position: fixed;
+  -webkit-overflow-scrolling: touch; }
+  @media screen and (max-width: 1024px) {
+    .mdl-layout__drawer {
+      top: 50px;
+      height: calc(100% - 50px); } }
+
+.mdl-layout__drawer.is-visible ~ .mdl-layout__content.mdl-layout__content {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  -webkit-overflow-scrolling: auto; }
+
+.mdl-layout__drawer ~ .mdl-layout__obfuscator {
+  top: 64px; }
+  @media screen and (max-width: 1024px) {
+    .mdl-layout__drawer ~ .mdl-layout__obfuscator {
+      top: 50px; } }
+
+.mdl-layout-title {
+  font-size: 16px;
+  -webkit-flex-shrink: 1;
+      -ms-flex-negative: 1;
+          flex-shrink: 1;
+  overflow: hidden;
+  line-height: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
 
 .mdl-layout__tab-bar-container {
   border-bottom: 1px solid #e2e2e2; }
