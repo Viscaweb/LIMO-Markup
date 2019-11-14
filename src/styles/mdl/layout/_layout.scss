@@ -8,12 +8,19 @@
 // Custom strcutural changes (LIMO-260)
 body {
   min-height: 100%;
-  -webkit-overflow-scrolling: touch;
+  //-webkit-overflow-scrolling: touch;
 }
 
 .mdl-layout {
   height: 100%;
   display: block;
+
+  // Try to fix LS-141 (scroll stuck in /casas-de-apuestas)
+  overflow-x: unset;
+  overflow-y: unset;
+  z-index: unset;
+  // end of fix
+
   -webkit-overflow-scrolling: auto;
 }
 
@@ -23,6 +30,12 @@ body {
 
 .mdl-layout__content {
   display: block;
+
+  // Try to fix LS-141 (scroll stuck in /casas-de-apuestas)
+  overflow-x: unset;
+  overflow-y: unset;
+  z-index: unset;
+  // end of fix
 }
 
 .mdl-layout__obfuscator {
@@ -41,7 +54,7 @@ body {
 
 .mdl-layout__drawer.is-visible ~ .mdl-layout__content.mdl-layout__content {
   position: fixed;
-  top: 0;
+  //top: 0;
   right: 0;
   left: 0;
   -webkit-overflow-scrolling: auto;
