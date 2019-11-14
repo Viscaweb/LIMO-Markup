@@ -11809,19 +11809,24 @@ ul.mdl-button-group {
   -webkit-tap-highlight-color: transparent; }
 
 body {
-  min-height: 100%;
-  -webkit-overflow-scrolling: touch; }
+  min-height: 100%; }
 
 .mdl-layout {
   height: 100%;
   display: block;
+  overflow-x: unset;
+  overflow-y: unset;
+  z-index: unset;
   -webkit-overflow-scrolling: auto; }
 
 .mdl-layout__container {
   position: static; }
 
 .mdl-layout__content {
-  display: block; }
+  display: block;
+  overflow-x: unset;
+  overflow-y: unset;
+  z-index: unset; }
 
 .mdl-layout__obfuscator {
   position: fixed; }
@@ -11836,7 +11841,6 @@ body {
 
 .mdl-layout__drawer.is-visible ~ .mdl-layout__content.mdl-layout__content {
   position: fixed;
-  top: 0;
   right: 0;
   left: 0;
   -webkit-overflow-scrolling: auto; }
