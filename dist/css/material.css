@@ -15966,24 +15966,20 @@ $ls-list-border-color:	    blue;
         color: #959595;
         font-weight: 400; }
   .match .match__cta {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 0 4px; }
-    .match .match__cta .mdl-button {
-      width: 100%;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    -webkit-flex-basis: 79px;
+        -ms-flex-preferred-size: 79px;
+            flex-basis: 79px;
+    margin: 0 4px;
+    line-height: 2.5em; }
+    .match .match__cta.mdl-button {
       padding: 0 5px;
       font-size: 10px;
       font-weight: 700;
-      line-height: 1;
       height: 26px; }
-      .match .match__cta .mdl-button:after {
+      .match .match__cta.mdl-button:after {
         display: inline-block;
         content: "\e60d";
         font-family: "LSicons";
