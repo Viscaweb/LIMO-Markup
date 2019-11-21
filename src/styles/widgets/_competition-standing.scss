@@ -1,3 +1,32 @@
+//Standing-table
+$ls-row-selected-color:           #f1f1f1;
+$ls-rank-grey-color:              #f5fbfc;
+$ls-rank-green-color:             $ls-primary-light;
+$ls-rank-clear-green-color:       rgba(212, 222, 200, 1);
+$ls-rank-blue-color:              rgba(191, 214, 217, 1);
+$ls-rank-clear-blue-color:        rgba(209, 230, 233, 1);
+$ls-rank-orange-color:            rgba(231, 217, 192, 1);
+$ls-rank-clear-orange-color:      rgba(245, 232, 210, 1);
+$ls-rank-red-color:               rgba(222, 200, 200, 1);
+$ls-rank-clear-red-color:         rgba(239, 216, 216, 1);
+$ls-cell-stat-up:                 rgba(93, 164, 0, 1);
+$ls-cell-stat-down:               rgba(229, 104, 13, 1);
+
+
+.card--competition-standing {
+  .mdl-button__select {
+    border-top: 1px solid $ls-border-color-light;
+    border-bottom: 1px solid $ls-border-color-light;
+    select {
+      background: #FFF;
+    }
+
+    &::after {
+      z-index: 3; // Fixes arrow bottom be hidden by select tag.
+    }
+  }
+}
+
 .ls-standing-table-container {
   display: flex;
   flex-wrap: wrap;
@@ -8,13 +37,14 @@
 }
 
 .ls-standing-table {
+
   font-size: 12px;
   overflow: hidden;
 
   .row {
 
     &--show-all {
-      background-color: #fcfcfc!important;
+      background-color: #fcfcfc !important;
 
       .cell__button {
         padding: 12px !important;
@@ -68,6 +98,9 @@
         .cell {
           background: $ls-row-selected-color;
         }
+        .cell__team {
+          font-weight: $ls-font-weight-bold;
+        }
       }
 
       .cell {
@@ -92,7 +125,7 @@
     -webkit-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
     -moz-box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
     box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16);
-    
+
     .ls-standing-table-container & {
       flex: 1 0 50%;
     }
@@ -283,7 +316,7 @@
   display: flex;
   flex-flow: column;
   align-items: flex-start;
-  background: darken($ls-color-white, 5%);
+  background: $ls-color-white;
   padding: 15px;
 
   &__title {
