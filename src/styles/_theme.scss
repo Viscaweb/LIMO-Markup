@@ -11,7 +11,6 @@ $ls-font-weight-normal: 		400;
 $ls-font-weight-medium: 		500;
 $ls-font-weight-bold: 			700;
 
-$ls-link-color:                 #2e9fc7;
 
 // Colors
 $gray-base:              #000;
@@ -22,11 +21,15 @@ $gray-light:             lighten($gray-base, 46.7%); // #777
 $gray-lighter:           lighten($gray-base, 93.5%); // #eee
 
 $ls-primary: #94da1c;
+$ls-primary-light: #e6fcc0;
+
 $ls-warning: #fbd900;
 $ls-danger: #f67f62;
 $ls-dark-shade-color:           #313536;
+$ls-link-color:                 #2e9fc7;
 
 $ls-border-color: #6c757d;
+$ls-border-color-light: #e7e7e7;
 
 $ls-text-color-grayed:      $ls-dark-shade-color;
 $ls-text-color: 			#484848;

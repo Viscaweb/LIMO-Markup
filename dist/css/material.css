@@ -18592,257 +18592,6 @@ span.sprite-icons.webmaster-border{
   }
 }
 */
-.ls-standing-table-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-  .ls-standing-table-container > ul {
-    -webkit-flex: 1 0 100%;
-        -ms-flex: 1 0 100%;
-            flex: 1 0 100%; }
-
-.ls-standing-table {
-  font-size: 12px;
-  overflow: hidden;
-  /* ---- Left Side ----- */
-  /* ---- Right Side ----- */ }
-  .ls-standing-table .row--show-all {
-    background-color: #fcfcfc !important; }
-    .ls-standing-table .row--show-all .cell__button {
-      padding: 12px !important;
-      text-align: center; }
-  .ls-standing-table .row .cell__stat {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-flex: 0 0 20px;
-        -ms-flex: 0 0 20px;
-            flex: 0 0 20px;
-    font-size: 12px;
-    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", sans-serif;
-    /* to remove when we stop displaying the = sign */ }
-    .ls-standing-table .row .cell__stat--down {
-      color: #e5680d; }
-    .ls-standing-table .row .cell__stat--up {
-      color: #5da400; }
-    .ls-standing-table .row .cell__stat .icon-equal {
-      color: #cecece; }
-  .ls-standing-table .row.live .cell__team--title a {
-    font-weight: 600; }
-  .ls-standing-table__column .row {
-    padding: 0; }
-    .ls-standing-table__column .row--selected .cell {
-      background: #dbe8ed; }
-    .ls-standing-table__column .row .cell {
-      border-right: 1px solid #e7e7e7;
-      text-align: center;
-      -webkit-align-items: center;
-          -ms-flex-align: center;
-              align-items: center; }
-  .ls-standing-table__column .row--head {
-    padding: 0; }
-    .ls-standing-table__column .row--head .cell {
-      color: #7b7b7b; }
-  .ls-standing-table--left {
-    box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16); }
-    .ls-standing-table-container .ls-standing-table--left {
-      -webkit-flex: 1 0 50%;
-          -ms-flex: 1 0 50%;
-              flex: 1 0 50%; }
-    .ls-standing-table--left .row {
-      box-sizing: border-box;
-      border: 1px solid #e7e7e7;
-      border-bottom: 0; }
-      .ls-standing-table--left .row a {
-        color: #0053A8;
-        text-decoration: none;
-        font-weight: 300; }
-      .ls-standing-table--left .row:last-child {
-        border-bottom: 1px solid #e7e7e7; }
-      .ls-standing-table--left .row .cell {
-        padding: 5px 0; }
-        .ls-standing-table--left .row .cell__rank {
-          -webkit-flex: 0 0 25px;
-              -ms-flex: 0 0 25px;
-                  flex: 0 0 25px;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-justify-content: center;
-              -ms-flex-pack: center;
-                  justify-content: center; }
-          .ls-standing-table--left .row .cell__rank--green {
-            background-color: #bed1a6; }
-          .ls-standing-table--left .row .cell__rank--clear-green {
-            background-color: #d4dec8; }
-          .ls-standing-table--left .row .cell__rank--blue {
-            background-color: #bfd6d9; }
-          .ls-standing-table--left .row .cell__rank--clear-blue {
-            background-color: #d1e6e9; }
-          .ls-standing-table--left .row .cell__rank--grey {
-            background-color: #ebebeb; }
-          .ls-standing-table--left .row .cell__rank--orange {
-            background-color: #e7d9c0; }
-          .ls-standing-table--left .row .cell__rank--clear-orange {
-            background-color: #f5e8d2; }
-          .ls-standing-table--left .row .cell__rank--red {
-            background-color: #dec8c8; }
-          .ls-standing-table--left .row .cell__rank--clear-red {
-            background-color: #efd8d8; }
-          .ls-standing-table--left .row .cell__rank--large {
-            -webkit-flex: 0 0 50px;
-                -ms-flex: 0 0 50px;
-                    flex: 0 0 50px; }
-        .ls-standing-table--left .row .cell__team {
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-justify-content: flex-start;
-              -ms-flex-pack: start;
-                  justify-content: flex-start;
-          padding-right: 10px; }
-          .ls-standing-table--left .row .cell__team--flag {
-            padding: 0 5px;
-            -webkit-flex: 0 0 22px;
-                -ms-flex: 0 0 22px;
-                    flex: 0 0 22px;
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-justify-content: center;
-                -ms-flex-pack: center;
-                    justify-content: center; }
-            .ls-standing-table--left .row .cell__team--flag > img {
-              max-height: 22px;
-              max-width: 22px; }
-          .ls-standing-table--left .row .cell__team--title {
-            position: relative;
-            padding: 0 5px 0 0;
-            white-space: nowrap;
-            overflow-x: hidden;
-            text-overflow: ellipsis;
-            font-weight: 300;
-            line-height: 22px; }
-        .ls-standing-table--left .row .cell__total-points {
-          position: relative;
-          -webkit-flex: 0 0 32px;
-              -ms-flex: 0 0 32px;
-                  flex: 0 0 32px;
-          display: -webkit-flex;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-justify-content: center;
-              -ms-flex-pack: center;
-                  justify-content: center;
-          font-weight: 600; }
-        .ls-standing-table--left .row .cell__point-detail {
-          position: absolute;
-          right: 0;
-          bottom: -5px;
-          font-size: 9px;
-          color: red;
-          margin: 3px; }
-      .ls-standing-table--left .row.live .cell__team:before {
-        content: '';
-        position: absolute;
-        right: 0;
-        display: block;
-        float: right;
-        width: 6px;
-        height: 6px;
-        border-radius: 50%;
-        background: #e33000;
-        margin-right: 4px; }
-    .ls-standing-table--left .row--head .cell__team {
-      padding-left: 5px; }
-  .ls-standing-table--right {
-    padding: 0;
-    margin: 0;
-    white-space: nowrap;
-    overflow-x: auto; }
-    .ls-standing-table-container .ls-standing-table--right {
-      -webkit-flex: 0 1 50%;
-          -ms-flex: 0 1 50%;
-              flex: 0 1 50%; }
-    .ls-standing-table--right::-webkit-scrollbar {
-      display: none; }
-    .ls-standing-table--right .row {
-      margin: 0;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex; }
-      .ls-standing-table--right .row .cell {
-        padding: 2px 0;
-        border-bottom: 1px solid #e7e7e7;
-        min-width: 32px; }
-        .ls-standing-table--right .row .cell__point {
-          padding: 4px 0; }
-      .ls-standing-table--right .row--show-all .cell__button {
-        opacity: 0; }
-
-.ls-legend {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  background: #f2f2f2;
-  padding: 15px; }
-  .ls-legend__title {
-    color: #7b7b7b;
-    margin-bottom: 12px; }
-  .ls-legend__content {
-    margin: 0;
-    padding: 0; }
-    .ls-legend__content .row {
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      margin-bottom: 4px; }
-    .ls-legend__content .cell__rank {
-      border: 1px solid #e7e7e7;
-      width: 24px;
-      height: 17px;
-      margin-right: 12px; }
-      .ls-legend__content .cell__rank--green {
-        background-color: #bed1a6; }
-      .ls-legend__content .cell__rank--clear-green {
-        background-color: #d4dec8; }
-      .ls-legend__content .cell__rank--blue {
-        background-color: #bfd6d9; }
-      .ls-legend__content .cell__rank--clear-blue {
-        background-color: #d1e6e9; }
-      .ls-legend__content .cell__rank--red {
-        background-color: #dec8c8; }
-      .ls-legend__content .cell__rank--clear-red {
-        background-color: #efd8d8; }
-      .ls-legend__content .cell__rank--orange {
-        background-color: #e7d9c0; }
-      .ls-legend__content .cell__rank--clear-orange {
-        background-color: #f5e8d2; }
-      .ls-legend__content .cell__rank--grey {
-        background-color: #ebebeb; }
-
-.mdl-dialog--standings .mdl-dialog__content {
-  width: 100%; }
-
-/* ---- @ media ----- */
-@media (min-width: 600px) {
-  .ls-standing-table--right .row .cell {
-    -webkit-flex: 1;
-        -ms-flex: 1;
-            flex: 1; } }
-
 .ls-team-cards-statistics .ls-list {
   background-color: #FFFFFF; }
   .ls-team-cards-statistics .ls-list .row {
@@ -22090,6 +21839,267 @@ span.sprite-icons.webmaster-border{
       font-weight: 700; }
     .nav-tabs--ls .nav-link:hover {
       background: none; }
+
+.card--competition-standing .mdl-button__select {
+  border-top: 1px solid #e7e7e7;
+  border-bottom: 1px solid #e7e7e7; }
+  .card--competition-standing .mdl-button__select select {
+    background: #FFF; }
+  .card--competition-standing .mdl-button__select::after {
+    z-index: 3; }
+
+.ls-standing-table-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .ls-standing-table-container > ul {
+    -webkit-flex: 1 0 100%;
+        -ms-flex: 1 0 100%;
+            flex: 1 0 100%; }
+
+.ls-standing-table {
+  font-size: 12px;
+  overflow: hidden;
+  /* ---- Left Side ----- */
+  /* ---- Right Side ----- */ }
+  .ls-standing-table .row--show-all {
+    background-color: #fcfcfc !important; }
+    .ls-standing-table .row--show-all .cell__button {
+      padding: 12px !important;
+      text-align: center; }
+  .ls-standing-table .row .cell__stat {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex: 0 0 20px;
+        -ms-flex: 0 0 20px;
+            flex: 0 0 20px;
+    font-size: 12px;
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", sans-serif;
+    /* to remove when we stop displaying the = sign */ }
+    .ls-standing-table .row .cell__stat--down {
+      color: #e5680d; }
+    .ls-standing-table .row .cell__stat--up {
+      color: #5da400; }
+    .ls-standing-table .row .cell__stat .icon-equal {
+      color: #cecece; }
+  .ls-standing-table .row.live .cell__team--title a {
+    font-weight: 600; }
+  .ls-standing-table__column .row {
+    padding: 0; }
+    .ls-standing-table__column .row--selected .cell {
+      background: #f1f1f1; }
+    .ls-standing-table__column .row--selected .cell__team {
+      font-weight: 700; }
+    .ls-standing-table__column .row .cell {
+      border-right: 1px solid #e7e7e7;
+      text-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center; }
+  .ls-standing-table__column .row--head {
+    padding: 0; }
+    .ls-standing-table__column .row--head .cell {
+      color: #7b7b7b; }
+  .ls-standing-table--left {
+    box-shadow: 5px 0px 5px -4px rgba(0, 0, 0, 0.16); }
+    .ls-standing-table-container .ls-standing-table--left {
+      -webkit-flex: 1 0 50%;
+          -ms-flex: 1 0 50%;
+              flex: 1 0 50%; }
+    .ls-standing-table--left .row {
+      box-sizing: border-box;
+      border: 1px solid #e7e7e7;
+      border-bottom: 0; }
+      .ls-standing-table--left .row a {
+        color: #0053A8;
+        text-decoration: none;
+        font-weight: 300; }
+      .ls-standing-table--left .row:last-child {
+        border-bottom: 1px solid #e7e7e7; }
+      .ls-standing-table--left .row .cell {
+        padding: 5px 0; }
+        .ls-standing-table--left .row .cell__rank {
+          -webkit-flex: 0 0 25px;
+              -ms-flex: 0 0 25px;
+                  flex: 0 0 25px;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center; }
+          .ls-standing-table--left .row .cell__rank--green {
+            background-color: #e6fcc0; }
+          .ls-standing-table--left .row .cell__rank--clear-green {
+            background-color: #d4dec8; }
+          .ls-standing-table--left .row .cell__rank--blue {
+            background-color: #bfd6d9; }
+          .ls-standing-table--left .row .cell__rank--clear-blue {
+            background-color: #d1e6e9; }
+          .ls-standing-table--left .row .cell__rank--grey {
+            background-color: #f5fbfc; }
+          .ls-standing-table--left .row .cell__rank--orange {
+            background-color: #e7d9c0; }
+          .ls-standing-table--left .row .cell__rank--clear-orange {
+            background-color: #f5e8d2; }
+          .ls-standing-table--left .row .cell__rank--red {
+            background-color: #dec8c8; }
+          .ls-standing-table--left .row .cell__rank--clear-red {
+            background-color: #efd8d8; }
+          .ls-standing-table--left .row .cell__rank--large {
+            -webkit-flex: 0 0 50px;
+                -ms-flex: 0 0 50px;
+                    flex: 0 0 50px; }
+        .ls-standing-table--left .row .cell__team {
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-justify-content: flex-start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start;
+          padding-right: 10px; }
+          .ls-standing-table--left .row .cell__team--flag {
+            padding: 0 5px;
+            -webkit-flex: 0 0 22px;
+                -ms-flex: 0 0 22px;
+                    flex: 0 0 22px;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-justify-content: center;
+                -ms-flex-pack: center;
+                    justify-content: center; }
+            .ls-standing-table--left .row .cell__team--flag > img {
+              max-height: 22px;
+              max-width: 22px; }
+          .ls-standing-table--left .row .cell__team--title {
+            position: relative;
+            padding: 0 5px 0 0;
+            white-space: nowrap;
+            overflow-x: hidden;
+            text-overflow: ellipsis;
+            font-weight: 300;
+            line-height: 22px; }
+        .ls-standing-table--left .row .cell__total-points {
+          position: relative;
+          -webkit-flex: 0 0 32px;
+              -ms-flex: 0 0 32px;
+                  flex: 0 0 32px;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-justify-content: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          font-weight: 600; }
+        .ls-standing-table--left .row .cell__point-detail {
+          position: absolute;
+          right: 0;
+          bottom: -5px;
+          font-size: 9px;
+          color: red;
+          margin: 3px; }
+      .ls-standing-table--left .row.live .cell__team:before {
+        content: '';
+        position: absolute;
+        right: 0;
+        display: block;
+        float: right;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #e33000;
+        margin-right: 4px; }
+    .ls-standing-table--left .row--head .cell__team {
+      padding-left: 5px; }
+  .ls-standing-table--right {
+    padding: 0;
+    margin: 0;
+    white-space: nowrap;
+    overflow-x: auto; }
+    .ls-standing-table-container .ls-standing-table--right {
+      -webkit-flex: 0 1 50%;
+          -ms-flex: 0 1 50%;
+              flex: 0 1 50%; }
+    .ls-standing-table--right::-webkit-scrollbar {
+      display: none; }
+    .ls-standing-table--right .row {
+      margin: 0;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex; }
+      .ls-standing-table--right .row .cell {
+        padding: 2px 0;
+        border-bottom: 1px solid #e7e7e7;
+        min-width: 32px; }
+        .ls-standing-table--right .row .cell__point {
+          padding: 4px 0; }
+      .ls-standing-table--right .row--show-all .cell__button {
+        opacity: 0; }
+
+.ls-legend {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: column;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #FFFFFF;
+  padding: 15px; }
+  .ls-legend__title {
+    color: #7b7b7b;
+    margin-bottom: 12px; }
+  .ls-legend__content {
+    margin: 0;
+    padding: 0; }
+    .ls-legend__content .row {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 4px; }
+    .ls-legend__content .cell__rank {
+      border: 1px solid #e7e7e7;
+      width: 24px;
+      height: 17px;
+      margin-right: 12px; }
+      .ls-legend__content .cell__rank--green {
+        background-color: #e6fcc0; }
+      .ls-legend__content .cell__rank--clear-green {
+        background-color: #d4dec8; }
+      .ls-legend__content .cell__rank--blue {
+        background-color: #bfd6d9; }
+      .ls-legend__content .cell__rank--clear-blue {
+        background-color: #d1e6e9; }
+      .ls-legend__content .cell__rank--red {
+        background-color: #dec8c8; }
+      .ls-legend__content .cell__rank--clear-red {
+        background-color: #efd8d8; }
+      .ls-legend__content .cell__rank--orange {
+        background-color: #e7d9c0; }
+      .ls-legend__content .cell__rank--clear-orange {
+        background-color: #f5e8d2; }
+      .ls-legend__content .cell__rank--grey {
+        background-color: #f5fbfc; }
+
+.mdl-dialog--standings .mdl-dialog__content {
+  width: 100%; }
+
+/* ---- @ media ----- */
+@media (min-width: 600px) {
+  .ls-standing-table--right .row .cell {
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1; } }
 
 .widget-postprediction .lead {
   font-size: 17px; }
