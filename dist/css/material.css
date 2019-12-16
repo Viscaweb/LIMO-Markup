@@ -15969,22 +15969,30 @@ $ls-list-border-color:	    blue;
     -webkit-flex-shrink: 0;
         -ms-flex-negative: 0;
             flex-shrink: 0;
-    -webkit-flex-basis: 79px;
-        -ms-flex-preferred-size: 79px;
-            flex-basis: 79px;
+    -webkit-flex-basis: 59px;
+        -ms-flex-preferred-size: 59px;
+            flex-basis: 59px;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin: 0 4px;
-    line-height: 2.5em; }
-    .match .match__cta.mdl-button {
-      padding: 0 5px;
-      font-size: 10px;
-      font-weight: 700;
-      height: 26px; }
-      .match .match__cta.mdl-button:after {
-        display: inline-block;
-        content: "\e60d";
-        font-family: "LSicons";
-        font-size: 8px;
-        margin-left: 3px; }
+    line-height: 2.5em;
+    border-radius: 2px;
+    background: #5da400;
+    color: #fff;
+    padding: 0 5px;
+    font-size: 10px;
+    font-weight: 700;
+    height: 26px; }
+    .match .match__cta:after {
+      display: inline-block;
+      content: "\e60d";
+      font-family: "LSicons";
+      font-size: 8px;
+      margin-left: 3px; }
 
 .updated {
   /*background: $ls-color-updated!important;

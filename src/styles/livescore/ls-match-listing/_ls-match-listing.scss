@@ -256,11 +256,17 @@
 
   .match__cta {
     flex-shrink: 0;
-    flex-basis: 79px;
+    flex-basis: 59px;
+
+    display: flex;
+    justify-content: space-between;
     margin:0 4px;
     line-height: 2.5em;
 
-    &.mdl-button {
+    //&.mdl-button {
+      border-radius: 2px;
+      background: #5da400;
+      color: #fff;
       padding: 0 5px;
       font-size: 10px;
       font-weight: $ls-font-weight-bold;
@@ -273,7 +279,7 @@
         font-size: 8px;
         margin-left: 3px;
       }
-    }
+    //}
   }
 }
 
